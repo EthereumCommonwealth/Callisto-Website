@@ -4,7 +4,7 @@ const nib = require("nib");
 module.exports = {
   pathPrefix: '/Callisto-Website',
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Callisto Network',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

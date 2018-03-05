@@ -17,3 +17,9 @@
 ### Create a production build
 
 `gatsby build`
+
+### Deploy
+`npm run deploy-gh`
+
+### Build and Deploy
+`npm run deploy`
