@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700')
+@import './normalize.styl'
+
+$primary-color = #00AA58
+$gray = #e0e0e0
+$white = #FFF
+
+$sm = 768px
+$md = 1024px
+
+
+body
+  font-family 'Open Sans', sans-serif
+  background-color $gray
+
+figure
+  margin 0
+
+.center-anchor
+  display block
+  text-align center
+
+.particles-js-canvas-el
+  position absolute
+  z-index -1
+  width 98vw !important
+  box-sizing border-box
+  left 0
+  top 0
+
+.title
+  font-size 20px
+  +from-width($sm)
+    font-size 24px
+
+.pharagraph
+  line-height 1.5
+  margin 0
+  +from-width($sm)
+    line-height 1.7
+
+.anchor
+  color $primary-color
+  font-weight 600
+  text-decoration none
+
+.container
+  max-width 1024px
+  margin 0 auto
+  padding 0 1em
+  +from-width(576px)
+    max-width 540px
+  +from-width(768px)
+    max-width 720px
+  +from-width(992px)
+    max-width 960px
+  +from-width(1200px)
+    max-width 1140px
+
+.FirstSection
+  height 100vh
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+  padding 0 1em
+  overflow hidden
+  &-figure
+    width 150px
+    +from-width($sm)
+      width 200px
+  &-img
+    width 100%
+  &-title
+    color $primary-color
+    font-size 36px
+    font-weight 600
+    margin .5em 0
+    +from-width($sm)
+      font-size 48px
+  &-description
+    max-width 550px
+    font-size 16px
+    +from-width($sm)
+      font-size 18px
+      text-align center
+
+.square
+  background-color white
+  border-radius 4px
+  box-sizing border-box
+  padding .5em
+  z-index 1
+  box-shadow 0 14px 14px 0 rgba(29, 53, 77, 0.09)
+  +from-width($sm)
+    padding 1.5em
+
+.image-in-square
+  width 100%
+
+.margin-bottom
+  margin-bottom 1em
+
+.SecondSection
+  display grid
+  grid-template-columns 1fr
+  grid-gap 2em
+  overflow hidden
+  margin-bottom 2em
+  +from-width($sm)
+    grid-template-columns .75fr 1.5fr
+  &-main
+    position relative
+
+.Buttons
+  &-element
+    background-color $primary-color
+    text-align center
+    display block
+    padding .75em
+    border-radius 4px
+    font-weight 400
+    color $white
+    text-decoration none
+    margin-bottom 1em
+    &:hover
+      box-shadow 0 14px 14px 0 rgba(29, 53, 77, 0.05)
+
+.Wallets
+  display grid
+  grid-gap .5em
+  +from-width($sm)
+    margin-bottom .5em
+    grid-template-columns 1fr 1fr 1fr
+
+.Footer
+  background-color $primary-color
+  padding 1em 0
+  color $white
+  a
+    color $white
