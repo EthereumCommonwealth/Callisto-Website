@@ -70,9 +70,9 @@ const Buttons = () => (
     <a
       className="Buttons-element"
       target="_blank"
-      href="https://drive.google.com/file/d/16sW_0YajCedBdLvr9jmgJqE9L-SzuYKq/view"
+      href="https://drive.google.com/file/d/1DZlyuzWawKAJutyqgPpthfiyhUuEWuUK/view"
     >
-      Whitepaper (0.9 revision)
+      Whitepaper (1.0 revision)
     </a>
     <a
       className="Buttons-element"
