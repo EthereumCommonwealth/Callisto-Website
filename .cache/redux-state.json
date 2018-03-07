@@ -381,7 +381,7 @@
       "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "9f4287213bfabaf9eedcb7efe0e3c8d6",
+      "version": "8cf09f39713c1cfd0271973b6d0d1a32",
       "pluginOptions": {
         "plugins": []
       },
@@ -462,23 +462,23 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "8c104827f669a4990a0a8337500315ed",
+        "contentDigest": "c4c174d3d31eeba4e6d78388dfdf8e2a",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Site": {
       "siteMetadata": {
-        "title": "Gatsby Default Starter"
+        "title": "Callisto Network"
       },
       "pathPrefix": "/Callisto-Website",
       "polyfill": true,
-      "buildTime": "2018-03-05T01:50:46.738Z",
+      "buildTime": "2018-03-07T13:18:31.700Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "1d848dfe20b87fb577fd7e0207c497ac",
+        "contentDigest": "ae0b03c38b49de1823984014c4b712e4",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -499,17 +499,21 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "c5d229a5d9cb99590b22fe36d7882984",
+        "contentDigest": "a33e7d6cf83466bc4cfb1c637c0bc797",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "be977c31c1413e3fe026633fcc8e7f1d"
+    "PLUGINS_HASH": "95fbbadcd076dfd85359ee568117b209"
   },
   "componentDataDependencies": {
     "nodes": {},
-    "connections": {}
+    "connections": {
+      "SitePage": [
+        "/dev-404-page/"
+      ]
+    }
   }
 }

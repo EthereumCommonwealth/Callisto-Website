@@ -1,5 +1,6 @@
 import React from 'react'
 import binance from '../images/binance.png'
+import hitbtclogo from '../images/hitbtclogo.png'
 const Buttons = () => (
   <div className="Buttons">
     <div className="margin-bottom square">
@@ -10,6 +11,23 @@ const Buttons = () => (
           alt="Binance"
         />
       </figure>
+    </div>
+    <div className="margin-bottom square">
+      <a
+        href="https://blog.hitbtc.com/hitbtc-to-support-ethereum-classic-fork-callisto/"
+        target="_blank"
+      >
+        <figure>
+          <img
+            className="image-in-square"
+            src={hitbtclogo}
+            alt="HitBTC"
+          />
+        </figure>
+        <div className="hitbtc">
+          <span className="hitbtc-text">HitBTC announcement</span>
+        </div>
+      </a>
     </div>
     <a
       className="Buttons-element"
