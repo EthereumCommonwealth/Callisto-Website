@@ -1,0 +1,51 @@
+.Team
+  padding 2em 1em !important
+  &-title
+    font-family $secondary-font
+    margin 0
+    font-size 28px
+  &-subtitle
+    font-size 1em
+    margin 1em 0 0 0
+  &-list
+    display grid
+    grid-template-columns 1fr
+    grid-gap 1em
+    margin-top 2em
+    +from-width($md)
+      grid-template-columns 1fr 1fr 1fr
+    &-element
+      display grid
+      grid-template-columns 75px 1fr
+      grid-gap .5em
+      background-color rgba(211, 211, 211, 0.45)
+      padding 1em
+      border-radius 5px
+      box-shadow 0 14px 14px 0 rgba(29, 53, 77, .06)
+      +from-width($md)
+        grid-gap 1em
+        grid-template-columns 115px 1fr
+      &-figure
+        width 75px
+        height 75px
+        border-radius 100%
+        overflow hidden
+        +from-width($md)
+          width 115px
+          height 115px
+        img
+          width 100%
+      &-detail
+        display grid
+        grid-gap 1em
+        &-top, &-bottom
+          display flex
+          flex-direction column
+        &-name
+          color $blue
+          font-weight 400
+          font-family $secondary-font
+        &-position
+          font-weight 600
+          color $green
+          font-family $secondary-font

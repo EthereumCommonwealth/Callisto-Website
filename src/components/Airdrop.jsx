@@ -1,11 +1,12 @@
 import React from 'react'
+import { Element } from 'react-scroll'
 
 const Airdrop = () => (
-  <div className="square">
-    <h2 className="title">
+  <Element name="Airdrop" className="Airdrop container">
+    <h2 className="Airdrop-title">
       Callisto Airdrop
     </h2>
-    <p className="pharagraph">
+    <p className="Airdrop-pharagraph">
       A snapshot of Ethereum Classic blockchain will be made at block
       5500000 of ETC network. Each address that had ETC at its balance
       at the moment of block 5500000 will receive CLO in 1:1 ratio.
@@ -15,7 +16,7 @@ const Airdrop = () => (
       <br /><br />
       It is strongly recommended to withdraw ETC from exchanges for
       guaranteed CLO receiving. <a
-        className="anchor"
+        className="Airdrop-anchor"
         target="_blank"
         href="https://ethereumproject.github.io/etherwallet/"
       >
@@ -28,7 +29,7 @@ const Airdrop = () => (
       exchanges: (1) support Callisto and grant to users or (2) hold
       it for themselves.
     </p>
-  </div>
+  </Element>
 )
 
 export default Airdrop

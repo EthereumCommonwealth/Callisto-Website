@@ -235,7 +235,7 @@
       "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-react-helmet",
       "id": "Plugin gatsby-plugin-react-helmet",
       "name": "gatsby-plugin-react-helmet",
-      "version": "2.0.5",
+      "version": "2.0.8",
       "pluginOptions": {
         "plugins": []
       },
@@ -247,16 +247,14 @@
       "pluginFilepath": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-react-helmet",
       "packageJson": {
         "name": "gatsby-plugin-react-helmet",
-        "description": "Stub description for gatsby-plugin-react-helmet",
-        "version": "2.0.5",
+        "description": "Provides drop-in support for server rendering data added with react-helmet",
+        "version": "2.0.8",
         "main": "index.js",
         "keywords": [
-          "gatsby"
+          "gatsby",
+          "gatsby-plugin"
         ],
-        "author": {
-          "name": "Kyle Mathews",
-          "email": "matthews.kyle@gmail.com"
-        },
+        "author": "Kyle Mathews <matthews.kyle@gmail.com>",
         "license": "MIT",
         "dependencies": [
           {
@@ -290,7 +288,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "e8c9c7258398d10bd91dcc90c07117a4",
+        "contentDigest": "b1e12459334638f5fc1a272833a57375",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -323,10 +321,7 @@
           "gatsby-plugin",
           "stylus"
         ],
-        "author": {
-          "name": "Ian Sinnott",
-          "email": "ian@iansinnott.com"
-        },
+        "author": "Ian Sinnott <ian@iansinnott.com>",
         "license": "MIT",
         "dependencies": [
           {
@@ -381,7 +376,7 @@
       "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "8cf09f39713c1cfd0271973b6d0d1a32",
+      "version": "8826c070aab0859fcf6f76e659729a62",
       "pluginOptions": {
         "plugins": []
       },
@@ -433,12 +428,16 @@
             "version": "^5.7.1"
           },
           {
-            "name": "particles.js",
-            "version": "^2.0.0"
+            "name": "react-countdown-now",
+            "version": "^1.3.0"
           },
           {
             "name": "react-helmet",
             "version": "^5.2.0"
+          },
+          {
+            "name": "react-scroll",
+            "version": "^1.7.8"
           },
           {
             "name": "rupture",
@@ -462,7 +461,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "c4c174d3d31eeba4e6d78388dfdf8e2a",
+        "contentDigest": "a1c520d24aed92bcede3baede269acad",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -471,14 +470,14 @@
       "siteMetadata": {
         "title": "Callisto Network"
       },
-      "pathPrefix": "/Callisto-Website",
+      "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-03-07T13:18:31.700Z",
+      "buildTime": "2018-04-11T05:13:43.201Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "ae0b03c38b49de1823984014c4b712e4",
+        "contentDigest": "48848ae9a6777679ee1923247d771919",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -499,14 +498,14 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "a33e7d6cf83466bc4cfb1c637c0bc797",
+        "contentDigest": "a17c0e8e9f0a41fbd9340e33e71daf2c",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "95fbbadcd076dfd85359ee568117b209"
+    "PLUGINS_HASH": "d28e1625600c2d259ffff629772fbce7"
   },
   "componentDataDependencies": {
     "nodes": {},

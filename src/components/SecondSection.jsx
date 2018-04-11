@@ -5,14 +5,8 @@ import Buttons from './Buttons.jsx'
 import Fundamentals from './Fundamentals.jsx'
 import Exchanges from './Exchanges.jsx'
 import Wallets from './Wallets.jsx'
-import particlesConfig from '../utils/secondParticles.json'
 
 class SecondSection extends Component {
-
-  componentDidMount() {
-    const particlesJS = require('particles.js')
-    window.particlesJS("particles-container", particlesConfig)
-  }
 
   render() {
     return (

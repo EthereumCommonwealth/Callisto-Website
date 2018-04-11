@@ -1,0 +1,34 @@
+.Header
+  background-color $white
+  padding 1em 0
+  box-shadow 0 14px 14px 0 rgba(29, 53, 77, 0.06)
+  position fixed
+  width 100%
+  top 0
+  z-index 99
+  &-content
+    display flex
+    justify-content space-between
+    align-items center
+  &-figure
+    width 50px
+    &-img
+      width 100%
+  &-nav
+    display none
+    +from-width($md)
+      display block
+    &-ul
+      margin 0
+      padding 0
+      list-style none
+      display flex
+      align-items center
+      justify-content space-between
+      &-element
+        &-anchor
+          display block
+          padding 1em
+          font-weight 600
+          &:hover
+            cursor pointer
