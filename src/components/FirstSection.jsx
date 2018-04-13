@@ -11,7 +11,7 @@ class FirstSection extends Component {
           <div className="FirstSection-content container">
             <div>
               <h1 className="FirstSection-title">
-                Callisto Network
+                 Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts
               </h1>
               <p className="FirstSection-description">
                 Callisto Network is a blockchain platform with its own cryptocurrency (CLO)
