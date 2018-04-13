@@ -83,6 +83,19 @@ const Header = () => (
             <Link
               activeClass="active"
               className="Header-nav-ul-element-anchor"
+              to="PoolSupport"
+              spy={true}
+              smooth={true}
+              offset={-85}
+              duration={500}
+            >
+              Pool
+            </Link>
+          </li>
+          {/* <li className="Header-nav-ul-element">
+            <Link
+              activeClass="active"
+              className="Header-nav-ul-element-anchor"
               to="Airdrop"
               spy={true}
               smooth={true}
@@ -91,7 +104,7 @@ const Header = () => (
             >
               News
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>
