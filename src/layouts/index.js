@@ -11,7 +11,7 @@ const url = "https://callisto.network"
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet>
+    <Helmet title="Callisto Network">
       <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta property="og:url" content={url} />
