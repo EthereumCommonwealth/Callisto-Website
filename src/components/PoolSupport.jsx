@@ -48,6 +48,22 @@ const PoolSupport = () => (
             href="http://pool.baikalmine.com/"
           />
         </div>
+        <div className="PoolSupport-list-element">
+          <span>callistopool.org</span>
+          <a
+            className="PoolSupport-list-element-anchor"
+            target="_blank"
+            href="http://callistopool.org/"
+          />
+        </div>
+        <div className="PoolSupport-list-element">
+          <span>callisto-pool.com</span>
+          <a
+            className="PoolSupport-list-element-anchor"
+            target="_blank"
+            href="http://www.callisto-pool.com/"
+          />
+        </div>
       </div>
     </div>
   </Element>
