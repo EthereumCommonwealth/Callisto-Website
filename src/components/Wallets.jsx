@@ -32,6 +32,13 @@ const Wallets = () => (
         >
           Guarda Wallet
         </a>
+        <a
+          className="Wallets-list-element"
+          target="_blank"
+          href="https://coinomi.com/"
+        >
+          Coinomi Wallet
+        </a>
       </div>
       <p className="Wallets-description">
         Any wallet that allows you to export your account is also compatible with Callisto.

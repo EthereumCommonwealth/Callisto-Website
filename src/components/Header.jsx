@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-scroll'
-import logo from '../images/clo-logo.png'
+import logo from '../images/Callisto_new.png'
 
 const Header = () => (
   <header className="Header">
@@ -92,19 +92,15 @@ const Header = () => (
               Pool
             </Link>
           </li>
-          {/* <li className="Header-nav-ul-element">
-            <Link
-              activeClass="active"
+          <li className="Header-nav-ul-element">
+            <a
               className="Header-nav-ul-element-anchor"
-              to="Airdrop"
-              spy={true}
-              smooth={true}
-              offset={-85}
-              duration={500}
+              href="https://news.callisto.network/"
+              target="_blank"
             >
               News
-            </Link>
-          </li> */}
+            </a>
+          </li>
         </ul>
       </nav>
     </div>

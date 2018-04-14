@@ -24,6 +24,12 @@ const Team = () => (
           </div>
           <div className="Team-list-element-detail-bottom">
             <span className="Team-list-element-detail-name">Co Founder of Callisto</span>
+            <a
+              href="mailto:dexaran@callisto.network"
+              className="Team-list-element-detail-mail"
+            >
+              dexaran@callisto.network
+            </a>
           </div>
         </div>
       </div>
@@ -38,6 +44,12 @@ const Team = () => (
           </div>
           <div className="Team-list-element-detail-bottom">
             <span className="Team-list-element-detail-name">Co Founder of Callisto</span>
+            <a
+              href="mailto:yohan@callisto.network"
+              className="Team-list-element-detail-mail"
+            >
+              yohan@callisto.network
+            </a>
           </div>
         </div>
       </div>
@@ -52,6 +64,12 @@ const Team = () => (
           </div>
           <div className="Team-list-element-detail-bottom">
             <span className="Team-list-element-detail-name">React Developer</span>
+            <a
+              href="mailto:s@callisto.network"
+              className="Team-list-element-detail-mail"
+            >
+              s@callisto.network
+            </a>
           </div>
         </div>
       </div>

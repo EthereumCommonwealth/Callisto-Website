@@ -1,5 +1,11 @@
 import React from 'react'
 import { Element } from 'react-scroll'
+import yobit from '../images/yobit-logo.png'
+import changenow from '../images/changenow-logo.png'
+import hitbtclogo from '../images/hitbtclogo.png'
+import kucoinlogo from '../images/kucoin-logo.png'
+import coinone from '../images/coinone-logo.png'
+import coinnest from '../images/coinnest-logo.png'
 
 const Exchanges = () => (
   <Element className="Exchanges" name="Exchanges">
@@ -18,7 +24,9 @@ const Exchanges = () => (
       </p>
       <div className="Exchanges-list">
         <div className="Exchanges-list-element">
-          <span>Yobit.net</span>
+          <figure className="Exchanges-list-element-figure">
+            <img src={yobit} alt="Yobit.net" />
+          </figure>
           <a
             className="Exchanges-list-element-anchor"
             target="_blank"
@@ -26,7 +34,9 @@ const Exchanges = () => (
           />
         </div>
         <div className="Exchanges-list-element">
-          <span>ChangeNow</span>
+          <figure className="Exchanges-list-element-figure">
+            <img src={changenow} alt="ChangeNow" />
+          </figure>
           <a
             className="Exchanges-list-element-anchor"
             target="_blank"
@@ -34,7 +44,9 @@ const Exchanges = () => (
           />
         </div>
         <div className="Exchanges-list-element">
-          <span>HitBTC</span>
+          <figure className="Exchanges-list-element-figure">
+            <img src={hitbtclogo} alt="HitBTC" />
+          </figure>
           <a
             className="Exchanges-list-element-anchor"
             target="_blank"
@@ -42,7 +54,9 @@ const Exchanges = () => (
           />
         </div>
         <div className="Exchanges-list-element">
-          <span>KuCoin</span>
+          <figure className="Exchanges-list-element-figure">
+            <img src={kucoinlogo} alt="Kucoin" />
+          </figure>
           <a
             className="Exchanges-list-element-anchor"
             target="_blank"
@@ -50,7 +64,9 @@ const Exchanges = () => (
           />
         </div>
         <div className="Exchanges-list-element">
-          <span>CoinOne</span>
+          <figure className="Exchanges-list-element-figure">
+            <img src={coinone} alt="CoinOne" />
+          </figure>
           <a
             className="Exchanges-list-element-anchor"
             target="_blank"
@@ -58,7 +74,9 @@ const Exchanges = () => (
           />
         </div>
         <div className="Exchanges-list-element">
-          <span>CoinNest</span>
+          <figure className="Exchanges-list-element-figure">
+            <img src={coinnest} alt="CoinNest" />
+          </figure>
           <a
             className="Exchanges-list-element-anchor"
             target="_blank"

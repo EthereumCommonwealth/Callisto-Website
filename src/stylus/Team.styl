@@ -9,7 +9,7 @@
     margin 1em 0 0 0
   &-list
     display grid
-    grid-template-columns 1fr
+    grid-template-columns 1fr 1fr
     grid-gap 1em
     margin-top 2em
     +from-width($md)
@@ -24,6 +24,8 @@
       box-shadow 0 14px 14px 0 rgba(29, 53, 77, .06)
       +from-width($md)
         grid-gap 1em
+        grid-template-columns 65px 1fr
+      +from-width(1200px)
         grid-template-columns 115px 1fr
       &-figure
         width 75px
@@ -31,6 +33,10 @@
         border-radius 100%
         overflow hidden
         +from-width($md)
+          width 65px
+          height 65px
+          align-self center
+        +from-width(1200px)
           width 115px
           height 115px
         img
@@ -45,6 +51,13 @@
           color $blue
           font-weight 400
           font-family $secondary-font
+        &-mail
+          font-family $secondary-font
+          color $blue
+          font-weight bold
+          text-decoration none
+          &:hover
+            text-decoration underline
         &-position
           font-weight 600
           color $green
