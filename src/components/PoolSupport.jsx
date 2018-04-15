@@ -72,6 +72,22 @@ const PoolSupport = () => (
             href="http://www.callistopool.io/"
           />
         </div>
+        <div className="PoolSupport-list-element">
+          <span>solopool.org</span>
+          <a
+            className="PoolSupport-list-element-anchor"
+            target="_blank"
+            href="https://clo.solopool.org/"
+          />
+        </div>
+        <div className="PoolSupport-list-element">
+          <span>mole-pool.net</span>
+          <a
+            className="PoolSupport-list-element-anchor"
+            target="_blank"
+            href="http://clo.mole-pool.net:89/"
+          />
+        </div>
       </div>
     </div>
   </Element>
