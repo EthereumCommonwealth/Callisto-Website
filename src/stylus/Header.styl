@@ -2,10 +2,12 @@
   background-color $white
   padding 1em 0
   box-shadow 0 14px 14px 0 rgba(29, 53, 77, 0.06)
-  position fixed
   width 100%
   top 0
   z-index 99
+  position relative
+  +from-width($md)
+    position fixed
   &-content
     display flex
     justify-content space-between
@@ -15,17 +17,37 @@
     &-img
       width 100%
   &-nav
-    display none
-    +from-width($md)
-      display block
+    &-bars
+      font-size 1.5em
+      +from-width($md)
+        display none !important
     &-ul
+      display none
       margin 0
       padding 0
       list-style none
-      display flex
       align-items center
       justify-content space-between
+      position absolute
+      left 0
+      top 78px
+      width 100%
+      border-top solid 1px $gray
+      background-color $white
+      &.is-open
+        display block
+      +from-width($md)
+        position relative
+        display flex
+        width auto
+        top auto
+        left auto
+        border-top none
+        background-color transparent
       &-element
+        text-align center
+        +from-width($md)
+          text-align left
         &-anchor
           display block
           padding 1em

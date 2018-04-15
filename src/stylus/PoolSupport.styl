@@ -7,8 +7,10 @@
     margin-bottom 1em
   &-list
     display grid
-    grid-template-columns 1fr 1fr
+    grid-template-columns 1fr
     grid-gap 1em
+    +from-width($sm)
+      grid-template-columns 1fr 1fr
     +from-width($md)
       grid-template-columns 1fr 1fr 1fr 1fr
     &-element
