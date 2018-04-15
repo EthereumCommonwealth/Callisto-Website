@@ -88,6 +88,14 @@ const PoolSupport = () => (
             href="http://clo.mole-pool.net:89/"
           />
         </div>
+        <div className="PoolSupport-list-element">
+          <span>clona.ru</span>
+          <a
+            className="PoolSupport-list-element-anchor"
+            target="_blank"
+            href="http://clona.ru"
+          />
+        </div>
       </div>
     </div>
   </Element>

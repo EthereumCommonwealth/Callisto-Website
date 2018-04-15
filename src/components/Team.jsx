@@ -45,10 +45,10 @@ const Team = () => (
           <div className="Team-list-element-detail-bottom">
             <span className="Team-list-element-detail-name">Co Founder of Callisto</span>
             <a
-              href="mailto:yohan@callisto.network"
+              href="mailto:yograterol@callisto.network"
               className="Team-list-element-detail-mail"
             >
-              yohan@callisto.network
+              yograterol@callisto.network
             </a>
           </div>
         </div>
