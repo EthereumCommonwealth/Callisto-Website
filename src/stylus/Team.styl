@@ -9,9 +9,10 @@
     margin 1em 0 0 0
   &-list
     display grid
-    grid-template-columns 1fr 1fr
     grid-gap 1em
     margin-top 2em
+    +from-width($md)
+      grid-template-columns 1fr 1fr
     +from-width($md)
       grid-template-columns 1fr 1fr 1fr
     &-element
