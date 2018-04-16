@@ -1,16 +1,13 @@
 .FirstSection
-  margin-top 87px
   box-sizing border-box
   display flex
   justify-content center
-  &-wrapper
-    background-image linear-gradient(to right, #4d7998, #0072bb)
   &-content
     display grid
     align-items center
     grid-gap 1em
     padding 1em 1em !important
-    min-height 50vh
+    z-index 0
     +from-width($md)
       grid-template-columns 2fr 1fr
   &-title
@@ -71,6 +68,66 @@
       background $white
       color $blue
       transition all 350ms cubic-bezier(0.23, 1, 0.32, 1) 0ms
+    &-blue
+      display block
+      padding .5em 1em
+      margin-left 1em
+      border-radius 5px
+      text-decoration none
+      background $blue
+      color $white
+      transition all 350ms cubic-bezier(0.23, 1, 0.32, 1) 0ms
       // &:hover
       //   background $blue
       //   color $white
+
+.homepage-hero-module
+  border-right none
+  border-left none
+  position relative
+  +from-width($md)
+    margin-top 87px
+    height 50vh
+  +from-width($xl)
+    margin-top 87px
+    height 55vh
+  +from-width(1200px)
+    height 75vh
+.no-video .video-container video,
+.touch .video-container video
+  display none
+
+.no-video .video-container .poster,
+.touch .video-container .poster
+    display block !important
+
+.video-container
+    position relative
+    bottom 0%
+    left 0%
+    height 100%
+    width 100%
+    overflow hidden
+    background #000
+    display grid
+
+.video-container .poster img
+    width 100%
+    bottom 0
+    position absolute
+
+.video-container .filter
+    z-index 100
+    position absolute
+    background rgba(0, 0, 0, 0.4)
+    width 100%
+
+.video-container video
+    position absolute
+    z-index 0
+    top 0
+    width 315%
+    +from-width($xl)
+      width 200%
+    +from-width(1200px)
+      width 100%

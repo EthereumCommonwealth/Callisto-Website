@@ -472,12 +472,12 @@
       },
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-04-15T17:09:46.640Z",
+      "buildTime": "2018-04-16T01:06:23.070Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "a65cbba6bdd7ec9919b7a0680b6c6efa",
+        "contentDigest": "a8db3411acac7310e32c373957d607c0",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -498,7 +498,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "811df3786b9f45f92646932cb8e13661",
+        "contentDigest": "1eaa128c1cfe1016823e256e85d2a5f9",
         "owner": "internal-data-bridge"
       }
     }
