@@ -390,7 +390,7 @@
           "firefox": true,
           "twitter": false,
           "yandex": false,
-          "windows": false
+          "windows": true
         }
       },
       "nodeAPIs": [
@@ -451,7 +451,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "3d777dd611a03c1311062a7c0ca5db0a",
+        "contentDigest": "a3bbe6f244434dd4e948da81c22594df",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -460,7 +460,7 @@
       "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "4082ab6eac18319d429b0df5a03ec6d6",
+      "version": "3a7f7f977a991960a899cb9fce8f337a",
       "pluginOptions": {
         "plugins": []
       },
@@ -549,7 +549,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "4fbbd22f3d81da11b3cef9bf66f1f905",
+        "contentDigest": "f3c959a1375d0f677f2d3c3b27a2cdbd",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -560,12 +560,12 @@
       },
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-04-17T14:01:43.409Z",
+      "buildTime": "2018-04-17T14:15:15.317Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "a7d3171360d53ede48f5512febc4deb7",
+        "contentDigest": "d91d0b67eb3773094df7d8c57ba7849a",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -586,21 +586,17 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "25d82f60ba9c9a8e03a52652ef5b6411",
+        "contentDigest": "cfb722d3066f82929ed2e19c10c07e5b",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "af8f8e4b1381645e99df2347f658f942"
+    "PLUGINS_HASH": "a67e65ea157ab5c21907c9acb97bf7d3"
   },
   "componentDataDependencies": {
     "nodes": {},
-    "connections": {
-      "SitePage": [
-        "/dev-404-page/"
-      ]
-    }
+    "connections": {}
   }
 }

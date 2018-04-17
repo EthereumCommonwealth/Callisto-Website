@@ -27,7 +27,7 @@ module.exports = {
           firefox: true,
           twitter: false,
           yandex: false,
-          windows: false
+          windows: true,
         }
       }
     }
