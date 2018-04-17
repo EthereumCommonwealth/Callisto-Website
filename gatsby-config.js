@@ -13,5 +13,23 @@ module.exports = {
         use: [nib(), rupture()],
       },
     },
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: "./src/images/clo-icon.png",
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: false,
+          yandex: false,
+          windows: false
+        }
+      }
+    }
   ],
 };

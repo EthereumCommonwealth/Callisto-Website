@@ -116,6 +116,19 @@ class Header extends Component {
                 </Link>
               </li>
               <li className="Header-nav-ul-element">
+                <Link
+                  activeClass="active"
+                  className="Header-nav-ul-element-anchor"
+                  to="BlockExplorers"
+                  spy={true}
+                  smooth={true}
+                  offset={-85}
+                  duration={500}
+                >
+                  Block Explorers
+                </Link>
+              </li>
+              <li className="Header-nav-ul-element">
                 <a
                   className="Header-nav-ul-element-anchor"
                   href="https://news.callisto.network/"

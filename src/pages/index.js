@@ -7,6 +7,7 @@ import Exchanges from '../components/Exchanges.jsx'
 import Team from '../components/Team.jsx'
 import Wallets from '../components/Wallets.jsx'
 import PoolSupport from '../components/PoolSupport.jsx'
+import BlockExplorers from '../components/BlockExplorers.jsx'
 import Footer from '../components/Footer.jsx'
 
 const IndexPage = () => (
@@ -19,6 +20,7 @@ const IndexPage = () => (
     <Team />
     <Wallets />
     <PoolSupport />
+    <BlockExplorers />
     <Footer />
   </div>
 )
