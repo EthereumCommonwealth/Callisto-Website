@@ -7,6 +7,7 @@ import dardan from '../images/dardan_avatar.png'
 import darwino from '../images/darwino_avatar.png'
 import methw from '../images/methw_avatar.png'
 import crika from '../images/crika_avatar.jpg'
+import mario from '../images/mario_avatar.jpg'
 import solo from '../images/solo_avatar.png'
 
 const Team = () => (
@@ -174,6 +175,27 @@ const Team = () => (
               className="Team-list-element-detail-mail"
             >
               solo@callisto.network
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="Team-list-element">
+        <figure className="Team-list-element-figure">
+          <img src={mario} alt="Mario Michel" />
+        </figure>
+        <div className="Team-list-element-detail">
+          <div className="Team-list-element-detail-top">
+            <span className="Team-list-element-detail-name">Mario Michel</span>
+            <span className="Team-list-element-detail-position">Team Member</span>
+          </div>
+          <div className="Team-list-element-detail-bottom">
+            <span className="Team-list-element-detail-name">Telegram Admin - Moderator</span>
+            <a
+              href="https://t.me/MarioMichel"
+              target="_blank"
+              className="Team-list-element-detail-mail"
+            >
+              Contact me
             </a>
           </div>
         </div>
