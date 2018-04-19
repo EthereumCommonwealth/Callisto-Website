@@ -120,6 +120,22 @@ const PoolSupport = () => (
             href="https://clo.europool.me/"
           />
         </div>
+        <div className="PoolSupport-list-element">
+          <span>comining.io</span>
+          <a
+            className="PoolSupport-list-element-anchor"
+            target="_blank"
+            href="https://comining.io/"
+          />
+        </div>
+        <div className="PoolSupport-list-element">
+          <span>clo.pool.sexy</span>
+          <a
+            className="PoolSupport-list-element-anchor"
+            target="_blank"
+            href="http://clo.pool.sexy/"
+          />
+        </div>
       </div>
     </div>
   </Element>

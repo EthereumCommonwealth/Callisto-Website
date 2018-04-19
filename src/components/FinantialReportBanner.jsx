@@ -4,7 +4,7 @@ const FinantialReportBanner = () => (
   <div className="FinantialReportBanner">
     <div className="container FinantialReportBanner-wrapper">
       <h4 className="FinantialReportBanner-title">
-        Callisto Finantial Report
+        Callisto Financial Report
       </h4>
       <a
         className="FinantialReportBanner-anchor"

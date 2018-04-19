@@ -1,10 +1,11 @@
 .BlockExplorers
   padding 2em 1em 3em 1em!important
-  background-color rgba(246, 246, 246, 0.59)
+  background-color $white
   &-title
     font-family $secondary-font
     margin 0
     font-size 28px
+    color $dark
   &-list
     display grid
     grid-template-columns 1fr
@@ -15,7 +16,7 @@
     +from-width($xl)
       grid-template-columns 1fr 1fr 1fr 1fr
     &-element
-      background-color $blue
+      background-color $primary-color
       padding 1em
       border-radius 4px
       box-shadow 0 14px 14px 0 rgba(29, 53, 77, 0.06)
