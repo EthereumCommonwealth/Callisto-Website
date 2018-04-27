@@ -136,6 +136,14 @@ const PoolSupport = () => (
             href="http://clo.pool.sexy/"
           />
         </div>
+        <div className="PoolSupport-list-element">
+          <span>clo.mobilla.io</span>
+          <a
+            className="PoolSupport-list-element-anchor"
+            target="_blank"
+            href="http://clo.mobilla.io"
+          />
+        </div>
       </div>
     </div>
   </Element>

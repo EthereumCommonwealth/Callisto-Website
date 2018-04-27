@@ -8,6 +8,7 @@ import Team from '../components/Team.jsx'
 import Wallets from '../components/Wallets.jsx'
 import PoolSupport from '../components/PoolSupport.jsx'
 import BlockExplorers from '../components/BlockExplorers.jsx'
+import ClientsDownloads from '../components/ClientsDownloads.jsx'
 import FinantialReportBanner from '../components/FinantialReportBanner.jsx'
 import Footer from '../components/Footer.jsx'
 
@@ -18,6 +19,7 @@ const IndexPage = () => (
     <Airdrop />
     {Date.now() < 1523793600000 ? <MainnetBanner /> : null}
     <About />
+    <ClientsDownloads />
     <Exchanges />
     <Team />
     <Wallets />

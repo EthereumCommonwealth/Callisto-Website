@@ -2,8 +2,8 @@ import React from 'react'
 import { Element } from 'react-scroll'
 
 const About = () => (
-  <Element className="About container" name="About">
-    <div className="About-container">
+  <Element className="About" name="About">
+    <div className="About-container container">
       <div className="About-element">
         <i className="fas fa-lock About-element-icon" />
         <h4 className="About-element-title">
