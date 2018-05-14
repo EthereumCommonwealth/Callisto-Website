@@ -456,11 +456,73 @@
         "owner": "internal-data-bridge"
       }
     },
+    "Plugin gatsby-plugin-google-tagmanager": {
+      "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-google-tagmanager",
+      "id": "Plugin gatsby-plugin-google-tagmanager",
+      "name": "gatsby-plugin-google-tagmanager",
+      "version": "1.0.18",
+      "pluginOptions": {
+        "plugins": [],
+        "id": "GTM-5XT2RN7",
+        "includeInDevelopment": true
+      },
+      "nodeAPIs": [],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "onRenderBody"
+      ],
+      "pluginFilepath": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-google-tagmanager",
+      "packageJson": {
+        "name": "gatsby-plugin-google-tagmanager",
+        "description": "Gatsby plugin to add google tagmanager onto a site",
+        "version": "1.0.18",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "google analytics",
+          "google tagmanager"
+        ],
+        "author": "Thijs Koerselman <thijs@vauxlab.com>",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^1.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "7b6596ab54474689463103e74850d472",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
     "Plugin default-site-plugin": {
       "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "3a7f7f977a991960a899cb9fce8f337a",
+      "version": "ae54307f44fac4ce81f50082f15c09bd",
       "pluginOptions": {
         "plugins": []
       },
@@ -490,6 +552,10 @@
           {
             "name": "gatsby-plugin-favicon",
             "version": "^2.1.1"
+          },
+          {
+            "name": "gatsby-plugin-google-tagmanager",
+            "version": "^1.0.18"
           },
           {
             "name": "gatsby-plugin-postcss-sass",
@@ -549,7 +615,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "f3c959a1375d0f677f2d3c3b27a2cdbd",
+        "contentDigest": "2e9ab20891ca9f4efa96ba99d94e4ff9",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -560,12 +626,12 @@
       },
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-04-27T14:15:36.216Z",
+      "buildTime": "2018-05-14T20:59:37.868Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "9fc23e4cc34343c660c957b7804582a2",
+        "contentDigest": "474df4cfb3484ca92dccc6d038fa7bed",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -586,14 +652,14 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "edaf086106db0120fc354b8d2225319b",
+        "contentDigest": "6ee74768529d74f106e422eafe6a956d",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "a67e65ea157ab5c21907c9acb97bf7d3"
+    "PLUGINS_HASH": "515dda48cc96b95da6e9506a2fd8c025"
   },
   "componentDataDependencies": {
     "nodes": {},

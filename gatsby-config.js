@@ -30,6 +30,13 @@ module.exports = {
           windows: true,
         }
       }
-    }
+    },
+    {
+    resolve: `gatsby-plugin-google-tagmanager`,
+    options: {
+      id: "GTM-5XT2RN7",
+      includeInDevelopment: true,
+    },
+  },
   ],
 };

@@ -129,7 +129,7 @@ const Team = () => (
             <span className="Team-list-element-detail-position">Team Member</span>
           </div>
           <div className="Team-list-element-detail-bottom">
-            <span className="Team-list-element-detail-name">QA & Technical Documentation Writter</span>
+            <span className="Team-list-element-detail-name">QA & Technical Documentation Writer</span>
             <a
               href="mailto:s@callisto.network"
               className="Team-list-element-detail-mail"
