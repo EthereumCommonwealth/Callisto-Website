@@ -9,6 +9,7 @@ import methw from '../images/methw_avatar.png'
 import crika from '../images/crika_avatar.jpg'
 import mario from '../images/mario_avatar.jpg'
 import solo from '../images/solo_avatar.png'
+import nsawinyh from '../images/nsawinyh_avatar.png'
 
 const Team = () => (
   <Element className="Team container" name="Team">
@@ -66,7 +67,7 @@ const Team = () => (
         <div className="Team-list-element-detail">
           <div className="Team-list-element-detail-top">
             <span className="Team-list-element-detail-name">Carlos Sampol</span>
-            <span className="Team-list-element-detail-position">Frontend Developer</span>
+            <span className="Team-list-element-detail-position">Development Team</span>
           </div>
           <div className="Team-list-element-detail-bottom">
             <span className="Team-list-element-detail-name">React Developer</span>
@@ -171,7 +172,7 @@ const Team = () => (
           <div className="Team-list-element-detail-bottom">
             <span className="Team-list-element-detail-name">Marketing</span>
             <a
-              href="mailto:s@callisto.network"
+              href="mailto:solo@callisto.network"
               className="Team-list-element-detail-mail"
             >
               solo@callisto.network
@@ -196,6 +197,26 @@ const Team = () => (
               className="Team-list-element-detail-mail"
             >
               Contact me
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="Team-list-element">
+        <figure className="Team-list-element-figure">
+          <img src={nsawinyh} alt="Mario Michel" />
+        </figure>
+        <div className="Team-list-element-detail">
+          <div className="Team-list-element-detail-top">
+            <span className="Team-list-element-detail-name">Nick Sawinyh</span>
+            <span className="Team-list-element-detail-position">Team Member</span>
+          </div>
+          <div className="Team-list-element-detail-bottom">
+            <span className="Team-list-element-detail-name">Head of Marketing</span>
+            <a
+              href="mailto:nsawinyh@callisto.network"
+              className="Team-list-element-detail-mail"
+            >
+              nsawinyh@callisto.network
             </a>
           </div>
         </div>
