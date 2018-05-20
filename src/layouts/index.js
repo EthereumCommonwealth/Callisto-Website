@@ -21,6 +21,7 @@ const TemplateWrapper = ({ children }) => (
       <meta name="twitter:creator" content="CallistoSupport" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="google-site-verification" content="4vOPk-f3ZKRulW2kk0HxXcR1ok_7XeHVw9oG4M8dcGU" />
     </Helmet>
     {children()}
   </div>

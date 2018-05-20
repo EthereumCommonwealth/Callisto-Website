@@ -6,6 +6,7 @@ import hitbtclogo from '../images/hitbtclogo.png'
 import kucoinlogo from '../images/kucoin-logo.png'
 import coinone from '../images/coinone-logo.png'
 import coinnest from '../images/coinnest-logo.png'
+import stocksExchange from '../images/logo.png'
 
 const Exchanges = () => (
   <Element className="Exchanges" name="Exchanges">
@@ -13,6 +14,22 @@ const Exchanges = () => (
       <h2 className="Exchanges-title">
         Exchanges
       </h2>
+      <p className="Exchanges-subtitle">
+        We are currently listed for exchange on:
+      </p>
+      <div className="Exchanges-list">
+        <div className="Exchanges-list-element">
+          <figure className="Exchanges-list-element-figure is-small">
+            <img src={stocksExchange} alt="Stocks Exchange" />
+          </figure>
+          <a
+            className="Exchanges-list-element-anchor"
+            target="_blank"
+            href="https://stocks.exchange/trade/CLO/BTC"
+          />
+        </div>
+      </div>
+      <br />
       <p className="Exchanges-subtitle">
         We are waiting for exchanges to respond. We have already warned most exchanges <a
           className="anchor"
@@ -24,7 +41,7 @@ const Exchanges = () => (
       </p>
       <div className="Exchanges-list">
         <div className="Exchanges-list-element">
-          <figure className="Exchanges-list-element-figure">
+          <figure className="Exchanges-list-element-figure is-small">
             <img src={yobit} alt="Yobit.net" />
           </figure>
           <a
@@ -34,7 +51,7 @@ const Exchanges = () => (
           />
         </div>
         <div className="Exchanges-list-element">
-          <figure className="Exchanges-list-element-figure">
+          <figure className="Exchanges-list-element-figure is-small">
             <img src={changenow} alt="ChangeNow" />
           </figure>
           <a
@@ -54,7 +71,7 @@ const Exchanges = () => (
           />
         </div>
         <div className="Exchanges-list-element">
-          <figure className="Exchanges-list-element-figure">
+          <figure className="Exchanges-list-element-figure is-small">
             <img src={kucoinlogo} alt="Kucoin" />
           </figure>
           <a
