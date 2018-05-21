@@ -7,6 +7,7 @@ import kucoinlogo from '../images/kucoin-logo.png'
 import coinone from '../images/coinone-logo.png'
 import coinnest from '../images/coinnest-logo.png'
 import stocksExchange from '../images/logo.png'
+import biteBtc from '../images/bitebtc_logo.jpg'
 
 const Exchanges = () => (
   <Element className="Exchanges" name="Exchanges">
@@ -15,7 +16,7 @@ const Exchanges = () => (
         Exchanges
       </h2>
       <p className="Exchanges-subtitle">
-        We are currently listed for exchange on:
+        We are currently listed for exchange in:
       </p>
       <div className="Exchanges-list">
         <div className="Exchanges-list-element">
@@ -26,6 +27,16 @@ const Exchanges = () => (
             className="Exchanges-list-element-anchor"
             target="_blank"
             href="https://stocks.exchange/trade/CLO/BTC"
+          />
+        </div>
+        <div className="Exchanges-list-element">
+          <figure className="Exchanges-list-element-figure is-small">
+            <img src={biteBtc} alt="BiteBTC Exchange" />
+          </figure>
+          <a
+            className="Exchanges-list-element-anchor"
+            target="_blank"
+            href="https://bitebtc.com/trade/clo_btc"
           />
         </div>
       </div>
