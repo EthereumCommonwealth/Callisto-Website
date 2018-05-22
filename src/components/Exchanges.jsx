@@ -16,7 +16,7 @@ const Exchanges = () => (
         Exchanges
       </h2>
       <p className="Exchanges-subtitle">
-        We are currently listed for exchange in:
+        We are currently listed on the following exchanges:
       </p>
       <div className="Exchanges-list">
         <div className="Exchanges-list-element">
