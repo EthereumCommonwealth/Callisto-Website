@@ -8,7 +8,7 @@ const Wallets = () => (
         Wallets
       </h2>
       <p className="Wallets-description">
-        These wallets will support Callisto Network at the time the mainnet is launched:
+        These wallets support Callisto Network:
       </p>
       <div className="Wallets-list">
         <a
