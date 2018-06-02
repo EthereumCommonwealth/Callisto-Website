@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
 import Layout from '../components/commons/Layout';
 
 const NotFound = () => (
@@ -8,4 +7,4 @@ const NotFound = () => (
   </Layout>
 );
 
-export default hot(module)(NotFound);
+export default NotFound;

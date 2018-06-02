@@ -4,7 +4,11 @@ import Notfound from '../containers/NotFound';
 const routes = [
   {
     path: '/',
-    name: 'home',
+    exact: true,
+    component: Home,
+  },
+  {
+    path: '/:lang',
     exact: true,
     component: Home,
   },

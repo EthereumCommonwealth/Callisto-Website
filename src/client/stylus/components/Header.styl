@@ -1,0 +1,30 @@
+.Header
+  background #FFF
+  padding 1em
+  &-content
+    display flex
+    justify-content space-between
+    align-items center
+  &-logo
+    &-mobile
+      +from-width($sm)
+        display none
+    &-desktop
+      display none
+      +from-width($sm)
+        display block
+  &-menu
+    &-content
+      list-style none
+      display flex
+      align-items center
+      padding 0
+      margin 0
+      &-target
+        line-height 1.05
+        color $dark-gray
+        text-decoration none
+        padding 1em 13px
+        transition all 150ms ease
+        &:hover
+          color $green

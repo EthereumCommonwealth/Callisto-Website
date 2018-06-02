@@ -1,14 +1,10 @@
 body
-  font-family $base-font
+  font-family $secondary-font
   background-color $white
+  font-size 1em
 
 figure
   margin 0
-
-a
-  color $primary-color
-  font-weight 600
-  text-decoration none
 
 p
   margin 0
@@ -32,19 +28,30 @@ p
 .no-margin
   margin 0
 
-.is-first-content
-  margin-top 120px
-
 .btn
-  background-color $primary-color
-  text-align center
-  padding .75em
-  border-radius 4px
-  font-weight 400
-  color $white
-  text-decoration none
-  margin-bottom 1em
+  border-radius 8px
+  padding .75em 2em
+  font-family $secondary-font
+  text-transform uppercase
   display block
-  float left
+  text-align center
+  font-weight bold
+  line-height 1.41
+  color #FFF
+  text-decoration none
+  max-width max-content
+  transition all 150ms ease
   &:hover
-    box-shadow 0 14px 14px 0 rgba(29, 53, 77, 0.05)
+    box-shadow .5em .5em 10px 0px rgba(226, 226, 226, 0.58)
+  &-blue
+    background-color $dark-blue
+  &-green
+    background-color $green
+  &-transparent
+    &-green
+      border solid 1px $green
+      color $green
+      background-color transparent
+      &:hover
+        color #FFF
+        background-color $green

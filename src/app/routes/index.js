@@ -8,6 +8,7 @@ const Routes = (
     <Switch>
       <Route exact path='/' component={Home} />
       <Route component={Notfound} />
+      <Route path='/:lang' component={Home} />
     </Switch>
   </BrowserRouter>
 );

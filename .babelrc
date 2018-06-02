@@ -1,6 +1,6 @@
 {
     "presets": [
-        "env", "react", "stage-3", "react-hmre",
+        "env", "react", "stage-3",
     ],
     "plugins": ["react-hot-loader/babel"],
 }

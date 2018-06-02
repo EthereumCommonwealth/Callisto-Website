@@ -1,11 +1,15 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
 import Layout from '../components/commons/Layout';
+import Header from '../components/commons/Header';
 
-const Home = () => (
-  <Layout className='Home'>
-    Home
-  </Layout>
-);
+const Home = ({ match }) => {
+  console.log(match);
+  return (
+    <Layout className='Home' match={match}>
+      <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
+    </Layout>
+  );
 
-export default hot(module)(Home);
+}
+
+export default Home;

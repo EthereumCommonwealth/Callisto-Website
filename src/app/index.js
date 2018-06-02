@@ -8,8 +8,8 @@ import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import { createBrowserHistory } from 'history';
 import rootReducer from './reducers/rootReducer';
 import routes from './routes/';
-import 'styles/index.styl';
 import 'styles/fontawesome/svg-with-js/js/fontawesome-all.js';
+import 'styles/index.styl';
 
 if (typeof window !== 'undefined') {
   let composeEnhancers;
@@ -23,12 +23,7 @@ if (typeof window !== 'undefined') {
   const routeMiddleware = routerMiddleware(createBrowserHistory());
 
   const store = createStore(rootReducer, preloadedState,
-    composeEnhancers(
-      applyMiddleware(
-        routeMiddleware,
-        thunk,
-      ),
-    ),
+    composeEnhancers(applyMiddleware(routeMiddleware, thunk)),
   );
   const history = syncHistoryWithStore(createBrowserHistory(), store);
 
