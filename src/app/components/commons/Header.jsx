@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Link as ScrollTo } from 'react-scroll';
 import PropTypes from 'prop-types';
 import LangSelector from './LangSelector';
 
@@ -7,14 +8,14 @@ class Header extends Component {
 
   get menuElements() {
     return [
-      { title: 'About', url: '/about/' },
-      { title: 'Roadmap', url: '/roadmap/' },
-      { title: 'Airdrop', url: '/airdrop/' },
-      { title: 'Wallets', url: '/wallets/' },
-      { title: 'Exchanges', url: '/exchanges/' },
-      { title: 'Mining', url: '/mining/' },
-      { title: 'Our Team', url: '/team/' },
-      { title: 'Blog', url: '/blog/' },
+      { title: 'About', url: 'about' },
+      { title: 'Roadmap', url: 'roadmap' },
+      { title: 'Airdrop', url: 'airdrop' },
+      { title: 'Wallets', url: 'wallets' },
+      { title: 'Exchanges', url: 'exchanges' },
+      { title: 'Mining', url: 'mining' },
+      { title: 'Our Team', url: 'team' },
+      { title: 'Blog', url: 'blog' },
     ];
   }
 
@@ -42,12 +43,16 @@ class Header extends Component {
               {menuElements.map((elem, index) =>
                 (
                   <li key={`menuElement-${index}`}>
-                    <a
-                      href={elem.url}
+                    <ScrollTo
                       className='Header-menu-content-target'
+                      to={elem.url}
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
                     >
                       {elem.title}
-                    </a>
+                    </ScrollTo>
                   </li>
                 )
               )}

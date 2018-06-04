@@ -2,5 +2,5 @@
     "presets": [
       "react", "stage-3", "env",
     ],
-    "plugins": ["transform-class-properties", "react-hot-loader/babel"],
+    "plugins": ["transform-class-properties", "react-hot-loader/babel", "babel-plugin-transform-object-assign"],
 }

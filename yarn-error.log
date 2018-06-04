@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/carlossampol/.nvm/versions/node/v6.11.5/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js remove transform-class-properties
+  /Users/carlossampol/.nvm/versions/node/v6.11.5/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js add transform-object-assign
 
 PATH: 
   /Users/carlossampol/.nvm/versions/node/v6.11.5/bin:/Users/carlossampol/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -23,7 +23,7 @@ npm manifest:
     "author": "Carlos Sampol <sampol.90@gmail.com>",
     "license": "MIT",
     "scripts": {
-      "start:dev": "nodemon src/server/index.js --exec babel-node --presets es2015,stage-3 --ignore components --progress --inline --colors",
+      "start:dev": "nodemon src/server/index.js --exec babel-node --presets es2015,stage-3 --plugins transform-class-properties --ignore components --progress --inline --colors",
       "build:server": "webpack-cli --config server.webpack.config.js --colors"
     },
     "dependencies": {
@@ -35,6 +35,7 @@ npm manifest:
       "babel-preset-react-hmre": "^1.1.1",
       "babel-preset-stage-3": "^6.24.1",
       "body-parser": "^1.18.3",
+      "classnames": "^2.2.5",
       "dotenv": "^5.0.1",
       "express": "^4.16.3",
       "extract-text-webpack-plugin": "4.0.0-beta.0",
@@ -50,6 +51,7 @@ npm manifest:
       "react-router-config": "^1.0.0-beta.4",
       "react-router-dom": "^4.2.2",
       "react-router-redux": "^4.0.8",
+      "react-scroll": "^1.7.9",
       "redux": "^4.0.0",
       "redux-thunk": "^2.3.0",
       "webpack-cli": "^3.0.1"
@@ -57,6 +59,7 @@ npm manifest:
     "devDependencies": {
       "babel-eslint": "^8.2.3",
       "babel-loader": "^7.1.4",
+      "babel-plugin-transform-class-properties": "^6.24.1",
       "babel-polyfill": "^6.26.0",
       "babel-register": "^6.26.0",
       "css-loader": "^0.28.11",
@@ -1616,6 +1619,10 @@ Lockfile:
       define-property "^0.2.5"
       isobject "^3.0.0"
       static-extend "^0.1.1"
+  
+  classnames@^2.2.5:
+    version "2.2.5"
+    resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
   
   cli-boxes@^1.0.0:
     version "1.0.0"
@@ -3795,6 +3802,10 @@ Lockfile:
     version "4.1.2"
     resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   
+  lodash.throttle@^4.1.1:
+    version "4.1.1"
+    resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  
   lodash.uniq@^4.5.0:
     version "4.5.0"
     resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
@@ -4917,7 +4928,7 @@ Lockfile:
     dependencies:
       asap "~2.0.3"
   
-  prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.6.0, prop-types@^15.6.1:
+  prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
     version "15.6.1"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
     dependencies:
@@ -5161,6 +5172,13 @@ Lockfile:
       path-to-regexp "^1.7.0"
       prop-types "^15.5.4"
       warning "^3.0.0"
+  
+  react-scroll@^1.7.9:
+    version "1.7.9"
+    resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.7.9.tgz#83e6bfc1e10a7b7ff7dbc34008b76737501aba6b"
+    dependencies:
+      lodash.throttle "^4.1.1"
+      prop-types "^15.5.8"
   
   react-transform-catch-errors@^1.0.2:
     version "1.0.2"
@@ -6629,10 +6647,14 @@ Lockfile:
       yargs-parser "^9.0.2"
 
 Trace: 
-  Error: This module isn't specified in a manifest.
-      at MessageError.Error (native)
-      at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
-      at Object.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:60445:15)
-      at next (native)
-      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
-      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13
+  Error: https://registry.yarnpkg.com/transform-object-assign: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:65019:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:132430:22)
+      at emitTwo (events.js:106:13)
+      at Request.emit (events.js:191:7)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:133413:10)
+      at emitOne (events.js:96:13)
+      at Request.emit (events.js:188:7)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:133333:12)
+      at IncomingMessage.g (events.js:292:16)
+      at emitNone (events.js:91:20)

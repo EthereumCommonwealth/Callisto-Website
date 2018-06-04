@@ -1,8 +1,10 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import SectionHeading from './commons/SectionHeading';
 import RoadmapElement from './commons/RoadmapElement';
+
 const Roadmap = () => (
-  <section className='Roadmap container'>
+  <Element className='Roadmap container' name='roadmap'>
     <div className='Roadmap-content'>
       <SectionHeading
         title='Roadmap'
@@ -89,7 +91,7 @@ const Roadmap = () => (
         </div>
       </div>
     </div>
-  </section>
+  </Element>
 );
 
 export default Roadmap;

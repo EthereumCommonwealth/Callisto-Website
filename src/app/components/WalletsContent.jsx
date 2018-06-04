@@ -1,9 +1,10 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import SectionHeading from './commons/SectionHeading';
 import SingleWallet from './commons/SingleWallet';
 
 const WalletsContent = () => (
-  <div className='WalletsContent'>
+  <Element className='WalletsContent' name='wallets'>
     <div className='WalletsContent-container container'>
       <SectionHeading
         title='Wallets'
@@ -58,7 +59,7 @@ const WalletsContent = () => (
         />
       </div>
     </div>
-  </div>
+  </Element>
 );
 
 export default WalletsContent;

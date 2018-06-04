@@ -1,7 +1,8 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 
 const InfoContent = () => (
-  <section className='InfoContent'>
+  <Element name='about' className='InfoContent'>
     <div className='InfoContent-content container'>
       <div className='InfoContent-content-top'>
         <div className='InfoContent-content-top-element square'>
@@ -66,7 +67,7 @@ const InfoContent = () => (
         </div>
       </div>
     </div>
-  </section>
+  </Element>
 );
 
 export default InfoContent;
