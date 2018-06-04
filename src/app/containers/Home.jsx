@@ -1,12 +1,19 @@
 import React from 'react';
 import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
+import Hero from '../components/Hero';
+import InfoContent from '../components/InfoContent';
+import Roadmap from '../components/Roadmap';
+import WalletsContent from '../components/WalletsContent';
 
 const Home = ({ match }) => {
-  console.log(match);
   return (
     <Layout className='Home' match={match}>
       <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
+      <Hero />
+      <InfoContent />
+      <Roadmap />
+      <WalletsContent />
     </Layout>
   );
 

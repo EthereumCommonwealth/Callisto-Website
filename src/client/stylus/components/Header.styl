@@ -5,6 +5,7 @@
     display flex
     justify-content space-between
     align-items center
+    padding 0
   &-logo
     &-mobile
       +from-width($sm)
@@ -16,15 +17,21 @@
   &-menu
     &-content
       list-style none
-      display flex
-      align-items center
       padding 0
       margin 0
+      display none
+      +from-width($md)
+        display flex
+        align-items center
       &-target
         line-height 1.05
         color $dark-gray
         text-decoration none
-        padding 1em 13px
         transition all 150ms ease
+        user-select none
+        padding 1em 5px
+        +from-width($md)
+          font-size 1em
+          padding 1em 13px
         &:hover
           color $green

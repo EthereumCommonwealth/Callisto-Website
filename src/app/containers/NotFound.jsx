@@ -1,10 +1,13 @@
 import React from 'react';
-import Layout from '../components/commons/Layout';
+import Header from '../components/commons/Header';
 
-const NotFound = () => (
-  <Layout className='NotFound'>
-    Page Not Found
-  </Layout>
+const NotFound = ({ match }) => (
+  <div>
+    <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
+    <div>
+      Not Found
+    </div>
+  </div>
 );
 
 export default NotFound;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import LangSelector from './LangSelector';
 
@@ -22,18 +23,20 @@ class Header extends Component {
     return (
       <header className='Header'>
         <div className='Header-content container'>
-          <figure className='Header-figure'>
-            <img
-              className='Header-logo-desktop'
-              src='/image/clo-logo.svg'
-              alt='Callisto Logo'
-            />
-            <img
-              className='Header-logo-mobile'
-              src='/image/mini-logo.svg'
-              alt='Callisto Logo'
-            />
-          </figure>
+          <Link to='/'>
+            <figure className='Header-figure'>
+              <img
+                className='Header-logo-desktop'
+                src='/image/clo-logo.svg'
+                alt='Callisto Logo'
+              />
+              <img
+                className='Header-logo-mobile'
+                src='/image/mini-logo.svg'
+                alt='Callisto Logo'
+              />
+            </figure>
+          </Link>
           <nav className='Header-menu'>
             <ul className='Header-menu-content'>
               {menuElements.map((elem, index) =>

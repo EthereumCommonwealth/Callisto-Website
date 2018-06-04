@@ -33,6 +33,6 @@ if (typeof window !== 'undefined') {
         { routes }
       </Router>
     </Provider>,
-    document.getElementById('root')
+    document.getElementById('callisto-network')
   );
 }

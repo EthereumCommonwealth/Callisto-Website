@@ -1,13 +1,21 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, addLocaleData } from 'react-intl';
+import en from 'react-intl/locale-data/en';
+import ru from 'react-intl/locale-data/ru';
+import es from 'react-intl/locale-data/es';
+
+addLocaleData([...en, ...ru, ...es]);
 
 class Layout extends PureComponent {
+
   render() {
     const { className, children, match } = this.props;
     return (
       <IntlProvider
-        locale={match && match.params && match.params.lang ? match.params.lang : 'en'}
+        locale={match.params && match.params.lang && match.params.lang !== 'en' ?
+          match.params.lang : 'en'
+        }
         messages={{}}
       >
         <div className={className}>

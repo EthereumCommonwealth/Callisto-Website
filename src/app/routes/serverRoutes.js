@@ -8,7 +8,7 @@ const routes = [
     component: Home,
   },
   {
-    path: '/:lang',
+    path: '/:lang(es|en|ru)/',
     exact: true,
     component: Home,
   },

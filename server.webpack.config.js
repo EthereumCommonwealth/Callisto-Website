@@ -20,7 +20,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js|jsx$/,
         enforce: 'pre',
         exclude: '/node_modules/',
         use: {

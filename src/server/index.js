@@ -71,6 +71,31 @@ if (ENV.isDevelopment()) {
   app.get('*', handleRender);
 }
 
+function setHeaders(target) {
+  switch (target) {
+    case '/en/':
+    case '/en':
+      return {
+        title: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
+        description: 'Callisto Network is a blockchain platform with its own cryptocurrency (CLO) that is based on Ethereum protocol',
+        url: 'https://callisto.network/',
+      }
+    case '/es/':
+    case '/es':
+      return {
+        title: 'Callisto Network: Tecnología Blockchain, Criptomoneda y Contratos inteligentes',
+        description: 'Callisto Network es una plataforma de blockchain con su propia Criptomoneda (CLO) que esta basada en el protocolo Ethereum',
+        url: 'https://callisto.network/es/',
+      }
+    default:
+      return {
+        title: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
+        description: 'Callisto Network is a blockchain platform with its own cryptocurrency (CLO) that is based on Ethereum protocol',
+        url: 'https://callisto.network/',
+      }
+  }
+}
+
 function handleRender(req, res) {
   const context = {}
   const store = createStore(rootReducer, initialState, compose(applyMiddleware(thunk)));
@@ -86,23 +111,32 @@ function handleRender(req, res) {
   );
 
   const preloadedState = store.getState();
-  res.send(renderFullPage(html, preloadedState));
+  res.send(renderFullPage(html, preloadedState, setHeaders(req.originalUrl)));
 
 }
 
-function renderFullPage(html, preloadedState) {
+function renderFullPage(html, preloadedState, headers) {
   return (`
     <!doctype html>
       <html>
         <head>
-          <title>Callisto Network</title>
-          <meta name="description" content="">
+          <title>${headers.title}</title>
+          <meta name="title" content="${headers.title}">
+          <meta name="description" content="${headers.description}">
+          <meta property="og:url" content="${headers.url}" />
+          <meta property="og:title" content="{headers.title}" />
+          <meta property="og:description" content="${headers.description}" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:creator" content="CallistoSupport" />
+          <meta name="twitter:title" content="${headers.title}" />
+          <meta name="twitter:description" content="${headers.description}" />
+          <meta name="google-site-verification" content="4vOPk-f3ZKRulW2kk0HxXcR1ok_7XeHVw9oG4M8dcGU" />
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,
             maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
           <link rel="stylesheet" href="/main.css" />
         </head>
         <body>
-           <div id="root">${html}</div>
+           <div id="callisto-network">${html}</div>
           <script>
             window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
           </script>
