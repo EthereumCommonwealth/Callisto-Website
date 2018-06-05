@@ -126,7 +126,7 @@ function renderFullPage(html, preloadedState, headers) {
           <meta name="title" content="${headers.title}">
           <meta name="description" content="${headers.description}">
           <meta property="og:url" content="${headers.url}" />
-          <meta property="og:title" content="{headers.title}" />
+          <meta property="og:title" content="${headers.title}" />
           <meta property="og:description" content="${headers.description}" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="CallistoSupport" />
