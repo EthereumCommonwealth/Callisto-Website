@@ -8,10 +8,10 @@ import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router';
 import { renderRoutes } from 'react-router-config';
 import R from 'ramda';
-import rootReducer from '../app/reducers/rootReducer';
-import initialState from '../app/initialState';
+import rootReducer from '../app/reducers/rootReducer.js';
+import initialState from '../app/initialState.js';
 import { renderToString } from 'react-dom/server';
-import Routes from '../app/routes/ServerRoutes';
+import Routes from '../app/routes/ServerRoutes.js';
 
 const Env = (envVars) => {
   const ENV_NAMES = {
