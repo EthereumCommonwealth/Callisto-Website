@@ -68,6 +68,7 @@ if (ENV.isDevelopment()) {
   app.use(express.static(__dirname + '/public'));
   app.get('*', handleRender);
 } else {
+  console.log('Loading server configs')
   app.use(express.static(__dirname + '/public'));
   app.get('*', handleRender);
 }

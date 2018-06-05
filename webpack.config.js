@@ -7,7 +7,8 @@ module.exports = {
   entry: ['webpack-hot-middleware/client', './src/app/index.js'],
   mode: process.env.NODE_ENV ? process.env.NODE_ENV : 'development',
   output: {
-    path: '/',
+    path: process.env.NODE_ENV !== 'development' ?
+      path.join(process.cwd(), './src/server/public') : '/',
     filename: 'main.js',
     publicPath: '/'
   },
