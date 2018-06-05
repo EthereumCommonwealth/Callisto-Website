@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
 import PropTypes from 'prop-types';
+import { injectIntl } from 'react-intl';
 import LangSelector from './LangSelector';
 
 class Header extends Component {
 
   get menuElements() {
     return [
-      { title: 'About', url: 'about' },
+      { title: this.props.intl.formatMessage({ id: 'HeaderAbout' }), url: 'about' },
       { title: 'Roadmap', url: 'roadmap' },
       { title: 'Airdrop', url: 'airdrop' },
       { title: 'Wallets', url: 'wallets' },
@@ -58,7 +59,7 @@ class Header extends Component {
               )}
               <LangSelector
                 defaultSelected={this.props.lang}
-                langList={['es', 'en', 'ru']}
+                langList={['es', 'en', 'id', 'ru']}
               />
             </ul>
           </nav>
@@ -72,4 +73,4 @@ Header.propTypes = {
   lang: PropTypes.string.isRequired,
 };
 
-export default Header;
+export default injectIntl(Header);
