@@ -2,5 +2,12 @@
     "presets": [
       "react", "stage-3", "env",
     ],
-    "plugins": ["transform-class-properties", "react-hot-loader/babel", "babel-plugin-transform-object-assign"],
+    "env": {
+      "development": {
+        "plugins": ["transform-class-properties", "react-hot-loader/babel", "babel-plugin-transform-object-assign"]
+      },
+      "staging": {
+        "plugins": ["transform-class-properties", "babel-plugin-transform-object-assign"]
+      }
+    },
 }
