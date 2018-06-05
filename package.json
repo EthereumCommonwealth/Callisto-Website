@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "nodemon src/server/index.js --exec babel-node --presets es2015,stage-3 --plugins transform-class-properties --ignore components --progress --inline --colors",
+    "start:prod": "node src/server/index.js --exec babel-node --presets es2015,stage-3 --plugins transform-class-properties --ignore components --progress --inline --colors",
     "build:server": "webpack-cli --config server.webpack.config.js --colors"
   },
   "dependencies": {
