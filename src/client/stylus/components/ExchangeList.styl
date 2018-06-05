@@ -1,0 +1,25 @@
+.ExchangeList
+  margin-top 50px
+  +from-width($md)
+    margin-top 100px
+  &-text
+    line-height 1.64
+    color #FFF
+    text-align center
+  &-content
+    display grid
+    grid-gap 1em
+    margin-top 1em
+    +from-width($md)
+      margin-top 3em
+      grid-template-columns repeat(6, 1fr)
+    &-figure
+      justify-self center
+      align-self center
+      max-width 150px
+      img
+        width 100%
+    &-soon
+      font-size 14px
+      line-height 1.64
+      color #FFF

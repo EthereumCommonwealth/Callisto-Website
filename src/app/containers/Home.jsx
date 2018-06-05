@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import InfoContent from '../components/InfoContent';
 import Roadmap from '../components/Roadmap';
 import WalletsContent from '../components/WalletsContent';
+import MarketStatus from '../components/MarketStatus';
 
 const Home = ({ match }) => {
   return (
@@ -14,6 +15,7 @@ const Home = ({ match }) => {
       <InfoContent />
       <Roadmap />
       <WalletsContent />
+      <MarketStatus />
     </Layout>
   );
 
