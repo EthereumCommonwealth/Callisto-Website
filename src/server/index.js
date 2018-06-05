@@ -12,7 +12,7 @@ import R from 'ramda';
 import rootReducer from '../app/reducers/rootReducer.js';
 import initialState from '../app/initialState.js';
 import { renderToString } from 'react-dom/server';
-import Routes from '../app/routes/ServerRoutes.js';
+import Routes from '../app/routes/serverRoutes.js';
 
 const Env = (envVars) => {
   const ENV_NAMES = {
