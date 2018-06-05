@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+import fs from 'fs';
 import express from 'express';
 import dotenv from 'dotenv';
 import React from 'react';
