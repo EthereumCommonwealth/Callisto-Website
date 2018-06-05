@@ -41,10 +41,6 @@ const Roadmap = () => (
         <RoadmapElement
           title='Q3 2018'
           items={[
-            { name: `
-              Launch mobile app wallet for Callisto, Ethereum Classic, and Ethereum.
-              Compatible with custom Ethereum node.
-            ` },
             { name: 'ETC-CLO swap channel implementation' },
           ]}
         />

@@ -21,13 +21,13 @@ const ExchangeList = () => (
       <figure className='ExchangeList-content-figure'>
         <img src='/image/exchanges/hitBTC.png' alt='HitBTC' />
         <span className='ExchangeList-content-soon'>
-          Comming soon
+          Coming soon
         </span>
       </figure>
       <figure className='ExchangeList-content-figure'>
         <img src='/image/exchanges/exrates.svg' alt='Exrates' />
         <span className='ExchangeList-content-soon'>
-          Comming soon
+          Coming soon
         </span>
       </figure>
     </div>
