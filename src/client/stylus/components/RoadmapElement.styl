@@ -1,23 +1,31 @@
 .RoadmapElement
   padding 1em 0
   position relative
-  border-left solid 2px $light-gray
   +from-width($sm)
     padding 1em 3em
+    border-left solid 2px $light-gray
   &:before
-    position absolute
-    content ''
-    width 10px
-    left 0
-    top 0
-    height 2px
-    background-color $light-gray
+    +from-width($sm)
+      position absolute
+      content ''
+      width 10px
+      left 0
+      top 0
+      height 2px
+      background-color $light-gray
   &-container
     margin 32px 0
   &-figure
     position absolute
-    top -50px
-    left 0
+    width 37px
+    top 40px
+    left -20px
+    +from-width($sm)
+      width 76px
+      top -50px
+      left 0
+    img
+      width 100%
   &-title
     font-size 24px
     line-height 1.52
@@ -37,7 +45,8 @@
     line-height 1.64
     padding .5em 0
   &.happened
-    border-left solid 2px $green
+    +from-width($sm)
+      border-left solid 2px $green
     &:before
       background-color $green
     .RoadmapElement-container
@@ -48,7 +57,8 @@
     .RoadmapElement-title
       color $green
     .RoadmapElement-figure
-      top -38px
+      +from-width($sm)
+        top -38px
     .RoadmapElement-text
       color $dark-gray
     .RoadmapElement-subcontainer
