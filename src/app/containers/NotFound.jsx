@@ -1,13 +1,20 @@
 import React from 'react';
+import { IntlProvider, addLocaleData } from 'react-intl';
+import en from 'react-intl/locale-data/en';
 import Header from '../components/commons/Header';
+import messages from '../constants/messages';
+
+addLocaleData([...en]);
 
 const NotFound = ({ match }) => (
-  <div>
-    <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
+  <IntlProvider locale='en' messages={messages.en}>
     <div>
-      Not Found
+      <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
+      <div>
+        Not Found
+      </div>
     </div>
-  </div>
+  </IntlProvider>
 );
 
 export default NotFound;

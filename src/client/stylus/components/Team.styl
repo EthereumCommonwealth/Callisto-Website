@@ -1,0 +1,15 @@
+.Team
+  padding 40px
+  background-color #FFF
+  +from-width($sm)
+    padding 80px 0
+  &-list
+    display grid
+    grid-gap 15px
+    margin-top 45px
+    +from-width($sm)
+      grid-template-columns 1fr 1fr
+    +from-width($md)
+      margin-top 90px
+      grid-gap 30px
+      grid-template-columns repeat(4, 1fr)

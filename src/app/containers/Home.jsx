@@ -8,6 +8,7 @@ import WalletsContent from '../components/WalletsContent';
 import MarketStatus from '../components/MarketStatus';
 import Mining from '../components/Mining';
 import MiningPools from '../components/MiningPools';
+import Team from '../components/Team';
 
 const Home = ({ match }) => {
   return (
@@ -20,6 +21,7 @@ const Home = ({ match }) => {
       <MarketStatus />
       <Mining />
       <MiningPools />
+      <Team />
     </Layout>
   );
 

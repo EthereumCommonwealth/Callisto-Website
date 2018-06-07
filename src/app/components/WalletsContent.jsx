@@ -47,7 +47,10 @@ const WalletsContent = () => (
         <SingleWallet
           icon='/image/applestore.svg'
           title='iOS'
-          options={[{ name: 'Coinomi', url: 'https://coinomi.com/' }]}
+          options={[
+            { name: 'Coinomi', url: 'https://coinomi.com/' },
+            { name: 'Guarda', url: 'https://guarda.co/' },
+          ]}
         />
         <SingleWallet
           icon='/image/web.svg'
