@@ -235,7 +235,7 @@
       "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-react-helmet",
       "id": "Plugin gatsby-plugin-react-helmet",
       "name": "gatsby-plugin-react-helmet",
-      "version": "2.0.8",
+      "version": "2.0.11",
       "pluginOptions": {
         "plugins": []
       },
@@ -247,12 +247,24 @@
       "pluginFilepath": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-react-helmet",
       "packageJson": {
         "name": "gatsby-plugin-react-helmet",
-        "description": "Provides drop-in support for server rendering data added with react-helmet",
-        "version": "2.0.8",
+        "description": "Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.",
+        "version": "2.0.11",
         "main": "index.js",
         "keywords": [
           "gatsby",
-          "gatsby-plugin"
+          "gatsby-plugin",
+          "favicon",
+          "react-helmet",
+          "seo",
+          "document",
+          "head",
+          "title",
+          "meta",
+          "link",
+          "script",
+          "base",
+          "noscript",
+          "style"
         ],
         "author": "Kyle Mathews <matthews.kyle@gmail.com>",
         "license": "MIT",
@@ -288,7 +300,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "b1e12459334638f5fc1a272833a57375",
+        "contentDigest": "028b59a1cc4ca17d0c0584341d345ced",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -297,7 +309,7 @@
       "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-stylus",
       "id": "Plugin gatsby-plugin-stylus",
       "name": "gatsby-plugin-stylus",
-      "version": "1.1.16",
+      "version": "1.1.20",
       "pluginOptions": {
         "plugins": [],
         "use": [
@@ -314,7 +326,7 @@
       "packageJson": {
         "name": "gatsby-plugin-stylus",
         "description": "Gatsby support for Stylus",
-        "version": "1.1.16",
+        "version": "1.1.20",
         "main": "./gatsby-node.js",
         "keywords": [
           "gatsby",
@@ -329,12 +341,12 @@
             "version": "^6.26.0"
           },
           {
-            "name": "extract-text-webpack-plugin",
-            "version": "^1.0.1"
+            "name": "gatsby-1-config-css-modules",
+            "version": "^1.0.11"
           },
           {
-            "name": "gatsby-1-config-css-modules",
-            "version": "^1.0.10"
+            "name": "gatsby-1-config-extract-plugin",
+            "version": "^1.0.3"
           },
           {
             "name": "stylus",
@@ -367,7 +379,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "5e6c3598f86a5db9b74eef0f1a0008d7",
+        "contentDigest": "131b698fbb7ad6bf65b90219d0b76c9b",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -626,12 +638,12 @@
       },
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-05-22T15:25:14.830Z",
+      "buildTime": "2018-06-07T04:43:59.497Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "08cb9a66ed7ee9bd84f60467c19c1f7b",
+        "contentDigest": "7fac228666ba7f9bcac5fbaf9f3b116d",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -652,14 +664,15 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "627d18ed75675cc450a9b84a93486da7",
+        "contentDigest": "8ef9b6893360173f4006defdcc02e95a",
+        "description": "Plugin component-page-creator",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "515dda48cc96b95da6e9506a2fd8c025"
+    "PLUGINS_HASH": "560c1f70d36c9b41059f121b44f02fa1"
   },
   "componentDataDependencies": {
     "nodes": {},

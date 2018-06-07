@@ -41,14 +41,6 @@ const PoolSupport = () => (
           />
         </div>
         <div className="PoolSupport-list-element">
-          <span>baikalmine.com</span>
-          <a
-            className="PoolSupport-list-element-anchor"
-            target="_blank"
-            href="http://pool.baikalmine.com/"
-          />
-        </div>
-        <div className="PoolSupport-list-element">
           <span>callistopool.org</span>
           <a
             className="PoolSupport-list-element-anchor"
@@ -64,6 +56,7 @@ const PoolSupport = () => (
             href="http://www.callisto-pool.com/"
           />
         </div>
+
         <div className="PoolSupport-list-element">
           <span>callistopool.io</span>
           <a
@@ -113,14 +106,6 @@ const PoolSupport = () => (
           />
         </div>
         <div className="PoolSupport-list-element">
-          <span>europool.me</span>
-          <a
-            className="PoolSupport-list-element-anchor"
-            target="_blank"
-            href="https://clo.europool.me/"
-          />
-        </div>
-        <div className="PoolSupport-list-element">
           <span>comining.io</span>
           <a
             className="PoolSupport-list-element-anchor"
@@ -134,14 +119,6 @@ const PoolSupport = () => (
             className="PoolSupport-list-element-anchor"
             target="_blank"
             href="http://clo.pool.sexy/"
-          />
-        </div>
-        <div className="PoolSupport-list-element">
-          <span>clo.mobilla.io</span>
-          <a
-            className="PoolSupport-list-element-anchor"
-            target="_blank"
-            href="http://clo.mobilla.io"
           />
         </div>
       </div>

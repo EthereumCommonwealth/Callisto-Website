@@ -8,6 +8,8 @@ import coinone from '../images/coinone-logo.png'
 import coinnest from '../images/coinnest-logo.png'
 import stocksExchange from '../images/logo.png'
 import biteBtc from '../images/bitebtc_logo.jpg'
+import oooBtc from '../images/ooobtc_logo.png'
+import simpleswap from '../images/simpleswap_logo.png'
 
 const Exchanges = () => (
   <Element className="Exchanges" name="Exchanges">
@@ -37,6 +39,26 @@ const Exchanges = () => (
             className="Exchanges-list-element-anchor"
             target="_blank"
             href="https://bitebtc.com/trade/clo_btc"
+          />
+        </div>
+        <div className="Exchanges-list-element">
+          <figure className="Exchanges-list-element-figure is-small is-dark">
+            <img src={simpleswap} alt="Simpleswap Exchange" />
+          </figure>
+          <a
+            className="Exchanges-list-element-anchor"
+            target="_blank"
+            href="https://www.simpleswap.io/"
+          />
+        </div>
+        <div className="Exchanges-list-element">
+          <figure className="Exchanges-list-element-figure is-small is-dark">
+            <img src={oooBtc} alt="OOOBTC Exchange" />
+          </figure>
+          <a
+            className="Exchanges-list-element-anchor"
+            target="_blank"
+            href="https://www.ooobtc.com/trading?coin=clo&current=btc"
           />
         </div>
       </div>

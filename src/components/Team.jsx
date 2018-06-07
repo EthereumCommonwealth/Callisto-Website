@@ -106,17 +106,18 @@ const Team = () => (
         </figure>
         <div className="Team-list-element-detail">
           <div className="Team-list-element-detail-top">
-            <span className="Team-list-element-detail-name">@darwino</span>
+            <span className="Team-list-element-detail-name">Darwino</span>
             <span className="Team-list-element-detail-position">Callisto Indonesia Ambassador</span>
           </div>
           <div className="Team-list-element-detail-bottom">
             <span className="Team-list-element-detail-name">Social Media Callisto Support Community Manager</span>
-            {/* <a
-              href="mailto:s@callisto.network"
+            <a
+              href="https://t.me/Darwino"
+              target="_blank"
               className="Team-list-element-detail-mail"
             >
-              s@callisto.network
-            </a> */}
+              Contact me
+            </a>
           </div>
         </div>
       </div>

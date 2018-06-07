@@ -1,11 +1,11 @@
 var plugins = [{
-      plugin: require('/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js'),
+      plugin: require('/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-favicon/gatsby-ssr.js'),
+      plugin: require('/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-favicon/gatsby-ssr'),
       options: {"plugins":[],"logo":"./src/images/clo-icon.png","injectHTML":true,"icons":{"android":true,"appleIcon":true,"appleStartup":true,"coast":false,"favicons":true,"firefox":true,"twitter":false,"yandex":false,"windows":true}},
     },{
-      plugin: require('/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-google-tagmanager/gatsby-ssr.js'),
+      plugin: require('/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-google-tagmanager/gatsby-ssr'),
       options: {"plugins":[],"id":"GTM-5XT2RN7","includeInDevelopment":true},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
