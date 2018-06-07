@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import fs from 'fs';
 import express from 'express';
 import dotenv from 'dotenv';
+import helmet from 'helmet';
 import React from 'react';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
@@ -70,6 +71,8 @@ if (ENV.isDevelopment()) {
 } else {
   console.log('Loading server configs')
   app.use(express.static(__dirname + '/public'));
+  app.use(helmet());
+  app.disable('x-powered-by');
   app.get('*', handleRender);
 }
 
