@@ -9,6 +9,7 @@ import MarketStatus from '../components/MarketStatus';
 import Mining from '../components/Mining';
 import MiningPools from '../components/MiningPools';
 import Team from '../components/Team';
+import Blog from '../components/Blog';
 
 const Home = ({ match }) => {
   return (
@@ -22,6 +23,7 @@ const Home = ({ match }) => {
       <Mining />
       <MiningPools />
       <Team />
+      <Blog />
     </Layout>
   );
 
