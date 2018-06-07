@@ -5,9 +5,10 @@ const TransferWebpackPlugin = require('transfer-webpack-plugin');
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: ['webpack-hot-middleware/client', './src/app/index.js'],
-  mode: 'development',
+  mode: process.env.NODE_ENV ? process.env.NODE_ENV : 'development',
   output: {
-    path: '/',
+    path: process.env.NODE_ENV !== 'development' ?
+      path.join(process.cwd(), './src/server/public') : '/',
     filename: 'main.js',
     publicPath: '/'
   },
@@ -91,5 +92,9 @@ module.exports = {
     new TransferWebpackPlugin([
       { from: 'client' },
     ], path.resolve(__dirname, 'src')),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    new webpack.optimize.UglifyJsPlugin()
   ],
 }
