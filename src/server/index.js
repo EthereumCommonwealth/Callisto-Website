@@ -99,7 +99,7 @@ app.get('/', async (req, res, next) => {
     const btcStats = await coinStats.get('ticker/1/');
     const cloStats = await coinStats.get('ticker/2757/');
     handleRender(req, res, {
-      blogPosts: await preparePosts(posts.data),
+      blogPosts: preparePosts(posts.data),
       marketStats: {
         btcPrice: btcStats.data.data.quotes.USD.price,
         cloPrice: cloStats.data.data.quotes.USD.price,
