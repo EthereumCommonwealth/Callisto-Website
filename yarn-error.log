@@ -1,14 +1,14 @@
 Arguments: 
-  /Users/carlossampol/.nvm/versions/node/v6.11.5/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js install
+  /Users/carlossampol/.nvm/versions/node/v8.10.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js install
 
 PATH: 
-  /Users/carlossampol/.nvm/versions/node/v6.11.5/bin:/Users/carlossampol/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  /Users/carlossampol/.nvm/versions/node/v8.10.0/bin:/Users/carlossampol/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 Yarn version: 
   1.5.1
 
 Node version: 
-  6.11.5
+  8.10.0
 
 Platform: 
   darwin x64
@@ -61,12 +61,6 @@ Lockfile:
   No lockfile
 
 Trace: 
-  Error: Found incompatible module
-      at MessageError.Error (native)
-      at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
-      at checkOne (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:62444:11)
-      at Object.check (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:62463:5)
-      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:22803:73
-      at next (native)
-      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
-      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
+      at errnoException (dns.js:50:10)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)

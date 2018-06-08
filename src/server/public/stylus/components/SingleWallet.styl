@@ -1,0 +1,22 @@
+.SingleWallet
+  padding 15px
+  box-sizing border-box
+  width 100%
+  display grid
+  justify-items center
+  align-content flex-start
+  +from-width($sm)
+    padding 30px
+  &-title
+    font-size 18px
+    color $dark-blue
+    font-weight 500
+    margin 10px 0
+    +from-width($sm)
+      font-size 20px
+      margin 20px 0
+  &-list
+    display grid
+    grid-gap 15px
+    .btn
+      max-width inherit

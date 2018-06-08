@@ -1,0 +1,67 @@
+.InfoContent
+  +from-width($md)
+    margin-top -50px
+  &-content
+    display grid
+    grid-gap 15px
+    +from-width($md)
+      grid-gap 30px
+    &-top
+      display grid
+      grid-gap 15px
+      justify-items center
+      +from-width($md)
+        grid-template-columns 1fr 1fr
+        grid-gap 30px
+      &-element
+        padding 30px
+      &-figure
+        width 50px
+        +from-width($md)
+          width 70px
+        img
+          width 100%
+      &-title
+        font-size 22px
+        font-weight 500
+        color $dark-blue
+        margin 22px 0 0 0
+        +from-width($md)
+          font-size 26px
+          max-width 80%
+      &-text
+        line-height 1.64
+        color $dark-gray
+        margin 9px 0
+        +from-width($md)
+          margin 19px 0
+      &-anchor
+        color $green
+        text-decoration none
+        user-select none
+        .fa-arrow-right
+          margin-right .5em
+    &-bottom
+      display grid
+      grid-gap 15px
+      justify-items center
+      +from-width($md)
+        grid-template-columns 1fr 1fr 1fr
+        grid-gap 30px
+      &-element
+        padding 30px
+        width 100%
+        box-sizing border-box
+        display flex
+        flex-direction column
+        justify-content space-between
+      &-title
+        font-size 18px
+        font-weight 500
+        color $dark-blue
+        +from-width($md)
+          font-size 20px
+      &-text
+        line-height 1.64
+        color $dark-gray
+        margin .5em 0
