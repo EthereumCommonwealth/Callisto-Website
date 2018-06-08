@@ -1,21 +1,12 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
-import endpoints from '../constants/endpoints';
+import { connect } from 'react-redux';
 import BlogPost from './commons/BlogPost';
 
 class Blog extends PureComponent {
-
-  state = {
-    blogPosts: [],
-  }
-
-  componentDidMount() {
-    endpoints.getBlogPosts()
-      .then((res) => this.setState({ blogPosts: res }))
-      .catch(err => console.log('Error on market status get.', err))
-  }
-
   render() {
+    const { blogPosts } = this.props;
     return (
       <Element name='blog' className='Blog'>
         <div className='Blog-content container'>
@@ -23,10 +14,14 @@ class Blog extends PureComponent {
             Blog and Press
           </h3>
           <div className='Blog-list'>
-            {this.state.blogPosts.map(post => (
+            {blogPosts.map(post => (
               <BlogPost
                 key={`BlogPost-${post.id}`}
-                title={post.title.rendered}
+                title={post.title}
+                description={post.description}
+                date={post.date}
+                url={post.link}
+                cover={post.cover}
               />
             ))}
           </div>
@@ -36,4 +31,14 @@ class Blog extends PureComponent {
   }
 }
 
-export default Blog;
+function mapStateTopProps(state) {
+  return {
+    blogPosts: state.blogPosts,
+  };
+}
+
+Blog.propTypes = {
+  blogPosts: PropTypes.array,
+};
+
+export default connect(mapStateTopProps, null)(Blog);

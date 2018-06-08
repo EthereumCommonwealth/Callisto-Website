@@ -11,9 +11,13 @@ import { StaticRouter } from 'react-router';
 import { renderRoutes } from 'react-router-config';
 import R from 'ramda';
 import rootReducer from '../app/reducers/rootReducer.js';
-import initialState from '../app/initialState.js';
 import { renderToString } from 'react-dom/server';
 import Routes from '../app/routes/serverRoutes.js';
+import headersInfo from './utils/headersInfo';
+import renderPage from './utils/renderPage';
+import defaultState from '../app/initialState';
+import blogPosts from '../app/services/blogPosts';
+import coinStats from '../app/services/coinStats';
 
 const Env = (envVars) => {
   const ENV_NAMES = {
@@ -67,41 +71,69 @@ if (ENV.isDevelopment()) {
   app.use(webpackDevMiddleware(compiler, serverConfig));
   app.use(webpackHotMiddleware(compiler));
   app.use(express.static(__dirname + '/public'));
-  app.get('*', handleRender);
 } else {
   console.log('Loading server configs')
   app.use(express.static(__dirname + '/public'));
   app.use(helmet());
   app.disable('x-powered-by');
-  app.get('*', handleRender);
 }
 
-function setHeaders(target) {
-  switch (target) {
-    case '/en/':
-    case '/en':
-      return {
-        title: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
-        description: 'Callisto Network is a blockchain platform with its own cryptocurrency (CLO) that is based on Ethereum protocol',
-        url: 'https://callisto.network/',
-      }
-    case '/es/':
-    case '/es':
-      return {
-        title: 'Callisto Network: Tecnología Blockchain, Criptomoneda y Contratos inteligentes',
-        description: 'Callisto Network es una plataforma de blockchain con su propia Criptomoneda (CLO) que esta basada en el protocolo Ethereum',
-        url: 'https://callisto.network/es/',
-      }
-    default:
-      return {
-        title: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
-        description: 'Callisto Network is a blockchain platform with its own cryptocurrency (CLO) that is based on Ethereum protocol',
-        url: 'https://callisto.network/',
-      }
+const preparePosts = (posts) => {
+  const elements = posts.map((elem) => {
+    const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
+    return {
+      id: elem.id,
+      title: elem.title.rendered,
+      description: elem.excerpt.rendered,
+      date: elem.date,
+      link: elem.link,
+      cover: `${baseImageUrl}/${elem.better_featured_image.media_details.file}`,
+    }
+  });
+  return elements;
+}
+
+app.get('/', async (req, res, next) => {
+  try {
+    const posts = await blogPosts.get('posts?_embed/');
+    const btcStats = await coinStats.get('ticker/1/');
+    const cloStats = await coinStats.get('ticker/2757/');
+    handleRender(req, res, {
+      blogPosts: await preparePosts(posts.data),
+      marketStats: {
+        btcPrice: btcStats.data.data.quotes.USD.price,
+        cloPrice: cloStats.data.data.quotes.USD.price,
+        volume: cloStats.data.data.quotes.USD.volume_24h,
+        marketCap: cloStats.data.data.quotes.USD.market_cap,
+      },
+    })
+  } catch (err) {
+    next(err);
   }
-}
+})
 
-function handleRender(req, res) {
+app.get('/:lang(es|en|id|ru)/', async (req, res, next) => {
+  try {
+    const posts = await blogPosts.get('posts?_embed/');
+    const btcStats = await coinStats.get('ticker/1/');
+    const cloStats = await coinStats.get('ticker/2757/');
+    handleRender(req, res, {
+      blogPosts: preparePosts(posts.data),
+      marketStats: {
+        btcPrice: btcStats.data.data.quotes.USD.price,
+        cloPrice: cloStats.data.data.quotes.USD.price,
+        volume: cloStats.data.data.quotes.USD.volume_24h,
+        marketCap: cloStats.data.data.quotes.USD.market_cap,
+      },
+    });
+  } catch (err) {
+    next(err);
+  }
+});
+
+app.get('*', (req, res) => handleRender(req, res, defaultState));
+
+function handleRender(req, res, initialState) {
   const context = {}
   const store = createStore(rootReducer, initialState, compose(applyMiddleware(thunk)));
   const html = renderToString(
@@ -114,42 +146,8 @@ function handleRender(req, res) {
       </StaticRouter>
     </Provider>
   );
-
   const preloadedState = store.getState();
-  res.send(renderFullPage(html, preloadedState, setHeaders(req.originalUrl)));
-
-}
-
-function renderFullPage(html, preloadedState, headers) {
-  return (`
-    <!doctype html>
-      <html>
-        <head>
-          <title>${headers.title}</title>
-          <meta name="title" content="${headers.title}">
-          <meta name="description" content="${headers.description}">
-          <meta property="og:url" content="${headers.url}" />
-          <meta property="og:title" content="${headers.title}" />
-          <meta property="og:description" content="${headers.description}" />
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:creator" content="CallistoSupport" />
-          <meta name="twitter:title" content="${headers.title}" />
-          <meta name="twitter:description" content="${headers.description}" />
-          <meta name="google-site-verification" content="4vOPk-f3ZKRulW2kk0HxXcR1ok_7XeHVw9oG4M8dcGU" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,
-            maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
-          <link rel="stylesheet" href="/main.css" />
-        </head>
-        <body>
-           <div id="callisto-network">${html}</div>
-          <script>
-            window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
-          </script>
-        <script src="/main.js"></script>
-        </body>
-    </html>
-  `);
-
+  res.send(renderPage(html, preloadedState, headersInfo(req.originalUrl)));
 }
 
 app.listen(port, (err) => {

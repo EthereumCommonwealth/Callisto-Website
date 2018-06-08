@@ -1,37 +1,13 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Element } from 'react-scroll';
 import SectionHeading from './commons/SectionHeading';
 import ExchangeList from './ExchangeList';
-import endpoints from '../constants/endpoints';
-import * as U from '../constants/'
 
 class MarketStatus extends PureComponent {
-  state = {
-    price: 0,
-    volume: 0,
-    marketCap: 0,
-    btcPrice: 0,
-  };
-
-  componentDidMount() {
-    endpoints.getStats(U.BTC_ID)
-      .then((res) => this.setState({ btcPrice: res.data.quotes.USD.price }))
-      .then(() => {
-        endpoints.getStats(U.CLO_ID)
-          .then(res => {
-            const { USD } = res.data.quotes;
-            this.setState({
-              price: USD.price,
-              volume: USD.volume_24h,
-              marketCap: USD.market_cap,
-            });
-          })
-          .catch(err => console.log('Error on market status get.', err))
-      })
-      .catch(err => console.log('Error on market status get.', err))
-  }
-
   render() {
+    const { marketStats } = this.props;
     return (
       <Element className='MarketStatus' name='exchanges'>
         <div className='container'>
@@ -52,10 +28,10 @@ class MarketStatus extends PureComponent {
                   <span className='MarketStatus-pricing-element-symbol'>
                     $
                   </span>
-                  {this.state.price}
+                  {marketStats.cloPrice}
                 </span>
                 <span className='MarketStatus-pricing-element-btcPrice'>
-                  {(this.state.price / this.state.btcPrice).toFixed(10)} btc
+                  {(marketStats.cloPrice / marketStats.btcPrice).toFixed(10)} btc
                 </span>
               </div>
             </div>
@@ -71,10 +47,10 @@ class MarketStatus extends PureComponent {
                   <span className='MarketStatus-pricing-element-symbol'>
                     $
                   </span>
-                  {(this.state.volume).toLocaleString()}
+                  {(marketStats.volume).toLocaleString()}
                 </span>
                 <span className='MarketStatus-pricing-element-btcPrice'>
-                  {(this.state.volume / this.state.btcPrice).toFixed(10)} btc
+                  {(marketStats.volume / marketStats.btcPrice).toFixed(10)} btc
                 </span>
               </div>
             </div>
@@ -90,10 +66,10 @@ class MarketStatus extends PureComponent {
                   <span className='MarketStatus-pricing-element-symbol'>
                     $
                   </span>
-                  {(this.state.marketCap).toLocaleString()}
+                  {(marketStats.marketCap).toLocaleString()}
                 </span>
                 <span className='MarketStatus-pricing-element-btcPrice'>
-                  {((this.state.marketCap / this.state.btcPrice).toFixed(10))} btc
+                  {((marketStats.marketCap / marketStats.btcPrice).toFixed(10))} btc
                 </span>
               </div>
             </div>
@@ -105,4 +81,14 @@ class MarketStatus extends PureComponent {
   }
 }
 
-export default MarketStatus;
+function mapStateTopProps(state) {
+  return {
+    marketStats: state.marketStats,
+  };
+}
+
+MarketStatus.propTypes = {
+  marketStats: PropTypes.object,
+};
+
+export default connect(mapStateTopProps, null)(MarketStatus);

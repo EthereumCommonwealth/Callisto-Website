@@ -1,3 +1,4 @@
 export default {
-  appName: 'Callisto Website'
+  blogPosts: [],
+  marketStats: {},
 };

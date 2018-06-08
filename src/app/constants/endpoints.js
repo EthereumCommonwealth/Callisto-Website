@@ -13,7 +13,14 @@ function getBlogPosts() {
     .catch((error) => console.log('Error getting Blog Posts', error));
 }
 
+function getMedia(id) {
+  return blogPosts.get(`media/${id}`)
+    .then((res) => res.data)
+    .catch((error) => console.log('Error getting Media', error));
+}
+
 export default {
   getStats,
   getBlogPosts,
+  getMedia,
 };
