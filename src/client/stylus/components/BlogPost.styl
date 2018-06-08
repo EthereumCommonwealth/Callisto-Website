@@ -4,10 +4,14 @@
   &-cover
     background-position center
     background-size cover
-    height 200px
+    height 150px
+    +from-width($md)
+      height 200px
   &-info
-    padding 30px
+    padding 15px
     display grid
+    +from-width($md)
+      padding 30px
     &-title
       margin 0
       color $dark-blue
