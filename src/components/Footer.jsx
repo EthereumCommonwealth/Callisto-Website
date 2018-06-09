@@ -16,7 +16,7 @@ const Footer = () => (
         <a href="https://twitter.com/CallistoSupport" target="_blank">
           <i className="fab fa-twitter" />
         </a>
-        <a href="https://t.me/CallistoNetwork" target="_blank">
+        <a href="https://t.me/CallistoNet" target="_blank">
           <i className="fab fa-telegram" />
         </a>
         <a href="https://www.facebook.com/callistonetwork/" target="_blank">
