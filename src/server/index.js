@@ -4,6 +4,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 import React from 'react';
+import favicon from 'express-favicon';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
@@ -70,13 +71,14 @@ if (ENV.isDevelopment()) {
   }
   app.use(webpackDevMiddleware(compiler, serverConfig));
   app.use(webpackHotMiddleware(compiler));
-  app.use(express.static(__dirname + '/public'));
 } else {
   console.log('Loading server configs')
-  app.use(express.static(__dirname + '/public'));
   app.use(helmet());
   app.disable('x-powered-by');
 }
+
+app.use(express.static(__dirname + '/public'));
+app.use(favicon(__dirname + '/public/favicon.png'));
 
 const preparePosts = (posts) => {
   const elements = posts.map((elem) => {
@@ -130,7 +132,6 @@ app.get('/:lang(es|en|id|ru)/', async (req, res, next) => {
     next(err);
   }
 });
-
 app.get('*', (req, res) => handleRender(req, res, defaultState));
 
 function handleRender(req, res, initialState) {
