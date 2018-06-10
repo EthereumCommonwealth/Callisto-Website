@@ -1,11 +1,12 @@
 import React from 'react';
+import { injectIntl } from 'react-intl';
 import SectionHeading from './commons/SectionHeading';
 
-const Community = () => (
+const Community = ({ intl }) => (
   <section className='Community'>
     <div className='Community-content container'>
       <SectionHeading
-        title='Join our community'
+        title={intl.formatMessage({ id: 'JoinCommunity' })}
       />
       <div className='Community-list'>
         <a
@@ -83,4 +84,4 @@ const Community = () => (
   </section>
 );
 
-export default Community;
+export default injectIntl(Community);

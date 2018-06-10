@@ -54,7 +54,7 @@ class LangSelector extends Component {
                     >
                       <Link
                         className='LangSelector-list-elem-anchor'
-                        to={`/${elem}`}
+                        to={elem === 'en' ? '/' : `/${elem}`}
                       >
                         <img
                           src={`/image/country-flags/${elem}.png`}

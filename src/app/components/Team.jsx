@@ -1,14 +1,15 @@
 import React from 'react';
 import { Element } from 'react-scroll';
+import { injectIntl } from 'react-intl';
 import SectionHeading from './commons/SectionHeading';
 import TeamMember from './commons/TeamMember';
 
-const Team = () => (
+const Team = ({ intl }) => (
   <Element name='team' className='Team'>
     <div className='Team-content container'>
       <SectionHeading
-        title='Our Team'
-        description='Meet the people that are going to take your business to the next level'
+        title={intl.formatMessage({ id: 'OurTeam' })}
+        description={intl.formatMessage({ id: 'OurTeamDescription' })}
       />
       <div className='Team-list'>
         <TeamMember
@@ -155,4 +156,4 @@ const Team = () => (
   </Element>
 );
 
-export default Team;
+export default injectIntl(Team);

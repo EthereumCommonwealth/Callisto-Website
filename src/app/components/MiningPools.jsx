@@ -1,11 +1,12 @@
 import React from 'react';
+import { injectIntl } from 'react-intl';
 import SectionHeading from './commons/SectionHeading';
 
-const MiningPools = () => (
+const MiningPools = ({ intl }) => (
   <div className='MiningPools container'>
     <div className='MiningPools-content'>
       <SectionHeading
-        title='Callisto Mining Pools'
+        title={intl.formatMessage({ id: 'CallistoMiningPool' })}
       />
       <div className='MiningPools-list'>
         <a
@@ -101,7 +102,7 @@ const MiningPools = () => (
         </a>
       </div>
       <SectionHeading
-        title='Block Explorers'
+        title={intl.formatMessage({ id: 'BlockExplorers' })}
       />
       <div className='MiningPools-explorers'>
         <a
@@ -130,4 +131,4 @@ const MiningPools = () => (
   </div>
 );
 
-export default MiningPools;
+export default injectIntl(MiningPools);

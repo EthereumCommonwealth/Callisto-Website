@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 import { Element } from 'react-scroll';
 import { connect } from 'react-redux';
 import BlogPost from './commons/BlogPost';
@@ -11,7 +12,7 @@ class Blog extends PureComponent {
       <Element name='blog' className='Blog'>
         <div className='Blog-content container'>
           <h3 className='Blog-title'>
-            Blog and Press
+            <FormattedMessage id='BlogAndPress' />
           </h3>
           <div className='Blog-list'>
             {blogPosts.map(post => (

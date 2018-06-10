@@ -1,5 +1,6 @@
 import React from 'react';
 import { Element } from 'react-scroll';
+import { FormattedMessage } from 'react-intl';
 
 const InfoContent = () => (
   <Element name='about' className='InfoContent'>
@@ -9,15 +10,14 @@ const InfoContent = () => (
           <figure className='InfoContent-content-top-figure'>
             <img src='/image/cold-staking.svg' alt='CLO Cold Staking' />
           </figure>
-          <h4 className='InfoContent-content-top-title'>First Cold Staking Coin</h4>
+          <h4 className='InfoContent-content-top-title'>
+            <FormattedMessage id='InfoContentColdStakingTitle' />
+          </h4>
           <p className='InfoContent-content-top-text'>
-            Callisto improvements can be applied to Ethereum Classic.
-            Callisto is NOT a testnet or a hardfork of Ethereum Classic.
-            Callisto Network is developed by Ethereum Commonwealth, one of three
-            ETC development teams.
+            <FormattedMessage id='InfoContentColdStakingDescription' />
           </p>
           <a href='/' className='InfoContent-content-top-anchor'>
-            <i className='fas fa-arrow-right'/> Read more
+            <i className='fas fa-arrow-right'/> <FormattedMessage id='ReadMore' />
           </a>
         </div>
         <div className='InfoContent-content-top-element square'>
@@ -25,45 +25,51 @@ const InfoContent = () => (
             <img src='/image/smart-contract.svg' alt='CLO Smart Contracts' />
           </figure>
           <h4 className='InfoContent-content-top-title'>
-            Free security audit and fine tuned audit process
+            <FormattedMessage id='InfoContentSecurityTitle' />
           </h4>
           <p className='InfoContent-content-top-text'>
-            Callisto improvements can be applied to Ethereum Classic.
-            Callisto is NOT a testnet or a hardfork of Ethereum Classic.
-            Callisto Network is developed by Ethereum Commonwealth, one of three
-            ETC development teams.
+            <FormattedMessage id='InfoContentSecurityDescription' />
           </p>
           <a href='/' className='InfoContent-content-top-anchor'>
-            <i className='fas fa-arrow-right'/> Read more
+            <i className='fas fa-arrow-right'/> <FormattedMessage id='ReadMore'/>
           </a>
         </div>
       </div>
       <div className='InfoContent-content-bottom'>
         <div className='InfoContent-content-bottom-element square'>
           <h5 className='InfoContent-content-bottom-title'>
-            On-chain governance system
+            <FormattedMessage id='InfoContentGovernanceTitle' />
           </h5>
           <p className='InfoContent-content-bottom-text'>
-            Callisto improvements can be applied to Ethereum Classic.
-            Callisto is NOT a testnet or a hardfork of Ethereum Classic.
+            <FormattedMessage id='InfoContentGovernanceDescription' />
           </p>
         </div>
         <div className='InfoContent-content-bottom-element square'>
           <h5 className='InfoContent-content-bottom-title'>
-            Scalability of CLO and ETC networks
+            <FormattedMessage id='InfoContentScalabilityTitle' />
           </h5>
           <p className='InfoContent-content-bottom-text'>
-            Callisto is NOT a testnet or a hardfork of Ethereum Classic.
+            <FormattedMessage id='InfoContentScalabilityDescription' />
           </p>
         </div>
         <div className='InfoContent-content-bottom-element square'>
           <h5 className='InfoContent-content-bottom-title'>
-            Financial transparency
+            <FormattedMessage id='InfoContentFinancialTitle' />
           </h5>
           <p className='InfoContent-content-bottom-text'>
-            Callisto Read our indicators
+            <FormattedMessage id='InfoContentFinancialDescription' />
           </p>
-          <a href='/' className='btn btn-transparent-green'>Financial report</a>
+          <a
+            href={`
+              https://docs.google.com/spreadsheets/d/e/2PACX-1vTHbKD9_qqc2pzivkn-
+              U6reX6pR3WF1-ryX-ZRNtCy54bg0q8JaM_VcoctRll1SgiX7t7UwN1BqOZN-
+              /pubhtml?gid=1393329941&single=true
+            `}
+            target='_blank'
+            className='btn btn-transparent-green'
+          >
+            <FormattedMessage id='FinancialReport' />
+          </a>
         </div>
       </div>
     </div>

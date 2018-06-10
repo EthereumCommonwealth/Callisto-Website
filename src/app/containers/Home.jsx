@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
 import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
 import Hero from '../components/Hero';
@@ -31,4 +32,4 @@ const Home = ({ match }) => {
 
 }
 
-export default Home;
+export default hot(module)(Home);

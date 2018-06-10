@@ -1,25 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { FormattedMessage, injectIntl } from 'react-intl';
 
-const Hero = () => (
+const Hero = ({ intl }) => (
   <div className='Hero'>
     <div className='Hero-content container'>
       <div className='Hero-content-left'>
-        <h1 className='Hero-content-left-title'>
-          Cryptocurrency  <br /> and Free Smart-Contract Security Audits
-        </h1>
+        <h1
+          className='Hero-content-left-title'
+          dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: 'HeroTitle' }) }}
+        />
         <p className='Hero-content-left-description'>
-          Callisto Network is a blockchain platform with its own cryptocurrency (CLO)
-          that is based on Ethereum protocol, so any Callisto improvements can be applied
-          to Ethereum Classic. Callisto is NOT a testnet or a hardfork of Ethereum Classic.
-          Callisto Network is developed by Ethereum Commonwealth, one of three ETC
-          development teams.
+          <FormattedMessage id='HeroDescription' />
         </p>
         <a
           href='https://whitepaper.callisto.network/'
           target='_blank'
           className='btn btn-green'
         >
-          White Paper
+          <FormattedMessage id='HeroWhitePaper' />
         </a>
       </div>
       <div className='Hero-content-right'>
@@ -31,4 +30,8 @@ const Hero = () => (
   </div>
 );
 
-export default Hero;
+Hero.propTypes = {
+  intl: PropTypes.object
+};
+
+export default injectIntl(Hero);

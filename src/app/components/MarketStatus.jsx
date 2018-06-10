@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Element } from 'react-scroll';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import SectionHeading from './commons/SectionHeading';
 import ExchangeList from './ExchangeList';
 
@@ -12,8 +13,8 @@ class MarketStatus extends PureComponent {
       <Element className='MarketStatus' name='exchanges'>
         <div className='container'>
           <SectionHeading
-            title='Exchanges'
-            description='Meet the people that are going to take your business to the next level'
+            title={this.props.intl.formatMessage({ id: 'MarketStatusTitle' })}
+            description={this.props.intl.formatMessage({ id: 'MarketStatusDescription' })}
           />
           <div className='MarketStatus-pricing'>
             <div className='MarketStatus-pricing-element'>
@@ -22,7 +23,7 @@ class MarketStatus extends PureComponent {
               </div>
               <div className='MarketStatus-pricing-element-details'>
                 <span className='MarketStatus-pricing-element-title'>
-                  Price
+                  <FormattedMessage id='Price' />
                 </span>
                 <span className='MarketStatus-pricing-element-dollarPrice'>
                   <span className='MarketStatus-pricing-element-symbol'>
@@ -41,7 +42,7 @@ class MarketStatus extends PureComponent {
               </div>
               <div className='MarketStatus-pricing-element-details'>
                 <span className='MarketStatus-pricing-element-title'>
-                  Volume
+                  <FormattedMessage id='Volume' />
                 </span>
                 <span className='MarketStatus-pricing-element-dollarPrice'>
                   <span className='MarketStatus-pricing-element-symbol'>
@@ -60,7 +61,7 @@ class MarketStatus extends PureComponent {
               </div>
               <div className='MarketStatus-pricing-element-details'>
                 <span className='MarketStatus-pricing-element-title'>
-                  Market Cap
+                  <FormattedMessage id='MarketCap' />
                 </span>
                 <span className='MarketStatus-pricing-element-dollarPrice'>
                   <span className='MarketStatus-pricing-element-symbol'>
@@ -91,4 +92,4 @@ MarketStatus.propTypes = {
   marketStats: PropTypes.object,
 };
 
-export default connect(mapStateTopProps, null)(MarketStatus);
+export default injectIntl(connect(mapStateTopProps, null)(MarketStatus));

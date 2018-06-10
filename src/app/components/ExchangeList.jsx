@@ -1,9 +1,10 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 const ExchangeList = () => (
   <div className='ExchangeList container'>
     <p className='ExchangeList-text'>
-      We are currently listed on the following exchanges:
+      <FormattedMessage id='ExchangesList' />
     </p>
     <div className='ExchangeList-content'>
       <figure className='ExchangeList-content-figure'>
@@ -21,13 +22,13 @@ const ExchangeList = () => (
       <figure className='ExchangeList-content-figure'>
         <img src='/image/exchanges/hitBTC.png' alt='HitBTC' />
         <span className='ExchangeList-content-soon'>
-          Coming soon
+          <FormattedMessage id='ComingSoon' />
         </span>
       </figure>
       <figure className='ExchangeList-content-figure'>
         <img src='/image/exchanges/exrates.svg' alt='Exrates' />
         <span className='ExchangeList-content-soon'>
-          Coming soon
+          <FormattedMessage id='ComingSoon' />
         </span>
       </figure>
     </div>

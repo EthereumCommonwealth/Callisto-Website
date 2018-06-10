@@ -1,14 +1,15 @@
 import React from 'react';
 import { Element } from 'react-scroll';
+import { injectIntl } from 'react-intl';
 import SectionHeading from './commons/SectionHeading';
 import RoadmapElement from './commons/RoadmapElement';
 
-const Roadmap = () => (
+const Roadmap = ({ intl }) => (
   <Element className='Roadmap container' name='roadmap'>
     <div className='Roadmap-content'>
       <SectionHeading
-        title='Roadmap'
-        description='Lorem ipsum Callisto core implementation.'
+        title={intl.formatMessage({ id: 'Roadmap' })}
+        description={intl.formatMessage({ id: 'RoadmapDescription' })}
       />
       <div className='Roadmap-content-list'>
         <RoadmapElement
@@ -90,4 +91,4 @@ const Roadmap = () => (
   </Element>
 );
 
-export default Roadmap;
+export default injectIntl(Roadmap);

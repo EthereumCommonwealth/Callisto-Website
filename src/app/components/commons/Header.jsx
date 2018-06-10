@@ -10,13 +10,13 @@ class Header extends Component {
   get menuElements() {
     return [
       { title: this.props.intl.formatMessage({ id: 'HeaderAbout' }), url: 'about' },
-      { title: 'Roadmap', url: 'roadmap' },
-      { title: 'Airdrop', url: 'airdrop' },
-      { title: 'Wallets', url: 'wallets' },
-      { title: 'Exchanges', url: 'exchanges' },
-      { title: 'Mining', url: 'mining' },
-      { title: 'Our Team', url: 'team' },
-      { title: 'Blog', url: 'blog' },
+      { title: this.props.intl.formatMessage({ id: 'HeaderRoadmap' }), url: 'roadmap' },
+      { title: this.props.intl.formatMessage({ id: 'HeaderAirdrop' }), url: 'airdrop' },
+      { title: this.props.intl.formatMessage({ id: 'HeaderWallers' }), url: 'wallets' },
+      { title: this.props.intl.formatMessage({ id: 'HeaderExchanges' }), url: 'exchanges' },
+      { title: this.props.intl.formatMessage({ id: 'HeaderMining' }), url: 'mining' },
+      { title: this.props.intl.formatMessage({ id: 'HeaderTeam' }), url: 'team' },
+      { title: this.props.intl.formatMessage({ id: 'HeaderBlog' }), url: 'blog' },
     ];
   }
 

@@ -1,14 +1,15 @@
 import React from 'react';
 import { Element } from 'react-scroll';
+import { injectIntl } from 'react-intl';
 import SectionHeading from './commons/SectionHeading';
 import SingleWallet from './commons/SingleWallet';
 
-const WalletsContent = () => (
+const WalletsContent = ({ intl }) => (
   <Element className='WalletsContent' name='wallets'>
     <div className='WalletsContent-container container'>
       <SectionHeading
-        title='Wallets'
-        description='These wallets support Callisto Network'
+        title={intl.formatMessage({ id: 'Wallets' })}
+        description={intl.formatMessage({ id: 'WalletsDescription' })}
       />
       <div className='WalletsContent-list'>
         <SingleWallet
@@ -65,4 +66,4 @@ const WalletsContent = () => (
   </Element>
 );
 
-export default WalletsContent;
+export default injectIntl(WalletsContent);
