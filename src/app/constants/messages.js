@@ -79,6 +79,9 @@ const messages = () => {
       OurTeamDescription: 'Meet the people that are going to take your business to the next level',
       BlogAndPress: 'Blog and Press',
       JoinCommunity: 'Join our community',
+      NewsletterTitle: 'Subscribe to our newsletter',
+      NewsletterPlaceholder: 'Enter your email',
+      NewsletterSubmit: 'Submir',
     },
     ru: {
       metaTitle: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
@@ -159,6 +162,9 @@ const messages = () => {
       OurTeamDescription: 'Meet the people that are going to take your business to the next level',
       BlogAndPress: 'Blog and Press',
       JoinCommunity: 'Join our community',
+      NewsletterTitle: 'Subscribe to our newsletter',
+      NewsletterPlaceholder: 'Enter your email',
+      NewsletterSubmit: 'Submir',
     },
     id: {
       metaTitle: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
@@ -239,6 +245,9 @@ const messages = () => {
       OurTeamDescription: 'Meet the people that are going to take your business to the next level',
       BlogAndPress: 'Blog and Press',
       JoinCommunity: 'Join our community',
+      NewsletterTitle: 'Subscribe to our newsletter',
+      NewsletterPlaceholder: 'Enter your email',
+      NewsletterSubmit: 'Submir',
     },
     es: {
       metaTitle: 'Callisto Network: Tecnología Blockchain, Criptomoneda y Contratos inteligentes',
@@ -319,6 +328,9 @@ const messages = () => {
       OurTeamDescription: 'Meet the people that are going to take your business to the next level',
       BlogAndPress: 'Blog and Press',
       JoinCommunity: 'Join our community',
+      NewsletterTitle: 'Subscribe to our newsletter',
+      NewsletterPlaceholder: 'Enter your email',
+      NewsletterSubmit: 'Submir',
     },
   };
 };

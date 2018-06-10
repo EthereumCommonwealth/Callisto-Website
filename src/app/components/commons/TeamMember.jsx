@@ -20,7 +20,7 @@ const TeamMember = ({ name, position, socialNetworks, bio, avatar }) => (
           href={network.url}
           target='_blank'
         >
-          <i className={`fab fa-${network.prefix}`} />
+          <i className={network.prefix} />
         </a>
       ))}
     </div>

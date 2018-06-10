@@ -1,7 +1,9 @@
 .TeamMember
   display grid
   justify-items center
-  grid-gap 20px
+  grid-gap 15px
+  +from-width($sm)
+    grid-template-rows 130px 45px .25fr .25fr 1.5fr
   &-avatar
     width 130px
     height 130px
@@ -19,6 +21,7 @@
     font-size 14px
     line-height 1.64
     font-weight normal
+    text-align center
   &-bio
     text-align center
     color $dark-gray
