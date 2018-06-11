@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 class LangSelector extends Component {
   state = {
@@ -29,6 +30,7 @@ class LangSelector extends Component {
 
   render() {
     const { selected, open } = this.state;
+    const ListClass = classNames('LangSelector-list', { 'to-top': this.props.toTop });
     return (
       <div className='LangSelector' onClick={this.handleOpen} onMouseLeave={this.closeMenu}>
         <div className='LangSelector-selected'>
@@ -43,7 +45,7 @@ class LangSelector extends Component {
         </div>
         {open ?
           (
-            <ul className='LangSelector-list'>
+            <ul className={ListClass}>
               {this.props.langList.map((elem, index) => {
                 if (elem !== selected) {
                   return (
@@ -76,6 +78,7 @@ class LangSelector extends Component {
 
 LangSelector.propTypes = {
   defaultSelected: PropTypes.string,
+  toTop: PropTypes.bool,
 };
 
 export default LangSelector;

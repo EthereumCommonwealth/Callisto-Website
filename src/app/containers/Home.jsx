@@ -13,11 +13,15 @@ import Team from '../components/Team';
 import Blog from '../components/Blog';
 import Community from '../components/Community';
 import Newsletter from '../components/Newsletter';
+import Footer from '../components/commons/Footer';
 
 const Home = ({ match }) => {
   return (
     <Layout className='Home' match={match}>
-      <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
+      <Header
+        lang={match.params && match.params.lang ? match.params.lang : 'en'}
+        fromLanding
+      />
       <Hero />
       <InfoContent />
       <Roadmap />
@@ -29,6 +33,10 @@ const Home = ({ match }) => {
       <Blog />
       <Community />
       <Newsletter />
+      <Footer
+        lang={match.params && match.params.lang ? match.params.lang : 'en'}
+        fromLanding
+      />
     </Layout>
   );
 

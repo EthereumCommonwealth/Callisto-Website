@@ -1,9 +1,10 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import { injectIntl } from 'react-intl';
 import SectionHeading from './commons/SectionHeading';
 
 const MiningPools = ({ intl }) => (
-  <div className='MiningPools container'>
+  <Element className='MiningPools container' name='pool'>
     <div className='MiningPools-content'>
       <SectionHeading
         title={intl.formatMessage({ id: 'CallistoMiningPool' })}
@@ -128,7 +129,7 @@ const MiningPools = ({ intl }) => (
         </a>
       </div>
     </div>
-  </div>
+  </Element>
 );
 
 export default injectIntl(MiningPools);

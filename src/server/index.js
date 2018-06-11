@@ -132,7 +132,25 @@ app.get('/:lang(es|en|id|ru)/', async (req, res, next) => {
     next(err);
   }
 });
-app.get('*', (req, res) => handleRender(req, res, defaultState));
+
+app.get('*', async (req, res, next) => {
+  try {
+    const posts = await blogPosts.get('posts?_embed/');
+    const btcStats = await coinStats.get('ticker/1/');
+    const cloStats = await coinStats.get('ticker/2757/');
+    handleRender(req, res, {
+      blogPosts: preparePosts(posts.data),
+      marketStats: {
+        btcPrice: btcStats.data.data.quotes.USD.price,
+        cloPrice: cloStats.data.data.quotes.USD.price,
+        volume: cloStats.data.data.quotes.USD.volume_24h,
+        marketCap: cloStats.data.data.quotes.USD.market_cap,
+      },
+    });
+  } catch (err) {
+    next(err);
+  }
+});
 
 function handleRender(req, res, initialState) {
   const context = {}

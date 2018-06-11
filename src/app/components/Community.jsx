@@ -1,9 +1,10 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import { injectIntl } from 'react-intl';
 import SectionHeading from './commons/SectionHeading';
 
 const Community = ({ intl }) => (
-  <section className='Community'>
+  <Element className='Community' name='community'>
     <div className='Community-content container'>
       <SectionHeading
         title={intl.formatMessage({ id: 'JoinCommunity' })}
@@ -81,7 +82,7 @@ const Community = ({ intl }) => (
         </a>
       </div>
     </div>
-  </section>
+  </Element>
 );
 
 export default injectIntl(Community);
