@@ -2,10 +2,25 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
 import PropTypes from 'prop-types';
-import { injectIntl } from 'react-intl';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import LangSelector from './LangSelector';
 
 class Header extends PureComponent {
+
+  state = {
+    mobileMenuOpened: false,
+  };
+
+  handleMenuOpen = event => {
+    event.preventDefault();
+    this.setState({ mobileMenuOpened: !this.state.mobileMenuOpened }, () => {
+      if (this.state.mobileMenuOpened) {
+        document.body.classList = 'noScroll';
+      } else {
+        document.body.classList = '';
+      }
+    });
+  }
 
   get menuElements() {
     return [
@@ -72,6 +87,63 @@ class Header extends PureComponent {
             </figure>
           </Link>
           <nav className='Header-menu'>
+            <a className='Header-menu-mobile' onClick={this.handleMenuOpen}>
+              <i className='fas fa-bars Header-menu-mobile-icon' />
+            </a>
+            {this.state.mobileMenuOpened ? (
+              <div className='Header-menu-mobile-content'>
+                <div className='Header-menu-mobile-content-square'>
+                  <div className='Header-menu-mobile-content-top'>
+                    <LangSelector
+                      defaultSelected={this.props.lang}
+                      langList={['es', 'en', 'id', 'ru']}
+                    />
+                    <a className='Header-menu-mobile' onClick={this.handleMenuOpen}>
+                      <i className='fas fa-times Header-menu-mobile-icon' />
+                    </a>
+                  </div>
+                  <ul className='Header-menu-mobile-content-middle'>
+                    {menuElements.map((elem, index) => {
+                      if (elem.type === 'scroll') {
+                        return (
+                          <li key={`menuElement-${index}`}>
+                            <ScrollTo
+                              className='Header-menu-content-target'
+                              to={elem.url}
+                              spy={true}
+                              smooth={true}
+                              offset={0}
+                              duration={500}
+                              onClick={this.handleMenuOpen}
+                            >
+                              {elem.title}
+                            </ScrollTo>
+                          </li>
+                        );
+                      } else if (elem.type === 'router') {
+                        return (
+                          <li key={`menuElement-${index}`}>
+                            <Link
+                              className='Header-menu-content-target'
+                              to={elem.url}
+                            >
+                              {elem.title}
+                            </Link>
+                          </li>
+                        );
+                      }
+                      return null
+                    }
+                    )}
+                  </ul>
+                  <div className='Header-menu-mobile-content-bottom'>
+                    <span className='Header-menu-mobile-content-bottom-copy'>
+                      <FormattedMessage id='FooterCopy' />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ) : null}
             <ul className='Header-menu-content'>
               {menuElements.map((elem, index) => {
                 if (elem.type === 'scroll') {
