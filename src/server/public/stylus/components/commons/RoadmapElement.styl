@@ -1,0 +1,73 @@
+.RoadmapElement
+  padding 1em 0
+  position relative
+  +from-width($sm)
+    padding 1em 3em
+    border-left solid 2px $light-gray
+  &:before
+    +from-width($sm)
+      position absolute
+      content ''
+      width 10px
+      left 0
+      top 0
+      height 2px
+      background-color $light-gray
+  &-container
+    margin 32px 0
+  &-figure
+    position absolute
+    width 37px
+    top 40px
+    left -20px
+    +from-width($sm)
+      width 76px
+      top -50px
+      left 0
+    img
+      width 100%
+  &-title
+    font-size 24px
+    line-height 1.52
+    color $orange
+    margin 2em 1em 0 1em
+  &-container
+    list-style-type none
+    li
+      position relative
+      &:before
+        content '▪'
+        color $orange
+        position absolute
+        left -1em
+  &-text
+    color $dark-blue
+    line-height 1.64
+    padding .5em 0
+  &.happened
+    +from-width($sm)
+      border-left solid 2px $green
+    &:before
+      background-color $green
+    .RoadmapElement-container
+      li
+        position relative
+        &:before
+          color $green
+    .RoadmapElement-title
+      color $green
+    .RoadmapElement-figure
+      +from-width($sm)
+        top -38px
+    .RoadmapElement-text
+      color $dark-gray
+    .RoadmapElement-subcontainer
+      list-style-type none
+      margin-top 1em
+      li
+        position relative
+        &:before
+          content '-'
+          color $green
+          position absolute
+          left -1em

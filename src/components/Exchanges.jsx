@@ -10,6 +10,7 @@ import stocksExchange from '../images/logo.png'
 import biteBtc from '../images/bitebtc_logo.jpg'
 import oooBtc from '../images/ooobtc_logo.png'
 import simpleswap from '../images/simpleswap_logo.png'
+import exrates from '../images/exrates-logo.jpg'
 
 const Exchanges = () => (
   <Element className="Exchanges" name="Exchanges">
@@ -59,6 +60,16 @@ const Exchanges = () => (
             className="Exchanges-list-element-anchor"
             target="_blank"
             href="https://www.ooobtc.com/trading?coin=clo&current=btc"
+          />
+        </div>
+        <div className="Exchanges-list-element">
+          <figure className="Exchanges-list-element-figure is-small">
+            <img src={exrates} alt="Exrate Exchange" />
+          </figure>
+          <a
+            className="Exchanges-list-element-anchor"
+            target="_blank"
+            href="https://exrates.me/dashboard"
           />
         </div>
       </div>
