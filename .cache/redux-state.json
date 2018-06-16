@@ -638,12 +638,12 @@
       },
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-06-12T03:26:36.391Z",
+      "buildTime": "2018-06-16T04:59:04.997Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "d746b65ccbc5f68de48e520bb0bd3f90",
+        "contentDigest": "2536a114dbc1142b5c3fd285449aba83",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -664,7 +664,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "aa09377712c93a64d34bd3891651d0cc",
+        "contentDigest": "c43a04a56373769785b68800eb1377b6",
         "description": "Plugin component-page-creator",
         "owner": "internal-data-bridge"
       }
