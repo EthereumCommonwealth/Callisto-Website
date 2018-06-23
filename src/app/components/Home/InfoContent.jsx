@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import { FormattedMessage } from 'react-intl';
 
-const InfoContent = () => (
+const InfoContent = ({ lang }) => (
   <Element name='about' className='InfoContent'>
     <div className='InfoContent-content container'>
       <div className='InfoContent-content-top'>
@@ -16,9 +17,12 @@ const InfoContent = () => (
           <p className='InfoContent-content-top-text'>
             <FormattedMessage id='InfoContentColdStakingDescription' />
           </p>
-          <a href='/' className='InfoContent-content-top-anchor'>
+          <Link
+            to={lang === 'en' ? '/cold-staking/' : `/${lang}/cold-staking/`}
+            className='InfoContent-content-top-anchor'
+          >
             <i className='fas fa-arrow-right'/> <FormattedMessage id='ReadMore' />
-          </a>
+          </Link>
         </div>
         <div className='InfoContent-content-top-element square'>
           <figure className='InfoContent-content-top-figure'>
@@ -30,9 +34,12 @@ const InfoContent = () => (
           <p className='InfoContent-content-top-text'>
             <FormattedMessage id='InfoContentSecurityDescription' />
           </p>
-          <a href='/' className='InfoContent-content-top-anchor'>
+          <Link
+            to={lang === 'en' ? '/smart-contract/' : `/${lang}/smart-contract/`}
+            className='InfoContent-content-top-anchor'
+          >
             <i className='fas fa-arrow-right'/> <FormattedMessage id='ReadMore'/>
-          </a>
+          </Link>
         </div>
       </div>
       <div className='InfoContent-content-bottom'>

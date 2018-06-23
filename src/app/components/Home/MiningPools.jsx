@@ -1,7 +1,7 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 import { injectIntl } from 'react-intl';
-import SectionHeading from './commons/SectionHeading';
+import SectionHeading from '../commons/SectionHeading';
 
 const MiningPools = ({ intl }) => (
   <Element className='MiningPools container' name='pool'>

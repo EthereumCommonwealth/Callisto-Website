@@ -16,7 +16,6 @@ import { renderToString } from 'react-dom/server';
 import Routes from '../app/routes/serverRoutes.js';
 import headersInfo from './utils/headersInfo';
 import renderPage from './utils/renderPage';
-import defaultState from '../app/initialState';
 import blogPosts from '../app/services/blogPosts';
 import coinStats from '../app/services/coinStats';
 
@@ -95,7 +94,7 @@ const preparePosts = (posts) => {
   return elements;
 }
 
-app.get('/', async (req, res, next) => {
+const prefetchData = async (req, res, next) => {
   try {
     const posts = await blogPosts.get('posts?_embed/');
     const btcStats = await coinStats.get('ticker/1/');
@@ -112,45 +111,15 @@ app.get('/', async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-})
+}
 
-app.get('/:lang(es|en|id|ru)/', async (req, res, next) => {
-  try {
-    const posts = await blogPosts.get('posts?_embed/');
-    const btcStats = await coinStats.get('ticker/1/');
-    const cloStats = await coinStats.get('ticker/2757/');
-    handleRender(req, res, {
-      blogPosts: preparePosts(posts.data),
-      marketStats: {
-        btcPrice: btcStats.data.data.quotes.USD.price,
-        cloPrice: cloStats.data.data.quotes.USD.price,
-        volume: cloStats.data.data.quotes.USD.volume_24h,
-        marketCap: cloStats.data.data.quotes.USD.market_cap,
-      },
-    });
-  } catch (err) {
-    next(err);
-  }
-});
-
-app.get('*', async (req, res, next) => {
-  try {
-    const posts = await blogPosts.get('posts?_embed/');
-    const btcStats = await coinStats.get('ticker/1/');
-    const cloStats = await coinStats.get('ticker/2757/');
-    handleRender(req, res, {
-      blogPosts: preparePosts(posts.data),
-      marketStats: {
-        btcPrice: btcStats.data.data.quotes.USD.price,
-        cloPrice: cloStats.data.data.quotes.USD.price,
-        volume: cloStats.data.data.quotes.USD.volume_24h,
-        marketCap: cloStats.data.data.quotes.USD.market_cap,
-      },
-    });
-  } catch (err) {
-    next(err);
-  }
-});
+app.get('/', prefetchData);
+app.get('/smart-contract/', prefetchData);
+app.get('/cold-staking/', prefetchData);
+app.get('/:lang(es|en|id|ru)/', prefetchData);
+app.get('/:lang(es|en|id|ru)/cold-staking/', prefetchData);
+app.get('/:lang(es|en|id|ru)/smart-contract/', prefetchData);
+app.get('*', prefetchData);
 
 function handleRender(req, res, initialState) {
   const context = {}

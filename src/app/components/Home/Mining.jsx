@@ -1,8 +1,8 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 import { injectIntl, FormattedMessage } from 'react-intl';
-import SectionHeading from './commons/SectionHeading';
-import MiningElement from './commons/MiningElement';
+import SectionHeading from '../commons/SectionHeading';
+import MiningElement from '../commons/MiningElement';
 
 const Mining = ({ intl }) => (
   <Element className='Mining' name='mining'>

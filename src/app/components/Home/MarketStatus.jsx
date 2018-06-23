@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Element } from 'react-scroll';
 import { injectIntl, FormattedMessage } from 'react-intl';
-import SectionHeading from './commons/SectionHeading';
+import SectionHeading from '../commons/SectionHeading';
 import ExchangeList from './ExchangeList';
 
 class MarketStatus extends PureComponent {

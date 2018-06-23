@@ -1,11 +1,6 @@
 const messages = () => {
   return {
     en: {
-      metaTitle: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
-      metaDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
-      `,
       HeaderAbout: 'About',
       HeaderRoadmap: 'Roadmap',
       HeaderAirdrop: 'Airdrop',
@@ -103,11 +98,6 @@ const messages = () => {
       FooterTerms: 'Terms of Service',
     },
     ru: {
-      metaTitle: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
-      metaDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
-      `,
       HeaderAbout: 'Около',
       HeaderRoadmap: 'Roadmap',
       HeaderAirdrop: 'Airdrop',
@@ -205,11 +195,6 @@ const messages = () => {
       FooterTerms: 'Terms of Service',
     },
     id: {
-      metaTitle: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
-      metaDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
-      `,
       HeaderAbout: 'Tentang',
       HeaderRoadmap: 'Roadmap',
       HeaderAirdrop: 'Airdrop',
@@ -307,11 +292,6 @@ const messages = () => {
       FooterTerms: 'Terms of Service',
     },
     es: {
-      metaTitle: 'Callisto Network: Tecnología Blockchain, Criptomoneda y Contratos inteligentes',
-      metaDescription: `
-        Callisto Network es una plataforma de blockchain con su propia Criptomoneda
-        (CLO) que esta basada en el protocolo Ethereum
-      `,
       HeaderAbout: 'Nosotros',
       HeaderRoadmap: 'Roadmap',
       HeaderAirdrop: 'Airdrop',

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -11,6 +11,22 @@ class LangSelector extends Component {
 
   componentWillMount() {
     this.setState({ selected: this.props.defaultSelected });
+  }
+
+  setRouterPath(lang) {
+    const { match } = this.props;
+    switch (match.path) {
+      case '/cold-staking/':
+        return `/${lang}/cold-staking/`
+      case '/smart-contract/':
+        return `/${lang}/smart-contract/`
+      case '/:lang(es|en|id|ru)/cold-staking/':
+        return `/${lang}/cold-staking/`
+      case '/:lang(es|en|id|ru)/smart-contract/':
+        return `/${lang}/smart-contract/`
+      default:
+        return `/${lang}`;
+    }
   }
 
   handleOpen = (event) => {
@@ -56,7 +72,7 @@ class LangSelector extends Component {
                     >
                       <Link
                         className='LangSelector-list-elem-anchor'
-                        to={elem === 'en' ? '/' : `/${elem}`}
+                        to={this.setRouterPath(elem)}
                       >
                         <img
                           src={`/image/country-flags/${elem}.png`}
@@ -79,6 +95,7 @@ class LangSelector extends Component {
 LangSelector.propTypes = {
   defaultSelected: PropTypes.string,
   toTop: PropTypes.bool,
+  match: PropTypes.object,
 };
 
-export default LangSelector;
+export default withRouter(LangSelector);

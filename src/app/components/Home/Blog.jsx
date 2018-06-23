@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { Element } from 'react-scroll';
 import { connect } from 'react-redux';
-import BlogPost from './commons/BlogPost';
+import BlogPost from '../commons/BlogPost';
 
 class Blog extends PureComponent {
   render() {

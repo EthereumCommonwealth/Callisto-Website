@@ -11,18 +11,6 @@ const SingleWallet = ({ icon, title, options }) => (
     </span>
     <div className='SingleWallet-list'>
       {options.map((wallet, index) => {
-        if (index > 0) {
-          return (
-            <a
-              key={`SingleWallet-${wallet.name}-${index}`}
-              className='btn btn-transparent-green'
-              href={wallet.url}
-              target='_blank'
-            >
-              {wallet.name}
-            </a>
-          );
-        }
         return (
           <a
             key={`SingleWallet-${wallet.name}-${index}`}

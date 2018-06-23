@@ -1,8 +1,8 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 import { injectIntl } from 'react-intl';
-import SectionHeading from './commons/SectionHeading';
-import TeamMember from './commons/TeamMember';
+import SectionHeading from '../commons/SectionHeading';
+import TeamMember from '../commons/TeamMember';
 
 const Team = ({ intl }) => (
   <Element name='team' className='Team'>
@@ -117,18 +117,10 @@ const Team = ({ intl }) => (
           }
         />
         <TeamMember
-          avatar='/image/avatars/darwino_avatar.jpg'
-          name='Darwin Ongko'
+          avatar='/image/avatars/darwino_avatar2.png'
+          name='Darwino'
           position='Callisto Community Manager & Callisto Indonesia Ambassador'
           socialNetworks={[
-            {
-              prefix: 'fab fa-twitter',
-              url: 'https://twitter.com/sampol18/'
-            },
-            {
-              prefix: 'fab fa-instagram',
-              url: 'https://www.instagram.com/darwin_ongko'
-            },
             {
               prefix: 'fab fa-telegram-plane',
               url: 'https://t.me/Darwino'
@@ -216,77 +208,6 @@ const Team = ({ intl }) => (
               Motivated, working as an IT project manager with more than 13 years
               industry experience. From May 2016, owner of ProffeeCa. Enthusiastic
               and love to learn new things
-            `
-          }
-        />
-        <TeamMember
-          avatar='/image/avatars/crika_avatar.jpg'
-          name='Ivan - Crika'
-          position='Reddit Community Manager , Support & Marketing'
-          socialNetworks={[
-            {
-              prefix: 'fab fa-reddit',
-              url: ' https://www.reddit.com/user/crika1/',
-            },
-            {
-              prefix: 'far fa-envelope',
-              url: 'mailto:ivan@callisto.network',
-            },
-            {
-              prefix: 'fab fa-telegram-plane',
-              url: ' https://t.me/crika1',
-            },
-          ]}
-          bio={
-            `
-              I have a passion for all things fast pace. From Sports to cars, Boats
-              to planes and anything to do with the rapid changes within technology.
-              I am a jack of all trades and know how within anything to do with info technology.
-              My main role is to manage the Reddit community and assist with promotional
-              ideas, plans and projects as well as proactively
-              assisting all areas of our team.
-            `
-          }
-        />
-        <TeamMember
-          avatar='/image/avatars/mario_avatar.jpg'
-          name='Mario Michel'
-          position='Team Member'
-          socialNetworks={[
-            {
-              prefix: 'fab fa-facebook-f',
-              url: 'https://twitter.com/sampol18/'
-            },
-            {
-              prefix: 'fab fa-twitter',
-              url: 'https://twitter.com/sampol18/'
-            },
-          ]}
-          bio={
-            `The entrepreneur and inventor in the areas of mobile development,
-            blocking, digital marketing, as well as in the areas of AI and ERP.`
-          }
-        />
-        <TeamMember
-          avatar='/image/avatars/solo_avatar.png'
-          name='Anna - Solo'
-          position='Marketing, Content writer and Editor'
-          socialNetworks={[
-            {
-              prefix: 'fab fa-reddit',
-              url: 'https://www.reddit.com/user/solo_xo'
-            },
-            {
-              prefix: 'far fa-envelope',
-              url: 'mailto:solo@callisto.network'
-            },
-          ]}
-          bio={
-            `
-              I specialise in promotions, sales, marketing and management.
-              Confidently and thoroughly enjoy working and motivating myself and
-              others within any team based environments to meet common goals
-              and targets. In a nutshell I strive to succeed.
             `
           }
         />

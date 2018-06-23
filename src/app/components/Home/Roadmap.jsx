@@ -1,8 +1,8 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 import { injectIntl } from 'react-intl';
-import SectionHeading from './commons/SectionHeading';
-import RoadmapElement from './commons/RoadmapElement';
+import SectionHeading from '../commons/SectionHeading';
+import RoadmapElement from '../commons/RoadmapElement';
 
 const Roadmap = ({ intl }) => (
   <Element className='Roadmap container' name='roadmap'>
