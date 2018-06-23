@@ -46,45 +46,6 @@
         "owner": "internal-data-bridge"
       }
     },
-    "Plugin component-page-creator": {
-      "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby/dist/internal-plugins/component-page-creator",
-      "id": "Plugin component-page-creator",
-      "name": "component-page-creator",
-      "version": "1.0.0",
-      "pluginOptions": {
-        "plugins": []
-      },
-      "nodeAPIs": [
-        "createPagesStatefully"
-      ],
-      "browserAPIs": [],
-      "ssrAPIs": [],
-      "pluginFilepath": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby/dist/internal-plugins/component-page-creator",
-      "packageJson": {
-        "name": "component-page-creator",
-        "description": "An internal Gatsby plugin that creates pages from component files in src/pages",
-        "version": "1.0.0",
-        "main": "index.js",
-        "keywords": [
-          "gatsby",
-          "gatsby-plugin"
-        ],
-        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-        "license": "MIT",
-        "dependencies": [],
-        "devDependencies": [],
-        "peerDependencies": [],
-        "optionalDependecies": [],
-        "bundledDependecies": []
-      },
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "contentDigest": "8d92e752afd2b3281864d6bd5149b7b3",
-        "type": "SitePlugin",
-        "owner": "internal-data-bridge"
-      }
-    },
     "Plugin component-layout-creator": {
       "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
       "id": "Plugin component-layout-creator",
@@ -309,7 +270,7 @@
       "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-stylus",
       "id": "Plugin gatsby-plugin-stylus",
       "name": "gatsby-plugin-stylus",
-      "version": "1.1.20",
+      "version": "1.1.21",
       "pluginOptions": {
         "plugins": [],
         "use": [
@@ -326,7 +287,7 @@
       "packageJson": {
         "name": "gatsby-plugin-stylus",
         "description": "Gatsby support for Stylus",
-        "version": "1.1.20",
+        "version": "1.1.21",
         "main": "./gatsby-node.js",
         "keywords": [
           "gatsby",
@@ -379,7 +340,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "131b698fbb7ad6bf65b90219d0b76c9b",
+        "contentDigest": "e2d8107f273b326ea512558e5017276a",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -472,7 +433,7 @@
       "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-google-tagmanager",
       "id": "Plugin gatsby-plugin-google-tagmanager",
       "name": "gatsby-plugin-google-tagmanager",
-      "version": "1.0.18",
+      "version": "1.0.19",
       "pluginOptions": {
         "plugins": [],
         "id": "GTM-5XT2RN7",
@@ -487,7 +448,7 @@
       "packageJson": {
         "name": "gatsby-plugin-google-tagmanager",
         "description": "Gatsby plugin to add google tagmanager onto a site",
-        "version": "1.0.18",
+        "version": "1.0.19",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -525,7 +486,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "7b6596ab54474689463103e74850d472",
+        "contentDigest": "7e72209c93a4ac58fc131ea49d36a8dc",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -632,18 +593,97 @@
         "owner": "internal-data-bridge"
       }
     },
+    "Plugin gatsby-plugin-page-creator": {
+      "resolve": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-page-creator",
+      "id": "Plugin gatsby-plugin-page-creator",
+      "name": "gatsby-plugin-page-creator",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": [],
+        "path": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/src/pages",
+        "pathCheck": false
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/node_modules/gatsby-plugin-page-creator",
+      "packageJson": {
+        "name": "gatsby-plugin-page-creator",
+        "description": "Gatsby plugin that automatically creates pages from React components in specified directories",
+        "version": "1.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "chokidar",
+            "version": "^1.7.0"
+          },
+          {
+            "name": "glob",
+            "version": "^7.1.1"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.4"
+          },
+          {
+            "name": "parse-filepath",
+            "version": "^1.0.1"
+          },
+          {
+            "name": "slash",
+            "version": "^1.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "d91d886afa70f595aca5c23940c00678",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
     "Site": {
       "siteMetadata": {
         "title": "Callisto Network"
       },
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-06-16T04:59:04.997Z",
+      "buildTime": "2018-06-23T18:46:43.531Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "2536a114dbc1142b5c3fd285449aba83",
+        "contentDigest": "9d351d1abde807f0e24e73e26ce3c4de",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -656,23 +696,23 @@
       "component": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/src/pages/index.js",
       "componentChunkName": "component---src-pages-index-js",
       "context": {},
-      "pluginCreator___NODE": "Plugin component-page-creator",
-      "pluginCreatorId": "Plugin component-page-creator",
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
       "componentPath": "/Users/carlossampol/Proyectos/Callisto/Callisto-Website/src/pages/index.js",
       "id": "SitePage /",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "c43a04a56373769785b68800eb1377b6",
-        "description": "Plugin component-page-creator",
+        "contentDigest": "3db3850e093d627647ef677186fac4d3",
+        "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "560c1f70d36c9b41059f121b44f02fa1"
+    "PLUGINS_HASH": "2605c191d0b1f4518cc1de6af8a392c5"
   },
   "componentDataDependencies": {
     "nodes": {},
