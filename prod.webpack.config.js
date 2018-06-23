@@ -4,7 +4,7 @@ const TransferWebpackPlugin = require('transfer-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: ['./src/app/index.js'],
+  entry: ['webpack-hot-middleware/client', './src/app/index.js'],
   mode: 'production',
   output: {
     path: path.join(process.cwd(), './src/server/public'),
