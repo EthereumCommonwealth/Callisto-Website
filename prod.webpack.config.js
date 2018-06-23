@@ -4,11 +4,10 @@ const TransferWebpackPlugin = require('transfer-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: ['webpack-hot-middleware/client', './src/app/index.js'],
-  mode: process.env.NODE_ENV ? process.env.NODE_ENV : 'development',
+  entry: ['./src/app/index.js'],
+  mode: 'production',
   output: {
-    path: process.env.NODE_ENV !== 'development' ?
-      path.join(process.cwd(), './src/server/public') : '/',
+    path: path.join(process.cwd(), './src/server/public'),
     filename: 'main.js',
     publicPath: '/'
   },
@@ -85,6 +84,28 @@ module.exports = {
     extensions: ['.js', '.jsx', 'styl'],
     modules: ['node_modules'],
     alias: { styles: path.resolve(__dirname, 'src/client/stylus/') },
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'async',
+      name: true,
+      cacheGroups: {
+        vendors: {
+          name: 'vendors',
+          chunks: 'all',
+          reuseExistingChunk: true,
+          priority: 1,
+          filename: 'vendor.js',
+          enforce: true,
+          test(module, chunks) {
+            const name = module.nameForCondition && module.nameForCondition();
+            return chunks.some(chunk => {
+              return chunk.name === 'main' && /[\\/]node_modules[\\/]/.test(name);
+            });
+          },
+        },
+      },
+    },
   },
   plugins: [
     new webpack.NamedModulesPlugin(),

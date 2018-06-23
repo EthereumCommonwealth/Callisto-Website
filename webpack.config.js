@@ -85,6 +85,28 @@ module.exports = {
     modules: ['node_modules'],
     alias: { styles: path.resolve(__dirname, 'src/client/stylus/') },
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'async',
+      name: true,
+      cacheGroups: {
+        vendors: {
+          name: 'vendors',
+          chunks: 'all',
+          reuseExistingChunk: true,
+          priority: 1,
+          filename: 'vendor.js',
+          enforce: true,
+          test(module, chunks) {
+            const name = module.nameForCondition && module.nameForCondition();
+            return chunks.some(chunk => {
+              return chunk.name === 'main' && /[\\/]node_modules[\\/]/.test(name);
+            });
+          },
+        },
+      },
+    },
+  },
   plugins: [
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),

@@ -67,9 +67,11 @@ typings/
 .serverless
 
 .DS_Store
-src/server/public/image/
-src/server/public/stylus/
+
+#src/server/public/stylus/
 src/server/public/main.css
 src/server/public/main.js
+src/server/public/vendor.js
+src/server/public/image
 
 .cache/

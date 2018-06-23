@@ -32,7 +32,8 @@ const renderPage = (html, preloadedState, headers) => {
           <script>
             window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
           </script>
-        <script src="/main.js"></script>
+          <script src="/vendor.js"></script>
+          <script src="/main.js"></script>
         </body>
     </html>
   `);
