@@ -9,17 +9,11 @@ const SmartHero = ({ intl }) => (
         <h1
           className='SmartHero-content-left-title'
           dangerouslySetInnerHTML={{
-            __html: intl.formatMessage({
-              id: 'SmartContractTitle',
-              defaultMessage: 'Smart Contract Audit',
-            })
+            __html: intl.formatMessage({ id: 'SmartContractTitle' })
           }}
         />
         <p className='SmartHero-content-left-description'>
-          <FormattedMessage
-            id='SmartHeroDescription'
-            defaultMessage='Full service smart contract audit solution'
-          />
+          <FormattedMessage id='SmartHeroDescription' />
         </p>
         <div className='SmartHero-btns'>
           <a
@@ -27,20 +21,14 @@ const SmartHero = ({ intl }) => (
             target='_blank'
             className='btn btn-green'
           >
-            <FormattedMessage
-              id='SmartHeroAudit'
-              defaultMessage='Audit a contract'
-            />
+            <FormattedMessage id='SmartHeroAudit' />
           </a>
           <a
             href='https://whitepaper.callisto.network/'
             target='_blank'
             className='btn btn-transparent-green'
           >
-            <FormattedMessage
-              id='SmartHeroBecomeAuditor'
-              defaultMessage='Become an auditor'
-            />
+            <FormattedMessage id='SmartHeroBecomeAuditor' />
           </a>
         </div>
       </div>

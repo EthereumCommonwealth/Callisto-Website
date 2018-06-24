@@ -3,20 +3,16 @@ import { hot } from 'react-hot-loader';
 import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
 import SmartHero from '../components/SmartContracts/SmartHero';
+import Description from '../components/SmartContracts/Description';
 import Footer from '../components/commons/Footer';
 
 const SmartContract = ({ match }) => {
   return (
     <Layout className='SmartContract' match={match}>
-      <Header
-        lang={match.params && match.params.lang ? match.params.lang : 'en'}
-        fromLanding
-      />
+      <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <SmartHero />
-      <Footer
-        lang={match.params && match.params.lang ? match.params.lang : 'en'}
-        fromLanding
-      />
+      <Description />
+      <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />
     </Layout>
   );
 

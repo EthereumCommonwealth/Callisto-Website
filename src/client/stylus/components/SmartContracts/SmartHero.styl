@@ -28,21 +28,34 @@
           margin-bottom 34px
     &-right
       display none
-      +from-width($md)
+      +from-width($sm)
         display block
         position relative
       &-figure
-        position absolute
-        top -111px
-        left -120px
-        width 800px
         z-index 0
+        +from-width($sm)
+          position absolute
+          top 50px
+          left -65px
+          width 400px
+        +from-width($md)
+          top 50px
+          left -65px
+          width 500px
+        +from-width($xl)
+          top -14px
+          left -150px
+          width 680px
+        +from-width($xxl)
+          top -111px
+          left -120px
+          width 800px
         img
           width 100%
   &-btns
     display grid
     margin-top 50px
     grid-gap 1em
-    +from-width($md)
+    +from-width($xl)
       grid-template-columns 1fr 1fr
       margin-top 100px

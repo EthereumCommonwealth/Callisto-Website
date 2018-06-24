@@ -7,15 +7,9 @@ import Footer from '../components/commons/Footer';
 const ColdStaking = ({ match }) => {
   return (
     <Layout className='ColdStaking' match={match}>
-      <Header
-        lang={match.params && match.params.lang ? match.params.lang : 'en'}
-        fromLanding
-      />
+      <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       Cold Staking Here
-      <Footer
-        lang={match.params && match.params.lang ? match.params.lang : 'en'}
-        fromLanding
-      />
+      <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />
     </Layout>
   );
 

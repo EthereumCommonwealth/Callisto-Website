@@ -8,7 +8,7 @@ import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import { createBrowserHistory } from 'history';
 import rootReducer from './reducers/rootReducer';
 import routes from './routes/';
-import 'styles/fontawesome/svg-with-js/js/fontawesome-all.js';
+import 'styles/fontawesome/svg-with-js/js/fontawesome-all.min.js';
 import 'styles/index.styl';
 
 if (typeof window !== 'undefined') {

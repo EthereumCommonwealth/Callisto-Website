@@ -5,7 +5,10 @@ import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
 import es from 'react-intl/locale-data/es';
 import id from 'react-intl/locale-data/id';
-import messages from '../../constants/messages';
+import enMessages from '../../constants/messages/enMessages';
+import ruMessages from '../../constants/messages/ruMessages';
+import esMessages from '../../constants/messages/esMessages';
+import idMessages from '../../constants/messages/idMessages';
 
 addLocaleData([...en, ...ru, ...es, ...id]);
 
@@ -14,15 +17,15 @@ class Layout extends PureComponent {
   getMessages = (lang) => {
     switch (lang) {
       case 'es':
-        return messages.es;
+        return esMessages;
       case 'en':
-        return messages.en;
+        return enMessages;
       case 'ru':
-        return messages.ru;
+        return ruMessages;
       case 'id':
-        return messages.id;
+        return idMessages;
       default:
-        return messages.en;
+        return enMessages;
     }
   }
 
