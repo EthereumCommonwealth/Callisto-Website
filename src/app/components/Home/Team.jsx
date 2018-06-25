@@ -90,7 +90,7 @@ const Team = ({ intl }) => (
           }
         />
         <TeamMember
-          avatar='/image/avatars/nsawinyh_avatar.png'
+          avatar='/image/avatars/nsawinyh_avatar.jpg'
           name='Nick Sawinyh'
           position='Head of Marketing'
           socialNetworks={[

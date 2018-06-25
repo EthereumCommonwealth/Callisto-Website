@@ -1,0 +1,95 @@
+.SmartDetail
+  background-color #FFF
+  padding 35px 0
+  +from-width($sm)
+    padding 70px 0
+  &-content
+    display grid
+    +from-width($md)
+      margin-top 2.5em
+      grid-template-columns 2fr 8fr 2fr
+    &-grid
+      display grid
+      grid-gap 1.5em
+      +from-width($md)
+        grid-gap 3em
+      &-row
+        display grid
+        grid-template-rows 40px
+        +from-width($md)
+          grid-template-rows 85px
+        &.two-columns
+          +from-width($md)
+            grid-template-columns 1fr 1fr
+        &.one-column
+          .has-line
+            &:before
+              content ''
+              left 76%
+            .SmartDetail-content-grid-detail-triangle-top
+              right 22.2%
+              left unset
+            .SmartDetail-content-grid-detail-circle-bottom
+              left 25%
+      &-detail
+        border solid 2px $green
+        border-radius 8px
+        display grid
+        position relative
+        &-text
+          justify-self center
+          align-self center
+          line-height 1.52
+          color $dark-gray
+          padding 0 1em
+          text-align center
+        &-circle
+          &-right
+            position absolute
+            top 31px
+            right 45%
+            +from-width($md)
+              right -9px
+          &-bottom
+            position absolute
+            bottom -13px
+            left 50%
+            +from-width($md)
+              left 50%
+        &-triangle
+          &-top
+            position absolute
+            top -10px
+            left 49.5%
+        &.has-line
+          &:before
+            content ''
+            position absolute
+            background-color $light-gray
+            width 2px
+            height 21px
+            left 52%
+            top -37px
+      &-line
+        position relative
+        &.arrow-bottom
+          display none
+          +from-width($md)
+            display block
+            position absolute
+            top 40px
+            left 7px
+            width 195px
+            img
+              width 100%
+        &.arrow-up
+          display none
+          +from-width($md)
+            display block
+            position absolute
+            top -40px
+            left 7px
+            width 195px
+            transform rotateX(180deg)
+            img
+              width 100%
