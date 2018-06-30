@@ -166,7 +166,49 @@ const idMessages = () => {
       smart-contract developers or development teams and the benefit for this
       is to reduce risk/flaw in smart contract and improve the adoption of
       programmable blockchains for the whole crypto industry. So, how its work?
-    `
+    `,
+    SmartDetailTitle: 'How to do Smart Contract Audit For Free With Callisto Network',
+    SmartDetailSubtitle: 'Here is our workflow:',
+    SmartDetailCustomerAudit: 'Customer submit audit request',
+    SmartDetailSecurityManager: 'Security manager verify request',
+    SmartDetailAuditorsPickup: 'Auditors pickup request',
+    SmartDetailMultipleAuditors: 'Multiple auditors check smart-contract code',
+    SmartDetailSecurityVerify: 'Security manager collect and verify reports from auditors',
+    SmartDetailCustomerNotified: 'Customer notified of results',
+    SmartDetailSecurityCollect: 'Security manager collect and verify reports from auditors',
+    AuditorsCheckTitle: 'What will be checked by our Auditors?',
+    AuditorsCheckDescription: 'Lorem ipsum Callisto core implementation.',
+    AuditorsCheckMultipleAuditors: 'Multiple independent auditors perform full service audit',
+    AuditorsCheckOverall: 'Overall smart contract architecture',
+    AuditorsCheckTechnical: `
+      Technical analysis interaction between smart contract and the blockchain
+    `,
+    AuditorsCheckIdentifyVulnerabilities: `
+      Identify possible security vulnerabilities within smart contract
+    `,
+    AuditorsCheckIdentifyBugs: `
+      Identify possible bugs in the smart contract code and
+      severity/classification of the founded issues.
+    `,
+    AuditorsCheckOptimization: 'Possible optimization of smart contract code',
+    SmartDetailBottomText: `
+      Smart contract audit on Callisto Network Platform are Free of charge for
+      developers. However if you need to prepare audit urgently or with higher
+      priority The developer of the smart contract may make a deposit (minimal
+      threshold is set as low as 10000 CLO) into a special smart-contract that
+      will hold the funds during the audit. Upon completion of the audit, the
+      developer of the smart-contract receives his funds back and can sell the
+      CLO further.
+
+      After the audit request has been created, it is viewed by the audit manager.
+      If the request meets the requirements, then the auditing manager assigns
+      that the audit request is available for auditors for picking.
+    `,
+    SmartAuthorTitle: 'What the auditor of smart-contracts will do?',
+    SmartAuthorDescription: `
+      The main task of each security auditor is to check the code for security-related
+      issues and prepare a report on the detected errors after the audit is completed.
+    `,
   };
 };
 

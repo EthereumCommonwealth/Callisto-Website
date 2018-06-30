@@ -5,6 +5,8 @@ import Header from '../components/commons/Header';
 import SmartHero from '../components/SmartContracts/SmartHero';
 import Description from '../components/SmartContracts/Description';
 import SmartDetail from '../components/SmartContracts/SmartDetail';
+import AuditorsCheck from '../components/SmartContracts/AuditorsCheck';
+import SmartAuthor from '../components/SmartContracts/SmartAuthor';
 import Footer from '../components/commons/Footer';
 
 const SmartContract = ({ match }) => {
@@ -14,6 +16,8 @@ const SmartContract = ({ match }) => {
       <SmartHero />
       <Description />
       <SmartDetail />
+      <AuditorsCheck />
+      <SmartAuthor />
       <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />
     </Layout>
   );

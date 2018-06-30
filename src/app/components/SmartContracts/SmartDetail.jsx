@@ -1,27 +1,21 @@
 import React from 'react';
-import { injectIntl } from 'react-intl';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import SectionHeading from '../commons/SectionHeading';
 
 const SmartDetail = ({ intl }) => (
   <div className='SmartDetail'>
     <div className='container'>
       <SectionHeading
-        title={intl.formatMessage({
-          id: 'DescriptionAudit',
-          defaultMessage: 'How to do Smart Contract Audit For Free With Callisto Network'
-        })}
-        description={intl.formatMessage({
-          id: 'SmartDetailSubtitle',
-          defaultMessage: 'Here is our workflow:',
-        })}
+        title={intl.formatMessage({ id: 'SmartDetailTitle' })}
+        description={intl.formatMessage({ id: 'SmartDetailSubtitle' })}
       />
       <div className='SmartDetail-content'>
-        <div />
+        <div className='SmartDetail-content-grid-empty' />
         <div className='SmartDetail-content-grid'>
           <div className='SmartDetail-content-grid-row two-columns'>
             <div className='SmartDetail-content-grid-detail'>
               <span className='SmartDetail-content-grid-detail-text'>
-                Customer submit audit request
+                <FormattedMessage id='SmartDetailCustomerAudit' />
               </span>
               <figure className='SmartDetail-content-grid-detail-circle-right'>
                 <img src='/image/diagram/circle.svg' alt='Grid Circle' />
@@ -34,10 +28,10 @@ const SmartDetail = ({ intl }) => (
             </div>
           </div>
           <div className='SmartDetail-content-grid-row two-columns'>
-            <div />
+            <div className='SmartDetail-content-grid-empty' />
             <div className='SmartDetail-content-grid-detail'>
               <span className='SmartDetail-content-grid-detail-text'>
-                Security manager verify request
+                <FormattedMessage id='SmartDetailSecurityManager' />
               </span>
               <figure className='SmartDetail-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -48,10 +42,10 @@ const SmartDetail = ({ intl }) => (
             </div>
           </div>
           <div className='SmartDetail-content-grid-row two-columns'>
-            <div />
+            <div className='SmartDetail-content-grid-empty' />
             <div className='SmartDetail-content-grid-detail has-line'>
               <span className='SmartDetail-content-grid-detail-text'>
-                Auditors pickup request
+                <FormattedMessage id='SmartDetailAuditorsPickup' />
               </span>
               <figure className='SmartDetail-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -64,7 +58,7 @@ const SmartDetail = ({ intl }) => (
           <div className='SmartDetail-content-grid-row one-column'>
             <div className='SmartDetail-content-grid-detail has-line'>
               <span className='SmartDetail-content-grid-detail-text'>
-                Multiple auditors check smart-contract code
+                <FormattedMessage id='SmartDetailMultipleAuditors' />
               </span>
               <figure className='SmartDetail-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -77,7 +71,7 @@ const SmartDetail = ({ intl }) => (
           <div className='SmartDetail-content-grid-row two-columns'>
             <div className='SmartDetail-content-grid-detail has-line'>
               <span className='SmartDetail-content-grid-detail-text'>
-                Security manager collect and verify reports from auditors
+                <FormattedMessage id='SmartDetailSecurityVerify' />
               </span>
               <figure className='SmartDetail-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -93,10 +87,10 @@ const SmartDetail = ({ intl }) => (
             </div>
           </div>
           <div className='SmartDetail-content-grid-row two-columns'>
-            <div />
+            <div className='SmartDetail-content-grid-empty' />
             <div className='SmartDetail-content-grid-detail'>
               <span className='SmartDetail-content-grid-detail-text'>
-                Customer notified of results
+                <FormattedMessage id='SmartDetailCustomerNotified' />
               </span>
               <figure className='SmartDetail-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -109,7 +103,7 @@ const SmartDetail = ({ intl }) => (
           <div className='SmartDetail-content-grid-row two-columns'>
             <div className='SmartDetail-content-grid-detail'>
               <span className='SmartDetail-content-grid-detail-text'>
-                Security manager collect and verify reports from auditors
+                <FormattedMessage id='SmartDetailSecurityCollect' />
               </span>
               <figure className='SmartDetail-content-grid-detail-circle-right'>
                 <img src='/image/diagram/circle.svg' alt='Grid Circle' />
@@ -124,6 +118,9 @@ const SmartDetail = ({ intl }) => (
         </div>
         <div />
       </div>
+      <p className='SmartDetail-bottom'>
+        <FormattedMessage id='SmartDetailBottomText' />
+      </p>
     </div>
   </div>
 );
