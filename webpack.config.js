@@ -1,7 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const nib = require('nib');
+const rupture = require('rupture');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -34,17 +37,10 @@ module.exports = {
       },
       {
         test: /\.css|.styl$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'stylus-loader',
-            options: {
-              use: [require('nib')(), require('rupture')()],
-              import: ['~nib/lib/nib/index.styl', '~rupture/rupture/index.styl']
-            },
-          },
-        ],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'stylus-loader']
+        }),
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -111,6 +107,22 @@ module.exports = {
   plugins: [
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new TransferWebpackPlugin([
+      { from: 'client' },
+    ], path.resolve(__dirname, 'src')),
+    new webpack.LoaderOptionsPlugin({
+      debug: true,
+      options: {
+        stylus: {
+          use: [nib(), rupture()],
+          import: [
+            '~nib/lib/nib/index.styl',
+            '~rupture/rupture/index.styl',
+          ],
+        },
+      },
+    }),
+    new ExtractTextPlugin('[name].css', { allChunks: true }),
     new CompressionPlugin({
       test: /\.js$|\.css$/,
       asset: '[path].gz'
