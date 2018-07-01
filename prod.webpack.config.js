@@ -5,7 +5,7 @@ const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: ['webpack-hot-middleware/client', './src/app/index.js'],
+  entry: ['./src/app/index.js'],
   mode: 'production',
   output: {
     path: path.join(process.cwd(), './src/server/public'),
@@ -110,7 +110,6 @@ module.exports = {
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new TransferWebpackPlugin([
       { from: 'client' },
     ], path.resolve(__dirname, 'src')),
