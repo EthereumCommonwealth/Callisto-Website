@@ -209,6 +209,51 @@ const enMessages = () => {
       The main task of each security auditor is to check the code for security-related
       issues and prepare a report on the detected errors after the audit is completed.
     `,
+    SmartAuthorBottom: `
+    At least three different auditors, as well as community members and the audit
+    manager will check the smart contract, so the auditors is not incentivised
+    in hiding the errors found or trying to exploit them.
+
+    After the auditor has completed the verification of the code and supplemented
+    his report with a description of the findings, he will comment the corresponding
+    Github issue that his report is finished.
+    `,
+    SmartAuthorStepOne: `
+      All the work coordinated through Github. If an audit request (issue)
+      appears in the list, the auditors will pick it.
+    `,
+    SmartAuthorStepTwo: `
+      After the auditor has received the objective of his work, he will comment
+      the time that will be required to verify this smart-contract, depends on
+      smart contract code complexity.
+    `,
+    SmartAuthorStepThree: `
+      The auditor will create audit report and send it to the auditing manager
+      by email. The auditor will check the contract code, perform necessary
+      testing and describe findings at the audit report.
+    `,
+    FinalReportTitle: 'Final Report and Completion of the Audit',
+    FinalReportDescription: `
+      After all the responsible auditors have completed their reports, the audit
+      manager will compare the reports.
+    `,
+    FinalReportText: `
+      If there are no significant discrepancies in the reports and no critical
+      errors are detected, then the audit manager will complete the audit by
+      summarizing the reports and submitting secret gist urls in the comment of
+      the corresponding audit request-issue. The audit is considered complete
+      after all the responsible auditors have submitted their reports, and the
+      audit manager has summarized the results of these reports and published
+      report gist urls.
+    `,
+    DisclosurePolicyTitle: 'Disclosure policy',
+    DisclosurePolicyDescription: `
+      After the audit was completed, the audit manager will inform the customer
+      about the results without revealing the reports. After 15 days from the
+      date of informing the customer about the findings, the reports should
+      still be published and the results summed up.
+    `,
+    OrderAudit: 'Order Audit',
   };
 };
 

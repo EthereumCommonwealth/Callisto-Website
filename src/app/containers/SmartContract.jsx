@@ -7,6 +7,9 @@ import Description from '../components/SmartContracts/Description';
 import SmartDetail from '../components/SmartContracts/SmartDetail';
 import AuditorsCheck from '../components/SmartContracts/AuditorsCheck';
 import SmartAuthor from '../components/SmartContracts/SmartAuthor';
+import FinalReport from '../components/SmartContracts/FinalReport';
+import DisclosurePolicy from '../components/SmartContracts/DisclosurePolicy';
+import OrderAudit from '../components/SmartContracts/OrderAudit';
 import Footer from '../components/commons/Footer';
 
 const SmartContract = ({ match }) => {
@@ -18,6 +21,9 @@ const SmartContract = ({ match }) => {
       <SmartDetail />
       <AuditorsCheck />
       <SmartAuthor />
+      <FinalReport />
+      <DisclosurePolicy />
+      <OrderAudit />
       <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />
     </Layout>
   );

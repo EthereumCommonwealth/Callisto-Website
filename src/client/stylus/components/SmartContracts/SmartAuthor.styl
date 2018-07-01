@@ -9,3 +9,39 @@
     +from-width($md)
       width 65%
       margin 0 auto
+  &-steps
+    margin 30px 0
+    display grid
+    grid-gap 15px
+    +from-width($md)
+      margin 30px 0 80px 0
+      grid-template-columns 1fr 1fr 1fr
+      justify-items center
+      grid-gap 30px
+  &-step
+    display grid
+    grid-gap .5em
+    &-number
+      align-self center
+      +from-width($md)
+        align-self flex-start
+      &-elem
+        display flex
+        align-items center
+        justify-content center
+        font-size 26px
+        color $dark-blue
+        background-color #FFF
+        border solid 2px $green
+        border-radius 100%
+        width 50px
+        height 50px
+    &-text
+      line-height 1.64
+      color $dark-blue
+  &-bottom
+    line-height 1.64
+    color $dark-blue
+    +from-width($md)
+      width 50%
+      margin 0 auto

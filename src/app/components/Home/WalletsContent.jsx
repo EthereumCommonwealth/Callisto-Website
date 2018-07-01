@@ -13,7 +13,7 @@ const WalletsContent = ({ intl }) => (
       />
       <div className='WalletsContent-list'>
         <SingleWallet
-          icon='/image/windows.svg'
+          icon='/image/wallets/windows.svg'
           title='Windows'
           options={[
             { name: 'Geth', url: '/' },
@@ -21,7 +21,7 @@ const WalletsContent = ({ intl }) => (
           ]}
         />
         <SingleWallet
-          icon='/image/apple.svg'
+          icon='/image/wallets/apple.svg'
           title='OSX'
           options={[
             { name: 'Geth', url: '/' },
@@ -29,7 +29,7 @@ const WalletsContent = ({ intl }) => (
           ]}
         />
         <SingleWallet
-          icon='/image/linux.svg'
+          icon='/image/wallets/linux.svg'
           title='Linux'
           options={[
             { name: 'Geth', url: '/' },
@@ -37,7 +37,7 @@ const WalletsContent = ({ intl }) => (
           ]}
         />
         <SingleWallet
-          icon='/image/playstore.svg'
+          icon='/image/wallets/playstore.svg'
           title='Android'
           options={[
             { name: 'Coinomi', url: 'https://coinomi.com/' },
@@ -46,7 +46,7 @@ const WalletsContent = ({ intl }) => (
           ]}
         />
         <SingleWallet
-          icon='/image/applestore.svg'
+          icon='/image/wallets/applestore.svg'
           title='iOS'
           options={[
             { name: 'Coinomi', url: 'https://coinomi.com/' },
@@ -54,7 +54,7 @@ const WalletsContent = ({ intl }) => (
           ]}
         />
         <SingleWallet
-          icon='/image/web.svg'
+          icon='/image/wallets/web.svg'
           title='Web'
           options={[
             { name: 'Classic Ether Wallet', url: 'https://ethereumproject.github.io/etherwallet/' },
