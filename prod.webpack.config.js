@@ -17,14 +17,14 @@ module.exports = {
       {
         test: /\.js|jsx$/,
         enforce: 'pre',
-        exclude: '/node_modules/',
+        exclude: /node_modules/,
         use: {
           loader: 'eslint-loader',
         },
       },
       {
         test: /\.js|jsx$/,
-        exclude: '/node_modules/',
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           query: {
