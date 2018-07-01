@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -113,5 +114,9 @@ module.exports = {
     new TransferWebpackPlugin([
       { from: 'client' },
     ], path.resolve(__dirname, 'src')),
+    new CompressionPlugin({
+      test: /\.js$|\.css$/,
+      asset: '[path].gz'
+    }),
   ],
 }

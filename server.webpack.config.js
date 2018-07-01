@@ -4,6 +4,7 @@ const TransferWebpackPlugin = require('transfer-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const nib = require('nib');
 const rupture = require('rupture');
+const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -125,5 +126,9 @@ module.exports = {
       },
     }),
     new ExtractTextPlugin('[name].css', { allChunks: true }),
+    new CompressionPlugin({
+      test: /\.js$|\.css$/,
+      asset: '[path].gz'
+    })
   ],
 }

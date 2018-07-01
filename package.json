@@ -23,6 +23,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "body-parser": "^1.18.3",
     "classnames": "^2.2.5",
+    "compression-webpack-plugin": "^1.1.11",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-favicon": "^2.0.1",

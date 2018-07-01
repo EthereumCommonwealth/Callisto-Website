@@ -70,8 +70,11 @@ typings/
 
 src/server/public/stylus/
 src/server/public/main.css
+src/server/public/main.css.gz
 src/server/public/main.js
+src/server/public/main.js.gz
 src/server/public/vendor.js
+src/server/public/vendor.js.gz
 src/server/public/image
 
 .cache/

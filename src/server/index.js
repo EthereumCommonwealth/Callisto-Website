@@ -113,6 +113,16 @@ const prefetchData = async (req, res, next) => {
   }
 }
 
+app.get('*.js', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
+app.get('*.css', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
 app.get('/', prefetchData);
 app.get('/smart-contract/', prefetchData);
 app.get('/cold-staking/', prefetchData);
