@@ -111,9 +111,6 @@ module.exports = {
   plugins: [
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new TransferWebpackPlugin([
-      { from: 'client' },
-    ], path.resolve(__dirname, 'src')),
     new CompressionPlugin({
       test: /\.js$|\.css$/,
       asset: '[path].gz'
