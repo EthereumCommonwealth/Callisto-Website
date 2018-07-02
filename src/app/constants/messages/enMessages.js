@@ -254,6 +254,12 @@ const enMessages = () => {
       still be published and the results summed up.
     `,
     OrderAudit: 'Order Audit',
+    StakingHeroTitle: 'Cold Staking',
+    StakingHeroDescription: `
+      Cold staking is a protocol that rewards long-term coin holders for holding
+      their CLO coins.
+    `,
+    StakingHeroProtocolBtn: 'Protocol description',
   };
 };
 

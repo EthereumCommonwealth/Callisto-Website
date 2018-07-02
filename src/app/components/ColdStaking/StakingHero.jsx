@@ -1,43 +1,98 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, injectIntl } from 'react-intl';
+import Countdown from 'react-countdown-now';
 
-const StakingHero = ({ intl }) => (
-  <div className='StakingHero'>
-    <div className='StakingHero-content container'>
-      <div className='StakingHero-content-left'>
-        <h1
-          className='StakingHero-content-left-title'
-          dangerouslySetInnerHTML={{
-            __html: intl.formatMessage({ id: 'SmartContractTitle' })
-          }}
-        />
-        <p className='StakingHero-content-left-description'>
-          <FormattedMessage id='SmartHeroDescription' />
-        </p>
-        <div className='StakingHero-btns'>
-          <a
-            href='https://whitepaper.callisto.network/'
-            target='_blank'
-            className='btn btn-green'
-          >
-            <FormattedMessage id='SmartHeroAudit' />
-          </a>
-          <a
-            href='https://whitepaper.callisto.network/'
-            target='_blank'
-            className='btn btn-transparent-green'
-          >
-            <FormattedMessage id='SmartHeroBecomeAuditor' />
-          </a>
+class StakingHero extends Component {
+
+  renderer = ({ days, hours, minutes, seconds, completed }) => {
+    if (completed) {
+      return 'Completed';
+    }
+    return (
+      <div className='StakingHero-counter-holder'>
+        <div>
+          <div className='StakingHero-counter-holder-square'>
+            <span className='StakingHero-counter-holder-number'>
+              {days}
+            </span>
+          </div>
+          <span className='StakingHero-counter-text'>days</span>
+        </div>
+        <div>
+          <div className='StakingHero-counter-holder-square'>
+            <span className='StakingHero-counter-holder-number'>
+              {hours}
+            </span>
+          </div>
+          <span className='StakingHero-counter-text'>hours</span>
+        </div>
+        <div>
+          <div className='StakingHero-counter-holder-square'>
+            <span className='StakingHero-counter-holder-number'>
+              {minutes}
+            </span>
+          </div>
+          <span className='StakingHero-counter-text'>minutos</span>
+        </div>
+        <div>
+          <div className='StakingHero-counter-holder-square'>
+            <span className='StakingHero-counter-holder-number'>
+              {seconds}
+            </span>
+          </div>
+          <span className='StakingHero-counter-text'>seconds</span>
         </div>
       </div>
-      <div className='StakingHero-content-right'>
-        Counter Here
+    );
+  };
+  render() {
+    const { intl } = this.props;
+    return (
+      <div className='StakingHero'>
+        <div className='StakingHero-content container'>
+          <div className='StakingHero-content-left'>
+            <h1
+              className='StakingHero-content-left-title'
+              dangerouslySetInnerHTML={{
+                __html: intl.formatMessage({ id: 'StakingHeroTitle' })
+              }}
+            />
+            <p className='StakingHero-content-left-description'>
+              <FormattedMessage id='StakingHeroDescription' />
+            </p>
+            <div className='StakingHero-btns'>
+              <a
+                href='#'
+                target='_blank'
+                className='btn btn-green'
+              >
+                <FormattedMessage id='StakingHeroProtocolBtn' />
+              </a>
+            </div>
+          </div>
+          <div className='StakingHero-content-right'>
+            <div className='StakingHero-counter square'>
+              <h2 className='StakingHero-counter-title'>Coming Soon</h2>
+              <p className='StakingHero-counter-description'>
+                Cold staking will be launched on Callisto Network after Hard fork #1
+              </p>
+              <div className='StakingHero-counter-elements'>
+                <Countdown
+                  date={Date.now() + 1000000000}
+                  renderer={this.renderer}
+                />
+              </div>
+              <p className='StakingHero-counter-date'>
+                November, 11, 2018
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-);
+    );
+  }
+}
 
 StakingHero.propTypes = {
   intl: PropTypes.object
