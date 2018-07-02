@@ -86,16 +86,6 @@ const Exchanges = () => (
       <div className="Exchanges-list">
         <div className="Exchanges-list-element">
           <figure className="Exchanges-list-element-figure is-small">
-            <img src={yobit} alt="Yobit.net" />
-          </figure>
-          <a
-            className="Exchanges-list-element-anchor"
-            target="_blank"
-            href="https://medium.com/@YobitExchange/yobit-is-ready-for-etc-fork-4ecdcbafc7f1"
-          />
-        </div>
-        <div className="Exchanges-list-element">
-          <figure className="Exchanges-list-element-figure is-small">
             <img src={changenow} alt="ChangeNow" />
           </figure>
           <a
