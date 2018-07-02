@@ -1,6 +1,5 @@
 import React from 'react'
 import { Element } from 'react-scroll'
-import yobit from '../images/yobit-logo.png'
 import changenow from '../images/changenow-logo.png'
 import hitbtclogo from '../images/hitbtclogo.png'
 import kucoinlogo from '../images/kucoin-logo.png'
