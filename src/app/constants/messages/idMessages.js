@@ -260,6 +260,31 @@ const idMessages = () => {
       their CLO coins.
     `,
     StakingHeroProtocolBtn: 'Protocol description',
+    days: 'days',
+    hours: 'hours',
+    minutes: 'minutes',
+    seconds: 'seconds',
+    StakingHeroCounterText: `
+      Cold staking will be launched on Callisto Network after Hard fork #1
+    `,
+    StakingHeroCounterDate: 'November, 11, 2018',
+    StakingDescriptionWhatIsTitle: 'What is Cold Staking?',
+    StakingDescriptionWhatIsText: `
+      Cold Staking is not related to Proof of Stake nor a consensus mechanism.
+      Cold stakers have no rights in block generation or transaction confirming.
+      They receive interest for holding their coins. Think about cold stacking
+      as a passive income on your investments.
+    `,
+    StakingDescriptionMoneyTitle: 'How to earn money with Cold Staking?',
+    StakingDescriptionMoneyText: `
+      The Callisto Cold Staking Protocol is written in solidity smart-contracts.
+      The cold Staking contract continually receives a 20% of mining rewards on
+      each block and distributes this amount of CLO between cold stakers in
+      proportion to their stake.
+    `,
+    StakingDescriptionMoneySecondText: `
+      The reward for each staker is calculated in the moment of reward claiming.
+    `,
   };
 };
 

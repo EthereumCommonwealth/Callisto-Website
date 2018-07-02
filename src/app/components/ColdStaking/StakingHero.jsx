@@ -17,7 +17,9 @@ class StakingHero extends Component {
               {days}
             </span>
           </div>
-          <span className='StakingHero-counter-text'>days</span>
+          <span className='StakingHero-counter-text'>
+            <FormattedMessage id='days' />
+          </span>
         </div>
         <div>
           <div className='StakingHero-counter-holder-square'>
@@ -25,7 +27,9 @@ class StakingHero extends Component {
               {hours}
             </span>
           </div>
-          <span className='StakingHero-counter-text'>hours</span>
+          <span className='StakingHero-counter-text'>
+            <FormattedMessage id='hours' />
+          </span>
         </div>
         <div>
           <div className='StakingHero-counter-holder-square'>
@@ -33,7 +37,9 @@ class StakingHero extends Component {
               {minutes}
             </span>
           </div>
-          <span className='StakingHero-counter-text'>minutos</span>
+          <span className='StakingHero-counter-text'>
+            <FormattedMessage id='minutes' />
+          </span>
         </div>
         <div>
           <div className='StakingHero-counter-holder-square'>
@@ -41,7 +47,9 @@ class StakingHero extends Component {
               {seconds}
             </span>
           </div>
-          <span className='StakingHero-counter-text'>seconds</span>
+          <span className='StakingHero-counter-text'>
+            <FormattedMessage id='seconds' />
+          </span>
         </div>
       </div>
     );
@@ -73,9 +81,11 @@ class StakingHero extends Component {
           </div>
           <div className='StakingHero-content-right'>
             <div className='StakingHero-counter square'>
-              <h2 className='StakingHero-counter-title'>Coming Soon</h2>
+              <h2 className='StakingHero-counter-title'>
+                <FormattedMessage id='ComingSoon'/>
+              </h2>
               <p className='StakingHero-counter-description'>
-                Cold staking will be launched on Callisto Network after Hard fork #1
+                <FormattedMessage id='StakingHeroCounterText'/>
               </p>
               <div className='StakingHero-counter-elements'>
                 <Countdown
@@ -84,7 +94,7 @@ class StakingHero extends Component {
                 />
               </div>
               <p className='StakingHero-counter-date'>
-                November, 11, 2018
+                <FormattedMessage id='StakingHeroCounterDate'/>
               </p>
             </div>
           </div>
