@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from '../containers/Home';
 import ColdStaking from '../containers/ColdStaking';
 import SmartContract from '../containers/SmartContract';
+import FinantialReport from '../containers/FinantialReport';
 import Notfound from '../containers/NotFound';
 
 const Routes = (
@@ -11,9 +12,11 @@ const Routes = (
       <Route exact path='/' component={Home} />
       <Route exact path='/cold-staking/' component={ColdStaking} />
       <Route exact path='/smart-contract/' component={SmartContract} />
+      <Route exact path='/finantial-report/' component={FinantialReport} />
       <Route exact path='/:lang(es|en|id|ru)/' component={Home} />
       <Route exact path='/:lang(es|en|id|ru)/cold-staking/' component={ColdStaking} />
       <Route exact path='/:lang(es|en|id|ru)/smart-contract/' component={SmartContract} />
+      <Route exact path='/:lang(es|en|id|ru)/finantial-report/' component={FinantialReport} />
       <Route component={Notfound} />
     </Switch>
   </BrowserRouter>

@@ -126,9 +126,11 @@ app.get('*.css', function (req, res, next) {
 app.get('/', prefetchData);
 app.get('/smart-contract/', prefetchData);
 app.get('/cold-staking/', prefetchData);
+app.get('/finantial-report/', prefetchData);
 app.get('/:lang(es|en|id|ru)/', prefetchData);
 app.get('/:lang(es|en|id|ru)/cold-staking/', prefetchData);
 app.get('/:lang(es|en|id|ru)/smart-contract/', prefetchData);
+app.get('/:lang(es|en|id|ru)/finantial-report/', prefetchData);
 app.get('*', prefetchData);
 
 function handleRender(req, res, initialState) {
