@@ -10,58 +10,17 @@ class StakingInvestments extends Component {
 
   state = {
     percent: 45,
-    initialPercent: 0,
-    pressed: false,
     stakingDeposit: 10000,
   };
-
-  handleMouseLeave = event => {
-    event.preventDefault();
-    this.setState({
-      pressed: false,
-      initialPercent: 0,
-    });
-  }
-
-  handleMouseDown = event => {
-    event.preventDefault();
-    this.setState({
-      initialPercent: event.clientX,
-      pressed: true,
-    });
-  }
-
-  handleMouseUp = event => {
-    event.preventDefault();
-    this.setState({ pressed: false });
-  }
-
-  handleMouseMove = event => {
-    event.preventDefault();
-    const { initialPercent, pressed } = this.state;
-    if (pressed) {
-      const lineWidth = this.line.current.clientWidth;
-      const lineOffset = this.line.current.offsetLeft;
-      let clientDifference
-      let relativePercentage;
-      if (event.clientX > initialPercent) {
-        clientDifference = event.clientX - lineOffset;
-        relativePercentage = Math.round((clientDifference * 100) / lineWidth);
-      } else if (initialPercent > event.clientX) {
-        relativePercentage = this.state.percent - 0.25
-        console.log(relativePercentage);
-      }
-      if ((relativePercentage >= 0 && relativePercentage <= 100)) {
-        this.setState({
-          percent: relativePercentage,
-        });
-      }
-    }
-  }
 
   handleChange = event => {
     event.preventDefault();
     this.setState({ stakingDeposit: event.target.value });
+  }
+
+  handleRangeChange = event => {
+    event.preventDefault();
+    this.setState({ percent: event.target.value });
   }
 
   render() {
@@ -80,44 +39,17 @@ class StakingInvestments extends Component {
               <div className='StakingInvestments-percent-title'>
                 <FormattedMessage id='StakingInvestmentsPercent' />
               </div>
-              <div
-                className='StakingInvestments-percent-holder'
-                onMouseLeave={this.handleMouseLeave}
-              >
+              <div className='StakingInvestments-percent-holder'>
                 <span className='StakingInvestments-percent-holder-text'>
                   0
                 </span>
-                <div
-                  ref={this.line}
-                  className='StakingInvestments-percent-holder-line'
-                >
-                  <div
-                    className='StakingInvestments-percent-holder-line-progress'
-                    style={{ width: `${percent}%` }}
-                  />
-                  <div
-                    className='StakingInvestments-percent-holder-line-percentage'
-                    style={{ left: `${percent - 5}%` }}
-                  >
-                    <span
-                      className='StakingInvestments-percent-holder-line-percentage-value'
-                    >
-                      {Math.round(percent)}
-                    </span> %
-                  </div>
-                  <span
-                    className='StakingInvestments-percent-holder-line-circle'
-                    style={{ left: `${percent - 2 }%` }}
-                    onMouseDown={this.handleMouseDown}
-                    onTouchStart={this.handleMouseDown}
-                    onMouseUp={this.handleMouseUp}
-                    onTouchEnd={this.handleMouseUp}
-                    onMouseMove={this.handleMouseMove}
-                    onTouchMove={this.handleMouseMove}
-                    onMouseLeave={this.handleMouseUp}
-                    onTouchCancel={this.handleMouseUp}
-                  />
-                </div>
+                <input
+                  type='range'
+                  min={0}
+                  value={percent}
+                  onChange={this.handleRangeChange}
+                  className='StakingInvestments-percent-holder-input'
+                />
                 <span className='StakingInvestments-percent-holder-text'>
                   100%
                 </span>
