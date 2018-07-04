@@ -4,6 +4,7 @@ import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
 import StakingHero from '../components/ColdStaking/StakingHero';
 import StakingDescription from '../components/ColdStaking/StakingDescription';
+import StakingInvestments from '../components/ColdStaking/StakingInvestments';
 import Footer from '../components/commons/Footer';
 
 const ColdStaking = ({ match }) => {
@@ -12,6 +13,7 @@ const ColdStaking = ({ match }) => {
       <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <StakingHero />
       <StakingDescription />
+      <StakingInvestments />
       <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />
     </Layout>
   );

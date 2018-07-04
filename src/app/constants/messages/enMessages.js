@@ -285,6 +285,17 @@ const enMessages = () => {
     StakingDescriptionMoneySecondText: `
       The reward for each staker is calculated in the moment of reward claiming.
     `,
+    StakingInvestmentsTitle: 'How much I can earn on my investments?',
+    StakingInvestmentsDescription: 'You can quickly estimate your earnings with this calculator',
+    StakingInvestmentsPercent: 'Percent of Total Supply in Staking Pool',
+    StakingInvestmentsDepositTitle: 'Your Staking deposit, CLO',
+    Calculate: 'Calculate',
+    Period: 'Period',
+    Reward: 'Reward',
+    StakingInvestmentsBottomText: `
+      First three months after hardfork launch cold staking rewards will be
+      significantly higher. After month four there will be a regular reward. 
+    `,
   };
 };
 

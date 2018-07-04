@@ -1,12 +1,12 @@
 .StakingHero
   background-color #e9f7ff
   padding 100px 0 25px 0
-  +from-width($sm)
+  +from-width($md)
     padding 140px 0
   &-content
     display grid
     grid-gap 2em
-    +from-width($sm)
+    +from-width($md)
       grid-template-columns 1.5fr 2fr
       grid-gap 5em
     &-left
@@ -33,13 +33,13 @@
     padding 1em
     box-sizing border-box
     text-align center
-    position absolute
-    max-width 92%
+    max-width 100%
     box-shadow 0 4px 14px 0 rgba(198, 202, 206, 0.3)
-    +from-width($sm)
+    +from-width($md)
       padding 2em
       max-width 470px
       top 48px
+      position absolute
     +from-width($md)
       top -5em
     &-text
@@ -79,7 +79,7 @@
         +from-width($sm)
           padding 24px 12px
       &-number
-        font-size 44px
+        font-size 35px
         font-stretch condensed
         line-height 1.41
         font-weight bold
