@@ -109,9 +109,13 @@ class StakingInvestments extends Component {
                     className='StakingInvestments-percent-holder-line-circle'
                     style={{ left: `${percent - 2 }%` }}
                     onMouseDown={this.handleMouseDown}
+                    onTouchStart={this.handleMouseDown}
                     onMouseUp={this.handleMouseUp}
+                    onTouchEnd={this.handleMouseUp}
                     onMouseMove={this.handleMouseMove}
+                    onTouchMove={this.handleMouseMove}
                     onMouseLeave={this.handleMouseUp}
+                    onTouchCancel={this.handleMouseUp}
                   />
                 </div>
                 <span className='StakingInvestments-percent-holder-text'>
