@@ -61,8 +61,8 @@ class Header extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'HeaderBlog' }),
-        url: !this.props.fromLanding ? '/' : 'blog',
-        type: this.props.fromLanding ? 'scroll' : 'router',
+        url: '/blog',
+        type: 'router',
       },
     ];
   }

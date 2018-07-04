@@ -46,8 +46,8 @@ class Footer extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'FooterBlog' }),
-        url: !this.props.fromLanding ? '/' : 'blog',
-        type: this.props.fromLanding ? 'scroll' : 'router',
+        url: '/blog',
+        type: 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'FooterSupport' }),

@@ -5,16 +5,16 @@ import { Element } from 'react-scroll';
 import { connect } from 'react-redux';
 import BlogPost from '../commons/BlogPost';
 
-class Blog extends PureComponent {
+class BlogOverview extends PureComponent {
   render() {
     const { blogPosts } = this.props;
     return (
-      <Element name='blog' className='Blog'>
-        <div className='Blog-content container'>
-          <h3 className='Blog-title'>
+      <Element name='blog' className='BlogOverview'>
+        <div className='BlogOverview-content container'>
+          <h3 className='BlogOverview-title'>
             <FormattedMessage id='BlogAndPress' />
           </h3>
-          <div className='Blog-list'>
+          <div className='BlogOverview-list'>
             {blogPosts.map(post => (
               <BlogPost
                 key={`BlogPost-${post.id}`}
@@ -38,8 +38,8 @@ function mapStateTopProps(state) {
   };
 }
 
-Blog.propTypes = {
+BlogOverview.propTypes = {
   blogPosts: PropTypes.array,
 };
 
-export default connect(mapStateTopProps, null)(Blog);
+export default connect(mapStateTopProps, null)(BlogOverview);

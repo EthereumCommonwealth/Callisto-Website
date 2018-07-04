@@ -128,6 +128,6 @@ module.exports = {
       test: /\.js$|\.css$/,
       asset: '[path].gz'
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
 }
