@@ -294,8 +294,13 @@ const enMessages = () => {
     Reward: 'Reward',
     StakingInvestmentsBottomText: `
       First three months after hardfork launch cold staking rewards will be
-      significantly higher. After month four there will be a regular reward. 
+      significantly higher. After month four there will be a regular reward.
     `,
+    FirstMonth: 'First month',
+    SecondMonth: 'Second month',
+    ThirdMonth: 'Third month',
+    StakingHowWorksTitle: 'How works?',
+    StakingWorkflowTitle: 'The workflow of Cold Staking:',
   };
 };
 

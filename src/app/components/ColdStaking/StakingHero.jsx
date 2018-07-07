@@ -89,7 +89,7 @@ class StakingHero extends Component {
               </p>
               <div className='StakingHero-counter-elements'>
                 <Countdown
-                  date={Date.now() + 1000000000}
+                  date={1541894400000}
                   renderer={this.renderer}
                 />
               </div>

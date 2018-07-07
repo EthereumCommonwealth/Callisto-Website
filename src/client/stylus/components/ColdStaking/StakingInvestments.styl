@@ -15,14 +15,24 @@
       margin-top 25px
       +from-width($sm)
         margin-top 45px
-    &-holder
+    &-text
       margin-top 40px
+      text-align center
+      font-size 28px
+      color #c4c4c4
+      line-height 1.64
+      +from-width($sm)
+        margin-top 80px
+        font-size 36px
+      &-detail
+        color $green
+    &-holder
       display grid
+      align-items center
       grid-template-columns 1fr 10fr 1fr
       user-select none
       grid-gap 1em
-      +from-width($sm)
-        margin-top 80px
+      margin-top 20px
       &-text
         font-size 18px
         line-height 1.64
@@ -58,6 +68,9 @@
     overflow hidden
     box-shadow 0 4px 14px 0 rgba(198, 202, 206, 0.3)
     background-color #FFF
+    user-select none
+    &:hover
+      cursor default
     +from-width($md)
       width 570px
       margin 60px auto 0 auto

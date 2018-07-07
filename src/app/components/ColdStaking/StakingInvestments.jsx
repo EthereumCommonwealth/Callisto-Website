@@ -39,6 +39,11 @@ class StakingInvestments extends Component {
               <div className='StakingInvestments-percent-title'>
                 <FormattedMessage id='StakingInvestmentsPercent' />
               </div>
+              <div className='StakingInvestments-percent-text'>
+                <span className='StakingInvestments-percent-text-detail'>
+                  {percent}
+                </span> %
+              </div>
               <div className='StakingInvestments-percent-holder'>
                 <span className='StakingInvestments-percent-holder-text'>
                   0
@@ -48,6 +53,7 @@ class StakingInvestments extends Component {
                   min={0}
                   value={percent}
                   onChange={this.handleRangeChange}
+                  step={1}
                   className='StakingInvestments-percent-holder-input'
                 />
                 <span className='StakingInvestments-percent-holder-text'>
@@ -81,17 +87,23 @@ class StakingInvestments extends Component {
                 <div className='StakingInvestments-table-tow-text'>ROI</div>
               </div>
               <div className='StakingInvestments-table-row'>
-                <div className='StakingInvestments-table-tow-text'>First month</div>
+                <div className='StakingInvestments-table-tow-text'>
+                  <FormattedMessage id='FirstMonth' />
+                </div>
                 <div className='StakingInvestments-table-tow-text'>6200,39</div>
                 <div className='StakingInvestments-table-tow-text'>120%</div>
               </div>
               <div className='StakingInvestments-table-row'>
-                <div className='StakingInvestments-table-tow-text'>Second month</div>
+                <div className='StakingInvestments-table-tow-text'>
+                  <FormattedMessage id='SecondMonth' />
+                </div>
                 <div className='StakingInvestments-table-tow-text'>3890,12</div>
                 <div className='StakingInvestments-table-tow-text'>120%</div>
               </div>
               <div className='StakingInvestments-table-row'>
-                <div className='StakingInvestments-table-tow-text'>Third month</div>
+                <div className='StakingInvestments-table-tow-text'>
+                  <FormattedMessage id='ThirdMonth' />
+                </div>
                 <div className='StakingInvestments-table-tow-text'>3645,39</div>
                 <div className='StakingInvestments-table-tow-text'>190%</div>
               </div>

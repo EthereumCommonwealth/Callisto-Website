@@ -1,0 +1,130 @@
+.StakingHowWorks
+  background-color $white
+  padding 125px 0 63px 0
+  margin-top -125px
+  +from-width($sm)
+    padding 250px 0 125px 0
+    margin-top -250px
+  &-bottom
+    margin-top 40px
+    +from-width($md)
+      width 50%
+      margin 80px auto 0 auto
+      line-height 1.64
+      color $dark-blue
+  &-content
+    display grid
+    margin-top 1.5em
+    +from-width($md)
+      margin-top 2.5em
+    &-grid
+      display grid
+      grid-gap 1.5em
+      user-select none
+      +from-width($md)
+        grid-gap 3em
+      &-empty
+        display none
+        +from-width($md)
+          display block
+      &-row
+        display grid
+        grid-template-rows 80px
+        +from-width($md)
+          grid-template-rows 85px
+        &.three-columns
+          +from-width($md)
+            grid-template-columns 1fr 1fr 1fr
+            grid-gap 2.5em
+        &.full
+          grid-gap 1.5em
+          grid-auto-rows 80px
+
+      &-detail
+        border solid 2px $green
+        border-radius 8px
+        display grid
+        position relative
+        &-text
+          justify-self center
+          align-self center
+          line-height 1.52
+          color $dark-gray
+          padding 0 1em
+          text-align center
+        &-circle
+          &-right
+            position absolute
+            bottom -12px
+            right 47%
+            +from-width($md)
+              bottom unset
+              top 36px
+              right -10px
+          &-bottom
+            position absolute
+            bottom -13px
+            left 47.5%
+            +from-width($md)
+              left 49.25%
+        &-triangle
+          &-top
+            position absolute
+            top -10px
+            left 47%
+            +from-width($md)
+              left 48.5%
+          &-right
+            position absolute
+            bottom -12px
+            right 47%
+            +from-width($md)
+              bottom unset
+              top 29px
+              right -7px
+              transform rotate(90deg)
+        &.has-line
+          &:before
+            content ''
+            position absolute
+            background-color $light-gray
+            width 2px
+            height 21px
+            left 51.5%
+            top -37px
+            display none
+            +from-width($md)
+              display block
+      &-line
+        display none
+        +from-width($md)
+          display block
+          position relative
+        &.arrow-bottom
+          display none
+          +from-width($md)
+            display block
+            position absolute
+            top 40px
+            left -14px
+            width 195px
+            img
+              width 100%
+        &.reverse
+          display none
+          +from-width($md)
+            display block
+            transform rotateY(180deg)
+            left unset
+            right -22px
+        &.arrow-up
+          display none
+          +from-width($md)
+            display block
+            position absolute
+            top -40px
+            left 7px
+            width 195px
+            transform rotateX(180deg)
+            img
+              width 100%
