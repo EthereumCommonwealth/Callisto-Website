@@ -7,6 +7,7 @@ import StakingDescription from '../components/ColdStaking/StakingDescription';
 import StakingInvestments from '../components/ColdStaking/StakingInvestments';
 import StakingHowWorks from '../components/ColdStaking/StakingHowWorks';
 import StakingWorkflow from '../components/ColdStaking/StakingWorkflow';
+import StakingLongStory from '../components/ColdStaking/StakingLongStory';
 import Footer from '../components/commons/Footer';
 
 const ColdStaking = ({ match }) => {
@@ -18,6 +19,7 @@ const ColdStaking = ({ match }) => {
       <StakingInvestments />
       <StakingHowWorks />
       <StakingWorkflow />
+      <StakingLongStory />
       <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />
     </Layout>
   );

@@ -341,6 +341,13 @@ const idMessages = () => {
       invoke the staking contract twice: make a deposit and claim the reward.
       The ClassicEtherWallet is sufficient for this procedure.
     `,
+    StakingLongStoryTitle: 'Long Story Short',
+    StakingLongStoryDescription: 'To participate in the Cold Staking, a user should:',
+    StakingLongStorySend: 'Send CLO into Staking Contract',
+    StakingLongStoryWait: 'Wait one month or longer',
+    StakingLongStoryInvoke: `
+      Invoke a withdrawal function of the Staking Contract to earn the reward
+    `,
   };
 };
 
