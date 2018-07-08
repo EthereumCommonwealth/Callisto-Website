@@ -7,6 +7,18 @@
     display grid
     grid-gap 5em
     margin-bottom 5em
+  &-image
+    display none
+    +from-width($sm)
+      display block
+      justify-self center
+      position relative
+    &-figure
+      &.is-absolute
+        +from-width($sm)
+          position absolute
+          top -65px
+          left -150px
   &-row
     display grid
     grid-gap 1em

@@ -301,6 +301,46 @@ const esMessages = () => {
     ThirdMonth: 'Third month',
     StakingHowWorksTitle: 'How works?',
     StakingWorkflowTitle: 'The workflow of Cold Staking:',
+    WorkflowFirstStep: `
+      After CLO owner has deposited coins into the Staking Contract the funds
+      are locked for a certain period of time (approximately 1 month).
+    `,
+    WorkflowSecondStep: `
+      The Cold Staker can not access their funds during the locking period.
+    `,
+    WorkflowThirdStep: `
+      The longer a staker is “staking”, the higher the reward is.
+    `,
+    WorkflowFourthStep: `
+      After the period of locking has passed, a Cold Staker has two options:
+      (1) claim the reward and continue staking, thus lock their funds for
+      1 month again, or (2) claim the reward and withdraw entire stake.
+    `,
+    WorkflowFifthStep: `
+      If a staker is inactive for a certain period of time (1 year) then
+      they are considered to be inactive and are disposed from the staking
+      contract. Inactive stake is paid back to the stakers address.
+      Staking reward is not paid for inactive stakers.
+    `,
+    WorkflowSixthStep: `
+      Each staker can independently claim their reward at any time after the
+      locking period. The staking reward depends on the amount of CLO that
+      are currently in the Cold Staking Contract. As a result, the reward of
+      each staker depend on other stakers claims.
+    `,
+    WorkflowSeventhStep: `
+      There is no minimum staking threshold.
+    `,
+    WorkflowEighthStep: `
+      A Cold Staker can only stake with their deposit address. There is no
+      possibility to point rewards into someone else's address  or grant someone
+      a permission to claim the reward on your behalf.
+    `,
+    WorkflowNinethStep: `
+      A Cold Staker does not need to run a node to stake. They only need to
+      invoke the staking contract twice: make a deposit and claim the reward.
+      The ClassicEtherWallet is sufficient for this procedure.
+    `,
   };
 };
 

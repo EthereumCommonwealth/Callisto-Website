@@ -14,10 +14,18 @@ const StakingDescription = ({ intl }) => (
               <FormattedMessage id='StakingDescriptionWhatIsText' />
             </p>
           </div>
-          <div />
+          <div className='StakingDescription-image'>
+            <figure className='StakingDescription-image-figure'>
+              <img src='/image/cold-staking/what-is.svg' alt='What is Cold Staking'/>
+            </figure>
+          </div>
         </div>
         <div className='StakingDescription-row right-row'>
-          <div />
+          <div className='StakingDescription-image'>
+            <figure className='StakingDescription-image-figure is-absolute'>
+              <img src='/image/cold-staking/earn-money.svg' alt='Earn money with Cold Staking'/>
+            </figure>
+          </div>
           <div className='StakingDescription-row-info'>
             <h3 className='StakingDescription-row-info-title'>
               <FormattedMessage id='StakingDescriptionMoneyTitle' />
