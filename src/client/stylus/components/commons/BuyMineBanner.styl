@@ -1,0 +1,32 @@
+.BuyMineBanner
+  padding 35px 0
+  background-color #FFF
+  position relative
+  +from-width($sm)
+    padding 70px 0
+  &:before
+    content ''
+    position absolute
+    top 0
+    border-top solid 15px $white
+    border-right solid 15px transparent
+    border-bottom solid 15px transparent
+    border-left solid 15px transparent
+    left 48.5%
+    +from-width($sm)
+      border-top solid 25px $white
+      border-right solid 25px transparent
+      border-bottom solid 25px transparent
+      border-left solid 25px transparent
+      left 48.5%
+  &-btns
+    display grid
+    justify-items center
+    grid-gap 1em
+    +from-width($sm)
+      grid-template-columns 1fr 1fr
+      max-width 550px
+      margin 0 auto
+    .btn
+      +from-width($sm)
+        padding .75em 4em

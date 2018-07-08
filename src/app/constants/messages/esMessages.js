@@ -348,6 +348,8 @@ const esMessages = () => {
     StakingLongStoryInvoke: `
       Invoke a withdrawal function of the Staking Contract to earn the reward
     `,
+    BuySome: 'Buy some',
+    MineSome: 'Mine some',
   };
 };
 

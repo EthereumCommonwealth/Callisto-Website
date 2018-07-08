@@ -2,6 +2,7 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
+import Newsletter from '../components/commons/Newsletter';
 import Hero from '../components/Home/Hero';
 import InfoContent from '../components/Home/InfoContent';
 import Roadmap from '../components/Home/Roadmap';
@@ -12,7 +13,6 @@ import MiningPools from '../components/Home/MiningPools';
 import Team from '../components/Home/Team';
 import BlogOverview from '../components/Home/BlogOverview';
 import Community from '../components/Home/Community';
-import Newsletter from '../components/Home/Newsletter';
 import Footer from '../components/commons/Footer';
 
 const Home = ({ match }) => {
