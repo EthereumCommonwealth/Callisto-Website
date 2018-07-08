@@ -350,6 +350,18 @@ const esMessages = () => {
     `,
     BuySome: 'Buy some',
     MineSome: 'Mine some',
+    FinantialHeroTitle: 'Financial Report',
+    FinantialHeroDescription: `
+      The Callisto development team adheres to a policy of complete financial
+      transparency. After planned Callisto hardfork No. 2 (11 November 2019 )
+      cold stakers will be allowed to participate in proposal submitting and
+      proposal voting. A development proposal that has been approved by cold
+      stakers voting will receive funding.
+      <br />
+      <br />
+      The Callisto team and the Official Smart-contract Auditing Department will
+      operate through proposal submitting at this stage.
+    `,
   };
 };
 
