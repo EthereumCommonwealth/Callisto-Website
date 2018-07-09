@@ -46,7 +46,7 @@ class Footer extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'FooterBlog' }),
-        url: '/blog',
+        url: '/blog/',
         type: 'router',
       },
       {
@@ -56,7 +56,7 @@ class Footer extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'FooterFAQ' }),
-        url: 'faq',
+        url: '/faq/',
         type: 'router',
       },
       {
