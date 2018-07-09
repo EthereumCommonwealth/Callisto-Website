@@ -362,6 +362,8 @@ const enMessages = () => {
       The Callisto team and the Official Smart-contract Auditing Department will
       operate through proposal submitting at this stage.
     `,
+    FinantialTableTitle: 'Callisto Treasury Financial Report',
+    FinantialTableWalletAddress: 'Wallet address:',
   };
 };
 
