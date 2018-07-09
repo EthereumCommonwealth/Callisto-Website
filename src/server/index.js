@@ -130,11 +130,15 @@ app.get('/smart-contract/', prefetchData);
 app.get('/cold-staking/', prefetchData);
 app.get('/finantial-report/', prefetchData);
 app.get('/blog/', prefetchData);
+app.get('/faq/', prefetchData);
+app.get('/community-guidlines/', prefetchData);
 app.get('/:lang(es|en|id|ru)/', prefetchData);
+app.get('/:lang(es|en|id|ru)/faq/', prefetchData);
 app.get('/:lang(es|en|id|ru)/blog/', prefetchData);
 app.get('/:lang(es|en|id|ru)/cold-staking/', prefetchData);
 app.get('/:lang(es|en|id|ru)/smart-contract/', prefetchData);
 app.get('/:lang(es|en|id|ru)/finantial-report/', prefetchData);
+app.get('/:lang(es|en|id|ru)/community-guidlines/', prefetchData);
 app.get('*', prefetchData);
 
 function handleRender(req, res, initialState) {

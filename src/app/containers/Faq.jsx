@@ -4,12 +4,12 @@ import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
 import Footer from '../components/commons/Footer';
 
-const Blog = ({ match }) => {
+const Faq = ({ match }) => {
   return (
-    <Layout className='Blog' match={match}>
+    <Layout className='Faq' match={match}>
       <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <div className='container'>
-        Blog Page
+        Faq Page
       </div>
       <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />
     </Layout>
@@ -17,4 +17,4 @@ const Blog = ({ match }) => {
 
 }
 
-export default hot(module)(Blog);
+export default hot(module)(Faq);
