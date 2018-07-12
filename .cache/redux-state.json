@@ -678,12 +678,12 @@
       },
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-07-02T17:46:50.186Z",
+      "buildTime": "2018-07-12T19:46:53.211Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "84938301132d4678a78e12dc5fc8813e",
+        "contentDigest": "191dda11a21a54f53d2a84edc18110e0",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -704,7 +704,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "176dd294389aa03cd4fba165587e6b32",
+        "contentDigest": "79e82266c3dc2833b19fe94f45e9a50c",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }

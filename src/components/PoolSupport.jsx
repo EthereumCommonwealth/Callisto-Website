@@ -120,6 +120,14 @@ const PoolSupport = () => (
             href="http://pool.baikalmine.com/en/clo/"
           />
         </div>
+        <div className="PoolSupport-list-element">
+          <span>pplns.io</span>
+          <a
+            className="PoolSupport-list-element-anchor"
+            target="_blank"
+            href="pplns.io"
+          />
+        </div>
       </div>
     </div>
   </Element>
