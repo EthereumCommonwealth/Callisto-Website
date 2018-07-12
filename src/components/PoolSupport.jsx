@@ -125,7 +125,7 @@ const PoolSupport = () => (
           <a
             className="PoolSupport-list-element-anchor"
             target="_blank"
-            href="pplns.io"
+            href="https://pplns.io/"
           />
         </div>
       </div>
