@@ -18,6 +18,7 @@ const WalletsContent = ({ intl }) => (
           options={[
             { name: 'Geth', url: '/' },
             { name: 'Parity', url: '/' },
+            { name: 'Guarda', url: 'https://guarda.co/desktop/' },
           ]}
         />
         <SingleWallet
@@ -25,7 +26,7 @@ const WalletsContent = ({ intl }) => (
           title='OSX'
           options={[
             { name: 'Geth', url: '/' },
-            { name: 'Parity', url: '/' },
+            { name: 'Guarda', url: 'https://guarda.co/desktop/' },
           ]}
         />
         <SingleWallet
@@ -34,6 +35,7 @@ const WalletsContent = ({ intl }) => (
           options={[
             { name: 'Geth', url: '/' },
             { name: 'Parity', url: '/' },
+            { name: 'Guarda', url: 'https://guarda.co/desktop/' },
           ]}
         />
         <SingleWallet

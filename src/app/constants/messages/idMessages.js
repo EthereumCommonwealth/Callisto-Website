@@ -364,6 +364,32 @@ const idMessages = () => {
     `,
     FinantialTableTitle: 'Callisto Treasury Financial Report',
     FinantialTableWalletAddress: 'Wallet address:',
+    AirdropHeroTitle: 'Callisto Airdrop',
+    AirdropHeroDescription: `
+      What is Callisto Airdrop?
+      <br />
+      <br />
+      Callisto Network (CLO) airdrop is method to airdrop/give away CLO to every
+      ETC holder. We has been take a snapshot of every ETC holder at ETC Block
+      5.500.000 ( 5 March 2018). The source code and the result can be found here.
+    `,
+    AirdropHeroSecondDescription: `
+      Callisto Mainnet was succesfully launched on April, 15, 2018.
+    `,
+    AirdropDescriptionText: `
+      At Callisto Network Mainnet Launch, in 15 April 2018, We has been
+      successfully distributed CLO to every address from snapshot result.
+      Each of the ETC holders got CLO with 1:1 ratio.
+      <br /> <br />
+      For everyone who holds their ETC at exchange, will be credited CLO when
+      that exchanges listed/support CLO withdrawl, deposit and trading. As of
+      now, CLO listed in some exchange that can be found later in this page.
+      <br /> <br />
+      If you were holding  ETC coins on exchange BEFORE snapshot, ask your
+      exchange if they supported CLO airdrop.
+      <br /> <br />
+      If you was holding ETC on a wallet, check this  guide on our blog.
+    `,
   };
 };
 

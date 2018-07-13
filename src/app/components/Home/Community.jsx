@@ -62,7 +62,7 @@ const Community = ({ intl }) => (
         </a>
         <a
           className='Community-list-element'
-          href='/'
+          href='https://www.linkedin.com/company/callisto-network/  '
           target='_blank'
         >
           <i className='fab fa-linkedin-in' />

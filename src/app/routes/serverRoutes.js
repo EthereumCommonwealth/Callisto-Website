@@ -3,6 +3,7 @@ import ColdStaking from '../containers/ColdStaking';
 import SmartContract from '../containers/SmartContract';
 import FinantialReport from '../containers/FinantialReport';
 import Blog from '../containers/Blog';
+import Airdrop from '../containers/Airdrop';
 import Faq from '../containers/Faq';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
 import Notfound from '../containers/NotFound';
@@ -39,6 +40,11 @@ const routes = [
     component: Blog,
   },
   {
+    path: '/airdrop/',
+    exact: true,
+    component: Airdrop,
+  },
+  {
     path: '/community-guidlines/',
     exact: true,
     component: CommunityGuidlines,
@@ -72,6 +78,11 @@ const routes = [
     path: '/:lang(es|en|id|ru)/blog/',
     exact: true,
     component: Blog,
+  },
+  {
+    path: '/:lang(es|en|id|ru)/airdrop/',
+    exact: true,
+    component: Airdrop,
   },
   {
     path: '/:lang(es|en|id|ru)/community-guidlines/',

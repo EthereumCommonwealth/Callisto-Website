@@ -24,7 +24,7 @@ const SmartHero = ({ intl }) => (
             <FormattedMessage id='SmartHeroAudit' />
           </a>
           <a
-            href='https://whitepaper.callisto.network/'
+            href='https://github.com/EthereumCommonwealth/Proposals/issues/2/'
             target='_blank'
             className='btn btn-transparent-green'
           >

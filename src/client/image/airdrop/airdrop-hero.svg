@@ -1,0 +1,19 @@
+<svg width="585" height="398" viewBox="0 0 585 398" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0L186.995 61.7437L248.739 248.739L62.1815 186.557L0 0Z" transform="translate(0 89.0742) scale(1.0009 0.999102) rotate(-45)" fill="#F2F6F6"/>
+<path d="M0 0L120.898 39.9191L160.817 160.817L40.2022 120.615L0 0Z" transform="translate(357.367 175.871) scale(1.0009 0.999102) rotate(-45)" fill="#F2F6F6"/>
+<path d="M0 0L118.814 39.231L158.045 158.045L39.5091 118.535L0 0Z" transform="translate(359.639 127.286) scale(1.00035 0.999651) rotate(-45)" fill="#34C88A"/>
+<path d="M7.08604 0.000106638L0 7.08595L39.3911 125.874L46.8609 118.404L7.08604 0.000106638Z" transform="translate(354.58 132.295) scale(1.00035 0.999651) rotate(-45)" fill="#163F59"/>
+<path d="M0 0L120.898 39.9191L160.817 160.817L40.2022 120.615L0 0Z" transform="translate(195.934 340.387) scale(1.0009 0.999102) rotate(-45)" fill="#F2F6F6"/>
+<path d="M0 209.497L209.498 9.48973e-05L297.83 88.3325L88.3322 297.829L22.0819 275.747L0 209.497Z" transform="translate(99.0742 190.408) scale(1.0009 0.999102) rotate(-45)" fill="url(#paint0_linear)"/>
+<path d="M2.78223 0L5.19172 4.17011H0.372749L2.78223 0Z" transform="matrix(0.866361 -0.499418 0.500583 0.865689 282.879 296.321)" fill="white" fill-opacity="0.6"/>
+<path d="M3.33868 0L6.23006 5.00413H0.447298L3.33868 0Z" transform="matrix(0.866361 -0.499418 0.500583 0.865689 327.307 233.968)" fill="white" fill-opacity="0.6"/>
+<path d="M2.77899 0L5.18567 4.17497H0.372314L2.77899 0Z" transform="translate(282.777 202.259) rotate(-90)" fill="white" fill-opacity="0.6"/>
+<path d="M6.08942 0L11.363 9.12704H0.815828L6.08942 0Z" transform="matrix(0.866361 -0.499418 0.500583 0.865689 303.928 326.23)" fill="white" fill-opacity="0.6"/>
+<path d="M6.08942 0L11.363 9.12704H0.815828L6.08942 0Z" transform="matrix(-0.866361 0.499418 -0.500583 -0.865689 310.551 265.099)" fill="white" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(256.472 -256.472 252.202 252.202 -142.305 283.87)">
+<stop stop-color="#FF876C" stop-opacity="0.801329"/>
+<stop offset="1" stop-color="#FF876C" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

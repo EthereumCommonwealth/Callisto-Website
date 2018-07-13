@@ -270,6 +270,46 @@ const getHeadersInfo = (target) => {
 
     // END FINANTIAL REPORT
 
+    // =================== //
+
+    // AIRDROP
+
+    case '/airdrop/':
+    case '/finantialairdrop':
+    case '/en/airdrop':
+    case '/en/airdrop/':
+      return {
+        title: messages.en.contractsTitle,
+        description: messages.en.contractsDescription,
+        url: 'https://callisto.network/finantial-report/',
+      }
+
+    case '/es/airdrop':
+    case '/es/airdrop/':
+      return {
+        title: messages.es.contractsTitle,
+        description: messages.es.contractsDescription,
+        url: 'https://callisto.network/es/finantial-report/',
+      }
+
+    case '/ru/airdrop':
+    case '/ru/airdrop/':
+      return {
+        title: messages.ru.contractsTitle,
+        description: messages.ru.contractsDescription,
+        url: 'https://callisto.network/ru/finantial-report/',
+      }
+
+    case '/id/airdrop':
+    case '/id/airdrop/':
+      return {
+        title: messages.id.contractsTitle,
+        description: messages.id.contractsDescription,
+        url: 'https://callisto.network/id/finantial-report/',
+      }
+
+    // END AIRDROP
+
     default:
       return {
         title: messages.en.homeTitle,
