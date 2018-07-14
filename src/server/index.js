@@ -169,7 +169,7 @@ app.post('/send-email', (req, res) => {
     to: sendTo,
     subject: 'Audit Request',
     html: `
-      <p>A new Audit Request bas been received.<p>
+      <p>A new Audit Request has been received.<p>
       <p>Description: </p>
       <p>${req.body.description}</p>
       <p>Source code: <a href='${req.body.sourceCode}' target='_blank'> Source code Link </a></p>
