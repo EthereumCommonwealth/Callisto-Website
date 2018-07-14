@@ -28,6 +28,36 @@ class Layout extends PureComponent {
         delay: 100,
         smooth: true,
       });
+    } else if (document.location.search === '?about') {
+      scroller.scrollTo('about', {
+        duration: 500,
+        delay: 100,
+        smooth: true,
+      });
+    } else if (document.location.search === '?roadmap') {
+      scroller.scrollTo('roadmap', {
+        duration: 500,
+        delay: 100,
+        smooth: true,
+      });
+    } else if (document.location.search === '?mining') {
+      scroller.scrollTo('mining', {
+        duration: 500,
+        delay: 100,
+        smooth: true,
+      });
+    } else if (document.location.search === '?wallets') {
+      scroller.scrollTo('wallets', {
+        duration: 500,
+        delay: 100,
+        smooth: true,
+      });
+    } else if (document.location.search === '?team') {
+      scroller.scrollTo('team', {
+        duration: 500,
+        delay: 100,
+        smooth: true,
+      });
     } else {
       animateScroll.scrollToTop({ duration: 300 });
     }
