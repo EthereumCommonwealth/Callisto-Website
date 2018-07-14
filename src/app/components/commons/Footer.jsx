@@ -30,8 +30,8 @@ class Footer extends PureComponent {
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'FooterDocumentation' }),
-        url: 'documentation',
+        title: this.props.intl.formatMessage({ id: 'OfficiallyChecker' }),
+        url: 'https://github.com/EthereumCommonwealth/officiality.checker',
         type: 'anchor',
       },
     ];
@@ -63,6 +63,11 @@ class Footer extends PureComponent {
         title: this.props.intl.formatMessage({ id: 'FooterContact' }),
         url: 'contact',
         type: 'anchor'
+      },
+      {
+        title: this.props.intl.formatMessage({ id: 'FooterDocumentation' }),
+        url: 'documentation',
+        type: 'anchor',
       },
     ];
   }

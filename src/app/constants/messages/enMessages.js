@@ -27,6 +27,7 @@ const enMessages = () => {
     FooterBrandPolicy: 'Brand Policy',
     FooterPrivacyPolicy: 'Privacy Policy',
     FooterTerms: 'Terms of Service',
+    OfficiallyChecker: 'Officially Checker',
     HeroTitle: 'Cryptocurrency  <br /> and Free Smart-Contract Security Audits',
     HeroDescription: `
       Callisto Network is a blockchain platform with its own cryptocurrency (CLO)
