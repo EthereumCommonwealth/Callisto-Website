@@ -4,7 +4,7 @@ import { injectIntl } from 'react-intl';
 import SectionHeading from '../commons/SectionHeading';
 
 const MiningPools = ({ intl }) => (
-  <Element className='MiningPools container' name='pool'>
+  <Element className='MiningPools container' name='pool' id='pool'>
     <div className='MiningPools-content'>
       <SectionHeading
         title={intl.formatMessage({ id: 'CallistoMiningPool' })}

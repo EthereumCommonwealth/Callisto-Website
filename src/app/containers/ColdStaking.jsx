@@ -21,7 +21,9 @@ const ColdStaking = ({ match }) => {
       <StakingHowWorks />
       <StakingWorkflow />
       <StakingLongStory />
-      <BuyMineBanner />
+      <BuyMineBanner
+        lang={match.params && match.params.lang ? match.params.lang : 'en'}
+      />
       <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />
     </Layout>
   );

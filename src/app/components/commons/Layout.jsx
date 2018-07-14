@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, addLocaleData } from 'react-intl';
+import { scroller, animateScroll } from 'react-scroll';
 import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
 import es from 'react-intl/locale-data/es';
@@ -13,6 +14,24 @@ import idMessages from '../../constants/messages/idMessages';
 addLocaleData([...en, ...ru, ...es, ...id]);
 
 class Layout extends PureComponent {
+
+  componentDidMount() {
+    if (document.location.search === '?pool') {
+      scroller.scrollTo('pool', {
+        duration: 500,
+        delay: 100,
+        smooth: true,
+      });
+    } else if (document.location.search === '?exchanges') {
+      scroller.scrollTo('exchanges', {
+        duration: 500,
+        delay: 100,
+        smooth: true,
+      });
+    } else {
+      animateScroll.scrollToTop({ duration: 300 });
+    }
+  }
 
   getMessages = (lang) => {
     switch (lang) {

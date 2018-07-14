@@ -4,7 +4,6 @@ import { Router } from 'react-router';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import { createBrowserHistory } from 'history';
 import rootReducer from './reducers/rootReducer';
 import routes from './routes/';
@@ -19,12 +18,11 @@ if (typeof window !== 'undefined') {
 
   delete window.__PRELOADED_STATE__
 
-  const routeMiddleware = routerMiddleware(createBrowserHistory());
-
   const store = createStore(rootReducer, preloadedState,
-    composeEnhancers(applyMiddleware(routeMiddleware, thunk)),
+    composeEnhancers(applyMiddleware(thunk)),
   );
-  const history = syncHistoryWithStore(createBrowserHistory(), store);
+
+  const history = createBrowserHistory();
 
   hydrate(
     <Provider store={store}>
