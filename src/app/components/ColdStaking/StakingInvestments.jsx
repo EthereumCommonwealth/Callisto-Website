@@ -107,6 +107,13 @@ class StakingInvestments extends Component {
                 <div className='StakingInvestments-table-tow-text'>3645,39</div>
                 <div className='StakingInvestments-table-tow-text'>190%</div>
               </div>
+              <div className='StakingInvestments-table-row'>
+                <div className='StakingInvestments-table-tow-text'>
+                  <FormattedMessage id='FourthMonth' />
+                </div>
+                <div className='StakingInvestments-table-tow-text'>3645,39</div>
+                <div className='StakingInvestments-table-tow-text'>190%</div>
+              </div>
             </div>
             <p className='StakingInvestments-description'>
               <FormattedMessage id='StakingInvestmentsBottomText'/>

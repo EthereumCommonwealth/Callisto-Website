@@ -62,7 +62,7 @@ const Team = ({ intl }) => (
         <TeamMember
           avatar='/image/avatars/sampol_avatar.jpg'
           name='Carlos Sampol'
-          position='Development Team - React.js Developer'
+          position='Head of Web Development'
           socialNetworks={[
             {
               prefix: 'fab fa-twitter',

@@ -303,6 +303,7 @@ const esMessages = () => {
     FirstMonth: 'First month',
     SecondMonth: 'Second month',
     ThirdMonth: 'Third month',
+    FourthMonth: 'Fourth month',
     StakingHowWorksTitle: 'How works?',
     StakingWorkflowTitle: 'The workflow of Cold Staking:',
     WorkflowFirstStep: `

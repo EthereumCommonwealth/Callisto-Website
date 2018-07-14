@@ -13,13 +13,14 @@ class Header extends PureComponent {
 
   handleMenuOpen = event => {
     event.preventDefault();
-    this.setState({ mobileMenuOpened: !this.state.mobileMenuOpened }, () => {
-      if (this.state.mobileMenuOpened) {
-        document.body.classList = 'noScroll';
-      } else {
-        document.body.classList = '';
-      }
-    });
+    this.setState({ mobileMenuOpened: !this.state.mobileMenuOpened });
+    // this.setState({ mobileMenuOpened: !this.state.mobileMenuOpened }, () => {
+    //   if (this.state.mobileMenuOpened) {
+    //     document.body.classList = 'noScroll';
+    //   } else {
+    //     document.body.classList = '';
+    //   }
+    // });
   }
 
   get menuElements() {
