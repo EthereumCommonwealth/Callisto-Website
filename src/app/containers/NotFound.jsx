@@ -11,8 +11,12 @@ const NotFound = ({ match }) => (
   <IntlProvider locale='en' messages={messages}>
     <div>
       <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
-      <div>
-        Not Found
+      <div className='container'>
+        <div className='NotFound'>
+          <h1>404</h1>
+          <h4>Page not found</h4>
+          <h5>Try from our <a href='/'>home page</a></h5>
+        </div>
       </div>
       <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />
     </div>
