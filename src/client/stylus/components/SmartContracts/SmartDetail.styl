@@ -64,7 +64,9 @@
             position absolute
             bottom -12px
             right 47%
+            display none
             +from-width($md)
+              display block
               bottom unset
               top 36px
               right -10px
@@ -72,7 +74,9 @@
             position absolute
             bottom -13px
             left 47.5%
+            display none
             +from-width($md)
+              display block
               left 50%
         &-triangle
           &-top
@@ -102,7 +106,9 @@
             position absolute
             top 40px
             left 7px
-            width 195px
+            width 170px
+            +from-width($xxl)
+              width 195px
             img
               width 100%
         &.arrow-up
@@ -112,7 +118,9 @@
             position absolute
             top -40px
             left 7px
-            width 195px
             transform rotateX(180deg)
+            width 170px
+            +from-width($xxl)
+              width 195px
             img
               width 100%

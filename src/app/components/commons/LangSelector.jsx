@@ -15,7 +15,6 @@ class LangSelector extends Component {
 
   setRouterPath(lang) {
     const { match } = this.props;
-    console.log(match.path);
     switch (match.path) {
       case '/cold-staking/':
         return `/${lang}/cold-staking/`
@@ -25,6 +24,8 @@ class LangSelector extends Component {
         return `/${lang}/finantial-report/`
       case '/blog/':
         return `/${lang}/blog/`
+      case '/airdrop/':
+        return `/${lang}/airdrop/`
       case '/faq/':
         return `/${lang}/faq/`
       case '/community-guidlines/':
@@ -39,6 +40,8 @@ class LangSelector extends Component {
         return `/${lang}/blog/`
       case '/:lang(es|en|id|ru)/faq/':
         return `/${lang}/faq/`
+      case '/:lang(es|en|id|ru)/airdrop/':
+        return `/${lang}/airdrop/`
       case '/:lang(es|en|id|ru)/community-guidlines/':
         return `/${lang}/community-guidlines/`
       default:
