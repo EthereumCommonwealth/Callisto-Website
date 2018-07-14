@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import Modal from 'react-responsive-modal';
+import axios from 'axios';
 
 class OrderAuditModal extends PureComponent {
   state = {
@@ -12,6 +13,28 @@ class OrderAuditModal extends PureComponent {
   onChange = event => {
     event.preventDefault();
     this.setState({ [event.target.name]: event.target.value });
+  }
+
+  sendMail = event => {
+    event.preventDefault();
+    axios.post('/send-email', {
+      description: this.state.description,
+      sourceCode: this.state.sourceCode,
+      email: this.state.email,
+      platform: this.state.platform,
+    })
+      .then((response) => {
+        this.setState({
+          description: '',
+          sourceCode: '',
+          email: '',
+          platform: '',
+        });
+        this.props.onClose();
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   render() {
@@ -28,7 +51,7 @@ class OrderAuditModal extends PureComponent {
         <h2 className='OrderAuditModal-title'>
           Audit Request
         </h2>
-        <form className='OrderAuditModal-form'>
+        <form className='OrderAuditModal-form' onSubmit={this.sendMail}>
           <h4 className='OrderAuditModal-form-title'>
             Audit Request
           </h4>

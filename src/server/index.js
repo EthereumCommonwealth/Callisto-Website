@@ -1,5 +1,7 @@
 import webpack from 'webpack';
 import fs from 'fs';
+import nodeMailer from 'nodemailer';
+import bodyParser from 'body-parser';
 import express from 'express';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
@@ -46,6 +48,9 @@ dotenv.config()
 const ENV = Env(process.env)
 const app = express()
 const port = process.env.PORT || 3000
+const email = process.env.EMAIL
+const pass = process.env.PASS
+const sendTo = process.env.SEND_TO
 
 if (ENV.isDevelopment()) {
   console.log('Loading development server configs')
@@ -78,6 +83,14 @@ if (ENV.isDevelopment()) {
 
 app.use(express.static(__dirname + '/public'));
 app.use(favicon(__dirname + '/public/favicon.png'));
+app.use(bodyParser.json());
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 const preparePosts = (posts) => {
   const elements = posts.map((elem) => {
@@ -141,6 +154,36 @@ app.get('/:lang(es|en|id|ru)/cold-staking/', prefetchData);
 app.get('/:lang(es|en|id|ru)/smart-contract/', prefetchData);
 app.get('/:lang(es|en|id|ru)/finantial-report/', prefetchData);
 app.get('/:lang(es|en|id|ru)/community-guidlines/', prefetchData);
+app.post('/send-email', (req, res) => {
+  const transporter = nodeMailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: email,
+      pass: pass,
+    },
+  });
+  const mailOptions = {
+    from: 'Callisto Website <hi@callisto.network.com>',
+    to: sendTo,
+    subject: 'Audit Request',
+    html: `
+      <p>A new Audit Request bas been received.<p>
+      <p>Description: </p>
+      <p>${req.body.description}</p>
+      <p>Source code: <a href='${req.body.sourceCode}' target='_blank'> Source code Link </a></p>
+      <p>Email: <strong>${req.body.email}</strong></p>
+      <p>Platform: <strong> ${req.body.platform} <strong/></p>
+    `
+  };
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) res.status(501).send(error)
+    res.status(200).send({
+      succes: true,
+    });
+  });
+});
 app.get('*', prefetchData);
 
 function handleRender(req, res, initialState) {
