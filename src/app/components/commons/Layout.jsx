@@ -16,43 +16,43 @@ addLocaleData([...en, ...ru, ...es, ...id]);
 class Layout extends PureComponent {
 
   componentDidMount() {
-    if (document.location.search === '?pool') {
+    if (document.location.hash === '#pool') {
       scroller.scrollTo('pool', {
         duration: 500,
         delay: 100,
         smooth: true,
       });
-    } else if (document.location.search === '?exchanges') {
+    } else if (document.location.hash === '#exchanges') {
       scroller.scrollTo('exchanges', {
         duration: 500,
         delay: 100,
         smooth: true,
       });
-    } else if (document.location.search === '?about') {
+    } else if (document.location.hash === '#about') {
       scroller.scrollTo('about', {
         duration: 500,
         delay: 100,
         smooth: true,
       });
-    } else if (document.location.search === '?roadmap') {
+    } else if (document.location.hash === '#roadmap') {
       scroller.scrollTo('roadmap', {
         duration: 500,
         delay: 100,
         smooth: true,
       });
-    } else if (document.location.search === '?mining') {
+    } else if (document.location.hash === '#mining') {
       scroller.scrollTo('mining', {
         duration: 500,
         delay: 100,
         smooth: true,
       });
-    } else if (document.location.search === '?wallets') {
+    } else if (document.location.hash === '#wallets') {
       scroller.scrollTo('wallets', {
         duration: 500,
         delay: 100,
         smooth: true,
       });
-    } else if (document.location.search === '?team') {
+    } else if (document.location.hash === '#team') {
       scroller.scrollTo('team', {
         duration: 500,
         delay: 100,

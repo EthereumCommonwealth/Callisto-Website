@@ -27,7 +27,7 @@ class Header extends PureComponent {
     return [
       {
         title: this.props.intl.formatMessage({ id: 'HeaderRoadmap' }),
-        url: !this.props.fromLanding ? '/?roadmap' : 'roadmap',
+        url: !this.props.fromLanding ? '/#roadmap' : 'roadmap',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
@@ -37,17 +37,17 @@ class Header extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'HeaderWallers' }),
-        url: !this.props.fromLanding ? '/?wallets' : 'wallets',
+        url: !this.props.fromLanding ? '/#wallets' : 'wallets',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'HeaderExchanges' }),
-        url: !this.props.fromLanding ? '/?exchanges' : 'exchanges',
+        url: !this.props.fromLanding ? '/#exchanges' : 'exchanges',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'HeaderMining' }),
-        url: !this.props.fromLanding ? '/?mining' : 'mining',
+        url: !this.props.fromLanding ? '/#mining' : 'mining',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
@@ -62,7 +62,7 @@ class Header extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'HeaderTeam' }),
-        url: !this.props.fromLanding ? '/?team' : 'team',
+        url: !this.props.fromLanding ? '/#team' : 'team',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
