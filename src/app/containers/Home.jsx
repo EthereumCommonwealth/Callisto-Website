@@ -33,7 +33,9 @@ const Home = ({ match }) => {
       <MiningPools />
       <Team />
       <BlogOverview />
-      <Community />
+      <Community
+        lang={match.params && match.params.lang ? match.params.lang : 'en'}
+      />
       <Newsletter />
       <Footer
         lang={match.params && match.params.lang ? match.params.lang : 'en'}
