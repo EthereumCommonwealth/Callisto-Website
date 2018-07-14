@@ -1,81 +1,131 @@
 const headMessages = () => {
   return {
     en: {
-      homeTitle: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
+      homeTitle: 'Callisto Network (CLO Coin) - Price, Charts, Market Cap - Official Site',
       homeDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
+        Callisto Network (CLO coin) is a platform, based on Ethereum protocol
+        with implementation of a self-sustained, self-governed, self-funded
+        blockchain ecosystem.
       `,
-      stakingTitle: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
+      stakingTitle: 'Cold Staking Callisto(CLO) Coins - What is Cold Staking? ',
       stakingDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
+        Cold Staking is a protocol that rewards long-term coin holders for
+        holding their CLO coins. Cold Staking is not related to PoS nor a
+        consensus mechanism.
+      `,
+      financialTitle: 'Callisto Network Financial Report - Official Site',
+      financialDescription: `
+        Callisto Network aims to full financial transparency. Check our financial
+        report below.
+      `,
+      airdropTitle: 'Callisto (CLO) Airdrop -  Claiming the CLO airdrop',
+      airdropDescription: `
+        What is Callisto Airdrop? Callisto Network (CLO) airdrop is method to
+        airdrop/give away CLO to every ETC holder on March, 5 2018.
       `,
       contractsTitle: `
-        Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts
+        Free Smart Contract Security Audits for ETH, ETC, EOS blockchains
         `,
       contractsDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
+        Full service security audit for Solidity Smart contracts and DApps.
+        Check the architecture of your smart contract, detect vulnerabilities,
+        and ensure full compliance with the business logic.
       `,
     },
     ru: {
-      homeTitle: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
+      homeTitle: 'Callisto Network (CLO Coin) - Price, Charts, Market Cap - Official Site',
       homeDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
+        Callisto Network (CLO coin) is a platform, based on Ethereum protocol
+        with implementation of a self-sustained, self-governed, self-funded
+        blockchain ecosystem.
       `,
-      stakingTitle: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
+      stakingTitle: 'Cold Staking Callisto(CLO) Coins - What is Cold Staking? ',
       stakingDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
+        Cold Staking is a protocol that rewards long-term coin holders for
+        holding their CLO coins. Cold Staking is not related to PoS nor a
+        consensus mechanism.
+      `,
+      financialTitle: 'Callisto Network Financial Report - Official Site',
+      financialDescription: `
+        Callisto Network aims to full financial transparency. Check our financial
+        report below.
+      `,
+      airdropTitle: 'Callisto (CLO) Airdrop -  Claiming the CLO airdrop',
+      airdropDescription: `
+        What is Callisto Airdrop? Callisto Network (CLO) airdrop is method to
+        airdrop/give away CLO to every ETC holder on March, 5 2018.
       `,
       contractsTitle: `
-        Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts
+        Free Smart Contract Security Audits for ETH, ETC, EOS blockchains
         `,
       contractsDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
+        Full service security audit for Solidity Smart contracts and DApps.
+        Check the architecture of your smart contract, detect vulnerabilities,
+        and ensure full compliance with the business logic.
       `,
     },
     id: {
-      homeTitle: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
+      homeTitle: 'Callisto Network (CLO Coin) - Price, Charts, Market Cap - Official Site',
       homeDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
+        Callisto Network (CLO coin) is a platform, based on Ethereum protocol
+        with implementation of a self-sustained, self-governed, self-funded
+        blockchain ecosystem.
       `,
-      stakingTitle: 'Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts',
+      stakingTitle: 'Cold Staking Callisto(CLO) Coins - What is Cold Staking? ',
       stakingDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
+        Cold Staking is a protocol that rewards long-term coin holders for
+        holding their CLO coins. Cold Staking is not related to PoS nor a
+        consensus mechanism.
+      `,
+      financialTitle: 'Callisto Network Financial Report - Official Site',
+      financialDescription: `
+        Callisto Network aims to full financial transparency. Check our financial
+        report below.
+      `,
+      airdropTitle: 'Callisto (CLO) Airdrop -  Claiming the CLO airdrop',
+      airdropDescription: `
+        What is Callisto Airdrop? Callisto Network (CLO) airdrop is method to
+        airdrop/give away CLO to every ETC holder on March, 5 2018.
       `,
       contractsTitle: `
-        Callisto Network: a Blockchain technology, Cryptocurrency and Smart-Contracts
+        Free Smart Contract Security Audits for ETH, ETC, EOS blockchains
         `,
       contractsDescription: `
-        Callisto Network is a blockchain platform with its own cryptocurrency
-        (CLO) that is based on Ethereum protocol
+        Full service security audit for Solidity Smart contracts and DApps.
+        Check the architecture of your smart contract, detect vulnerabilities,
+        and ensure full compliance with the business logic.
       `,
     },
     es: {
-      homeTitle: 'Callisto Network: Tecnología Blockchain, Criptomoneda y Contratos inteligentes',
+      homeTitle: 'Callisto Network (CLO Coin) - Price, Charts, Market Cap - Official Site',
       homeDescription: `
-        Callisto Network es una plataforma de blockchain con su propia Criptomoneda
-        (CLO) que esta basada en el protocolo Ethereum
+        Callisto Network (CLO coin) is a platform, based on Ethereum protocol
+        with implementation of a self-sustained, self-governed, self-funded
+        blockchain ecosystem.
       `,
-      stakingTitle: `
-        Callisto Network: Tecnología Blockchain, Criptomoneda y Contratos inteligentes
-      `,
+      stakingTitle: 'Cold Staking Callisto(CLO) Coins - What is Cold Staking? ',
       stakingDescription: `
-        Callisto Network es una plataforma de blockchain con su propia Criptomoneda
-        (CLO) que esta basada en el protocolo Ethereum
+        Cold Staking is a protocol that rewards long-term coin holders for
+        holding their CLO coins. Cold Staking is not related to PoS nor a
+        consensus mechanism.
+      `,
+      financialTitle: 'Callisto Network Financial Report - Official Site',
+      financialDescription: `
+        Callisto Network aims to full financial transparency. Check our financial
+        report below.
+      `,
+      airdropTitle: 'Callisto (CLO) Airdrop -  Claiming the CLO airdrop',
+      airdropDescription: `
+        What is Callisto Airdrop? Callisto Network (CLO) airdrop is method to
+        airdrop/give away CLO to every ETC holder on March, 5 2018.
       `,
       contractsTitle: `
-        Callisto Network: Tecnología Blockchain, Criptomoneda y Contratos inteligentes
-      `,
+        Free Smart Contract Security Audits for ETH, ETC, EOS blockchains
+        `,
       contractsDescription: `
-        Callisto Network es una plataforma de blockchain con su propia Criptomoneda
-        (CLO) que esta basada en el protocolo Ethereum
+        Full service security audit for Solidity Smart contracts and DApps.
+        Check the architecture of your smart contract, detect vulnerabilities,
+        and ensure full compliance with the business logic.
       `,
     },
   };

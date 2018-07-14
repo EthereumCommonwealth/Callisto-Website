@@ -9,7 +9,7 @@ class StakingInvestments extends Component {
   }
 
   state = {
-    percent: 45,
+    percent: 50,
     stakingDeposit: 10000,
   };
 

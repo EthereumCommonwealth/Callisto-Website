@@ -76,159 +76,41 @@ const getHeadersInfo = (target) => {
 
     // Smart Contracts Urls
 
-    case '/smart-contracts/':
-    case '/smart-contracts':
-    case '/en/smart-contracts':
-    case '/en/smart-contracts/':
+    case '/smart-contract/':
+    case '/smart-contract':
+    case '/en/smart-contract':
+    case '/en/smart-contract/':
       return {
         title: messages.en.contractsTitle,
         description: messages.en.contractsDescription,
-        url: 'https://callisto.network/smart-contracts/',
+        url: 'https://callisto.network/smart-contract/',
       }
 
-    case '/es/smart-contracts':
-    case '/es/smart-contracts/':
+    case '/es/smart-contract':
+    case '/es/smart-contract/':
       return {
         title: messages.es.contractsTitle,
         description: messages.es.contractsDescription,
-        url: 'https://callisto.network/es/smart-contracts/',
+        url: 'https://callisto.network/es/smart-contract/',
       }
 
-    case '/ru/smart-contracts':
-    case '/ru/smart-contracts/':
+    case '/ru/smart-contract':
+    case '/ru/smart-contract/':
       return {
         title: messages.ru.contractsTitle,
         description: messages.ru.contractsDescription,
-        url: 'https://callisto.network/ru/smart-contracts/',
+        url: 'https://callisto.network/ru/smart-contract/',
       }
 
-    case '/id/smart-contracts':
-    case '/id/smart-contracts/':
+    case '/id/smart-contract':
+    case '/id/smart-contract/':
       return {
         title: messages.id.contractsTitle,
         description: messages.id.contractsDescription,
-        url: 'https://callisto.network/id/smart-contracts/',
+        url: 'https://callisto.network/id/smart-contract/',
       }
 
     // END SMART CONTRACTS URLS
-
-    // =================== //
-
-    // FAQ URLS
-    case '/faq/':
-    case '/faq':
-    case '/en/faq':
-    case '/en/faq/':
-      return {
-        title: messages.en.contractsTitle,
-        description: messages.en.contractsDescription,
-        url: 'https://callisto.network/faq/',
-      }
-
-    case '/es/faq':
-    case '/es/faq/':
-      return {
-        title: messages.es.contractsTitle,
-        description: messages.es.contractsDescription,
-        url: 'https://callisto.network/es/faq/',
-      }
-
-    case '/ru/faq':
-    case '/ru/faq/':
-      return {
-        title: messages.ru.contractsTitle,
-        description: messages.ru.contractsDescription,
-        url: 'https://callisto.network/ru/faq/',
-      }
-
-    case '/id/faq':
-    case '/id/faq/':
-      return {
-        title: messages.id.contractsTitle,
-        description: messages.id.contractsDescription,
-        url: 'https://callisto.network/id/faq/',
-      }
-    // END FAQ URLS
-
-    // =================== //
-
-    // BLOG URLS
-
-    case '/blog/':
-    case '/blog':
-    case '/en/blog':
-    case '/en/blog/':
-      return {
-        title: messages.en.contractsTitle,
-        description: messages.en.contractsDescription,
-        url: 'https://callisto.network/blog/',
-      }
-
-    case '/es/blog':
-    case '/es/blog/':
-      return {
-        title: messages.es.contractsTitle,
-        description: messages.es.contractsDescription,
-        url: 'https://callisto.network/es/blog/',
-      }
-
-    case '/ru/blog':
-    case '/ru/blog/':
-      return {
-        title: messages.ru.contractsTitle,
-        description: messages.ru.contractsDescription,
-        url: 'https://callisto.network/ru/blog/',
-      }
-
-    case '/id/blog':
-    case '/id/blog/':
-      return {
-        title: messages.id.contractsTitle,
-        description: messages.id.contractsDescription,
-        url: 'https://callisto.network/id/blog/',
-      }
-
-    // END BLOG URLS
-
-    // =================== //
-
-    // COMMUNITY GUIDLINES
-
-    case '/community-guidlines/':
-    case '/community-guidlines':
-    case '/en/community-guidlines':
-    case '/en/community-guidlines/':
-      return {
-        title: messages.en.contractsTitle,
-        description: messages.en.contractsDescription,
-        url: 'https://callisto.network/community-guidlines/',
-      }
-
-    case '/es/community-guidlines':
-    case '/es/community-guidlines/':
-      return {
-        title: messages.es.contractsTitle,
-        description: messages.es.contractsDescription,
-        url: 'https://callisto.network/es/community-guidlines/',
-      }
-
-    case '/ru/community-guidlines':
-    case '/ru/community-guidlines/':
-      return {
-        title: messages.ru.contractsTitle,
-        description: messages.ru.contractsDescription,
-        url: 'https://callisto.network/ru/community-guidlines/',
-      }
-
-    case '/id/community-guidlines':
-    case '/id/community-guidlines/':
-      return {
-        title: messages.id.contractsTitle,
-        description: messages.id.contractsDescription,
-        url: 'https://callisto.network/id/community-guidlines/',
-      }
-
-    // END COMMUNITY GUIDLINES
 
     // =================== //
 
@@ -239,32 +121,32 @@ const getHeadersInfo = (target) => {
     case '/en/financial-report':
     case '/en/financial-report/':
       return {
-        title: messages.en.contractsTitle,
-        description: messages.en.contractsDescription,
+        title: messages.en.financialTitle,
+        description: messages.en.financialDescription,
         url: 'https://callisto.network/financial-report/',
       }
 
     case '/es/financial-report':
     case '/es/financial-report/':
       return {
-        title: messages.es.contractsTitle,
-        description: messages.es.contractsDescription,
+        title: messages.es.financialTitle,
+        description: messages.es.financialDescription,
         url: 'https://callisto.network/es/financial-report/',
       }
 
     case '/ru/financial-report':
     case '/ru/financial-report/':
       return {
-        title: messages.ru.contractsTitle,
-        description: messages.ru.contractsDescription,
+        title: messages.ru.financialTitle,
+        description: messages.ru.financialDescription,
         url: 'https://callisto.network/ru/financial-report/',
       }
 
     case '/id/financial-report':
     case '/id/financial-report/':
       return {
-        title: messages.id.contractsTitle,
-        description: messages.id.contractsDescription,
+        title: messages.id.financialTitle,
+        description: messages.id.financialDescription,
         url: 'https://callisto.network/id/financial-report/',
       }
 
@@ -279,32 +161,32 @@ const getHeadersInfo = (target) => {
     case '/en/airdrop':
     case '/en/airdrop/':
       return {
-        title: messages.en.contractsTitle,
-        description: messages.en.contractsDescription,
+        title: messages.en.airdropTitle,
+        description: messages.en.airdropDescription,
         url: 'https://callisto.network/airdrop/',
       }
 
     case '/es/airdrop':
     case '/es/airdrop/':
       return {
-        title: messages.es.contractsTitle,
-        description: messages.es.contractsDescription,
+        title: messages.es.airdropTitle,
+        description: messages.es.airdropDescription,
         url: 'https://callisto.network/es/airdrop/',
       }
 
     case '/ru/airdrop':
     case '/ru/airdrop/':
       return {
-        title: messages.ru.contractsTitle,
-        description: messages.ru.contractsDescription,
+        title: messages.ru.airdropTitle,
+        description: messages.ru.airdropDescription,
         url: 'https://callisto.network/ru/airdrop/',
       }
 
     case '/id/airdrop':
     case '/id/airdrop/':
       return {
-        title: messages.id.contractsTitle,
-        description: messages.id.contractsDescription,
+        title: messages.id.airdropTitle,
+        description: messages.id.airdropTitle,
         url: 'https://callisto.network/id/airdrop/',
       }
 
