@@ -32,7 +32,7 @@ class Header extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'Airdrop' }),
-        url: '/airdrop/',
+        url: this.props.lang === 'en' ? '/airdrop/' : `/${this.props.lang}/airdrop/`,
         type: 'router',
       },
       {
@@ -52,12 +52,12 @@ class Header extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'ColdStaking' }),
-        url: '/cold-staking/',
+        url: this.props.lang === 'en' ? '/cold-staking/' : `/${this.props.lang}/cold-staking/`,
         type: 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'Audit' }),
-        url: '/smart-contract/',
+        url: this.props.lang === 'en' ? '/smart-contract/' : `/${this.props.lang}/smart-contract/`,
         type: 'router',
       },
       {
@@ -67,7 +67,7 @@ class Header extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'Blog' }),
-        url: '/blog/',
+        url: this.props.lang === 'en' ? '/blog/' : `/${this.props.lang}/blog/`,
         type: 'router',
       },
     ];
