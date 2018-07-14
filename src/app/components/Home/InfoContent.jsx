@@ -67,7 +67,7 @@ const InfoContent = ({ lang }) => (
             <FormattedMessage id='InfoContentFinancialDescription' />
           </p>
           <Link
-            to={lang === 'en' ? '/finantial-report/' : `/${lang}/finantial-report/`}
+            to={lang === 'en' ? '/financial-report/' : `/${lang}/financial-report/`}
             className='btn btn-transparent-green'
           >
             <FormattedMessage id='FinancialReport' />

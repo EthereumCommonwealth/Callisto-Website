@@ -234,38 +234,38 @@ const getHeadersInfo = (target) => {
 
     // FINANTIAL REPORT
 
-    case '/finantial-report/':
-    case '/finantial-report':
-    case '/en/finantial-report':
-    case '/en/finantial-report/':
+    case '/financial-report/':
+    case '/financial-report':
+    case '/en/financial-report':
+    case '/en/financial-report/':
       return {
         title: messages.en.contractsTitle,
         description: messages.en.contractsDescription,
-        url: 'https://callisto.network/finantial-report/',
+        url: 'https://callisto.network/financial-report/',
       }
 
-    case '/es/finantial-report':
-    case '/es/finantial-report/':
+    case '/es/financial-report':
+    case '/es/financial-report/':
       return {
         title: messages.es.contractsTitle,
         description: messages.es.contractsDescription,
-        url: 'https://callisto.network/es/finantial-report/',
+        url: 'https://callisto.network/es/financial-report/',
       }
 
-    case '/ru/finantial-report':
-    case '/ru/finantial-report/':
+    case '/ru/financial-report':
+    case '/ru/financial-report/':
       return {
         title: messages.ru.contractsTitle,
         description: messages.ru.contractsDescription,
-        url: 'https://callisto.network/ru/finantial-report/',
+        url: 'https://callisto.network/ru/financial-report/',
       }
 
-    case '/id/finantial-report':
-    case '/id/finantial-report/':
+    case '/id/financial-report':
+    case '/id/financial-report/':
       return {
         title: messages.id.contractsTitle,
         description: messages.id.contractsDescription,
-        url: 'https://callisto.network/id/finantial-report/',
+        url: 'https://callisto.network/id/financial-report/',
       }
 
     // END FINANTIAL REPORT
@@ -275,13 +275,13 @@ const getHeadersInfo = (target) => {
     // AIRDROP
 
     case '/airdrop/':
-    case '/finantialairdrop':
+    case '/airdrop':
     case '/en/airdrop':
     case '/en/airdrop/':
       return {
         title: messages.en.contractsTitle,
         description: messages.en.contractsDescription,
-        url: 'https://callisto.network/finantial-report/',
+        url: 'https://callisto.network/airdrop/',
       }
 
     case '/es/airdrop':
@@ -289,7 +289,7 @@ const getHeadersInfo = (target) => {
       return {
         title: messages.es.contractsTitle,
         description: messages.es.contractsDescription,
-        url: 'https://callisto.network/es/finantial-report/',
+        url: 'https://callisto.network/es/airdrop/',
       }
 
     case '/ru/airdrop':
@@ -297,7 +297,7 @@ const getHeadersInfo = (target) => {
       return {
         title: messages.ru.contractsTitle,
         description: messages.ru.contractsDescription,
-        url: 'https://callisto.network/ru/finantial-report/',
+        url: 'https://callisto.network/ru/airdrop/',
       }
 
     case '/id/airdrop':
@@ -305,7 +305,7 @@ const getHeadersInfo = (target) => {
       return {
         title: messages.id.contractsTitle,
         description: messages.id.contractsDescription,
-        url: 'https://callisto.network/id/finantial-report/',
+        url: 'https://callisto.network/id/airdrop/',
       }
 
     // END AIRDROP

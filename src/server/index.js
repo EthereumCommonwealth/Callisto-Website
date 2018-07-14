@@ -141,7 +141,7 @@ app.get('*.css', function (req, res, next) {
 app.get('/', prefetchData);
 app.get('/smart-contract/', prefetchData);
 app.get('/cold-staking/', prefetchData);
-app.get('/finantial-report/', prefetchData);
+app.get('/financial-report/', prefetchData);
 app.get('/blog/', prefetchData);
 app.get('/airdrop/', prefetchData);
 app.get('/faq/', prefetchData);
@@ -152,7 +152,7 @@ app.get('/:lang(es|en|id|ru)/blog/', prefetchData);
 app.get('/:lang(es|en|id|ru)/airdrop/', prefetchData);
 app.get('/:lang(es|en|id|ru)/cold-staking/', prefetchData);
 app.get('/:lang(es|en|id|ru)/smart-contract/', prefetchData);
-app.get('/:lang(es|en|id|ru)/finantial-report/', prefetchData);
+app.get('/:lang(es|en|id|ru)/financial-report/', prefetchData);
 app.get('/:lang(es|en|id|ru)/community-guidlines/', prefetchData);
 app.post('/send-email', (req, res) => {
   const transporter = nodeMailer.createTransport({

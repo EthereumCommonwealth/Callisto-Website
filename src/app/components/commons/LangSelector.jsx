@@ -20,7 +20,7 @@ class LangSelector extends Component {
         return `/${lang}/cold-staking/`
       case '/smart-contract/':
         return `/${lang}/smart-contract/`
-      case '/finantial-report/':
+      case '/financial-report/':
         return `/${lang}/finantial-report/`
       case '/blog/':
         return `/${lang}/blog/`
@@ -34,7 +34,7 @@ class LangSelector extends Component {
         return `/${lang}/cold-staking/`
       case '/:lang(es|en|id|ru)/smart-contract/':
         return `/${lang}/smart-contract/`
-      case '/:lang(es|en|id|ru)/finantial-report/':
+      case '/:lang(es|en|id|ru)/financial-report/':
         return `/${lang}/finantial-report/`
       case '/:lang(es|en|id|ru)/blog/':
         return `/${lang}/blog/`

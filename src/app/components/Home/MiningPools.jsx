@@ -64,7 +64,7 @@ const MiningPools = ({ intl }) => (
           className='btn btn-transparent-green'
           target='_blank'
         >
-          clo.mole-pool.net
+          mole-pool.net
         </a>
         <a
           href='http://clona.ru/'
@@ -100,6 +100,20 @@ const MiningPools = ({ intl }) => (
           target='_blank'
         >
           clo.pool.sexy
+        </a>
+        <a
+          href='http://pool.baikalmine.com/en/clo/'
+          className='btn btn-transparent-green'
+          target='_blank'
+        >
+          pool.baikalmine.com
+        </a>
+        <a
+          href='https://pplns.io/'
+          className='btn btn-transparent-green'
+          target='_blank'
+        >
+          pplns.io
         </a>
       </div>
       <SectionHeading

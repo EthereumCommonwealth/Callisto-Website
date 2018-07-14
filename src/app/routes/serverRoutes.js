@@ -30,7 +30,7 @@ const routes = [
     component: SmartContract,
   },
   {
-    path: '/finantial-report/',
+    path: '/financial-report/',
     exact: true,
     component: FinantialReport,
   },
@@ -70,7 +70,7 @@ const routes = [
     component: SmartContract,
   },
   {
-    path: '/:lang(es|en|id|ru)/finantial-report/',
+    path: '/:lang(es|en|id|ru)/financial-report/',
     exact: true,
     component: FinantialReport,
   },

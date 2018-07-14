@@ -136,9 +136,9 @@ const Team = ({ intl }) => (
           }
         />
         <TeamMember
-          avatar='/image/avatars/dardan_avatar.png'
+          avatar='/image/avatars/dardan_avatar.jpg'
           name='Dardan Latifi'
-          position='Support & Marketing'
+          position='Head of Social Media'
           socialNetworks={[
             {
               prefix: 'fab fa-twitter',
@@ -189,7 +189,7 @@ const Team = ({ intl }) => (
         <TeamMember
           avatar='/image/avatars/tio_avatar.jpeg'
           name='Tio Toi'
-          position='Callisto Indonesia Ambassador'
+          position='Head of Community'
           socialNetworks={[
             {
               prefix: 'fab fa-telegram-plane',
