@@ -38,6 +38,7 @@
     "react-hot-loader": "^4.3.3",
     "react-intl": "^2.4.0",
     "react-redux": "^5.0.7",
+    "react-responsive-modal": "^3.1.0",
     "react-router": "^4.3.1",
     "react-router-config": "^1.0.0-beta.4",
     "react-router-dom": "^4.3.1",

@@ -519,6 +519,25 @@ const esMessages = () => {
       community guidelines,‭ ‬you‭ ‬should‭ ‬notify‭ ‬(email address here) ‬with‭ ‬a‭ ‬concise‭ ‬
       description‭ ‬of‭ ‬your‭ ‬grievance.
     `,
+    AuditRequest: 'Audit Request',
+    AuditRequestDescription: `
+      Briefly describe your smart-contract and its main purposes here
+    `,
+    SourceCode: 'Source Code',
+    AuditRequestSourceCodeLabel: `
+      Give a link to the source code of contracts
+    `,
+    DisclosurePolicy: 'Disclosure policy',
+    AuditRequestPolicyLabel: `
+      Do you want us to publish the report as it is or to notify you
+      privately in case of finding critical mistakes? Provide your email
+      if you want us to send you a notification
+    `,
+    Platform: 'Platform',
+    AuditRequestPlatformLabel: `
+      In which network will your contract be deployed?
+    `,
+    SendMessage: 'Send Message',
   };
 };
 

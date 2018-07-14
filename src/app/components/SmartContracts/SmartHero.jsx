@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, injectIntl } from 'react-intl';
 
-const SmartHero = ({ intl }) => (
+const SmartHero = ({ intl, openModal }) => (
   <div className='SmartHero'>
     <div className='SmartHero-content container'>
       <div className='SmartHero-content-left'>
@@ -17,7 +17,7 @@ const SmartHero = ({ intl }) => (
         </p>
         <div className='SmartHero-btns'>
           <a
-            href='https://whitepaper.callisto.network/'
+            onClick={openModal}
             target='_blank'
             className='btn btn-green'
           >
@@ -42,7 +42,8 @@ const SmartHero = ({ intl }) => (
 );
 
 SmartHero.propTypes = {
-  intl: PropTypes.object
+  intl: PropTypes.object,
+  openModal: PropTypes.func,
 };
 
 export default injectIntl(SmartHero);
