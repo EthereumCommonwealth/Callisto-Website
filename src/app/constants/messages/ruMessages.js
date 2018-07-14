@@ -8,6 +8,8 @@ const ruMessages = () => {
     HeaderMining: 'Mining',
     HeaderTeam: 'Team',
     HeaderBlog: 'Blog',
+    ColdStaking: 'Cold Staking',
+    Audit: 'Audit',
     FooterWallets: 'Wallets',
     FooterPool: 'Pool',
     FooterBlockExplorers: 'Block Explorers',
@@ -39,30 +41,31 @@ const ruMessages = () => {
     HeroWhitePaper: 'White Paper',
     InfoContentColdStakingTitle: 'First Cold Staking Coin',
     InfoContentColdStakingDescription: `
-      Callisto improvements can be applied to Ethereum Classic.
-      Callisto is NOT a testnet or a hardfork of Ethereum Classic.
-      Callisto Network is developed by Ethereum Commonwealth, one of three
-      ETC development teams.
+      Cold Staking is a protocol that rewards long-term coin holders for holding
+      their CLO coins. Cold Staking is not related to PoS nor a consensus
+      mechanism. Cold stakers receive passive income for holding their coins.
     `,
     ReadMore: 'Read more',
     InfoContentSecurityTitle: 'Free security audit and fine tuned audit process',
     InfoContentSecurityDescription: `
-      Callisto improvements can be applied to Ethereum Classic.
-      Callisto is NOT a testnet or a hardfork of Ethereum Classic.
-      Callisto Network is developed by Ethereum Commonwealth, one of three
-      ETC development teams.
+      Smart-contract hacking results in millions of dollars of lost revenue for
+      the whole ecosystem.  Callisto Network offer a completely free opportunity
+      for a professional smart-contract developer to audit their smart-contracts.
     `,
     InfoContentGovernanceTitle: 'On-chain governance system',
     InfoContentGovernanceDescription: `
-      Callisto improvements can be applied to Ethereum Classic.
-      Callisto is NOT a testnet or a hardfork of Ethereum Classic.
+      Callisto Network is a reference implementation of a self-sustained,
+      self-governed, self-funded blockchain ecosystem.
     `,
     InfoContentScalabilityTitle: 'Scalability of CLO and ETC networks',
     InfoContentScalabilityDescription: `
-      Callisto is NOT a testnet or a hardfork of Ethereum Classic.
+      Callisto aims to establish a secure and contribution-friendly environment
+      for further protocol development and improvements.
     `,
     InfoContentFinancialTitle: 'Financial transparency',
-    InfoContentFinancialDescription: 'Callisto Read our indicators',
+    InfoContentFinancialDescription: `
+      Callisto aims to full financial transparency. Check our financial report below.
+    `,
     FinancialReport: 'Financial report',
     Roadmap: 'Roadmap',
     RoadmapDescription: 'Lorem ipsum Callisto core implementation.',

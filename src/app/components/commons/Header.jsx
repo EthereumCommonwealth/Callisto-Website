@@ -25,11 +25,6 @@ class Header extends PureComponent {
   get menuElements() {
     return [
       {
-        title: this.props.intl.formatMessage({ id: 'HeaderAbout' }),
-        url: !this.props.fromLanding ? '/?about' : 'about',
-        type: this.props.fromLanding ? 'scroll' : 'router',
-      },
-      {
         title: this.props.intl.formatMessage({ id: 'HeaderRoadmap' }),
         url: !this.props.fromLanding ? '/?roadmap' : 'roadmap',
         type: this.props.fromLanding ? 'scroll' : 'router',
@@ -53,6 +48,16 @@ class Header extends PureComponent {
         title: this.props.intl.formatMessage({ id: 'HeaderMining' }),
         url: !this.props.fromLanding ? '/?mining' : 'mining',
         type: this.props.fromLanding ? 'scroll' : 'router',
+      },
+      {
+        title: this.props.intl.formatMessage({ id: 'ColdStaking' }),
+        url: '/cold-staking/',
+        type: 'router',
+      },
+      {
+        title: this.props.intl.formatMessage({ id: 'Audit' }),
+        url: '/smart-contract/',
+        type: 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'HeaderTeam' }),
