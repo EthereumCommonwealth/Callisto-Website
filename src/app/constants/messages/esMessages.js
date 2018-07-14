@@ -390,6 +390,90 @@ const esMessages = () => {
       <br /> <br />
       If you was holding ETC on a wallet, check this  guide on our blog.
     `,
+    GuidlineHeadTitle: 'Community Guidelines',
+    GuidlineHeadDescription: `
+      The Callisto Network Community is dedicated to providing a harassment-free
+      space. We do not tolerate harassment of participants in any form. The
+      guidelines below apply to all Callisto Network community spaces,
+      including but not limited to: Telegrams, Discord, Twitter, GitHub and
+      Facebook. This applies to all community members, including Callisto Network
+      development foundation members, and is also applicable in one-on-one
+      communication that pertains to community business. The community leaders
+      can remove anyone who fails to comply with these guidelines, at their own
+      discretion.
+      <br /> <br />
+      Please be aware that some Callisto Network spaces may have an additional
+      rule set in place. These rules will be readily available for viewing and
+      it is the responsibility of the participants to read and abide by them.
+    `,
+    GuidlineHeadCTA: 'Reporting contact',
+    GuidlineHeadBehavior: 'Expected‭ ‬Behavior',
+    Behavior1: `
+      Participate‭ ‬in‭ ‬an‭ ‬authentic‭ ‬and‭ ‬active‭ ‬way.‭ ‬In‭ ‬doing‭ ‬so,‭ ‬you‭ ‬contribute‭ ‬to‭ ‬
+      the‭ ‬health‭ ‬and‭ ‬longevity‭ ‬of‭ ‬this‭ ‬community.
+    `,
+    Behavior2: `
+      Exercise‭ ‬consideration‭ ‬and‭ ‬respect‭ ‬in‭ ‬your‭ ‬speech‭ ‬and‭ ‬actions. Attempt‭
+      ‬collaboration‭ ‬before‭ ‬conflict.
+    `,
+    Behavior3: `
+      Refrain‭ ‬from‭ ‬demeaning,‭ ‬discriminatory,‭ ‬or‭ ‬harassing‭ ‬behavior‭ ‬and‭ ‬speech.
+    `,
+    Behavior4: `
+      Be‭ ‬mindful‭ ‬of‭ ‬your‭ ‬ ‬fellow‭ ‬participants.‭ ‬Alert‭ ‬community‭ ‬leaders‭ ‬if‭ ‬you‭ ‬
+      notice‭  ‬violations‭ ‬of‭ these community guidelines.
+    `,
+    Behavior5: `
+      As things said in the community can have a  impact on the financial status
+      of members, if you have a serious issue please post once about it and
+      request a private conversation with an administrator. After your discussion
+      the administrator will summarize the resolution, rather than causing
+      unnecessary panic.
+    `,
+    Behavior6: `
+      Aside from clearly defined groups, all communication on Callisto Network
+      spaces is English. Any messages posted in a language other than the
+      language of the space will be deleted.
+    `,
+    GuidlineHeadBehaviorSubtitle: `
+      As this is a harassment-free space, the following list are some things
+      that should never be seen in the community.
+    `,
+    GuidlineBullet1: 'Threats of violence',
+    GuidlineBullet2: 'Deliberate intimidation',
+    GuidlineBullet3: 'Stalking',
+    GuidlineBullet4: `
+      Harassing photography or recording, including logging online activity for
+      harassment purposes
+    `,
+    GuidlineBullet5: `
+      Incitement of violence towards any individual, including encouraging a
+      person to commit suicide or to engage in self-harm
+    `,
+    GuidlineBullet6: `
+      Hate speech (Offensive comments related to race, ethnicity, nationality,
+      gender, sexual orientation, language group, religion, disability, mental
+      illness, physical appearance)
+    `,
+    GuidlineBullet7: 'Excessive profanity',
+    GuidlineBullet8: 'NSFW content',
+    GuidlineBullet9: 'Ref-links',
+    GuidlineBullet10: 'Spam',
+    GuidlineBullet11: 'Pornograpgy (Including links)',
+    GuidlineBullet12: 'Sending any form of malware',
+    GuidlineBullet13: `
+      Deliberate “outing” of any aspect of a person’s identity without their
+      consent, except as necessary to protect vulnerable people from intentional abuse
+    `,
+    GuidlineBullet14: `
+      Pattern of inappropriate social contact, such as requesting/assuming
+      inappropriate levels of intimacy with others
+    `,
+    GuidlineBullet15: `
+      Continued one-on-one communication after requests to cease
+    `,
+    GuidlineBullet16: 'Publication of non-harassing private communication',
+    GuidlineBullet17: 'Sustained disruption of discussion',
   };
 };
 

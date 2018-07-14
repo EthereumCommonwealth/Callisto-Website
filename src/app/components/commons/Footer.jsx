@@ -41,8 +41,8 @@ class Footer extends PureComponent {
     return [
       {
         title: this.props.intl.formatMessage({ id: 'FooterCommunity' }),
-        url: !this.props.fromLanding ? '/' : 'community',
-        type: this.props.fromLanding ? 'scroll' : 'router',
+        url: '/community-guidlines/',
+        type: 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'FooterBlog' }),
@@ -51,7 +51,7 @@ class Footer extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'FooterSupport' }),
-        url: 'support',
+        url: '/support',
         type: 'anchor'
       },
       {
