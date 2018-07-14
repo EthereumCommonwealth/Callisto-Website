@@ -61,7 +61,7 @@ const idMessages = () => {
       Callisto aims to full financial transparency. Check our financial report below.
     `,
     FinancialReport: 'Financial report',
-    RoadmapDescription: 'Lorem ipsum Callisto core implementation.',
+    RoadmapDescription: 'Up to date roadmap report',
     Wallets: 'Wallets',
     WalletsDescription: 'These wallets support Callisto Network',
     MarketStatusTitle: 'Exchanges',
