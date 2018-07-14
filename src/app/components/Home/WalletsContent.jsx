@@ -19,6 +19,7 @@ const WalletsContent = ({ intl }) => (
             { name: 'Geth', url: '/' },
             { name: 'Parity', url: '/' },
             { name: 'Guarda', url: 'https://guarda.co/desktop/' },
+            { name: 'MyCrypto', url: 'https://mycrypto.com/' },
           ]}
         />
         <SingleWallet
@@ -27,6 +28,7 @@ const WalletsContent = ({ intl }) => (
           options={[
             { name: 'Geth', url: '/' },
             { name: 'Guarda', url: 'https://guarda.co/desktop/' },
+            { name: 'MyCrypto', url: 'https://mycrypto.com/' },
           ]}
         />
         <SingleWallet
@@ -36,6 +38,7 @@ const WalletsContent = ({ intl }) => (
             { name: 'Geth', url: '/' },
             { name: 'Parity', url: '/' },
             { name: 'Guarda', url: 'https://guarda.co/desktop/' },
+            { name: 'MyCrypto', url: 'https://mycrypto.com/' },
           ]}
         />
         <SingleWallet
@@ -61,6 +64,7 @@ const WalletsContent = ({ intl }) => (
           options={[
             { name: 'Classic Ether Wallet', url: 'https://ethereumproject.github.io/etherwallet/' },
             { name: 'Guarda', url: 'https://guarda.co/' },
+            { name: 'MyCrypto', url: 'https://mycrypto.com/' },
           ]}
         />
       </div>

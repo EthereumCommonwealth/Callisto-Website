@@ -85,7 +85,7 @@ const Team = ({ intl }) => (
             `
               Skilled in the Frontend  development Environment with knowledge in
               HTML5/CSS3, Javascript (React JS) and Backend Environments with Node.js.
-              Worked in several  startups such as Platzi, GoRead and Exclusive Traveler Club.
+              Worked in several important startups such as Platzi or GoRead.
             `
           }
         />
@@ -164,25 +164,26 @@ const Team = ({ intl }) => (
         />
         <TeamMember
           avatar='/image/avatars/methw_avatar.png'
-          name='Methw'
-          position='Callisto Indonesia Ambassador'
+          name='Methw - Nug'
+          position='Documentation Writer '
           socialNetworks={[
             {
-              prefix: 'fab fa-twitter',
-              url: 'https://twitter.com/dardanlatifi',
+              prefix: 'fab fa-telegram-plane',
+              url: 'https://t.me/methwZ',
             },
             {
               prefix: 'far fa-envelope',
-              url: 'mailto:dardan@callisto.network',
-            },
-            {
-              prefix: 'fab fa-linkedin-in',
-              url: 'https://www.linkedin.com/in/dardanlatifi',
+              url: 'mailto:methw@callisto.network',
             },
           ]}
           bio={
-            `The entrepreneur and inventor in the areas of mobile development,
-            blocking, digital marketing, as well as in the areas of AI and ERP.`
+            `
+              Strong information technology professional with a Bachelor of
+              Science (B.Sc.) focused in Computer Science and electronics.
+              Experienced IT related field with a demonstrated history of
+              working in Network Administration, Cloud Computing, Blockchain
+              Technology and cryptocurrency.
+            `
           }
         />
         <TeamMember
