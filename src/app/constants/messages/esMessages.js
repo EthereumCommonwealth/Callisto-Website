@@ -474,6 +474,50 @@ const esMessages = () => {
     `,
     GuidlineBullet16: 'Publication of non-harassing private communication',
     GuidlineBullet17: 'Sustained disruption of discussion',
+    ReportAbuseTitle: 'Reporting Abuse',
+    ReportAbuseDescription: `
+      If you are being harassed by a member of the Callisto Community,
+      <br /> <br />
+      or have any other concerns, please contact the community leaders at
+      (email address here), and/or contact the administrators of the specific
+       community . If the person who is harassing you is a community leader or
+       administrator, they will recuse themselves from handling your incident.
+       We will respond as promptly as we can.
+    `,
+    ReportAbuseSecondary: `
+      These community guidelines apply to Callisto Community spaces, but if you are
+      being harassed by a member of the Callisto Community outside of our spaces,
+      we still want to know about it. We will take all good-faith reports of
+      harassment by Callisto Community members. This includes harassment that took
+      place at any point in time. The abuse team reserves the right to exclude people
+      from the Callisto Community based on their past behavior, including behavior
+      outside Callisto Community spaces and behavior towards people who are not
+      in the Callisto Community.
+      <br /><br />
+      In order to protect employees of response team, we reserve the right to reject
+      any report we believe to have been made in bad faith . Reports intended to
+      silence legitimate criticism may be deleted without response.
+      <br /><br />
+      We will respect confidentiality requests for the purpose of protecting victims
+      of abuse. At our discretion, we may publicly name a person about whom we’ve
+      received harassment complaints, or privately warn third parties about them,
+      if we believe that doing so will increase the safety of Callisto Community
+      members or the general public. We will not name harassment victims without
+      their permission.
+    `,
+    Consequences: 'Consequences',
+    ConsequencesText: `
+      Participants asked to stop any harassing behavior are expected to comply
+      immediately. If a participant engages in harassing behavior, our response
+      team may take any action they deem appropriate, up to and including removing
+      that participant from all Callisto Community spaces.
+    `,
+    AddressingGrievances: 'Addressing‭ ‬Grievances',
+    GrievancesText: `
+      If‭ ‬you‭ ‬feel‭ ‬you‭ ‬have‭ ‬been‭ ‬falsely‭ ‬or‭ ‬unfairly‭ reported for violating‭ ‬these
+      community guidelines,‭ ‬you‭ ‬should‭ ‬notify‭ ‬(email address here) ‬with‭ ‬a‭ ‬concise‭ ‬
+      description‭ ‬of‭ ‬your‭ ‬grievance.
+    `,
   };
 };
 

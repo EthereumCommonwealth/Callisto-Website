@@ -5,6 +5,7 @@ import Header from '../components/commons/Header';
 import Footer from '../components/commons/Footer';
 import GuidlineHead from '../components/CommunityGuidlines/GuidlineHead';
 import GuidlineBullets from '../components/CommunityGuidlines/GuidlineBullets';
+import ReportAbuse from '../components/CommunityGuidlines/ReportAbuse';
 
 const CommunityGuidlines = ({ match }) => {
   return (
@@ -12,6 +13,7 @@ const CommunityGuidlines = ({ match }) => {
       <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <GuidlineHead />
       <GuidlineBullets />
+      <ReportAbuse />
       <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />
     </Layout>
   );
