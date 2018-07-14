@@ -389,7 +389,13 @@ const ruMessages = () => {
       If you were holding  ETC coins on exchange BEFORE snapshot, ask your
       exchange if they supported CLO airdrop.
       <br /> <br />
-      If you was holding ETC on a wallet, check this  guide on our blog.
+      If you was holding ETC on a wallet,
+      <a
+        target="_blank"
+        href="https://news.callisto.network/how-can-i-get-my-clo-coins-from-airdrop/"
+      >
+        check this guide on our blog.
+      </a>
     `,
     GuidlineHeadTitle: 'Community Guidelines',
     GuidlineHeadDescription: `

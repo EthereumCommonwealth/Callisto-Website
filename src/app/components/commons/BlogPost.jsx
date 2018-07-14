@@ -11,7 +11,7 @@ const BlogPost = ({ title, cover, description, date, url }) => {
       />
       <div className='BlogPost-info'>
         <h4 className='BlogPost-info-title'>
-          <a href='url'>
+          <a href={url}>
             {title}
           </a>
         </h4>
