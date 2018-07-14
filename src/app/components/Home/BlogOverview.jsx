@@ -15,16 +15,21 @@ class BlogOverview extends PureComponent {
             <FormattedMessage id='BlogAndPress' />
           </h3>
           <div className='BlogOverview-list'>
-            {blogPosts.map(post => (
-              <BlogPost
-                key={`BlogPost-${post.id}`}
-                title={post.title}
-                description={post.description}
-                date={post.date}
-                url={post.link}
-                cover={post.cover}
-              />
-            ))}
+            {blogPosts.map((post, index) => {
+              if (index < 3) {
+                return (
+                  <BlogPost
+                    key={`BlogPost-${post.id}`}
+                    title={post.title}
+                    description={post.description}
+                    date={post.date}
+                    url={post.link}
+                    cover={post.cover}
+                  />
+                );
+              }
+              return null;
+            })}
           </div>
         </div>
       </Element>
