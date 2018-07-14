@@ -18,7 +18,7 @@ const Hero = ({ intl }) => (
           target='_blank'
           className='btn btn-green'
         >
-          <FormattedMessage id='HeroWhitePaper' />
+          <FormattedMessage id='WhitePaper' />
         </a>
       </div>
       <div className='Hero-content-right'>

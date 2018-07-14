@@ -10,22 +10,22 @@ class Footer extends PureComponent {
   get menuFirstColumn() {
     return [
       {
-        title: this.props.intl.formatMessage({ id: 'FooterWallets' }),
+        title: this.props.intl.formatMessage({ id: 'Wallets' }),
         url: !this.props.fromLanding ? '/#wallets' : 'wallets',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'FooterPool' }),
+        title: this.props.intl.formatMessage({ id: 'Pool' }),
         url: !this.props.fromLanding ? '/#pool' : 'pool',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'FooterBlockExplorers' }),
+        title: this.props.intl.formatMessage({ id: 'BlockExplorers' }),
         url: !this.props.fromLanding ? '/#pool' : 'pool',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'FooterExchanges' }),
+        title: this.props.intl.formatMessage({ id: 'Exchanges' }),
         url: !this.props.fromLanding ? '/#exchanges' : 'exchanges',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
@@ -40,17 +40,17 @@ class Footer extends PureComponent {
   get menuSecondColumn() {
     return [
       {
-        title: this.props.intl.formatMessage({ id: 'FooterCommunity' }),
+        title: this.props.intl.formatMessage({ id: 'Community' }),
         url: '/community-guidlines/',
         type: 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'FooterBlog' }),
+        title: this.props.intl.formatMessage({ id: 'Blog' }),
         url: '/blog/',
         type: 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'FooterSupport' }),
+        title: this.props.intl.formatMessage({ id: 'Support' }),
         url: '/support',
         type: 'anchor'
       },
@@ -60,12 +60,12 @@ class Footer extends PureComponent {
         type: 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'FooterContact' }),
+        title: this.props.intl.formatMessage({ id: 'Contact' }),
         url: 'contact',
         type: 'anchor'
       },
       {
-        title: this.props.intl.formatMessage({ id: 'FooterDocumentation' }),
+        title: this.props.intl.formatMessage({ id: 'Documentation' }),
         url: 'documentation',
         type: 'anchor',
       },
@@ -75,17 +75,17 @@ class Footer extends PureComponent {
   get menuThirdColumn() {
     return [
       {
-        title: this.props.intl.formatMessage({ id: 'FooterAbout' }),
+        title: this.props.intl.formatMessage({ id: 'About' }),
         url: !this.props.fromLanding ? '/#about' : 'about',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'FooterAirdrop' }),
+        title: this.props.intl.formatMessage({ id: 'Airdrop' }),
         url: '/airdrop/',
         type: 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'FooterTeam' }),
+        title: this.props.intl.formatMessage({ id: 'Team' }),
         url: !this.props.fromLanding ? '/#team' : 'team',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
@@ -108,7 +108,7 @@ class Footer extends PureComponent {
           </figure>
           <div className='Footer-top-list'>
             <span className='Footer-top-list-title'>
-              <FormattedMessage id='FooterSoftware' />
+              <FormattedMessage id='Software' />
             </span>
             {firstColumn.map((elem) => {
               if (elem.type === 'router') {
@@ -152,7 +152,7 @@ class Footer extends PureComponent {
           </div>
           <div className='Footer-top-list'>
             <span className='Footer-top-list-title'>
-              <FormattedMessage id='FooterCommunityHelp' />
+              <FormattedMessage id='CommunityHelp' />
             </span>
             {secondColumn.map((elem) => {
               if (elem.type === 'router') {
@@ -253,13 +253,13 @@ class Footer extends PureComponent {
             </div>
             <div className='Footer-bottom-content-links'>
               <Link to='/brand-policy' className='Footer-bottom-content-element'>
-                <FormattedMessage id='FooterBrandPolicy' />
+                <FormattedMessage id='BrandPolicy' />
               </Link>
               <Link to='/privacy-policy' className='Footer-bottom-content-element'>
-                <FormattedMessage id='FooterPrivacyPolicy' />
+                <FormattedMessage id='PrivacyPolicy' />
               </Link>
               <Link to='/terms' className='Footer-bottom-content-element'>
-                <FormattedMessage id='FooterTerms' />
+                <FormattedMessage id='Terms' />
               </Link>
             </div>
           </div>

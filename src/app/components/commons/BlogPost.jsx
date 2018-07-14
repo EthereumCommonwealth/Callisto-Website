@@ -11,9 +11,10 @@ const BlogPost = ({ title, cover, description, date, url }) => {
       />
       <div className='BlogPost-info'>
         <h4 className='BlogPost-info-title'>
-          <a href={url}>
-            {title}
-          </a>
+          <a
+            href={url}
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
         </h4>
         <span className='BlogPost-info-date'>
           <FormattedDate

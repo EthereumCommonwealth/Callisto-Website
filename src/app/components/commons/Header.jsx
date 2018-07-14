@@ -26,27 +26,27 @@ class Header extends PureComponent {
   get menuElements() {
     return [
       {
-        title: this.props.intl.formatMessage({ id: 'HeaderRoadmap' }),
+        title: this.props.intl.formatMessage({ id: 'Roadmap' }),
         url: !this.props.fromLanding ? '/#roadmap' : 'roadmap',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'HeaderAirdrop' }),
+        title: this.props.intl.formatMessage({ id: 'Airdrop' }),
         url: '/airdrop/',
         type: 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'HeaderWallers' }),
+        title: this.props.intl.formatMessage({ id: 'Wallers' }),
         url: !this.props.fromLanding ? '/#wallets' : 'wallets',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'HeaderExchanges' }),
+        title: this.props.intl.formatMessage({ id: 'Exchanges' }),
         url: !this.props.fromLanding ? '/#exchanges' : 'exchanges',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'HeaderMining' }),
+        title: this.props.intl.formatMessage({ id: 'Mining' }),
         url: !this.props.fromLanding ? '/#mining' : 'mining',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
@@ -61,12 +61,12 @@ class Header extends PureComponent {
         type: 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'HeaderTeam' }),
+        title: this.props.intl.formatMessage({ id: 'Team' }),
         url: !this.props.fromLanding ? '/#team' : 'team',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'HeaderBlog' }),
+        title: this.props.intl.formatMessage({ id: 'Blog' }),
         url: '/blog/',
         type: 'router',
       },

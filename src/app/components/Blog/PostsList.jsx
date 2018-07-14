@@ -13,7 +13,13 @@ class PostsList extends PureComponent {
           <div className='PostsList-list'>
             {blogPosts.map(post => (
               <div key={`Post-${post.id}`} className='Post'>
-                <h2 className='Post-title'>{post.title}</h2>
+                <h2 className='Post-title'>
+                  <a
+                    href={post.link}
+                    target='_blank'
+                    dangerouslySetInnerHTML={{ __html: post.title }}
+                  />
+                </h2>
                 <div className='Post-date'>
                   <FormattedDate
                     value={new Date(post.date)}
@@ -29,7 +35,7 @@ class PostsList extends PureComponent {
                   className='Post-description'
                   dangerouslySetInnerHTML={{ __html: post.description }}
                 />
-                <a href={post.link} className='Post-readmore'>
+                <a href={post.link} className='Post-readmore' target='_blank'>
                   <i className='fas fa-long-arrow-alt-right' /> read more
                 </a>
               </div>
