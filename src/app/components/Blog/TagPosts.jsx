@@ -49,7 +49,7 @@ class TagPosts extends PureComponent {
             )) : (
               <div className='PostsList-notfound'>
                 <h3>
-                  <FormattedDate id='NotTopicsFound'/>
+                  <FormattedMessage id='NotTopicsFound'/>
                 </h3>
               </div>
             )}
