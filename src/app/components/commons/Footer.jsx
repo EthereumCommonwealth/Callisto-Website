@@ -52,7 +52,7 @@ class Footer extends PureComponent {
       {
         title: this.props.intl.formatMessage({ id: 'FooterFAQ' }),
         url: '/faq/',
-        type: 'router',
+        type: 'anchor',
       },
     ];
   }

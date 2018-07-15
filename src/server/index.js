@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import fs from 'fs';
 import nodeMailer from 'nodemailer';
+import axios from 'axios';
 import bodyParser from 'body-parser';
 import express from 'express';
 import dotenv from 'dotenv';
@@ -107,12 +108,61 @@ const preparePosts = (posts) => {
   return elements;
 }
 
-const prefetchData = async (req, res, next) => {
+const getArticles = async (category) => {
+  const articles = await axios.get(`solutions/folders/${category.id}/articles/`, {
+    baseURL: 'https://callistonetwork.freshdesk.com/api/v2/',
+    headers: { accept: 'application/json' },
+    auth: {
+      username: process.env.FRESHBOOKS_API,
+      password: 'x',
+    }
+  });
+  return {
+    id: category.id,
+    name: category.name,
+    articles: articles.data,
+  };
+}
+
+const prepareFaq = async (faq) => {
+  const elements = [];
+  try {
+    for (let i = 0; i < faq.length; i++) {
+      const article = await getArticles(faq[i])
+      elements.push(article);
+    }
+  } catch (e) {
+    console.log(e);
+  }
+  return elements;
+}
+
+const getFAQ = async () => {
+  let faqObj;
+  try {
+    const faq = await axios.get('solutions/categories/43000034228/folders/', {
+      baseURL: 'https://callistonetwork.freshdesk.com/api/v2/',
+      headers: { accept: 'application/json' },
+      auth: {
+        username: process.env.FRESHBOOKS_API,
+        password: 'x',
+      }
+    });
+    faqObj = await prepareFaq(faq.data);
+  } catch (e) {
+    console.log(e);
+  }
+  return faqObj;
+}
+
+const prefetchFaq = async (req, res, next) => {
   try {
     const posts = await blogPosts.get('posts?_embed/');
     const tags = await blogPosts.get('tags');
     const btcStats = await coinStats.get('ticker/1/');
     const cloStats = await coinStats.get('ticker/2757/');
+    const faq = await getFAQ();
+
     handleRender(req, res, {
       blogPosts: preparePosts(posts.data),
       blogTags: tags.data,
@@ -123,6 +173,31 @@ const prefetchData = async (req, res, next) => {
         marketCap: cloStats.data.data.quotes.USD.market_cap,
       },
       tagPosts: [],
+      faq: faq,
+    })
+  } catch (err) {
+    next(err);
+  }
+}
+
+const prefetchData = async (req, res, next) => {
+  try {
+    const posts = await blogPosts.get('posts?_embed/');
+    const tags = await blogPosts.get('tags');
+    const btcStats = await coinStats.get('ticker/1/');
+    const cloStats = await coinStats.get('ticker/2757/');
+
+    handleRender(req, res, {
+      blogPosts: preparePosts(posts.data),
+      blogTags: tags.data,
+      marketStats: {
+        btcPrice: btcStats.data.data.quotes.USD.price,
+        cloPrice: cloStats.data.data.quotes.USD.price,
+        volume: cloStats.data.data.quotes.USD.volume_24h,
+        marketCap: cloStats.data.data.quotes.USD.market_cap,
+      },
+      tagPosts: [],
+      faq: [],
     })
   } catch (err) {
     next(err);
@@ -153,6 +228,7 @@ const prefetchTopic = async (req, res, next) => {
         marketCap: cloStats.data.data.quotes.USD.market_cap,
       },
       tagPosts: preparePosts(tagPosts.data),
+      faq: [],
     })
   } catch (err) {
     next(err);
@@ -178,10 +254,10 @@ app.get('/financial-report/', prefetchData);
 app.get('/blog/post/:slug/', prefetchData);
 app.get('/blog/topic/:slug/', prefetchTopic);
 app.get('/airdrop/', prefetchData);
-app.get('/faq/', prefetchData);
+app.get('/faq/', prefetchFaq);
 app.get('/community-guidlines/', prefetchData);
 app.get('/:lang(es|en|id|ru)/', prefetchData);
-app.get('/:lang(es|en|id|ru)/faq/', prefetchData);
+app.get('/:lang(es|en|id|ru)/faq/', prefetchFaq);
 app.get('/:lang(es|en|id|ru)/blog/', prefetchData);
 app.get('/:lang(es|en|id|ru)/blog/post/:slug/', prefetchData);
 app.get('/:lang(es|en|id|ru)/blog/topic/:slug/', prefetchTopic);
