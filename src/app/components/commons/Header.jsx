@@ -82,7 +82,7 @@ class Header extends PureComponent {
             <figure className='Header-figure'>
               <img
                 className='Header-logo-desktop'
-                src='/image/clo-logo.svg'
+                src='/image/callisto_logo_c.svg'
                 alt='Callisto Logo'
               />
               <img

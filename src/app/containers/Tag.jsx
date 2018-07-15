@@ -3,19 +3,19 @@ import { hot } from 'react-hot-loader';
 import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
 import Footer from '../components/commons/Footer';
-import PostsList from '../components/Blog/PostsList';
+import TagPosts from '../components/Blog/TagPosts';
 import BlogTags from '../components/Blog/BlogTags';
 
-const Blog = ({ match }) => {
+const Tag = ({ match }) => {
   return (
-    <Layout className='Blog' match={match}>
+    <Layout className='Tag' match={match}>
       <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
-      <BlogTags />
-      <PostsList />
+      <BlogTags selectedTag={match.params.slug} />
+      <TagPosts selectedTag={match.params.slug} />
       <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />
     </Layout>
   );
 
 }
 
-export default hot(module)(Blog);
+export default hot(module)(Tag);

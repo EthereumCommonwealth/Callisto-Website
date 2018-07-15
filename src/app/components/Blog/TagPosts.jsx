@@ -3,15 +3,25 @@ import PropTypes from 'prop-types';
 import { FormattedDate, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 
-class PostsList extends PureComponent {
+class TagPosts extends PureComponent {
+
+  get tagName() {
+    const { selectedTag, blogTags } = this.props;
+    const tag = blogTags.filter(elem => elem.slug === selectedTag)
+    return tag.length > 0 ? tag[0].name : '';
+  }
+
   render() {
-    const { blogPosts } = this.props;
+    const { tagPosts } = this.props;
     return (
       <section className='PostsList'>
         <div className='PostsList-content container'>
           <div />
           <div className='PostsList-list'>
-            {blogPosts.map(post => (
+            <h1 className='PostsList-tag-title'>
+              {this.tagName}
+            </h1>
+            {tagPosts.length > 0 ? tagPosts.map(post => (
               <div key={`Post-${post.id}`} className='Post'>
                 <h2 className='Post-title'>
                   <a
@@ -28,9 +38,6 @@ class PostsList extends PureComponent {
                     day='2-digit'
                   />
                 </div>
-                <figure className='Post-figure'>
-                  <img src={post.cover} alt={post.title}/>
-                </figure>
                 <div
                   className='Post-description'
                   dangerouslySetInnerHTML={{ __html: post.description }}
@@ -39,7 +46,13 @@ class PostsList extends PureComponent {
                   <i className='fas fa-long-arrow-alt-right' /> <FormattedMessage id='ReadMore' />
                 </a>
               </div>
-            ))}
+            )) : (
+              <div className='PostsList-notfound'>
+                <h3>
+                  <FormattedDate id='NotTopicsFound'/>
+                </h3>
+              </div>
+            )}
           </div>
           <div />
         </div>
@@ -50,12 +63,14 @@ class PostsList extends PureComponent {
 
 function mapStateTopProps(state) {
   return {
-    blogPosts: state.blogPosts,
+    tagPosts: state.tagPosts,
+    blogTags: state.blogTags,
   };
 }
 
-PostsList.propTypes = {
-  blogPosts: PropTypes.array,
+TagPosts.propTypes = {
+  tagPosts: PropTypes.array,
+  blogTags: PropTypes.array,
 };
 
-export default connect(mapStateTopProps, null)(PostsList);
+export default connect(mapStateTopProps, null)(TagPosts);

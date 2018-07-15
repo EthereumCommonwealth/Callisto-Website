@@ -102,7 +102,7 @@ class Footer extends PureComponent {
           <figure className='Footer-figure'>
             <img
               className='Footer-logo'
-              src='/image/clo-logo.svg'
+              src='/image/callisto_logo_c.svg'
               alt='Callisto Logo'
             />
           </figure>

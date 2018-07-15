@@ -110,16 +110,49 @@ const preparePosts = (posts) => {
 const prefetchData = async (req, res, next) => {
   try {
     const posts = await blogPosts.get('posts?_embed/');
+    const tags = await blogPosts.get('tags');
     const btcStats = await coinStats.get('ticker/1/');
     const cloStats = await coinStats.get('ticker/2757/');
     handleRender(req, res, {
       blogPosts: preparePosts(posts.data),
+      blogTags: tags.data,
       marketStats: {
         btcPrice: btcStats.data.data.quotes.USD.price,
         cloPrice: cloStats.data.data.quotes.USD.price,
         volume: cloStats.data.data.quotes.USD.volume_24h,
         marketCap: cloStats.data.data.quotes.USD.market_cap,
       },
+      tagPosts: [],
+    })
+  } catch (err) {
+    next(err);
+  }
+}
+
+const getTag = (slug, tags) => {
+  const filtered = tags.filter(elem => elem.slug === slug);
+  return filtered.length > 0 ? filtered[0].id : [];
+}
+
+const prefetchTopic = async (req, res, next) => {
+  try {
+    const posts = await blogPosts.get('posts?_embed/');
+    const tags = await blogPosts.get('tags');
+    const btcStats = await coinStats.get('ticker/1/');
+    const cloStats = await coinStats.get('ticker/2757/');
+    const tagId = getTag(req.params.slug, tags.data);
+    const tagPosts = await blogPosts.get(`posts?tags=${tagId}`);
+
+    handleRender(req, res, {
+      blogPosts: preparePosts(posts.data),
+      blogTags: tags.data,
+      marketStats: {
+        btcPrice: btcStats.data.data.quotes.USD.price,
+        cloPrice: cloStats.data.data.quotes.USD.price,
+        volume: cloStats.data.data.quotes.USD.volume_24h,
+        marketCap: cloStats.data.data.quotes.USD.market_cap,
+      },
+      tagPosts: preparePosts(tagPosts.data),
     })
   } catch (err) {
     next(err);
@@ -142,13 +175,16 @@ app.get('/', prefetchData);
 app.get('/smart-contract/', prefetchData);
 app.get('/cold-staking/', prefetchData);
 app.get('/financial-report/', prefetchData);
-app.get('/blog/', prefetchData);
+app.get('/blog/post/:slug/', prefetchData);
+app.get('/blog/topic/:slug/', prefetchTopic);
 app.get('/airdrop/', prefetchData);
 app.get('/faq/', prefetchData);
 app.get('/community-guidlines/', prefetchData);
 app.get('/:lang(es|en|id|ru)/', prefetchData);
 app.get('/:lang(es|en|id|ru)/faq/', prefetchData);
 app.get('/:lang(es|en|id|ru)/blog/', prefetchData);
+app.get('/:lang(es|en|id|ru)/blog/post/:slug/', prefetchData);
+app.get('/:lang(es|en|id|ru)/blog/topic/:slug/', prefetchTopic);
 app.get('/:lang(es|en|id|ru)/airdrop/', prefetchData);
 app.get('/:lang(es|en|id|ru)/cold-staking/', prefetchData);
 app.get('/:lang(es|en|id|ru)/smart-contract/', prefetchData);

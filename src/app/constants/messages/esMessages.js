@@ -540,6 +540,7 @@ const esMessages = () => {
       In which network will your contract be deployed?
     `,
     SendMessage: 'Send Message',
+    NotTopicsFound: 'Not posts with this Topic name',
   };
 };
 

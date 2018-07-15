@@ -14,7 +14,15 @@
     grid-gap 45px
     +from-width($sm)
       grid-gap 90px
-
+  &-tag
+    &-title
+      font-size 32px
+      color $dark-blue
+      margin 0
+      +from-width($sm)
+        font-size 44px
+      &:hover
+        cursor default
 .Post
   position relative
   &:before
@@ -65,3 +73,4 @@
     &:hover
       text-decoration underline
       cursor pointer
+      color $orange

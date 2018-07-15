@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -24,6 +24,8 @@ class LangSelector extends Component {
         return `/${lang}/finantial-report/`
       case '/blog/':
         return `/${lang}/blog/`
+      case '/blog/topic/:slug/':
+        return `/${lang}/blog/topic/${match.params.slug}/`
       case '/airdrop/':
         return `/${lang}/airdrop/`
       case '/faq/':
@@ -38,6 +40,8 @@ class LangSelector extends Component {
         return `/${lang}/finantial-report/`
       case '/:lang(es|en|id|ru)/blog/':
         return `/${lang}/blog/`
+      case '/:lang(es|en|id|ru)/blog/topic/:slug/':
+        return `/${lang}/blog/topic/${match.params.slug}/`
       case '/:lang(es|en|id|ru)/faq/':
         return `/${lang}/faq/`
       case '/:lang(es|en|id|ru)/airdrop/':
@@ -49,12 +53,12 @@ class LangSelector extends Component {
     }
   }
 
-  handleOpen = (event) => {
+  handleOpen = event => {
     event.preventDefault();
     this.setState({ open: !this.state.open });
   }
 
-  closeMenu = (event) => {
+  closeMenu = event => {
     event.preventDefault();
     this.setState({ open: false });
   }
@@ -62,6 +66,11 @@ class LangSelector extends Component {
   handleSelect = (event, selection) => {
     event.preventDefault();
     this.setState({ selected: selection });
+  }
+
+  changeLocation = (event, route) => {
+    event.preventDefault();
+    document.location = route;
   }
 
   render() {
@@ -88,17 +97,17 @@ class LangSelector extends Component {
                     <li
                       key={`LangSelector-${index}`}
                       className='LangSelector-list-elem'
-                      onClick={event => this.handleSelect(event, elem)}
                     >
-                      <Link
+                      <a
                         className='LangSelector-list-elem-anchor'
-                        to={this.setRouterPath(elem)}
+                        onClick={(e => this.changeLocation(e, this.setRouterPath(elem)))}
+                        target='blank'
                       >
                         <img
                           src={`/image/country-flags/${elem}.png`}
                           className='LangSelector-flag'
                         /> {elem}
-                      </Link>
+                      </a>
                     </li>
                   )
                 }

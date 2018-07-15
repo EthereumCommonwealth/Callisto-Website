@@ -5,6 +5,7 @@ import ColdStaking from '../containers/ColdStaking';
 import SmartContract from '../containers/SmartContract';
 import FinantialReport from '../containers/FinantialReport';
 import Blog from '../containers/Blog';
+import Tag from '../containers/Tag';
 import Airdrop from '../containers/Airdrop';
 import Faq from '../containers/Faq';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
@@ -16,6 +17,8 @@ const Routes = (
       <Route exact path='/' component={Home} />
       <Route exact path='/faq/' component={Faq} />
       <Route exact path='/blog/' component={Blog} />
+      <Route exact path='/blog/post/:slug/' component={Blog} />
+      <Route exact path='/blog/topic/:slug/' component={Tag} />
       <Route exact path='/airdrop/' component={Airdrop} />
       <Route exact path='/cold-staking/' component={ColdStaking} />
       <Route exact path='/smart-contract/' component={SmartContract} />
@@ -24,6 +27,8 @@ const Routes = (
       <Route exact path='/:lang(es|en|id|ru)/' component={Home} />
       <Route exact path='/:lang(es|en|id|ru)/faq/' component={Faq} />
       <Route exact path='/:lang(es|en|id|ru)/blog/' component={Blog} />
+      <Route exact path='/:lang(es|en|id|ru)/blog/post/:slug/' component={Blog} />
+      <Route exact path='/:lang(es|en|id|ru)/blog/topic/:slug/' component={Tag} />
       <Route exact path='/:lang(es|en|id|ru)/airdrop/' component={Airdrop} />
       <Route exact path='/:lang(es|en|id|ru)/cold-staking/' component={ColdStaking} />
       <Route exact path='/:lang(es|en|id|ru)/smart-contract/' component={SmartContract} />
