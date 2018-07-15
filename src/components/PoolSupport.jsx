@@ -9,6 +9,15 @@ const PoolSupport = () => (
       </h2>
       <div className="PoolSupport-list">
         <div className="PoolSupport-list-element">
+          <span>PPLNS.io</span>
+          <a
+            className="PoolSupport-list-element-anchor"
+            target="_blank"
+            href="https://pplns.io/"
+          />
+        </div>
+        <div className="PoolSupport-list">
+        <div className="PoolSupport-list-element">
           <span>clopool.pro</span>
           <a
             className="PoolSupport-list-element-anchor"
