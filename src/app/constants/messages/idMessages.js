@@ -14,15 +14,18 @@ const idMessages = () => {
     BlockExplorers: 'Block Explorers',
     Documentation: 'Documentation',
     Community: 'Community',
+    CommunityGuidlines: 'Community Guidlines',
     Support: 'Support',
     FooterFAQ: 'Callisto FAQ',
     Contact: 'Contact',
     Software: 'Software',
+    NetworkEcosystem: 'Callisto Network Ecosystem',
     CommunityHelp: 'Community and Help',
     FooterCopy: '© 2017—2018 Callisto Network is a Decentralized Project',
     BrandPolicy: 'Brand Policy',
     PrivacyPolicy: 'Privacy Policy',
     Terms: 'Terms of Service',
+    Mediakit: 'Media Kit',
     OfficiallyChecker: 'Officially Checker',
     HeroTitle: 'Cryptocurrency  <br /> and Free Smart-Contract Security Audits',
     HeroDescription: `
@@ -66,7 +69,7 @@ const idMessages = () => {
     WalletsDescription: 'These wallets support Callisto Network',
     MarketStatusTitle: 'Exchanges',
     MarketStatusDescription: `
-      Meet the people that are going to take your business to the next level
+      Our markets as today
     `,
     ExchangesList: 'We are currently listed on the following exchanges:',
     Price: 'Price',
@@ -74,7 +77,7 @@ const idMessages = () => {
     MarketCap: 'Market Cap',
     ComingSoon: 'Coming soon',
     MiningTitle: 'Mining',
-    MiningDescription: 'Meet the people that are going to take your business to the next level',
+    MiningDescription: 'Callisto (CLO) it’s minable coin with PoW algorithm.',
     CloStats: 'Callisto Stats',
     TechnicalDetails: 'Technical details',
     BlockReward: 'Block reward',

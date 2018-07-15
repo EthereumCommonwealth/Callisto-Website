@@ -40,7 +40,7 @@ class Footer extends PureComponent {
   get menuSecondColumn() {
     return [
       {
-        title: this.props.intl.formatMessage({ id: 'Community' }),
+        title: this.props.intl.formatMessage({ id: 'CommunityGuidlines' }),
         url: '/community-guidlines/',
         type: 'router',
       },
@@ -50,24 +50,9 @@ class Footer extends PureComponent {
         type: 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'Support' }),
-        url: '/support',
-        type: 'anchor'
-      },
-      {
         title: this.props.intl.formatMessage({ id: 'FooterFAQ' }),
         url: '/faq/',
         type: 'router',
-      },
-      {
-        title: this.props.intl.formatMessage({ id: 'Contact' }),
-        url: 'contact',
-        type: 'anchor'
-      },
-      {
-        title: this.props.intl.formatMessage({ id: 'Documentation' }),
-        url: 'documentation',
-        type: 'anchor',
       },
     ];
   }
@@ -85,9 +70,14 @@ class Footer extends PureComponent {
         type: 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'Team' }),
+        title: this.props.intl.formatMessage({ id: 'OurTeam' }),
         url: !this.props.fromLanding ? '/#team' : 'team',
         type: this.props.fromLanding ? 'scroll' : 'router',
+      },
+      {
+        title: this.props.intl.formatMessage({ id: 'FinancialReport' }),
+        url: '/financial-report/',
+        type: 'router',
       },
     ];
   }
@@ -108,7 +98,7 @@ class Footer extends PureComponent {
           </figure>
           <div className='Footer-top-list'>
             <span className='Footer-top-list-title'>
-              <FormattedMessage id='Software' />
+              <FormattedMessage id='NetworkEcosystem' />
             </span>
             {firstColumn.map((elem) => {
               if (elem.type === 'router') {
@@ -252,9 +242,9 @@ class Footer extends PureComponent {
               />
             </div>
             <div className='Footer-bottom-content-links'>
-              <Link to='/brand-policy' className='Footer-bottom-content-element'>
-                <FormattedMessage id='BrandPolicy' />
-              </Link>
+              <a href='/media-kit' target='_blank' className='Footer-bottom-content-element'>
+                <FormattedMessage id='Mediakit' />
+              </a>
               <Link to='/privacy-policy' className='Footer-bottom-content-element'>
                 <FormattedMessage id='PrivacyPolicy' />
               </Link>
