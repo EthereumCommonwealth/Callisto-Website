@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 class FaqArticle extends PureComponent {
   state = {
@@ -36,5 +37,10 @@ class FaqArticle extends PureComponent {
     );
   }
 }
+
+FaqArticle.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+};
 
 export default FaqArticle;

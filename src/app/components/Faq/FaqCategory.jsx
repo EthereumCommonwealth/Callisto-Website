@@ -1,10 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Element } from 'react-scroll';
 import FaqArticle from './FaqArticle';
 
 const FaqCategory = ({ id, name, articles }) => {
   if (articles.length === 0) return null
   return (
-    <div className='FaqCategory'>
+    <Element name={name} className='FaqCategory'>
       <div className='FaqCategory-title'>
         <span className='FaqCategory-title-text'>
           {name}
@@ -19,8 +21,14 @@ const FaqCategory = ({ id, name, articles }) => {
           />
         ))}
       </div>
-    </div>
+    </Element>
   )
+}
+
+FaqCategory.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  articles: PropTypes.array,
 }
 
 export default FaqCategory;

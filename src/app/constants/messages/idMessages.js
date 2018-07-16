@@ -548,6 +548,7 @@ const idMessages = () => {
     FaqDescription: `
       Can't find an answer? Write to us on the email
     `,
+    FaqSidebarTitle: 'Table of Contents',
   };
 };
 

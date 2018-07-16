@@ -2,14 +2,34 @@
   padding 100px 0 25px 0
   background-color #FFF
   user-select none
-  +from-width($sm)
-    padding 70px 0
+  +from-width($md)
+    padding 70px 0 140px 0
   &-content
     display grid
     grid-gap 1em
-    +from-width($sm)
+    +from-width($md)
       grid-gap 2em
       grid-template-columns 3fr 9fr
+  &-sidebar
+    display none
+    +from-width($md)
+      display block
+    &-content
+      +from-width($md)
+        position fixed
+        top 150px
+    &-title
+      font-size 22px
+      line-height 1.41
+      font-weight 500
+      color $dark-blue
+      text-align center
+    &-category
+      padding 1em 0 1em 3em
+      color $dark-gray
+      &:hover
+        color $green
+        cursor pointer
   &-elements
     &-title
       font-size 22px
@@ -28,6 +48,7 @@
         margin-bottom 5em
       a
         color $orange
+
 .FaqCategory
   margin-bottom 40px
   &:hover
