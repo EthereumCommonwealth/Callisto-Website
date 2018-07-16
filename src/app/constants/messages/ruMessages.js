@@ -544,6 +544,10 @@ const ruMessages = () => {
     `,
     SendMessage: 'Send Message',
     NotTopicsFound: 'Not posts with this Topic name',
+    FaqTitle: 'Questions? Look here.',
+    FaqDescription: `
+      Can't find an answer? Write to us on the email
+    `,
   };
 };
 
