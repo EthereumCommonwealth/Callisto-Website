@@ -50,12 +50,15 @@ const Team = ({ intl }) => (
               prefix: 'fab fa-linkedin-in',
               url: 'https://www.linkedin.com/in/yograterol/'
             },
+            {
+              prefix: 'fab fa-bitcoin',
+              url: 'https://bitcointalk.org/index.php?action=profile;u=1147564',
+            },
           ]}
           bio={
             `
               Hi, I’m Backend Developer (Python and Go) over seven years, I have
               worked for three years as Head of Product. Cryptocurrency world is my passion.
-              I like the eSports, disclaimer: I’m not professional, just amateur.
             `
           }
         />

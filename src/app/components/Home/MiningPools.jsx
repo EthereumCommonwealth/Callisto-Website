@@ -115,6 +115,20 @@ const MiningPools = ({ intl }) => (
         >
           pplns.io
         </a>
+        <a
+          href='https://www.vvpool.com/'
+          className='btn btn-transparent-green'
+          target='_blank'
+        >
+          www.vvpool.com
+        </a>
+        <a
+          href='https://clo.topmining.co.kr/ '
+          className='btn btn-transparent-green'
+          target='_blank'
+        >
+          clo.topmining.co.kr
+        </a>
       </div>
       <SectionHeading
         title={intl.formatMessage({ id: 'BlockExplorers' })}
