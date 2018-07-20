@@ -118,7 +118,7 @@ class Header extends PureComponent {
                               to={elem.url}
                               spy={true}
                               smooth={true}
-                              offset={0}
+                              offset={-150}
                               duration={500}
                               onClick={this.handleMenuOpen}
                             >
@@ -160,7 +160,7 @@ class Header extends PureComponent {
                         to={elem.url}
                         spy={true}
                         smooth={true}
-                        offset={0}
+                        offset={-150}
                         duration={500}
                       >
                         {elem.title}

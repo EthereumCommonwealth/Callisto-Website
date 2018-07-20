@@ -19,47 +19,54 @@ class Layout extends PureComponent {
     if (document.location.hash === '#pool') {
       scroller.scrollTo('pool', {
         duration: 500,
+        offset: -150,
         delay: 100,
         smooth: true,
       });
     } else if (document.location.hash === '#exchanges') {
       scroller.scrollTo('exchanges', {
         duration: 500,
+        offset: -150,
         delay: 100,
         smooth: true,
       });
     } else if (document.location.hash === '#about') {
       scroller.scrollTo('about', {
         duration: 500,
+        offset: -150,
         delay: 100,
         smooth: true,
       });
     } else if (document.location.hash === '#roadmap') {
       scroller.scrollTo('roadmap', {
         duration: 500,
+        offset: -150,
         delay: 100,
         smooth: true,
       });
     } else if (document.location.hash === '#mining') {
       scroller.scrollTo('mining', {
         duration: 500,
+        offset: -150,
         delay: 100,
         smooth: true,
       });
     } else if (document.location.hash === '#wallets') {
       scroller.scrollTo('wallets', {
         duration: 500,
+        offset: -150,
         delay: 100,
         smooth: true,
       });
     } else if (document.location.hash === '#team') {
       scroller.scrollTo('team', {
         duration: 500,
+        offset: -150,
         delay: 100,
         smooth: true,
       });
     } else {
-      animateScroll.scrollToTop({ duration: 300 });
+      animateScroll.scrollToTop({ duration: 10 });
     }
   }
 
