@@ -1,11 +1,13 @@
 .Header
   background #FFF
-  padding 1em
+  padding .5em 1em
   position fixed
   width 100%
   box-sizing border-box
   z-index 2
   box-shadow 0 0 14px 0 rgba(198,202,206,0.3)
+  +from-width($sm)
+    padding 1em
   &-content
     display flex
     justify-content space-between
