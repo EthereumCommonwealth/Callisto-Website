@@ -8,6 +8,7 @@ import Blog from '../containers/Blog';
 import Tag from '../containers/Tag';
 import Airdrop from '../containers/Airdrop';
 import Faq from '../containers/Faq';
+import Post from '../containers/Post';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
 import Notfound from '../containers/NotFound';
 
@@ -17,7 +18,7 @@ const Routes = (
       <Route exact path='/' component={Home} />
       <Route exact path='/faq/' component={Faq} />
       <Route exact path='/blog/' component={Blog} />
-      <Route exact path='/blog/post/:slug/' component={Blog} />
+      <Route exact path='/blog/post/:slug/' component={Post} />
       <Route exact path='/blog/topic/:slug/' component={Tag} />
       <Route exact path='/airdrop/' component={Airdrop} />
       <Route exact path='/cold-staking/' component={ColdStaking} />
@@ -27,7 +28,7 @@ const Routes = (
       <Route exact path='/:lang(es|en|id|ru)/' component={Home} />
       <Route exact path='/:lang(es|en|id|ru)/faq/' component={Faq} />
       <Route exact path='/:lang(es|en|id|ru)/blog/' component={Blog} />
-      <Route exact path='/:lang(es|en|id|ru)/blog/post/:slug/' component={Blog} />
+      <Route exact path='/:lang(es|en|id|ru)/blog/post/:slug/' component={Post} />
       <Route exact path='/:lang(es|en|id|ru)/blog/topic/:slug/' component={Tag} />
       <Route exact path='/:lang(es|en|id|ru)/airdrop/' component={Airdrop} />
       <Route exact path='/:lang(es|en|id|ru)/cold-staking/' component={ColdStaking} />

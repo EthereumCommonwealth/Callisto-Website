@@ -1,0 +1,50 @@
+.PostDetails
+  padding-top 1em
+  background-color #FFF
+  &-content
+    display grid
+    grid-gap 1em
+    +from-width($md)
+      display grid
+      grid-template-columns .5fr 8fr .5fr
+      justify-content center
+      +from-width($sm)
+        grid-template-columns 2fr 8fr 2fr
+    .Post-description
+      img
+          margin .5em 0
+          width 100%
+          height auto
+      h2
+        font-size 26px
+        color $dark-blue
+        line-height 1.41
+      p
+        margin-bottom 1em
+        +from-width($md)
+          margin-bottom 2em
+      ul
+        list-style-type none
+        li
+          position relative
+          margin-bottom 1em
+          &:before
+            content ''
+            width 15px
+            height 2px
+            background-color $green
+            position absolute
+            left -2em
+            top .75em
+      ol
+        list-style none
+        counter-reset li
+        li
+          position relative
+          counter-increment li
+          margin-bottom 1em
+          &:before
+            content counter(li)
+            color $green
+            position absolute
+            left -2em

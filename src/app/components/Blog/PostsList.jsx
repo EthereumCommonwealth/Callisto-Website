@@ -15,8 +15,7 @@ class PostsList extends PureComponent {
               <div key={`Post-${post.id}`} className='Post'>
                 <h2 className='Post-title'>
                   <a
-                    href={post.link}
-                    target='_blank'
+                    href={`/blog/post/${post.slug}/`}
                     dangerouslySetInnerHTML={{ __html: post.title }}
                   />
                 </h2>
@@ -35,7 +34,7 @@ class PostsList extends PureComponent {
                   className='Post-description'
                   dangerouslySetInnerHTML={{ __html: post.description }}
                 />
-                <a href={post.link} className='Post-readmore' target='_blank'>
+                <a href={`/blog/post/${post.slug}/`} className='Post-readmore'>
                   <i className='fas fa-long-arrow-alt-right' /> <FormattedMessage id='ReadMore' />
                 </a>
               </div>

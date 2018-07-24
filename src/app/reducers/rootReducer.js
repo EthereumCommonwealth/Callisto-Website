@@ -8,6 +8,7 @@ const rootReducer = combineReducers(
     marketStats: mockReducer,
     tagPosts: mockReducer,
     faq: mockReducer,
+    singlePost: mockReducer,
   });
 
 export default rootReducer;

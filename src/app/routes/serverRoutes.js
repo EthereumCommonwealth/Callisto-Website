@@ -7,6 +7,7 @@ import Tag from '../containers/Tag';
 import Airdrop from '../containers/Airdrop';
 import Faq from '../containers/Faq';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
+import Post from '../containers/Post';
 import Notfound from '../containers/NotFound';
 
 const routes = [
@@ -43,7 +44,7 @@ const routes = [
   {
     path: '/blog/post/:slug/',
     exact: true,
-    component: Blog,
+    component: Post,
   },
   {
     path: '/blog/topic/:slug/',
@@ -93,7 +94,7 @@ const routes = [
   {
     path: '/:lang(es|en|id|ru)/blog/post/:slug',
     exact: true,
-    component: Blog,
+    component: Post,
   },
   {
     path: '/:lang(es|en|id|ru)/blog/topic/:slug',

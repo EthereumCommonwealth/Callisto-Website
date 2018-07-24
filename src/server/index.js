@@ -102,6 +102,7 @@ const preparePosts = (posts) => {
       description: elem.excerpt.rendered,
       date: elem.date,
       link: elem.link,
+      slug: elem.slug,
       cover: `${baseImageUrl}/${elem.better_featured_image.media_details.file}`,
     }
   });
@@ -157,7 +158,7 @@ const getFAQ = async () => {
 
 const prefetchFaq = async (req, res, next) => {
   try {
-    const posts = await blogPosts.get('posts?_embed/');
+    const posts = await blogPosts.get('posts?_embed&per_page=50');
     const tags = await blogPosts.get('tags');
     const btcStats = await coinStats.get('ticker/1/');
     const cloStats = await coinStats.get('ticker/2757/');
@@ -174,6 +175,7 @@ const prefetchFaq = async (req, res, next) => {
       },
       tagPosts: [],
       faq: faq,
+      singlePost: {},
     })
   } catch (err) {
     next(err);
@@ -182,7 +184,7 @@ const prefetchFaq = async (req, res, next) => {
 
 const prefetchData = async (req, res, next) => {
   try {
-    const posts = await blogPosts.get('posts?_embed/');
+    const posts = await blogPosts.get('posts?_embed&per_page=50');
     const tags = await blogPosts.get('tags');
     const btcStats = await coinStats.get('ticker/1/');
     const cloStats = await coinStats.get('ticker/2757/');
@@ -198,6 +200,7 @@ const prefetchData = async (req, res, next) => {
       },
       tagPosts: [],
       faq: [],
+      singlePost: {},
     })
   } catch (err) {
     next(err);
@@ -209,9 +212,14 @@ const getTag = (slug, tags) => {
   return filtered.length > 0 ? filtered[0].id : [];
 }
 
+const getPost = (slug, posts) => {
+  const filtered = posts.filter(elem => elem.slug === slug);
+  return filtered.length > 0 ? filtered[0].id : [];
+}
+
 const prefetchTopic = async (req, res, next) => {
   try {
-    const posts = await blogPosts.get('posts?_embed/');
+    const posts = await blogPosts.get('posts?_embed&per_page=50');
     const tags = await blogPosts.get('tags');
     const btcStats = await coinStats.get('ticker/1/');
     const cloStats = await coinStats.get('ticker/2757/');
@@ -229,11 +237,52 @@ const prefetchTopic = async (req, res, next) => {
       },
       tagPosts: preparePosts(tagPosts.data),
       faq: [],
+      singlePost: {},
+    });
+  } catch (err) {
+    next(err);
+  }
+}
+
+const prefetchPost = async (req, res, next) => {
+  try {
+    const posts = await blogPosts.get('posts?_embed&per_page=50');
+    const tags = await blogPosts.get('tags');
+    const btcStats = await coinStats.get('ticker/1/');
+    const cloStats = await coinStats.get('ticker/2757/');
+    const preparedPosts = preparePosts(posts.data);
+    const postId = getPost(req.params.slug, preparedPosts);
+    const singlePost = await blogPosts.get(`posts/${postId}`);
+    const postComments = await blogPosts.get(`comments/?post=${postId}`);
+    const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
+    handleRender(req, res, {
+      blogPosts: preparedPosts,
+      blogTags: tags.data,
+      marketStats: {
+        btcPrice: btcStats.data.data.quotes.USD.price,
+        cloPrice: cloStats.data.data.quotes.USD.price,
+        volume: cloStats.data.data.quotes.USD.volume_24h,
+        marketCap: cloStats.data.data.quotes.USD.market_cap,
+      },
+      singlePost: {
+        id: singlePost.data.id,
+        title: singlePost.data.title.rendered,
+        description: singlePost.data.excerpt.rendered,
+        content: singlePost.data.content.rendered,
+        date: singlePost.data.date,
+        link: singlePost.data.link,
+        slug: singlePost.data.slug,
+        cover: `${baseImageUrl}/${singlePost.data.better_featured_image.media_details.file}`,
+        comments: postComments.data,
+      },
+      faq: [],
+      tagPosts: [],
     })
   } catch (err) {
     next(err);
   }
 }
+
 
 app.get('*.js', function (req, res, next) {
   req.url = req.url + '.gz';
@@ -251,7 +300,7 @@ app.get('/', prefetchData);
 app.get('/smart-contract/', prefetchData);
 app.get('/cold-staking/', prefetchData);
 app.get('/financial-report/', prefetchData);
-app.get('/blog/post/:slug/', prefetchData);
+app.get('/blog/post/:slug/', prefetchPost);
 app.get('/blog/topic/:slug/', prefetchTopic);
 app.get('/airdrop/', prefetchData);
 app.get('/faq/', prefetchFaq);
@@ -259,7 +308,7 @@ app.get('/community-guidlines/', prefetchData);
 app.get('/:lang(es|en|id|ru)/', prefetchData);
 app.get('/:lang(es|en|id|ru)/faq/', prefetchFaq);
 app.get('/:lang(es|en|id|ru)/blog/', prefetchData);
-app.get('/:lang(es|en|id|ru)/blog/post/:slug/', prefetchData);
+app.get('/:lang(es|en|id|ru)/blog/post/:slug/', prefetchPost);
 app.get('/:lang(es|en|id|ru)/blog/topic/:slug/', prefetchTopic);
 app.get('/:lang(es|en|id|ru)/airdrop/', prefetchData);
 app.get('/:lang(es|en|id|ru)/cold-staking/', prefetchData);

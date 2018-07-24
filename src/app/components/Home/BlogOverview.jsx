@@ -24,6 +24,7 @@ class BlogOverview extends PureComponent {
                     description={post.description}
                     date={post.date}
                     url={post.link}
+                    slug={post.slug}
                     cover={post.cover}
                   />
                 );
