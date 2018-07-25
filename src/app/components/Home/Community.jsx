@@ -103,6 +103,18 @@ class Community extends PureComponent {
                 Discord
               </span>
             </a>
+            <a
+              className='Community-list-element'
+              href='https://t.co/DAWunSR1tm'
+              target='_blank'
+            >
+              <figure className='Community-list-element-figure'>
+                <img src='/image/bitcointalk-icon.svg' alt='Bitcoin Talk'/>
+              </figure>
+              <span className='Community-list-element-text'>
+                Bitcoin Talk
+              </span>
+            </a>
           </div>
         </div>
       </Element>

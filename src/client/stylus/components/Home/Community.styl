@@ -11,10 +11,10 @@
     padding-top 1em
     +from-width($sm)
       grid-gap 30px
-      grid-template-columns repeat(4, 1fr)
+      grid-template-columns repeat(3, 1fr)
       padding-top 2em
     +from-width($md)
-      grid-template-columns repeat(8, 1fr)
+      grid-template-columns repeat(9, 1fr)
     &-element
       color $light-gray
       text-decoration none
@@ -36,3 +36,9 @@
         line-height 1.64
         transition all 150ms ease
         text-align center
+      &-figure
+        width 45px
+        +from-width($sm)
+          width auto
+        img
+          width 100%
