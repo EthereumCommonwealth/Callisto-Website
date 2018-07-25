@@ -9,6 +9,7 @@ const rootReducer = combineReducers(
     tagPosts: mockReducer,
     faq: mockReducer,
     singlePost: mockReducer,
+    messages: mockReducer,
   });
 
 export default rootReducer;

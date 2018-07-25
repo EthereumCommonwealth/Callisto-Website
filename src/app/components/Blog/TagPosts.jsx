@@ -18,6 +18,9 @@ class TagPosts extends PureComponent {
         <div className='PostsList-content container'>
           <div />
           <div className='PostsList-list'>
+            <a href='/blog/' className='Post-back'>
+              <i className='fas fa-long-arrow-alt-left' /> <FormattedMessage id='Blog' />
+            </a>
             <h1 className='PostsList-tag-title'>
               {this.tagName}
             </h1>

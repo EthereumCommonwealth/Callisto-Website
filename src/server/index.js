@@ -93,6 +93,10 @@ app.use(function (req, res, next) {
   next();
 });
 
+const getTranslations = (lang) => {
+  return JSON.parse(fs.readFileSync(`${__dirname}/public/translations/${lang ? lang : 'en'}_translations.json`, 'utf8'));
+}
+
 const preparePosts = (posts) => {
   const elements = posts.map((elem) => {
     const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
@@ -138,6 +142,16 @@ const prepareFaq = async (faq) => {
   return elements;
 }
 
+const getTag = (slug, tags) => {
+  const filtered = tags.filter(elem => elem.slug === slug);
+  return filtered.length > 0 ? filtered[0].id : [];
+}
+
+const getPost = (slug, posts) => {
+  const filtered = posts.filter(elem => elem.slug === slug);
+  return filtered.length > 0 ? filtered[0].id : [];
+}
+
 const getFAQ = async () => {
   let faqObj;
   try {
@@ -163,8 +177,8 @@ const prefetchFaq = async (req, res, next) => {
     const btcStats = await coinStats.get('ticker/1/');
     const cloStats = await coinStats.get('ticker/2757/');
     const faq = await getFAQ();
-
-    handleRender(req, res, {
+    const messages = getTranslations(req.params.lang);
+    handleRender(req, res, messages, {
       blogPosts: preparePosts(posts.data),
       blogTags: tags.data,
       marketStats: {
@@ -176,6 +190,7 @@ const prefetchFaq = async (req, res, next) => {
       tagPosts: [],
       faq: faq,
       singlePost: {},
+      messages,
     })
   } catch (err) {
     next(err);
@@ -188,8 +203,8 @@ const prefetchData = async (req, res, next) => {
     const tags = await blogPosts.get('tags');
     const btcStats = await coinStats.get('ticker/1/');
     const cloStats = await coinStats.get('ticker/2757/');
-
-    handleRender(req, res, {
+    const messages = getTranslations(req.params.lang);
+    handleRender(req, res, messages, {
       blogPosts: preparePosts(posts.data),
       blogTags: tags.data,
       marketStats: {
@@ -201,20 +216,11 @@ const prefetchData = async (req, res, next) => {
       tagPosts: [],
       faq: [],
       singlePost: {},
+      messages,
     })
   } catch (err) {
     next(err);
   }
-}
-
-const getTag = (slug, tags) => {
-  const filtered = tags.filter(elem => elem.slug === slug);
-  return filtered.length > 0 ? filtered[0].id : [];
-}
-
-const getPost = (slug, posts) => {
-  const filtered = posts.filter(elem => elem.slug === slug);
-  return filtered.length > 0 ? filtered[0].id : [];
 }
 
 const prefetchTopic = async (req, res, next) => {
@@ -225,8 +231,9 @@ const prefetchTopic = async (req, res, next) => {
     const cloStats = await coinStats.get('ticker/2757/');
     const tagId = getTag(req.params.slug, tags.data);
     const tagPosts = await blogPosts.get(`posts?tags=${tagId}`);
+    const messages = getTranslations(req.params.lang);
 
-    handleRender(req, res, {
+    handleRender(req, res, messages, {
       blogPosts: preparePosts(posts.data),
       blogTags: tags.data,
       marketStats: {
@@ -238,6 +245,7 @@ const prefetchTopic = async (req, res, next) => {
       tagPosts: preparePosts(tagPosts.data),
       faq: [],
       singlePost: {},
+      messages,
     });
   } catch (err) {
     next(err);
@@ -254,8 +262,16 @@ const prefetchPost = async (req, res, next) => {
     const postId = getPost(req.params.slug, preparedPosts);
     const singlePost = await blogPosts.get(`posts/${postId}`);
     const postComments = await blogPosts.get(`comments/?post=${postId}`);
+    // const author = await blogPosts.get(`users/${singlePost.author}}`)
     const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
+    const messages = getTranslations(req.params.lang);
+
     handleRender(req, res, {
+      title: singlePost.data.title.rendered,
+      description: singlePost.data.excerpt.rendered,
+      image: `${baseImageUrl}/${singlePost.data.better_featured_image.media_details.file}`,
+      url: `https://callisto.network/blog/post/${singlePost.data.slug}/`,
+    }, {
       blogPosts: preparedPosts,
       blogTags: tags.data,
       marketStats: {
@@ -274,10 +290,13 @@ const prefetchPost = async (req, res, next) => {
         slug: singlePost.data.slug,
         cover: `${baseImageUrl}/${singlePost.data.better_featured_image.media_details.file}`,
         comments: postComments.data,
+        url: `https://callisto.network/blog/post/${singlePost.data.slug}/`,
+        // author: author.data,
       },
       faq: [],
       tagPosts: [],
-    })
+      messages,
+    }, true)
   } catch (err) {
     next(err);
   }
@@ -347,7 +366,7 @@ app.post('/send-email', (req, res) => {
 });
 app.get('*', prefetchData);
 
-function handleRender(req, res, initialState) {
+const handleRender = (req, res, messages, initialState, fromBlog = false) => {
   const context = {}
   const store = createStore(rootReducer, initialState, compose(applyMiddleware(thunk)));
   const html = renderToString(
@@ -361,7 +380,7 @@ function handleRender(req, res, initialState) {
     </Provider>
   );
   const preloadedState = store.getState();
-  res.send(renderPage(html, preloadedState, headersInfo(req.originalUrl)));
+  res.send(renderPage(html, preloadedState, headersInfo(req.originalUrl, messages, fromBlog)));
 }
 
 app.listen(port, (err) => {

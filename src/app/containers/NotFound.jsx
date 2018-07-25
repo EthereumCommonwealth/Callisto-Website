@@ -1,13 +1,13 @@
 import React from 'react';
 import { IntlProvider, addLocaleData } from 'react-intl';
+import { connect } from 'react-redux';
 import en from 'react-intl/locale-data/en';
 import Header from '../components/commons/Header';
 import Footer from '../components/commons/Footer';
-import messages from '../constants/messages/enMessages';
 
 addLocaleData([...en]);
 
-const NotFound = ({ match }) => (
+const NotFound = ({ match, messages }) => (
   <IntlProvider locale='en' messages={messages}>
     <div>
       <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
@@ -23,4 +23,10 @@ const NotFound = ({ match }) => (
   </IntlProvider>
 );
 
-export default NotFound;
+function mapStateTopProps(state) {
+  return {
+    messages: state.messages,
+  };
+}
+
+export default connect(mapStateTopProps)(NotFound);

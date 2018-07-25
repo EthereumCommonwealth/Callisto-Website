@@ -1,14 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
-import { FormattedDate } from 'react-intl';
+import { FormattedDate, FormattedMessage } from 'react-intl';
 
 const PostDetails = ({ singlePost }) => {
   return (
     <div className='PostDetails'>
       <div className='PostDetails-content container'>
-        <div />
         <div>
+          <div className='PostDetails-share'>
+            <a
+              className='PostDetails-share-btn'
+              href={`https://www.facebook.com/sharer/sharer.php?u=${singlePost.url}`}
+              target='_blank'
+            >
+              <i className='fab fa-facebook-f' />
+            </a>
+            <a
+              className='PostDetails-share-btn'
+              href={`https://telegram.me/share/url?url=${singlePost.url}&text=${singlePost.title}`}
+              target='_blank'
+            >
+              <i className='fab fa-telegram-plane' />
+            </a>
+            <a
+              className='PostDetails-share-btn'
+              href={`https://twitter.com/intent/tweet?url=${singlePost.url}&text=${singlePost.title}`}
+              target='_blank'
+            >
+              <i className='fab fa-twitter' />
+            </a>
+          </div>
+        </div>
+        <div>
+          <a href='/blog/' className='Post-back'>
+            <i className='fas fa-long-arrow-alt-left' /> <FormattedMessage id='Blog' />
+          </a>
           <h2
             className='Post-title'
             dangerouslySetInnerHTML={{ __html: singlePost.title }}

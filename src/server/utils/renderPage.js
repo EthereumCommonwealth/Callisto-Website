@@ -10,6 +10,9 @@ const renderPage = (html, preloadedState, headers) => {
           <meta property="og:url" content="${headers.url}" />
           <meta property="og:title" content="${headers.title}" />
           <meta property="og:description" content="${headers.description}" />
+          ${headers.image ?
+            `<meta property="og:image" content=${headers.image} />` : ''
+          }
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="CallistoSupport" />
           <meta name="twitter:title" content="${headers.title}" />

@@ -1,15 +1,30 @@
 .PostDetails
   padding-top 1em
   background-color #FFF
+  &-share
+    display none
+    +from-width($md)
+      display grid
+      grid-gap 1em
+      justify-content center
+      position fixed
+      top 225px
+    &-btn
+      display block
+      padding 10px 11px
+      color #fff
+      background-color $green
+      text-align center
+      border-radius 23px
   &-content
     display grid
     grid-gap 1em
-    +from-width($md)
+    +from-width($sm)
       display grid
       grid-template-columns .5fr 8fr .5fr
       justify-content center
-      +from-width($sm)
-        grid-template-columns 2fr 8fr 2fr
+    +from-width($md)
+      grid-template-columns 2fr 8fr 2fr
     .Post-description
       img
           margin .5em 0
@@ -23,6 +38,8 @@
         margin-bottom 1em
         +from-width($md)
           margin-bottom 2em
+      a
+        word-break break-word
       ul
         list-style-type none
         li

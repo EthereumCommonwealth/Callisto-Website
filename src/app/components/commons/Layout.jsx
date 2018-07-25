@@ -1,15 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, addLocaleData } from 'react-intl';
+import { connect } from 'react-redux';
 import { scroller, animateScroll } from 'react-scroll';
 import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
 import es from 'react-intl/locale-data/es';
 import id from 'react-intl/locale-data/id';
-import enMessages from '../../constants/messages/enMessages';
-import ruMessages from '../../constants/messages/ruMessages';
-import esMessages from '../../constants/messages/esMessages';
-import idMessages from '../../constants/messages/idMessages';
 
 addLocaleData([...en, ...ru, ...es, ...id]);
 
@@ -70,29 +67,14 @@ class Layout extends PureComponent {
     }
   }
 
-  getMessages = (lang) => {
-    switch (lang) {
-      case 'es':
-        return esMessages;
-      case 'en':
-        return enMessages;
-      case 'ru':
-        return ruMessages;
-      case 'id':
-        return idMessages;
-      default:
-        return enMessages;
-    }
-  }
-
   render() {
-    const { className, children, match } = this.props;
+    const { className, children, match, messages } = this.props;
     const lang = (match.params && match.params.lang && match.params.lang !== 'en') ?
       match.params.lang : 'en';
     return (
       <IntlProvider
         locale={lang}
-        messages={this.getMessages(lang)}
+        messages={messages}
       >
         <div className={className}>
           {children}
@@ -106,10 +88,17 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   match: PropTypes.object,
   className: PropTypes.string,
+  messages: PropTypes.object,
 };
 
 Layout.defaultProps = {
   className: '',
 };
 
-export default Layout;
+function mapStateTopProps(state) {
+  return {
+    messages: state.messages,
+  };
+}
+
+export default connect(mapStateTopProps)(Layout);
