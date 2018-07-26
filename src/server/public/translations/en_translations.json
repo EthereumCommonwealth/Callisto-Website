@@ -224,5 +224,15 @@
   "airdropTitle": "Callisto (CLO) Airdrop -  Claiming the CLO airdrop",
   "airdropDescription": "What is Callisto Airdrop? Callisto Network (CLO) airdrop is method to airdrop/give away CLO to every ETC holder on March, 5 2018.",
   "contractsTitle": "Free Smart Contract Security Audits for ETH, ETC, EOS blockchains",
-  "contractsDescription": "Full service security audit for Solidity Smart contracts and DApps. Check the architecture of your smart contract, detect vulnerabilities, and ensure full compliance with the business logic."
+  "contractsDescription": "Full service security audit for Solidity Smart contracts and DApps. Check the architecture of your smart contract, detect vulnerabilities, and ensure full compliance with the business logic.",
+  "ColdStakingSmartContract": "Cold Staking smart contract",
+  "FundsLocked": "Funds locked",
+  "LockingPeriodExpired": "Locking period Expired",
+  "ClaimAndKeep": "Staker claim reward and keep stake",
+  "ClaimAndStake": "Staker claim reward and stake",
+  "StakeGeneratingRewards": "Stake will keep generating rewards",
+  "StakerInactive": "Staker inactive for 1 year",
+  "FundsRelease": "Smart contract will release funds",
+  "CanWithdraw": "Staker can withdraw initial stake or reward at any time",
+  "ReleaseInitialStake": "Smart contract release initial stake"
 }

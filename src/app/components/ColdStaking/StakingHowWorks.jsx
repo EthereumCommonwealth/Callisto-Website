@@ -1,6 +1,5 @@
 import React from 'react';
-// import { injectIntl, FormattedMessage } from 'react-intl';
-import { injectIntl } from 'react-intl';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import SectionHeading from '../commons/SectionHeading';
 
 const StakingHowWorks = ({ intl }) => (
@@ -27,7 +26,7 @@ const StakingHowWorks = ({ intl }) => (
             <div className='StakingHowWorks-content-grid-empty' />
             <div className='StakingHowWorks-content-grid-detail has-line'>
               <span className='StakingHowWorks-content-grid-detail-text'>
-                Cold Staking smart contract
+                <FormattedMessage id='ColdStakingSmartContract'/>
               </span>
               <figure className='StakingHowWorks-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -42,7 +41,7 @@ const StakingHowWorks = ({ intl }) => (
             <div className='StakingHowWorks-content-grid-empty' />
             <div className='StakingHowWorks-content-grid-detail has-line'>
               <span className='StakingHowWorks-content-grid-detail-text'>
-                Funds locked
+                <FormattedMessage id='FundsLocked'/>
               </span>
               <figure className='StakingHowWorks-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -61,7 +60,7 @@ const StakingHowWorks = ({ intl }) => (
             </div>
             <div className='StakingHowWorks-content-grid-detail has-line'>
               <span className='StakingHowWorks-content-grid-detail-text'>
-                Locking period Expired
+                <FormattedMessage id='LockingPeriodExpired'/>
               </span>
               <figure className='StakingHowWorks-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -80,7 +79,7 @@ const StakingHowWorks = ({ intl }) => (
             <div className='StakingHowWorks-content-grid-empty' />
             <div className='StakingHowWorks-content-grid-detail has-line'>
               <span className='StakingHowWorks-content-grid-detail-text'>
-                Staker claim reward and keep stake
+                <FormattedMessage id='ClaimAndKeep'/>
               </span>
               <figure className='StakingHowWorks-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -94,7 +93,7 @@ const StakingHowWorks = ({ intl }) => (
           <div className='StakingHowWorks-content-grid-row three-columns full'>
             <div className='StakingHowWorks-content-grid-detail'>
               <span className='StakingHowWorks-content-grid-detail-text'>
-                Staker claim reward and stake
+                <FormattedMessage id='ClaimAndStake'/>
               </span>
               <figure className='StakingHowWorks-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -105,7 +104,7 @@ const StakingHowWorks = ({ intl }) => (
             </div>
             <div className='StakingHowWorks-content-grid-detail has-line'>
               <span className='StakingHowWorks-content-grid-detail-text'>
-                Stake will keep generating rewards
+                <FormattedMessage id='StakeGeneratingRewards'/>
               </span>
               <figure className='StakingHowWorks-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -116,7 +115,7 @@ const StakingHowWorks = ({ intl }) => (
             </div>
             <div className='StakingHowWorks-content-grid-detail'>
               <span className='StakingHowWorks-content-grid-detail-text'>
-                Staker inactive for 1 year
+                <FormattedMessage id='StakerInactive'/>
               </span>
               <figure className='StakingHowWorks-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -129,7 +128,7 @@ const StakingHowWorks = ({ intl }) => (
           <div className='StakingHowWorks-content-grid-row three-columns full'>
             <div className='StakingHowWorks-content-grid-detail has-line'>
               <span className='StakingHowWorks-content-grid-detail-text'>
-                Smart contract will release funds
+                <FormattedMessage id='FundsRelease'/>
               </span>
               <figure className='StakingHowWorks-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -140,7 +139,7 @@ const StakingHowWorks = ({ intl }) => (
             </div>
             <div className='StakingHowWorks-content-grid-detail has-line'>
               <span className='StakingHowWorks-content-grid-detail-text'>
-                Staker can withdraw initial stake or reward at any time
+                <FormattedMessage id='CanWithdraw'/>
               </span>
               <figure className='StakingHowWorks-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
@@ -148,7 +147,7 @@ const StakingHowWorks = ({ intl }) => (
             </div>
             <div className='StakingHowWorks-content-grid-detail has-line'>
               <span className='StakingHowWorks-content-grid-detail-text'>
-                Smart contract release initial stake
+                <FormattedMessage id='ReleaseInitialStake'/>
               </span>
               <figure className='StakingHowWorks-content-grid-detail-triangle-top'>
                 <img src='/image/diagram/triangle.svg' alt='Grid Triangle' />
