@@ -53,7 +53,7 @@ class LangSelector extends Component {
       case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/community-guidlines/':
         return `/${lang}/community-guidlines/`
       default:
-        return `/${lang}`;
+        return `/${lang}/`;
     }
   }
 
