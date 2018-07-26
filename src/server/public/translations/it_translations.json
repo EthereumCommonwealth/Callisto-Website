@@ -224,5 +224,15 @@
   "airdropTitle": "Airdrop di Callisto (CLO) - Sostieni l'airdrop di CLO",
   "airdropDescription": "Cos'è l'Airdrop di Callisto? L'airdrop della Rete Callisto (CLO) è un metodo per fare airdrop/giveaway di CLO ad ogni possessore di ETC al 5 Marzo 2018.",
   "contractsTitle": "Audit di sicurezza degli smart contract gratuiti per le blockchain ETH, ETC, EOS",
-  "contractsDescription": "Audit di sicurezza completo per gli smart contract Solidity e le DApps. Controlla l'architettura del tuo smart contract, rileva le vulnerabilità, e assicurati garantisci la piena conformità con la logica di business."
+  "contractsDescription": "Audit di sicurezza completo per gli smart contract Solidity e le DApps. Controlla l'architettura del tuo smart contract, rileva le vulnerabilità, e assicurati garantisci la piena conformità con la logica di business.",
+  "ColdStakingSmartContract": "Smart contract di Cold Staking",
+  "FundsLocked": "Fondi bloccati",
+  "LockingPeriodExpired": "Periodo di blocco terminato",
+  "ClaimAndKeep": "Staker richiede la ricompensa e mantenere il deposito",
+  "ClaimAndStake": "Lo staker richiede la ricompensa e il deposito",
+  "StakeGeneratingRewards": "Il deposito continuerà a generare ricompense",
+  "StakerInactive": "Staker inattivo per 1 anno",
+  "FundsRelease": "Lo smart contract rilascerà i fondi",
+  "CanWithdraw": "Lo staker può prelevare il deposito iniziale o la ricompensa in qualunque momento",
+  "ReleaseInitialStake": "Lo smart contract rilascia il deposito iniziale"
 }

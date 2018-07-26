@@ -237,7 +237,7 @@ class Footer extends PureComponent {
             <div className='Footer-bottom-content-lang'>
               <LangSelector
                 defaultSelected={this.props.lang}
-                langList={['es', 'en', 'id', 'ru', 'de', 'zh', 'it', 'ko', 'tr', 'vi']}
+                langList={['es', 'en', 'id', 'ru', 'cs', 'de', 'zh', 'it', 'ko', 'tr', 'vi']}
                 toTop
               />
             </div>

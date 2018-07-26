@@ -61,6 +61,12 @@ const getHeadersInfo = (target, messages, fromBlog) => {
         description: messages.homeDescription,
         url: 'https://callisto.network/vi/',
       }
+    case '/cs/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/cs/',
+      }
     // END HOME URLS
 
     // =================== //
@@ -128,6 +134,12 @@ const getHeadersInfo = (target, messages, fromBlog) => {
         description: messages.stakingDescription,
         url: 'https://callisto.network/vi/cold-staking/',
       }
+    case '/cs/cold-staking/':
+      return {
+        title: messages.stakingTitle,
+        description: messages.stakingDescription,
+        url: 'https://callisto.network/cs/cold-staking/',
+      }
     // END COLD STAKING URLS
 
     // =================== //
@@ -194,6 +206,12 @@ const getHeadersInfo = (target, messages, fromBlog) => {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
         url: 'https://callisto.network/vi/smart-contract/',
+      }
+    case '/cs/smart-contract/':
+      return {
+        title: messages.contractsTitle,
+        description: messages.contractsDescription,
+        url: 'https://callisto.network/cs/smart-contract/',
       }
 
     // END SMART CONTRACTS URLS
@@ -263,6 +281,12 @@ const getHeadersInfo = (target, messages, fromBlog) => {
         description: messages.financialDescription,
         url: 'https://callisto.network/vi/financial-report/',
       }
+    case '/cs/financial-report/':
+      return {
+        title: messages.financialTitle,
+        description: messages.financialDescription,
+        url: 'https://callisto.network/cs/financial-report/',
+      }
 
     // END FINANTIAL REPORT
 
@@ -330,6 +354,12 @@ const getHeadersInfo = (target, messages, fromBlog) => {
         title: messages.airdropTitle,
         description: messages.airdropDescription,
         url: 'https://callisto.network/vi/airdrop/',
+      }
+    case '/cs/airdrop/':
+      return {
+        title: messages.airdropTitle,
+        description: messages.airdropDescription,
+        url: 'https://callisto.network/cs/airdrop/',
       }
 
     // END AIRDROP

@@ -224,5 +224,15 @@
   "airdropTitle": "Callisto (CLO) Airdrop -  Beantragen sie Ihren CLO airdrop",
   "airdropDescription": "Was ist Callisto Airdrop? Am 5. März 2018 wurde für alle ETC-Inhaber, durch die Airdrop Methode, Callisto Network (CLO's) ausgegeben.",
   "contractsTitle": "Kostenlose Smart Contract Security Audits für ETH, ETC, EOS Blockchains",
-  "contractsDescription": "Full-Service-Security-Audit für Smart-Contracts und DApps. Wir überprüfen für Sie die Architektur Ihres Smart-Contracts, erkennen Sicherheitslücken und stellen sicher dass die Geschäftslogiken vollständig eingehalten werden."
+  "contractsDescription": "Full-Service-Security-Audit für Smart-Contracts und DApps. Wir überprüfen für Sie die Architektur Ihres Smart-Contracts, erkennen Sicherheitslücken und stellen sicher dass die Geschäftslogiken vollständig eingehalten werden.",
+  "ColdStakingSmartContract": "Cold Staking Smart Contract",
+  "FundsLocked": "Die Coins sind gesperrt",
+  "LockingPeriodExpired": "Sperrzeit abgelaufen",
+  "ClaimAndKeep": "Staker beansprucht die Belohnung und der Einsatz bleibt",
+  "ClaimAndStake": "Staker beansprucht die Belohnung und den Einsatz",
+  "StakeGeneratingRewards": "Der Einsatz wird weiterhin Belohnungen generieren",
+  "StakerInactive": "Staker inaktiv für 1 Jahr",
+  "FundsRelease": "Der Smart-Contract wird den Einsatz wieder freigeben",
+  "CanWithdraw": "Derr Staker kann den anfänglichen Einsatz oder die Belohnung jederzeit zurückziehen",
+  "ReleaseInitialStake": "Der Smart Contract wird den Anfangseinsatz wieder freigeben"
 }

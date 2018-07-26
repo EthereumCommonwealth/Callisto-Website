@@ -102,7 +102,7 @@ class Header extends PureComponent {
                   <div className='Header-menu-mobile-content-top'>
                     <LangSelector
                       defaultSelected={this.props.lang}
-                      langList={['es', 'en', 'id', 'ru', 'de', 'zh', 'it', 'ko', 'tr', 'vi']}
+                      langList={['es', 'en', 'id', 'ru', 'cs', 'de', 'zh', 'it', 'ko', 'tr', 'vi']}
                     />
                     <a className='Header-menu-mobile' onClick={this.handleMenuOpen}>
                       <i className='fas fa-times Header-menu-mobile-icon' />
@@ -184,7 +184,7 @@ class Header extends PureComponent {
               )}
               <LangSelector
                 defaultSelected={this.props.lang}
-                langList={['es', 'en', 'id', 'ru', 'de', 'zh', 'it', 'ko', 'tr', 'vi']}
+                langList={['es', 'en', 'id', 'ru', 'cs', 'de', 'zh', 'it', 'ko', 'tr', 'vi']}
               />
             </ul>
           </nav>

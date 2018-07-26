@@ -3,6 +3,7 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import { connect } from 'react-redux';
 import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
+import cs from 'react-intl/locale-data/cs';
 import es from 'react-intl/locale-data/es';
 import id from 'react-intl/locale-data/id';
 import de from 'react-intl/locale-data/de';
@@ -14,7 +15,7 @@ import vi from 'react-intl/locale-data/vi';
 import Header from '../components/commons/Header';
 import Footer from '../components/commons/Footer';
 
-addLocaleData([...en, ...ru, ...es, ...id, ...de, ...zh, ...it, ...ko, ...tr, ...vi]);
+addLocaleData([...en, ...ru, ...es, ...cs, ...id, ...de, ...zh, ...it, ...ko, ...tr, ...vi]);
 
 const NotFound = ({ match, messages }) => (
   <IntlProvider locale='en' messages={messages}>
