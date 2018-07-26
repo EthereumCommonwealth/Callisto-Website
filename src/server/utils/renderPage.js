@@ -29,15 +29,15 @@ const renderPage = (html, preloadedState, headers) => {
           >
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,
             maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
-          <link rel="stylesheet" href="/main.css" />
+          <link rel="stylesheet" href="/main.css" type="text/css"/>
         </head>
         <body>
            <div id="callisto-network">${html}</div>
           <script>
             window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
           </script>
-          <script src="/vendor.js"></script>
-          <script src="/main.js"></script>
+          <script src="/vendor.js" type="text/javascript"></script>
+          <script src="/main.js" type="text/javascript"></script>
         </body>
     </html>
   `);
