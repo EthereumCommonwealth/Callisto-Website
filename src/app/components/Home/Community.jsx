@@ -75,7 +75,7 @@ class Community extends PureComponent {
             </a>
             <a
               className='Community-list-element'
-              href='https://t.me/CallistoNetworkNews'
+              href='https://t.me/CallistoNetNews'
               target='_blank'
             >
               <i className='fab fa-telegram-plane' />
@@ -112,7 +112,7 @@ class Community extends PureComponent {
                 <img src='/image/bitcointalk-icon.svg' alt='Bitcoin Talk'/>
               </figure>
               <span className='Community-list-element-text'>
-                Bitcoin Talk
+                Bitcointalk
               </span>
             </a>
           </div>
