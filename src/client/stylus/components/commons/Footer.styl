@@ -46,9 +46,7 @@
       display grid
       align-items center
       +from-width($md)
-        grid-template-columns 6fr 2fr 5fr
-      +from-width($xxl)
-        grid-template-columns 6fr 2fr 4fr
+        grid-template-columns 5fr 1fr 6fr
       &-element
         line-height 1.05
         color $dark-gray
@@ -56,8 +54,8 @@
         transition all 150ms ease
         user-select none
         padding 1em 5px
+        font-size 14px
         +from-width($md)
-          font-size 1em
           padding 1em 13px
         &:hover
           color $green
@@ -67,8 +65,8 @@
         color $dark-gray
         padding 1em 5px
         user-select none
+        font-size 14px
         +from-width($md)
-          font-size 1em
           padding 1em 13px
         &:hover
           cursor default

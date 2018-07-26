@@ -7,8 +7,14 @@ import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
 import es from 'react-intl/locale-data/es';
 import id from 'react-intl/locale-data/id';
+import de from 'react-intl/locale-data/de';
+import zh from 'react-intl/locale-data/zh';
+import it from 'react-intl/locale-data/it';
+import ko from 'react-intl/locale-data/ko';
+import tr from 'react-intl/locale-data/tr';
+import vi from 'react-intl/locale-data/vi';
 
-addLocaleData([...en, ...ru, ...es, ...id]);
+addLocaleData([...en, ...ru, ...es, ...id, ...de, ...zh, ...it, ...ko, ...tr, ...vi]);
 
 class Layout extends PureComponent {
 

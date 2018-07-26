@@ -24,6 +24,8 @@ class LangSelector extends Component {
         return `/${lang}/financial-report/`
       case '/blog/':
         return `/${lang}/blog/`
+      case '/blog/post/:slug/':
+        return `/${lang}/blog/post/${match.params.slug}/`
       case '/blog/topic/:slug/':
         return `/${lang}/blog/topic/${match.params.slug}/`
       case '/airdrop/':
@@ -32,21 +34,23 @@ class LangSelector extends Component {
         return `/${lang}/faq/`
       case '/community-guidlines/':
         return `/${lang}/community-guidlines/`
-      case '/:lang(es|en|id|ru)/cold-staking/':
+      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/cold-staking/':
         return `/${lang}/cold-staking/`
-      case '/:lang(es|en|id|ru)/smart-contract/':
+      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/smart-contract/':
         return `/${lang}/smart-contract/`
-      case '/:lang(es|en|id|ru)/financial-report/':
+      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/financial-report/':
         return `/${lang}/financial-report/`
-      case '/:lang(es|en|id|ru)/blog/':
+      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/blog/':
         return `/${lang}/blog/`
-      case '/:lang(es|en|id|ru)/blog/topic/:slug/':
+      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/blog/post/:slug/':
+        return `/${lang}/blog/post/${match.params.slug}/`
+      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/blog/topic/:slug/':
         return `/${lang}/blog/topic/${match.params.slug}/`
-      case '/:lang(es|en|id|ru)/faq/':
+      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/faq/':
         return `/${lang}/faq/`
-      case '/:lang(es|en|id|ru)/airdrop/':
+      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/airdrop/':
         return `/${lang}/airdrop/`
-      case '/:lang(es|en|id|ru)/community-guidlines/':
+      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/community-guidlines/':
         return `/${lang}/community-guidlines/`
       default:
         return `/${lang}`;

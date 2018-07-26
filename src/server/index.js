@@ -324,16 +324,16 @@ app.get('/blog/topic/:slug/', prefetchTopic);
 app.get('/airdrop/', prefetchData);
 app.get('/faq/', prefetchFaq);
 app.get('/community-guidlines/', prefetchData);
-app.get('/:lang(es|en|id|ru)/', prefetchData);
-app.get('/:lang(es|en|id|ru)/faq/', prefetchFaq);
-app.get('/:lang(es|en|id|ru)/blog/', prefetchData);
-app.get('/:lang(es|en|id|ru)/blog/post/:slug/', prefetchPost);
-app.get('/:lang(es|en|id|ru)/blog/topic/:slug/', prefetchTopic);
-app.get('/:lang(es|en|id|ru)/airdrop/', prefetchData);
-app.get('/:lang(es|en|id|ru)/cold-staking/', prefetchData);
-app.get('/:lang(es|en|id|ru)/smart-contract/', prefetchData);
-app.get('/:lang(es|en|id|ru)/financial-report/', prefetchData);
-app.get('/:lang(es|en|id|ru)/community-guidlines/', prefetchData);
+app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/', prefetchData);
+app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/faq/', prefetchFaq);
+app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/blog/', prefetchData);
+app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/blog/post/:slug/', prefetchPost);
+app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/blog/topic/:slug/', prefetchTopic);
+app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/airdrop/', prefetchData);
+app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/cold-staking/', prefetchData);
+app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/smart-contract/', prefetchData);
+app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/financial-report/', prefetchData);
+app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi)/community-guidlines/', prefetchData);
 app.post('/send-email', (req, res) => {
   const transporter = nodeMailer.createTransport({
     host: 'smtp.gmail.com',
