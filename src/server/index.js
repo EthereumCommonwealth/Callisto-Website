@@ -271,6 +271,7 @@ const prefetchPost = async (req, res, next) => {
       description: singlePost.data.excerpt.rendered,
       image: `${baseImageUrl}/${singlePost.data.better_featured_image.media_details.file}`,
       url: `https://callisto.network/blog/post/${singlePost.data.slug}/`,
+      slug: singlePost.data.slug,
     }, {
       blogPosts: preparedPosts,
       blogTags: tags.data,
