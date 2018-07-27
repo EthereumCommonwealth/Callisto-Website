@@ -35,7 +35,7 @@ const InfoContent = ({ lang }) => (
             <FormattedMessage id='InfoContentSecurityDescription' />
           </p>
           <Link
-            to={lang === 'en' ? '/smart-contract/' : `/${lang}/smart-contract/`}
+            to={lang === 'en' ? '/smart-contract-audit/' : `/${lang}/smart-contract-audit/`}
             className='InfoContent-content-top-anchor'
           >
             <i className='fas fa-arrow-right'/> <FormattedMessage id='ReadMore'/>

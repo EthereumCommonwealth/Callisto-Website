@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import Modal from 'react-responsive-modal';
+import { connect } from 'react-redux';
 import axios from 'axios';
 
 class OrderAuditModal extends PureComponent {
@@ -38,7 +39,7 @@ class OrderAuditModal extends PureComponent {
   }
 
   render() {
-    const { open, onClose } = this.props;
+    const { open, onClose, messages } = this.props;
     return (
       <Modal
         key='SmartContractOrderModal'
@@ -49,15 +50,15 @@ class OrderAuditModal extends PureComponent {
         center
       >
         <h2 className='OrderAuditModal-title'>
-          Audit Request
+          {messages.AuditRequest}
         </h2>
         <form className='OrderAuditModal-form' onSubmit={this.sendMail}>
           <h4 className='OrderAuditModal-form-title'>
-            Audit Request
+            {messages.AuditRequest}
           </h4>
           <div className='OrderAuditModal-form-inputs'>
             <label htmlFor='description'>
-              Briefly describe your smart-contract and its main purposes here
+              {messages.OrderAuditModalDescription}
             </label>
             <textarea
               name='description'
@@ -67,11 +68,11 @@ class OrderAuditModal extends PureComponent {
             />
           </div>
           <h4 className='OrderAuditModal-form-title'>
-            Source Code
+            {messages.SourceCode}
           </h4>
           <div className='OrderAuditModal-form-inputs'>
             <label htmlFor='sourceCode'>
-              Give a link to the source code of contracts
+              {messages.OrderAuditModalSourceCodeLabel}
             </label>
             <input
               name='sourceCode'
@@ -82,13 +83,11 @@ class OrderAuditModal extends PureComponent {
             />
           </div>
           <h4 className='OrderAuditModal-form-title'>
-            Disclosure policy
+            {messages.DisclosurePolicyTitle}
           </h4>
           <div className='OrderAuditModal-form-inputs'>
             <label htmlFor='email'>
-              Do you want us to publish the report as it is or to notify you
-              privately in case of finding critical mistakes? Provide your email
-              if you want us to send you a notification
+              {messages.OrderAuditModalDisclosureLabel}
             </label>
             <input
               name='email'
@@ -99,11 +98,11 @@ class OrderAuditModal extends PureComponent {
             />
           </div>
           <h4 className='OrderAuditModal-form-title'>
-            Platform
+            {messages.Platform}
           </h4>
           <div className='OrderAuditModal-form-inputs'>
             <label htmlFor='platform'>
-              In which network will your contract be deployed?
+              {messages.OrderAuditModalPlatformLabel}
             </label>
             <input
               name='platform'
@@ -117,7 +116,7 @@ class OrderAuditModal extends PureComponent {
           <input
             className='OrderAuditModal-submit btn btn-green'
             type='submit'
-            value='Send Message'
+            value={messages.SendMessage}
           />
         </form>
       </Modal>
@@ -125,4 +124,10 @@ class OrderAuditModal extends PureComponent {
   }
 }
 
-export default OrderAuditModal;
+function mapStateToProps(state) {
+  return {
+    messages: state.messages,
+  };
+}
+
+export default connect(mapStateToProps)(OrderAuditModal);

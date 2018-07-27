@@ -37,9 +37,10 @@ const SmartAuthor = ({ intl }) => (
           </p>
         </div>
       </div>
-      <p className='SmartAuthor-bottom'>
-        <FormattedMessage id='SmartAuthorBottom' />
-      </p>
+      <p
+        className='SmartAuthor-bottom'
+        dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: 'SmartAuthorBottom' }) }}
+      />
     </div>
   </div>
 );

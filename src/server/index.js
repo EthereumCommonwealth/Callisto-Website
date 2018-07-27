@@ -316,7 +316,7 @@ app.get('*.css', function (req, res, next) {
 });
 
 app.get('/', prefetchData);
-app.get('/smart-contract/', prefetchData);
+app.get('/smart-contract-audit/', prefetchData);
 app.get('/cold-staking/', prefetchData);
 app.get('/financial-report/', prefetchData);
 app.get('/blog/post/:slug/', prefetchPost);
@@ -331,7 +331,7 @@ app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/post/:slug/', prefetchPos
 app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/topic/:slug/', prefetchTopic);
 app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/airdrop/', prefetchData);
 app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/cold-staking/', prefetchData);
-app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/smart-contract/', prefetchData);
+app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/smart-contract-audit/', prefetchData);
 app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/financial-report/', prefetchData);
 app.get('/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/community-guidlines/', prefetchData);
 app.post('/send-email', (req, res) => {

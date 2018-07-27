@@ -146,72 +146,72 @@ const getHeadersInfo = (target, messages, fromBlog) => {
 
     // Smart Contracts Urls
 
-    case '/smart-contract/':
-    case '/en/smart-contract/':
+    case '/smart-contract-audit/':
+    case '/en/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
-        url: 'https://callisto.network/smart-contract/',
+        url: 'https://callisto.network/smart-contract-audit/',
       }
-    case '/es/smart-contract/':
+    case '/es/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
-        url: 'https://callisto.network/es/smart-contract/',
+        url: 'https://callisto.network/es/smart-contract-audit/',
       }
-    case '/ru/smart-contract/':
+    case '/ru/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
-        url: 'https://callisto.network/ru/smart-contract/',
+        url: 'https://callisto.network/ru/smart-contract-audit/',
       }
-    case '/id/smart-contract/':
+    case '/id/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
-        url: 'https://callisto.network/id/smart-contract/',
+        url: 'https://callisto.network/id/smart-contract-audit/',
       }
-    case '/de/smart-contract/':
+    case '/de/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
-        url: 'https://callisto.network/de/smart-contract/',
+        url: 'https://callisto.network/de/smart-contract-audit/',
       }
-    case '/zh/smart-contract/':
+    case '/zh/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
-        url: 'https://callisto.network/zh/smart-contract/',
+        url: 'https://callisto.network/zh/smart-contract-audit/',
       }
-    case '/it/smart-contract/':
+    case '/it/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
-        url: 'https://callisto.network/it/smart-contract/',
+        url: 'https://callisto.network/it/smart-contract-audit/',
       }
-    case '/ko/smart-contract/':
+    case '/ko/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
-        url: 'https://callisto.network/ko/smart-contract/',
+        url: 'https://callisto.network/ko/smart-contract-audit/',
       }
-    case '/tr/smart-contract/':
+    case '/tr/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
-        url: 'https://callisto.network/tr/smart-contract/',
+        url: 'https://callisto.network/tr/smart-contract-audit/',
       }
-    case '/vi/smart-contract/':
+    case '/vi/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
-        url: 'https://callisto.network/vi/smart-contract/',
+        url: 'https://callisto.network/vi/smart-contract-audit/',
       }
-    case '/cs/smart-contract/':
+    case '/cs/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
-        url: 'https://callisto.network/cs/smart-contract/',
+        url: 'https://callisto.network/cs/smart-contract-audit/',
       }
 
     // END SMART CONTRACTS URLS

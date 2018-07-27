@@ -27,7 +27,9 @@ class Header extends PureComponent {
     return [
       {
         title: this.props.intl.formatMessage({ id: 'Roadmap' }),
-        url: !this.props.fromLanding ? '/#roadmap' : 'roadmap',
+        url: !this.props.fromLanding ?
+          this.props.lang === 'en' ?
+            '/#roadmap' : `/${this.props.lang}/#roadmap` : 'roadmap',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
@@ -37,17 +39,20 @@ class Header extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'Wallers' }),
-        url: !this.props.fromLanding ? '/#wallets' : 'wallets',
+        url: !this.props.fromLanding ?
+          this.props.lang === 'en' ? '/#wallets' : `/${this.props.lang}/#wallets` : 'wallets',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'Exchanges' }),
-        url: !this.props.fromLanding ? '/#exchanges' : 'exchanges',
+        url: !this.props.fromLanding ?
+          this.props.lang === 'en' ? '/#exchanges' : `/${this.props.lang}/#exchanges` : 'exchanges',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'Mining' }),
-        url: !this.props.fromLanding ? '/#mining' : 'mining',
+        url: !this.props.fromLanding ?
+          this.props.lang === 'en' ? '/#mining' : `/${this.props.lang}/#mining` : 'mining',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
@@ -57,12 +62,13 @@ class Header extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'Audit' }),
-        url: this.props.lang === 'en' ? '/smart-contract/' : `/${this.props.lang}/smart-contract/`,
+        url: this.props.lang === 'en' ? '/smart-contract-audit/' : `/${this.props.lang}/smart-contract-audit/`,
         type: 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'Team' }),
-        url: !this.props.fromLanding ? '/#team' : 'team',
+        url: !this.props.fromLanding ?
+          this.props.lang === 'en' ? '/#team' : `/${this.props.lang}/#team` : 'team',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
@@ -78,7 +84,7 @@ class Header extends PureComponent {
     return (
       <header className='Header'>
         <div className='Header-content container'>
-          <Link to='/'>
+          <Link to={this.props.lang === 'en' ? '/' : `/${this.props.lang}/`}>
             <figure className='Header-figure'>
               <img
                 className='Header-logo-desktop'

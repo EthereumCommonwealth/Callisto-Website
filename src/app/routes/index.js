@@ -22,7 +22,7 @@ const Routes = (
       <Route exact path='/blog/topic/:slug/' component={Tag} />
       <Route exact path='/airdrop/' component={Airdrop} />
       <Route exact path='/cold-staking/' component={ColdStaking} />
-      <Route exact path='/smart-contract/' component={SmartContract} />
+      <Route exact path='/smart-contract-audit/' component={SmartContract} />
       <Route exact path='/financial-report/' component={FinantialReport} />
       <Route exact path='/community-guidlines/' component={CommunityGuidlines} />
       <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/' component={Home} />
@@ -32,7 +32,7 @@ const Routes = (
       <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/topic/:slug/' component={Tag} />
       <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/airdrop/' component={Airdrop} />
       <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/cold-staking/' component={ColdStaking} />
-      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/smart-contract/' component={SmartContract} />
+      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/smart-contract-audit/' component={SmartContract} />
       <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/financial-report/' component={FinantialReport} />
       <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/community-guidlines/' component={CommunityGuidlines} />
       <Route component={Notfound} />

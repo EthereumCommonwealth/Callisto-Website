@@ -27,7 +27,7 @@ const routes = [
     component: ColdStaking,
   },
   {
-    path: '/smart-contract/',
+    path: '/smart-contract-audit/',
     exact: true,
     component: SmartContract,
   },
@@ -77,7 +77,7 @@ const routes = [
     component: ColdStaking,
   },
   {
-    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/smart-contract/',
+    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/smart-contract-audit/',
     exact: true,
     component: SmartContract,
   },

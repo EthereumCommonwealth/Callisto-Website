@@ -120,7 +120,7 @@ const Team = ({ intl }) => (
           }
         />
         <TeamMember
-          avatar='/image/avatars/darwino_avatar2.png'
+          avatar='/image/avatars/darwino_avatar.jpg'
           name='Darwino'
           position='Callisto Community Manager & Callisto Indonesia Ambassador'
           socialNetworks={[

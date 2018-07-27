@@ -1,6 +1,6 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import { injectIntl } from 'react-intl';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import SectionHeading from '../commons/SectionHeading';
 import RoadmapElement from '../commons/RoadmapElement';
 
@@ -15,25 +15,25 @@ const Roadmap = ({ intl }) => (
         <RoadmapElement
           title='Q1 2018'
           items={[
-            { name: 'Update ClassicMask with Callisto Network' },
-            { name: 'Snapshot of Ethereum Classic for CLO airdrop 1:1' },
-            { name: 'Launch Testnet 2.0' },
-            { name: 'Research the POS and DPOS protocol implementation possibility.' },
+            { name: intl.formatMessage({ id: 'Q12018.1' }) },
+            { name: intl.formatMessage({ id: 'Q12018.2' }) },
+            { name: intl.formatMessage({ id: 'Q12018.3' }) },
+            { name: intl.formatMessage({ id: 'Q12018.4' }) },
           ]}
           happened
         />
         <RoadmapElement
           title='Q2 2018'
           items={[
-            { name: 'Launch CLO Mainnet (Est. 15 April 2018)' },
-            { name: 'DexNS support for the Callisto protocol' },
-            { name: 'Marketing team creation' },
+            { name: intl.formatMessage({ id: 'Q22018.1' }) },
+            { name: intl.formatMessage({ id: 'Q22018.2' }) },
+            { name: intl.formatMessage({ id: 'Q22018.3' }) },
             {
-              name: 'Launch explorer with advanced features as:',
+              name: intl.formatMessage({ id: 'Q22018.T' }),
               subelements: [
-                { name: 'Readable transactions including the smart contracts instructions' },
-                { name: 'Token explorer' },
-                { name: 'Testnet support (Callisto, Ethereum, Ethereum Classic)/' },
+                { name: intl.formatMessage({ id: 'Q22018.S.1' }) },
+                { name: intl.formatMessage({ id: 'Q22018.S.2' }) },
+                { name: intl.formatMessage({ id: 'Q22018.S.3' }) },
               ],
             },
           ]}
@@ -42,16 +42,16 @@ const Roadmap = ({ intl }) => (
         <RoadmapElement
           title='Q3 2018'
           items={[
-            { name: 'ETC-CLO swap channel implementation' },
+            { name: intl.formatMessage({ id: 'Q32018.1' }) },
           ]}
         />
         <RoadmapElement
           title='Q4 2018'
           items={[
-            { name: 'Planned Hardfork No. 1: Cold staking implementation' },
-            { name: 'eWASM implementation research' },
-            { name: 'New address (c-address) type. Address abstraction implementation.' },
-            { name: 'Experimental SWARM implementation.' },
+            { name: intl.formatMessage({ id: 'Q42018.1' }) },
+            { name: intl.formatMessage({ id: 'Q42018.2' }) },
+            { name: intl.formatMessage({ id: 'Q42018.3' }) },
+            { name: intl.formatMessage({ id: 'Q42018.4' }) },
           ]}
         />
         <div className='Roadmap-content-list-future'>
@@ -66,7 +66,7 @@ const Roadmap = ({ intl }) => (
             </div>
             <div>
               <p className='Roadmap-content-list-future-text'>
-                Researching sidechain implementation
+                <FormattedMessage id='Q12019.1' />
               </p>
             </div>
           </div>
@@ -81,7 +81,7 @@ const Roadmap = ({ intl }) => (
             </div>
             <div>
               <p className='Roadmap-content-list-future-text'>
-                Planned Hardfork No. 2: On-chain governance system
+                <FormattedMessage id='Q22019.1' />
               </p>
             </div>
           </div>
