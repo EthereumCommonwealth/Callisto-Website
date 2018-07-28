@@ -40,7 +40,7 @@ const PostDetails = ({ singlePost }) => {
             </a>
           </div>
         </div>
-        <article>
+        <article className='PostDetails-details'>
           <a href='/blog/' className='Post-back'>
             <i className='fas fa-long-arrow-alt-left' /> <FormattedMessage id='Blog' />
           </a>
@@ -63,23 +63,42 @@ const PostDetails = ({ singlePost }) => {
             className='Post-description'
             dangerouslySetInnerHTML={{ __html: singlePost.content }}
           />
+          <div className='PostDetails-topics'>
+            <span className='PostDetails-topics-title'>
+              <FormattedMessage id='Topics' defaultMessage='Topics' />:
+            </span>
+            {singlePost.topics.length > 0 ?
+              singlePost.topics.map((topic) => (
+                <a
+                  key={topic.id}
+                  className='PostDetails-topics-elem'
+                  href={`/blog/topic/${topic.slug}`}
+                >
+                  {topic.name}
+                </a>
+              )) : null
+            }
+          </div>
           {singlePost.relatedPosts && singlePost.relatedPosts.length > 0 ?
             <div className='PostDetails-related'>
-              {
-                singlePost.relatedPosts.map((post, index) => {
-                  if (index < 2) {
-                    return (
-                      <RelatedPost
-                        key={post.id}
-                        title={post.title}
-                        description={post.description}
-                        slug={post.slug}
-                      />
-                    );
-                  }
-                  return null;
-                })
-              }
+              <h3 className='PostDetails-related-title'>Related Posts: </h3>
+              <div className='PostDetails-related-elems'>
+                {
+                  singlePost.relatedPosts.map((post, index) => {
+                    if (index < 2) {
+                      return (
+                        <RelatedPost
+                          key={post.id}
+                          title={post.title}
+                          description={post.description}
+                          slug={post.slug}
+                        />
+                      );
+                    }
+                    return null;
+                  })
+                }
+              </div>
             </div> : null
           }
           <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />

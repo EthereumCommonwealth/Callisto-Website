@@ -14,6 +14,20 @@ const getPost = (slug, posts) => {
   return filtered.length > 0 ? filtered[0].id : [];
 }
 
+const getTags = (topics, tags) => {
+  const postTags = [];
+  for (let i = 0; i < tags.length; i++) {
+    if (topics.indexOf(tags[i].id) !== -1) {
+      postTags.push({
+        id: tags[i].id,
+        name: tags[i].name,
+        slug: tags[i].slug,
+      });
+    }
+  }
+  return postTags;
+}
+
 const prepareRelated = (relatedPosts, posts) => {
   const related = [];
   for (let i = 0; i < relatedPosts.length; i++) {
@@ -27,7 +41,7 @@ const prepareRelated = (relatedPosts, posts) => {
   return related;
 }
 
-const preparePost = (post, baseImageUrl, posts) => {
+const preparePost = (post, baseImageUrl, posts, tags) => {
   return {
     id: post.id,
     title: post.title.rendered,
@@ -38,7 +52,8 @@ const preparePost = (post, baseImageUrl, posts) => {
     slug: post.slug,
     cover: `${baseImageUrl}/${post.better_featured_image.media_details.file}`,
     url: `https://callisto.network/blog/post/${post.slug}/`,
-    relatedPosts: prepareRelated(post['jetpack-related-posts'], posts)
+    relatedPosts: prepareRelated(post['jetpack-related-posts'], posts),
+    topics: getTags(post.tags, tags),
     // author: author.data,
   }
 }
@@ -64,7 +79,7 @@ const prefetchPost = async (req, res, next) => {
         volume: cloStats.data.data.quotes.USD.volume_24h,
         marketCap: cloStats.data.data.quotes.USD.market_cap,
       },
-      singlePost: preparePost(singlePost.data, baseImageUrl, posts.data),
+      singlePost: preparePost(singlePost.data, baseImageUrl, posts.data, tags.data),
       faq: [],
       tagPosts: [],
       messages,
