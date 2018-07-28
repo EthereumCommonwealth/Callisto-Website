@@ -1,9 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
+import { DiscussionEmbed } from 'disqus-react';
 import { FormattedDate, FormattedMessage } from 'react-intl';
 
 const PostDetails = ({ singlePost }) => {
+  const disqusShortname = singlePost.slug;
+  const disqusConfig = {
+    url: singlePost.url,
+    identifier: singlePost.id,
+    title: singlePost.title,
+  };
   return (
     <div className='PostDetails'>
       <div className='PostDetails-content container'>
@@ -55,6 +62,7 @@ const PostDetails = ({ singlePost }) => {
             className='Post-description'
             dangerouslySetInnerHTML={{ __html: singlePost.content }}
           />
+          <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
         </div>
         <div />
       </div>
