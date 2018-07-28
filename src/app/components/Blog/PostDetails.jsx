@@ -54,7 +54,7 @@ const PostDetails = ({ singlePost }) => {
               year='numeric'
               month='long'
               day='2-digit'
-            />
+            />  <span className='Post-author'>{singlePost.author}</span>
           </div>
           <figure className='Post-figure'>
             <img src={singlePost.cover} alt={singlePost.title}/>

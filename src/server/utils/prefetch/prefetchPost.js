@@ -54,7 +54,7 @@ const preparePost = (post, baseImageUrl, posts, tags) => {
     url: `https://callisto.network/blog/post/${post.slug}/`,
     relatedPosts: prepareRelated(post['jetpack-related-posts'], posts),
     topics: getTags(post.tags, tags),
-    // author: author.data,
+    author: post._embedded.author[0].name,
   }
 }
 
@@ -66,8 +66,7 @@ const prefetchPost = async (req, res, next) => {
     const cloStats = await coinStats.get('ticker/2757/');
     const preparedPosts = preparePosts(posts.data);
     const postId = getPost(req.params.slug, preparedPosts);
-    const singlePost = await blogPosts.get(`posts/${postId}`);
-    // const author = await blogPosts.get(`users/${singlePost.author}}`)
+    const singlePost = await blogPosts.get(`posts/${postId}?_embed`);
     const messages = getTranslations(req.params.lang);
     const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
     const initialState = {
