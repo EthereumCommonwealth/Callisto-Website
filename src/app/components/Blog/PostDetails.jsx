@@ -5,7 +5,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import { FormattedDate, FormattedMessage } from 'react-intl';
 
 const PostDetails = ({ singlePost }) => {
-  const disqusShortname = singlePost.slug;
+  const disqusShortname = 'callisto-blog';
   const disqusConfig = {
     url: singlePost.url,
     identifier: singlePost.id,

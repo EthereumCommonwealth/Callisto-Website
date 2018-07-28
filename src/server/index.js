@@ -81,7 +81,6 @@ if (ENV.isDevelopment()) {
   app.use(helmet());
   app.disable('x-powered-by');
 }
-
 app.use(express.static(__dirname + '/public'));
 app.use(favicon(__dirname + '/public/favicon.png'));
 app.use(bodyParser.json());
