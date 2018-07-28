@@ -9,6 +9,21 @@ const getPost = (slug, posts) => {
   return filtered.length > 0 ? filtered[0].id : [];
 }
 
+const preparePost = (post, baseImageUrl) => {
+  return {
+    id: post.id,
+    title: post.title.rendered,
+    description: post.excerpt.rendered,
+    content: post.content.rendered,
+    date: post.date,
+    link: post.link,
+    slug: post.slug,
+    cover: `${baseImageUrl}/${post.better_featured_image.media_details.file}`,
+    url: `https://callisto.network/blog/post/${post.slug}/`,
+    // author: author.data,
+  }
+}
+
 const prefetchPost = async (req, res, next) => {
   try {
     const posts = await blogPosts.get('posts?_embed&per_page=50');
@@ -18,18 +33,10 @@ const prefetchPost = async (req, res, next) => {
     const preparedPosts = preparePosts(posts.data);
     const postId = getPost(req.params.slug, preparedPosts);
     const singlePost = await blogPosts.get(`posts/${postId}`);
-    const postComments = await blogPosts.get(`comments/?post=${postId}`);
     // const author = await blogPosts.get(`users/${singlePost.author}}`)
-    const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
     const messages = getTranslations(req.params.lang);
-
-    handleRender(req, res, {
-      title: singlePost.data.title.rendered,
-      description: singlePost.data.excerpt.rendered,
-      image: `${baseImageUrl}/${singlePost.data.better_featured_image.media_details.file}`,
-      url: `https://callisto.network/blog/post/${singlePost.data.slug}/`,
-      slug: singlePost.data.slug,
-    }, {
+    const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
+    const initialState = {
       blogPosts: preparedPosts,
       blogTags: tags.data,
       marketStats: {
@@ -38,23 +45,21 @@ const prefetchPost = async (req, res, next) => {
         volume: cloStats.data.data.quotes.USD.volume_24h,
         marketCap: cloStats.data.data.quotes.USD.market_cap,
       },
-      singlePost: {
-        id: singlePost.data.id,
-        title: singlePost.data.title.rendered,
-        description: singlePost.data.excerpt.rendered,
-        content: singlePost.data.content.rendered,
-        date: singlePost.data.date,
-        link: singlePost.data.link,
-        slug: singlePost.data.slug,
-        cover: `${baseImageUrl}/${singlePost.data.better_featured_image.media_details.file}`,
-        comments: postComments.data,
-        url: `https://callisto.network/blog/post/${singlePost.data.slug}/`,
-        // author: author.data,
-      },
+      singlePost: preparePost(singlePost.data, baseImageUrl),
       faq: [],
       tagPosts: [],
       messages,
-    }, true)
+    };
+
+    const blogMessages = {
+      title: singlePost.data.title.rendered,
+      description: singlePost.data.excerpt.rendered,
+      image: `${baseImageUrl}/${singlePost.data.better_featured_image.media_details.file}`,
+      url: `https://callisto.network/blog/post/${singlePost.data.slug}/`,
+      slug: singlePost.data.slug,
+    }
+
+    handleRender(req, res, initialState, blogMessages, 'post')
   } catch (err) {
     next(err);
   }

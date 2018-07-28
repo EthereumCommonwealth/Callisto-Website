@@ -10,7 +10,7 @@ import Routes from '../../app/routes/serverRoutes.js';
 import headersInfo from './headersInfo';
 import renderPage from './renderPage';
 
-const handleRender = (req, res, messages, initialState, fromBlog = false) => {
+const handleRender = (req, res, initialState, messages, pageContext = false) => {
   const context = {}
   const store = createStore(rootReducer, initialState, compose(applyMiddleware(thunk)));
   const html = renderToString(
@@ -24,7 +24,7 @@ const handleRender = (req, res, messages, initialState, fromBlog = false) => {
     </Provider>
   );
   const preloadedState = store.getState();
-  res.send(renderPage(html, preloadedState, headersInfo(req.originalUrl, messages, fromBlog)));
+  res.send(renderPage(html, preloadedState, headersInfo(req.originalUrl, messages, pageContext)));
 }
 
 export default handleRender;

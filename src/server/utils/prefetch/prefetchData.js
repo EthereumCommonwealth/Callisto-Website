@@ -11,7 +11,7 @@ const prefetchData = async (req, res, next) => {
     const btcStats = await coinStats.get('ticker/1/');
     const cloStats = await coinStats.get('ticker/2757/');
     const messages = getTranslations(req.params.lang);
-    handleRender(req, res, messages, {
+    const initialState = {
       blogPosts: preparePosts(posts.data),
       blogTags: tags.data,
       marketStats: {
@@ -24,7 +24,8 @@ const prefetchData = async (req, res, next) => {
       faq: [],
       singlePost: {},
       messages,
-    })
+    };
+    handleRender(req, res, initialState, messages);
   } catch (err) {
     next(err);
   }

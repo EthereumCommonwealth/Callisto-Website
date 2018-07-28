@@ -19,7 +19,7 @@ const prefetchTopic = async (req, res, next) => {
     const tagPosts = await blogPosts.get(`posts?tags=${tagId}`);
     const messages = getTranslations(req.params.lang);
 
-    handleRender(req, res, messages, {
+    const initialState = {
       blogPosts: preparePosts(posts.data),
       blogTags: tags.data,
       marketStats: {
@@ -32,7 +32,9 @@ const prefetchTopic = async (req, res, next) => {
       faq: [],
       singlePost: {},
       messages,
-    });
+    };
+
+    handleRender(req, res, initialState, messages);
   } catch (err) {
     next(err);
   }
