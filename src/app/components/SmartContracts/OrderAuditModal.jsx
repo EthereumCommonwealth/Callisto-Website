@@ -9,6 +9,7 @@ class OrderAuditModal extends PureComponent {
     sourceCode: '',
     email: '',
     platform: '',
+    emailSent: false,
   }
 
   onChange = event => {
@@ -30,8 +31,9 @@ class OrderAuditModal extends PureComponent {
           sourceCode: '',
           email: '',
           platform: '',
+          emailSent: true,
         });
-        this.props.onClose();
+        setTimeout(() => { this.props.onClose(); }, 3000);
       })
       .catch(function (error) {
         console.log(error);
