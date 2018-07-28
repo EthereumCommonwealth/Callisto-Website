@@ -34,7 +34,14 @@ const prefetchTopic = async (req, res, next) => {
       messages,
     };
 
-    handleRender(req, res, initialState, messages);
+    const topicMessages = {
+      title: messages.homeTitle,
+      description: messages.homeDescription,
+      url: `https://callisto.network/blog/topic/${req.params.slug}/`,
+      slug: req.params.slug,
+    }
+
+    handleRender(req, res, initialState, topicMessages, 'topic');
   } catch (err) {
     next(err);
   }

@@ -493,9 +493,17 @@ const getHeadersInfo = (target, messages, context) => {
          description: messages.description,
          image: messages.image,
          url: messages.url,
-         baseUrl: `/blog/post/${messages.slug}`,
+         baseUrl: `/blog/post/${messages.slug}/`,
        }
       }
+      if (context === 'topic') {
+        return {
+          title: messages.title,
+          description: messages.description,
+          url: messages.url,
+          baseUrl: `/blog/topic/${messages.slug}/`,
+        }
+       }
       return {
         title: messages.homeTitle,
         description: messages.homeDescription,

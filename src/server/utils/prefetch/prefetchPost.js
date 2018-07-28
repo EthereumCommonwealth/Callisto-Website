@@ -59,7 +59,7 @@ const prefetchPost = async (req, res, next) => {
       slug: singlePost.data.slug,
     }
 
-    handleRender(req, res, initialState, blogMessages, 'post')
+    handleRender(req, res, initialState, blogMessages, 'blog')
   } catch (err) {
     next(err);
   }
