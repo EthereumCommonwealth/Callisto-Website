@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 import { DiscussionEmbed } from 'disqus-react';
 import { FormattedDate, FormattedMessage } from 'react-intl';
+import RelatedPost from './RelatedPost';
 
 const PostDetails = ({ singlePost }) => {
   const disqusShortname = 'callisto-blog';
@@ -39,7 +40,7 @@ const PostDetails = ({ singlePost }) => {
             </a>
           </div>
         </div>
-        <div>
+        <article>
           <a href='/blog/' className='Post-back'>
             <i className='fas fa-long-arrow-alt-left' /> <FormattedMessage id='Blog' />
           </a>
@@ -62,8 +63,27 @@ const PostDetails = ({ singlePost }) => {
             className='Post-description'
             dangerouslySetInnerHTML={{ __html: singlePost.content }}
           />
+          {singlePost.relatedPosts && singlePost.relatedPosts.length > 0 ?
+            <div className='PostDetails-related'>
+              {
+                singlePost.relatedPosts.map((post, index) => {
+                  if (index < 2) {
+                    return (
+                      <RelatedPost
+                        key={post.id}
+                        title={post.title}
+                        description={post.description}
+                        slug={post.slug}
+                      />
+                    );
+                  }
+                  return null;
+                })
+              }
+            </div> : null
+          }
           <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
-        </div>
+        </article>
         <div />
       </div>
     </div>

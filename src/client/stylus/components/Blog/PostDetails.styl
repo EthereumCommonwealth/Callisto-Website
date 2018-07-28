@@ -40,6 +40,7 @@
           margin-bottom 2em
       a
         word-break break-word
+        text-decoration none
       ul
         list-style-type none
         li
@@ -65,3 +66,28 @@
             color $green
             position absolute
             left -2em
+  &-related
+    padding 2em 0
+    display grid
+    border-top solid 1px #F2F2F2
+    grid-gap 1em
+    +from-width($md)
+      grid-template-columns 1fr 1fr
+    .RelatedPost
+      display grid
+      grid-template-rows 40px 1fr
+      +from-width($md)
+        grid-template-rows 60px 1fr
+      &-anchor
+        text-decoration none
+      &-title
+        color $dark-blue
+        line-height 1.41
+        font-weight 500
+        margin 0
+        +from-width($md)
+          font-size 22px
+      &-description
+        color $dark-gray
+        margin-top 19px
+        line-height 1.64
