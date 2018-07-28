@@ -54,6 +54,10 @@ const Team = ({ intl }) => (
               prefix: 'fab fa-bitcoin',
               url: 'https://bitcointalk.org/index.php?action=profile;u=1147564',
             },
+            {
+              prefix: 'far fa-envelope',
+              url: 'mailto:yograterol@callisto.network'
+            },
           ]}
           bio={
             `
@@ -78,6 +82,10 @@ const Team = ({ intl }) => (
             {
               prefix: 'fab fa-github',
               url: 'https://github.com/sampol18/',
+            },
+            {
+              prefix: 'far fa-envelope',
+              url: 'mailto:s@protonmail.com'
             },
             {
               prefix: 'fab fa-linkedin-in',
@@ -106,6 +114,10 @@ const Team = ({ intl }) => (
               url: 'https://github.com/sneg55',
             },
             {
+              prefix: 'far fa-envelope',
+              url: 'mailto:nsawinyh@callisto.network '
+            },
+            {
               prefix: 'fab fa-linkedin-in',
               url: 'https://www.linkedin.com/in/sawinyh/',
             },
@@ -121,12 +133,20 @@ const Team = ({ intl }) => (
         />
         <TeamMember
           avatar='/image/avatars/darwino_avatar.jpg'
-          name='Darwino'
+          name='Darwin Ongko'
           position='Callisto Community Manager & Callisto Indonesia Ambassador'
           socialNetworks={[
             {
               prefix: 'fab fa-telegram-plane',
               url: 'https://t.me/Darwino'
+            },
+            {
+              prefix: 'far fa-envelope',
+              url: 'mailto:darwino@callisto.network',
+            },
+            {
+              prefix: 'fab fa-instagram',
+              url: 'https://www.instagram.com/darwinongko/',
             },
           ]}
           bio={
@@ -166,7 +186,7 @@ const Team = ({ intl }) => (
           }
         />
         <TeamMember
-          avatar='/image/avatars/methw_avatar.png'
+          avatar='/image/avatars/methw_avatar.jpeg'
           name='Methw - Nug'
           position='Documentation Writer '
           socialNetworks={[

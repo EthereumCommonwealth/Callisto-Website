@@ -4,6 +4,7 @@ import { Link as ScrollTo } from 'react-scroll';
 import PropTypes from 'prop-types';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import LangSelector from './LangSelector';
+import { langsArray } from '../../constants/';
 
 class Header extends PureComponent {
 
@@ -14,13 +15,6 @@ class Header extends PureComponent {
   handleMenuOpen = event => {
     event.preventDefault();
     this.setState({ mobileMenuOpened: !this.state.mobileMenuOpened });
-    // this.setState({ mobileMenuOpened: !this.state.mobileMenuOpened }, () => {
-    //   if (this.state.mobileMenuOpened) {
-    //     document.body.classList = 'noScroll';
-    //   } else {
-    //     document.body.classList = '';
-    //   }
-    // });
   }
 
   get menuElements() {
@@ -108,7 +102,7 @@ class Header extends PureComponent {
                   <div className='Header-menu-mobile-content-top'>
                     <LangSelector
                       defaultSelected={this.props.lang}
-                      langList={['es', 'en', 'id', 'ru', 'cs', 'de', 'zh', 'it', 'ko', 'tr', 'vi']}
+                      langList={langsArray}
                     />
                     <a className='Header-menu-mobile' onClick={this.handleMenuOpen}>
                       <i className='fas fa-times Header-menu-mobile-icon' />
@@ -190,7 +184,7 @@ class Header extends PureComponent {
               )}
               <LangSelector
                 defaultSelected={this.props.lang}
-                langList={['es', 'en', 'id', 'ru', 'cs', 'de', 'zh', 'it', 'ko', 'tr', 'vi']}
+                langList={langsArray}
               />
             </ul>
           </nav>

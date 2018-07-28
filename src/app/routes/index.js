@@ -11,6 +11,7 @@ import Faq from '../containers/Faq';
 import Post from '../containers/Post';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
 import Notfound from '../containers/NotFound';
+import { langs } from '../constants/';
 
 const Routes = (
   <BrowserRouter>
@@ -25,16 +26,16 @@ const Routes = (
       <Route exact path='/smart-contract-audit/' component={SmartContract} />
       <Route exact path='/financial-report/' component={FinantialReport} />
       <Route exact path='/community-guidlines/' component={CommunityGuidlines} />
-      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/' component={Home} />
-      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/faq/' component={Faq} />
-      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/' component={Blog} />
-      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/post/:slug/' component={Post} />
-      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/topic/:slug/' component={Tag} />
-      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/airdrop/' component={Airdrop} />
-      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/cold-staking/' component={ColdStaking} />
-      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/smart-contract-audit/' component={SmartContract} />
-      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/financial-report/' component={FinantialReport} />
-      <Route exact path='/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/community-guidlines/' component={CommunityGuidlines} />
+      <Route exact path={`/:lang${langs}/`} component={Home} />
+      <Route exact path={`/:lang${langs}/faq/`} component={Faq} />
+      <Route exact path={`/:lang${langs}/blog/`} component={Blog} />
+      <Route exact path={`/:lang${langs}/blog/post/:slug/`} component={Post} />
+      <Route exact path={`/:lang${langs}/blog/topic/:slug/`} component={Tag} />
+      <Route exact path={`/:lang${langs}/airdrop/`} component={Airdrop} />
+      <Route exact path={`/:lang${langs}/cold-staking/`} component={ColdStaking} />
+      <Route exact path={`/:lang${langs}/smart-contract-audit/`} component={SmartContract} />
+      <Route exact path={`/:lang${langs}/financial-report/`} component={FinantialReport} />
+      <Route exact path={`/:lang${langs}/community-guidlines/`} component={CommunityGuidlines} />
       <Route component={Notfound} />
     </Switch>
   </BrowserRouter>

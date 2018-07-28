@@ -33,6 +33,16 @@ const ExchangeList = () => (
         </a>
       </figure>
       <figure className='ExchangeList-content-figure'>
+        <a href='https://www.antriex.com/' target='_blank'>
+          <img src='/image/exchanges/antriex.svg' alt='Andriex' />
+        </a>
+      </figure>
+      <figure className='ExchangeList-content-figure'>
+        <a href='https://www.kairex.com/' target='_blank'>
+          <img src='/image/exchanges/kairex.svg' alt='Kairex' />
+        </a>
+      </figure>
+      <figure className='ExchangeList-content-figure'>
         <img src='/image/exchanges/hitBTC.png' alt='HitBTC' />
         <span className='ExchangeList-content-soon'>
           <FormattedMessage id='ComingSoon' />

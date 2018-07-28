@@ -4,6 +4,7 @@ import { Link as ScrollTo } from 'react-scroll';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import LangSelector from './LangSelector';
+import { langsArray } from '../../constants/';
 
 class Footer extends PureComponent {
 
@@ -237,7 +238,7 @@ class Footer extends PureComponent {
             <div className='Footer-bottom-content-lang'>
               <LangSelector
                 defaultSelected={this.props.lang}
-                langList={['es', 'en', 'id', 'ru', 'cs', 'de', 'zh', 'it', 'ko', 'tr', 'vi']}
+                langList={langsArray}
                 toTop
               />
             </div>

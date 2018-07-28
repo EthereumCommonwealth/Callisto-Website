@@ -9,6 +9,7 @@ import Faq from '../containers/Faq';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
 import Post from '../containers/Post';
 import Notfound from '../containers/NotFound';
+import { langs } from '../constants/';
 
 const routes = [
   {
@@ -62,52 +63,52 @@ const routes = [
     component: CommunityGuidlines,
   },
   {
-    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/',
+    path: `/:lang${langs}/`,
     exact: true,
     component: Home,
   },
   {
-    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/faq',
+    path: `/:lang${langs}/faq/`,
     exact: true,
     component: Faq,
   },
   {
-    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/cold-staking/',
+    path: `/:lang${langs}/cold-staking/`,
     exact: true,
     component: ColdStaking,
   },
   {
-    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/smart-contract-audit/',
+    path: `/:lang${langs}/smart-contract-audit/`,
     exact: true,
     component: SmartContract,
   },
   {
-    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/financial-report/',
+    path: `/:lang${langs}/financial-report/`,
     exact: true,
     component: FinantialReport,
   },
   {
-    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/',
+    path: `/:lang${langs}/blog/`,
     exact: true,
     component: Blog,
   },
   {
-    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/post/:slug',
+    path: `/:lang${langs}/blog/post/:slug/`,
     exact: true,
     component: Post,
   },
   {
-    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/topic/:slug',
+    path: `/:lang${langs}/blog/topic/:slug/`,
     exact: true,
     component: Tag,
   },
   {
-    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/airdrop/',
+    path: `/:lang${langs}/airdrop/`,
     exact: true,
     component: Airdrop,
   },
   {
-    path: '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/community-guidlines/',
+    path: `/:lang${langs}/community-guidlines/`,
     exact: true,
     component: CommunityGuidlines,
   },
