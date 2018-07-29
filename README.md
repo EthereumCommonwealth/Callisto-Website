@@ -3,7 +3,7 @@
 ## Instalation instructions:
 
 ### Node
-#### First install node 8.11.2
+#### First install node 8.11.3
 
 You can use `nvm` and run `nvm i`
 
