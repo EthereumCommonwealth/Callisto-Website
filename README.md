@@ -1,6 +1,6 @@
 # Callisto Network WebSite 🎇
 
-##Instalation instructions:
+## Instalation instructions:
 
 ### Node
 #### First install node 8.11.2
