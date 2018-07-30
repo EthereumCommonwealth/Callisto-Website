@@ -32,7 +32,7 @@ class Footer extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'OfficiallyChecker' }),
-        url: 'https://github.com/EthereumCommonwealth/officiality.checker',
+        url: 'https://checker.callisto.network',
         type: 'anchor',
       },
     ];
@@ -243,7 +243,11 @@ class Footer extends PureComponent {
               />
             </div>
             <div className='Footer-bottom-content-links'>
-              <a href='/media-kit' target='_blank' className='Footer-bottom-content-element'>
+              <a
+                href='https://github.com/EthereumCommonwealth/Callisto-Media-Kit'
+                target='_blank'
+                className='Footer-bottom-content-element'
+              >
                 <FormattedMessage id='Mediakit' />
               </a>
               <Link to='/privacy-policy' className='Footer-bottom-content-element'>
