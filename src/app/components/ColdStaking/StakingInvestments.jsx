@@ -18,7 +18,8 @@ class StakingInvestments extends Component {
   }
 
   calculateStaking = (rewardPool, month, totalSuply) => {
-    return ((rewardPool * month * this.state.stakingDeposit) / (this.calculatePercent(totalSuply))).toFixed(2)
+    const { stakingDeposit } = this.state;
+    return ((rewardPool * month * stakingDeposit) / (this.calculatePercent(totalSuply)) + stakingDeposit * (month - 1)).toFixed(2)
   }
 
   handleChange = event => {
