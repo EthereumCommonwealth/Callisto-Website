@@ -13,7 +13,7 @@ const ExchangeList = () => (
         </a>
       </figure>
       <figure className='ExchangeList-content-figure'>
-        <a href='http://stocks.exchange/' target='_blank'>
+        <a href='https://app.stocks.exchange/en/basic-trade/pair/BTC/CLO/1D' target='_blank'>
           <img src='/image/exchanges/stocksExchange.svg' alt='Stocks Exchange' />
         </a>
       </figure>
