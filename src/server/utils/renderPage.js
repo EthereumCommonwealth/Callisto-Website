@@ -4,7 +4,7 @@ const renderPage = (html, preloadedState, headers) => {
       <html>
         <head>
           <title>${headers.title}</title>
-          <meta name="robots" content="noindex,nofollow">
+          ${process.env.NODE_ENV !== 'production' ? '<meta name="robots" content="noindex,nofollow">' : ''}
           <meta name="title" content="${headers.title}">
           <meta name="description" content="${headers.description}">
           <meta property="og:url" content="${headers.url}" />
