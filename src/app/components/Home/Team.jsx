@@ -34,7 +34,7 @@ const Team = ({ intl }) => (
           }
         />
         <TeamMember
-          avatar='/image/avatars/yohan_avatar.jpeg'
+          avatar='/image/avatars/yohan_avatar.jpg'
           name='Yohan Graterol'
           position='CTO & Main Callisto Developer'
           socialNetworks={[
@@ -232,6 +232,34 @@ const Team = ({ intl }) => (
               Motivated, working as an IT project manager with more than 13 years
               industry experience. From May 2016, owner of ProffeeCa. Enthusiastic
               and love to learn new things
+            `
+          }
+        />
+        <TeamMember
+          avatar='/image/avatars/yuriy_avatar.jpg'
+          name='Yuriy Kharytoshyn'
+          position='Security Auditing Manager'
+          socialNetworks={[
+            {
+              prefix: 'fab fa-telegram-plane',
+              url: 'https://t.me/yuriy77k',
+            },
+            {
+              prefix: 'far fa-envelope',
+              url: 'mailto:yuriy77k@gmail.com',
+            },
+            {
+              prefix: 'fab fa-github',
+              url: 'https://github.com/yuriy77k',
+            },
+          ]}
+          bio={
+            `
+              I’m Information Security expert with over 18 years experience.
+              Backend Developer (C/C++, Python, PHP, Assembler) of InfoSec
+              related projects. Since 2016, focused on Blockchain technologies
+              and Smart contract security. A Master of Science (M.Sc.) in
+              Computer Science and Мathematic.
             `
           }
         />
