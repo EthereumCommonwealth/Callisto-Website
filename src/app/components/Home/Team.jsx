@@ -28,9 +28,11 @@ const Team = ({ intl }) => (
           ]}
           bio={
             `
-              My main specialization is information security. Ethereum smart-contracts
-              developer from its first days. Creator of ERC223 token standard.
-              Founder of DEX ICO and Ethereum Commonwealth. Ex-security auditor.`
+              My main specialty is information security. I’ve been an Ethereum
+              smart-contracts developer since its first days. I created the ERC223
+              token standard and founded DEX ICO and the Ethereum Commonwealth.
+              I was formerly a security auditor.
+            `
           }
         />
         <TeamMember
@@ -61,8 +63,9 @@ const Team = ({ intl }) => (
           ]}
           bio={
             `
-              Hi, I’m Backend Developer (Python and Go) over seven years, I have
-              worked for three years as Head of Product. Cryptocurrency world is my passion.
+              Hi, I’m a backend developer (Python and Go) with over seven years of
+              experience. I have worked for as a Head of Product for three years.
+              The cryptocurrency world is my passion.
             `
           }
         />
@@ -94,9 +97,10 @@ const Team = ({ intl }) => (
           ]}
           bio={
             `
-              Skilled in the Frontend  development Environment with knowledge in
-              HTML5/CSS3, Javascript (React JS) and Backend Environments with Node.js.
-              Worked in several important startups such as Platzi or GoRead.
+              Skilled in the Frontend development Environment with knowledge
+              in HTML5/CSS3, Javascript (React JS) and Backend Environments
+              with Node.js. Worked in several important startups such as Platzi
+              or GoRead.
             `
           }
         />
@@ -124,10 +128,9 @@ const Team = ({ intl }) => (
           ]}
           bio={
             `
-              I have over 12 years of experience working in digital marketing and
-              product management. My specialties include product development,
-              brand awareness, and omnichannel marketing
-              campaigns.
+              I have over 12 years of experience working in digital marketing
+              and product management. My specialties include product development,
+              brand awareness, and omnichannel marketing campaigns.
             `
           }
         />
@@ -151,10 +154,11 @@ const Team = ({ intl }) => (
           ]}
           bio={
             `
-              I have over 8 years of experience working in Life Insurance Company
-              as Agency Manager of Prudential Life Assurance and 7 years until now
-              in Generali Indonesia as Agency Business Director, Leading more than
-              4000 people in agency from 10 cities in Indonesia.
+              I have over 8 years of experience working at a life insurance
+              company as an agency manager for Prudential Life Assurance and
+              7 years at Generali Indonesia as an Agency Business Director,
+              managing more than 4,000 people from 10 cities in Indonesia within
+              the agency.
             `
           }
         />
@@ -178,10 +182,10 @@ const Team = ({ intl }) => (
           ]}
           bio={
             `
-              Extensive experience in engineering & management,
-              specialized in Storage and SAN networks. More than 10 years active in
-              Information Technology, with through hands-on experience in research,
-              design, implementation of new technologies and system integration.
+              Extensive experience in engineering & management, specialized in
+              storage and SAN networks. More than 10 years’ experience in
+              information technology, with hands-on experience in research,
+              design, and implementation of new technologies and system integration.
             `
           }
         />
@@ -201,11 +205,10 @@ const Team = ({ intl }) => (
           ]}
           bio={
             `
-              Strong information technology professional with a Bachelor of
-              Science (B.Sc.) focused in Computer Science and electronics.
-              Experienced IT related field with a demonstrated history of
-              working in Network Administration, Cloud Computing, Blockchain
-              Technology and cryptocurrency.
+              Strong information technology background with a Bachelor of Science
+              (B.Sc.) in Computer Science and electronics. Diverse IT experience
+              with a demonstrated history in network administration, cloud
+              computing, blockchain technology and cryptocurrency.
             `
           }
         />
@@ -229,9 +232,9 @@ const Team = ({ intl }) => (
           ]}
           bio={
             `
-              Motivated, working as an IT project manager with more than 13 years
-              industry experience. From May 2016, owner of ProffeeCa. Enthusiastic
-              and love to learn new things
+              Motivated, worked as an IT project manager for over 13 years.
+              Owner of ProffeeCa since May, 2016. Enthusiastic and loves to learn
+              new things.
             `
           }
         />
