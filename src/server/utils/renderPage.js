@@ -10,6 +10,7 @@ const renderPage = (html, preloadedState, headers) => {
           <meta property="og:url" content="${headers.url}" />
           <meta property="og:title" content="${headers.title}" />
           <meta property="og:description" content="${headers.description}" />
+          <meta property="og:type" content="website" />
           ${headers.image ?
             `<meta property="og:image" content=${headers.image} />` : ''
           }
@@ -17,6 +18,10 @@ const renderPage = (html, preloadedState, headers) => {
           <meta name="twitter:creator" content="CallistoSupport" />
           <meta name="twitter:title" content="${headers.title}" />
           <meta name="twitter:description" content="${headers.description}" />
+          <meta name="twitter:domain" content="callisto.network" />
+          ${headers.image ?
+            `<meta property="twitter:image:src" content=${headers.image} />` : ''
+          }
           <!-- Google Tag Manager -->
           <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
