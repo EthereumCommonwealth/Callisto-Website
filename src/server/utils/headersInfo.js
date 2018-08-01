@@ -104,91 +104,91 @@ const getHeadersInfo = (target, messages, context) => {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/cs/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/cs/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/de/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/de/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/es/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/es/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/fr/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/fr/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/id/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/id/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/it/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/it/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/ko/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/ko/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/nl/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/nl/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/ru/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/ru/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/uk/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/uk/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/vi/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/vi/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     case '/zh/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/zh/cold-staking/',
-        baseUrl: '/cold-staing/',
+        baseUrl: '/cold-staking/',
       }
     // END COLD STAKING URLS
 
