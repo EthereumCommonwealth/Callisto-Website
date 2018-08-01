@@ -51,11 +51,11 @@ class FaqContent extends PureComponent {
             <h1 className='FaqContent-elements-title'>
               <FormattedMessage id='FaqTitle' />
             </h1>
-            <span className='FaqContent-elements-subtitle'>
+            {/* <span className='FaqContent-elements-subtitle'>
               <FormattedMessage id='FaqDescription' /> <a href='mailto:contact@callisto.com'>
                 contact@callisto.com
               </a>
-            </span>
+            </span> */}
             <div className='FaqContent-elements-categories'>
               {faq.map((category) => <FaqCategory key={category.id} {...category} />)}
             </div>
