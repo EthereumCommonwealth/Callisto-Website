@@ -256,5 +256,6 @@
   "OrderAuditModalDescription": "당신의 스마트 컨트렉트 와 주요 목적을 이곳에 간략하게 설명하세요",
   "OrderAuditModalSourceCodeLabel": "계약된 소스 코드에 대한 링크 제공",
   "OrderAuditModalDisclosureLabel": "리포트를 출간하시거나 중대한 실수를 찾아서 알려주길 원하시나요? 당신 원하시면 이메일로 알림을 제공합니다",
-  "OrderAuditModalPlatformLabel": "당신의 계약은 어떤 네트워크에 배포됩니까?"
+  "OrderAuditModalPlatformLabel": "당신의 계약은 어떤 네트워크에 배포됩니까?",
+  "OrderAuditSuccess": "감사 주문서가 성공적으로 전송되었습니다."
 }

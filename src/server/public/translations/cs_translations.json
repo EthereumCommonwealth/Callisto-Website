@@ -256,5 +256,6 @@
   "OrderAuditModalDescription": "Stručně popište svůj smart-kontrakt a jeho hlavní účely zde",
   "OrderAuditModalSourceCodeLabel": "Uveďte odkaz k zdrojovému kódu kontraktů",
   "OrderAuditModalDisclosureLabel": "Chcete, abychom publikovali zprávu jako takovou nebo upozorňovali soukromě v případě zjištění kritických chyb? Pokud chcete, abychom vám zaslali oznámení, zadejte svůj e-mail",
-  "OrderAuditModalPlatformLabel": "V jaké síti bude vaše smlouva nasazena?"
+  "OrderAuditModalPlatformLabel": "V jaké síti bude vaše smlouva nasazena?",
+  "OrderAuditSuccess": "Formulář objednávky auditu byl úspěsně odeslán."
 }

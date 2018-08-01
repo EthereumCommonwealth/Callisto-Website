@@ -256,5 +256,6 @@
   "OrderAuditModalDescription": "Beschrijf hier in het kort uw smart-contract en het hoofddoel ervan",
   "OrderAuditModalSourceCodeLabel": "Geef een link naar de broncode van de contracten",
   "OrderAuditModalDisclosureLabel": "Wilt u dat wij het rapport gelijk publiceren of wilt u eerst persoonlijk op de hoogte gebracht worden in het geval dat er ernstige fouten gevonden zijn? Verschaf ons uw email als u een notificatie wilt ontvangen",
-  "OrderAuditModalPlatformLabel": "In welk netwerk zal uw contract worden ingezet?"
+  "OrderAuditModalPlatformLabel": "In welk netwerk zal uw contract worden ingezet?",
+  "OrderAuditSuccess": "Audit Aanvraag Formulier succesvol verstuurd."
 }

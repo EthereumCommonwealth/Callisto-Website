@@ -34,7 +34,7 @@
   "ReadMore": "Xem thêm",
   "InfoContentSecurityTitle": "Kiểm toán bảo mật miễn phí và tinh chỉnh quy trình kiểm toán",
   "InfoContentSecurityDescription": "Theo báo cáo từ các cuộc tấn công vào hợp đồng thông minh đã làm tổn thất hàng triệu đô la từ doanh thu của toàn bộ hệ sinh thái. Callisto Network cung cấp cơ hội hoàn toàn miễn phí cho một nhà phát triển hợp đồng thông minh chuyên nghiệp có thể theo dõi các hợp đồng thông minh của họ.",
-  "InfoContentGovernanceTitle": "Hệ thống quản trị chuỗi",
+  "InfoContentGovernanceTitle": "Hệ thống quản trị trên chuỗi",
   "InfoContentGovernanceDescription": "Callisto Network là một hệ sinh thái Blockchain tự duy trì, tự quản lý, tự tài trợ cho chính nó.",
   "InfoContentScalabilityTitle": "Khả năng mở rộng của CLO và ETC networks",
   "InfoContentScalabilityDescription": "Callisto hướng đến việc thiết lập một môi trường an toàn và thân thiện cho hoạt động phát triển và cải tiến các giao thức trong tương lai.",
@@ -256,5 +256,6 @@
   "OrderAuditModalDescription": "Mô tả ngắn gọn hợp đồng thông minh của bạn và mục đích chính của nó ở đây",
   "OrderAuditModalSourceCodeLabel": "Cung cấp một liên kết tới mã nguồn của hợp đồng",
   "OrderAuditModalDisclosureLabel": "Bạn có muốn chúng tôi xuất bản báo cáo như hiện tại hoặc để thông báo cho bạn một cách riêng tư trong trường hợp tìm ra những lỗi nghiêm trọng? Cung cấp email của bạn nếu bạn muốn chúng tôi gửi cho bạn thông báo",
-  "OrderAuditModalPlatformLabel": "Hợp đồng của bạn sẽ được triển khai trên mạng lưới nào?"
+  "OrderAuditModalPlatformLabel": "Hợp đồng của bạn sẽ được triển khai trên mạng lưới nào?",
+  "OrderAuditSuccess": "Mẫu đơn đặt hàng kiểm toán đã gửi đi thành công."
 }

@@ -26,7 +26,7 @@
   "Terms": "服务条款",
   "Mediakit": "媒体套件",
   "OfficiallyChecker": "官方检查",
-  "HeroTitle": "加密货币  <br /> 和免费的智能约同安全审核",
+  "HeroTitle": "加密货币  <br /> 和免费的智能合约安全审核",
   "HeroDescription": "卡里斯托网络是一个分散的开源加密平台，基于go-Ethereum源代码和自己的加密货币“CLO”。卡里斯托的主要目标是研究，开发自我维持，自治，自筹的区块链生态系统和开发环境的参考实施。",
   "WhitePaper": "白皮书",
   "InfoContentColdStakingTitle": "第一个冷权益增值币",
@@ -52,7 +52,7 @@
   "MarketCap": "市值",
   "ComingSoon": "即将推出",
   "MiningTitle": "挖矿",
-  "MiningDescription": "卡里斯托 (CLO) 是一个PoW算法可挖矿的货币",
+  "MiningDescription": "卡里斯托 (CLO) 是一个工作证明算法可挖矿的货币",
   "CloStats": "卡里斯托统计",
   "TechnicalDetails": "技术细节",
   "BlockReward": "区块奖励",
@@ -256,5 +256,6 @@
   "OrderAuditModalDescription": "在此简要描述您的智能合约及其主要用途",
   "OrderAuditModalSourceCodeLabel": "提供合约源代码的链接",
   "OrderAuditModalDisclosureLabel": "您是否希望我们发布报告或在发现重大错误时私下通知您？如果您希望我们向您发送通知，请提供您的电子邮件",
-  "OrderAuditModalPlatformLabel": "您的合约将在那个网络中配置？"
+  "OrderAuditModalPlatformLabel": "您的合约将在那个网络中配置？",
+  "OrderAuditSuccess": "审核订单已成功发送"
 }

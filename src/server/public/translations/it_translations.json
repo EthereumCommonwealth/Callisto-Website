@@ -256,5 +256,6 @@
   "OrderAuditModalDescription": "Descrivi qui brevemente il tuo smart-contract e il suo scopo principale",
   "OrderAuditModalSourceCodeLabel": "Fornisci un link al codice sorgente dei contratti",
   "OrderAuditModalDisclosureLabel": "Vuoi che noi pubblichiamo il report così com'è oppure che ti notifichiamo in privato nel caso trovassimo degli errori critici? Lasciaci la tua email se vuoi che noi ti inviamo una notifica",
-  "OrderAuditModalPlatformLabel": "In quale rete verrà implementato il tuo contratto?"
+  "OrderAuditModalPlatformLabel": "In quale rete verrà implementato il tuo contratto?",
+  "OrderAuditSuccess": "Modulo dell'ordine di auditing inviato con successo."
 }
