@@ -118,9 +118,12 @@ const SmartDetail = ({ intl }) => (
         </div>
         <div />
       </div>
-      <p className='SmartDetail-bottom'>
-        <FormattedMessage id='SmartDetailBottomText' />
-      </p>
+      <p
+        className='SmartDetail-bottom'
+        dangerouslySetInnerHTML={{
+          __html: intl.formatMessage({ id: 'SmartDetailBottomText' })
+        }}
+      />
     </div>
   </div>
 );
