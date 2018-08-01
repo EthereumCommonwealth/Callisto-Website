@@ -1,0 +1,91 @@
+.FaqContent
+  padding 125px 0 25px 0
+  background-color #FFF
+  +from-width($md)
+    padding 170px 0 200px 0
+  &-content
+    display grid
+    grid-gap 1em
+    +from-width($md)
+      grid-gap 2em
+      grid-template-columns 3fr 9fr
+  &-sidebar
+    display none
+    +from-width($md)
+      display block
+    // &-content
+    //   +from-width($md)
+    //     position fixed
+    //     top 150px
+    &-title
+      font-size 22px
+      line-height 1.41
+      font-weight 500
+      color $dark-blue
+      text-align center
+    &-category
+      padding 1em 0 1em 3em
+      color $dark-gray
+      &:hover
+        color $green
+        cursor pointer
+  &-elements
+    &-title
+      font-size 22px
+      color $dark-blue
+      margin 0
+      +from-width($sm)
+        font-size 44px
+    &-subtitle
+      color $dark-gray
+      line-height 1.64
+      margin-top 1em
+      margin-bottom 2.5em
+      display block
+      +from-width($sm)
+        margin-top 2em
+        margin-bottom 5em
+      a
+        color $orange
+
+.FaqCategory
+  margin-bottom 40px
+  &:hover
+    cursor pointer
+  +from-width($sm)
+    margin-bottom 80px
+  &-title
+    &-text
+      color $dark-gray
+      font-size 20px
+      line-height 1.52
+
+.FaqArticle
+  border-bottom solid 1px #f2f2f2
+  padding 2em 0
+  margin-bottom 1em
+  &-top, &-bottom
+    display grid
+    grid-template-columns 1fr 11fr
+    grid-gap 1em
+    align-items center
+    &:hover
+      cursor pointer
+    &-elem
+      justify-self flex-start
+      color $green
+      font-size 28px
+      +from-width($sm)
+        font-size 36px
+  &-title
+    margin 0
+    font-size 20px
+    color $dark-blue
+    font-weight 500
+    line-height 1.41
+    +from-width($sm)
+      font-size 26px
+  &-description
+    padding-top 2em
+    line-height 1.64
+    color $dark-blue

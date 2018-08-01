@@ -1,0 +1,59 @@
+.AirdropHero
+  background #FFF
+  padding 100px 0 25px 0
+  +from-width($sm)
+    padding 125px 0 45px 0
+  +from-width($md)
+    padding 200px 0 100px 0
+  &-content
+    display grid
+    +from-width($sm)
+      grid-template-columns 1.5fr 2fr
+    &-left
+      &-title
+        margin 0
+        font-size 22px
+        font-family $primary-font
+        color $dark-blue
+        +from-width($md)
+          font-size 44px
+      &-description
+        margin-top 20px
+        margin-bottom 20px
+        line-height 1.65
+        color $dark-gray
+        font-size 15px
+        +from-width($sm)
+          margin-top 41px
+          margin-bottom 34px
+        &.secondary
+          padding-left 1.5em
+          color $orange
+          line-height 52px
+          font-size 18px
+          +from-width($sm)
+            padding-left 3em
+            font-size 20px
+    &-right
+      display none
+      +from-width($sm)
+        display block
+        position relative
+      &-figure
+        z-index 0
+        +from-width($sm)
+          position absolute
+          top 100px
+          left 25px
+          width 90%
+        +from-width($xl)
+          position absolute
+          top -25px
+          width 100%
+          left 0
+        +from-width($xxl)
+          position absolute
+          top -50px
+          width 100%
+        img
+          width 100%

@@ -1,25 +1,26 @@
-# Callisto Network Site 🎇
+# Callisto Network WebSite 🎇
 
-## Run on development environment
+## Instalation instructions:
+
+### Node
+#### First install node 8.11.3
+
+You can use `nvm` and run `nvm i`
 
 ### Install dependencies
-
+#### Install the required dependencies:
 `yarn install` or `npm i`
 
-### Install Gatsby Client
+### Server render
+#### Generate Server Render files:
+`yarn build:server` or `npm run build:server`
 
-`npm install --global gatsby-cli`
+### Development Env
+#### Run developent env command:
+`yarn start:dev` or `npm run start:dev`
 
-### Run Development Env
+### Prod Env
+#### Run Production env command:
+`yarn start:prod` or `npm run start:prod`
 
-`gatsby develop`
-
-### Create a production build
-
-`gatsby build`
-
-### Deploy
-`npm run deploy-gh`
-
-### Build and Deploy
-`npm run deploy`
+> Check .env-example file to check `.env` requirements

@@ -1,0 +1,96 @@
+.StakingHero
+  background-color #e9f7ff
+  padding 120px 0 25px 0
+  +from-width($md)
+    padding 200px 0 140px 0
+  &-content
+    display grid
+    grid-gap 2em
+    +from-width($md)
+      grid-template-columns 1.5fr 2fr
+      grid-gap 5em
+    &-left
+      &-title
+        margin 0
+        font-size 22px
+        font-family $primary-font
+        color $dark-blue
+        +from-width($md)
+          font-size 44px
+      &-description
+        margin-top 20px
+        margin-bottom 20px
+        line-height 1.65
+        color $dark-gray
+        font-size 15px
+        +from-width($sm)
+          margin-top 41px
+          margin-bottom 34px
+    &-right
+      +from-width($sm)
+        position relative
+  &-counter
+    padding 1em
+    box-sizing border-box
+    text-align center
+    max-width 100%
+    box-shadow 0 4px 14px 0 rgba(198, 202, 206, 0.3)
+    +from-width($md)
+      padding 2em
+      max-width 500px
+      top 48px
+      position absolute
+    +from-width($md)
+      top -5em
+    &-text
+      font-size 14px
+      line-height 1.64
+      color #c4c4c4
+      margin-top 20px
+      display block
+    &-title
+      margin 0
+      font-size 22px
+      font-weight 500
+      line-height 1.41
+      color $dark-blue
+      +from-width($sm)
+        font-size 26px
+    &-description
+      font-size 14px
+      color $dark-gray
+      line-height 1.64
+      margin-top 28px
+      margin-bottom 19px
+      +from-width($sm)
+        font-size 1em
+        margin-top 40px
+        margin-bottom 38px
+    &-holder
+      display grid
+      grid-template-columns 1fr 1fr 1fr 1fr
+      grid-gap 5px
+      +from-width($sm)
+        grid-gap 11px
+      &-square
+        border-radius 8px
+        border solid 1px #e5e5e5
+        padding 12px 6px
+        +from-width($sm)
+          padding 24px 12px
+      &-number
+        font-size 35px
+        font-stretch condensed
+        line-height 1.41
+        font-weight bold
+        color $orange
+        +from-width($sm)
+          font-size 60px
+    &-date
+      line-height 1.64
+      color $dark-blue
+      margin-top 58px
+      +from-width($sm)
+        font-size 20px
+        line-height 1.52
+        margin-top 64px

@@ -1,0 +1,46 @@
+.StakingLongStory
+  padding 35px 0
+  +from-width($sm)
+    padding 70px 0
+  &-content
+    margin-top 30px
+    display grid
+    grid-gap 1em
+    +from-width($sm)
+      margin-top 60px
+      justify-content center
+      justify-items center
+      grid-gap 3em
+      grid-template-columns 185px 185px 185px
+    +from-width($md)
+      grid-template-columns 285px 285px 285px
+  &-element
+    width 100%
+    padding 1em
+    box-sizing border-box
+    display grid
+    justify-items center
+    grid-gap 1em
+    grid-auto-rows min-content
+    &-figure
+      justify-self center
+      height 72px
+      img
+        height 100%
+    &-step
+      width 26px
+      height 26px
+      overflow hidden
+      border-radius 100%
+      display flex
+      justify-content center
+      align-items center
+      background-color $green
+      line-height 1.52
+      font-size 14px
+      color #FFF
+    &-text
+      font-size 18px
+      line-height 1.52
+      color $dark-blue
+      text-align center

@@ -1,0 +1,83 @@
+.PostsList
+  padding 100px 0 35px 0
+  background-color #FFF
+  +from-width($sm)
+    padding 70px 0
+  &-content
+    display grid
+    grid-template-columns .5fr 8fr .5fr
+    justify-content center
+    +from-width($sm)
+      grid-template-columns 2fr 8fr 2fr
+  &-list
+    display grid
+    grid-gap 45px
+    +from-width($sm)
+      grid-gap 90px
+  &-tag
+    &-title
+      font-size 32px
+      color $dark-blue
+      margin 0
+      +from-width($sm)
+        font-size 44px
+      &:hover
+        cursor default
+.Post
+  position relative
+  &:before
+    +from-width($sm)
+      content ''
+      width 20px
+      height 2px
+      background-color $green
+      position absolute
+      left -2em
+      top 1.5em
+  &:hover
+    cursor default
+  &-title
+    font-size 30px
+    font-weight 500
+    color $dark-blue
+    line-height 1.41
+    margin 0
+    +from-width($sm)
+      font-size 36px
+    a
+      color $dark-blue
+      text-decoration none
+  &-date
+    font-size 1em
+    line-height 1.64
+    color $dark-gray
+    margin 15px 0
+    &:hover
+      cursor default
+    +from-width($sm)
+      margin 20px 0
+  &-author
+    margin-left 1em
+  &-description
+    line-height 1.64
+    color $dark-blue
+    +from-width($sm)
+      margin-bottom 40px
+  &-figure
+    width 100%
+    margin-bottom 20px
+    +from-width($sm)
+      margin-bottom 40px
+    img
+      width 100%
+  &-readmore, &-back
+    color $green
+    line-height 1.64
+    text-decoration none
+    &:hover
+      text-decoration underline
+      cursor pointer
+      color $orange
+  &-back
+    margin-top 1em
+    display block

@@ -1,0 +1,75 @@
+.StakingDescription
+  padding 35px 0
+  background-color #FFF
+  +from-width($sm)
+    padding 70px 0
+  &-content
+    display grid
+    grid-gap 5em
+    margin-bottom 5em
+  &-image
+    display none
+    +from-width($sm)
+      display block
+      justify-self center
+      position relative
+    &-figure
+      &.is-absolute
+        +from-width($sm)
+          position absolute
+          top -65px
+          left -150px
+  &-row
+    display grid
+    grid-gap 1em
+    &.left-row
+      +from-width($sm)
+        grid-template-columns 5fr 4fr
+    &.right-row
+      +from-width($sm)
+        grid-template-columns 4fr 5fr
+    &-info
+      position relative
+      &:before
+        content ''
+        width 20px
+        height 2px
+        background-color $green
+        position absolute
+        left -40px
+        top 18px
+      &-title
+        font-size 22px
+        font-weight 500
+        line-height 1.41
+        color $dark-blue
+        margin 0 0 30px 0
+        +from-width($sm)
+          font-size 26px
+          margin 0 0 40px 0
+      &-text
+        line-height 1.64
+        color $dark-blue
+        font-size 14px
+        +from-width($sm)
+          font-size 1em
+        &-secondary
+          color $orange
+          margin-top .5em
+          font-size 18px
+          line-height 1.52
+          +from-width($sm)
+            margin-top 1em
+            font-size 20px
+            padding-left 4em
+            max-width 400px
+      &-subtitle
+        color $orange
+        font-size 16px
+        line-height 1.52
+        padding-left 2em
+        margin 20px 0
+        +from-width($sm)
+          padding-left 5em
+          font-size 20px
+          margin 50px 0

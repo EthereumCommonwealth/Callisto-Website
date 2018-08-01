@@ -1,0 +1,290 @@
+.StakingInvestments
+  padding 35px 0
+  background-color #FFF
+  +from-width($sm)
+    padding 0 0 70px 0
+  &-holder
+    display grid
+    +from-width($sm)
+      grid-template-columns 2fr 8fr 2fr
+  &-percent
+    &-title
+      line-height 1.64
+      color $dark-blue
+      text-align center
+      margin-top 25px
+      +from-width($sm)
+        margin-top 45px
+    &-text
+      margin-top 40px
+      text-align center
+      font-size 28px
+      color #c4c4c4
+      line-height 1.64
+      +from-width($sm)
+        margin-top 80px
+        font-size 36px
+      &-detail
+        color $green
+    &-holder
+      display grid
+      align-items center
+      grid-template-columns 1fr 10fr 1fr
+      user-select none
+      grid-gap 1em
+      margin-top 20px
+      &-text
+        font-size 18px
+        line-height 1.64
+        color $light-gray
+        justify-self center
+  &-deposit
+    margin-top 20px
+    display grid
+    justify-content center
+    justify-items center
+    grid-gap 1em
+    +from-width($md)
+      margin-top 40px
+      grid-gap 1.5em
+    &-title
+      line-height 1.64
+      color $dark-blue
+    &-input
+      border none
+      border-bottom solid 2px $dark-blue
+      color $green
+      font-size 18px
+      text-align center
+      +from-width($md)
+        font-size 36px
+      &:focus
+        outline none
+  &-table
+    display grid
+    width 100%
+    margin 30px auto 0 auto
+    border-radius 8px
+    overflow hidden
+    box-shadow 0 4px 14px 0 rgba(198, 202, 206, 0.3)
+    background-color #FFF
+    user-select none
+    &:hover
+      cursor default
+    +from-width($md)
+      width 570px
+      margin 60px auto 0 auto
+    &-row
+      padding 1.5em
+      background-color #FFF
+      display grid
+      grid-template-columns 4fr 1fr 1fr
+      justify-self center
+      width 100%
+      box-sizing border-box
+      grid-gap 1.5em
+      &-text
+        font-size 18px
+        line-height 1.52
+        color $dark-blue
+        +from-width($md)
+          font-size 20px
+      &.is-head
+        background-color $white
+        justify-self flex-start
+        &-text
+          line-height 1.64
+          color $dark-gray
+  &-description
+    margin-top 20px
+    line-height 1.52
+    font-size 14px
+    text-align center
+    color $dark-gray
+    width 100%
+    +from-width($md)
+      width 570px
+      margin 40px auto 0 auto
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 14px 0;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  border: 0.2px solid rgba(0, 0, 0, 0);
+  height: 36px;
+  width: 36px;
+  border-radius: 36px;
+  background: #34c88a;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 0.2px solid rgba(0, 0, 0, 0);
+  height: 36px;
+  width: 36px;
+  border-radius: 36px;
+  background: #34c88a;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+
+input[type=range]::-ms-thumb {
+  border: 0.2px solid rgba(0, 0, 0, 0);
+  height: 36px;
+  width: 36px;
+  border-radius: 36px;
+  background: #34c88a;
+  cursor: pointer;
+  height: 8.4px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 14px 0;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #e5e5e5;
+  border-radius: 25px;
+  border: 0px solid #010101;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 36px;
+  width: 36px;
+  border-radius: 36px;
+  background: #34c88a;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #f2f2f2;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #e5e5e5;
+  border-radius: 25px;
+  border: 0px solid #010101;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 36px;
+  width: 36px;
+  border-radius: 36px;
+  background: #34c88a;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #d8d8d8;
+  border: 0px solid #010101;
+  border-radius: 50px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #e5e5e5;
+  border: 0px solid #010101;
+  border-radius: 50px;
+}
+
+input[type=range]::-ms-thumb {
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 36px;
+  width: 36px;
+  border-radius: 36px;
+  background: #34c88a;
+  cursor: pointer;
+  height: 8px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #e5e5e5;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #f2f2f2;
+}

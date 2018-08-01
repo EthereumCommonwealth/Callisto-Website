@@ -1,0 +1,37 @@
+.Roadmap
+  padding 40px
+  +from-width($sm)
+    padding 80px 0
+  &-content
+    +from-width($sm)
+      display grid
+      justify-content center
+      grid-template-columns 100%
+    +from-width($xl)
+      grid-template-columns 70%
+    &-list
+      margin 50px 0
+      +from-width($sm)
+        margin 70px 0
+      &-future
+        padding 1em 3em
+        display grid
+        grid-gap 2em
+        +from-width($sm)
+          grid-template-columns 1fr 1fr
+          border-bottom solid 2px $light-gray
+          border-left solid 2px $light-gray
+          padding 1em 5em
+        &-elem
+          display grid
+          grid-gap .5em
+          +from-width($sm)
+            grid-template-columns 1fr 2fr
+        &-title
+          margin 0
+          font-size 24px
+          color $orange
+        &-text
+          color $dark-blue
+          line-height 1.64
+          padding .5em 0

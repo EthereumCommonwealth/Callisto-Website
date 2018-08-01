@@ -1,0 +1,51 @@
+.TeamMember
+  display grid
+  justify-items center
+  grid-gap 15px
+  +from-width($sm)
+    grid-template-rows 130px 45px .25fr .25fr 1.5fr
+  &-avatar
+    width 130px
+    height 130px
+    overflow hidden
+    border-radius 100%
+    img
+      width 100%
+  &-name
+    margin 0
+    font-size 20px
+    color $dark-blue
+  &-position
+    margin 0
+    color $dark-gray
+    font-size 14px
+    line-height 1.64
+    font-weight normal
+    text-align center
+  &-bio
+    text-align center
+    color $dark-gray
+    line-height 1.64
+    font-weight normal
+  &-social
+    display flex
+    justify-content center
+    flex-wrap nowrap
+    &-item
+      display flex
+      align-items center
+      justify-content center
+      color $dark-gray
+      width 28px
+      height 28px
+      box-sizing border-box
+      padding .5em
+      border solid 1px $dark-gray
+      border-radius 100%
+      font-size 14px
+      transition all 150ms ease
+      margin 0 4px
+      text-decoration none
+      &:hover
+        color #FFF
+        background-color $dark-gray

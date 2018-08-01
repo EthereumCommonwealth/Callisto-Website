@@ -1,0 +1,61 @@
+.GuidlineHead
+  padding 125px 0 25px 0
+  background-color #FFF
+  +from-width($sm)
+    padding 170px 0
+  &-content
+    display grid
+    +from-width($sm)
+      grid-template-columns 2fr 8fr 2fr
+  &-top
+    margin-bottom 50px
+    +from-width($sm)
+      margin-bottom 100px
+    &-title
+      margin 0
+      font-size 22px
+      color $dark-blue
+      +from-width($sm)
+        font-size 44px
+    &-text
+      margin 36px 0
+      line-height 1.64
+      color $dark-blue
+  &-bottom
+    &-title
+      margin 0
+      font-size 18px
+      color $dark-blue
+      line-height 1.41
+      +from-width($sm)
+        font-size 36px
+    &-subtitle
+      color $orange
+      margin-top 50px
+      padding-left 2.5em
+      line-height 1.52
+      font-size 18px
+      +from-width($sm)
+        margin-top 100px
+        padding-left 5em
+        font-size 20px
+    &-list
+      margin-top 21px
+      display grid
+      grid-gap 1em
+      +from-width($sm)
+        margin-top 42px
+        grid-gap 2em
+      &-element
+        color $dark-blue
+        line-height 1.64
+        position relative
+        padding-left 2em
+        &:before
+          content ''
+          width 5px
+          height 5px
+          background-color $green
+          position absolute
+          left 0
+          top .75em
