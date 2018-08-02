@@ -29,7 +29,7 @@ const Mining = ({ intl }) => (
         <MiningElement
           title='POW Algo'
           content='Dagger Hashimoto'
-          description='(Etash)'
+          description='(Ethash)'
         />
         <MiningElement
           title={`100% ${intl.formatMessage({ id: 'CompatibleWith' })}`}

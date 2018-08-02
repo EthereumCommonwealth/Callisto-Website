@@ -56,6 +56,7 @@ const WalletsContent = ({ intl }) => (
           options={[
             { name: 'Coinomi', url: 'https://coinomi.com/' },
             { name: 'Guarda', url: 'https://guarda.co/' },
+            { name: 'Trust Wallet', url: 'https://itunes.apple.com/us/app/trust-ethereum-wallet/id1288339409?mt=8' }
           ]}
         />
         <SingleWallet

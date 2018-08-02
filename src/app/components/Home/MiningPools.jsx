@@ -120,7 +120,7 @@ const MiningPools = ({ intl }) => (
           className='btn btn-transparent-green'
           target='_blank'
         >
-          www.vvpool.com
+          vvpool.com
         </a>
         <a
           href='https://clo.topmining.co.kr/ '
