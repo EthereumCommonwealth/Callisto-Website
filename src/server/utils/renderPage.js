@@ -44,6 +44,7 @@ const renderPage = (html, preloadedState, headers) => {
           >
           <link rel="canonical" href="${headers.url}" />
           <link rel="alternate" href="${headers.url}" hreflang="en-en" />
+          <link rel="alternate" href="https://callisto.network/ar{headers.baseUrl}" hreflang="ar-ar" />
           <link rel="alternate" href="https://callisto.network/cs${headers.baseUrl}" hreflang="cs-cs" />
           <link rel="alternate" href="https://callisto.network/de${headers.baseUrl}" hreflang="de-de" />
           <link rel="alternate" href="https://callisto.network/es${headers.baseUrl}" hreflang="es-es" />

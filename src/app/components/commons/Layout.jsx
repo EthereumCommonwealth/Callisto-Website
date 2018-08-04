@@ -4,6 +4,7 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import { connect } from 'react-redux';
 import { scroller, animateScroll } from 'react-scroll';
 import en from 'react-intl/locale-data/en';
+import ar from 'react-intl/locale-data/ar';
 import cs from 'react-intl/locale-data/cs';
 import de from 'react-intl/locale-data/de';
 import es from 'react-intl/locale-data/es';
@@ -17,7 +18,7 @@ import uk from 'react-intl/locale-data/uk';
 import vi from 'react-intl/locale-data/vi';
 import zh from 'react-intl/locale-data/zh';
 
-addLocaleData([...en, ...cs, ...de, ...es, ...fr, ...id, ...it, ...ko, ...nl, ...ru, ...uk, ...vi, ...zh]);
+addLocaleData([...en, ...ar, ...cs, ...de, ...es, ...fr, ...id, ...it, ...ko, ...nl, ...ru, ...uk, ...vi, ...zh]);
 
 class Layout extends PureComponent {
 

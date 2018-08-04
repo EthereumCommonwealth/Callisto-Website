@@ -6,19 +6,36 @@ import handleRender from '../handleRender';
 
 const prefetchData = async (req, res, next) => {
   try {
-    const posts = await blogPosts.get('posts?_embed&per_page=50');
-    const tags = await blogPosts.get('tags');
-    const btcStats = await coinStats.get('ticker/1/');
-    const cloStats = await coinStats.get('ticker/2757/');
+    let posts, tags, btcStats, cloStats;
+    try {
+      posts = await blogPosts.get('posts?_embed&per_page=50');
+    } catch (err) {
+      posts = [];
+    }
+    try {
+      tags = await blogPosts.get('tags');
+    } catch (err) {
+      tags = [];
+    }
+    try {
+      btcStats = await coinStats.get('ticker/1/');
+    } catch (e) {
+      btcStats = 0;
+    }
+    try {
+      cloStats = await coinStats.get('ticker/2757/');
+    } catch (e) {
+      cloStats = 0;
+    }
     const messages = getTranslations(req.params.lang);
     const initialState = {
-      blogPosts: preparePosts(posts.data),
-      blogTags: tags.data,
+      blogPosts: posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts,
+      blogTags: tags.data && tags.data.length > 0 ? tags.data : tags,
       marketStats: {
-        btcPrice: btcStats.data.data.quotes.USD.price,
-        cloPrice: cloStats.data.data.quotes.USD.price,
-        volume: cloStats.data.data.quotes.USD.volume_24h,
-        marketCap: cloStats.data.data.quotes.USD.market_cap,
+        btcPrice: btcStats.data ? btcStats.data.data.quotes.USD.price : 0,
+        cloPrice: cloStats.data ? cloStats.data.data.quotes.USD.price : 0,
+        volume: cloStats.data ? cloStats.data.data.quotes.USD.volume_24h : 0,
+        marketCap: cloStats.data ? cloStats.data.data.quotes.USD.market_cap : 0,
       },
       tagPosts: [],
       faq: [],

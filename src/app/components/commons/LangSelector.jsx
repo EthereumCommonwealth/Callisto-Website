@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { langs } from '../../constants/';
 
 class LangSelector extends Component {
   state = {
@@ -43,31 +44,31 @@ class LangSelector extends Component {
       case '/community-guidlines/':
         if (lang === 'en') return '/community-guidlines/'
         return `/${lang}/community-guidlines/`
-      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/cold-staking/':
+      case `/:lang${langs}/cold-staking/`:
         if (lang === 'en') return '/cold-staking/'
         return `/${lang}/cold-staking/`
-      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/smart-contract-audit/':
+      case `/:lang${langs}/smart-contract-audit/`:
         if (lang === 'en') return '/smart-contract-audit/'
         return `/${lang}/smart-contract-audit/`
-      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/financial-report/':
+      case `/:lang${langs}/financial-report/`:
         if (lang === 'en') return '/financial-report/'
         return `/${lang}/financial-report/`
-      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/':
+      case `/:lang${langs}/blog/`:
         if (lang === 'en') return '/blog/'
         return `/${lang}/blog/`
-      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/post/:slug/':
+      case `/:lang${langs}/blog/post/:slug/`:
         if (lang === 'en') return `/post/${match.params.slug}/`
         return `/${lang}/blog/post/${match.params.slug}/`
-      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/blog/topic/:slug/':
+      case `/:lang${langs}/blog/topic/:slug/`:
         if (lang === 'en') return `/blog/topic/${match.params.slug}/`
         return `/${lang}/blog/topic/${match.params.slug}/`
-      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/faq/':
+      case `/:lang${langs}/faq/`:
         if (lang === 'en') return '/faq/'
         return `/${lang}/faq/`
-      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/airdrop/':
+      case `/:lang${langs}/airdrop/`:
         if (lang === 'en') return '/airdrop/'
         return `/${lang}/airdrop/`
-      case '/:lang(es|en|id|ru|de|zh|it|ko|tr|vi|cs)/community-guidlines/':
+      case `/:lang${langs}/community-guidlines/`:
         if (lang === 'en') return '/community-guidlines/'
         return `/${lang}/community-guidlines/`
       default:

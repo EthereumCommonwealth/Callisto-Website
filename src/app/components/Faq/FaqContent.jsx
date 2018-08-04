@@ -32,7 +32,7 @@ class FaqContent extends PureComponent {
                 <FormattedMessage id='FaqSidebarTitle' />
               </h3>
               <div className='FaqContent-sidebar-categories'>
-                {faq.map((category) => {
+                {faq.length > 0 ? faq.map((category) => {
                   if (category.articles.length === 0) return null;
                   return (
                     <div
@@ -43,7 +43,7 @@ class FaqContent extends PureComponent {
                       {category.name}
                     </div>
                   );
-                })}
+                }) : null}
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ class FaqContent extends PureComponent {
               </a>
             </span> */}
             <div className='FaqContent-elements-categories'>
-              {faq.map((category) => <FaqCategory key={category.id} {...category} />)}
+              {faq.length > 0 ? faq.map((category) => <FaqCategory key={category.id} {...category} />) : null}
             </div>
           </div>
         </div>
