@@ -43,20 +43,20 @@ const renderPage = (html, preloadedState, headers) => {
             crossorigin="anonymous"
           >
           <link rel="canonical" href="${headers.url}" />
-          <link rel="alternate" href="${headers.url}" hreflang="en-en" />
-          <link rel="alternate" href="https://callisto.network/ar{headers.baseUrl}" hreflang="ar-ar" />
-          <link rel="alternate" href="https://callisto.network/cs${headers.baseUrl}" hreflang="cs-cs" />
-          <link rel="alternate" href="https://callisto.network/de${headers.baseUrl}" hreflang="de-de" />
-          <link rel="alternate" href="https://callisto.network/es${headers.baseUrl}" hreflang="es-es" />
-          <link rel="alternate" href="https://callisto.network/fr${headers.baseUrl}" hreflang="fr-fr" />
-          <link rel="alternate" href="https://callisto.network/id${headers.baseUrl}" hreflang="id-id" />
-          <link rel="alternate" href="https://callisto.network/it${headers.baseUrl}" hreflang="it-it" />
-          <link rel="alternate" href="https://callisto.network/ko${headers.baseUrl}" hreflang="ko-ko" />
-          <link rel="alternate" href="https://callisto.network/nl${headers.baseUrl}" hreflang="nl-nl" />
-          <link rel="alternate" href="https://callisto.network/ru${headers.baseUrl}" hreflang="ru-ru" />
-          <link rel="alternate" href="https://callisto.network/uk${headers.baseUrl}" hreflang="uk-uk" />
-          <link rel="alternate" href="https://callisto.network/vi${headers.baseUrl}" hreflang="vi-vi" />
-          <link rel="alternate" href="https://callisto.network/zh${headers.baseUrl}" hreflang="zh-zh" />
+          <link rel="alternate" href="${headers.url}" hreflang="en" />
+          <link rel="alternate" href="https://callisto.network/ar{headers.baseUrl}" hreflang="ar" />
+          <link rel="alternate" href="https://callisto.network/cs${headers.baseUrl}" hreflang="cs" />
+          <link rel="alternate" href="https://callisto.network/de${headers.baseUrl}" hreflang="de" />
+          <link rel="alternate" href="https://callisto.network/es${headers.baseUrl}" hreflang="es" />
+          <link rel="alternate" href="https://callisto.network/fr${headers.baseUrl}" hreflang="fr" />
+          <link rel="alternate" href="https://callisto.network/id${headers.baseUrl}" hreflang="id" />
+          <link rel="alternate" href="https://callisto.network/it${headers.baseUrl}" hreflang="it" />
+          <link rel="alternate" href="https://callisto.network/ko${headers.baseUrl}" hreflang="ko" />
+          <link rel="alternate" href="https://callisto.network/nl${headers.baseUrl}" hreflang="nl" />
+          <link rel="alternate" href="https://callisto.network/ru${headers.baseUrl}" hreflang="ru" />
+          <link rel="alternate" href="https://callisto.network/uk${headers.baseUrl}" hreflang="uk" />
+          <link rel="alternate" href="https://callisto.network/vi${headers.baseUrl}" hreflang="vi" />
+          <link rel="alternate" href="https://callisto.network/zh${headers.baseUrl}" hreflang="zh-hans" />
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,
             maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
           <link rel="stylesheet" href="/main.css" type="text/css"/>
