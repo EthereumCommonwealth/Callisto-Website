@@ -78,3 +78,5 @@ src/server/public/vendor.js.gz
 src/server/public/image
 
 .cache/
+
+.idea/
