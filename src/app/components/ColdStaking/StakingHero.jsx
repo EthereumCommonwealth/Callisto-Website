@@ -71,7 +71,7 @@ class StakingHero extends Component {
             </p>
             <div className='StakingHero-btns'>
               <a
-                href='https://news.callisto.network/callisto-network-cold-staking-protocol/'
+                href='https://callisto.network/blog/post/callisto-network-cold-staking-protocol/'
                 target='_blank'
                 className='btn btn-green'
               >
