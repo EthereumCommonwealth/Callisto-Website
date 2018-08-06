@@ -1,0 +1,33 @@
+version: '3'
+services:
+  callisto:
+    image: callisto/callisto-website
+    volumes:
+      - ~/.ssh/id_rsa.pub:/tmp/authorized_keys
+      - ../:/app/
+    ports:
+      - "2000:22"
+      - "8000:8000"
+    container_name: callisto-website
+    environment:
+      - TERM=xterm
+    networks:
+      - callisto
+  callisto-postgresql:
+    image: postgres:10.4
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=callisto
+      - POSTGRES_PASSWORD=callisto
+      - POSTGRES_DB=callisto
+    container_name: callisto-postgresql
+    networks:
+      callisto:
+        aliases:
+          - callisto-postgresql
+    volumes:
+      - /data/postgres-callisto:/var/lib/postgresql/data
+networks:
+   callisto:
+     external: true
