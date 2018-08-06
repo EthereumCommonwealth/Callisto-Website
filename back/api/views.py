@@ -21,7 +21,7 @@ class TeamAPIView(View):
                             'prefix': f'fa {network.network.icon}',
                             'url': network.url
                         } for network in member.membersocialnetwork_set.filter(
-                    active=True)
+                        active=True)
                     ]
 
             } for member in members
