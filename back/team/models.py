@@ -10,7 +10,7 @@ class SocialNetwork(models.Model):
     )
 
     def __str__(self):
-        return F'{self.name}'
+        return f'{self.name}'
 
 
 class MemberSocialNetwork(models.Model):
