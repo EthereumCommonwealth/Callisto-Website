@@ -19,7 +19,7 @@ run `make build-docker-dev`
 
 Go to back folder
 
-`cd back`
+`cd /app/back`
 
 Run
 

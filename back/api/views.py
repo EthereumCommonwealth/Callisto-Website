@@ -2,6 +2,7 @@ from django.http import JsonResponse
 from django.views.generic.base import View
 
 from team.models import TeamMember
+from mining.models import MiningPool, BlockExplorer
 
 
 class TeamAPIView(View):
@@ -28,4 +29,33 @@ class TeamAPIView(View):
         ]
 
         return JsonResponse(status=200, data=members_list, safe=False)
+
+
+class MiningAPIView(View):
+    def get(self, request, *args, **kwargs):
+
+        mining_pools = MiningPool.objects.all()
+
+        block_explorers = BlockExplorer.objects.all()
+
+        mining_pools_list = [
+            {
+                'name': mining_pool.name,
+                'url': mining_pool.url
+            } for mining_pool in mining_pools
+        ]
+
+        block_explorers_list = [
+            {
+                'name': block_explorer.name,
+                'url': block_explorer.url
+            } for block_explorer in block_explorers
+        ]
+
+        data = {
+            'miningPools': mining_pools_list,
+            'blockExplorers': block_explorers_list
+        }
+
+        return JsonResponse(status=200, data=data, safe=False)
 
