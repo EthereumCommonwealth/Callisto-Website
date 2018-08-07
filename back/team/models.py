@@ -30,7 +30,7 @@ class MemberSocialNetwork(models.Model):
     )
 
 def upload_avatar(instance, filename):
-    return '{}/{}/{}'.format('image', 'avatars', filename)
+    return f'image/avatars/{filename}'
 
 
 class MemberTeam(models.Model):
