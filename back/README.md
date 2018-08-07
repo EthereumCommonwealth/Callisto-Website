@@ -17,4 +17,10 @@ run `make build-docker-dev`
 
 ### Start Django server
 
+Go to back folder
+
+`cd back`
+
+Run
+
 `./manage.py runserver 0.0.0.0:8000 --settings=callisto.settings.dev`
