@@ -1,7 +1,7 @@
 FROM python:3.6
 
 RUN apt-get update && apt-get install -y gcc ssh openssh-server gettext postgresql-client libpq-dev \
-    libjpeg-dev libopenjpeg-dev wget zsh
+    libjpeg-dev wget zsh
 RUN mkdir -p /root/.ssh && chmod 0700 /root/.ssh
 
 EXPOSE 22
