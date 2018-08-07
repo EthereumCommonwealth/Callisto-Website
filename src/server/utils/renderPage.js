@@ -12,18 +12,19 @@ const renderPage = (html, preloadedState, headers) => {
           <meta property="og:description" content="${headers.description}" />
           <meta property="og:type" content="website" />
           ${headers.image ?
-            `<meta property="og:image" content=${headers.image} />` : ''
+            `<meta property="og:image" content=${headers.image} />` :
+            '<meta property="og:image" content="https://callisto.network/opengraphs/default-og.png" />'
           }
-          ${headers.image ?
-            `<meta name="twitter:card" content="summary_large_image" />` :
-            `<meta name="twitter:card" content="summary" />`
-          }
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="CallistoSupport" />
           <meta name="twitter:title" content="${headers.title}" />
           <meta name="twitter:description" content="${headers.description}" />
           <meta name="twitter:domain" content="callisto.network" />
           ${headers.image ?
-            `<meta property="twitter:image:src" content=${headers.image} />` : ''
+            `<meta property="twitter:image:src" content=${headers.image} />` :
+            '<meta property="twitter:image:src" content="https://callisto.network/opengraphs/default-og.png" />'
           }
           <!-- Google Tag Manager -->
           <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
