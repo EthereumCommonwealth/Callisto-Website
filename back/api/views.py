@@ -1,13 +1,13 @@
 from django.http import JsonResponse
 from django.views.generic.base import View
 
-from team.models import MemberTeam
+from team.models import TeamMember
 
 
 class TeamAPIView(View):
     def get(self, request, *args, **kwargs):
 
-        members = MemberTeam.objects.all()
+        members = TeamMember.objects.all()
 
         members_list = [
             {

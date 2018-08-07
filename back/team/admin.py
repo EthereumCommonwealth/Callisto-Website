@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import SocialNetwork, MemberTeam, MemberSocialNetwork
+from .models import SocialNetwork, TeamMember, MemberSocialNetwork
 
 # Register your models here.
 
@@ -19,5 +19,5 @@ class MemberAdmin(admin.ModelAdmin):
     ]
 
 
-admin.site.register(MemberTeam, MemberAdmin)
+admin.site.register(TeamMember, MemberAdmin)
 admin.site.register(SocialNetwork)

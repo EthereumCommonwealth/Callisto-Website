@@ -15,7 +15,7 @@ class SocialNetwork(models.Model):
 
 class MemberSocialNetwork(models.Model):
     member = models.ForeignKey(
-        'MemberTeam',
+        'TeamMember',
         on_delete=models.CASCADE
     )
     network = models.ForeignKey(
@@ -33,7 +33,7 @@ def upload_avatar(instance, filename):
     return f'image/avatars/{filename}'
 
 
-class MemberTeam(models.Model):
+class TeamMember(models.Model):
     avatar = models.ImageField(
         upload_to=upload_avatar
     )
