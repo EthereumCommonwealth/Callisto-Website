@@ -29,10 +29,13 @@ class MemberSocialNetwork(models.Model):
         default=True
     )
 
+def upload_avatar(instance, filename):
+    return '{}/{}/{}'.format('image', 'avatars', filename)
+
 
 class MemberTeam(models.Model):
     avatar = models.ImageField(
-        upload_to='avatars'
+        upload_to=upload_avatar
     )
     name = models.CharField(
         max_length=100

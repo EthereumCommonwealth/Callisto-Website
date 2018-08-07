@@ -11,7 +11,7 @@ class TeamAPIView(View):
 
         members_list = [
             {
-                'avatar': member.avatar.url,
+                'avatar': member.avatar.name,
                 'name': member.name,
                 'position': member.position,
                 'bio': member.bio,
