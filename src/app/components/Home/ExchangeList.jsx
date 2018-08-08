@@ -43,6 +43,11 @@ const ExchangeList = () => (
         </a>
       </figure>
       <figure className='ExchangeList-content-figure'>
+        <a href='https://simpleswap.io/' target='_blank'>
+          <img src='/image/exchanges/simpleswap.png' alt='SimpleSwap' />
+        </a>
+      </figure>
+      <figure className='ExchangeList-content-figure'>
         <img src='/image/exchanges/hitBTC.png' alt='HitBTC' />
         <span className='ExchangeList-content-soon'>
           <FormattedMessage id='ComingSoon' />
