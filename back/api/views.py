@@ -3,6 +3,7 @@ from django.views.generic.base import View
 
 from team.models import TeamMember
 from mining.models import MiningPool, BlockExplorer
+from wallets.models import WalletPlatform
 
 
 class TeamAPIView(View):
@@ -58,4 +59,25 @@ class MiningAPIView(View):
         }
 
         return JsonResponse(status=200, data=data, safe=False)
+
+
+class WalletsAPIView(View):
+    def get(self, request, *args, **kwargs):
+
+        wallets = WalletPlatform.objects.all()
+
+        wallets_data = [
+            {
+                'title': wallet_platform.name,
+                'icon': wallet_platform.icon,
+                'options': [
+                    {
+                        'name': wallet.name,
+                        'url': wallet.url
+                    } for wallet in wallet_platform.wallet_set.all()
+                ]
+            } for wallet_platform in wallets
+        ]
+
+        return JsonResponse(status=200, data=wallets_data, safe=False)
 
