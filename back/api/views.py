@@ -66,7 +66,7 @@ class WalletsAPIView(View):
 
         wallets = WalletPlatform.objects.all()
 
-        wallets_data = [
+        wallets_list = [
             {
                 'title': wallet_platform.name,
                 'icon': wallet_platform.icon,
@@ -79,5 +79,66 @@ class WalletsAPIView(View):
             } for wallet_platform in wallets
         ]
 
-        return JsonResponse(status=200, data=wallets_data, safe=False)
+        return JsonResponse(status=200, data=wallets_list, safe=False)
 
+
+class HomeAPIView(View):
+    def get(self, request, *args, **kwargs):
+        members = TeamMember.objects.all()
+        mining_pools = MiningPool.objects.all()
+        block_explorers = BlockExplorer.objects.all()
+        wallets = WalletPlatform.objects.all()
+
+        members_list = [
+            {
+                'avatar': member.avatar.name,
+                'name': member.name,
+                'position': member.position,
+                'bio': member.bio,
+                'socialNetworks':
+                    [
+                        {
+                            'prefix': f'fa {network.network.icon}',
+                            'url': network.url
+                        } for network in member.membersocialnetwork_set.filter(
+                        active=True)
+                    ]
+
+            } for member in members
+        ]
+
+        mining_pools_list = [
+            {
+                'name': mining_pool.name,
+                'url': mining_pool.url
+            } for mining_pool in mining_pools
+        ]
+
+        block_explorers_list = [
+            {
+                'name': block_explorer.name,
+                'url': block_explorer.url
+            } for block_explorer in block_explorers
+        ]
+
+        wallets_list = [
+            {
+                'title': wallet_platform.name,
+                'icon': wallet_platform.icon.name,
+                'options': [
+                    {
+                        'name': wallet.name,
+                        'url': wallet.url
+                    } for wallet in wallet_platform.wallet_set.all().order_by('id')
+                ]
+            } for wallet_platform in wallets
+        ]
+
+        data = {
+            'teamMembers': members_list,
+            'miningPools': mining_pools_list,
+            'blockExplorers': block_explorers_list,
+            'wallets': wallets_list
+        }
+
+        return JsonResponse(status=200, data=data, safe=False)
