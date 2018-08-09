@@ -1,6 +1,7 @@
 import axios from 'axios';
 import blogPosts from '../../../app/services/blogPosts';
 import coinStats from '../../../app/services/coinStats';
+import api from '../../../app/services/api';
 import getTranslations from '../../getTranslations';
 import preparePosts from './preparePosts';
 import handleRender from '../handleRender';
@@ -58,7 +59,7 @@ const getFAQ = async () => {
 
 const prefetchFaq = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats;
+    let posts, tags, btcStats, cloStats, internalData;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=50');
     } catch (err) {
@@ -79,9 +80,25 @@ const prefetchFaq = async (req, res, next) => {
     } catch (e) {
       cloStats = 0;
     }
+    try {
+      internalData = await api.get('home/');
+    } catch (e) {
+      internalData = {
+        teamMembers: [],
+        miningPools: [],
+        blockExplorers: [],
+        wallets: [],
+        exchanges: [],
+      };
+    }
     const faq = await getFAQ();
     const messages = getTranslations(req.params.lang);
     const initialState = {
+      teamMembers: internalData.teamMembers,
+      miningPools: internalData.miningPools,
+      blockExplorers: internalData.blockExplorers,
+      wallets: internalData.wallets,
+      exchanges: internalData.exchanges,
       blogPosts: posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts,
       blogTags: tags.data && tags.data.length > 0 ? tags.data : tags,
       marketStats: {
