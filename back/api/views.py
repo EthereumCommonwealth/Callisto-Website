@@ -4,6 +4,7 @@ from django.views.generic.base import View
 from team.models import TeamMember
 from mining.models import MiningPool, BlockExplorer
 from wallets.models import WalletPlatform
+from exchanges.models import Exchange
 
 
 class TeamAPIView(View):
@@ -13,7 +14,7 @@ class TeamAPIView(View):
 
         members_list = [
             {
-                'avatar': member.avatar.name,
+                'avatar': f'/{member.avatar.name}',
                 'name': member.name,
                 'position': member.position,
                 'bio': member.bio,
@@ -69,7 +70,7 @@ class WalletsAPIView(View):
         wallets_list = [
             {
                 'title': wallet_platform.name,
-                'icon': wallet_platform.icon,
+                'icon': f'/{wallet_platform.icon.name}',
                 'options': [
                     {
                         'name': wallet.name,
@@ -82,16 +83,33 @@ class WalletsAPIView(View):
         return JsonResponse(status=200, data=wallets_list, safe=False)
 
 
+class ExchangesAPIView(View):
+    def get(self, request, *args, **kwargs):
+
+        exchanges = Exchange.objects.all().order_by('order')
+
+        exchanges_list = [
+            {
+                'name': exchange.name,
+                'url': exchange.url,
+                'icon': f'/{exchange.icon.name}'
+            } for exchange in exchanges
+        ]
+
+        return JsonResponse(status=200, data=exchanges_list, safe=False)
+
+
 class HomeAPIView(View):
     def get(self, request, *args, **kwargs):
         members = TeamMember.objects.all()
         mining_pools = MiningPool.objects.all()
         block_explorers = BlockExplorer.objects.all()
         wallets = WalletPlatform.objects.all()
+        exchanges = Exchange.objects.all().order_by('order')
 
         members_list = [
             {
-                'avatar': member.avatar.name,
+                'avatar': f'/{member.avatar.name}',
                 'name': member.name,
                 'position': member.position,
                 'bio': member.bio,
@@ -124,7 +142,7 @@ class HomeAPIView(View):
         wallets_list = [
             {
                 'title': wallet_platform.name,
-                'icon': wallet_platform.icon.name,
+                'icon': f'/{wallet_platform.icon.name}',
                 'options': [
                     {
                         'name': wallet.name,
@@ -134,11 +152,20 @@ class HomeAPIView(View):
             } for wallet_platform in wallets
         ]
 
+        exchanges_list = [
+            {
+                'name': exchange.name,
+                'url': exchange.url,
+                'icon': f'/{exchange.icon.name}'
+            } for exchange in exchanges
+        ]
+
         data = {
             'teamMembers': members_list,
             'miningPools': mining_pools_list,
             'blockExplorers': block_explorers_list,
-            'wallets': wallets_list
+            'wallets': wallets_list,
+            'exchanges': exchanges_list
         }
 
         return JsonResponse(status=200, data=data, safe=False)

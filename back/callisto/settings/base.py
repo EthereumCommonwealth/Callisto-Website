@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'team',
     'mining',
     'wallets',
+    'exchanges',
     'api',
 ]
 
