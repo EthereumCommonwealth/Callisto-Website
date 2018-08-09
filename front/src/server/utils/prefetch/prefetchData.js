@@ -1,6 +1,6 @@
+import axios from 'axios';
 import blogPosts from '../../../app/services/blogPosts';
 import coinStats from '../../../app/services/coinStats';
-import api from '../../../app/services/api';
 import getTranslations from '../../getTranslations';
 import preparePosts from './preparePosts';
 import handleRender from '../handleRender';
@@ -29,7 +29,8 @@ const prefetchData = async (req, res, next) => {
       cloStats = 0;
     }
     try {
-      internalData = await api.get('home/');
+      internalData = await axios.get(`${process.env.API_URL}/home/`);
+      internalData = internalData.data;
     } catch (e) {
       internalData = {
         teamMembers: [],
