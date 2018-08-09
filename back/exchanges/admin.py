@@ -13,6 +13,6 @@ class ExchangeAdmin(admin.ModelAdmin):
             f'<div style="background: #34c88a;"><img src="/media/{instance.icon}" alt="{instance.name}" /></div>'
         )
 
-    get_icon.short_description = 'Icon'
+    get_icon.short_description = 'Logo'
 
 admin.site.register(Exchange, ExchangeAdmin)

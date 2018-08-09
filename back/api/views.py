@@ -92,7 +92,7 @@ class ExchangesAPIView(View):
             {
                 'name': exchange.name,
                 'url': exchange.url,
-                'icon': f'/{exchange.icon.name}'
+                'icon': f'/{exchange.logo.name}'
             } for exchange in exchanges
         ]
 
@@ -156,7 +156,7 @@ class HomeAPIView(View):
             {
                 'name': exchange.name,
                 'url': exchange.url,
-                'icon': f'/{exchange.icon.name}'
+                'icon': f'/{exchange.logo.name}'
             } for exchange in exchanges
         ]
 

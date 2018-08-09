@@ -7,7 +7,7 @@ class Exchange(models.Model):
     name = models.CharField(
         max_length=50
     )
-    icon = models.FileField(
+    logo = models.FileField(
         upload_to=upload_exchabge_icon
     )
     url = models.URLField()
