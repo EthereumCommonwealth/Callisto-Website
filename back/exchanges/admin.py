@@ -10,7 +10,7 @@ class ExchangeAdmin(admin.ModelAdmin):
 
     def get_icon(self, instance):
         return format_html(
-            f'<div style="background: #34c88a;"><img src="/media/{instance.icon}" alt="{instance.name}" /></div>'
+            f'<div style="background: #34c88a;"><img src="/media/{instance.logo}" alt="{instance.name}" /></div>'
         )
 
     get_icon.short_description = 'Logo'
