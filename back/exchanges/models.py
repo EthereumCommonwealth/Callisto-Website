@@ -15,6 +15,9 @@ class Exchange(models.Model):
         blank=True,
         null=True
     )
+    coming_soon = models.BooleanField(
+        default=False
+    )
 
     def __str__(self):
         return f'{self.name}'
