@@ -4,10 +4,10 @@ COPY base.txt /tmp/base.txt
 COPY production.txt /tmp/production.txt
 RUN pip install -r /tmp/production.txt
 
-COPY run-prod.sh /usr/local/bin/
+COPY run-production.sh /usr/local/bin/
 
-RUN chmod +x /usr/local/bin/run-prod.sh
+RUN chmod +x /usr/local/bin/run-production.sh
 
 WORKDIR /app/back
 
-CMD ["run-prod.sh"]
+CMD ["run-production.sh"]
