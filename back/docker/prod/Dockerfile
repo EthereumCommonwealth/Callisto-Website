@@ -1,6 +1,7 @@
 FROM python:3.6
 
-COPY production.py /tmp/production.txt
+COPY base.txt /tmp/base.txt
+COPY production.txt /tmp/production.txt
 RUN pip install -r /tmp/production.txt
 
 COPY run-prod.sh /usr/local/bin/

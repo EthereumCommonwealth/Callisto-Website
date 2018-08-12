@@ -15,6 +15,7 @@ ssh-dev:
 	ssh -p 2000 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no root@$(DOCKER_IP)
 
 build-docker-prod:
+	cp requirements/base.txt docker/prod/base.txt
 	cp requirements/production.txt docker/prod/production.txt
 	cd docker/prod/ && docker build -t "callisto/callisto-website-prod" .
 	rm -rf docker/prod/requirements/production.txt
