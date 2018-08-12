@@ -34,7 +34,7 @@ const prefetchTopic = async (req, res, next) => {
       cloStats = 0;
     }
     try {
-      internalData = await axios.get(`${process.env.API_URL}/home/`);
+      internalData = await axios.get(`${process.env.API_URL}home/`);
       internalData = internalData.data;
     } catch (e) {
       internalData = {
