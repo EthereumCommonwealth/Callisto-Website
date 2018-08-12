@@ -11,3 +11,5 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS += [
     'gunicorn'
 ]
+
+STATIC_URL = '/clo-admin/static/'
