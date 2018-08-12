@@ -81,3 +81,5 @@ front/src/server/public/image
 .cache/
 
 .idea/
+
+back/dump.sql

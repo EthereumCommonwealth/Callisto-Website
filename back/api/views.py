@@ -21,7 +21,7 @@ class TeamAPIView(View):
                 'socialNetworks':
                     [
                         {
-                            'prefix': f'fa {network.network.icon}',
+                            'prefix': network.network.icon,
                             'url': network.url
                         } for network in member.membersocialnetwork_set.filter(
                         active=True)
@@ -117,7 +117,7 @@ class HomeAPIView(View):
                 'socialNetworks':
                     [
                         {
-                            'prefix': f'fa {network.network.icon}',
+                            'prefix': network.network.icon,
                             'url': network.url
                         } for network in member.membersocialnetwork_set.filter(
                         active=True)
