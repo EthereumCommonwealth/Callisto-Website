@@ -20,8 +20,8 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    path('clo-admin/', admin.site.urls),
-    path('clo-api/', include('api.urls'))
+    path('', admin.site.urls),
+    path('api/', include('api.urls'))
 ]
 
 if settings.DEBUG:
