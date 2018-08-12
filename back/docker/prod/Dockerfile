@@ -4,7 +4,7 @@ RUN mkdir /app
 
 WORKDIR /app/back
 
-RUN pip install -r requirements/production.txt
+RUN pip install -r production.txt
 
 COPY run-prod.sh /usr/local/bin/
 
