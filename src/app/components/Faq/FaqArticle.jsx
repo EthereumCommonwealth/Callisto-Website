@@ -14,8 +14,8 @@ class FaqArticle extends PureComponent {
   render() {
     const { title, description } = this.props;
     return (
-      <div className='FaqArticle' onClick={this.handleOpen}>
-        <div className='FaqArticle-top'>
+      <div className='FaqArticle'>
+        <div className='FaqArticle-top' onClick={this.handleOpen}>
           <div className='FaqArticle-top-elem'>
             {this.state.open ? (
               <span className='FaqArticle-top-signal'>-</span>
@@ -28,9 +28,10 @@ class FaqArticle extends PureComponent {
         {this.state.open ? (
           <div className='FaqArticle-bottom'>
             <div />
-            <p className='FaqArticle-description'>
-              {description}
-            </p>
+            <p
+              className='FaqArticle-description'
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
           </div>
         ) : null}
       </div>

@@ -28,6 +28,7 @@ class OrderAuditModal extends PureComponent {
       platform: this.state.platform,
     })
       .then((response) => {
+        window.tap('conversion');
         this.setState({
           description: '',
           sourceCode: '',
