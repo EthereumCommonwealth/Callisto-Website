@@ -14,7 +14,7 @@ const ExchangeList = ({ exchanges }) => (
             <a href={exchange.url} target='_blank'>
               <img src={exchange.logo} alt={exchange.name} />
             </a>
-            {exchange.comming_soon ?
+            {exchange.comingSoon ?
               (
                 <span className='ExchangeList-content-soon'>
                   <FormattedMessage id='ComingSoon' />

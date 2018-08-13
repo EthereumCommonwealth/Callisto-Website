@@ -17,7 +17,7 @@ const FaqCategory = ({ id, name, articles }) => {
           <FaqArticle
             key={article.id}
             title={article.title}
-            description={article.description_text}
+            description={article.description}
           />
         ))}
       </div>

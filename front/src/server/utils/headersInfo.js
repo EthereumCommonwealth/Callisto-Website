@@ -529,6 +529,7 @@ const getHeadersInfo = (target, messages, context) => {
           image: messages.image,
           url: messages.url,
           baseUrl: `/blog/post/${messages.slug}/`,
+          fromBlog: true,
         }
       }
       if (context === 'topic') {
