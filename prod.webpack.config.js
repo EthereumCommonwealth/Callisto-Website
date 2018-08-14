@@ -7,7 +7,7 @@ const nib = require('nib');
 const rupture = require('rupture');
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-source-map',
   entry: ['./src/app/index.js'],
   mode: 'production',
   output: {
