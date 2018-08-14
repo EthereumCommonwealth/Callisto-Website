@@ -9,6 +9,11 @@ services:
     container_name: callisto-website
     environment:
       - TERM=xterm
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+      - DB_CALLISTO=${DB_CALLISTO}
+      - DB_USER=${DB_USER_CALLISTO}
+      - DB_PASS=${DB_PASS_CALLISTO}
+      - DB_HOST=${DB_HOST_CALLISTO}
     networks:
       - callisto
   callisto-postgresql:
@@ -16,9 +21,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_USER=callisto
-      - POSTGRES_PASSWORD=callisto
-      - POSTGRES_DB=callisto
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
     container_name: callisto-postgresql
     networks:
       callisto:
