@@ -28,7 +28,14 @@ class OrderAuditModal extends PureComponent {
       platform: this.state.platform,
     })
       .then((response) => {
-        window.tap('conversion');
+        const d = new Date();
+        window.tap('conversion', d.getTime(), {}, {
+          meta_data: {
+            email: this.state.email,
+            sourceCode: this.state.sourceCode,
+            platform: this.state.platform,
+          }
+        });
         this.setState({
           description: '',
           sourceCode: '',

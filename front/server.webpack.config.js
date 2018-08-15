@@ -7,7 +7,7 @@ const rupture = require('rupture');
 const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-source-map',
   node: {
     fs: 'empty',
   },
