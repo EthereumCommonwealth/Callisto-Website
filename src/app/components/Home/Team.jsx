@@ -266,6 +266,34 @@ const Team = ({ intl }) => (
             `
           }
         />
+        <TeamMember
+          avatar='/image/avatars/akira_avatar.png'
+          name='Akira Takizawa'
+          position='Blockchain engineer'
+          socialNetworks={[
+            {
+              prefix: 'fab fa-github',
+              url: 'https://github.com/akx20000a',
+            },
+            {
+              prefix: 'far fa-envelope',
+              url: 'mailto:akx20000@protonmail.com',
+            },
+            {
+              prefix: 'fab fa-linkedin-in',
+              url: 'https://www.linkedin.com/in/akira-takizawa-11341015a/',
+            },
+          ]}
+          bio={
+            `
+              Empowering blockchain ecosystem with knowledge of
+              backend development and server engineering,
+              I’ve been contributed on open source development for more than 5 years,
+              talented on cryptocurrency marketing and former director
+              of several blockchain projects.
+            `
+          }
+        />
       </div>
     </div>
   </Element>
