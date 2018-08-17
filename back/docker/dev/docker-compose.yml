@@ -4,7 +4,7 @@ services:
     image: callisto/callisto-website
     volumes:
       - ~/.ssh/id_rsa.pub:/tmp/authorized_keys
-      - ../../:/app/
+      - ../../../:/app/
     ports:
       - "2000:22"
       - "8000:8000"
