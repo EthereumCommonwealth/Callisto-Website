@@ -118,7 +118,7 @@ class HomeAPIView(View):
                     [
                         {
                             'prefix': network.network.icon,
-                            'url': network.url
+                            'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
                         } for network in member.membersocialnetwork_set.filter(
                         active=True)
                     ]
