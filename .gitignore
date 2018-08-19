@@ -70,10 +70,13 @@ typings/
 
 front/src/server/public/stylus/
 front/src/server/public/main.css
+front/src/server/public/main.css.map
 front/src/server/public/main.css.gz
 front/src/server/public/main.js
+front/src/server/public/main.js.map
 front/src/server/public/main.js.gz
 front/src/server/public/vendor.js
+front/src/server/public/vendor.js.map
 front/src/server/public/vendor.js.gz
 front/src/server/public/image
 

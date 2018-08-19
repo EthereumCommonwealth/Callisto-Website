@@ -80,6 +80,11 @@ class Footer extends PureComponent {
         url: '/financial-report/',
         type: 'router',
       },
+      {
+        title: this.props.intl.formatMessage({ id: 'AffiliateProgram' }),
+        url: 'https://affiliate.callisto.network/',
+        type: 'anchor',
+      },
     ];
   }
 

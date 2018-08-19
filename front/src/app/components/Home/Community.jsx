@@ -4,6 +4,10 @@ import { injectIntl } from 'react-intl';
 import SectionHeading from '../commons/SectionHeading';
 
 class Community extends PureComponent {
+  state = {
+    bitcoinTalkIcon: false,
+  };
+
   get telegramUrl() {
     switch (this.props.lang) {
       case 'ru':
@@ -13,6 +17,12 @@ class Community extends PureComponent {
       default:
         return 'https://t.me/CallistoNet';
     }
+  }
+
+  handleOpen = event => {
+    event.preventDefault();
+    const { bitcoinTalkIcon } = this.state;
+    this.setState({ bitcoinTalkIcon: !bitcoinTalkIcon });
   }
 
   render() {
@@ -107,12 +117,29 @@ class Community extends PureComponent {
               className='Community-list-element'
               href='https://t.co/DAWunSR1tm'
               target='_blank'
+              onMouseEnter={this.handleOpen}
+              onMouseLeave={this.handleOpen}
             >
-              <figure className='Community-list-element-figure'>
-                <img src='/image/bitcointalk-icon.svg' alt='Bitcoin Talk'/>
-              </figure>
+              {!this.state.bitcoinTalkIcon ?
+                <figure className='Community-list-element-figure'>
+                  <img src='/image/bitcointalk-icon.svg' alt='Bitcoin Talk'/>
+                </figure> :
+                <figure className='Community-list-element-figure'>
+                  <img src='/image/bitcointalk-green-icon.svg' alt='Bitcoin Talk'/>
+                </figure>
+              }
               <span className='Community-list-element-text'>
                 Bitcointalk
+              </span>
+            </a>
+            <a
+              className='Community-list-element'
+              href='https://www.youtube.com/channel/UC1WMae32v_eJ8qOtLQqM26Q'
+              target='_blank'
+            >
+              <i className='fab fa-youtube' />
+              <span className='Community-list-element-text'>
+                Youtube
               </span>
             </a>
           </div>
