@@ -15,6 +15,13 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/ar/',
         baseUrl: '/',
       }
+    case '/bg/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/bg/',
+        baseUrl: '/',
+      }
     case '/cs/':
       return {
         title: messages.homeTitle,
@@ -43,6 +50,13 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/fr/',
         baseUrl: '/',
       }
+    case '/hi/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/hi/',
+        baseUrl: '/',
+      }
     case '/id/':
       return {
         title: messages.homeTitle,
@@ -57,11 +71,18 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/it/',
         baseUrl: '/',
       }
-    case '/ko/':
+    case '/ja/':
       return {
         title: messages.homeTitle,
         description: messages.homeDescription,
         url: 'https://callisto.network/ko/',
+        baseUrl: '/',
+      }
+    case '/ko/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/ja/',
         baseUrl: '/',
       }
     case '/nl/':
@@ -71,11 +92,46 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/nl/',
         baseUrl: '/',
       }
+    case '/no/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/no/',
+        baseUrl: '/',
+      }
+    case '/pl/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/pl/',
+        baseUrl: '/',
+      }
+    case '/pt/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/pt/',
+        baseUrl: '/',
+      }
+    case '/ro/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/ro/',
+        baseUrl: '/',
+      }
     case '/ru/':
       return {
         title: messages.homeTitle,
         description: messages.homeDescription,
         url: 'https://callisto.network/ru/',
+        baseUrl: '/',
+      }
+    case '/tr/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/tr/',
         baseUrl: '/',
       }
     case '/uk/':
@@ -120,6 +176,13 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/ar/cold-staking/',
         baseUrl: '/cold-staking/',
       }
+    case '/bg/cold-staking/':
+      return {
+        title: messages.stakingTitle,
+        description: messages.stakingDescription,
+        url: 'https://callisto.network/bg/cold-staking/',
+        baseUrl: '/cold-staking/',
+      }
     case '/cs/cold-staking/':
       return {
         title: messages.stakingTitle,
@@ -148,6 +211,13 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/fr/cold-staking/',
         baseUrl: '/cold-staking/',
       }
+    case '/hi/cold-staking/':
+      return {
+        title: messages.stakingTitle,
+        description: messages.stakingDescription,
+        url: 'https://callisto.network/hi/cold-staking/',
+        baseUrl: '/cold-staking/',
+      }
     case '/id/cold-staking/':
       return {
         title: messages.stakingTitle,
@@ -160,6 +230,13 @@ const getHeadersInfo = (target, messages, context) => {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/it/cold-staking/',
+        baseUrl: '/cold-staking/',
+      }
+    case '/ja/cold-staking/':
+      return {
+        title: messages.stakingTitle,
+        description: messages.stakingDescription,
+        url: 'https://callisto.network/ja/cold-staking/',
         baseUrl: '/cold-staking/',
       }
     case '/ko/cold-staking/':
@@ -176,11 +253,46 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/nl/cold-staking/',
         baseUrl: '/cold-staking/',
       }
+    case '/no/cold-staking/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/no/cold-staking/',
+        baseUrl: '/cold-staking/',
+      }
+    case '/pl/cold-staking/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/pl/cold-staking/',
+        baseUrl: '/cold-staking/',
+      }
+    case '/pt/cold-staking/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/pt/cold-staking/',
+        baseUrl: '/cold-staking/',
+      }
+    case '/ro/cold-staking/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/ro/cold-staking/',
+        baseUrl: '/cold-staking/',
+      }
     case '/ru/cold-staking/':
       return {
         title: messages.stakingTitle,
         description: messages.stakingDescription,
         url: 'https://callisto.network/ru/cold-staking/',
+        baseUrl: '/cold-staking/',
+      }
+    case '/tr/cold-staking/':
+      return {
+        title: messages.stakingTitle,
+        description: messages.stakingDescription,
+        url: 'https://callisto.network/tr/cold-staking/',
         baseUrl: '/cold-staking/',
       }
     case '/uk/cold-staking/':
@@ -224,6 +336,13 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/ar/smart-contract-audit/',
         baseUrl: '/smart-contract-audit/',
       }
+    case '/bg/smart-contract-audit/':
+      return {
+        title: messages.contractsTitle,
+        description: messages.contractsDescription,
+        url: 'https://callisto.network/bg/smart-contract-audit/',
+        baseUrl: '/smart-contract-audit/',
+      }
     case '/cs/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
@@ -252,6 +371,13 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/fr/smart-contract-audit/',
         baseUrl: '/smart-contract-audit/',
       }
+    case '/hi/smart-contract-audit/':
+      return {
+        title: messages.contractsTitle,
+        description: messages.contractsDescription,
+        url: 'https://callisto.network/hi/smart-contract-audit/',
+        baseUrl: '/smart-contract-audit/',
+      }
     case '/id/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
@@ -264,6 +390,13 @@ const getHeadersInfo = (target, messages, context) => {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
         url: 'https://callisto.network/it/smart-contract-audit/',
+        baseUrl: '/smart-contract-audit/',
+      }
+    case '/ja/smart-contract-audit/':
+      return {
+        title: messages.contractsTitle,
+        description: messages.contractsDescription,
+        url: 'https://callisto.network/ja/smart-contract-audit/',
         baseUrl: '/smart-contract-audit/',
       }
     case '/ko/smart-contract-audit/':
@@ -280,11 +413,46 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/nl/smart-contract-audit/',
         baseUrl: '/smart-contract-audit/',
       }
+    case '/no/smart-contract-audit/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/no/smart-contract-audit/',
+        baseUrl: '/smart-contract-audit/',
+      }
+    case '/pl/cold-staking/smart-contract-audit/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/pl/smart-contract-audit/',
+        baseUrl: '/smart-contract-audit/',
+      }
+    case '/pt/smart-contract-audit/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/pt/smart-contract-audit/',
+        baseUrl: '/smart-contract-audit/',
+      }
+    case '/ro/smart-contract-audit/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/ro/smart-contract-audit/',
+        baseUrl: '/smart-contract-audit/',
+      }
     case '/ru/smart-contract-audit/':
       return {
         title: messages.contractsTitle,
         description: messages.contractsDescription,
         url: 'https://callisto.network/ru/smart-contract-audit/',
+        baseUrl: '/smart-contract-audit/',
+      }
+    case '/tr/smart-contract-audit/':
+      return {
+        title: messages.contractsTitle,
+        description: messages.contractsDescription,
+        url: 'https://callisto.network/tr/smart-contract-audit/',
         baseUrl: '/smart-contract-audit/',
       }
     case '/uk/smart-contract-audit/':
@@ -329,6 +497,13 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/ar/financial-report/',
         baseUrl: '/financial-report/',
       }
+    case '/bg/financial-report/':
+      return {
+        title: messages.financialTitle,
+        description: messages.financialDescription,
+        url: 'https://callisto.network/bg/financial-report/',
+        baseUrl: '/financial-report/',
+      }
     case '/cs/financial-report/':
       return {
         title: messages.financialTitle,
@@ -357,6 +532,13 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/fr/financial-report/',
         baseUrl: '/financial-report/',
       }
+    case '/hi/financial-report/':
+      return {
+        title: messages.financialTitle,
+        description: messages.financialDescription,
+        url: 'https://callisto.network/hi/financial-report/',
+        baseUrl: '/financial-report/',
+      }
     case '/id/financial-report/':
       return {
         title: messages.financialTitle,
@@ -369,6 +551,13 @@ const getHeadersInfo = (target, messages, context) => {
         title: messages.financialTitle,
         description: messages.financialDescription,
         url: 'https://callisto.network/it/financial-report/',
+        baseUrl: '/financial-report/',
+      }
+    case '/ja/financial-report/':
+      return {
+        title: messages.financialTitle,
+        description: messages.financialDescription,
+        url: 'https://callisto.network/ja/financial-report/',
         baseUrl: '/financial-report/',
       }
     case '/ko/financial-report/':
@@ -385,11 +574,46 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/nl/financial-report/',
         baseUrl: '/financial-report/',
       }
+    case '/no/financial-report/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/no/financial-report/',
+        baseUrl: '/financial-report/',
+      }
+    case '/pl/financial-report/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/pl/financial-report/',
+        baseUrl: '/financial-report/',
+      }
+    case '/pt/financial-report/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/pt/financial-report/',
+        baseUrl: '/financial-report/',
+      }
+    case '/ro/financial-report/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/ro/financial-report/',
+        baseUrl: '/financial-report/',
+      }
     case '/ru/financial-report/':
       return {
         title: messages.financialTitle,
         description: messages.financialDescription,
         url: 'https://callisto.network/ru/financial-report/',
+        baseUrl: '/financial-report/',
+      }
+    case '/tr/financial-report/':
+      return {
+        title: messages.financialTitle,
+        description: messages.financialDescription,
+        url: 'https://callisto.network/tr/financial-report/',
         baseUrl: '/financial-report/',
       }
     case '/uk/financial-report/':
@@ -434,6 +658,13 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/ar/airdrop/',
         baseUrl: '/airdrop/',
       }
+    case '/bg/airdrop/':
+      return {
+        title: messages.airdropTitle,
+        description: messages.airdropDescription,
+        url: 'https://callisto.network/bg/airdrop/',
+        baseUrl: '/airdrop/',
+      }
     case '/cs/airdrop/':
       return {
         title: messages.airdropTitle,
@@ -462,6 +693,13 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/fr/airdrop/',
         baseUrl: '/airdrop/',
       }
+    case '/hi/airdrop/':
+      return {
+        title: messages.airdropTitle,
+        description: messages.airdropDescription,
+        url: 'https://callisto.network/hi/airdrop/',
+        baseUrl: '/airdrop/',
+      }
     case '/id/airdrop/':
       return {
         title: messages.airdropTitle,
@@ -474,6 +712,13 @@ const getHeadersInfo = (target, messages, context) => {
         title: messages.airdropTitle,
         description: messages.airdropDescription,
         url: 'https://callisto.network/it/airdrop/',
+        baseUrl: '/airdrop/',
+      }
+    case '/ja/airdrop/':
+      return {
+        title: messages.airdropTitle,
+        description: messages.airdropDescription,
+        url: 'https://callisto.network/ja/airdrop/',
         baseUrl: '/airdrop/',
       }
     case '/ko/airdrop/':
@@ -490,11 +735,46 @@ const getHeadersInfo = (target, messages, context) => {
         url: 'https://callisto.network/nl/airdrop/',
         baseUrl: '/airdrop/',
       }
+    case '/no/financial-report/airdrop/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/no/airdrop/',
+        baseUrl: '/airdrop/',
+      }
+    case '/pl/airdrop/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/pl/financialairdrop/',
+        baseUrl: '/airdrop/',
+      }
+    case '/pt/airdrop/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/pt/airdrop/',
+        baseUrl: '/airdrop/',
+      }
+    case '/ro/airdrop/':
+      return {
+        title: messages.homeTitle,
+        description: messages.homeDescription,
+        url: 'https://callisto.network/ro/airdrop/',
+        baseUrl: '/airdrop/',
+      }
     case '/ru/airdrop/':
       return {
         title: messages.airdropTitle,
         description: messages.airdropDescription,
         url: 'https://callisto.network/ru/airdrop/',
+        baseUrl: '/airdrop/',
+      }
+    case '/tr/airdrop/':
+      return {
+        title: messages.airdropTitle,
+        description: messages.airdropDescription,
+        url: 'https://callisto.network/tr/airdrop/',
         baseUrl: '/airdrop/',
       }
     case '/uk/airdrop/':
