@@ -126,7 +126,7 @@ app.post('/send-email', (req, res) => {
   });
   const mailOptions = {
     from: 'Callisto Website <hi@callisto.network.com>',
-    to: sendTo,
+    to: 'yograterol@callisto.network, yuri@callisto.network',
     subject: 'Audit Request',
     html: `
       <p>A new Audit Request has been received.<p>
