@@ -11,6 +11,7 @@ import FinalReport from '../components/SmartContracts/FinalReport';
 import DisclosurePolicy from '../components/SmartContracts/DisclosurePolicy';
 import OrderAudit from '../components/SmartContracts/OrderAudit';
 import OrderAuditModal from '../components/SmartContracts/OrderAuditModal';
+import Testimonials from '../components/SmartContracts/Testimonials';
 import Footer from '../components/commons/Footer';
 
 class SmartContract extends PureComponent {
@@ -39,6 +40,7 @@ class SmartContract extends PureComponent {
         <AuditorsCheck />
         <SmartAuthor />
         <FinalReport />
+        <Testimonials />
         <DisclosurePolicy />
         <OrderAudit openModal={this.handleOpenModal} />
         <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />

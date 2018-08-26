@@ -142,6 +142,16 @@ class Community extends PureComponent {
                 Youtube
               </span>
             </a>
+            <a
+              className='Community-list-element'
+              href='https://www.instagram.com/callisto.network/'
+              target='_blank'
+            >
+              <i className='fab fa-instagram' />
+              <span className='Community-list-element-text'>
+                Instagram
+              </span>
+            </a>
           </div>
         </div>
       </Element>

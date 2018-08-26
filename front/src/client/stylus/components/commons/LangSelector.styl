@@ -21,6 +21,10 @@
     padding 0
     box-shadow 2px 3px 4px 3px rgba(226,226,226,0.58)
     z-index 1
+    max-height 75vh
+    overflow scroll
+    +from-width($md)
+      max-height unset
     &.to-top
       top unset
       bottom 3em
