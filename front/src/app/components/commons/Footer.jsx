@@ -255,12 +255,12 @@ class Footer extends PureComponent {
               >
                 <FormattedMessage id='Mediakit' />
               </a>
-              <Link to='/privacy-policy' className='Footer-bottom-content-element'>
+              {/* <Link to='/privacy-policy' className='Footer-bottom-content-element'>
                 <FormattedMessage id='PrivacyPolicy' />
               </Link>
               <Link to='/terms' className='Footer-bottom-content-element'>
                 <FormattedMessage id='Terms' />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
