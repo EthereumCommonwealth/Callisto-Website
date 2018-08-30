@@ -11,6 +11,7 @@ import MarketStatus from '../components/Home/MarketStatus';
 import Mining from '../components/Home/Mining';
 import MiningPools from '../components/Home/MiningPools';
 import Team from '../components/Home/Team';
+import PartnersList from '../components/Home/PartnersList';
 import BlogOverview from '../components/Home/BlogOverview';
 import Community from '../components/Home/Community';
 import Footer from '../components/commons/Footer';
@@ -32,6 +33,7 @@ const Home = ({ match }) => {
       <Mining />
       <MiningPools />
       <Team />
+      <PartnersList />
       <BlogOverview />
       <Community
         lang={match.params && match.params.lang ? match.params.lang : 'en'}
