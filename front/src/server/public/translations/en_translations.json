@@ -262,5 +262,5 @@
   "OrderAuditModalDisclosureLabel": "Do you want us to publish the report as is, or would you like us to notify you privately in case we find critical vulnerabilities? Provide your email if you would like us to send you a notification",
   "OrderAuditModalPlatformLabel": "Which network will your contract be deployed on?",
   "OrderAuditSuccess": "Audit order form successfully sent.",
-  "PartnersList": "Partners List"
+  "OurPartners": "Our Partners"
 }

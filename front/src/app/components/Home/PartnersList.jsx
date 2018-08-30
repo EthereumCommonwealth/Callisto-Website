@@ -6,7 +6,7 @@ const PartnersList = ({ exchanges, intl }) => (
   <div className='PartnersList'>
     <div className='container'>
       <SectionHeading
-        title={intl.formatMessage({ id: 'PartnersList', defaultMessage: 'Partners List' })}
+        title={intl.formatMessage({ id: 'OurPartners', defaultMessage: 'Our Partners' })}
       />
       <div className='PartnersList-content'>
         <figure className='PartnersList-content-figure'>
