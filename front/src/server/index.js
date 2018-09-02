@@ -68,14 +68,14 @@ if (ENV.isDevelopment()) {
   app.use(webpackDevMiddleware(compiler, serverConfig));
   app.use(webpackHotMiddleware(compiler));
   app.use((req, res, next) => {
-    req.hashManifest = ['main.js', 'main.css', 'vendor.js'];
+    req.hashManifest = ['/main.js', '/main.css', '/vendor.js'];
     next();
   });
 } else {
   console.log('Loading server configs')
   const manifest = getManifest();
   app.use((req, res, next) => {
-    req.hashManifest = manifest.length > 0 ? manifest : ['main.js', 'main.css', 'vendor.js'];
+    req.hashManifest = manifest.length > 0 ? manifest : ['/main.js', '/main.css', '/vendor.js'];
     next();
   });
   app.use(helmet());

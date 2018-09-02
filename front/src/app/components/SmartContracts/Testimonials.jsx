@@ -7,11 +7,21 @@ const Testimonials = ({ intl }) => (
       <div className='Testimonials-content'>
         <div className='Testimonials-element square'>
           <span className='Testimonials-element-title'>Audits in progress:</span>
-          <span className='Testimonials-element-description'>7</span>
+          <span className='Testimonials-element-description'>11</span>
+          <a
+            className='Testimonials-element-anchor'
+            href='https://github.com/EthereumCommonwealth/Auditing/issues?q=is%3Aopen+is%3Aissue'
+            target='_blank'
+          />
         </div>
         <div className='Testimonials-element square'>
           <span className='Testimonials-element-title'>Completed Audits:</span>
           <span className='Testimonials-element-description'>16</span>
+          <a
+            className='Testimonials-element-anchor'
+            href='https://github.com/EthereumCommonwealth/Auditing/issues?q=is%3Aissue+is%3Aclosed'
+            target='_blank'
+          />
         </div>
       </div>
     </div>
