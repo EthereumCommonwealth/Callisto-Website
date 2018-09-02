@@ -49,6 +49,13 @@ class OrderAuditModal extends PureComponent {
           this.setState({ emailSent: false });
         }, 5000);
       })
+      .then(() => {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-794594304/3fsOCKS-pIgBEICY8voC',
+          'transaction_id': '',
+          'event_callback': window.location.href,
+        });
+      })
       .catch(function (error) {
         console.log(error);
         this.setState({
