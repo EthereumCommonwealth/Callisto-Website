@@ -5,6 +5,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const nib = require('nib');
 const rupture = require('rupture');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
@@ -12,7 +13,7 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.join(process.cwd(), './src/server/public'),
-    filename: 'main.js',
+    filename: 'main.[hash].js',
     publicPath: '/'
   },
   module: {
@@ -104,7 +105,7 @@ module.exports = {
           chunks: 'all',
           reuseExistingChunk: true,
           priority: 1,
-          filename: 'vendor.js',
+          filename: 'vendor.[hash].js',
           enforce: true,
           test(module, chunks) {
             const name = module.nameForCondition && module.nameForCondition();
@@ -133,10 +134,11 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    new ExtractTextPlugin('[name].css', { allChunks: true }),
+    new ExtractTextPlugin('[name].[hash].css', { allChunks: true }),
     new CompressionPlugin({
       test: /\.js$|\.css$/,
       asset: '[path].gz'
-    })
+    }),
+    new ManifestPlugin(),
   ],
 }
