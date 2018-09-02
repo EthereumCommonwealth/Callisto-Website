@@ -24,7 +24,7 @@ const handleRender = (req, res, initialState, messages, pageContext) => {
     </Provider>
   );
   const preloadedState = store.getState();
-  res.send(renderPage(html, preloadedState, headersInfo(req.path, messages, pageContext)));
+  res.send(renderPage(html, preloadedState, headersInfo(req.path, messages, pageContext), req.hashManifest));
 }
 
 export default handleRender;

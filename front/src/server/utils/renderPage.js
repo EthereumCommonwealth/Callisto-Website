@@ -1,4 +1,4 @@
-const renderPage = (html, preloadedState, headers) => {
+const renderPage = (html, preloadedState, headers, hashManifest) => {
   return (`
     <!doctype html>
       <html>
@@ -68,7 +68,7 @@ const renderPage = (html, preloadedState, headers) => {
           <link rel="alternate" href="https://callisto.network/zh${headers.baseUrl}" hreflang="zh-hans" />
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,
             maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
-          <link rel="stylesheet" href="/main.css" type="text/css"/>
+          <link rel="stylesheet" href="${hashManifest[1]}" type="text/css"/>
           <script src="https://script.tapfiliate.com/tapfiliate.js" type="text/javascript" async></script>
           <script type="text/javascript">
             (function(t,a,p){t.TapfiliateObject=a;t[a]=t[a]||function(){ (t[a].q=t[a].q||[]).push(arguments)}})(window,'tap');
@@ -89,8 +89,8 @@ const renderPage = (html, preloadedState, headers) => {
           <script>
             window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
           </script>
-          <script src="/vendor.js" type="text/javascript"></script>
-          <script src="/main.js" type="text/javascript"></script>
+          <script src="${hashManifest[2]}" type="text/javascript"></script>
+          <script src="${hashManifest[0]}" type="text/javascript"></script>
         </body>
     </html>
   `);

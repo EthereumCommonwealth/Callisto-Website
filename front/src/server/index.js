@@ -8,6 +8,7 @@ import helmet from 'helmet';
 import favicon from 'express-favicon';
 import R from 'ramda';
 import { langs } from '../app/constants/';
+import getManifest from './getManifest';
 import prefetchData from './utils/prefetch/prefetchData';
 import prefetchPost from './utils/prefetch/prefetchPost';
 import prefetchTopic from './utils/prefetch/prefetchTopic';
@@ -42,7 +43,6 @@ const app = express()
 const port = process.env.PORT || 3000
 const email = process.env.EMAIL
 const pass = process.env.PASS
-const sendTo = process.env.SEND_TO
 
 if (ENV.isDevelopment()) {
   console.log('Loading development server configs')
@@ -67,8 +67,17 @@ if (ENV.isDevelopment()) {
   }
   app.use(webpackDevMiddleware(compiler, serverConfig));
   app.use(webpackHotMiddleware(compiler));
+  app.use((req, res, next) => {
+    req.hashManifest = ['main.js', 'main.css', 'vendor.js'];
+    next();
+  });
 } else {
   console.log('Loading server configs')
+  const manifest = getManifest();
+  app.use((req, res, next) => {
+    req.hashManifest = manifest.length > 0 ? manifest : ['main.js', 'main.css', 'vendor.js'];
+    next();
+  });
   app.use(helmet());
   app.disable('x-powered-by');
 }
