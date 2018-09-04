@@ -247,7 +247,7 @@
   "Q22018.S.1": "Readable transactions including smart contracts instructions",
   "Q22018.S.2": "Token explorer",
   "Q22018.S.3": "Testnet support (Callisto, Ethereum, Ethereum Classic)",
-  "Q32018.1": "ETC-CLO swap channel implementation",
+  "Q32018.1": "Formation of the Security Department of Callisto (Solidity)",
   "Q42018.1": "Planned Hardfork No. 1: Cold staking implementation",
   "Q42018.2": "eWASM implementation research",
   "Q42018.3": "New address (c-address) type. Address abstraction implementation.",
