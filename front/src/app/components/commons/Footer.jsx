@@ -55,6 +55,11 @@ class Footer extends PureComponent {
         url: '/faq/',
         type: 'anchor',
       },
+      {
+        title: this.props.intl.formatMessage({ id: 'Forum', defaultMessage: 'Forum' }),
+        url: 'https://forum.callisto.network/',
+        type: 'anchor',
+      },
     ];
   }
 
