@@ -29,10 +29,14 @@
     +from-width($md)
       grid-template-columns 2fr 8fr 2fr
     .Post-description
+      figure
+        margin .5em 0
+        width 95% !important
+        height auto
       img
-          margin .5em 0
-          width 100%
-          height auto
+        margin .5em 0
+        width 95%
+        height auto
       h2
         font-size 26px
         color $dark-blue
@@ -41,7 +45,7 @@
         margin-bottom 1em
         +from-width($md)
           margin-bottom 2em
-      a
+      a, b
         word-break break-word
         text-decoration none
       ul
@@ -69,6 +73,20 @@
             color $green
             position absolute
             left -2em
+      pre
+        code
+          overflow scroll
+          max-width 275px
+          +from-width(350px)
+            max-width 325px
+          +from-width($xs)
+            max-width 350px
+          +from-width($sm)
+            max-width 500px
+          +from-width($md)
+            max-width 720px
+          +from-width($xl)
+            max-width 850px
   &-topics
     padding 2em 0
     display flex
