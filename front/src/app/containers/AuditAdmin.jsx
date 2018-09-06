@@ -1,11 +1,17 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
+import { IntlProvider } from 'react-intl';
+import Header from '../components/AuditsAdmin/commons/Header';
+import AuditsList from '../components/AuditsAdmin/AuditsList';
 
 const AuditAdmin = () => {
   return (
-    <div className='AuditAdmin'>
-      Audit Admin Here
-    </div>
+    <IntlProvider locale='en' messages={{}}>
+      <div className='AuditAdmin'>
+        <Header />
+        <AuditsList />
+      </div>
+    </IntlProvider>
   );
 
 }
