@@ -8,6 +8,7 @@ import Airdrop from '../containers/Airdrop';
 import Faq from '../containers/Faq';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
 import Post from '../containers/Post';
+import AuditAdmin from '../containers/AuditAdmin';
 import Notfound from '../containers/NotFound';
 import { langs } from '../constants/';
 
@@ -111,6 +112,11 @@ const routes = [
     path: `/:lang${langs}/community-guidlines/`,
     exact: true,
     component: CommunityGuidlines,
+  },
+  {
+    path: '/platform/',
+    exact: true,
+    component: AuditAdmin,
   },
   {
     name: 'notFound',

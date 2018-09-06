@@ -15,6 +15,7 @@ const rootReducer = combineReducers(
     faq: mockReducer,
     singlePost: mockReducer,
     messages: mockReducer,
+    auditsList: mockReducer,
   });
 
 export default rootReducer;

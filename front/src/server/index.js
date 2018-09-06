@@ -13,6 +13,7 @@ import prefetchData from './utils/prefetch/prefetchData';
 import prefetchPost from './utils/prefetch/prefetchPost';
 import prefetchTopic from './utils/prefetch/prefetchTopic';
 import prefetchFaq from './utils/prefetch/prefetchFaq';
+import prefetchPlatform from './utils/prefetch/prefetchPlatform';
 
 const Env = (envVars) => {
   const ENV_NAMES = {
@@ -123,6 +124,7 @@ app.get(`/:lang${langs}/cold-staking/`, prefetchData);
 app.get(`/:lang${langs}/smart-contract-audit/`, prefetchData);
 app.get(`/:lang${langs}/financial-report/`, prefetchData);
 app.get(`/:lang${langs}/community-guidlines/`, prefetchData);
+app.get('/platform/', prefetchPlatform);
 app.post('/send-email', (req, res) => {
   const transporter = nodeMailer.createTransport({
     host: 'smtp.gmail.com',
