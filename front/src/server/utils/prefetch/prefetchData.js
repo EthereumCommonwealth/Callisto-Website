@@ -7,7 +7,7 @@ import handleRender from '../handleRender';
 
 const prefetchData = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats, internalData;
+    let posts, tags, btcStats, cloStats, internalData, audit;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=50');
     } catch (err) {
@@ -40,6 +40,15 @@ const prefetchData = async (req, res, next) => {
         exchanges: [],
       };
     }
+    try {
+      audit = await axios.get(`${process.env.AUDIT_URL}audit-request/create/`);
+      audit = audit.data;
+    } catch (e) {
+      audit = {
+        platform: [],
+        csrf_token: null,
+      }
+    }
     const messages = getTranslations(req.params.lang);
     const initialState = {
       teamMembers: internalData.teamMembers,
@@ -59,6 +68,7 @@ const prefetchData = async (req, res, next) => {
       faq: [],
       singlePost: {},
       messages,
+      audit,
     };
     handleRender(req, res, initialState, messages);
   } catch (err) {

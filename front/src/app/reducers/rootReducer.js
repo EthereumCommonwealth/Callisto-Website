@@ -16,6 +16,7 @@ const rootReducer = combineReducers(
     singlePost: mockReducer,
     messages: mockReducer,
     auditsList: mockReducer,
+    audit: mockReducer,
   });
 
 export default rootReducer;

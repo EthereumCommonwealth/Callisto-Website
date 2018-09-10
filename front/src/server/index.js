@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import fs from 'fs';
-import nodeMailer from 'nodemailer';
 import bodyParser from 'body-parser';
 import express from 'express';
 import dotenv from 'dotenv';
@@ -14,6 +13,7 @@ import prefetchPost from './utils/prefetch/prefetchPost';
 import prefetchTopic from './utils/prefetch/prefetchTopic';
 import prefetchFaq from './utils/prefetch/prefetchFaq';
 import prefetchPlatform from './utils/prefetch/prefetchPlatform';
+import createAudit from './utils/createAudit';
 
 const Env = (envVars) => {
   const ENV_NAMES = {
@@ -42,8 +42,6 @@ dotenv.config()
 const ENV = Env(process.env)
 const app = express()
 const port = process.env.PORT || 3000
-const email = process.env.EMAIL
-const pass = process.env.PASS
 
 if (ENV.isDevelopment()) {
   console.log('Loading development server configs')
@@ -125,36 +123,7 @@ app.get(`/:lang${langs}/smart-contract-audit/`, prefetchData);
 app.get(`/:lang${langs}/financial-report/`, prefetchData);
 app.get(`/:lang${langs}/community-guidlines/`, prefetchData);
 app.get('/platform/', prefetchPlatform);
-app.post('/send-email', (req, res) => {
-  const transporter = nodeMailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: email,
-      pass: pass,
-    },
-  });
-  const mailOptions = {
-    from: 'Callisto Website <hi@callisto.network.com>',
-    to: 'yograterol@callisto.network, yuri@callisto.network',
-    subject: 'Audit Request',
-    html: `
-      <p>A new Audit Request has been received.<p>
-      <p>Description: </p>
-      <p>${req.body.description}</p>
-      <p>Source code: <a href='${req.body.sourceCode}' target='_blank'> Source code Link </a></p>
-      <p>Email: <strong>${req.body.email}</strong></p>
-      <p>Platform: <strong> ${req.body.platform} <strong/></p>
-    `
-  };
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) res.status(501).send(error)
-    res.status(200).send({
-      succes: true,
-    });
-  });
-});
+app.post('/create-audit-request/', createAudit);
 app.use((req, res, next) => {
   res.status(404);
   prefetchData(req, res, next);
