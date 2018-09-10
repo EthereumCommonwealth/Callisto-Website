@@ -9,6 +9,7 @@ import Faq from '../containers/Faq';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
 import Post from '../containers/Post';
 import AuditAdmin from '../containers/AuditAdmin';
+import AuditDetail from '../containers/AuditAdmin';
 import Notfound from '../containers/NotFound';
 import { langs } from '../constants/';
 
@@ -117,6 +118,11 @@ const routes = [
     path: '/platform/',
     exact: true,
     component: AuditAdmin,
+  },
+  {
+    path: '/platform/:id-:slug/',
+    exact: true,
+    component: AuditDetail,
   },
   {
     name: 'notFound',

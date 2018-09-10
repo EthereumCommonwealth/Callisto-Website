@@ -122,7 +122,9 @@ app.get(`/:lang${langs}/cold-staking/`, prefetchData);
 app.get(`/:lang${langs}/smart-contract-audit/`, prefetchData);
 app.get(`/:lang${langs}/financial-report/`, prefetchData);
 app.get(`/:lang${langs}/community-guidlines/`, prefetchData);
+//Audit URLS
 app.get('/platform/', prefetchPlatform);
+app.get('/platform/:id-:slug/', prefetchPlatform);
 app.post('/create-audit-request/', createAudit);
 app.use((req, res, next) => {
   res.status(404);

@@ -3,7 +3,7 @@ import blogPosts from '../../../app/services/blogPosts';
 import coinStats from '../../../app/services/coinStats';
 import getTranslations from '../../getTranslations';
 import preparePosts from './preparePosts';
-import handleRender from '../handleRender';
+import handleRender from '../render/website/handleRender';
 
 const getArticles = async (category) => {
   const articles = await axios.get(`solutions/folders/${category.id}/articles/`, {

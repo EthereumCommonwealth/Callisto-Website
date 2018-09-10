@@ -5,12 +5,11 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router';
 import { renderRoutes } from 'react-router-config';
-import rootReducer from '../../app/reducers/rootReducer.js';
-import Routes from '../../app/routes/serverRoutes.js';
-import headersInfo from './headersInfo';
-import renderPage from './renderPage';
+import rootReducer from '../../../../app/reducers/rootReducer.js';
+import Routes from '../../../../app/routes/serverRoutes.js';
+import renderPlatform from './renderPlatform';
 
-const handleRender = (req, res, initialState, messages, pageContext) => {
+const handlePlatformRender = (req, res, initialState, messages, pageContext) => {
   const context = {}
   const store = createStore(rootReducer, initialState, compose(applyMiddleware(thunk)));
   const html = renderToString(
@@ -24,7 +23,7 @@ const handleRender = (req, res, initialState, messages, pageContext) => {
     </Provider>
   );
   const preloadedState = store.getState();
-  res.send(renderPage(html, preloadedState, headersInfo(req.path, messages, pageContext), req.hashManifest));
+  res.send(renderPlatform(html, preloadedState, req.hashManifest));
 }
 
-export default handleRender;
+export default handlePlatformRender;

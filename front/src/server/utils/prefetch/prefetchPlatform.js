@@ -1,5 +1,5 @@
 import axios from 'axios';
-import handlePlatformRender from '../handlePlatformRender';
+import handlePlatformRender from '../render/platform/handlePlatformRender';
 
 const prefetchData = async (req, res, next) => {
   try {
@@ -11,17 +11,6 @@ const prefetchData = async (req, res, next) => {
       auditsList = [];
     }
     const initialState = {
-      teamMembers: [],
-      miningPools: [],
-      blockExplorers: [],
-      wallets: [],
-      exchanges: [],
-      blogPosts: [],
-      blogTags: [],
-      marketStats: {},
-      tagPosts: [],
-      faq: [],
-      singlePost: {},
       auditsList,
     };
     handlePlatformRender(req, res, initialState);
