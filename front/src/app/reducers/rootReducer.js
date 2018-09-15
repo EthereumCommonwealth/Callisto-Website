@@ -17,6 +17,8 @@ const rootReducer = combineReducers(
     messages: mockReducer,
     auditsList: mockReducer,
     audit: mockReducer,
+    auditDetail: mockReducer,
+    user: mockReducer,
   });
 
 export default rootReducer;

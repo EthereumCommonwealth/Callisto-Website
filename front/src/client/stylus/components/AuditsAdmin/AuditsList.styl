@@ -1,10 +1,15 @@
 .AuditsList
-  padding 120px 0 25px 0
+  padding 120px 1em 25px 1em
+  +from-width($sm)
+    padding 120px 0 25px 0
   &-content
     background-color #FFF
     box-shadow 0 0 14px 0 rgba(198,202,206,0.3)
     border-radius 4px
     padding 0
+    overflow scroll
+    +from-width($sm)
+      overflow hidden
   &-table
     display grid
     &-head
@@ -14,11 +19,17 @@
       border-bottom solid 2px #efefef
       padding 1em
       user-select none
+      align-items center
+      +from-width($sm)
+        align-items flex-start
       &:hover
         cursor default
       &-elem
         color $dark-blue
         font-weight 500
+        font-size 14px
+        +from-width($sm)
+          font-size 1em
     &-element
       display grid
       grid-gap 1em
@@ -26,6 +37,9 @@
       padding 1em
       transition all 150ms ease
       position relative
+      font-size 14px
+      +from-width($sm)
+        font-size 1em
       &:not(:last-child)
         border-bottom solid 2px #efefef
       &:hover

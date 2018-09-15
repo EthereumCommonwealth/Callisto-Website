@@ -3,14 +3,24 @@ import handlePlatformRender from '../../render/platform/handlePlatformRender';
 
 const prefetchAudit = async (req, res, next) => {
   try {
-    let audit;
+    let auditDetail, audit;
     try {
-      audit = await axios.get(`${process.env.AUDIT_URL}audit-request/get/${req.params.id}-${req.params.slug}`);
+      auditDetail = await axios.get(`${process.env.AUDIT_URL}audit-request/get/${req.params.id}-${req.params.slug}`);
+      auditDetail = auditDetail.data;
+    } catch (e) {
+      auditDetail = {};
+    }
+    try {
+      audit = await axios.get(`${process.env.AUDIT_URL}audit-request/create/`);
       audit = audit.data;
     } catch (e) {
-      audit = {};
+      audit = {
+        platform: [],
+        csrf_token: null,
+      }
     }
     const initialState = {
+      auditDetail,
       audit,
     };
     handlePlatformRender(req, res, initialState);
