@@ -28,8 +28,8 @@ class AuthSection extends PureComponent {
           ) : (
             <form className='AuthSection-form' onSubmit={this.handleSubmit}>
               <input type='text' name='username' placeholder='Username' required />
-              <input type='hidden' name='csrf_token' value={this.props.csrftoken} />
               <input type='password' name='password' placeholder='Password' required />
+              <input type='hidden' name='csrfmiddlewaretoken' value={this.props.csrftoken} />
               <input type='submit' className='btn btn-green' />
             </form>
           )

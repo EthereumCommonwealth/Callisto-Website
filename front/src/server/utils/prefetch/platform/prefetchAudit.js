@@ -11,8 +11,11 @@ const prefetchAudit = async (req, res, next) => {
       auditDetail = {};
     }
     try {
-      audit = await axios.get(`${process.env.AUDIT_URL}audit-request/create/`);
-      audit = audit.data;
+      audit = await axios.get(`${process.env.AUDIT_URL}audit-request/login/`);
+      audit = {
+        platform: [],
+        csrf_token: audit.data.csrf_token,
+      };
     } catch (e) {
       audit = {
         platform: [],
