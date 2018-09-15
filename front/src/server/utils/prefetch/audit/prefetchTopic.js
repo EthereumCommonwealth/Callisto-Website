@@ -1,9 +1,9 @@
 import axios from 'axios';
-import blogPosts from '../../../app/services/blogPosts';
-import coinStats from '../../../app/services/coinStats';
-import getTranslations from '../../getTranslations';
+import blogPosts from '../../../../app/services/blogPosts';
+import coinStats from '../../../../app/services/coinStats';
+import getTranslations from '../../../getTranslations';
 import preparePosts from './preparePosts';
-import handleRender from '../render/website/handleRender';
+import handleRender from '../../render/website/handleRender';
 
 const getTag = (slug, tags) => {
   const filtered = tags.filter(elem => elem.slug === slug);

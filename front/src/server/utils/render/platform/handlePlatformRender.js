@@ -9,7 +9,7 @@ import rootReducer from '../../../../app/reducers/rootReducer.js';
 import Routes from '../../../../app/routes/serverRoutes.js';
 import renderPlatform from './renderPlatform';
 
-const handlePlatformRender = (req, res, initialState, messages, pageContext) => {
+const handlePlatformRender = (req, res, initialState) => {
   const context = {}
   const store = createStore(rootReducer, initialState, compose(applyMiddleware(thunk)));
   const html = renderToString(

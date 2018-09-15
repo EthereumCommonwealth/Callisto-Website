@@ -8,11 +8,12 @@ import favicon from 'express-favicon';
 import R from 'ramda';
 import { langs } from '../app/constants/';
 import getManifest from './getManifest';
-import prefetchData from './utils/prefetch/prefetchData';
-import prefetchPost from './utils/prefetch/prefetchPost';
-import prefetchTopic from './utils/prefetch/prefetchTopic';
-import prefetchFaq from './utils/prefetch/prefetchFaq';
-import prefetchPlatform from './utils/prefetch/prefetchPlatform';
+import prefetchData from './utils/prefetch/audit/prefetchData';
+import prefetchPost from './utils/prefetch/audit/prefetchPost';
+import prefetchTopic from './utils/prefetch/audit/prefetchTopic';
+import prefetchFaq from './utils/prefetch/audit/prefetchFaq';
+import prefetchPlatform from './utils/prefetch/platform/prefetchPlatform';
+import prefetchAudit from './utils/prefetch/platform/prefetchAudit';
 import createAudit from './utils/createAudit';
 
 const Env = (envVars) => {
@@ -124,7 +125,7 @@ app.get(`/:lang${langs}/financial-report/`, prefetchData);
 app.get(`/:lang${langs}/community-guidlines/`, prefetchData);
 //Audit URLS
 app.get('/platform/', prefetchPlatform);
-app.get('/platform/:id-:slug/', prefetchPlatform);
+app.get('/platform/:id-:slug/', prefetchAudit);
 app.post('/create-audit-request/', createAudit);
 app.use((req, res, next) => {
   res.status(404);

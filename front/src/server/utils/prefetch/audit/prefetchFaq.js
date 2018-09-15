@@ -1,11 +1,62 @@
 import axios from 'axios';
-import blogPosts from '../../../app/services/blogPosts';
-import coinStats from '../../../app/services/coinStats';
-import getTranslations from '../../getTranslations';
+import blogPosts from '../../../../app/services/blogPosts';
+import coinStats from '../../../../app/services/coinStats';
+import getTranslations from '../../../getTranslations';
 import preparePosts from './preparePosts';
-import handleRender from '../render/website/handleRender';
+import handleRender from '../../render/website/handleRender';
 
-const prefetchData = async (req, res, next) => {
+const getArticles = async (category) => {
+  const articles = await axios.get(`solutions/folders/${category.id}/articles/`, {
+    baseURL: 'https://callistonetwork.freshdesk.com/api/v2/',
+    headers: { accept: 'application/json' },
+    auth: {
+      username: process.env.FRESHBOOKS_API,
+      password: 'x',
+    }
+  });
+  return {
+    id: category.id,
+    name: category.name,
+    articles: articles.data,
+  };
+}
+
+const prepareFaq = async (faq) => {
+  const elements = [];
+  try {
+    for (let i = 0; i < faq.length; i++) {
+      const article = await getArticles(faq[i])
+      elements.push(article);
+    }
+  } catch (e) {
+    console.log(e);
+  }
+  return elements;
+}
+
+const getFAQ = async () => {
+  let faqObj;
+  try {
+    try {
+      const faq = await axios.get('solutions/categories/43000034228/folders/', {
+        baseURL: 'https://callistonetwork.freshdesk.com/api/v2/',
+        headers: { accept: 'application/json' },
+        auth: {
+          username: process.env.FRESHBOOKS_API,
+          password: 'x',
+        }
+      });
+      faqObj = await prepareFaq(faq.data);
+    } catch (e) {
+      faqObj = [];
+    }
+  } catch (e) {
+    faqObj = [];
+  }
+  return faqObj;
+}
+
+const prefetchFaq = async (req, res, next) => {
   try {
     let posts, tags, btcStats, cloStats, internalData, audit;
     try {
@@ -49,6 +100,7 @@ const prefetchData = async (req, res, next) => {
         csrf_token: null,
       }
     }
+    const faq = await getFAQ();
     const messages = getTranslations(req.params.lang);
     const initialState = {
       teamMembers: internalData.teamMembers,
@@ -65,15 +117,15 @@ const prefetchData = async (req, res, next) => {
         marketCap: cloStats.data ? cloStats.data.data.quotes.USD.market_cap : 0,
       },
       tagPosts: [],
-      faq: [],
+      faq: faq,
       singlePost: {},
       messages,
       audit,
     };
-    handleRender(req, res, initialState, messages);
+    handleRender(req, res, initialState, messages)
   } catch (err) {
     next(err);
   }
 }
 
-export default prefetchData;
+export default prefetchFaq;

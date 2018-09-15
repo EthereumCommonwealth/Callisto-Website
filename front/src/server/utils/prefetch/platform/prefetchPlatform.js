@@ -1,5 +1,5 @@
 import axios from 'axios';
-import handlePlatformRender from '../render/platform/handlePlatformRender';
+import handlePlatformRender from '../../render/platform/handlePlatformRender';
 
 const prefetchData = async (req, res, next) => {
   try {

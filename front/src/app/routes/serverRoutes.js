@@ -9,7 +9,7 @@ import Faq from '../containers/Faq';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
 import Post from '../containers/Post';
 import AuditAdmin from '../containers/AuditAdmin';
-import AuditDetail from '../containers/AuditAdmin';
+import AuditDetail from '../containers/AuditDetail';
 import Notfound from '../containers/NotFound';
 import { langs } from '../constants/';
 

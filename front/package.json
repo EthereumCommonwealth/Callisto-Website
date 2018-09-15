@@ -21,6 +21,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-3": "^6.24.1",
+    "basil.js": "^0.4.10",
     "body-parser": "^1.18.3",
     "classnames": "^2.2.6",
     "compression-webpack-plugin": "^1.1.11",
