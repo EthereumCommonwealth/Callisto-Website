@@ -41,8 +41,16 @@ class SingleAudit extends PureComponent {
             <div className='SingleAudit-history-elements'>
               {statusHistory.length > 0 ? statusHistory.map((elem, index) => (
                 <div key={elem.statusName} className='SingleAudit-history-element'>
-                  <span className='SingleAudit-history-element-count'>{index + 1}</span>
-                  <span className='SingleAudit-history-element-detail'>{elem.statusName}</span>
+                  <div>
+                    <span className='SingleAudit-history-element-count'>{index + 1}</span>
+                    <span className='SingleAudit-history-element-detail'>{elem.statusName} by </span>
+                    <span className='SingleAudit-history-element-author'>{elem.statusAuthor}</span>
+                  </div>
+                  <div>
+                    <p className='SingleAudit-history-element-description'>
+                      {elem.comment}
+                    </p>
+                  </div>
                 </div>
               )) : null}
             </div>
