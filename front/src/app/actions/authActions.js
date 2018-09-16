@@ -4,7 +4,7 @@ export function userLogin(credentials, csrftoken) {
   return (dispatch) => {
     axios.defaults.xsrfCookieName = 'csrftoken';
     axios.defaults.xsrfHeaderName = 'X-CSRFToken';
-    axios('http://localhost:8001/audit-request/login/', {
+    axios('/audit-request/login/', {
       method: 'post',
       headers: {
         'X-CSRFToken': csrftoken,
