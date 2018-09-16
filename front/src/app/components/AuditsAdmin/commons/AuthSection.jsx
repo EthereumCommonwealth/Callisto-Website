@@ -6,7 +6,7 @@ import { userLogin } from '../../../actions/authActions';
 class AuthSection extends PureComponent {
   state = {
     isLogged: false,
-  }
+  };
 
   componentWillMount() {
     this.setState({ isLogged: auth.currentUserExists() });
@@ -15,7 +15,7 @@ class AuthSection extends PureComponent {
   handleSubmit = event => {
     event.preventDefault();
     this.props.userLogin(new FormData(event.target), this.props.csrftoken);
-  }
+  };
 
   render() {
     return (
@@ -29,7 +29,6 @@ class AuthSection extends PureComponent {
             <form className='AuthSection-form' onSubmit={this.handleSubmit}>
               <input type='text' name='username' placeholder='Username' required />
               <input type='password' name='password' placeholder='Password' required />
-              <input type='hidden' name='csrfmiddlewaretoken' value={this.props.csrftoken} />
               <input type='submit' className='btn btn-green' />
             </form>
           )

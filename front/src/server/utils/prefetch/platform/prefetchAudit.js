@@ -5,7 +5,7 @@ const prefetchAudit = async (req, res, next) => {
   try {
     let auditDetail, audit;
     try {
-      auditDetail = await axios.get(`${process.env.AUDIT_URL}audit-request/get/${req.params.id}-${req.params.slug}`);
+      auditDetail = await axios.get(`${process.env.AUDIT_URL}audit-request/get/${req.params.id}-${req.params.slug}/`);
       auditDetail = auditDetail.data;
     } catch (e) {
       auditDetail = {};
@@ -30,6 +30,6 @@ const prefetchAudit = async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-}
+};
 
 export default prefetchAudit;
