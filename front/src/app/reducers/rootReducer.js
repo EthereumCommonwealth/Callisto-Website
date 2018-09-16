@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import mockReducer from './mockReducer';
+import authReducer from './authReducer';
 
 const rootReducer = combineReducers(
   {
@@ -18,7 +19,7 @@ const rootReducer = combineReducers(
     auditsList: mockReducer,
     audit: mockReducer,
     auditDetail: mockReducer,
-    user: mockReducer,
+    user: authReducer,
   });
 
 export default rootReducer;

@@ -4,7 +4,7 @@ export function userLogin(credentials, csrftoken) {
   return (dispatch) => {
     axios.defaults.xsrfCookieName = 'csrftoken';
     axios.defaults.xsrfHeaderName = 'X-CSRFToken';
-    axios('/audit-request/login/', {
+    axios('/clo-audit/audit-request/login/', {
       method: 'post',
       headers: {
         'X-CSRFToken': csrftoken,
@@ -15,7 +15,8 @@ export function userLogin(credentials, csrftoken) {
     })
       .then((response) => {
         dispatch(() => {
-          console.log(response.data)
+          console.log(response.data);
+          setCurrentUser(response.data);
         })
       })
       .catch(err => {
@@ -23,6 +24,13 @@ export function userLogin(credentials, csrftoken) {
       });
   }
 }
+
+function setCurrentUser(payload) {
+  return {
+    type: 'SET-CURRENT-USER',
+    payload,
+  }
+};
 
 export default {
   userLogin,
