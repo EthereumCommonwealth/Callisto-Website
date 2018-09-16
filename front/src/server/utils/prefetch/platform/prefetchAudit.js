@@ -8,7 +8,9 @@ const prefetchAudit = async (req, res, next) => {
       auditDetail = await axios.get(`${process.env.AUDIT_URL}audit-request/get/${req.params.id}-${req.params.slug}/`);
       auditDetail = auditDetail.data;
     } catch (e) {
-      auditDetail = {};
+      auditDetail = {
+        statusHistory: [],
+      };
     }
     try {
       audit = await axios.get(`${process.env.AUDIT_URL}audit-request/login/`);
