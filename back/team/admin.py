@@ -14,7 +14,7 @@ class MemberSocialNetworkInLine(admin.TabularInline):
 
 class MemberAdmin(admin.ModelAdmin):
     list_display = ('name', 'position', 'order')
-    ordering = 'order'
+    ordering = ('order', )
     inlines = [
         MemberSocialNetworkInLine
     ]
