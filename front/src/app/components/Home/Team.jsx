@@ -10,7 +10,6 @@ const Team = ({ intl, teamMembers }) => (
     <div className='Team-content container'>
       <SectionHeading
         title={intl.formatMessage({ id: 'OurTeam' })}
-        description={intl.formatMessage({ id: 'OurTeamDescription' })}
       />
       <div className='Team-list'>
         {teamMembers.length > 0 ?
