@@ -10,7 +10,7 @@ from exchanges.models import Exchange
 class TeamAPIView(View):
     def get(self, request, *args, **kwargs):
 
-        members = TeamMember.objects.all()
+        members = TeamMember.objects.order_by('order')
 
         members_list = [
             {
@@ -102,11 +102,11 @@ class ExchangesAPIView(View):
 
 class HomeAPIView(View):
     def get(self, request, *args, **kwargs):
-        members = TeamMember.objects.all()
+        members = TeamMember.objects.order_by('order')
         mining_pools = MiningPool.objects.all()
         block_explorers = BlockExplorer.objects.all()
         wallets = WalletPlatform.objects.all()
-        exchanges = Exchange.objects.all().order_by('order')
+        exchanges = Exchange.objects.order_by('order')
 
         members_list = [
             {

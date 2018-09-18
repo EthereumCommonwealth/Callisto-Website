@@ -48,3 +48,21 @@ class TeamMember(models.Model):
         'SocialNetwork',
         through='MemberSocialNetwork'
     )
+    order = models.IntegerField(
+        unique=True,
+        blank=True,
+        null=True
+    )
+
+    def save(self, force_insert=False, force_update=False, using=None,
+             update_fields=None):
+        if not self.order:
+            last_order = TeamMember.objects.order_by('-order').first()
+
+            order = 0
+            if last_order:
+                order = last_order.order
+            self.order = order + 1
+        return super(TeamMember, self).save(force_insert, force_update, using,
+                                            update_fields)
+
