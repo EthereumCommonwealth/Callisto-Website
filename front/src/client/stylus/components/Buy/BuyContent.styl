@@ -1,0 +1,58 @@
+.BuyContent
+  padding 35px 0
+  +from-width($sm)
+    padding 70px 0
+  +from-width($xl)
+    padding 140px 0
+  &-form
+    display grid
+    grid-gap 1em
+    .btn
+      justify-self center
+    &-row
+      +from-width($sm)
+        display grid
+        grid-template-columns 5fr 1fr 5fr
+        justify-items center
+        align-items center
+    &-icon
+      text-align center
+      margin 1em 0
+    &-elem
+      position relative
+      &-input
+        padding 1em 8em 1em 2em
+        border-radius 4px
+        border solid 1px #e5e5e5
+        box-sizing border-box
+        width 100%
+        +from-width($sm)
+          width auto
+          min-width 310px
+        +from-width($md)
+          min-width 350px
+        &:focus
+          outline none
+          border-color $dark-gray
+        &-detail
+          padding 1em
+          border-radius 4px
+          border solid 1px #e5e5e5
+          box-sizing border-box
+          width 100%
+          +from-width($sm)
+            width auto
+            min-width 310px
+          +from-width($md)
+            min-width 350px
+          &:focus
+            outline none
+            border-color $dark-gray
+          &:first-child
+            margin-bottom 1em
+      &-text
+        position absolute
+        right 20px
+        top 17px
+        color $green
+        font-size 18px

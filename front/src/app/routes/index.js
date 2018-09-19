@@ -9,6 +9,7 @@ import Tag from '../containers/Tag';
 import Airdrop from '../containers/Airdrop';
 import Faq from '../containers/Faq';
 import Post from '../containers/Post';
+import Buy from '../containers/Buy';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
 import Notfound from '../containers/NotFound';
 import { langs } from '../constants/';
@@ -18,6 +19,7 @@ const Routes = (
     <Switch>
       <Route exact path='/' component={Home} />
       <Route exact path='/faq/' component={Faq} />
+      <Route exact path='/buy/' component={Buy} />
       <Route exact path='/blog/' component={Blog} />
       <Route exact path='/blog/post/:slug/' component={Post} />
       <Route exact path='/blog/topic/:slug/' component={Tag} />
@@ -28,6 +30,7 @@ const Routes = (
       <Route exact path='/community-guidlines/' component={CommunityGuidlines} />
       <Route exact path={`/:lang${langs}/`} component={Home} />
       <Route exact path={`/:lang${langs}/faq/`} component={Faq} />
+      <Route exact path={`/:lang${langs}/buy/`} component={Buy} />
       <Route exact path={`/:lang${langs}/blog/`} component={Blog} />
       <Route exact path={`/:lang${langs}/blog/post/:slug/`} component={Post} />
       <Route exact path={`/:lang${langs}/blog/topic/:slug/`} component={Tag} />

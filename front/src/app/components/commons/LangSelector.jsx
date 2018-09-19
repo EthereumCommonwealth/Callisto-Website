@@ -29,6 +29,9 @@ class LangSelector extends Component {
       case '/blog/':
         if (lang === 'en') return '/blog/'
         return `/${lang}/blog/`
+      case '/buy/':
+        if (lang === 'en') return '/buy/'
+        return `/${lang}/buy/`
       case '/blog/post/:slug/':
         if (lang === 'en') return `/blog/post/${match.params.slug}/`
         return `/${lang}/blog/post/${match.params.slug}/`

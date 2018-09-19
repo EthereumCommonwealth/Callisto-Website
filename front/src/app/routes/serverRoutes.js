@@ -6,6 +6,7 @@ import Blog from '../containers/Blog';
 import Tag from '../containers/Tag';
 import Airdrop from '../containers/Airdrop';
 import Faq from '../containers/Faq';
+import Buy from '../containers/Buy';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
 import Post from '../containers/Post';
 import Notfound from '../containers/NotFound';
@@ -21,6 +22,11 @@ const routes = [
     path: '/faq/',
     exact: true,
     component: Faq,
+  },
+  {
+    path: '/buy/',
+    exact: true,
+    component: Buy,
   },
   {
     path: '/cold-staking/',
@@ -71,6 +77,11 @@ const routes = [
     path: `/:lang${langs}/faq/`,
     exact: true,
     component: Faq,
+  },
+  {
+    path: `/:lang${langs}/buy/`,
+    exact: true,
+    component: Buy,
   },
   {
     path: `/:lang${langs}/cold-staking/`,

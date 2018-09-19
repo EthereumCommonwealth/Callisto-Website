@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { FormattedMessage, injectIntl } from 'react-intl';
 
 const Hero = ({ intl }) => (
@@ -13,13 +14,21 @@ const Hero = ({ intl }) => (
         <p className='Hero-content-left-description'>
           <FormattedMessage id='HeroDescription' />
         </p>
-        <a
-          href='https://whitepaper.callisto.network/'
-          target='_blank'
-          className='btn btn-green'
-        >
-          <FormattedMessage id='WhitePaper' />
-        </a>
+        <div className='Hero-btns'>
+          <a
+            href='https://whitepaper.callisto.network/'
+            target='_blank'
+            className='btn btn-green'
+          >
+            <FormattedMessage id='WhitePaper' />
+          </a>
+          <Link
+            to='/buy/'
+            className='btn btn-transparent-green'
+          >
+            <FormattedMessage id='BuyClo' defaultMessage='Buy CLO' />
+          </Link>
+        </div>
       </div>
       <div className='Hero-content-right'>
         <figure className='Hero-content-right-figure'>
