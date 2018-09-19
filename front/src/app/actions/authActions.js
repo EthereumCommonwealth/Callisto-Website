@@ -8,7 +8,6 @@ export function userLogin(credentials, csrftoken) {
       method: 'post',
       headers: {
         'X-CSRFToken': csrftoken,
-        'content-type': 'multipart/form-data',
       },
       data: credentials,
       withCredentials: true,

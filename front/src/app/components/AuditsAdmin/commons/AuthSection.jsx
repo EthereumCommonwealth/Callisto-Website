@@ -14,7 +14,10 @@ class AuthSection extends PureComponent {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.userLogin(new FormData(event.target), this.props.csrftoken);
+    this.props.userLogin({
+      user: event.target.username.value,
+      pass: event.target.password.value,
+    }, this.props.csrftoken);
   };
 
   render() {
