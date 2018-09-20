@@ -12,7 +12,10 @@ class BuyContent extends PureComponent {
 
   get cloInBtc() {
     const { cloPrice, btcPrice } = this.props;
-    return (cloPrice / btcPrice);
+    const marketPrice = (cloPrice / btcPrice);
+    const percentage = ((5 * marketPrice) / 100);
+    const webPrice = (marketPrice + percentage)
+    return webPrice;
   }
 
   get calculateMaxClo() {
