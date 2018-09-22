@@ -15,6 +15,8 @@ import prefetchFaq from './utils/prefetch/audit/prefetchFaq';
 import prefetchPlatform from './utils/prefetch/platform/prefetchPlatform';
 import prefetchAudit from './utils/prefetch/platform/prefetchAudit';
 import createAudit from './utils/createAudit';
+import login from './utils/login';
+import loginCheck from './utils/loginCheck';
 
 const Env = (envVars) => {
   const ENV_NAMES = {
@@ -127,6 +129,8 @@ app.get(`/:lang${langs}/community-guidlines/`, prefetchData);
 app.get('/platform/', prefetchPlatform);
 app.get('/platform/:id-:slug/', prefetchAudit);
 app.post('/create-audit-request/', createAudit);
+app.post('/audit-login/', login);
+app.post('/login-check/', loginCheck);
 app.use((req, res, next) => {
   res.status(404);
   prefetchData(req, res, next);

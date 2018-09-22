@@ -12,3 +12,23 @@
         border-color $dark-gray
     .btn
       padding .5em 1.5em
+  &-info
+    position relative
+    &:hover
+      cursor pointer
+    &-submenu
+      position absolute
+      background #FFF
+      color $dark-gray
+      border-radius 5px
+      list-style none
+      margin 0
+      padding 0
+      box-shadow 2px 3px 4px 3px rgba(226,226,226,0.58)
+      z-index 1
+      &-item
+        padding 1em 1.5em
+        display block
+        &:hover
+          cursor pointer
+          background $white

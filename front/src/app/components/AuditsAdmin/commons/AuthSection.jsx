@@ -1,15 +1,28 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import auth from '../../../services/auth';
-import { userLogin } from '../../../actions/authActions';
+import { userLogin, verifyToken, unsetUser } from '../../../actions/authActions';
 
 class AuthSection extends PureComponent {
-  state = {
-    isLogged: false,
-  };
 
-  componentWillMount() {
-    this.setState({ isLogged: auth.currentUserExists() });
+  state = {
+    subMenu: false,
+  }
+
+  componentDidMount() {
+    if (auth.currentUserExists()) {
+      this.props.verifyToken(auth.token(), this.props.csrftoken);
+    }
+  }
+
+  showSubMenu = event => {
+    event.preventDefault()
+    this.setState({ subMenu: true });
+  }
+
+  hideSubMenu = event => {
+    event.preventDefault()
+    this.setState({ subMenu: false });
   }
 
   handleSubmit = event => {
@@ -23,10 +36,19 @@ class AuthSection extends PureComponent {
   render() {
     return (
       <div className='AuthSection'>
-        {this.state.isLogged ?
+        {this.props.user.user_id ?
           (
-            <div className='AuthSection-info'>
-              Logged user here
+            <div className='AuthSection-info' onMouseEnter={this.showSubMenu} onMouseLeave={this.hideSubMenu}>
+              {this.props.user.name !== '' ? this.props.user.name : this.props.user.username}
+              {this.state.subMenu ?
+                (
+                  <div className='AuthSection-info-submenu'>
+                    <span onClick={this.props.unsetUser} className='AuthSection-info-submenu-item'>
+                      Log Out
+                    </span>
+                  </div>
+                ) : null
+              }
             </div>
           ) : (
             <form className='AuthSection-form' onSubmit={this.handleSubmit}>
@@ -44,7 +66,8 @@ class AuthSection extends PureComponent {
 function mapStateToProps(state) {
   return {
     csrftoken: state.audit.csrf_token,
+    user: state.user,
   };
 }
 
-export default connect(mapStateToProps, { userLogin })(AuthSection);
+export default connect(mapStateToProps, { userLogin, verifyToken, unsetUser })(AuthSection);

@@ -1,36 +1,53 @@
 import axios from 'axios';
+import auth from '../services/auth';
 
 export function userLogin(credentials, csrftoken) {
   return (dispatch) => {
-    axios.defaults.xsrfCookieName = 'csrftoken';
-    axios.defaults.xsrfHeaderName = 'X-CSRFToken';
-    axios('/clo-audit/audit-request/login/', {
-      method: 'post',
-      headers: {
-        'X-CSRFToken': csrftoken,
-      },
-      data: credentials,
-      withCredentials: true,
+    axios.post('/audit-login/', {
+      credentials,
+      csrf_token: csrftoken,
     })
       .then((response) => {
-        dispatch(() => {
-          console.log(response.data);
-          setCurrentUser(response.data);
+        auth.setToken(response.data.auth.jwt)
+        dispatch({
+          type: 'SET-CURRENT-USER',
+          payload: response.data.auth.user,
+        })
+      })
+      .catch(err => {
+        console.log(err.response.data.error);
+      });
+  };
+};
+
+export function verifyToken(jwt, csrftoken) {
+  return (dispatch) => {
+    axios.post('/login-check/', {
+      jwt,
+      csrf_token: csrftoken,
+    })
+      .then((response) => {
+        auth.setToken(response.data.auth.jwt)
+        dispatch({
+          type: 'SET-CURRENT-USER',
+          payload: response.data.auth.user,
         })
       })
       .catch(err => {
         console.log('Error', err);
       });
-  }
-}
+  };
+};
 
-function setCurrentUser(payload) {
-  return {
-    type: 'SET-CURRENT-USER',
-    payload,
-  }
+export function unsetUser() {
+  return (dispatch) => {
+    auth.deleteToken();
+    dispatch({ type: 'UNSET-CURRENT-USER' })
+  };
 };
 
 export default {
   userLogin,
+  verifyToken,
+  unsetUser,
 }
