@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
+// import axios from 'axios';
 
 class BuyContent extends PureComponent {
 
@@ -39,27 +39,32 @@ class BuyContent extends PureComponent {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    axios.post('/buy-clo/', {
-      cloAmmount: this.state.cloAmount,
-      btcAmount: this.state.btcAmount,
-      price: this.cloInBtc.toFixed(10),
-      email: event.target.email.value,
-      receipt: event.target.receipt.value,
+    this.setState({
+      btcAmount: 0,
+      cloAmount: 0,
+      formSent: true,
     })
-      .then(() => {
-        this.setState({
-          btcAmount: 0,
-          cloAmount: 0,
-          formSent: true,
-        })
-      })
-      .catch(() => {
-        this.setState({
-          btcAmount: 0,
-          cloAmount: 0,
-          formSent: false,
-        })
-      })
+    // axios.post('/buy-clo/', {
+    //   cloAmmount: this.state.cloAmount,
+    //   btcAmount: this.state.btcAmount,
+    //   price: this.cloInBtc.toFixed(10),
+    //   email: event.target.email.value,
+    //   receipt: event.target.receipt.value,
+    // })
+    //   .then(() => {
+    //     this.setState({
+    //       btcAmount: 0,
+    //       cloAmount: 0,
+    //       formSent: true,
+    //     })
+    //   })
+    //   .catch(() => {
+    //     this.setState({
+    //       btcAmount: 0,
+    //       cloAmount: 0,
+    //       formSent: false,
+    //     })
+    //   })
   }
 
   render() {
@@ -123,11 +128,15 @@ class BuyContent extends PureComponent {
                     />
                   </div>
                 </div>
-                <input className='btn' type='submit' className='btn btn-green'/>
+                <input className='btn' type='submit' className='btn btn-green' />
               </form>
             ) : (
               <div className='BuyContent-buyed'>
-                <h1>
+                <p className='BuyContent-closed'>
+                  Due the hight demand our Direct Buy feature is currently deactivated.
+                  Please go to our <a href='/#exchanges/'>Exchanges section</a>
+                </p>
+                {/* <h1>
                   Buy order placed.
                 </h1>
                 <h4>
@@ -139,7 +148,7 @@ class BuyContent extends PureComponent {
                     cloAmount: 0,
                     formSent: false,
                   })}
-                >Place another order</a>
+                >Place another order</a> */}
               </div>
             )
           }
