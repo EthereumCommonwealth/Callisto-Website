@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { FormattedMessage, injectIntl } from 'react-intl';
 
 const Hero = ({ intl }) => (
@@ -23,7 +23,11 @@ const Hero = ({ intl }) => (
             <FormattedMessage id='WhitePaper' />
           </a>
           <Link
-            to='/buy/'
+            to='exchanges'
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={500}
             className='btn btn-transparent-green'
           >
             <FormattedMessage id='BuyClo' defaultMessage='Buy CLO' />
