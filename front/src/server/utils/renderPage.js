@@ -45,26 +45,11 @@ const renderPage = (html, preloadedState, headers, hashManifest) => {
           >
           <link rel="canonical" href="${headers.url}" />
           <link rel="alternate" href="${headers.url}" hreflang="en" />
-          <link rel="alternate" href="https://callisto.network/ar${headers.baseUrl}" hreflang="ar" />
-          <link rel="alternate" href="https://callisto.network/bg${headers.baseUrl}" hreflang="bg" />
-          <link rel="alternate" href="https://callisto.network/cs${headers.baseUrl}" hreflang="cs" />
           <link rel="alternate" href="https://callisto.network/de${headers.baseUrl}" hreflang="de" />
           <link rel="alternate" href="https://callisto.network/es${headers.baseUrl}" hreflang="es" />
           <link rel="alternate" href="https://callisto.network/fr${headers.baseUrl}" hreflang="fr" />
-          <link rel="alternate" href="https://callisto.network/hi${headers.baseUrl}" hreflang="hi" />
-          <link rel="alternate" href="https://callisto.network/id${headers.baseUrl}" hreflang="id" />
-          <link rel="alternate" href="https://callisto.network/it${headers.baseUrl}" hreflang="it" />
-          <link rel="alternate" href="https://callisto.network/ja${headers.baseUrl}" hreflang="ja" />
           <link rel="alternate" href="https://callisto.network/ko${headers.baseUrl}" hreflang="ko" />
-          <link rel="alternate" href="https://callisto.network/nl${headers.baseUrl}" hreflang="nl" />
-          <link rel="alternate" href="https://callisto.network/no${headers.baseUrl}" hreflang="no" />
-          <link rel="alternate" href="https://callisto.network/pl${headers.baseUrl}" hreflang="pl" />
-          <link rel="alternate" href="https://callisto.network/pt${headers.baseUrl}" hreflang="pt" />
-          <link rel="alternate" href="https://callisto.network/ro${headers.baseUrl}" hreflang="ro" />
           <link rel="alternate" href="https://callisto.network/ru${headers.baseUrl}" hreflang="ru" />
-          <link rel="alternate" href="https://callisto.network/tr${headers.baseUrl}" hreflang="tr" />
-          <link rel="alternate" href="https://callisto.network/uk${headers.baseUrl}" hreflang="uk" />
-          <link rel="alternate" href="https://callisto.network/vi${headers.baseUrl}" hreflang="vi" />
           <link rel="alternate" href="https://callisto.network/zh${headers.baseUrl}" hreflang="zh-hans" />
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,
             maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
