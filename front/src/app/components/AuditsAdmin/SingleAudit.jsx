@@ -2,11 +2,15 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedDate } from 'react-intl';
 import { connect } from 'react-redux';
+import AuditDetail from './AuditDetail';
 
 class SingleAudit extends PureComponent {
+
   render() {
     const { title, description, sourceCodeUrl, disclosurePolicy,
       platform, statusName, createdAt, statusHistory } = this.props.auditDetail;
+    const { user } = this.props;
+
     return (
       <div className='SingleAudit'>
         <div className='SingleAudit-content container square'>
@@ -39,37 +43,9 @@ class SingleAudit extends PureComponent {
           <div className='SingleAudit-history'>
             <h2 className='SingleAudit-history-title'>Audit status history</h2>
             <div className='SingleAudit-history-elements'>
-              {statusHistory.length > 0 ? statusHistory.map((elem, index) => {
-                if (elem.statusType === 'Status') {
-                  return (
-                    <div key={elem.statusName} className='SingleAudit-history-element'>
-                      <div>
-                        <span className='SingleAudit-history-element-count'>{index + 1}</span>
-                        <span className='SingleAudit-history-element-detail'>{elem.statusName} by </span>
-                        <span className='SingleAudit-history-element-author'>{elem.statusAuthor}</span>
-                      </div>
-                      <div>
-                        <p className='SingleAudit-history-element-description'>
-                          {elem.comment}
-                        </p>
-                      </div>
-                    </div>
-                  )
-                }
-                return (
-                  <div key={elem.statusName} className='SingleAudit-history-element is-comment'>
-                    <div>
-                      <span className='SingleAudit-history-element-detail'>Commented by </span>
-                      <span className='SingleAudit-history-element-author'>{elem.statusAuthor}</span>
-                    </div>
-                    <div>
-                      <p className='SingleAudit-history-element-description'>
-                        {elem.comment}
-                      </p>
-                    </div>
-                  </div>
-                );
-              }) : null}
+              {statusHistory.length > 0 ? statusHistory.map((elem, index) =>
+                <AuditDetail details={elem} user={user} key={`${elem.statusName}-${index}`} index={index} />
+              ) : null}
             </div>
           </div>
         </div>
@@ -81,6 +57,7 @@ class SingleAudit extends PureComponent {
 function mapStateTopProps(state) {
   return {
     auditDetail: state.auditDetail,
+    user: state.user,
   };
 }
 

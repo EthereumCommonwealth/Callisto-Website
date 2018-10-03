@@ -62,3 +62,38 @@
         line-height 1.52
         padding 1em 0
         color $dark-gray
+  &-submit
+    &-comment
+      color $green
+      font-size 1rem
+      padding-left 3rem
+      &:hover
+        cursor pointer
+    &-area
+      padding-left 3rem
+      display flex
+      flex-direction column
+      &-btns
+        display flex
+      &-input
+        width 100%
+        max-width 300px
+        margin-bottom 1rem
+        border-radius 4px
+        border solid 1px #e5e5e5
+        padding .5em
+        &:focus
+          outline none
+          border-color $dark-gray
+        +from-width($sm)
+          width 100%
+          max-width 500px
+      &-go
+        color $green
+        &:hover
+          cursor pointer
+      &-cancel
+        color $orange
+        margin-left 1rem
+        &:hover
+          cursor pointer
