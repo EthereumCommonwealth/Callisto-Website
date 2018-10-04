@@ -2,9 +2,31 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedDate } from 'react-intl';
 import { connect } from 'react-redux';
+import axios from 'axios';
+import auth from '../../services/auth';
 import AuditDetail from './AuditDetail';
 
 class SingleAudit extends PureComponent {
+
+  state = {
+    commensOpen: false,
+  }
+
+  handleCommentsBoxChange = event => {
+    event.preventDefault();
+    this.setState({ commensOpen: !this.state.commensOpen });
+  }
+
+  handleSubmit = event => {
+    axios.post('/comment-submit/', {
+      csrf_token: this.props.csrftoken,
+      jwt: auth.token(),
+      commentDetails: {
+        auditId: this.props.auditDetail.id,
+        comment: event.target.auditComment.value,
+      }
+    });
+  }
 
   render() {
     const { title, description, sourceCodeUrl, disclosurePolicy,
@@ -43,10 +65,41 @@ class SingleAudit extends PureComponent {
           <div className='SingleAudit-history'>
             <h2 className='SingleAudit-history-title'>Audit status history</h2>
             <div className='SingleAudit-history-elements'>
-              {statusHistory.length > 0 ? statusHistory.map((elem, index) =>
-                <AuditDetail details={elem} user={user} key={`${elem.statusName}-${index}`} index={index} />
-              ) : null}
+              {statusHistory.length > 0 ? statusHistory.map((elem, index) => (
+                <AuditDetail
+                  details={elem}
+                  user={user}
+                  key={`${elem.statusName}-${index}`}
+                  index={index}
+                  csrftoken={this.props.csrftoken}
+                />
+              )) : null}
             </div>
+            {user && user.user_id && !this.state.commensOpen ?
+              (
+                <a className='SingleAudit-submit-comment' onClick={this.handleCommentsBoxChange}>
+                  Add Comment
+                </a>
+              ) : null}
+            {user && user.user_id && this.state.commensOpen ?
+              (
+                <form className='SingleAudit-submit-area' onSubmit={this.handleSubmit}>
+                  <textarea
+                    className='SingleAudit-submit-area-input'
+                    name='auditComment'
+                    required
+                  />
+                  <div className='SingleAudit-submit-area-btns'>
+                    <input type='submit' className='SingleAudit-submit-area-go' value='Submit comment' />
+                    <a
+                      className='SingleAudit-submit-area-cancel'
+                      onClick={this.handleCommentsBoxChange}
+                    >
+                      Cancel
+                    </a>
+                  </div>
+                </form>
+              ) : null}
           </div>
         </div>
       </div>
@@ -58,11 +111,14 @@ function mapStateTopProps(state) {
   return {
     auditDetail: state.auditDetail,
     user: state.user,
+    csrftoken: state.audit.csrf_token,
   };
 }
 
 SingleAudit.propTypes = {
   auditDetail: PropTypes.object,
+  user: PropTypes.object,
+  csrftoken: PropTypes.string,
 };
 
 export default connect(mapStateTopProps)(SingleAudit);

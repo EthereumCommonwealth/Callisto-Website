@@ -17,6 +17,7 @@ import prefetchAudit from './utils/prefetch/platform/prefetchAudit';
 import createAudit from './utils/createAudit';
 import login from './utils/login';
 import loginCheck from './utils/loginCheck';
+import commentSubmit from './utils/commentSubmit';
 
 const Env = (envVars) => {
   const ENV_NAMES = {
@@ -131,6 +132,7 @@ app.get('/platform/:id-:slug/', prefetchAudit);
 app.post('/create-audit-request/', createAudit);
 app.post('/audit-login/', login);
 app.post('/login-check/', loginCheck);
+app.post('/comment-submit/', commentSubmit);
 app.use((req, res, next) => {
   res.status(404);
   prefetchData(req, res, next);
