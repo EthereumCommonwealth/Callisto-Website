@@ -62,15 +62,16 @@
         line-height 1.52
         padding 1em 0
         color $dark-gray
+      &.is-comment
+        .SingleAudit-history-element-count
+          background-color $orange
   &-submit
     &-comment
       color $green
       font-size 1rem
-      padding-left 3rem
       &:hover
         cursor pointer
     &-area
-      padding-left 3rem
       display flex
       flex-direction column
       &-btns
