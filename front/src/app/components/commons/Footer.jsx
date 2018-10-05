@@ -260,6 +260,9 @@ class Footer extends PureComponent {
               >
                 <FormattedMessage id='Mediakit' />
               </a>
+              <a href='mailto:support@callisto.network' className='Footer-bottom-content-element'>
+                support.callisto.network
+              </a>
               {/* <Link to='/privacy-policy' className='Footer-bottom-content-element'>
                 <FormattedMessage id='PrivacyPolicy' />
               </Link>
