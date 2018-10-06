@@ -60,7 +60,7 @@ const prefetchFaq = async (req, res, next) => {
   try {
     let posts, tags, btcStats, cloStats, internalData;
     try {
-      posts = await blogPosts.get('posts?_embed&per_page=50');
+      posts = await blogPosts.get('posts?_embed&per_page=3');
     } catch (err) {
       posts = [];
     }

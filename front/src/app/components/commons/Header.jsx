@@ -68,7 +68,7 @@ class Header extends PureComponent {
       {
         title: this.props.intl.formatMessage({ id: 'Blog' }),
         url: this.props.lang === 'en' ? '/blog/' : `/${this.props.lang}/blog/`,
-        type: 'router',
+        type: 'anchor',
       },
     ];
   }
