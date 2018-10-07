@@ -9,14 +9,9 @@ const prefetchData = async (req, res, next) => {
   try {
     let posts, tags, btcStats, cloStats, internalData, audit;
     try {
-      posts = await blogPosts.get('posts?_embed&per_page=50');
+      posts = await blogPosts.get('posts?_embed&per_page=3');
     } catch (err) {
       posts = [];
-    }
-    try {
-      tags = await blogPosts.get('tags');
-    } catch (err) {
-      tags = [];
     }
     try {
       btcStats = await coinStats.get('ticker/1/');
@@ -57,7 +52,7 @@ const prefetchData = async (req, res, next) => {
       wallets: internalData.wallets,
       exchanges: internalData.exchanges,
       blogPosts: posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts,
-      blogTags: tags.data && tags.data.length > 0 ? tags.data : tags,
+      blogTags: [],
       marketStats: {
         btcPrice: btcStats.data ? btcStats.data.data.quotes.USD.price : 0,
         cloPrice: cloStats.data ? cloStats.data.data.quotes.USD.price : 0,

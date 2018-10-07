@@ -68,7 +68,7 @@ class Header extends PureComponent {
       {
         title: this.props.intl.formatMessage({ id: 'Blog' }),
         url: this.props.lang === 'en' ? '/blog/' : `/${this.props.lang}/blog/`,
-        type: 'router',
+        type: 'anchor',
       },
     ];
   }
@@ -137,6 +137,17 @@ class Header extends PureComponent {
                             </Link>
                           </li>
                         );
+                      } else if (elem.type === 'anchor') {
+                        return (
+                          <li key={`menuElement-${index}`}>
+                            <a
+                              className='Header-menu-content-target'
+                              href={elem.url}
+                            >
+                              {elem.title}
+                            </a>
+                          </li>
+                        );
                       }
                       return null
                     }
@@ -176,6 +187,17 @@ class Header extends PureComponent {
                       >
                         {elem.title}
                       </Link>
+                    </li>
+                  );
+                } else if (elem.type === 'anchor') {
+                  return (
+                    <li key={`menuElement-${index}`}>
+                      <a
+                        className='Header-menu-content-target'
+                        href={elem.url}
+                      >
+                        {elem.title}
+                      </a>
                     </li>
                   );
                 }

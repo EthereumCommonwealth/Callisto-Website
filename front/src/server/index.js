@@ -9,6 +9,7 @@ import R from 'ramda';
 import { langs } from '../app/constants/';
 import getManifest from './getManifest';
 import prefetchData from './utils/prefetch/audit/prefetchData';
+import prefetchBlog from './utils/prefetch/audit/prefetchBlog';
 import prefetchPost from './utils/prefetch/audit/prefetchPost';
 import prefetchTopic from './utils/prefetch/audit/prefetchTopic';
 import prefetchFaq from './utils/prefetch/audit/prefetchFaq';
@@ -108,6 +109,7 @@ app.get('*.css', function (req, res, next) {
 });
 
 app.get('/', prefetchData);
+app.get('/blog/', prefetchBlog);
 app.get('/smart-contract-audit/', prefetchData);
 app.get('/cold-staking/', prefetchData);
 app.get('/financial-report/', prefetchData);
@@ -118,7 +120,7 @@ app.get('/faq/', prefetchFaq);
 app.get('/community-guidlines/', prefetchData);
 app.get(`/:lang${langs}/`, prefetchData);
 app.get(`/:lang${langs}/faq/`, prefetchFaq);
-app.get(`/:lang${langs}/blog/`, prefetchData);
+app.get(`/:lang${langs}/blog/`, prefetchBlog);
 app.get(`/:lang${langs}/blog/post/:slug/`, prefetchPost);
 app.get(`/:lang${langs}/blog/topic/:slug/`, prefetchTopic);
 app.get(`/:lang${langs}/airdrop/`, prefetchData);
