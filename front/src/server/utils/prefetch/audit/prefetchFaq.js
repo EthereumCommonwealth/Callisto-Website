@@ -1,9 +1,9 @@
 import axios from 'axios';
-import blogPosts from '../../../app/services/blogPosts';
-import coinStats from '../../../app/services/coinStats';
-import getTranslations from '../../getTranslations';
+import blogPosts from '../../../../app/services/blogPosts';
+import coinStats from '../../../../app/services/coinStats';
+import getTranslations from '../../../getTranslations';
 import preparePosts from './preparePosts';
-import handleRender from '../handleRender';
+import handleRender from '../../render/website/handleRender';
 
 const getArticles = async (category) => {
   const articles = await axios.get(`solutions/folders/${category.id}/articles/`, {
@@ -58,7 +58,7 @@ const getFAQ = async () => {
 
 const prefetchFaq = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats, internalData;
+    let posts, tags, btcStats, cloStats, internalData, audit;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=3');
     } catch (err) {
@@ -91,6 +91,15 @@ const prefetchFaq = async (req, res, next) => {
         exchanges: [],
       };
     }
+    try {
+      audit = await axios.get(`${process.env.AUDIT_URL}audit-request/create/`);
+      audit = audit.data;
+    } catch (e) {
+      audit = {
+        platform: [],
+        csrf_token: null,
+      }
+    }
     const faq = await getFAQ();
     const messages = getTranslations(req.params.lang);
     const initialState = {
@@ -111,6 +120,7 @@ const prefetchFaq = async (req, res, next) => {
       faq: faq,
       singlePost: {},
       messages,
+      audit,
     };
     handleRender(req, res, initialState, messages)
   } catch (err) {

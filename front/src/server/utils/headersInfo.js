@@ -800,7 +800,6 @@ const getHeadersInfo = (target, messages, context) => {
       }
 
     // END AIRDROP
-
     default:
       if (context === 'blog') {
         return {

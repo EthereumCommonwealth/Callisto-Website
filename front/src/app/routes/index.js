@@ -9,6 +9,8 @@ import Tag from '../containers/Tag';
 import Airdrop from '../containers/Airdrop';
 import Faq from '../containers/Faq';
 import Post from '../containers/Post';
+import AuditAdmin from '../containers/AuditAdmin';
+import AuditDetail from '../containers/AuditDetail';
 // import Buy from '../containers/Buy';
 import CommunityGuidlines from '../containers/CommunityGuidlines';
 import Notfound from '../containers/NotFound';
@@ -39,6 +41,9 @@ const Routes = (
       <Route exact path={`/:lang${langs}/smart-contract-audit/`} component={SmartContract} />
       <Route exact path={`/:lang${langs}/financial-report/`} component={FinantialReport} />
       <Route exact path={`/:lang${langs}/community-guidlines/`} component={CommunityGuidlines} />
+      {/* Audit URLS */}
+      <Route exact path='/platform/' component={AuditAdmin} />
+      <Route exact path='/platform/:id-:slug/' component={AuditDetail} />
       <Route component={Notfound} />
     </Switch>
   </BrowserRouter>

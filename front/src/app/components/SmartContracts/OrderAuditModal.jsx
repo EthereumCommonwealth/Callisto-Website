@@ -11,6 +11,16 @@ class OrderAuditModal extends PureComponent {
     platform: '',
     emailSent: false,
     btnLocked: false,
+    platformOpen: false,
+    selectedPlatform: [],
+  }
+
+  componentWillMount() {
+    this.setState({ selectedPlatform: this.props.audit.platform[2] });
+  }
+
+  componentDidMount() {
+    document.cookie = `csrftoken=${this.props.audit.csrf_token}`;
   }
 
   onChange = event => {
@@ -18,17 +28,34 @@ class OrderAuditModal extends PureComponent {
     this.setState({ [event.target.name]: event.target.value });
   }
 
+  handleOpen = event => {
+    event.preventDefault();
+    this.setState({ platformOpen: true });
+  }
+
+  handleClose = event => {
+    event.preventDefault();
+    this.setState({ platformOpen: false });
+  }
+
+  selectPlatform = (event, auditElem) => {
+    event.preventDefault();
+    this.setState({ selectedPlatform: auditElem, platformOpen: false });
+  }
+
   sendMail = event => {
     event.preventDefault();
     this.setState({ btnLocked: true })
-    axios.post('/send-email', {
+    const d = new Date();
+    axios.post('/create-audit-request/', {
+      title: `Order No. ${d.getTime()}`,
       description: this.state.description,
       sourceCode: this.state.sourceCode,
       email: this.state.email,
-      platform: this.state.platform,
+      platform: this.state.selectedPlatform[0],
+      csrf_token: this.props.audit.csrf_token,
     })
       .then((response) => {
-        const d = new Date();
         window.tap('conversion', d.getTime(), {}, {
           meta_data: {
             email: this.state.email,
@@ -66,7 +93,8 @@ class OrderAuditModal extends PureComponent {
   }
 
   render() {
-    const { open, onClose, messages } = this.props;
+    const { open, onClose, messages, audit } = this.props;
+    const { selectedPlatform, platformOpen } = this.state;
     return (
       <Modal
         key='SmartContractOrderModal'
@@ -114,6 +142,36 @@ class OrderAuditModal extends PureComponent {
                 />
               </div>
               <h4 className='OrderAuditModal-form-title'>
+                {messages.Platform}
+              </h4>
+              <div className='OrderAuditModal-form-inputs'>
+                <label htmlFor='platform'>
+                  {messages.OrderAuditModalPlatformLabel}
+                </label>
+                {selectedPlatform.length > 0 ? (
+                  <div className='OrderAuditModal-platforms' onMouseLeave={this.handleClose}>
+                    <a className='OrderAuditModal-platforms-selected' onClick={this.handleOpen}>
+                      {selectedPlatform[1]} ({selectedPlatform[0]})
+                    </a>
+                    {platformOpen ? (
+                      <div className='OrderAuditModal-platforms-elements'>
+                        {audit.platform.length > 0 ? audit.platform.map(auditElem => {
+                          if (auditElem === selectedPlatform) return null
+                          return (
+                            <a
+                              key={auditElem[0]}
+                              onClick={e => this.selectPlatform(e, auditElem)}
+                            >
+                              {auditElem[1]} ({auditElem[0]})
+                            </a>
+                          )
+                        }) : null}
+                      </div>
+                    ) : null}
+                  </div>
+                ) : null}
+              </div>
+              <h4 className='OrderAuditModal-form-title'>
                 {messages.DisclosurePolicyTitle}
               </h4>
               <div className='OrderAuditModal-form-inputs'>
@@ -125,22 +183,6 @@ class OrderAuditModal extends PureComponent {
                   type='email'
                   value={this.state.email}
                   onChange={this.onChange}
-                  required
-                />
-              </div>
-              <h4 className='OrderAuditModal-form-title'>
-                {messages.Platform}
-              </h4>
-              <div className='OrderAuditModal-form-inputs'>
-                <label htmlFor='platform'>
-                  {messages.OrderAuditModalPlatformLabel}
-                </label>
-                <input
-                  name='platform'
-                  type='text'
-                  value={this.state.platform}
-                  onChange={this.onChange}
-                  placeholder='ETC/ETH/CLO/UBQ/EXP/something else'
                   required
                 />
               </div>
@@ -160,6 +202,7 @@ class OrderAuditModal extends PureComponent {
 function mapStateToProps(state) {
   return {
     messages: state.messages,
+    audit: state.audit,
   };
 }
 

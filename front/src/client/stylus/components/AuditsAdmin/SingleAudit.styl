@@ -1,0 +1,103 @@
+.SingleAudit
+  padding 120px 1em 25px 1em
+  +from-width($sm)
+    padding 120px 0 25px 0
+  &-content
+    padding 1em
+    +from-width($sm)
+      padding 2em
+  &-title
+    font-size 24px
+    margin 0
+    text-align center
+    +from-width($sm)
+      font-size 36px
+      font-weight 500
+      line-height 1.05
+      color $dark-blue
+    &.is-subtitle
+      font-size 20px
+      +from-width($sm)
+        font-size 25px
+  &-divider
+    width 40px
+    border-color $green
+    margin 23px auto
+    border-style solid
+  &-description
+    line-height 1.52
+    color $dark-gray
+  &-details
+    margin-top 2em
+    display grid
+    grid-gap 1em
+    font-size 18px
+    color $dark-blue
+    +from-width($sm)
+      grid-template-columns 1fr 1fr
+  &-history
+    margin-top 2em
+    &-title
+      font-size 20px
+      margin 0
+      +from-width($sm)
+        font-size 30px
+        font-weight 500
+        line-height 1.05
+        color $dark-blue
+    &-elements
+      display grid
+      margin-top 1em
+    &-element
+      margin 1em 0
+      &-count
+        margin-right 1em
+        background-color $green
+        border-radius 100%
+        color #FFF
+        padding .25em .6em
+      &-author
+        color $dark-gray
+      &-description
+        line-height 1.52
+        padding 1em 0
+        color $dark-gray
+      &.is-comment
+        .SingleAudit-history-element-count
+          background-color $orange
+  &-submit
+    &-comment
+      color $green
+      font-size 1rem
+      &:hover
+        cursor pointer
+    &-area
+      display flex
+      flex-direction column
+      &-btns
+        display flex
+      &-input
+        width 100%
+        max-width 300px
+        margin-bottom 1rem
+        border-radius 4px
+        border solid 1px #e5e5e5
+        padding .5em
+        &:focus
+          outline none
+          border-color $dark-gray
+        +from-width($sm)
+          width 100%
+          max-width 500px
+      &-go
+        background-color $green
+        border none
+        border-radius 4px
+        color #FFF
+        &:hover
+          cursor pointer
+      &-cancel
+        color $orange
+        margin-left 1rem
+        &:hover
+          cursor pointer

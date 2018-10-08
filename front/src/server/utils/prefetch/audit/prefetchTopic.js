@@ -1,9 +1,9 @@
 import axios from 'axios';
-import blogPosts from '../../../app/services/blogPosts';
-import coinStats from '../../../app/services/coinStats';
-import getTranslations from '../../getTranslations';
+import blogPosts from '../../../../app/services/blogPosts';
+import coinStats from '../../../../app/services/coinStats';
+import getTranslations from '../../../getTranslations';
 import preparePosts from './preparePosts';
-import handleRender from '../handleRender';
+import handleRender from '../../render/website/handleRender';
 
 const getTag = (slug, tags) => {
   const filtered = tags.filter(elem => elem.slug === slug);
@@ -12,7 +12,7 @@ const getTag = (slug, tags) => {
 
 const prefetchTopic = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats, internalData;
+    let posts, tags, btcStats, cloStats, internalData, audit;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=50');
     } catch (err) {
@@ -45,6 +45,15 @@ const prefetchTopic = async (req, res, next) => {
         exchanges: [],
       };
     }
+    try {
+      audit = await axios.get(`${process.env.AUDIT_URL}audit-request/create/`);
+      audit = audit.data;
+    } catch (e) {
+      audit = {
+        platform: [],
+        csrf_token: null,
+      }
+    }
     const tagId = getTag(req.params.slug, tags.data);
     const messages = getTranslations(req.params.lang);
     if (tagId) {
@@ -67,6 +76,7 @@ const prefetchTopic = async (req, res, next) => {
         faq: [],
         singlePost: {},
         messages,
+        audit,
       };
 
       const topicMessages = {

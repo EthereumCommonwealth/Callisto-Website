@@ -56,3 +56,25 @@
       margin 1em 0
       color $green
       font-size 22px
+  &-platforms
+    position relative
+    &:hover
+      cursor pointer
+    &-selected
+      border solid 1px #e5e5e5
+      border-radius 4px
+      padding .5em
+      display block
+    &-elements
+      border solid 1px #e5e5e5
+      border-radius 4px
+      position absolute
+      background #FFF
+      max-height 120px
+      overflow scroll
+      a
+        display block
+        color $dark-gray
+        padding .5em
+        &:hover
+          background-color rgba(229, 229, 229, 0.3)

@@ -5,9 +5,9 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router';
 import { renderRoutes } from 'react-router-config';
-import rootReducer from '../../app/reducers/rootReducer.js';
-import Routes from '../../app/routes/serverRoutes.js';
-import headersInfo from './headersInfo';
+import rootReducer from '../../../../app/reducers/rootReducer.js';
+import Routes from '../../../../app/routes/serverRoutes.js';
+import headersInfo from '../../headersInfo';
 import renderPage from './renderPage';
 
 const handleRender = (req, res, initialState, messages, pageContext) => {
