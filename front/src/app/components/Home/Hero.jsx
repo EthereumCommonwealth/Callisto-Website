@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 import { FormattedMessage, injectIntl } from 'react-intl';
 
-const Hero = ({ intl }) => (
+const Hero = ({ intl, lang }) => (
   <div className='Hero'>
     <div className='Hero-content container'>
       <div className='Hero-content-left'>
@@ -22,6 +23,12 @@ const Hero = ({ intl }) => (
           >
             <FormattedMessage id='WhitePaper' />
           </a>
+          <RouterLink
+            to={lang === 'en' ? '/financial-report/' : `/${lang}/financial-report/`}
+            className='btn btn-transparent-green'
+          >
+            <FormattedMessage id='FinancialReport' />
+          </RouterLink>
           <Link
             to='exchanges'
             spy={true}

@@ -13,11 +13,14 @@
     display grid
     grid-gap 1em
     +from-width($sm)
-      grid-template-columns 1fr 1fr
+      grid-template-columns 1fr 1fr 1fr
+      justify-items center
+      align-items center
+      font-size 14px
   &-content
     display grid
     +from-width($sm)
-      grid-template-columns 1.5fr 2fr
+      grid-template-columns 2.2fr 2fr
     &-left
       &-title
         margin 0

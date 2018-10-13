@@ -66,7 +66,7 @@ const routes = [
     component: Airdrop,
   },
   {
-    path: '/community-guidlines/',
+    path: '/community-guidelines/',
     exact: true,
     component: CommunityGuidlines,
   },
@@ -121,7 +121,7 @@ const routes = [
     component: Airdrop,
   },
   {
-    path: `/:lang${langs}/community-guidlines/`,
+    path: `/:lang${langs}/community-guidelines/`,
     exact: true,
     component: CommunityGuidlines,
   },

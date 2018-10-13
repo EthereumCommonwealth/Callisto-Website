@@ -156,7 +156,7 @@
   "StakingLongStoryTitle": "Long story short",
   "StakingLongStoryDescription": "To participate in cold staking, a user must:",
   "StakingLongStorySend": "Send CLO to staking contract",
-  "StakingLongStoryWait": "Wait a month or longer",
+  "StakingLongStoryWait": "Wait 27 days or longer",
   "StakingLongStoryInvoke": "Invoke the withdrawal function of the staking contract to earn the reward",
   "BuySome": "Buy some",
   "MineSome": "Mine some",

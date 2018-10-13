@@ -42,7 +42,7 @@ class Footer extends PureComponent {
     return [
       {
         title: this.props.intl.formatMessage({ id: 'CommunityGuidlines' }),
-        url: '/community-guidlines/',
+        url: '/community-guidelines/',
         type: 'router',
       },
       {

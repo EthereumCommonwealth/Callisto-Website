@@ -23,7 +23,7 @@ const Home = ({ match }) => {
         lang={match.params && match.params.lang ? match.params.lang : 'en'}
         fromLanding
       />
-      <Hero />
+      <Hero lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <InfoContent
         lang={match.params && match.params.lang ? match.params.lang : 'en'}
       />

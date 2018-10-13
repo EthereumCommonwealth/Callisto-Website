@@ -29,7 +29,7 @@ const Routes = (
       <Route exact path='/cold-staking/' component={ColdStaking} />
       <Route exact path='/smart-contract-audit/' component={SmartContract} />
       <Route exact path='/financial-report/' component={FinantialReport} />
-      <Route exact path='/community-guidlines/' component={CommunityGuidlines} />
+      <Route exact path='/community-guidelines/' component={CommunityGuidlines} />
       <Route exact path={`/:lang${langs}/`} component={Home} />
       <Route exact path={`/:lang${langs}/faq/`} component={Faq} />
       {/* <Route exact path={`/:lang${langs}/buy/`} component={Buy} /> */}
@@ -40,7 +40,7 @@ const Routes = (
       <Route exact path={`/:lang${langs}/cold-staking/`} component={ColdStaking} />
       <Route exact path={`/:lang${langs}/smart-contract-audit/`} component={SmartContract} />
       <Route exact path={`/:lang${langs}/financial-report/`} component={FinantialReport} />
-      <Route exact path={`/:lang${langs}/community-guidlines/`} component={CommunityGuidlines} />
+      <Route exact path={`/:lang${langs}/community-guidelines/`} component={CommunityGuidlines} />
       {/* Audit URLS */}
       <Route exact path='/platform/' component={AuditAdmin} />
       <Route exact path='/platform/:id-:slug/' component={AuditDetail} />

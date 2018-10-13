@@ -117,7 +117,7 @@ app.get('/blog/post/:slug/', prefetchPost);
 app.get('/blog/topic/:slug/', prefetchTopic);
 app.get('/airdrop/', prefetchData);
 app.get('/faq/', prefetchFaq);
-app.get('/community-guidlines/', prefetchData);
+app.get('/community-guidelines/', prefetchData);
 app.get(`/:lang${langs}/`, prefetchData);
 app.get(`/:lang${langs}/faq/`, prefetchFaq);
 app.get(`/:lang${langs}/blog/`, prefetchBlog);
@@ -127,7 +127,7 @@ app.get(`/:lang${langs}/airdrop/`, prefetchData);
 app.get(`/:lang${langs}/cold-staking/`, prefetchData);
 app.get(`/:lang${langs}/smart-contract-audit/`, prefetchData);
 app.get(`/:lang${langs}/financial-report/`, prefetchData);
-app.get(`/:lang${langs}/community-guidlines/`, prefetchData);
+app.get(`/:lang${langs}/community-guidelines/`, prefetchData);
 //Audit URLS
 app.get('/platform/', prefetchPlatform);
 app.get('/platform/:id-:slug/', prefetchAudit);
