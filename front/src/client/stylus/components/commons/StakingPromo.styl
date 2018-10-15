@@ -1,0 +1,49 @@
+.StakingPromo
+  width 100%
+  background-color $green
+  padding 1em
+  position relative
+  box-sizing border-box
+  z-index 2
+  top 80px
+  +from-width($sm)
+    top 92px
+  +from-width($xl)
+    top 78px
+  &-countdown
+    padding .5em
+    border solid 1px #FFF
+    border-radius 4px
+    margin-top .5em
+    +from-width($xl)
+      margin-top 0
+  &-anchor
+    position absolute
+    top 0
+    left 0
+    height 100%
+    width 100%
+  &-content
+    display flex
+    justify-content space-between
+    align-items center
+    flex-direction column
+    position relative
+    +from-width($md)
+      flex-direction row
+      align-items center
+  &-text
+    color #FFF
+    &-title
+      margin 0 0 .5em 0
+  &-counter
+    &-holder
+      display grid
+      grid-template-columns 1fr 1fr 1fr 1fr
+      grid-gap .5em
+      color #FFF
+      +from-width($md)
+        grid-gap 1em
+        font-size 20px
+      &-elem
+        display flex

@@ -54,6 +54,7 @@ class StakingHero extends Component {
       </div>
     );
   };
+
   render() {
     const { intl } = this.props;
     return (
