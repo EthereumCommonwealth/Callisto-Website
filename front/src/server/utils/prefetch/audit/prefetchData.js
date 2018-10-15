@@ -1,9 +1,9 @@
 import axios from 'axios';
 import blogPosts from '../../../../app/services/blogPosts';
-import coinStats from '../../../../app/services/coinStats';
 import getTranslations from '../../../getTranslations';
 import preparePosts from './preparePosts';
 import handleRender from '../../render/website/handleRender';
+
 
 const prefetchData = async (req, res, next) => {
   try {
@@ -14,14 +14,14 @@ const prefetchData = async (req, res, next) => {
       posts = [];
     }
     try {
-      btcStats = await coinStats.get('ticker/1/');
+      btcStats = await axios({
+        method: 'GET',
+        url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=1,2757',
+        headers: { 'X-CMC_PRO_API_KEY': process.env.CMC_KEY },
+      });
+      console.log(btcStats.data)
     } catch (e) {
       btcStats = 0;
-    }
-    try {
-      cloStats = await coinStats.get('ticker/2757/');
-    } catch (e) {
-      cloStats = 0;
     }
     try {
       internalData = await axios.get(`${process.env.API_URL}home/`);
