@@ -61,7 +61,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|pdf)$/,
         use: [
           {
             loader: 'file-loader',
@@ -84,9 +84,12 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', 'styl'],
+    extensions: ['.js', '.jsx', '.styl'],
     modules: ['node_modules'],
-    alias: { styles: path.resolve(__dirname, 'src/client/stylus/') },
+    alias: {
+      styles: path.resolve(__dirname, 'src/client/stylus/'),
+      files: path.resolve(__dirname, 'src/client/files/'),
+    },
   },
   optimization: {
     minimizer: [

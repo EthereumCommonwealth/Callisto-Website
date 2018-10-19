@@ -1,25 +1,73 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { injectIntl, FormattedMessage } from 'react-intl';
+import { Document, Page } from 'react-pdf';
 import SectionHeading from '../commons/SectionHeading';
 
-const FinantialTable = ({ intl }) => (
-  <div className='FinantialTable'>
-    <div className='container'>
-      <SectionHeading title={intl.formatMessage({ id: 'FinantialTableTitle' })} />
-      <div className='FinantialTable-address'>
-        <FormattedMessage id='FinantialTableWalletAddress'/>
-        <br />
-        <span className='FinantialTable-address-text'>
-          0x74682Fc32007aF0b6118F259cBe7bCCC21641600
-        </span>
+class FinantialTable extends Component {
+  state = {
+    numPages: null,
+    pageNumber: 1,
+  };
+
+  onDocumentLoadSuccess = ({ numPages }) => {
+    this.setState({ numPages });
+  }
+
+  render() {
+    const { intl } = this.props;
+    return (
+      <div className='FinantialTable'>
+        <div className='container'>
+          <SectionHeading title={intl.formatMessage({ id: 'FinantialTableTitle' })} />
+          <div className='FinantialTable-address'>
+            <FormattedMessage id='FinantialTableWalletAddress'/>
+            <br />
+            <span className='FinantialTable-address-text'>
+              0x74682Fc32007aF0b6118F259cBe7bCCC21641600
+            </span>
+          </div>
+          {typeof window !== 'undefined' ?
+            (
+              <div className='FinantialTable-document'>
+                <Document
+                  file='/report.pdf'
+                  onLoadSuccess={this.onDocumentLoadSuccess}
+                >
+                  <Page pageNumber={this.state.pageNumber} />
+                </Document>
+                <div className='FinantialTable-pages'>
+                  {this.state.pageNumber > 1 ?
+                    (
+                      <a
+                        className='btn btn-green'
+                        onClick={() => {
+                          this.setState({ pageNumber: this.state.pageNumber - 1 })
+                        }}
+                      >
+                        Prev Page
+                      </a>
+                    ) : null
+                  }
+                  {this.state.pageNumber <= this.state.numPages ?
+                    (
+                      <a
+                        className='btn btn-green'
+                        onClick={() => {
+                          this.setState({ pageNumber: this.state.pageNumber + 1 })
+                        }}
+                      >
+                        Next Page
+                      </a>
+                    ) : null
+                  }
+                </div>
+              </div>
+            ) : null
+          }
+        </div>
       </div>
-      <iframe
-        className='FinantialTable-frame'
-        src='https://docs.google.com/spreadsheets/d/e/2PACX-1vTHbKD9_qqc2pzivkn-U6reX6pR3WF1-ryX-ZRNtCy54bg0q8JaM_VcoctRll1SgiX7t7UwN1BqOZN-/pubhtml?gid=1393329941&single=true'
-        frameBorder='0'
-      />
-    </div>
-  </div>
-);
+    );
+  }
+}
 
 export default injectIntl(FinantialTable);

@@ -14,3 +14,19 @@
     margin-top 30px
     +from-width($sm)
       height 800px
+  &-document
+    canvas
+      max-width 300px
+      max-height 400px
+      margin 2em auto 0 auto
+      +from-width($md)
+        max-width unset
+        max-height unset
+  &-pages
+    display grid
+    grid-gap 1em
+    justify-content center
+    +from-width($sm)
+      grid-template-columns 1fr 1fr
+      max-width 350px
+      margin 0 auto

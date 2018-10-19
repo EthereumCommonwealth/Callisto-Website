@@ -40,6 +40,7 @@
     "react-dom": "^16.4.2",
     "react-hot-loader": "^4.3.6",
     "react-intl": "^2.4.0",
+    "react-pdf": "^3.0.5",
     "react-redux": "^5.0.7",
     "react-responsive-modal": "^3.3.0",
     "react-router": "^4.3.1",
