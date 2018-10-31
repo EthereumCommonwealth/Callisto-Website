@@ -71,7 +71,7 @@ class StakingPromo extends Component {
           </div>
           <div className='StakingPromo-countdown'>
             <Countdown
-              date={1541894400000}
+              date={new Date(Date.UTC(2018, 10, 12, 0, 0, 0))}
               renderer={this.renderer}
             />
           </div>
