@@ -144,7 +144,7 @@
   "FourthMonth": "Vierter Monat",
   "StakingHowWorksTitle": "Wie funktioniert es?",
   "StakingWorkflowTitle": "der Cold Staking Workflow:",
-  "WorkflowFirstStep": "Nachdem der Clo-Besitzer Coins in den Staking Contract eingezahlt hat, sind die Coins für einen bestimmten Zeitraum gesperrt (ca. 1 Monat).",
+  "WorkflowFirstStep": "Nachdem der Clo-Besitzer Coins in den Staking Contract eingezahlt hat, sind die Coins für einen bestimmten Zeitraum gesperrt (ca. 27 Tage).",
   "WorkflowSecondStep": "Der Cold Staker kann während der Sperrzeit nicht auf seine Coins zugreifen.",
   "WorkflowThirdStep": "je länger ein Staker seine Coins festschreibt, desto höher ist die Belohnung.",
   "WorkflowFourthStep": "Nach Ablauf der Sperrfrist hat ein Cold Staker zwei Möglichkeiten: (1) die Belohnung zu beanspruchen und das Staking fortzusetzen, also die Coins für 1 Monat erneut zu sperren oder (2) die Belohnung zu beanspruchen und den gesamten Einsatz zurückziehen.",

@@ -144,7 +144,7 @@
   "FourthMonth": "Cuarto mes",
   "StakingHowWorksTitle": "¿Como funciona?",
   "StakingWorkflowTitle": "el flujo de trabajo del Cold Staking:",
-  "WorkflowFirstStep": "Luego de que un dueño de Clo haya depositado las monedas en el contrato de Staking, los fondos estarán bloqueados por un cierto período de tiempo (un mes aproximadamente).",
+  "WorkflowFirstStep": "Luego de que un dueño de Clo haya depositado las monedas en el contrato de Staking, los fondos estarán bloqueados por un cierto período de tiempo (27 días aproximadamente).",
   "WorkflowSecondStep": "el Cold Staker no puede acceder a sus fondos durante el período de bloqueo.",
   "WorkflowThirdStep": "entre más tiempo el Staker esta haciendo \"Staking\", mayor será la recompensa.",
   "WorkflowFourthStep": "Luego de que él periodo de bloqueo ha pasado, un Cold Staker tiene dos opciones: (1) Reclamar la recompensa y seguir haciendo Staking, bloqueando los fondos por 1 mes de nuevo, ó (2) reclamar la recompensa y retirar todo el Stake.",
