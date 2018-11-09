@@ -80,3 +80,4 @@ front/src/server/public/image
 
 back/dump.sql
 manifest.json
+package-lock.json
