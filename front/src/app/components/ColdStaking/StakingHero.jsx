@@ -88,6 +88,12 @@ class StakingHero extends Component {
               <p className='StakingHero-counter-description'>
                 <FormattedMessage id='StakingHeroCounterText'/>
               </p>
+              <h3 className='StakingHero-counter-subtitle'>Cold Staking address</h3>
+              <p className='StakingHero-counter-subtitleDescription'>
+                <strong>
+                  0xd813419749b3c2cDc94A2F9Cfcf154113264a9d6
+                </strong>
+              </p>
               <div className='StakingHero-counter-elements'>
                 <Countdown
                   date={new Date(Date.UTC(2018, 10, 12, 0, 0, 0))}
