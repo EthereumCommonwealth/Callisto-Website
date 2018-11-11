@@ -90,6 +90,13 @@ class StakingHero extends Component {
               >
                 <FormattedMessage id='StakingHeroProtocolBtn' />
               </a>
+              <a
+                href='https://wallet.callisto.network/#send-transaction'
+                target='_blank'
+                className='btn btn-transparent-green'
+              >
+                Start Staking
+              </a>
             </div>
           </div>
           <div className='StakingHero-content-right'>
