@@ -93,7 +93,7 @@ class StakingHero extends Component {
               <a
                 href='https://wallet.callisto.network/#send-transaction'
                 target='_blank'
-                className='btn btn-transparent-green'
+                className='btn btn-transparent-green startstake'
               >
                 Start Staking
               </a>
