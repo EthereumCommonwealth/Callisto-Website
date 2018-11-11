@@ -158,6 +158,7 @@
   "StakingLongStorySend": "Senden Sie CLO in einen Staking-Contract",
   "StakingLongStoryWait": "Warten 27 tage oder länger",
   "StakingLongStoryInvoke": "Rufen Sie die Auszahlungsfunktion des Staking Contract auf, um die Belohnung zu erhalten",
+  "EarnSome": "Verdienen Sie etwas",
   "BuySome": "Kaufen Sie einige",
   "MineSome": "Mine einige",
   "FinantialHeroTitle": "Finanzbericht",
@@ -261,5 +262,8 @@
   "OrderAuditModalSourceCodeLabel": "Geben Sie einen Link zum Quellcode des Contracts an",
   "OrderAuditModalDisclosureLabel": "Möchten Sie, dass wir den Bericht unverändert veröffentlichen oder Sie im Falle eines kritischen Fehlers privat benachrichtigen? Geben Sie Ihre E-Mail-Adresse an, wenn Sie möchten, dass wir Ihnen eine Benachrichtigung senden",
   "OrderAuditModalPlatformLabel": "In welchem Netzwerk wird Ihr Contract bereitgestellt?",
-  "OrderAuditSuccess": "Audit-Anforderung Formular erfolgreich gesendet."
+  "OrderAuditSuccess": "Audit-Anforderung Formular erfolgreich gesendet.",
+  "HowToStakeTitle": "Wie zu pflegen?",
+  "HowToStakeDescription": "Informations détaillées sur la manière d'obtenir plus de profit avec le piquetage à froid",
+  "CheckBlogPost": "Benötigen Sie detaillierte Informationen? Überprüfen Sie unseren Blogbeitrag"
 }

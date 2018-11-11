@@ -158,6 +158,7 @@
   "StakingLongStorySend": "Send CLO to staking contract",
   "StakingLongStoryWait": "Wait 27 days or longer",
   "StakingLongStoryInvoke": "Invoke the withdrawal function of the staking contract to earn the reward",
+  "EarnSome": "Earn Some",
   "BuySome": "Buy some",
   "MineSome": "Mine some",
   "FinantialHeroTitle": "Financial Report",
@@ -262,5 +263,8 @@
   "OrderAuditModalDisclosureLabel": "Do you want us to publish the report as is, or would you like us to notify you privately in case we find critical vulnerabilities? Provide your email if you would like us to send you a notification",
   "OrderAuditModalPlatformLabel": "Which network will your contract be deployed on?",
   "OrderAuditSuccess": "Audit order form successfully sent.",
-  "OurPartners": "Our Partners"
+  "OurPartners": "Our Partners",
+  "HowToStakeTitle": "How to Stake?",
+  "HowToStakeDescription": "Detailed info about how to get more profit with Cold Staking",
+  "CheckBlogPost": "Need detailed info? Check our blog post"
 }

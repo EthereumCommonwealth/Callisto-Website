@@ -158,8 +158,9 @@
   "StakingLongStorySend": "Envoyer des CLO dans le Contrat de Staking",
   "StakingLongStoryWait": "Attendre au minimum un mois",
   "StakingLongStoryInvoke": "Exécuter la fonction de retrait du Contrat de Staking pour obtenir la récompense",
-  "BuySome": "Acheter des CLO",
-  "MineSome": "Miner des CLO",
+  "EarnSome": "Gagnez du",
+  "BuySome": "Acheter des",
+  "MineSome": "Miner des",
   "FinantialHeroTitle": "Rapport financier",
   "FinantialHeroDescription": "L'équipe de développement de Callisto adhère à une politique de transparence financière totale. Après le Hardfork Callisto n° 2 (planifié au 11 novembre 2019), les cold stakers seront autorisés à participer à la soumission des propositions puis au vote de ces propositions. Une proposition de développement qui a été approuvée par le vote des cold stakers recevra un financement.<br /><br /> A ce stade l'équipe Callisto et le Département Officiel d'Audit des Smart Contrats fonctionneront via la soumission de propositions.",
   "FinantialTableTitle": "Rapport Financier de la Trésorerie Callisto",
@@ -261,5 +262,8 @@
   "OrderAuditModalSourceCodeLabel": "Indiquer un lien vers le code source des contrats",
   "OrderAuditModalDisclosureLabel": "Souhaitez-vous que nous publions le rapport en l'état ou que nous vous avertissions en privé si nous trouvons des erreurs critiques ? Veuillez indiquer votre adresse e-mail si vous souhaitez que nous vous envoyions une notification",
   "OrderAuditModalPlatformLabel": "Dans quel réseau votre contrat sera-t-il déployé ?",
-  "OrderAuditSuccess": "Le formulaire de commande d'audit a été envoyé avec succès."
+  "OrderAuditSuccess": "Le formulaire de commande d'audit a été envoyé avec succès.",
+  "HowToStakeTitle": "Comment participer?",
+  "HowToStakeDescription": "Informations détaillées sur la manière d'obtenir plus de profit avec le piquetage à froid",
+  "CheckBlogPost": "Besoin d'informations détaillées? Consultez notre blog"
 }

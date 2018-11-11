@@ -158,6 +158,7 @@
   "StakingLongStorySend": "Enviar CLO al contrato de Staking",
   "StakingLongStoryWait": "Esperar 27 día o más",
   "StakingLongStoryInvoke": "Invocar una función de retiro del contrato de Staking para obtener la recompensa",
+  "EarnSome": "Gana algo de",
   "BuySome": "Comprar algo",
   "MineSome": "Minar algo",
   "FinantialHeroTitle": "Reporte financiero",
@@ -261,5 +262,8 @@
   "OrderAuditModalSourceCodeLabel": "Da un enlace al código fuente de los contratos",
   "OrderAuditModalDisclosureLabel": "¿Desea publicar el informe tal como está o prefiere que se le notifique por privado en caso de encontrar errores críticos? Proporcionar su correo electrónico si desea que le enviemos una notificación",
   "OrderAuditModalPlatformLabel": "¿En que red se implementará tu contrato?",
-  "OrderAuditSuccess": "La orden del formulario de auditoría fue enviada con éxito."
+  "OrderAuditSuccess": "La orden del formulario de auditoría fue enviada con éxito.",
+  "HowToStakeTitle": "¿Como hacer Stake?",
+  "HowToStakeDescription": "Información detallada acerca de como obtener mayores ganancias con Cold Staking",
+  "CheckBlogPost": "¿Necesitas más información? Revisa nuestro artículo"
 }

@@ -6,12 +6,13 @@ const BuyMineBanner = ({ lang }) => (
   <div className='BuyMineBanner'>
     <div className='container'>
       <div className='BuyMineBanner-btns'>
-        <Link
-          to={lang === 'en' ? '/#exchanges' : `/${lang}/#exchanges`}
+        <a
+          href='https://github.com/EthereumCommonwealth/Proposals/issues'
+          target='_blank'
           className='btn btn-green'
         >
-          <FormattedMessage id='BuySome'/> CLO
-        </Link>
+          <FormattedMessage id='EarnSome'/> CLO
+        </a>
         <Link
           to={lang === 'en' ? '/#pool' : `/${lang}/#pool`}
           className='btn btn-transparent-green'

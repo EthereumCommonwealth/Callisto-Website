@@ -158,6 +158,7 @@
   "StakingLongStorySend": "将CLO发送到冷权益增值合约",
   "StakingLongStoryWait": "等一个月或更长时间",
   "StakingLongStoryInvoke": "调用权益增值合约的提款功能以获得奖励",
+  "EarnSome": "賺取一些",
   "BuySome": "买些",
   "MineSome": "挖矿些",
   "FinantialHeroTitle": "财务报告",
@@ -261,5 +262,8 @@
   "OrderAuditModalSourceCodeLabel": "提供合约源代码的链接",
   "OrderAuditModalDisclosureLabel": "您是否希望我们发布报告或在发现重大错误时私下通知您？如果您希望我们向您发送通知，请提供您的电子邮件",
   "OrderAuditModalPlatformLabel": "您的合约将在那个网络中配置？",
-  "OrderAuditSuccess": "审核订单已成功发送"
+  "OrderAuditSuccess": "审核订单已成功发送",
+  "HowToStakeTitle": "How to Stake?",
+  "HowToStakeDescription": "有關如何通過Cold Staking獲得更多利潤的詳細信息",
+  "CheckBlogPost": "需要詳細信息？查看我們的博文"
 }

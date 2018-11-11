@@ -158,6 +158,7 @@
   "StakingLongStorySend": "Отправьте CLO на Staking-контракт",
   "StakingLongStoryWait": "Подождите месяц или больше",
   "StakingLongStoryInvoke": "Воспользуйтесь функцией вывода из Staking-контракта для получения награды",
+  "EarnSome": "Получить",
   "BuySome": "Купить",
   "MineSome": "Добыть",
   "FinantialHeroTitle": "Финансовый отчет",
@@ -261,5 +262,8 @@
   "OrderAuditModalSourceCodeLabel": "Укажите ссылку на исходный код контракта",
   "OrderAuditModalDisclosureLabel": "Вы хотите чтобы мы опубликовали отчет \"как есть\" или прислали вам уведомление в случае обнаружения критических ошибок? Оставьте ваш адрес почты если хотите получить уведомление",
   "OrderAuditModalPlatformLabel": "В какой сети будет запущен ваш контракт?",
-  "OrderAuditSuccess": "Форма заказа аудита успешно отправлена."
+  "OrderAuditSuccess": "Форма заказа аудита успешно отправлена.",
+  "HowToStakeTitle": "Как положить депозит в Cold Staking",
+  "HowToStakeDescription": "Подробная информация о том, как получить больше прибыли с помощью Cold Staking",
+  "CheckBlogPost": "Нужна подробная информация? Проверьте наш блог"
 }

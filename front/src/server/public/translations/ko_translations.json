@@ -158,6 +158,7 @@
   "StakingLongStorySend": "CLO를 스테이킹 컨트렉트로 보내기",
   "StakingLongStoryWait": "1 개월 이상 기다리십시오.",
   "StakingLongStoryInvoke": "스테이킹 컨트렉트 인출 기능을 호출하여 보상을 얻으십시오.",
+  "EarnSome": "획득",
   "BuySome": "구매",
   "MineSome": "채굴",
   "FinantialHeroTitle": "파이넨셜 리포트",
@@ -261,5 +262,8 @@
   "OrderAuditModalSourceCodeLabel": "계약된 소스 코드에 대한 링크 제공",
   "OrderAuditModalDisclosureLabel": "리포트를 출간하시거나 중대한 실수를 찾아서 알려주길 원하시나요? 당신 원하시면 이메일로 알림을 제공합니다",
   "OrderAuditModalPlatformLabel": "당신의 계약은 어떤 네트워크에 배포됩니까?",
-  "OrderAuditSuccess": "감사 주문서가 성공적으로 전송되었습니다."
+  "OrderAuditSuccess": "감사 주문서가 성공적으로 전송되었습니다.",
+  "HowToStakeTitle": "스테이크하는 법?",
+  "HowToStakeDescription": "Cold Staking으로 더 많은 수익을 얻는 방법에 대한 세부 정보",
+  "CheckBlogPost": "자세한 정보가 필요하십니까? 블로그 게시물 확인"
 }

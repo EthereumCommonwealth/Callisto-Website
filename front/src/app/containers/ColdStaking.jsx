@@ -4,6 +4,7 @@ import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
 import BuyMineBanner from '../components/commons/BuyMineBanner';
 import StakingHero from '../components/ColdStaking/StakingHero';
+import HowToStake from '../components/ColdStaking/HowToStake';
 import StakingDescription from '../components/ColdStaking/StakingDescription';
 import StakingInvestments from '../components/ColdStaking/StakingInvestments';
 import StakingHowWorks from '../components/ColdStaking/StakingHowWorks';
@@ -17,6 +18,7 @@ const ColdStaking = ({ match }) => {
       <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <StakingHero />
       <StakingDescription />
+      <HowToStake />
       <StakingInvestments />
       <StakingHowWorks />
       <StakingWorkflow />
