@@ -26,6 +26,7 @@ class Wallet(models.Model):
     url = models.CharField(
         max_length=255
     )
+    cold_staking = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.name} - {self.platform.name}'

@@ -107,6 +107,9 @@ class HomeAPIView(View):
         block_explorers = BlockExplorer.objects.all()
         wallets = WalletPlatform.objects.all()
         exchanges = Exchange.objects.order_by('order')
+        cold_staking_wallets = WalletPlatform.objects.filter(
+            wallet__cold_staking=True
+        )
 
         members_list = [
             {
@@ -153,6 +156,19 @@ class HomeAPIView(View):
             } for wallet_platform in wallets
         ]
 
+        cs_wallets_list = [
+            {
+                'title': wallet.name,
+                'icon': f'/{wallet.icon.name}',
+                'options': [
+                    {
+                        'name': wallet.name,
+                        'url': wallet.url
+                    } for wallet in wallet.wallet_set.filter(cold_staking=True)
+                ]
+            } for wallet in cold_staking_wallets
+        ]
+
         exchanges_list = [
             {
                 'name': exchange.name,
@@ -167,6 +183,7 @@ class HomeAPIView(View):
             'miningPools': mining_pools_list,
             'blockExplorers': block_explorers_list,
             'wallets': wallets_list,
+            'csWallets': cs_wallets_list,
             'exchanges': exchanges_list
         }
 
