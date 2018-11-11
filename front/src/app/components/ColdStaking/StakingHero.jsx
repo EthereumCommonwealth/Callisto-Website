@@ -7,7 +7,19 @@ class StakingHero extends Component {
 
   renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
-      return 'Completed';
+      return (
+        <div className='StakingHero-details'>
+          <div className='HowToStake-video sixteen-nine'>
+            <iframe
+              className='content'
+              src='https://www.youtube.com/embed/fbXqCtA1ZT8'
+              frameBorder='0'
+              allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen
+            />
+          </div>
+        </div>
+      );
     }
     return (
       <div className='StakingHero-counter-holder'>
@@ -83,12 +95,8 @@ class StakingHero extends Component {
           <div className='StakingHero-content-right'>
             <div className='StakingHero-counter square'>
               <h2 className='StakingHero-counter-title'>
-                <FormattedMessage id='ComingSoon'/>
+                Cold Staking address
               </h2>
-              <p className='StakingHero-counter-description'>
-                <FormattedMessage id='StakingHeroCounterText'/>
-              </p>
-              <h3 className='StakingHero-counter-subtitle'>Cold Staking address</h3>
               <p className='StakingHero-counter-subtitleDescription'>
                 <strong>
                   0xd813419749b3c2cDc94A2F9Cfcf154113264a9d6
@@ -100,9 +108,6 @@ class StakingHero extends Component {
                   renderer={this.renderer}
                 />
               </div>
-              <p className='StakingHero-counter-date'>
-                <FormattedMessage id='StakingHeroCounterDate'/>
-              </p>
             </div>
           </div>
         </div>

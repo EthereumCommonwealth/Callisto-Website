@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { hot } from 'react-hot-loader';
 import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
-import StakingPromo from '../components/commons/StakingPromo';
 import SmartHero from '../components/SmartContracts/SmartHero';
 import Description from '../components/SmartContracts/Description';
 import SmartDetail from '../components/SmartContracts/SmartDetail';
@@ -35,7 +34,6 @@ class SmartContract extends PureComponent {
     return [
       <Layout key='SmartContractContainer' className='SmartContract' match={match}>
         <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
-        <StakingPromo lang={match.params && match.params.lang ? match.params.lang : 'en'} />
         <SmartHero openModal={this.handleOpenModal} />
         <Description />
         <SmartDetail />
