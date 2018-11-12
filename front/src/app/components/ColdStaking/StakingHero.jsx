@@ -12,7 +12,7 @@ class StakingHero extends Component {
           <div className='HowToStake-video sixteen-nine'>
             <iframe
               className='content'
-              src='https://www.youtube.com/embed/fbXqCtA1ZT8'
+              src='https://www.youtube.com/embed/HwFamWAKoVA'
               frameBorder='0'
               allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
               allowFullScreen
