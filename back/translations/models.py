@@ -8,6 +8,21 @@ class TranslationKey(models.Model):
     def __str__(self):
         return self.slug
 
+    def save(self, *args, **kwargs):
+        if self.pk:
+            return
+
+        super(TranslationKey, self).save(*args, **kwargs)
+        languages = Language.objects.all()
+
+        for language in languages:
+            translation = LanguageTranslation.objects.create(
+                key=self,
+                language=language,
+                translation=self.default_translation
+            )
+
+
 
 class Language(models.Model):
     language_name = models.CharField(max_length=50)
