@@ -23,7 +23,6 @@ class TranslationKey(models.Model):
             )
 
 
-
 class Language(models.Model):
     language_name = models.CharField(max_length=50)
     slug = models.SlugField(max_length=20)

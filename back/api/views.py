@@ -126,8 +126,8 @@ class HomeAPIView(View):
                 'languageName': language.language_name,
                 'keys': [
                     {
-                        key.key.slug: key.translation
-                    } for key in language.language.all()
+                        translation.key.slug: key.translation
+                    } for translation in language.language.all()
                 ]
             }
         ]
