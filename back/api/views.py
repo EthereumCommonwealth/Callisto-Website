@@ -5,6 +5,7 @@ from team.models import TeamMember
 from mining.models import MiningPool, BlockExplorer
 from wallets.models import WalletPlatform
 from exchanges.models import Exchange
+from translations.models import Language
 
 
 class TeamAPIView(View):
@@ -110,6 +111,26 @@ class HomeAPIView(View):
         cold_staking_wallets = WalletPlatform.objects.filter(
             wallet__cold_staking=True
         )
+        language_slug = request.GET.get('lang', 'en')
+        language = Language.objects.filter(
+            slug=language_slug)
+        if not language.exists():
+            language = Language.objects.filter(
+                slug='en')
+
+        language = language.first()
+
+        translations = [
+            {
+                'slug': language.slug,
+                'languageName': language.language_name,
+                'keys': [
+                    {
+                        key.key.slug: key.translation
+                    } for key in language.language.all()
+                ]
+            }
+        ]
 
         members_list = [
             {
@@ -184,7 +205,36 @@ class HomeAPIView(View):
             'blockExplorers': block_explorers_list,
             'wallets': wallets_list,
             'csWallets': cs_wallets_list,
-            'exchanges': exchanges_list
+            'exchanges': exchanges_list,
+            'translations': translations
         }
 
         return JsonResponse(status=200, data=data, safe=False)
+
+
+class TranslationsView(View):
+
+    def get(self, request, *args, **kwargs):
+
+        language_slug = request.GET.get('lang', 'en')
+        language = Language.objects.filter(
+            slug=language_slug)
+        if not language.exists():
+            language = Language.objects.filter(
+                slug='en')
+
+        language = language.first()
+
+        translations = [
+            {
+                'slug': language.slug,
+                'languageName': language.language_name,
+                'keys': [
+                    {
+                        key.key.slug: key.translation
+                    } for key in language.language.all()
+                ]
+            }
+        ]
+
+        return JsonResponse(status=200, data=translations, safe=False)
