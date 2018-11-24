@@ -1,7 +1,7 @@
 build-docker-dev:
-	cp requirements/dev.txt docker/dev.txt
-	cp requirements/base.txt docker/base.txt
-	cd docker/ && docker build -t "callisto/callisto-website" .
+	cp requirements/dev.txt docker/dev/dev.txt
+	cp requirements/base.txt docker/dev/base.txt
+	cd docker/dev/ && docker build -t "callisto/callisto-website" .
 	rm -rf docker/dev.txt
 	rm -rf docker/base.txt
 
