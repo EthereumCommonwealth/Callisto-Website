@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'wallets',
     'exchanges',
     'api',
+    'translations',
 ]
 
 MIDDLEWARE = [
