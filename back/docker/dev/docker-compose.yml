@@ -28,6 +28,24 @@ services:
           - callisto-postgresql
     volumes:
       - /data/postgres-callisto:/var/lib/postgresql/data
+  redis:
+    image: redis:alpine
+    container_name: redis
+    ports:
+      - "6379:6379" 
+    networks:
+      callisto:
+        aliases:
+          - 'redis'
+  # celery-beat:
+  #   image: callisto/callisto-website
+  #   command: bash -c "cd /app/back && celery -A callisto beat -l info"
+  #   container_name: celery-beat
+  #   volumes:
+  #     - ~/.ssh/id_rsa.pub:/tmp/authorized_keys
+  #     - ../../../:/app/
+  #   depends_on:
+  #     - redis
 networks:
-   callisto:
-     external: true
+  callisto:
+    external: true
