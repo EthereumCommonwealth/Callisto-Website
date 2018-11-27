@@ -13,7 +13,7 @@ app.autodiscover_tasks()
 
 app.conf.beat_schedule = {
     'wallets.create': {
-        'task': 'tasksapp.tasks.test_func',
+        'task': 'wallets.create',
         'schedule': 5
     }
 }
