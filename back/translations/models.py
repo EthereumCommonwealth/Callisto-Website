@@ -64,15 +64,14 @@ class Language(models.Model):
                 slug='en')
 
         language = language.first()
+        keys = {}
+        for key in language.translations.all():
+            keys[key.key.slug] = key.translation
 
         translations = {
             'slug': language.slug,
             'languageName': language.language_name,
-            'keys': [
-                {
-                    key.key.slug: key.translation
-                } for key in language.translations.all()
-            ]
+            'keys': keys
         }
 
         cache.set(cache_key, translations, 200)
