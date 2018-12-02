@@ -73,8 +73,8 @@ class Language(models.Model):
             'languageName': language.language_name,
             'keys': keys
         }
-
-        cache.set(cache_key, translations, 200)
+        cache_key = "translations_{}".format(language.slug)
+        cache.set(cache_key, translations, 86400)
         return translations
 
 
