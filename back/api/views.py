@@ -111,26 +111,9 @@ class HomeAPIView(View):
         cold_staking_wallets = WalletPlatform.objects.filter(
             wallet__cold_staking=True
         )
-        language_slug = request.GET.get('lang', 'en')
-        language = Language.objects.filter(
-            slug=language_slug)
-        if not language.exists():
-            language = Language.objects.filter(
-                slug='en')
-
-        language = language.first()
-
-        translations = [
-            {
-                'slug': language.slug,
-                'languageName': language.language_name,
-                'keys': [
-                    {
-                        translation.key.slug: key.translation
-                    } for translation in language.language.all()
-                ]
-            }
-        ]
+        
+        translations = Language.get_translations(
+            request.GET.get('lang', 'en'))
 
         members_list = [
             {
@@ -232,7 +215,7 @@ class TranslationsView(View):
                 'keys': [
                     {
                         key.key.slug: key.translation
-                    } for key in language.language.all()
+                    } for key in language.translations.all()
                 ]
             }
         ]

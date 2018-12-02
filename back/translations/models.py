@@ -1,3 +1,4 @@
+from django.core.cache import cache
 from django.db import models
 
 
@@ -9,10 +10,11 @@ class TranslationKey(models.Model):
         return self.slug
 
     def save(self, *args, **kwargs):
+        super(TranslationKey, self).save(*args, **kwargs)
+
         if self.pk:
             return
 
-        super(TranslationKey, self).save(*args, **kwargs)
         languages = Language.objects.all()
 
         for language in languages:
@@ -46,13 +48,49 @@ class Language(models.Model):
     def __str__(self):
         return self.language_name
 
+    @classmethod
+    def get_translations(cls, language_slug):
+        cache_key = "translations_{}".format(language_slug)
+
+        translations = cache.get(cache_key)
+        if translations:
+            return translations
+
+        language = cls.objects.filter(
+            slug=language_slug)
+        if not language.exists():
+            language = cls.objects.filter(
+                slug='en')
+
+        language = language.first()
+
+        translations = [
+            {
+                'slug': language.slug,
+                'languageName': language.language_name,
+                'keys': [
+                    {
+                        key.key.slug: key.translation
+                    } for key in language.translations.all()
+                ]
+            }
+        ]
+
+        cache.set(cache_key, translations, 200)
+        return translations
+
 
 class LanguageTranslation(models.Model):
     language = models.ForeignKey(
-        Language, related_name='language', on_delete=models.CASCADE)
+        Language, related_name='translations', on_delete=models.CASCADE)
     key = models.ForeignKey(
         TranslationKey, related_name='key', on_delete=models.CASCADE)
     translation = models.TextField(default=None, blank=True)
+
+    def save(self, *args, **kwargs):
+        cache_key = "translations_{}".format(self.language.slug)
+        cache.delete(cache_key)
+        super(LanguageTranslation, self).save(*args, **kwargs)
 
     def __str__(self):
         return f'{self.language.slug} - {self.key.slug}'
