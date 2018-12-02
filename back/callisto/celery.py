@@ -12,8 +12,4 @@ app.config_from_object('django.conf:settings')
 app.autodiscover_tasks()
 
 app.conf.beat_schedule = {
-    'wallets.create': {
-        'task': 'wallets.create',
-        'schedule': 5
-    }
 }
