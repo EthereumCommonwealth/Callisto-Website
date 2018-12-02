@@ -198,26 +198,7 @@ class HomeAPIView(View):
 class TranslationsView(View):
 
     def get(self, request, *args, **kwargs):
-
-        language_slug = request.GET.get('lang', 'en')
-        language = Language.objects.filter(
-            slug=language_slug)
-        if not language.exists():
-            language = Language.objects.filter(
-                slug='en')
-
-        language = language.first()
-
-        translations = [
-            {
-                'slug': language.slug,
-                'languageName': language.language_name,
-                'keys': [
-                    {
-                        key.key.slug: key.translation
-                    } for key in language.translations.all()
-                ]
-            }
-        ]
+        translations = Language.get_translations(
+            kwargs.get('language', 'en'))
 
         return JsonResponse(status=200, data=translations, safe=False)

@@ -9,5 +9,5 @@ urlpatterns = [
     path('wallets/', WalletsAPIView.as_view()),
     path('exchanges/', ExchangesAPIView.as_view()),
     path('home/', HomeAPIView.as_view()),
-    path('translations/', TranslationsView.as_view())
+    path('translations/<slug:language>/', TranslationsView.as_view())
 ]
