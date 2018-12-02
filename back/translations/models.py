@@ -65,17 +65,15 @@ class Language(models.Model):
 
         language = language.first()
 
-        translations = [
-            {
-                'slug': language.slug,
-                'languageName': language.language_name,
-                'keys': [
-                    {
-                        key.key.slug: key.translation
-                    } for key in language.translations.all()
-                ]
-            }
-        ]
+        translations = {
+            'slug': language.slug,
+            'languageName': language.language_name,
+            'keys': [
+                {
+                    key.key.slug: key.translation
+                } for key in language.translations.all()
+            ]
+        }
 
         cache.set(cache_key, translations, 200)
         return translations
