@@ -10,11 +10,12 @@ class TranslationKey(models.Model):
         return self.slug
 
     def save(self, *args, **kwargs):
-        super(TranslationKey, self).save(*args, **kwargs)
 
         if self.pk:
+            super(TranslationKey, self).save(*args, **kwargs)
             return
 
+        super(TranslationKey, self).save(*args, **kwargs)
         languages = Language.objects.all()
 
         for language in languages:
