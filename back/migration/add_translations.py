@@ -18,11 +18,6 @@ def run():
     default_language = 'en'
     languages = ['de', 'es', 'fr', 'ko', 'ru', 'zh']
 
-    Language.objects.create(
-        slug=default_language,
-        language_name='English'
-    )
-
     translations_en = get_translations(default_language)
 
     for key, translation in translations_en.items():
@@ -30,6 +25,11 @@ def run():
             slug=key,
             default_translation=translation
         )
+
+    Language.objects.create(
+        slug=default_language,
+        language_name='English'
+    )
 
     for lang in languages:
         language = Language.objects.create(
