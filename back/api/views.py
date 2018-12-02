@@ -5,6 +5,7 @@ from team.models import TeamMember
 from mining.models import MiningPool, BlockExplorer
 from wallets.models import WalletPlatform
 from exchanges.models import Exchange
+from translations.models import Language
 
 
 class TeamAPIView(View):
@@ -110,6 +111,9 @@ class HomeAPIView(View):
         cold_staking_wallets = WalletPlatform.objects.filter(
             wallet__cold_staking=True
         )
+        
+        translations = Language.get_translations(
+            request.GET.get('lang', 'en'))
 
         members_list = [
             {
@@ -184,7 +188,17 @@ class HomeAPIView(View):
             'blockExplorers': block_explorers_list,
             'wallets': wallets_list,
             'csWallets': cs_wallets_list,
-            'exchanges': exchanges_list
+            'exchanges': exchanges_list,
+            'translations': translations
         }
 
         return JsonResponse(status=200, data=data, safe=False)
+
+
+class TranslationsView(View):
+
+    def get(self, request, *args, **kwargs):
+        translations = Language.get_translations(
+            kwargs.get('language', 'en'))
+
+        return JsonResponse(status=200, data=translations, safe=False)

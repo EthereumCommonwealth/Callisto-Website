@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'wallets',
     'exchanges',
     'api',
+    'translations',
 ]
 
 MIDDLEWARE = [
@@ -155,3 +156,21 @@ LOGGING = {
         },
     }
 }
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://redis:6379',
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        }
+    }
+}
+
+
+BROKER_URL = 'redis://redis:6379/0'
+CELERY_RESULT_BACKEND = 'redis://redis:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240

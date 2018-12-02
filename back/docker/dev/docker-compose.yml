@@ -28,6 +28,15 @@ services:
           - callisto-postgresql
     volumes:
       - /data/postgres-callisto:/var/lib/postgresql/data
+  redis:
+    image: redis:alpine
+    container_name: redis
+    ports:
+      - "6379:6379" 
+    networks:
+      callisto:
+        aliases:
+          - 'redis'
 networks:
-   callisto:
-     external: true
+  callisto:
+    external: true
