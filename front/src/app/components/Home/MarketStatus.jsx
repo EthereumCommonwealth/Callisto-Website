@@ -7,6 +7,7 @@ import SectionHeading from '../commons/SectionHeading';
 import ExchangeList from './ExchangeList';
 
 class MarketStatus extends PureComponent {
+
   render() {
     const { marketStats } = this.props;
     return (
@@ -71,6 +72,22 @@ class MarketStatus extends PureComponent {
                 </span>
                 <span className='MarketStatus-pricing-element-btcPrice'>
                   {((marketStats.marketCap / marketStats.btcPrice).toFixed(10))} btc
+                </span>
+              </div>
+            </div>
+            <div className='MarketStatus-pricing-element'>
+              <div className='MarketStatus-pricing-element-icon'>
+                <i className='fas fa-chart-line'/>
+              </div>
+              <div className='MarketStatus-pricing-element-details'>
+                <span className='MarketStatus-pricing-element-title'>
+                  <FormattedMessage id='AmmountonStaking' defaultMessage='Ammount on Staking' />
+                </span>
+                <span className='MarketStatus-pricing-element-dollarPrice'>
+                  {marketStats.stakingBalance.toLocaleString()}
+                  <span className='MarketStatus-pricing-element-symbol'>
+                    CLO
+                  </span>
                 </span>
               </div>
             </div>

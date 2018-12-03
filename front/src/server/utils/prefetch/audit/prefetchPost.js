@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Web3 from "web3";
 import blogPosts from '../../../../app/services/blogPosts';
 import coinStats from '../../../../app/services/coinStats';
 import getTranslations from '../../../getTranslations';
@@ -61,7 +62,7 @@ const preparePost = (post, baseImageUrl, posts, tags) => {
 
 const prefetchPost = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats, internalData, audit;
+    let posts, tags, btcStats, cloStats, internalData, audit, balance;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=50');
     } catch (err) {
@@ -83,7 +84,7 @@ const prefetchPost = async (req, res, next) => {
       cloStats = 0;
     }
     try {
-      internalData = await axios.get(`${process.env.API_URL}home/`);
+      internalData = await axios.get(`${process.env.API_URL}home/?lang=${req.params.lang}`);
       internalData = internalData.data;
     } catch (e) {
       internalData = {
@@ -93,6 +94,13 @@ const prefetchPost = async (req, res, next) => {
         wallets: [],
         exchanges: [],
       };
+    }
+    try {
+      const web3 = new Web3(new Web3.providers.HttpProvider("https://clo-geth.0xinfra.com/"));
+      balance = await web3.eth.getBalance("0xd813419749b3c2cdc94a2f9cfcf154113264a9d6");
+      balance = web3.utils.fromWei(balance, 'ether');
+    } catch (e) {
+      balance = 0;
     }
     try {
       audit = await axios.get(`${process.env.AUDIT_URL}audit-request/create/`);
@@ -105,7 +113,7 @@ const prefetchPost = async (req, res, next) => {
     }
     const preparedPosts = posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts;
     const postId = getPost(req.params.slug, preparedPosts);
-    const messages = getTranslations(req.params.lang);
+    const messages = internalData.translations.keys;
     if (postId) {
       const singlePost = await blogPosts.get(`posts/${postId}?_embed`);
       const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
@@ -122,6 +130,7 @@ const prefetchPost = async (req, res, next) => {
           cloPrice: cloStats.data ? cloStats.data.data.quotes.USD.price : 0,
           volume: cloStats.data ? cloStats.data.data.quotes.USD.volume_24h : 0,
           marketCap: cloStats.data ? cloStats.data.data.quotes.USD.market_cap : 0,
+          stakingBalance: parseFloat(balance),
         },
         singlePost: preparePost(singlePost.data, baseImageUrl, posts.data, tags.data),
         faq: [],
