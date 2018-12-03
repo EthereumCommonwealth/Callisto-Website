@@ -79,6 +79,7 @@ const prefetchTopic = async (req, res, next) => {
           cloPrice: cloStats.data ? cloStats.data.data.quotes.USD.price : 0,
           volume: cloStats.data ? cloStats.data.data.quotes.USD.volume_24h : 0,
           marketCap: cloStats.data ? cloStats.data.data.quotes.USD.market_cap : 0,
+          totalSupply: cloStats.data ? cloStats.data.data.total_supply : 0,
           stakingBalance: parseFloat(balance),
         },
         tagPosts: preparePosts(tagPosts.data),
