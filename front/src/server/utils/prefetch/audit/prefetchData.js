@@ -7,7 +7,7 @@ import handleRender from '../../render/website/handleRender';
 
 const prefetchData = async (req, res, next) => {
   try {
-    let posts, btcStats, cloStats, internalData, audit, balance;
+    let posts, btcStats, cloStats, internalData, audit, balance, messages;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=3');
     } catch (err) {
@@ -26,6 +26,7 @@ const prefetchData = async (req, res, next) => {
     try {
       internalData = await axios.get(`${process.env.API_URL}home/?lang=${req.params.lang}`);
       internalData = internalData.data;
+      messages = internalData.translations.keys;
     } catch (e) {
       internalData = {
         teamMembers: [],
@@ -33,6 +34,7 @@ const prefetchData = async (req, res, next) => {
         blockExplorers: [],
         wallets: [],
         exchanges: [],
+        messages: {},
       };
     }
     try {
@@ -51,7 +53,6 @@ const prefetchData = async (req, res, next) => {
         csrf_token: null,
       }
     }
-    const messages = internalData.translations.keys;
     const initialState = {
       teamMembers: internalData.teamMembers,
       miningPools: internalData.miningPools,
