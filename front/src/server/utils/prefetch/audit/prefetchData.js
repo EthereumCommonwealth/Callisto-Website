@@ -25,11 +25,10 @@ const prefetchData = async (req, res, next) => {
       cloStats = 0;
     }
     try {
-      internalData = await axios.get(`${process.env.API_URL}home/?lang=${req.params.lang}`);
+      internalData = await axios.get(`${process.env.API_URL}home/?lang=${req.params.lang || 'en'}`);
       internalData = internalData.data;
       messages = internalData.translations.keys;
     } catch (e) {
-      messages = getTranslations(req.params.lang);
       internalData = {
         teamMembers: [],
         miningPools: [],
