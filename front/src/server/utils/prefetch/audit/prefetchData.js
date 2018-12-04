@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Web3 from "web3";
+import getTranslations from '../../../getTranslations';
 import blogPosts from '../../../../app/services/blogPosts';
 import coinStats from '../../../../app/services/coinStats';
 import preparePosts from './preparePosts';
@@ -28,6 +29,7 @@ const prefetchData = async (req, res, next) => {
       internalData = internalData.data;
       messages = internalData.translations.keys;
     } catch (e) {
+      messages = getTranslations(req.params.lang);
       internalData = {
         teamMembers: [],
         miningPools: [],
