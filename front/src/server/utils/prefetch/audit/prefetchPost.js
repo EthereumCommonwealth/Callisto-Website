@@ -62,7 +62,7 @@ const preparePost = (post, baseImageUrl, posts, tags) => {
 
 const prefetchPost = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats, internalData, audit, balance;
+    let posts, tags, btcStats, cloStats, internalData, audit, balance, messages;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=50');
     } catch (err) {
@@ -86,13 +86,16 @@ const prefetchPost = async (req, res, next) => {
     try {
       internalData = await axios.get(`${process.env.API_URL}home/?lang=${req.params.lang}`);
       internalData = internalData.data;
+      messages = internalData.translations.keys;
     } catch (e) {
+      messages = getTranslations(req.params.lang);
       internalData = {
         teamMembers: [],
         miningPools: [],
         blockExplorers: [],
         wallets: [],
         exchanges: [],
+        messages: {},
       };
     }
     try {
@@ -113,7 +116,6 @@ const prefetchPost = async (req, res, next) => {
     }
     const preparedPosts = posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts;
     const postId = getPost(req.params.slug, preparedPosts);
-    const messages = internalData.translations.keys;
     if (postId) {
       const singlePost = await blogPosts.get(`posts/${postId}?_embed`);
       const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';

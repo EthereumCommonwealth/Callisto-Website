@@ -13,7 +13,7 @@ const getTag = (slug, tags) => {
 
 const prefetchTopic = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats, internalData, audit, balance;
+    let posts, tags, btcStats, cloStats, internalData, audit, balance, messages;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=50');
     } catch (err) {
@@ -37,13 +37,16 @@ const prefetchTopic = async (req, res, next) => {
     try {
       internalData = await axios.get(`${process.env.API_URL}home/?lang=${req.params.lang}`);
       internalData = internalData.data;
+      messages = internalData.translations.keys;
     } catch (e) {
+      messages = getTranslations(req.params.lang);
       internalData = {
         teamMembers: [],
         miningPools: [],
         blockExplorers: [],
         wallets: [],
         exchanges: [],
+        messages: {},
       };
     }
     try {
@@ -63,7 +66,6 @@ const prefetchTopic = async (req, res, next) => {
       }
     }
     const tagId = getTag(req.params.slug, tags.data);
-    const messages = internalData.translations.keys;
     if (tagId) {
       const tagPosts = await blogPosts.get(`posts?tags=${tagId}`);
       const initialState = {

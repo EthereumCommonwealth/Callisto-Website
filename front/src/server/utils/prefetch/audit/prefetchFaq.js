@@ -59,7 +59,7 @@ const getFAQ = async () => {
 
 const prefetchFaq = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats, internalData, audit, balance;
+    let posts, tags, btcStats, cloStats, internalData, audit, balance, messages;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=3');
     } catch (err) {
@@ -83,13 +83,16 @@ const prefetchFaq = async (req, res, next) => {
     try {
       internalData = await axios.get(`${process.env.API_URL}home/?lang=${req.params.lang}`);
       internalData = internalData.data;
+      messages = internalData.translations.keys;
     } catch (e) {
+      messages = getTranslations(req.params.lang);
       internalData = {
         teamMembers: [],
         miningPools: [],
         blockExplorers: [],
         wallets: [],
         exchanges: [],
+        messages: {},
       };
     }
     try {
@@ -109,7 +112,6 @@ const prefetchFaq = async (req, res, next) => {
       }
     }
     const faq = await getFAQ();
-    const messages = internalData.translations.keys;
     const initialState = {
       teamMembers: internalData.teamMembers,
       miningPools: internalData.miningPools,

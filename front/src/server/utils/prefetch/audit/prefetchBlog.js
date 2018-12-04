@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Web3 from "web3";
+import getTranslations from '../../../getTranslations';
 import blogPosts from '../../../../app/services/blogPosts';
 import coinStats from '../../../../app/services/coinStats';
 import handleRender from '../../render/website/handleRender';
@@ -7,7 +8,7 @@ import preparePosts from './preparePosts';
 
 const prefetchBlog = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats, internalData, balance;
+    let posts, tags, btcStats, cloStats, internalData, balance, messages;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=50');
     } catch (err) {
@@ -31,13 +32,16 @@ const prefetchBlog = async (req, res, next) => {
     try {
       internalData = await axios.get(`${process.env.API_URL}home/?lang=${req.params.lang}`);
       internalData = internalData.data;
+      messages = internalData.translations.keys;
     } catch (e) {
+      messages = getTranslations(req.params.lang);
       internalData = {
         teamMembers: [],
         miningPools: [],
         blockExplorers: [],
         wallets: [],
         exchanges: [],
+        messages: {},
       };
     }
     try {
@@ -47,7 +51,6 @@ const prefetchBlog = async (req, res, next) => {
     } catch (e) {
       balance = 0;
     }
-    const messages = internalData.translations.keys;
     const initialState = {
       teamMembers: internalData.teamMembers,
       miningPools: internalData.miningPools,
