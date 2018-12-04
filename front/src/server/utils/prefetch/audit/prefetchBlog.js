@@ -1,13 +1,13 @@
 import axios from 'axios';
+import Web3 from "web3";
 import blogPosts from '../../../../app/services/blogPosts';
 import coinStats from '../../../../app/services/coinStats';
-import getTranslations from '../../../getTranslations';
 import handleRender from '../../render/website/handleRender';
 import preparePosts from './preparePosts';
 
 const prefetchBlog = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats, internalData;
+    let posts, tags, btcStats, cloStats, internalData, balance;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=50');
     } catch (err) {
@@ -29,7 +29,7 @@ const prefetchBlog = async (req, res, next) => {
       cloStats = 0;
     }
     try {
-      internalData = await axios.get(`${process.env.API_URL}home/`);
+      internalData = await axios.get(`${process.env.API_URL}home/?lang=${req.params.lang}`);
       internalData = internalData.data;
     } catch (e) {
       internalData = {
@@ -40,7 +40,14 @@ const prefetchBlog = async (req, res, next) => {
         exchanges: [],
       };
     }
-    const messages = getTranslations(req.params.lang);
+    try {
+      const web3 = new Web3(new Web3.providers.HttpProvider("https://clo-geth.0xinfra.com/"));
+      balance = await web3.eth.getBalance("0xd813419749b3c2cdc94a2f9cfcf154113264a9d6");
+      balance = web3.utils.fromWei(balance, 'ether');
+    } catch (e) {
+      balance = 0;
+    }
+    const messages = internalData.translations.keys;
     const initialState = {
       teamMembers: internalData.teamMembers,
       miningPools: internalData.miningPools,
@@ -54,6 +61,8 @@ const prefetchBlog = async (req, res, next) => {
         cloPrice: cloStats.data ? cloStats.data.data.quotes.USD.price : 0,
         volume: cloStats.data ? cloStats.data.data.quotes.USD.volume_24h : 0,
         marketCap: cloStats.data ? cloStats.data.data.quotes.USD.market_cap : 0,
+        totalSupply: cloStats.data ? cloStats.data.data.total_supply : 0,
+        stakingBalance: parseFloat(balance),
       },
       tagPosts: [],
       faq: [],

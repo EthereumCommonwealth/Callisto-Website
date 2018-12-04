@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import SectionHeading from '../commons/SectionHeading';
 
@@ -9,7 +11,7 @@ class StakingInvestments extends Component {
   }
 
   state = {
-    percent: 50,
+    percent: ((this.props.marketStats.stakingBalance * 100) / this.props.marketStats.totalSupply).toFixed(2),
     stakingDeposit: 10000,
   };
 
@@ -81,9 +83,6 @@ class StakingInvestments extends Component {
                 value={stakingDeposit}
                 min={1}
               />
-              {/* <a className='btn btn-green'>
-                <FormattedMessage id='Calculate' />
-              </a> */}
             </div>
             <div className='StakingInvestments-table'>
               <div className='StakingInvestments-table-row is-head'>
@@ -103,13 +102,13 @@ class StakingInvestments extends Component {
                   <FormattedMessage id='FirstMonth' />
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {this.calculateStaking(66481560, 1, 929440000)}
+                  {this.calculateStaking(66481560, 1, this.props.marketStats.totalSupply)}
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {this.calculateStaking(66481560, 1, 929440000)}
+                  {this.calculateStaking(66481560, 1, this.props.marketStats.totalSupply)}
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {((this.calculateStaking(66481560, 1, 929440000) * 100) / stakingDeposit).toFixed(2)}%
+                  {((this.calculateStaking(66481560, 1, this.props.marketStats.totalSupply) * 100) / stakingDeposit).toFixed(2)}%
                 </div>
               </div>
               <div className='StakingInvestments-table-row'>
@@ -166,4 +165,14 @@ class StakingInvestments extends Component {
   }
 }
 
-export default injectIntl(StakingInvestments);
+function mapStateTopProps(state) {
+  return {
+    marketStats: state.marketStats,
+  };
+}
+
+StakingInvestments.propTypes = {
+  marketStats: PropTypes.object,
+};
+
+export default injectIntl(connect(mapStateTopProps)(StakingInvestments));
