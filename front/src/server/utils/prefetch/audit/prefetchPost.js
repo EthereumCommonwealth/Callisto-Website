@@ -93,7 +93,18 @@ const prefetchPost = async (req, res, next) => {
         blockExplorers: [],
         wallets: [],
         exchanges: [],
-        messages: {},
+        messages: {
+          homeTitle: '',
+          homeDescription: '',
+          stakingTitle: '',
+          stakingDescription: '',
+          contractsTitle: '',
+          contractsDescription: '',
+          financialTitle: '',
+          financialDescription: '',
+          airdropTitle: '',
+          airdropDescription: '',
+        },
       };
     }
     try {
