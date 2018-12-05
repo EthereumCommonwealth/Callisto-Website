@@ -30,27 +30,18 @@ const prefetchBlog = async (req, res, next) => {
       cloStats = 0;
     }
     try {
-      internalData = await axios.get(`${process.env.API_URL}home/`);
-      messages = getTranslations(req.params.lang);
+      internalData = await axios.get(`${process.env.API_URL}home/?lang=${req.params.lang || 'en'}`);
+      internalData = internalData.data;
+      messages = internalData.translations.keys;
     } catch (e) {
+      messages = getTranslations(req.params.lang);
       internalData = {
         teamMembers: [],
         miningPools: [],
         blockExplorers: [],
         wallets: [],
         exchanges: [],
-        messages: {
-          homeTitle: '',
-          homeDescription: '',
-          stakingTitle: '',
-          stakingDescription: '',
-          contractsTitle: '',
-          contractsDescription: '',
-          financialTitle: '',
-          financialDescription: '',
-          airdropTitle: '',
-          airdropDescription: '',
-        },
+        messages: {},
       };
     }
     try {

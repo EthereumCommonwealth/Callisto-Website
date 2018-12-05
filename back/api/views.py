@@ -112,8 +112,8 @@ class HomeAPIView(View):
             wallet__cold_staking=True
         )
         
-        # translations = Language.get_translations(
-        #     request.GET.get('lang', 'en'))
+        translations = Language.get_translations(
+            request.GET.get('lang', 'en'))
 
         members_list = [
             {
