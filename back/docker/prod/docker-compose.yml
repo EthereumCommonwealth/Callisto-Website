@@ -19,8 +19,6 @@ services:
       - callisto
   callisto-postgresql:
     image: postgres:10.4
-    ports:
-      - "5432:5432"
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -35,8 +33,6 @@ services:
   redis:
     image: redis:alpine
     container_name: redis
-    ports:
-      - "6379:6379" 
     networks:
       callisto:
         aliases:
