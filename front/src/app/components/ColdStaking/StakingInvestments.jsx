@@ -102,13 +102,13 @@ class StakingInvestments extends Component {
                   <FormattedMessage id='FirstMonth' />
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {this.calculateStaking(66481560, 1, this.props.marketStats.totalSupply)}
+                  {this.calculateStaking(35984520, 1, this.props.marketStats.totalSupply)}
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {this.calculateStaking(66481560, 1, this.props.marketStats.totalSupply)}
+                  {this.calculateStaking(35984520, 1, this.props.marketStats.totalSupply)}
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {((this.calculateStaking(66481560, 1, this.props.marketStats.totalSupply) * 100) / stakingDeposit).toFixed(2)}%
+                  {((this.calculateStaking(35984520, 1, this.props.marketStats.totalSupply) * 100) / stakingDeposit).toFixed(2)}%
                 </div>
               </div>
               <div className='StakingInvestments-table-row'>
@@ -130,13 +130,13 @@ class StakingInvestments extends Component {
                   <FormattedMessage id='ThirdMonth' />
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {this.calculateStaking(35984520, 1, 1136800000)}
+                  {this.calculateStaking(20736000, 1, 1136800000)}
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {this.calculateStaking(35984520, 3, 1136800000)}
+                  {this.calculateStaking(20736000, 3, 1136800000)}
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {((this.calculateStaking(35984520, 3, 1136800000) * 100) / stakingDeposit).toFixed(2)}%
+                  {((this.calculateStaking(20736000, 3, 1136800000) * 100) / stakingDeposit).toFixed(2)}%
                 </div>
               </div>
               <div className='StakingInvestments-table-row'>
