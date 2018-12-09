@@ -62,7 +62,7 @@ const preparePost = (post, baseImageUrl, posts, tags) => {
 
 const prefetchPost = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats, internalData, audit, balance, messages;
+    let posts, tags, btcStats, cloStats, internalData, audit, balance, messages, totalSupply;
     try {
       posts = await blogPosts.get('posts?_embed&per_page=50');
     } catch (err) {
@@ -106,6 +106,12 @@ const prefetchPost = async (req, res, next) => {
       balance = 0;
     }
     try {
+      totalSupply = await axios.get('https://explorer2.callisto.network/total');
+      totalSupply = totalSupply.data;
+    } catch (e) {
+      totalSupply = 0
+    }
+    try {
       audit = await axios.get(`${process.env.AUDIT_URL}audit-request/create/`);
       audit = audit.data;
     } catch (e) {
@@ -132,7 +138,7 @@ const prefetchPost = async (req, res, next) => {
           cloPrice: cloStats.data ? cloStats.data.data.quotes.USD.price : 0,
           volume: cloStats.data ? cloStats.data.data.quotes.USD.volume_24h : 0,
           marketCap: cloStats.data ? cloStats.data.data.quotes.USD.market_cap : 0,
-          totalSupply: cloStats.data ? cloStats.data.data.total_supply : 0,
+          totalSupply: totalSupply,
           stakingBalance: parseFloat(balance),
         },
         singlePost: preparePost(singlePost.data, baseImageUrl, posts.data, tags.data),
