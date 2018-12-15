@@ -3,7 +3,7 @@ from django.db import models
 
 
 class TranslationKey(models.Model):
-    slug = models.SlugField(max_length=50)
+    slug = models.CharField(max_length=50)
     default_translation = models.TextField()
 
     def __str__(self):
@@ -24,6 +24,8 @@ class TranslationKey(models.Model):
                 language=language,
                 translation=self.default_translation
             )
+            cache_key = "translations_{}".format(language.slug)
+            cache.delete(cache_key)
 
 
 class Language(models.Model):
