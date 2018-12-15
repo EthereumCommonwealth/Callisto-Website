@@ -57,8 +57,18 @@ const Roadmap = ({ intl }) => (
         <RoadmapElement
           title='Q1 2019'
           items={[
-            { name: intl.formatMessage({ id: 'Q12019.1' }) },
-            { name: intl.formatMessage({ id: 'Q12019.2' }) },
+            { name: intl.formatMessage({ id: 'Q12019.1', defaultMessage: 'Analyze constantinople behavior for further implementation on Callisto Network Blockchain HardFork #1' }) },
+            { name: intl.formatMessage({ id: 'Q12019.2', defaultMessage: 'Start researching a new monetary policy' }) },
+            { name: intl.formatMessage({ id: 'Q12019.3', defaultMessage: 'Continue looking for a satisfactory IPFS to implement on Callisto Network' }) },
+          ]}
+        />
+        <RoadmapElement
+          title='Q2 2019'
+          items={[
+            { name: intl.formatMessage({ id: 'Q22019.1', defaultMessage: 'Reward program will be implemented for tech writers who will write about Callisto and its technology. The rewards will depend on the quality and effort of the freelance writers. The posts - tutorials - opinions - and whatever we  think will be good enough will be posted on the Callisto official forum. The best ones will be also posted on the Callisto official channels. A reward table will be implemented and Callisto will create a team that will check, verify and qualify the job and determine what will the reward be if the post accomplishes quality level.' }) },
+            { name: intl.formatMessage({ id: 'Q22019.2', defaultMessage: 'Start running Web assembly on Clo test-net for further implementation.' }) },
+            { name: intl.formatMessage({ id: 'Q22019.3', defaultMessage: 'We will be looking forward to increasing and improving our community with PR. For this matter, we will get Advisors on board who will let the world know about CLO.' }) },
+            { name: intl.formatMessage({ id: 'Q22019.4', defaultMessage: '19/05 - Planned HardFork 2019  #1' }) },
           ]}
         />
         <div className='Roadmap-content-list-future'>
