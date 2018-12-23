@@ -154,23 +154,11 @@ class HomeAPIView(View):
                 'options': [
                     {
                         'name': wallet.name,
-                        'url': wallet.url
+                        'url': wallet.url,
+                        'cs': wallet.cold_staking
                     } for wallet in wallet_platform.wallet_set.all().order_by('id')
                 ]
             } for wallet_platform in wallets
-        ]
-
-        cs_wallets_list = [
-            {
-                'title': wallet.name,
-                'icon': f'/{wallet.icon.name}',
-                'options': [
-                    {
-                        'name': wallet.name,
-                        'url': wallet.url
-                    } for wallet in wallet.wallet_set.filter(cold_staking=True)
-                ]
-            } for wallet in cold_staking_wallets
         ]
 
         exchanges_list = [
@@ -187,7 +175,6 @@ class HomeAPIView(View):
             'miningPools': mining_pools_list,
             'blockExplorers': block_explorers_list,
             'wallets': wallets_list,
-            'csWallets': cs_wallets_list,
             'exchanges': exchanges_list,
             'translations': translations
         }
