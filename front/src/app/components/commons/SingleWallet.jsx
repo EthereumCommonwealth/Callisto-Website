@@ -18,7 +18,7 @@ const SingleWallet = ({ icon, title, options }) => (
             href={wallet.url}
             target='_blank'
           >
-            {wallet.name}
+            {wallet.name} {wallet.cs ? '*' : null}
           </a>
         );
       })}

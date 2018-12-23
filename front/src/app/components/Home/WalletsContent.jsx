@@ -22,6 +22,9 @@ const WalletsContent = ({ intl, wallets }) => (
           />
         )) : null}
       </div>
+      <div className='WalletsContent-advice'>
+          (*) Supports Cold Staking
+      </div>
     </div>
   </Element>
 );
