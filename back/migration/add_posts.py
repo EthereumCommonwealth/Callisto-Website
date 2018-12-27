@@ -5,6 +5,7 @@ from blog.models import Post, Tag, PostTag
 def run():
     response = requests.get('https://news.callisto.network/wp-json/wp/v2/posts?_embed&per_page=50')
 
+    # Create the posts
     for post in response.json():
         local_post = Post.objects.create(
             post_id=post['id'],
@@ -26,4 +27,17 @@ def run():
                 post=local_post,
                 tag=local_tag
             )
+
+    # Creates the related posts
+    for post in response.json():
+
+        local_post = Post.objects.filter(
+            post_id=post['id']
+        ).first()
+
+        for related_posts in post['jetpack-related-posts']:
+            related_post = Post.objects.filter(
+                post_id=related_posts['id']
+            ).first()
+            related_post.related_posts.add(local_post)
 
