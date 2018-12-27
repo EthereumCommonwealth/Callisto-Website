@@ -6,6 +6,7 @@ from mining.models import MiningPool, BlockExplorer
 from wallets.models import WalletPlatform
 from exchanges.models import Exchange
 from translations.models import Language
+from blog.models import Tag, Post
 
 
 class TeamAPIView(View):
@@ -25,7 +26,7 @@ class TeamAPIView(View):
                             'prefix': network.network.icon,
                             'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
                         } for network in member.membersocialnetwork_set.filter(
-                        active=True)
+                            active=True)
                     ]
 
             } for member in members
@@ -111,9 +112,22 @@ class HomeAPIView(View):
         cold_staking_wallets = WalletPlatform.objects.filter(
             wallet__cold_staking=True
         )
-        
+        recent_posts = Post.objects.order_by('-date')[:3]
+
         translations = Language.get_translations(
             request.GET.get('lang', 'en'))
+
+        recent_posts_list = [
+            {
+                'id': post.post_id,
+                'title': post.title,
+                'description': post.description,
+                'date': post.date,
+                'link': post.link,
+                'slug': post.slug,
+                'cover': post.cover
+            } for post in recent_posts
+        ]
 
         members_list = [
             {
@@ -127,7 +141,7 @@ class HomeAPIView(View):
                             'prefix': network.network.icon,
                             'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
                         } for network in member.membersocialnetwork_set.filter(
-                        active=True)
+                            active=True)
                     ]
 
             } for member in members
@@ -176,7 +190,8 @@ class HomeAPIView(View):
             'blockExplorers': block_explorers_list,
             'wallets': wallets_list,
             'exchanges': exchanges_list,
-            'translations': translations
+            'translations': translations,
+            'recentPosts': recent_posts_list,
         }
 
         return JsonResponse(status=200, data=data, safe=False)
@@ -189,3 +204,82 @@ class TranslationsView(View):
             kwargs.get('language', 'en'))
 
         return JsonResponse(status=200, data=translations, safe=False)
+
+
+class TagsView(View):
+
+    def get(self, request, *args, **kwargs):
+        tags = Tag.objects.all()
+
+        tags_list = [
+            {
+                'number': tag.number,
+                'slug': tag.slug,
+                'name': tag.name,
+            } for tag in tags
+        ]
+
+        return JsonResponse(status=200, data=tags_list, safe=False)
+
+
+class RecentPosts(View):
+
+    def get(self, request, *args, **kwargs):
+        recent_posts = Post.objects.order_by('-date')[:3]
+
+        recent_posts_list = [
+            {
+                'id': post.post_id,
+                'title': post.title,
+                'description': post.description,
+                'date': post.date,
+                'link': post.link,
+                'slug': post.slug,
+                'cover': post.cover
+            } for post in recent_posts
+        ]
+
+        return JsonResponse(status=200, data=recent_posts_list, safe=False)
+
+
+class PostDetail(View):
+    def get(self, request, *args, **kwargs):
+        import ipdb; ipdb.set_trace()
+        post_slug = kwargs['post_slug']
+        post = Post.objects.filter(slug=post_slug).first()
+
+        if not post:
+            return JsonResponse(status=404,
+                data={'error': 'Not found'}, safe=False)
+
+        post_formated = {
+            'id': post.post_id,
+            'title': post.title,
+            'description': post.description,
+            'content': post.content,
+            'date': post.date,
+            'link': post.link,
+            'slug': post.slug,
+            'cover': post.cover,
+            'relatedPosts': [
+                {
+                    'id': related_post.post_id,
+                    'title': related_post.title,
+                    'description': related_post.description,
+                    'date': related_post.date,
+                    'link': related_post.link,
+                    'slug': related_post.slug,
+                    'cover': related_post.cover
+                } for related_post in post.related_posts.all()
+            ],
+            'tags': [
+                {
+                    'number': tag.tag.number,
+                    'name': tag.tag.name,
+                    'slug': tag.tag.slug
+                } for tag in post.tags.all()
+            ]
+        }
+
+        return JsonResponse(status=200, data=post_formated, safe=False)
+        

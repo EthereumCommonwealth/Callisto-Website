@@ -39,5 +39,5 @@ def run():
             related_post = Post.objects.filter(
                 post_id=related_posts['id']
             ).first()
-            related_post.related_posts.add(local_post)
+            local_post.related_posts.add(related_post)
 

@@ -21,7 +21,8 @@ class Post(models.Model):
     cover = models.URLField(max_length=200)
     tags = models.ManyToManyField(Tag, through='PostTag')
     author = models.CharField(max_length=255)
-    realated_posts = models.ManyToManyField("self", related_name='related_posts', symmetrical=False)
+    realated_posts = models.ManyToManyField("self",
+        related_name='related_posts', symmetrical=False)
 
     def __str__(self):
         return self.title
