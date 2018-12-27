@@ -206,7 +206,7 @@ class TranslationsView(View):
         return JsonResponse(status=200, data=translations, safe=False)
 
 
-class TagsView(View):
+class TagsListView(View):
 
     def get(self, request, *args, **kwargs):
         tags = Tag.objects.all()
@@ -222,8 +222,37 @@ class TagsView(View):
         return JsonResponse(status=200, data=tags_list, safe=False)
 
 
-class RecentPosts(View):
+class TagsDetailView(View):
+    def get(self, request, *args, **kwargs):
+        tag_slug = kwargs['tag_slug']
+        tag = Tag.objects.filter(slug=tag_slug).first()
 
+        if not tag:
+            return JsonResponse(status=404,
+                data={'error': 'Not found'}, safe=False)
+
+        related_posts = Post.objects.filter(tags__in=[tag.id])
+
+        tag_response = {
+            'number': tag.number,
+            'slug': tag.slug,
+            'name': tag.name,
+            'relatedPosts': [
+                {
+                    'id': post.post_id,
+                    'title': post.title,
+                    'description': post.description,
+                    'date': post.date,
+                    'link': post.link,
+                    'slug': post.slug,
+                    'cover': post.cover
+                } for post in related_posts
+            ]
+        }
+
+        return JsonResponse(status=200, data=tag_response, safe=False)
+
+class RecentPosts(View):
     def get(self, request, *args, **kwargs):
         recent_posts = Post.objects.order_by('-date')[:3]
 
@@ -242,7 +271,7 @@ class RecentPosts(View):
         return JsonResponse(status=200, data=recent_posts_list, safe=False)
 
 
-class PostDetail(View):
+class PostDetailView(View):
     def get(self, request, *args, **kwargs):
         import ipdb; ipdb.set_trace()
         post_slug = kwargs['post_slug']
@@ -283,3 +312,24 @@ class PostDetail(View):
 
         return JsonResponse(status=200, data=post_formated, safe=False)
         
+
+class PostListView(View):
+    def get(self, request, *args, **kwargs):
+        posts = Post.objects.all()
+
+        posts_list = [
+            {
+                'id': post.post_id,
+                'title': post.title,
+                'description': post.description,
+                'date': post.date,
+                'link': post.link,
+                'slug': post.slug,
+                'cover': post.cover
+            } for post in posts
+        ]
+
+        return JsonResponse(status=200, data=posts_list, safe=False)
+
+
+
