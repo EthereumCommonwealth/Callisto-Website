@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'exchanges',
     'api',
     'translations',
+    'blog',
 ]
 
 MIDDLEWARE = [
