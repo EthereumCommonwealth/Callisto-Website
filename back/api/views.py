@@ -7,6 +7,9 @@ from wallets.models import WalletPlatform
 from exchanges.models import Exchange
 from translations.models import Language
 from blog.models import Tag, Post
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
+
 
 
 class TeamAPIView(View):
@@ -330,6 +333,3 @@ class PostListView(View):
         ]
 
         return JsonResponse(status=200, data=posts_list, safe=False)
-
-
-
