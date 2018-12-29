@@ -13,6 +13,7 @@ from .tasks import create_local_post
 class PostWebhookView(View):
     def post(self, request, *args, **kwargs):
         post = json.loads(request.body.decode('utf-8'))
+        
         create_local_post(post['ID'])
 
         return JsonResponse(status=200, data=[], safe=False)
