@@ -2,7 +2,7 @@ import requests
 from celery import shared_task
 from dateutil import parser
 
-from .models import Post, Tag
+from .models import Post, Tag, PostTag
 
 
 @shared_task
@@ -34,6 +34,13 @@ def create_local_post(post_id):
         local_post.author = post['_embedded']['author'][0]['name']
 
         local_post.save()
+
+        for tag in post['tags']:
+            local_tag = Tag.objects.get(number=tag)
+            PostTag.objects.create(
+                post=local_post,
+                tag=local_tag
+            )
 
         for related_posts in post['jetpack-related-posts']:
             related_post = Post.objects.filter(
