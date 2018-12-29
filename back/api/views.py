@@ -11,7 +11,6 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 
 
-
 class TeamAPIView(View):
     def get(self, request, *args, **kwargs):
 
@@ -232,7 +231,7 @@ class TagsDetailView(View):
 
         if not tag:
             return JsonResponse(status=404,
-                data={'error': 'Not found'}, safe=False)
+                                data={'error': 'Not found'}, safe=False)
 
         related_posts = Post.objects.filter(tags__in=[tag.id])
 
@@ -255,6 +254,7 @@ class TagsDetailView(View):
 
         return JsonResponse(status=200, data=tag_response, safe=False)
 
+
 class RecentPosts(View):
     def get(self, request, *args, **kwargs):
         recent_posts = Post.objects.order_by('-date')[:3]
@@ -276,13 +276,12 @@ class RecentPosts(View):
 
 class PostDetailView(View):
     def get(self, request, *args, **kwargs):
-        import ipdb; ipdb.set_trace()
         post_slug = kwargs['post_slug']
         post = Post.objects.filter(slug=post_slug).first()
 
         if not post:
             return JsonResponse(status=404,
-                data={'error': 'Not found'}, safe=False)
+                                data={'error': 'Not found'}, safe=False)
 
         post_formated = {
             'id': post.post_id,
@@ -314,7 +313,7 @@ class PostDetailView(View):
         }
 
         return JsonResponse(status=200, data=post_formated, safe=False)
-        
+
 
 class PostListView(View):
     def get(self, request, *args, **kwargs):
