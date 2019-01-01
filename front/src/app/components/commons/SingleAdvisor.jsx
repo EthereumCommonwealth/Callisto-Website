@@ -32,7 +32,6 @@ const SingleAdvisor = ({ name, position, socialNetworks, avatar }) => (
 SingleAdvisor.propTypes = {
   name: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
-  bio: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
 };
 
