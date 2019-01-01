@@ -5,7 +5,7 @@ import SectionHeading from '../commons/SectionHeading';
 import SingleAdvisor from '../commons/SingleAdvisor';
 
 const Advisors = ({ intl }) => (
-  <Element name='team' className='Advisors'>
+  <Element name='advisors' className='Advisors'>
     <div className='Advisors-content container'>
       <SectionHeading
         title={intl.formatMessage({ id: 'AdvisorsTitle', defaultMessage: 'Advisors' })}
