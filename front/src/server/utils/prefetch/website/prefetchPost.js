@@ -1,9 +1,6 @@
-import axios from 'axios';
-import Web3 from "web3";
-import blogPosts from '../../../../app/services/blogPosts';
-import coinStats from '../../../../app/services/coinStats';
-import getTranslations from '../../../getTranslations';
-import preparePosts from './preparePosts';
+import api from './utils/api';
+import preparePosts from './utils/preparePosts';
+import prepareMarket from './utils/prepareMarket';
 import handleRender from '../../render/website/handleRender';
 
 const getSlug = (id, posts) => {
@@ -62,68 +59,21 @@ const preparePost = (post, baseImageUrl, posts, tags) => {
 
 const prefetchPost = async (req, res, next) => {
   try {
-    let posts, tags, btcStats, cloStats, internalData, audit, balance, messages, totalSupply;
-    try {
-      posts = await blogPosts.get('posts?_embed&per_page=50');
-    } catch (err) {
-      posts = [];
-    }
-    try {
-      tags = await blogPosts.get('tags');
-    } catch (err) {
-      tags = [];
-    }
-    try {
-      btcStats = await coinStats.get('ticker/1/');
-    } catch (e) {
-      btcStats = 0;
-    }
-    try {
-      cloStats = await coinStats.get('ticker/2757/');
-    } catch (e) {
-      cloStats = 0;
-    }
-    try {
-      internalData = await axios.get(`${process.env.API_URL}home/?lang=${req.params.lang || 'en'}`);
-      internalData = internalData.data;
-      messages = internalData.translations.keys;
-    } catch (e) {
-      messages = getTranslations(req.params.lang);
-      internalData = {
-        teamMembers: [],
-        miningPools: [],
-        blockExplorers: [],
-        wallets: [],
-        exchanges: [],
-        messages: {},
-      };
-    }
-    try {
-      const web3 = new Web3(new Web3.providers.HttpProvider("https://clo-geth.0xinfra.com/"));
-      balance = await web3.eth.getBalance("0xd813419749b3c2cdc94a2f9cfcf154113264a9d6");
-      balance = web3.utils.fromWei(balance, 'ether');
-    } catch (e) {
-      balance = 0;
-    }
-    try {
-      totalSupply = await axios.get('https://explorer2.callisto.network/total');
-      totalSupply = totalSupply.data;
-    } catch (e) {
-      totalSupply = 0
-    }
-    try {
-      audit = await axios.get(`${process.env.AUDIT_URL}audit-request/create/`);
-      audit = audit.data;
-    } catch (e) {
-      audit = {
-        platform: [],
-        csrf_token: null,
-      }
-    }
+    const posts = await api.blog.getPosts(50);
+    const btcStats = await api.market.getTicker(1);
+    const cloStats = await api.market.getTicker(2757);
+    const homeData = await api.website.getHome(req.params.lang)
+    const balance = await api.market.getBalance();
+    const totalSupply = await api.market.getTotalSuply();
+    const audit = await api.audit.getAudits();
+    const tags = await api.blog.getTags();
+    const internalData = homeData.internalData;
+    const messages = homeData.messages;
     const preparedPosts = posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts;
     const postId = getPost(req.params.slug, preparedPosts);
+
     if (postId) {
-      const singlePost = await blogPosts.get(`posts/${postId}?_embed`);
+      const singlePost = await api.blog.getSinglePost(postId);
       const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
       const initialState = {
         teamMembers: internalData.teamMembers,
@@ -133,14 +83,7 @@ const prefetchPost = async (req, res, next) => {
         exchanges: internalData.exchanges,
         blogPosts: preparedPosts,
         blogTags: tags.data && tags.data.length > 0 ? tags.data : tags,
-        marketStats: {
-          btcPrice: btcStats.data ? btcStats.data.data.quotes.USD.price : 0,
-          cloPrice: cloStats.data ? cloStats.data.data.quotes.USD.price : 0,
-          volume: cloStats.data ? cloStats.data.data.quotes.USD.volume_24h : 0,
-          marketCap: cloStats.data ? cloStats.data.data.quotes.USD.market_cap : 0,
-          totalSupply: totalSupply,
-          stakingBalance: parseFloat(balance),
-        },
+        marketStats: prepareMarket(btcStats, cloStats, totalSupply, balance),
         singlePost: preparePost(singlePost.data, baseImageUrl, posts.data, tags.data),
         faq: [],
         tagPosts: [],
@@ -157,7 +100,7 @@ const prefetchPost = async (req, res, next) => {
       }
       handleRender(req, res, initialState, blogMessages, 'blog')
     } else {
-      res.redirect('/not-found');
+      res.redirect('/not-found/');
     }
   } catch (err) {
     next(err);

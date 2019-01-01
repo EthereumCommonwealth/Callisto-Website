@@ -1,5 +1,5 @@
-const preparePosts = (posts) => {
-  const elements = posts.map((elem) => {
+const preparePosts = posts => {
+  const elements = posts.map(elem => {
     const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
     return {
       id: elem.id,
