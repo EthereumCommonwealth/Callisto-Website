@@ -18,7 +18,7 @@ const Advisors = ({ intl }) => (
           socialNetworks={[
             {
               prefix: 'fab fa-twitter',
-              url: 'twitter.com/Shirastweet',
+              url: 'https://twitter.com/Shirastweet',
             },
             {
               prefix: 'fab fa-linkedin-in',
