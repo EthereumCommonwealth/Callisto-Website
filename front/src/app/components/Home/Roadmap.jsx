@@ -53,6 +53,7 @@ const Roadmap = ({ intl }) => (
             { name: intl.formatMessage({ id: 'Q42018.2' }) },
             { name: intl.formatMessage({ id: 'Q42018.3' }) },
           ]}
+          happened
         />
         <RoadmapElement
           title='Q1 2019'
