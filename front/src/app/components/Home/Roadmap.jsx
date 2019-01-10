@@ -50,7 +50,6 @@ const Roadmap = ({ intl }) => (
           title='Q4 2018'
           items={[
             { name: intl.formatMessage({ id: 'Q42018.1' }) },
-            { name: intl.formatMessage({ id: 'Q42018.3' }) },
           ]}
           happened
         />
