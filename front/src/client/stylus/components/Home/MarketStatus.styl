@@ -14,15 +14,23 @@
     display grid
     justify-items center
     margin-top 25px
+    padding-left 2em
+    +from-width($sm)
+      padding-left 9em
     +from-width($md)
       margin-top 50px
       grid-template-columns 1fr 1fr
       grid-gap 1rem
+      padding-left 0
       justify-items flex-start
     &-element
       display grid
-      grid-template-columns 1fr 4fr
+      grid-template-columns 35px 5fr
       grid-gap .5em
+      justify-self flex-start
+      +from-width($md)
+        justify-self unset
+        grid-template-columns 100px 4fr
       &-icon
         justify-self center
         align-self center
