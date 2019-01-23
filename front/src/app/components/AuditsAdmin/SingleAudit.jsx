@@ -31,7 +31,7 @@ class SingleAudit extends PureComponent {
 
   render() {
     const { title, description, sourceCodeUrl, disclosurePolicy,
-      platform, statusName, createdAt, statusHistory } = this.props.auditDetail;
+      platform, statusName, createdAt, statusHistory, finalReport } = this.props.auditDetail;
     const { user } = this.props;
 
     return (
@@ -63,6 +63,13 @@ class SingleAudit extends PureComponent {
               <strong>Platform: </strong> <span>{platform}</span>
             </div>
           </div>
+          {finalReport !== '' ?
+            (
+              <div>
+                <a href={finalReport} className='SingleAudit-submit-comment' download>Download your report here.</a>
+              </div>
+            ) : null
+          }
           <div className='SingleAudit-history'>
             <h2 className='SingleAudit-history-title'>Audit status history</h2>
             <div className='SingleAudit-history-elements'>
