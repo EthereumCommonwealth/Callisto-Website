@@ -19,7 +19,7 @@ const createAudit = (req, res) => {
       platform: req.body.platform,
     },
   })
-    .then( response => res.status(200).send({ succes: true }))
+    .then(() => res.status(200).send({ succes: true }))
     .catch(err => {
       console.log('Error', err);
       res.status(404);
