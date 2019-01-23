@@ -19,7 +19,7 @@ class SingleAudit extends PureComponent {
 
   handleSubmit = event => {
     event.preventDefault();
-    axios.post('/comment-submit/', {
+    axios.post('/clo-audit/audit-request/comment-audit/', {
       csrf_token: this.props.csrftoken,
       jwt: auth.token(),
       commentDetails: {
