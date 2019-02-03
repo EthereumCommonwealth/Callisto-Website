@@ -19,6 +19,7 @@
 
 // Home Page
 @import './components/Home/Hero.styl'
+@import './components/Home/NewHero.styl'
 @import './components/Home/InfoContent.styl'
 @import './components/Home/Roadmap.styl'
 @import './components/Home/WalletsContent.styl'
@@ -112,3 +113,19 @@
     font-size 24px
     a
       color $green
+
+.Home
+  .ExchangeList
+    margin-top 0
+    &-main
+      background $green
+      padding 2rem 0
+    &-text
+      font-size 24px
+      margin 0
+      text-align center
+      +from-width($sm)
+        font-size 36px
+        font-weight 500
+        line-height 1.05
+        color $dark-blue

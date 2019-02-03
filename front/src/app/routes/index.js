@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from '../containers/Home';
+import About from '../containers/About';
 import ColdStaking from '../containers/ColdStaking';
 import SmartContract from '../containers/SmartContract';
 import FinantialReport from '../containers/FinantialReport';
@@ -20,6 +21,7 @@ const Routes = (
   <BrowserRouter>
     <Switch>
       <Route exact path='/' component={Home} />
+      <Route exact path='/about/' component={About} />
       <Route exact path='/faq/' component={Faq} />
       {/* <Route exact path='/buy/' component={Buy} /> */}
       <Route exact path='/blog/' component={Blog} />
@@ -31,6 +33,7 @@ const Routes = (
       <Route exact path='/financial-report/' component={FinantialReport} />
       <Route exact path='/community-guidelines/' component={CommunityGuidlines} />
       <Route exact path={`/:lang${langs}/`} component={Home} />
+      <Route exact path={`/:lang${langs}/about/`} component={About} />
       <Route exact path={`/:lang${langs}/faq/`} component={Faq} />
       {/* <Route exact path={`/:lang${langs}/buy/`} component={Buy} /> */}
       <Route exact path={`/:lang${langs}/blog/`} component={Blog} />

@@ -1,0 +1,84 @@
+.NewHero
+  background #e9f7ff
+  padding 100px 0 25px 0
+  +from-width($sm)
+    padding 120px 0 45px 0
+  +from-width($md)
+    padding 130px 0 60px 0
+  +from-width($xxl)
+    padding 120px 0 120px 0
+  +from-width($xxxl)
+    padding 140px 0 100px 0
+  &-btns
+    display grid
+    grid-gap 1em
+    +from-width($sm)
+      grid-template-columns 1fr 1fr 1fr
+      justify-items center
+      align-items center
+      font-size 14px
+  &-content
+    display grid
+    +from-width($sm)
+      grid-template-columns 2.2fr 2fr
+    &-left
+      &-title
+        margin 0
+        font-size 22px
+        font-family $primary-font
+        color $dark-blue
+        +from-width($md)
+          font-size 44px
+      &-description
+        margin-top 20px
+        margin-bottom 20px
+        line-height 1.65
+        color $dark-gray
+        font-size 15px
+        +from-width($sm)
+          margin-top 41px
+          margin-bottom 34px
+    &-right
+      display block
+      position relative
+      justify-self center
+  &-details
+    box-sizing border-box
+    text-align center
+    max-width 100%
+    &-title
+      text-align left
+      margin 0
+      font-size 26px
+      font-weight 500
+      line-height 1.41
+      font-family $primary-font
+      color $orange
+      +from-width($sm)
+        font-size 44px
+    &-subtitle
+      color $dark-blue
+      line-height 1.64
+      margin-top 8px
+      margin-bottom 8px
+      font-weight 400
+      text-align left
+      +from-width($sm)
+        margin-bottom 8px
+        font-size 32px
+      .orange
+        color $orange
+        font-weight 500
+      &-dollars
+        color $dark-blue
+        line-height 1.64
+        margin-top 8px
+        margin-bottom 8px
+        font-weight 400
+        text-align left
+        +from-width($sm)
+          margin-bottom 8px
+          font-size 32px
+        .orange
+          color $orange
+          font-weight 500
