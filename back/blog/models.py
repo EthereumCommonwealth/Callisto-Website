@@ -23,7 +23,7 @@ class Post(models.Model):
     author = models.CharField(max_length=255)
     related_posts = models.ManyToManyField(
         "self",
-        related_name='related_posts', symmetrical=False
+        related_name='other_posts', symmetrical=False
     )
 
     def __str__(self):
