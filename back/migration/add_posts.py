@@ -2,11 +2,15 @@ import requests
 from dateutil import parser
 from blog.models import Post, Tag, PostTag
 
+
 def run():
-    response = requests.get('https://news.callisto.network/wp-json/wp/v2/posts?_embed&per_page=50')
+    response = requests.get(
+        'https://news.callisto.network/wp-json/wp/v2/posts?_embed&per_page=50'
+    )
 
     # Create the posts
     for post in response.json():
+        cover = post['better_featured_image']['media_details']['file']
         local_post = Post.objects.create(
             post_id=post['id'],
             title=post['title']['rendered'],
@@ -15,9 +19,7 @@ def run():
             date=parser.parse(post['date']),
             link=post['link'],
             slug=post['slug'],
-            cover="https://news.callisto.network/wp-content/uploads/{}".format(
-                post['better_featured_image']['media_details']['file']
-            ),
+            cover=f'https://news.callisto.network/wp-content/uploads/{cover}',
             author=post['_embedded']['author'][0]['name']
         )
 
