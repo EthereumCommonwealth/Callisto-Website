@@ -14,7 +14,7 @@ const AuditsList = ({ auditsList }) => (
       </div>
       {auditsList.map(elem => (
         <div className='AuditsList-table-element' key={elem.createdAt}>
-          <a href={`/platform/${elem.id}-${elem.slug}/`} className='AuditsList-table-element-anchor' />
+          <a href={`/audits/${elem.id}-${elem.slug}/`} className='AuditsList-table-element-anchor' />
           <div className='AuditsList-table-element-item'>{elem.title}</div>
           <div className='AuditsList-table-element-item'>{elem.platform}</div>
           <div className='AuditsList-table-element-item'>{elem.statusName}</div>

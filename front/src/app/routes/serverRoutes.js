@@ -126,12 +126,12 @@ const routes = [
     component: CommunityGuidlines,
   },
   {
-    path: '/platform/',
+    path: '/audits/',
     exact: true,
     component: AuditAdmin,
   },
   {
-    path: '/platform/:id-:slug/',
+    path: '/audits/id-:slug/',
     exact: true,
     component: AuditDetail,
   },
