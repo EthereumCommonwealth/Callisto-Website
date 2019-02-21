@@ -21,8 +21,10 @@ class Post(models.Model):
     cover = models.URLField(max_length=200)
     tags = models.ManyToManyField(Tag, through='PostTag')
     author = models.CharField(max_length=255)
-    realated_posts = models.ManyToManyField("self",
-        related_name='related_posts', symmetrical=False)
+    related_posts = models.ManyToManyField(
+        "self",
+        related_name='related_posts', symmetrical=False
+    )
 
     def __str__(self):
         return self.title
@@ -34,5 +36,5 @@ class PostTag(models.Model):
     tag = models.ForeignKey(Tag, related_name='tag', on_delete=models.CASCADE)
 
     def __str__(self):
-        return "{} -> {}".format(self.post.title, self.tag.name)
+        return f"{self.post.title} -> {self.tag.name}"
 

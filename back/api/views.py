@@ -26,7 +26,7 @@ class TeamAPIView(View):
                     [
                         {
                             'prefix': network.network.icon,
-                            'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
+                            'url': f'mailto:{network.url}' if network.network.name == 'Email' else network.url
                         } for network in member.membersocialnetwork_set.filter(
                             active=True)
                     ]
@@ -230,8 +230,9 @@ class TagsDetailView(View):
         tag = Tag.objects.filter(slug=tag_slug).first()
 
         if not tag:
-            return JsonResponse(status=404,
-                                data={'error': 'Not found'}, safe=False)
+            return JsonResponse(
+                status=404, data={'error': 'Not found'}, safe=False
+            )
 
         related_posts = Post.objects.filter(tags__in=[tag.id])
 

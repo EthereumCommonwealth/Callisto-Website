@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='post',
-            name='realated_posts',
+            name='related_posts',
             field=models.ManyToManyField(related_name='related_posts', to='blog.Post'),
         ),
     ]
