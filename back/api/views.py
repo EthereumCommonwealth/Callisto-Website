@@ -7,8 +7,6 @@ from wallets.models import WalletPlatform
 from exchanges.models import Exchange
 from translations.models import Language
 from blog.models import Tag, Post
-from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import csrf_exempt
 
 
 class TeamAPIView(View):
@@ -141,7 +139,7 @@ class HomeAPIView(View):
                     [
                         {
                             'prefix': network.network.icon,
-                            'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
+                            'url': f'mailto:{network.url}' if network.network.name == 'Email' else network.url
                         } for network in member.membersocialnetwork_set.filter(
                             active=True)
                     ]
@@ -281,8 +279,9 @@ class PostDetailView(View):
         post = Post.objects.filter(slug=post_slug).first()
 
         if not post:
-            return JsonResponse(status=404,
-                                data={'error': 'Not found'}, safe=False)
+            return JsonResponse(
+                status=404, data={'error': 'Not found'}, safe=False
+            )
 
         post_formated = {
             'id': post.post_id,
