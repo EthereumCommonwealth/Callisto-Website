@@ -39,7 +39,7 @@ class SingleAudit extends PureComponent {
     return (
       <div className='SingleAudit'>
         <div className='SingleAudit-content container square'>
-          <h1 className='SingleAudit-title'>{title}</h1>
+          <h4 className='SingleAudit-title'>{title}</h4>
           <div className='SingleAudit-divider'/>
           <p className='SingleAudit-description'>{description}</p>
           <div className='SingleAudit-details'>
