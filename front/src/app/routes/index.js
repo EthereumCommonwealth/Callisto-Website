@@ -44,6 +44,8 @@ const Routes = (
       {/* Audit URLS */}
       <Route exact path='/audits/' component={AuditAdmin} />
       <Route exact path='/audits/:id-:slug/' component={AuditDetail} />
+      <Route exact path='/platform/' component={AuditAdmin} />
+      <Route exact path='/platform/:id-:slug/' component={AuditDetail} />
       <Route component={Notfound} />
     </Switch>
   </BrowserRouter>

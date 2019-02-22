@@ -136,6 +136,16 @@ const routes = [
     component: AuditDetail,
   },
   {
+    path: '/platform/',
+    exact: true,
+    component: AuditAdmin,
+  },
+  {
+    path: '/platform/id-:slug/',
+    exact: true,
+    component: AuditDetail,
+  },
+  {
     name: 'notFound',
     component: Notfound,
   },
