@@ -138,6 +138,12 @@ app.get(`/:lang${langs}/community-guidelines/`, prefetchData);
 //Audit URLS
 app.get('/audits/', prefetchPlatform);
 app.get('/audits/:id-:slug/', prefetchAudit);
+app.get('/platform/', (req, res) => {
+  res.redirect('/audits/');
+});
+app.get('/platform/:id-:slug/', (req, res) => {
+  res.redirect(`/audits/${req.params.id}-${req.params.slug}/`);
+});
 app.post('/create-audit-request/', createAudit);
 app.post('/audit-login/', login);
 app.post('/login-check/', loginCheck);
