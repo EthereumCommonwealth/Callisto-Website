@@ -27,11 +27,6 @@ class Header extends PureComponent {
       //   type: this.props.fromLanding ? 'scroll' : 'router',
       // },
       {
-        title: this.props.intl.formatMessage({ id: 'About', defaultMessage: 'About' }),
-        url: this.props.lang !== 'en' ? `/${this.props.lang}/about/` : '/about/',
-        type: 'router',
-      },
-      {
         title: this.props.intl.formatMessage({ id: 'Airdrop' }),
         url: this.props.lang === 'en' ? '/airdrop/' : `/${this.props.lang}/airdrop/`,
         type: 'router',
@@ -65,15 +60,14 @@ class Header extends PureComponent {
         type: 'router',
       },
       {
-        title: this.props.intl.formatMessage({ id: 'Team' }),
-        url: !this.props.fromLanding ?
-          this.props.lang === 'en' ? '/#team' : `/${this.props.lang}/#team` : 'team',
-        type: this.props.fromLanding ? 'scroll' : 'router',
-      },
-      {
         title: this.props.intl.formatMessage({ id: 'Blog' }),
         url: this.props.lang === 'en' ? '/blog/' : `/${this.props.lang}/blog/`,
         type: 'anchor',
+      },
+      {
+        title: this.props.intl.formatMessage({ id: 'About', defaultMessage: 'About' }),
+        url: this.props.lang !== 'en' ? `/${this.props.lang}/about/` : '/about/',
+        type: 'router',
       },
     ];
   }

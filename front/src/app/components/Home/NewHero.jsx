@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-scroll';
 import { FormattedMessage, injectIntl } from 'react-intl';
 
 class NewNewHero extends Component {
 
-  calculePrice = () => {
-    const { marketStats } = this.props;
-    return (marketStats.stakingBalance * marketStats.cloUSDPrice).toLocaleString();
-  }
+  // calculePrice = () => {
+  //   const { marketStats } = this.props;
+  //   return (marketStats.stakingBalance * marketStats.cloUSDPrice).toLocaleString();
+  // }
 
   render() {
-    const { marketStats } = this.props;
+    // const { marketStats } = this.props;
     return (
       <div className='NewHero'>
         <div className='NewHero-content container'>
@@ -22,9 +23,24 @@ class NewNewHero extends Component {
             <p className='NewHero-content-left-description'>
               <FormattedMessage id='StakingDescriptionWhatIsText' />
             </p>
+            <div className='NewHero-btns'>
+              <Link
+                to='exchanges'
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={500}
+                className='btn btn-green'
+              >
+                <FormattedMessage id='StartStaking' defaultMessage='Start staking now' />
+              </Link>
+            </div>
           </div>
           <div className='NewHero-content-right'>
-            <div className='NewHero-details'>
+            <figure className='NewHero-content-right-figure'>
+              <img src='/image/new-hero-image.svg' alt='Hero Art'/>
+            </figure>
+            {/* <div className='NewHero-details'>
               <h2 className='NewHero-details-title'>
                 Ammount Staked
               </h2>
@@ -34,7 +50,7 @@ class NewNewHero extends Component {
               <p className='NewHero-details-subtitle-dollars'>
                 {this.calculePrice()} <span className='orange'>USD</span>
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

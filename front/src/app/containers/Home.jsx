@@ -3,9 +3,8 @@ import { hot } from 'react-hot-loader';
 import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
 import NewHero from '../components/Home/NewHero';
-import Team from '../components/Home/Team';
-import ExchangeList from '../components/Home/ExchangeList';
-import WalletsContent from '../components/Home/WalletsContent';
+import Community from '../components/Home/Community';
+import Newsletter from '../components/commons/Newsletter';
 import Footer from '../components/commons/Footer';
 
 const Home = ({ match }) => {
@@ -16,11 +15,10 @@ const Home = ({ match }) => {
         fromLanding
       />
       <NewHero lang={match.params && match.params.lang ? match.params.lang : 'en'} />
-      <div className='ExchangeList-main'>
-        <ExchangeList />
-      </div>
-      <WalletsContent />
-      <Team />
+      <Community
+        lang={match.params && match.params.lang ? match.params.lang : 'en'}
+      />
+      <Newsletter />
       <Footer
         lang={match.params && match.params.lang ? match.params.lang : 'en'}
         fromLanding

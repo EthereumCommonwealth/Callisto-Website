@@ -1,26 +1,23 @@
 .NewHero
   background #e9f7ff
-  padding 100px 0 25px 0
+  padding 125px 0 25px 0
+  overflow hidden
   +from-width($sm)
-    padding 120px 0 45px 0
+    padding 125px 0
   +from-width($md)
-    padding 130px 0 60px 0
-  +from-width($xxl)
-    padding 120px 0 120px 0
-  +from-width($xxxl)
-    padding 140px 0 100px 0
+    padding 275px 0 120px 0
   &-btns
     display grid
     grid-gap 1em
     +from-width($sm)
-      grid-template-columns 1fr 1fr 1fr
-      justify-items center
+      grid-template-columns 1fr
+      justify-items flex-start
       align-items center
       font-size 14px
   &-content
     display grid
     +from-width($sm)
-      grid-template-columns 2.2fr 2fr
+      grid-template-columns 1.5fr 2fr
     &-left
       &-title
         margin 0
@@ -39,9 +36,31 @@
           margin-top 41px
           margin-bottom 34px
     &-right
-      display block
-      position relative
-      justify-self center
+      display none
+      +from-width($sm)
+        display block
+        position relative
+      &-figure
+        z-index 0
+        +from-width($sm)
+          position absolute
+          top 50px
+          left -65px
+          width 400px
+        +from-width($md)
+          top 50px
+          left -65px
+          width 500px
+        +from-width($xl)
+          top -14px
+          left -150px
+          width 800px
+        +from-width($xxl)
+          top -175px
+          left -350px
+          width 1200px
+        img
+          width 100%
   &-details
     box-sizing border-box
     text-align center
