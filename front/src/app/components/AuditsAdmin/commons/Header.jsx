@@ -44,7 +44,7 @@ class Header extends PureComponent {
                   </div>
                   <ul className='Header-menu-mobile-content-middle'>
                     <li>
-                      <a href='/platform/' className='Header-menu-content-target'>
+                      <a href='/audits/' className='Header-menu-content-target'>
                         Audits List
                       </a>
                     </li>
@@ -55,7 +55,7 @@ class Header extends PureComponent {
             ) : null}
             <ul className='Header-menu-content'>
               <li>
-                <a href='/platform/' className='Header-menu-content-target'>
+                <a href='/audits/' className='Header-menu-content-target'>
                   Audits List
                 </a>
               </li>

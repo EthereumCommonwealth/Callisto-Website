@@ -137,12 +137,22 @@ const routes = [
     component: CommunityGuidlines,
   },
   {
+    path: '/audits/',
+    exact: true,
+    component: AuditAdmin,
+  },
+  {
+    path: '/audits/id-:slug/',
+    exact: true,
+    component: AuditDetail,
+  },
+  {
     path: '/platform/',
     exact: true,
     component: AuditAdmin,
   },
   {
-    path: '/platform/:id-:slug/',
+    path: '/platform/id-:slug/',
     exact: true,
     component: AuditDetail,
   },
