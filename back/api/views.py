@@ -150,6 +150,9 @@ class HomeAPIView(View):
         wallets = WalletPlatform.objects.all()
         exchanges = Exchange.objects.order_by('order')
         reports = FinancialReport.objects.all().order_by('-financial_report')
+        wallets_cold_stacking = WalletPlatform.objects.filter(
+            wallet__cold_staking=True
+        )
         
         translations = Language.get_translations(
             request.GET.get('lang', 'en'))
@@ -214,7 +217,7 @@ class HomeAPIView(View):
                         cold_staking=True
                     ).order_by('id')
                 ]
-            } for wallet_platform in wallets
+            } for wallet_platform in wallets_cold_stacking
         ]
 
         exchanges_list = [
