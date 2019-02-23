@@ -8,7 +8,7 @@ const rootReducer = combineReducers(
     miningPools: mockReducer,
     blockExplorers: mockReducer,
     wallets: mockReducer,
-    csWallets: mockReducer,
+    walletsColdStacking: mockReducer,
     exchanges: mockReducer,
     blogPosts: mockReducer,
     blogTags: mockReducer,

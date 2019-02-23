@@ -159,7 +159,7 @@ function mapStateTopProps(state) {
   return {
     marketStats: state.marketStats,
     exchanges: state.exchanges,
-    wallets: state.wallets,
+    wallets: state.walletsColdStacking,
   };
 }
 

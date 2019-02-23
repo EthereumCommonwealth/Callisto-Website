@@ -80,6 +80,7 @@ const prefetchPost = async (req, res, next) => {
         miningPools: internalData.miningPools,
         blockExplorers: internalData.blockExplorers,
         wallets: internalData.wallets,
+        walletsColdStacking: internalData.walletsColdStacking,
         exchanges: internalData.exchanges,
         blogPosts: preparedPosts,
         blogTags: tags.data && tags.data.length > 0 ? tags.data : tags,
