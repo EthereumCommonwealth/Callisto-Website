@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, FormattedMessage } from 'react-intl';
-import SectionHeading from '../commons/SectionHeading';
 import { connect } from 'react-redux';
+import SectionHeading from '../commons/SectionHeading';
+import SingleWallet from '../commons/SingleWallet';
 
-const HowWorks = ({ intl, marketStats }) => (
+const HowWorks = ({ intl, marketStats, wallets }) => (
   <div className='HowWorks'>
     <div className='HowWorks-content container'>
       <SectionHeading title={intl.formatMessage({ id: 'HowWorks', defaultMessage: 'How does it works?' })} />
@@ -137,6 +138,18 @@ const HowWorks = ({ intl, marketStats }) => (
           title={intl.formatMessage({ id: 'HowWorksStepTwo', defaultMessage: 'How to stake??' })}
           description={intl.formatMessage({ id: 'HowWorksStepTwoSubtitle', defaultMessage: 'Wallets that supports Cold Staking:' })}
         />
+        <div className='HowWorks-wallets'>
+          <div className='WalletsContent-list'>
+            {wallets.length > 0 ? wallets.map(wallet => (
+              <SingleWallet
+                key={wallet.title}
+                icon={wallet.icon}
+                title={wallet.title}
+                options={wallet.options}
+              />
+            )) : null}
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -146,11 +159,13 @@ function mapStateTopProps(state) {
   return {
     marketStats: state.marketStats,
     exchanges: state.exchanges,
+    wallets: state.wallets,
   };
 }
 
 HowWorks.propTypes = {
   intl: PropTypes.object,
+  wallets: PropTypes.array,
 };
 
 export default injectIntl(connect(mapStateTopProps)(HowWorks));
