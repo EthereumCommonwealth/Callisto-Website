@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'exchanges',
     'api',
     'translations',
-    'finantial',
+    'financial',
 ]
 
 MIDDLEWARE = [
