@@ -34,6 +34,11 @@ const PartnersList = ({ exchanges, intl }) => (
             <img src='/image/partners/crynet.png' alt='Crynet' />
           </a>
         </figure>
+        <figure className='PartnersList-content-figure'>
+          <a href='https://www.smartcontractaudits.com/' target='_blank'>
+            <img src='/image/partners/smart-contract-audits-logo.svg' alt='Smartcontractaudits' />
+          </a>
+        </figure>
       </div>
     </div>
   </div>

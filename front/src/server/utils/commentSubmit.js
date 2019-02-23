@@ -17,7 +17,7 @@ const commentSubmit = (req, res) => {
       comment: req.body.commentDetails.comment,
     }
   })
-    .then( response => res.status(200).send({ response: response.data }))
+    .then(() => res.status(200).send({ succes: true }))
     .catch(err => {
       console.log('Error', err);
       res.status(404);

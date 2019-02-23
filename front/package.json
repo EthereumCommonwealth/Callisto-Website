@@ -12,6 +12,7 @@
     "build:server": "webpack-cli --config server.webpack.config.js --colors"
   },
   "dependencies": {
+    "@sentry/node": "4.4.2",
     "axios": "0.18.0",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",

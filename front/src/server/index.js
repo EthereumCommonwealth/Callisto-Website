@@ -6,13 +6,14 @@ import dotenv from 'dotenv';
 import helmet from 'helmet';
 import favicon from 'express-favicon';
 import R from 'ramda';
+import * as Sentry from '@sentry/node';
 import { langs } from '../app/constants/';
 import getManifest from './getManifest';
-import prefetchData from './utils/prefetch/audit/prefetchData';
-import prefetchBlog from './utils/prefetch/audit/prefetchBlog';
-import prefetchPost from './utils/prefetch/audit/prefetchPost';
-import prefetchTopic from './utils/prefetch/audit/prefetchTopic';
-import prefetchFaq from './utils/prefetch/audit/prefetchFaq';
+import prefetchData from './utils/prefetch/website/prefetchData';
+import prefetchBlog from './utils/prefetch/website/prefetchBlog';
+import prefetchPost from './utils/prefetch/website/prefetchPost';
+import prefetchTopic from './utils/prefetch/website/prefetchTopic';
+import prefetchFaq from './utils/prefetch/website/prefetchFaq';
 import prefetchPlatform from './utils/prefetch/platform/prefetchPlatform';
 import prefetchAudit from './utils/prefetch/platform/prefetchAudit';
 import createAudit from './utils/createAudit';
@@ -48,6 +49,11 @@ const ENV = Env(process.env)
 const app = express()
 const port = process.env.PORT || 3000
 
+//Sentry Config
+Sentry.init({ dsn: process.env.SENTRY_CODE });
+app.use(Sentry.Handlers.requestHandler());
+app.use(Sentry.Handlers.errorHandler());
+
 if (ENV.isDevelopment()) {
   console.log('Loading development server configs')
   const webpackConfig = require('../../webpack.config.js')
@@ -69,6 +75,7 @@ if (ENV.isDevelopment()) {
     historyApiFallback: true,
     stats: { colors: true }
   }
+
   app.use(webpackDevMiddleware(compiler, serverConfig));
   app.use(webpackHotMiddleware(compiler));
   app.use((req, res, next) => {
@@ -129,8 +136,14 @@ app.get(`/:lang${langs}/smart-contract-audit/`, prefetchData);
 app.get(`/:lang${langs}/financial-report/`, prefetchData);
 app.get(`/:lang${langs}/community-guidelines/`, prefetchData);
 //Audit URLS
-app.get('/platform/', prefetchPlatform);
-app.get('/platform/:id-:slug/', prefetchAudit);
+app.get('/audits/', prefetchPlatform);
+app.get('/audits/:id-:slug/', prefetchAudit);
+app.get('/platform/', (req, res) => {
+  res.redirect('/audits/');
+});
+app.get('/platform/:id-:slug/', (req, res) => {
+  res.redirect(`/audits/${req.params.id}-${req.params.slug}/`);
+});
 app.post('/create-audit-request/', createAudit);
 app.post('/audit-login/', login);
 app.post('/login-check/', loginCheck);

@@ -18,6 +18,7 @@ class SingleAudit extends PureComponent {
   }
 
   handleSubmit = event => {
+    event.preventDefault();
     axios.post('/comment-submit/', {
       csrf_token: this.props.csrftoken,
       jwt: auth.token(),
@@ -25,18 +26,20 @@ class SingleAudit extends PureComponent {
         auditId: this.props.auditDetail.id,
         comment: event.target.auditComment.value,
       }
-    });
+    })
+      .then(() => document.location.reload())
+      .catch(err => console.log(err))
   }
 
   render() {
     const { title, description, sourceCodeUrl, disclosurePolicy,
-      platform, statusName, createdAt, statusHistory } = this.props.auditDetail;
+      platform, statusName, createdAt, statusHistory, finalReport } = this.props.auditDetail;
     const { user } = this.props;
 
     return (
       <div className='SingleAudit'>
         <div className='SingleAudit-content container square'>
-          <h1 className='SingleAudit-title'>{title}</h1>
+          <h4 className='SingleAudit-title'>{title}</h4>
           <div className='SingleAudit-divider'/>
           <p className='SingleAudit-description'>{description}</p>
           <div className='SingleAudit-details'>
@@ -62,6 +65,13 @@ class SingleAudit extends PureComponent {
               <strong>Platform: </strong> <span>{platform}</span>
             </div>
           </div>
+          {finalReport !== '' ?
+            (
+              <div>
+                <a href={finalReport} className='SingleAudit-submit-comment' download>Download your report here.</a>
+              </div>
+            ) : null
+          }
           <div className='SingleAudit-history'>
             <h2 className='SingleAudit-history-title'>Audit status history</h2>
             <div className='SingleAudit-history-elements'>
