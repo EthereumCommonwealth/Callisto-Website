@@ -21,12 +21,55 @@ const HowWorks = ({ intl, marketStats }) => (
         <SectionHeading
           step={1}
           title={intl.formatMessage({ id: 'HowWorksStepOne', defaultMessage: 'Where to buy CLO?' })}
-          subtitle={intl.formatMessage({ id: 'HowWorksStepOneSubtitle', defaultMessage: 'You can buy or trade CLO in these exchanges:' })}
+          description={intl.formatMessage({ id: 'HowWorksStepOneSubtitle', defaultMessage: 'You can buy or trade CLO in these exchanges:' })}
         />
         <div className='HowWorks-step-content'>
-          <figure className='HowWorks-step-content-figure'>
-            <img src='/image/exchanges-list.svg' alt='CLO supported exchanges'/>
-          </figure>
+          <div className='HowWorks-exchanges'>
+            <div className='HowWorks-exchanges-left'>
+              <figure className='HowWorks-exchanges-content-figure'>
+                <a href='https://hitbtc.com/exchange/CLO-to-BTC' target='_blank'>
+                  <img src='/image/exchanges/dobitrade.png' alt='dobitrade' />
+                </a>
+              </figure>
+              <figure className='HowWorks-exchanges-content-figure'>
+                <a href='https://www.dobiexchange.com/en/trade/clo_btc' target='_blank'>
+                  <img src='/image/exchanges/hitBTC.png' alt='hitBTC' />
+                </a>
+              </figure>
+              <figure className='HowWorks-exchanges-content-figure'>
+                <a href='https://sistemkoin.com/' target='_blank'>
+                  <img src='/image/exchanges/sistemkoin.png' alt='sistemkoin' />
+                </a>
+              </figure>
+              <figure className='HowWorks-exchanges-content-figure'>
+                <a href='http://simpleswap.io/' target='_blank'>
+                  <img src='/image/exchanges/simpleswap.png' alt='simpleswap' />
+                </a>
+              </figure>
+            </div>
+            <div>
+              <figure className='HowWorks-step-content-figure'>
+                <img src='/image/exchanges-list-v2.svg' alt='CLO supported exchanges'/>
+              </figure>
+            </div>
+            <div className='HowWorks-exchanges-right'>
+              <figure className='HowWorks-exchanges-content-figure'>
+                <a href='https://www.coinbene.com/exchange.html#/exchange?pairId=CLOBTC' target='_blank'>
+                  <img src='/image/exchanges/coinbene.png' alt='coinbene' />
+                </a>
+              </figure>
+              <figure className='HowWorks-exchanges-content-figure'>
+                <a href='https://app.stex.com/?ref=14019577' target='_blank'>
+                  <img src='/image/exchanges/stex.svg' alt='stex' />
+                </a>
+              </figure>
+              <figure className='HowWorks-exchanges-content-figure'>
+                <a href='https://www.idax.mn/#/' target='_blank'>
+                  <img src='/image/exchanges/idax.svg' alt='idax' />
+                </a>
+              </figure>
+            </div>
+          </div>
           <div className='HowWorks-pricing'>
             <div className='HowWorks-pricing-element'>
               <div className='HowWorks-pricing-element-icon'>
@@ -92,7 +135,7 @@ const HowWorks = ({ intl, marketStats }) => (
         <SectionHeading
           step={2}
           title={intl.formatMessage({ id: 'HowWorksStepTwo', defaultMessage: 'How to stake??' })}
-          subtitle={intl.formatMessage({ id: 'HowWorksStepTwoSubtitle', defaultMessage: 'Wallets that supports Cold Staking:' })}
+          description={intl.formatMessage({ id: 'HowWorksStepTwoSubtitle', defaultMessage: 'Wallets that supports Cold Staking:' })}
         />
       </div>
     </div>
@@ -102,6 +145,7 @@ const HowWorks = ({ intl, marketStats }) => (
 function mapStateTopProps(state) {
   return {
     marketStats: state.marketStats,
+    exchanges: state.exchanges,
   };
 }
 
