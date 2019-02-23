@@ -1,7 +1,9 @@
 from django.urls import path
 
-from .views import (ExchangesAPIView, HomeAPIView, MiningAPIView, TeamAPIView,
-                    TranslationsView, WalletsAPIView)
+from .views import (
+    ExchangesAPIView, HomeAPIView, MiningAPIView, TeamAPIView,
+    TranslationsView, WalletsAPIView, FinancialReportAPIView
+)
 
 urlpatterns = [
     path('team/', TeamAPIView.as_view()),
@@ -9,5 +11,6 @@ urlpatterns = [
     path('wallets/', WalletsAPIView.as_view()),
     path('exchanges/', ExchangesAPIView.as_view()),
     path('home/', HomeAPIView.as_view()),
-    path('translations/<slug:language>/', TranslationsView.as_view())
+    path('translations/<slug:language>/', TranslationsView.as_view()),
+    path('financial/', FinancialReportAPIView.as_view()),
 ]
