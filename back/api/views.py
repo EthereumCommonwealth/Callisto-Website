@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from django.views.generic.base import View
 
+from financial.models import FinancialReport
 from team.models import TeamMember
 from mining.models import MiningPool, BlockExplorer
 from wallets.models import WalletPlatform
@@ -25,7 +26,8 @@ class TeamAPIView(View):
                             'prefix': network.network.icon,
                             'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
                         } for network in member.membersocialnetwork_set.filter(
-                        active=True)
+                            active=True
+                        )
                     ]
 
             } for member in members
@@ -101,6 +103,22 @@ class ExchangesAPIView(View):
         return JsonResponse(status=200, data=exchanges_list, safe=False)
 
 
+class FinancialReportAPIView(View):
+    def get(self, request, *args, **kwargs):
+        reports = FinancialReport.objects.all().order_by('-financial_report')
+
+        reports_list = [
+            {
+                'name': 'Financial Report {} - {}'.format(
+                    report.financial_date.month, report.financial_date.year
+                ),
+                'file': report.financial_report.get_url()
+            } for report in reports
+        ]
+
+        return JsonResponse(status=200, data=reports_list, safe=False)
+
+
 class HomeAPIView(View):
     def get(self, request, *args, **kwargs):
         members = TeamMember.objects.order_by('order')
@@ -111,6 +129,7 @@ class HomeAPIView(View):
         cold_staking_wallets = WalletPlatform.objects.filter(
             wallet__cold_staking=True
         )
+        reports = FinancialReport.objects.all().order_by('-financial_report')
         
         translations = Language.get_translations(
             request.GET.get('lang', 'en'))
@@ -170,13 +189,23 @@ class HomeAPIView(View):
             } for exchange in exchanges
         ]
 
+        reports_list = [
+            {
+                'name': 'Financial Report {} - {}'.format(
+                    report.financial_date.month, report.financial_date.year
+                ),
+                'file': report.financial_report.get_url()
+            } for report in reports
+        ]
+
         data = {
             'teamMembers': members_list,
             'miningPools': mining_pools_list,
             'blockExplorers': block_explorers_list,
             'wallets': wallets_list,
             'exchanges': exchanges_list,
-            'translations': translations
+            'translations': translations,
+            'finalcialReports': reports_list,
         }
 
         return JsonResponse(status=200, data=data, safe=False)
