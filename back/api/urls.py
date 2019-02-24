@@ -16,5 +16,5 @@ urlpatterns = [
     path('translations/<slug:language>/', TranslationsView.as_view()),
     path('financial/', FinancialReportAPIView.as_view()),
     path('advisor-team/', AdvisorTeamAPIView.as_view()),
-    path('partners', PartnerAPIView.as_view())
+    path('partners/', PartnerAPIView.as_view())
 ]
