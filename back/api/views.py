@@ -12,7 +12,38 @@ from translations.models import Language
 class TeamAPIView(View):
     def get(self, request, *args, **kwargs):
 
-        members = TeamMember.objects.order_by('order')
+        members = TeamMember.objects.exclude(
+            position='Advisor'
+        ).order_by('order')
+
+        members_list = [
+            {
+                'avatar': f'/{member.avatar.name}',
+                'name': member.name,
+                'position': member.position,
+                'bio': member.bio,
+                'socialNetworks':
+                    [
+                        {
+                            'prefix': network.network.icon,
+                            'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
+                        } for network in member.membersocialnetwork_set.filter(
+                            active=True
+                        )
+                    ]
+
+            } for member in members
+        ]
+
+        return JsonResponse(status=200, data=members_list, safe=False)
+
+
+class AdvisorTeamAPIView(View):
+    def get(self, request, *args, **kwargs):
+
+        members = TeamMember.objects.filter(
+            position='Advisor'
+        ).order_by('order')
 
         members_list = [
             {
@@ -144,7 +175,12 @@ class FinancialReportAPIView(View):
 
 class HomeAPIView(View):
     def get(self, request, *args, **kwargs):
-        members = TeamMember.objects.order_by('order')
+        members = TeamMember.objects.exclude(
+            position='Advisor'
+        ).order_by('order')
+        advisors = TeamMember.objects.filter(
+            position='Advisor'
+        ).order_by('order')
         mining_pools = MiningPool.objects.all()
         block_explorers = BlockExplorer.objects.all()
         wallets = WalletPlatform.objects.all()
@@ -173,6 +209,25 @@ class HomeAPIView(View):
                     ]
 
             } for member in members
+        ]
+
+        advisors_list = [
+            {
+                'avatar': f'/{member.avatar.name}',
+                'name': member.name,
+                'position': member.position,
+                'bio': member.bio,
+                'socialNetworks':
+                    [
+                        {
+                            'prefix': network.network.icon,
+                            'url': 'mailto:{}'.format(
+                                network.url) if network.network.name == 'Email' else network.url
+                        } for network in member.membersocialnetwork_set.filter(
+                        active=True)
+                    ]
+
+            } for member in advisors
         ]
 
         mining_pools_list = [
@@ -239,6 +294,7 @@ class HomeAPIView(View):
 
         data = {
             'teamMembers': members_list,
+            'advisorMembers': advisors_list,
             'miningPools': mining_pools_list,
             'blockExplorers': block_explorers_list,
             'wallets': wallets_list,
