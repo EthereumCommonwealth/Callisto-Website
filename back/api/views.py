@@ -7,6 +7,7 @@ from mining.models import MiningPool, BlockExplorer
 from wallets.models import WalletPlatform
 from exchanges.models import Exchange
 from translations.models import Language
+from partner.models import Partner
 
 
 class TeamAPIView(View):
@@ -173,6 +174,21 @@ class FinancialReportAPIView(View):
         return JsonResponse(status=200, data=reports_list, safe=False)
 
 
+class PartnerAPIView(View):
+    def get(self, request, *args, **kwargs):
+        partners = Partner.objects.all()
+
+        partners_list = [
+            {
+                'name': partner.name,
+                'url': partner.url,
+                'img': partner.image.url
+            } for partner in partners
+        ]
+
+        return JsonResponse(status=200, data=partners_list, safe=False)
+
+
 class HomeAPIView(View):
     def get(self, request, *args, **kwargs):
         members = TeamMember.objects.exclude(
@@ -189,6 +205,7 @@ class HomeAPIView(View):
         wallets_cold_stacking = WalletPlatform.objects.filter(
             wallet__cold_staking=True
         ).distinct()
+        partners = Partner.objects.all()
         
         translations = Language.get_translations(
             request.GET.get('lang', 'en'))
@@ -292,6 +309,14 @@ class HomeAPIView(View):
             } for report in reports
         ]
 
+        partners_list = [
+            {
+                'name': partner.name,
+                'url': partner.url,
+                'img': partner.image.url
+            } for partner in partners
+        ]
+
         data = {
             'teamMembers': members_list,
             'advisorMembers': advisors_list,
@@ -302,6 +327,7 @@ class HomeAPIView(View):
             'exchanges': exchanges_list,
             'translations': translations,
             'financialReports': reports_list,
+            'partners': partners_list,
         }
 
         return JsonResponse(status=200, data=data, safe=False)
