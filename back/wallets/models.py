@@ -1,7 +1,9 @@
 from django.db import models
 
+
 def upload_platform_icon(instance, filename):
     return f'image/wallets/{filename}'
+
 
 class WalletPlatform(models.Model):
     name = models.CharField(

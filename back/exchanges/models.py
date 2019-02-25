@@ -1,7 +1,9 @@
 from django.db import models
 
+
 def upload_exchabge_icon(instance, filename):
     return f'image/exchanges/{filename}'
+
 
 class Exchange(models.Model):
     name = models.CharField(

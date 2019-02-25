@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'api',
     'translations',
     'blog',
+    'financial',
+    'partner',
 ]
 
 MIDDLEWARE = [

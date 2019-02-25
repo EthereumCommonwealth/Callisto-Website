@@ -29,6 +29,7 @@ class MemberSocialNetwork(models.Model):
         default=True
     )
 
+
 def upload_avatar(instance, filename):
     return f'image/avatars/{filename}'
 
