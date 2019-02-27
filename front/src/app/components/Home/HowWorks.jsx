@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Element } from 'react-scroll';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import SectionHeading from '../commons/SectionHeading';
 import SingleWallet from '../commons/SingleWallet';
 
 const HowWorks = ({ intl, marketStats, wallets }) => (
-  <div className='HowWorks'>
+  <Element className='HowWorks' name='howworks'>
     <div className='HowWorks-content container'>
       <SectionHeading title={intl.formatMessage({ id: 'HowWorks', defaultMessage: 'How does it works?' })} />
       <div className='HowWorks-video sixteen-nine'>
@@ -132,7 +133,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
           </div>
         </div>
       </div>
-      <div className='HowWorks-step'>
+      <div className='HowWorks-step last'>
         <SectionHeading
           step={2}
           title={intl.formatMessage({ id: 'HowWorksStepTwo', defaultMessage: 'How to stake??' })}
@@ -152,7 +153,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
         </div>
       </div>
     </div>
-  </div>
+  </Element>
 );
 
 function mapStateTopProps(state) {

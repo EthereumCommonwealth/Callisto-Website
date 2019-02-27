@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 class RealtimeMetrics extends Component {
+
   calculePrice = () => {
     const { marketStats } = this.props;
     return (marketStats.stakingBalance * marketStats.cloUSDPrice).toLocaleString();
@@ -30,7 +31,9 @@ class RealtimeMetrics extends Component {
           <div className='RealtimeMetrics-text'>
             <span className='RealtimeMetrics-text-detail'>Monthly interest rate</span>
             <div className='RealtimeMetrics-metric'>
-              <h3 className='RealtimeMetrics-metric-amount orange'>5</h3>
+              <h3 className='RealtimeMetrics-metric-amount orange'>
+                5
+              </h3>
               <span className='RealtimeMetrics-metric-detail orange'>%</span>
             </div>
           </div>

@@ -7,6 +7,7 @@ import Community from '../components/Home/Community';
 import Newsletter from '../components/commons/Newsletter';
 import RealtimeMetrics from '../components/Home/RealtimeMetrics';
 import HowWorks from '../components/Home/HowWorks';
+import StepGuide from '../components/Home/StepGuide';
 import Footer from '../components/commons/Footer';
 
 const Home = ({ match }) => {
@@ -16,6 +17,7 @@ const Home = ({ match }) => {
       <NewHero lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <RealtimeMetrics />
       <HowWorks />
+      <StepGuide />
       <Community lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <Newsletter />
       <Footer lang={match.params && match.params.lang ? match.params.lang : 'en'} />

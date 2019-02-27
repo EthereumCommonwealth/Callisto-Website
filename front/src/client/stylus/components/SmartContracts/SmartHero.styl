@@ -1,14 +1,15 @@
 .SmartHero
-  background #FFF
+  background #e9f7ff
   padding 125px 0 25px 0
+  overflow hidden
   +from-width($sm)
     padding 125px 0
   +from-width($md)
-    padding 275px 0 120px 0
+    padding 120px 0
   &-content
     display grid
     +from-width($sm)
-      grid-template-columns 1.5fr 2fr
+      grid-template-columns 1fr 1fr
     &-left
       &-title
         margin 0
@@ -35,21 +36,20 @@
         z-index 0
         +from-width($sm)
           position absolute
-          top 50px
-          left -65px
-          width 400px
+          top 7rem
+          left -25rem
+          width 750px
         +from-width($md)
-          top 50px
-          left -65px
-          width 500px
+          top 8.5rem
+          left -21rem
         +from-width($xl)
-          top -14px
-          left -150px
-          width 680px
+          top 2.8rem
+          left -21rem
+          width 880px
         +from-width($xxl)
-          top -111px
-          left -120px
-          width 800px
+          top -10.4rem
+          left -30rem
+          width 1200px
         img
           width 100%
   &-btns

@@ -18,7 +18,7 @@ class NewNewHero extends Component {
             </p>
             <div className='NewHero-btns'>
               <Link
-                to='exchanges'
+                to='howworks'
                 spy={true}
                 smooth={true}
                 offset={-150}

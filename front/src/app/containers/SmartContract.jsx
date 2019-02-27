@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { hot } from 'react-hot-loader';
 import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
-import StakingPromo from '../components/commons/StakingPromo';
 import SmartHero from '../components/SmartContracts/SmartHero';
 import Description from '../components/SmartContracts/Description';
 import SmartDetail from '../components/SmartContracts/SmartDetail';
@@ -13,6 +12,7 @@ import DisclosurePolicy from '../components/SmartContracts/DisclosurePolicy';
 import OrderAudit from '../components/SmartContracts/OrderAudit';
 import OrderAuditModal from '../components/SmartContracts/OrderAuditModal';
 import Testimonials from '../components/SmartContracts/Testimonials';
+import ContractsMetrics from '../components/SmartContracts/ContractsMetrics';
 import Footer from '../components/commons/Footer';
 
 class SmartContract extends PureComponent {
@@ -35,8 +35,8 @@ class SmartContract extends PureComponent {
     return [
       <Layout key='SmartContractContainer' className='SmartContract' match={match}>
         <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
-        <StakingPromo lang={match.params && match.params.lang ? match.params.lang : 'en'} />
         <SmartHero openModal={this.handleOpenModal} />
+        <ContractsMetrics />
         <Description />
         <SmartDetail />
         <AuditorsCheck />
