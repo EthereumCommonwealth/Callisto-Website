@@ -51,7 +51,7 @@ class Header extends PureComponent {
       {
         title: this.props.intl.formatMessage({ id: 'Mining' }),
         url: !this.props.fromLanding ?
-          this.props.lang === 'en' ? '/#mining' : `/${this.props.lang}/#mining` : 'mining',
+          this.props.lang === 'en' ? '/about/#mining' : `/${this.props.lang}/about/#mining` : 'mining',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       // {
