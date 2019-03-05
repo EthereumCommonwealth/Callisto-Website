@@ -31,7 +31,16 @@ const StepGuide = ({ intl }) => (
         <div className='StepGuide-video sixteen-nine'>
           <iframe
             className='content'
-            src='https://www.youtube.com/embed/hjRE6u-XeAU'
+            src='https://www.youtube.com/embed/HgInjG6ywtQ'
+            frameBorder='0'
+            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+            allowFullScreen
+          />
+        </div>
+        <div className='StepGuide-video sixteen-nine'>
+          <iframe
+            className='content'
+            src='https://www.youtube.com/embed/COXBuwPpnMA'
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen

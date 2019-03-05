@@ -166,7 +166,6 @@ function mapStateTopProps(state) {
 
 HowWorks.propTypes = {
   intl: PropTypes.object,
-  wallets: PropTypes.array,
 };
 
 export default injectIntl(connect(mapStateTopProps)(HowWorks));
