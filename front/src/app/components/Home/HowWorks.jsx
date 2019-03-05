@@ -29,7 +29,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
           <div className='HowWorks-exchanges'>
             <div className='HowWorks-exchanges-left'>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://www.dobiexchange.com/en/trade/clo_btc' target='_blank'>
+                <a href='https://hitbtc.com/exchange/CLO-to-BTC' target='_blank'>
                   <img src='/image/exchanges/hitBTC.png' alt='hitBTC' />
                 </a>
               </figure>
@@ -39,7 +39,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://hitbtc.com/exchange/CLO-to-BTC' target='_blank'>
+                <a href='https://www.dobiexchange.com/en/trade/clo_btc' target='_blank'>
                   <img src='/image/exchanges/dobitrade.png' alt='dobitrade' />
                 </a>
               </figure>
