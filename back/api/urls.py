@@ -3,7 +3,7 @@ from django.urls import path
 from .views import (
     ExchangesAPIView, HomeAPIView, MiningAPIView, TeamAPIView,
     TranslationsView, WalletsAPIView, FinancialReportAPIView,
-    WalletsColdStackingAPIView
+    WalletsColdStackingAPIView, AdvisorTeamAPIView, PartnerAPIView
 )
 
 urlpatterns = [
@@ -15,4 +15,6 @@ urlpatterns = [
     path('home/', HomeAPIView.as_view()),
     path('translations/<slug:language>/', TranslationsView.as_view()),
     path('financial/', FinancialReportAPIView.as_view()),
+    path('advisor-team/', AdvisorTeamAPIView.as_view()),
+    path('partners/', PartnerAPIView.as_view())
 ]

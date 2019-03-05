@@ -7,12 +7,44 @@ from mining.models import MiningPool, BlockExplorer
 from wallets.models import WalletPlatform
 from exchanges.models import Exchange
 from translations.models import Language
+from partner.models import Partner
 
 
 class TeamAPIView(View):
     def get(self, request, *args, **kwargs):
 
-        members = TeamMember.objects.order_by('order')
+        members = TeamMember.objects.exclude(
+            position='Advisor'
+        ).order_by('order')
+
+        members_list = [
+            {
+                'avatar': f'/{member.avatar.name}',
+                'name': member.name,
+                'position': member.position,
+                'bio': member.bio,
+                'socialNetworks':
+                    [
+                        {
+                            'prefix': network.network.icon,
+                            'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
+                        } for network in member.membersocialnetwork_set.filter(
+                            active=True
+                        )
+                    ]
+
+            } for member in members
+        ]
+
+        return JsonResponse(status=200, data=members_list, safe=False)
+
+
+class AdvisorTeamAPIView(View):
+    def get(self, request, *args, **kwargs):
+
+        members = TeamMember.objects.filter(
+            position='Advisor'
+        ).order_by('order')
 
         members_list = [
             {
@@ -142,9 +174,29 @@ class FinancialReportAPIView(View):
         return JsonResponse(status=200, data=reports_list, safe=False)
 
 
+class PartnerAPIView(View):
+    def get(self, request, *args, **kwargs):
+        partners = Partner.objects.all()
+
+        partners_list = [
+            {
+                'name': partner.name,
+                'url': partner.url,
+                'img': partner.image.url
+            } for partner in partners
+        ]
+
+        return JsonResponse(status=200, data=partners_list, safe=False)
+
+
 class HomeAPIView(View):
     def get(self, request, *args, **kwargs):
-        members = TeamMember.objects.order_by('order')
+        members = TeamMember.objects.exclude(
+            position='Advisor'
+        ).order_by('order')
+        advisors = TeamMember.objects.filter(
+            position='Advisor'
+        ).order_by('order')
         mining_pools = MiningPool.objects.all()
         block_explorers = BlockExplorer.objects.all()
         wallets = WalletPlatform.objects.all()
@@ -153,6 +205,7 @@ class HomeAPIView(View):
         wallets_cold_stacking = WalletPlatform.objects.filter(
             wallet__cold_staking=True
         ).distinct()
+        partners = Partner.objects.all()
         
         translations = Language.get_translations(
             request.GET.get('lang', 'en'))
@@ -173,6 +226,25 @@ class HomeAPIView(View):
                     ]
 
             } for member in members
+        ]
+
+        advisors_list = [
+            {
+                'avatar': f'/{member.avatar.name}',
+                'name': member.name,
+                'position': member.position,
+                'bio': member.bio,
+                'socialNetworks':
+                    [
+                        {
+                            'prefix': network.network.icon,
+                            'url': 'mailto:{}'.format(
+                                network.url) if network.network.name == 'Email' else network.url
+                        } for network in member.membersocialnetwork_set.filter(
+                        active=True)
+                    ]
+
+            } for member in advisors
         ]
 
         mining_pools_list = [
@@ -237,8 +309,17 @@ class HomeAPIView(View):
             } for report in reports
         ]
 
+        partners_list = [
+            {
+                'name': partner.name,
+                'url': partner.url,
+                'img': partner.image.url
+            } for partner in partners
+        ]
+
         data = {
             'teamMembers': members_list,
+            'advisorMembers': advisors_list,
             'miningPools': mining_pools_list,
             'blockExplorers': block_explorers_list,
             'wallets': wallets_list,
@@ -246,6 +327,7 @@ class HomeAPIView(View):
             'exchanges': exchanges_list,
             'translations': translations,
             'financialReports': reports_list,
+            'partners': partners_list,
         }
 
         return JsonResponse(status=200, data=data, safe=False)
