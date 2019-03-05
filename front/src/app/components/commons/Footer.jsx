@@ -12,22 +12,22 @@ class Footer extends PureComponent {
     return [
       {
         title: this.props.intl.formatMessage({ id: 'Wallets' }),
-        url: !this.props.fromLanding ? '/#wallets' : 'wallets',
+        url: !this.props.fromLanding ? '/about/#wallets' : 'wallets',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'Pool' }),
-        url: !this.props.fromLanding ? '/#pool' : 'pool',
+        url: !this.props.fromLanding ? '/about/#pool' : 'pool',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'BlockExplorers' }),
-        url: !this.props.fromLanding ? '/#pool' : 'pool',
+        url: !this.props.fromLanding ? '/about/#pool' : 'pool',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'Exchanges' }),
-        url: !this.props.fromLanding ? '/#exchanges' : 'exchanges',
+        url: !this.props.fromLanding ? '/about/#exchanges' : 'exchanges',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
@@ -77,7 +77,7 @@ class Footer extends PureComponent {
       },
       {
         title: this.props.intl.formatMessage({ id: 'OurTeam' }),
-        url: !this.props.fromLanding ? '/#team' : 'team',
+        url: !this.props.fromLanding ? '/about/#team' : 'team',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
