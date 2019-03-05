@@ -52,7 +52,7 @@
             margin-left 4rem
           &:nth-child(4)
             margin-left 10rem
-              
+
     &-right
       display grid
       grid-gap 1rem
@@ -69,14 +69,16 @@
         &:nth-child(2)
           height 90px
         &:nth-child(3)
+          height 70px
+        &:nth-child(3)
           height 50px
         +from-width($xl)
           &:nth-child(1)
-            margin-right 13rem
+            margin-right 10rem
           &:nth-child(2)
-            margin-left 13rem
+            margin-left 10rem
           &:nth-child(3)
-            margin-left 9rem
+            margin-left 8rem
     &-content
       &-figure
         height 60px
@@ -159,3 +161,11 @@
       &-btcPrice
         color $dark-gray
         line-height 1.64
+  &-nextRelease
+    display none
+    +from-width($xl)
+      padding 1rem
+      display block
+      position absolute
+      left 38%
+      font-size 24px

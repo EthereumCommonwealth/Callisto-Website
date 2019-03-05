@@ -29,11 +29,6 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
           <div className='HowWorks-exchanges'>
             <div className='HowWorks-exchanges-left'>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://hitbtc.com/exchange/CLO-to-BTC' target='_blank'>
-                  <img src='/image/exchanges/dobitrade.png' alt='dobitrade' />
-                </a>
-              </figure>
-              <figure className='HowWorks-exchanges-content-figure'>
                 <a href='https://www.dobiexchange.com/en/trade/clo_btc' target='_blank'>
                   <img src='/image/exchanges/hitBTC.png' alt='hitBTC' />
                 </a>
@@ -44,25 +39,31 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
+                <a href='https://hitbtc.com/exchange/CLO-to-BTC' target='_blank'>
+                  <img src='/image/exchanges/dobitrade.png' alt='dobitrade' />
+                </a>
+              </figure>
+              <figure className='HowWorks-exchanges-content-figure'>
                 <a href='http://simpleswap.io/' target='_blank'>
                   <img src='/image/exchanges/simpleswap.png' alt='simpleswap' />
                 </a>
               </figure>
             </div>
             <div>
+              <span className='HowWorks-nextRelease square'>Listing / March 11th</span>
               <figure className='HowWorks-step-content-figure'>
                 <img src='/image/exchanges-list-v2.svg' alt='CLO supported exchanges'/>
               </figure>
             </div>
             <div className='HowWorks-exchanges-right'>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://www.coinbene.com/exchange.html#/exchange?pairId=CLOBTC' target='_blank'>
-                  <img src='/image/exchanges/coinbene.png' alt='coinbene' />
+                <a href='https://app.stex.com/?ref=14019577' target='_blank'>
+                  <img src='/image/exchanges/stex.svg' alt='stex' />
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://app.stex.com/?ref=14019577' target='_blank'>
-                  <img src='/image/exchanges/stex.svg' alt='stex' />
+                <a href='https://www.coinbene.com/exchange.html#/exchange?pairId=CLOBTC' target='_blank'>
+                  <img src='/image/exchanges/coinbene.png' alt='coinbene' />
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
