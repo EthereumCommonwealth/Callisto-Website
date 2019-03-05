@@ -19,6 +19,10 @@
 
 // Home Page
 @import './components/Home/Hero.styl'
+@import './components/Home/NewHero.styl'
+@import './components/Home/RealtimeMetrics.styl'
+@import './components/Home/HowWorks.styl'
+@import './components/Home/StepGuide.styl'
 @import './components/Home/InfoContent.styl'
 @import './components/Home/Roadmap.styl'
 @import './components/Home/WalletsContent.styl'
@@ -44,6 +48,7 @@
 @import './components/SmartContracts/OrderAudit.styl'
 @import './components/SmartContracts/Testimonials.styl'
 @import './components/SmartContracts/OrderAuditModal.styl'
+@import './components/SmartContracts/ContractsMetrics.styl'
 
 // Smart Contracts Page
 @import './components/ColdStaking/StakingHero.styl'
@@ -87,7 +92,7 @@
 @import './components/Buy/BuyHero.styl'
 @import './components/Buy/BuyContent.styl'
 
-.ColdStaking
+.ColdStaking, .Home, .SmartContract
   .Header
     background-color #e9f7ff
 
@@ -112,3 +117,19 @@
     font-size 24px
     a
       color $green
+
+.Home
+  .ExchangeList
+    margin-top 0
+    &-main
+      background $green
+      padding 2rem 0
+    &-text
+      font-size 24px
+      margin 0
+      text-align center
+      +from-width($sm)
+        font-size 36px
+        font-weight 500
+        line-height 1.05
+        color $dark-blue

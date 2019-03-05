@@ -1,0 +1,59 @@
+.ContractsMetrics
+  background-color #FFF
+  margin 0
+  padding 4rem 0
+  &-content
+    display grid
+    align-self flex-start
+    grid-gap 2rem
+    +from-width($sm)
+      grid-template-columns 1fr 1fr 1fr
+      grid-gap 1rem
+    +from-width($xl)
+      grid-template-columns 1fr 1fr .5fr .5fr
+  &-title
+    h4
+      margin 0
+      font-size 26px
+      font-weight 500
+      color $dark-blue
+      line-height 1.41
+  &-text
+    display flex
+    align-items flex-start
+    &-detail
+      margin-right 1rem
+      display block
+      color $dark-gray
+      font-size 14px
+      line-height 1.41
+      max-width 65px
+  &-metric
+    position relative
+    padding 22px
+    color $dark-blue
+    background-color #e9f7ff
+    border-radius 8px
+    max-width fit-content
+    &-amount
+      font-size 40px
+      color $dark-blue
+      line-height 1.05
+      margin 0
+      font-size 26px
+      +from-width($md)
+        font-size 32px
+      +from-width($xl)
+        font-size 40px
+      &.orange
+        color $orange
+    &-detail
+      position absolute
+      top -1rem
+      left -0.75rem
+      color #FFF
+      background-color $dark-blue
+      border-radius 4px
+      padding 6px
+      &.orange
+        background-color $orange

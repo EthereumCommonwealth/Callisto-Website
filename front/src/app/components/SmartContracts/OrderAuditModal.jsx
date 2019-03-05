@@ -148,7 +148,7 @@ class OrderAuditModal extends PureComponent {
                 <label htmlFor='platform'>
                   {messages.OrderAuditModalPlatformLabel}
                 </label>
-                {selectedPlatform.length > 0 ? (
+                {typeof window !== 'undefined' && selectedPlatform.length > 0 ? (
                   <div className='OrderAuditModal-platforms' onMouseLeave={this.handleClose}>
                     <a className='OrderAuditModal-platforms-selected' onClick={this.handleOpen}>
                       {selectedPlatform[1]} ({selectedPlatform[0]})

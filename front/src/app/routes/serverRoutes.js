@@ -1,4 +1,5 @@
 import Home from '../containers/Home';
+import About from '../containers/About';
 import ColdStaking from '../containers/ColdStaking';
 import SmartContract from '../containers/SmartContract';
 import FinantialReport from '../containers/FinantialReport';
@@ -19,6 +20,11 @@ const routes = [
     path: '/',
     exact: true,
     component: Home,
+  },
+  {
+    path: '/about/',
+    exact: true,
+    component: About,
   },
   {
     path: '/faq/',
@@ -74,6 +80,11 @@ const routes = [
     path: `/:lang${langs}/`,
     exact: true,
     component: Home,
+  },
+  {
+    path: `/:lang${langs}/about/`,
+    exact: true,
+    component: About,
   },
   {
     path: `/:lang${langs}/faq/`,

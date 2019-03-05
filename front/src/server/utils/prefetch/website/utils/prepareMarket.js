@@ -4,6 +4,7 @@ const prepareMarket = (btcStats, cloStats, totalSupply, balance) => {
     cloPrice: cloStats.data ? cloStats.data.data.quotes.USD.price : 0,
     volume: cloStats.data ? cloStats.data.data.quotes.USD.volume_24h : 0,
     marketCap: cloStats.data ? cloStats.data.data.quotes.USD.market_cap : 0,
+    cloUSDPrice: cloStats.data ? cloStats.data.data.quotes.USD.price : 0,
     totalSupply: totalSupply,
     stakingBalance: parseFloat(balance),
   };

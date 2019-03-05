@@ -116,6 +116,7 @@ app.get('*.css', function (req, res, next) {
 });
 
 app.get('/', prefetchData);
+app.get('/about/', prefetchData);
 app.get('/blog/', prefetchBlog);
 app.get('/smart-contract-audit/', prefetchData);
 app.get('/cold-staking/', prefetchData);

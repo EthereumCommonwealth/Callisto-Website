@@ -19,29 +19,34 @@ class Header extends PureComponent {
 
   get menuElements() {
     return [
+      // {
+      //   title: this.props.intl.formatMessage({ id: 'Roadmap' }),
+      //   url: !this.props.fromLanding ?
+      //     this.props.lang === 'en' ?
+      //       '/#roadmap' : `/${this.props.lang}/#roadmap` : 'roadmap',
+      //   type: this.props.fromLanding ? 'scroll' : 'router',
+      // },
+      // {
+      //   title: this.props.intl.formatMessage({ id: 'Airdrop' }),
+      //   url: this.props.lang === 'en' ? '/airdrop/' : `/${this.props.lang}/airdrop/`,
+      //   type: 'router',
+      // },
+      // {
+      //   title: this.props.intl.formatMessage({ id: 'Wallers' }),
+      //   url: !this.props.fromLanding ?
+      //     this.props.lang === 'en' ? '/#wallets' : `/${this.props.lang}/#wallets` : 'wallets',
+      //   type: this.props.fromLanding ? 'scroll' : 'router',
+      // },
+      // {
+      //   title: this.props.intl.formatMessage({ id: 'Exchanges' }),
+      //   url: !this.props.fromLanding ?
+      //     this.props.lang === 'en' ? '/#exchanges' : `/${this.props.lang}/#exchanges` : 'exchanges',
+      //   type: this.props.fromLanding ? 'scroll' : 'router',
+      // },
       {
-        title: this.props.intl.formatMessage({ id: 'Roadmap' }),
-        url: !this.props.fromLanding ?
-          this.props.lang === 'en' ?
-            '/#roadmap' : `/${this.props.lang}/#roadmap` : 'roadmap',
-        type: this.props.fromLanding ? 'scroll' : 'router',
-      },
-      {
-        title: this.props.intl.formatMessage({ id: 'Airdrop' }),
-        url: this.props.lang === 'en' ? '/airdrop/' : `/${this.props.lang}/airdrop/`,
+        title: this.props.intl.formatMessage({ id: 'Audit', defaultMessage: 'Security Audits' }),
+        url: this.props.lang === 'en' ? '/smart-contract-audit/' : `/${this.props.lang}/smart-contract-audit/`,
         type: 'router',
-      },
-      {
-        title: this.props.intl.formatMessage({ id: 'Wallers' }),
-        url: !this.props.fromLanding ?
-          this.props.lang === 'en' ? '/#wallets' : `/${this.props.lang}/#wallets` : 'wallets',
-        type: this.props.fromLanding ? 'scroll' : 'router',
-      },
-      {
-        title: this.props.intl.formatMessage({ id: 'Exchanges' }),
-        url: !this.props.fromLanding ?
-          this.props.lang === 'en' ? '/#exchanges' : `/${this.props.lang}/#exchanges` : 'exchanges',
-        type: this.props.fromLanding ? 'scroll' : 'router',
       },
       {
         title: this.props.intl.formatMessage({ id: 'Mining' }),
@@ -49,26 +54,20 @@ class Header extends PureComponent {
           this.props.lang === 'en' ? '/#mining' : `/${this.props.lang}/#mining` : 'mining',
         type: this.props.fromLanding ? 'scroll' : 'router',
       },
-      {
-        title: this.props.intl.formatMessage({ id: 'ColdStaking' }),
-        url: this.props.lang === 'en' ? '/cold-staking/' : `/${this.props.lang}/cold-staking/`,
-        type: 'router',
-      },
-      {
-        title: this.props.intl.formatMessage({ id: 'Audit' }),
-        url: this.props.lang === 'en' ? '/smart-contract-audit/' : `/${this.props.lang}/smart-contract-audit/`,
-        type: 'router',
-      },
-      {
-        title: this.props.intl.formatMessage({ id: 'Team' }),
-        url: !this.props.fromLanding ?
-          this.props.lang === 'en' ? '/#team' : `/${this.props.lang}/#team` : 'team',
-        type: this.props.fromLanding ? 'scroll' : 'router',
-      },
+      // {
+      //   title: this.props.intl.formatMessage({ id: 'ColdStaking' }),
+      //   url: this.props.lang === 'en' ? '/cold-staking/' : `/${this.props.lang}/cold-staking/`,
+      //   type: 'router',
+      // },
       {
         title: this.props.intl.formatMessage({ id: 'Blog' }),
         url: this.props.lang === 'en' ? '/blog/' : `/${this.props.lang}/blog/`,
         type: 'anchor',
+      },
+      {
+        title: this.props.intl.formatMessage({ id: 'About', defaultMessage: 'About us' }),
+        url: this.props.lang !== 'en' ? `/${this.props.lang}/about/` : '/about/',
+        type: 'router',
       },
     ];
   }

@@ -28,6 +28,7 @@ const prefetchTopic = async (req, res, next) => {
         miningPools: internalData.miningPools,
         blockExplorers: internalData.blockExplorers,
         wallets: internalData.wallets,
+        walletsColdStacking: internalData.walletsColdStacking,
         exchanges: internalData.exchanges,
         blogPosts: posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts,
         blogTags: tags.data && tags.data.length > 0 ? tags.data : tags,

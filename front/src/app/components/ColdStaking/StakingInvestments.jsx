@@ -102,20 +102,6 @@ class StakingInvestments extends Component {
                   <FormattedMessage id='FirstMonth' />
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {this.calculateStaking(35984520, 1, this.props.marketStats.totalSupply)}
-                </div>
-                <div className='StakingInvestments-table-tow-text'>
-                  {this.calculateStaking(35984520, 1, this.props.marketStats.totalSupply)}
-                </div>
-                <div className='StakingInvestments-table-tow-text'>
-                  {((this.calculateStaking(35984520, 1, this.props.marketStats.totalSupply) * 100) / stakingDeposit).toFixed(2)}%
-                </div>
-              </div>
-              <div className='StakingInvestments-table-row'>
-                <div className='StakingInvestments-table-tow-text'>
-                  <FormattedMessage id='SecondMonth' />
-                </div>
-                <div className='StakingInvestments-table-tow-text'>
                   {this.calculateStaking(20736000, 1, 1136800000)}
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
@@ -127,13 +113,13 @@ class StakingInvestments extends Component {
               </div>
               <div className='StakingInvestments-table-row'>
                 <div className='StakingInvestments-table-tow-text'>
-                  <FormattedMessage id='ThirdMonth' />
+                  <FormattedMessage id='SecondMonth' />
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
                   {this.calculateStaking(20736000, 1, 1240480000)}
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {this.calculateStaking(20736000, 3, 1240480000)}
+                  {this.calculateStaking(20736000, 2, 1240480000)}
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
                   {((this.calculateStaking(20736000, 3, 1240480000) * 100) / stakingDeposit).toFixed(2)}%
@@ -141,16 +127,30 @@ class StakingInvestments extends Component {
               </div>
               <div className='StakingInvestments-table-row'>
                 <div className='StakingInvestments-table-tow-text'>
-                  <FormattedMessage id='FourthMonth' />
+                  <FormattedMessage id='ThirdMonth' />
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
                   {this.calculateStaking(20736000, 1, 1344160000)}
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
-                  {this.calculateStaking(20736000, 4, 1344160000)}
+                  {this.calculateStaking(20736000, 3, 1344160000)}
                 </div>
                 <div className='StakingInvestments-table-tow-text'>
                   {((this.calculateStaking(20736000, 4, 1344160000) * 100) / stakingDeposit).toFixed(2)}%
+                </div>
+              </div>
+              <div className='StakingInvestments-table-row'>
+                <div className='StakingInvestments-table-tow-text'>
+                  <FormattedMessage id='FourthMonth' />
+                </div>
+                <div className='StakingInvestments-table-tow-text'>
+                  {this.calculateStaking(20736000, 1, 1444160000)}
+                </div>
+                <div className='StakingInvestments-table-tow-text'>
+                  {this.calculateStaking(20736000, 4, 1444160000)}
+                </div>
+                <div className='StakingInvestments-table-tow-text'>
+                  {((this.calculateStaking(20736000, 4, 1444160000) * 100) / stakingDeposit).toFixed(2)}%
                 </div>
               </div>
             </div>
