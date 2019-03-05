@@ -148,6 +148,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
                 icon={wallet.icon}
                 title={wallet.title}
                 options={wallet.options}
+                fromHome
               />
             )) : null}
           </div>
