@@ -15,7 +15,7 @@ const FinantialTable = ({ intl }) => (
       </div>
       <iframe
         className='FinantialTable-frame'
-        src='https://ipfs-gateway.0xinfra.com/ipfs/QmejDEqzVZSb6HQgqyaePuDMjz2Ut35TvE3EMf1zQdzrSx'
+        src='https://ipfs-gateway.0xinfra.com/ipfs/QmSHFKCDvsKVMmApu9S7fGGiBBRXT3WMGurgtzV7i2fPD2'
         frameBorder='0'
       />
     </div>
