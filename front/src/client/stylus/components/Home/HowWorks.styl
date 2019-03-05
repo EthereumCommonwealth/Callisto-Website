@@ -34,7 +34,21 @@
         top 15%
         left 0
       .HowWorks-exchanges-content-figure
+        +from-width($xl)
+          &:nth-child(1)
+            margin-left 12rem
+            height 50px
+          &:nth-child(2)
+            margin-left 2rem
+          &:nth-child(3)
+            margin-left 3rem
+          &:nth-child(4)
+            margin-left 10rem
         &:nth-child(1)
+          height 70px
+        &:nth-child(2)
+          height 70px
+        &:nth-child(3)
           height 50px
         &:nth-child(4)
           width 130px
@@ -42,16 +56,6 @@
           img
             height unset
             width 100%
-        +from-width($xl)
-          &:nth-child(1)
-            margin-left 12rem
-            height 50px
-          &:nth-child(2)
-            margin-left 0
-          &:nth-child(3)
-            margin-left 4rem
-          &:nth-child(4)
-            margin-left 10rem
 
     &-right
       display grid
@@ -66,19 +70,19 @@
         top 15%
         right 0
       .HowWorks-exchanges-content-figure
+        &:nth-child(1)
+          height 100px
         &:nth-child(2)
-          height 90px
-        &:nth-child(3)
           height 70px
         &:nth-child(3)
           height 50px
         +from-width($xl)
           &:nth-child(1)
-            margin-right 10rem
+            margin-left 6rem
           &:nth-child(2)
-            margin-left 10rem
+            margin-left 16rem
           &:nth-child(3)
-            margin-left 8rem
+            margin-left 14rem
     &-content
       &-figure
         height 60px

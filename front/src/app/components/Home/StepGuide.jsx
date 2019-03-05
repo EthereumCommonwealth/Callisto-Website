@@ -40,7 +40,7 @@ const StepGuide = ({ intl }) => (
         <div className='StepGuide-video sixteen-nine'>
           <iframe
             className='content'
-            src='https://www.youtube.com/embed/COXBuwPpnMA'
+            src='https://www.youtube.com/embed/syDN3o5cJBM'
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
