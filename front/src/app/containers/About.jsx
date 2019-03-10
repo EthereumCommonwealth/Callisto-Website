@@ -2,12 +2,10 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 import Layout from '../components/commons/Layout';
 import Header from '../components/commons/Header';
-import StakingPromo from '../components/commons/StakingPromo';
 import Newsletter from '../components/commons/Newsletter';
 import Hero from '../components/Home/Hero';
 import InfoContent from '../components/Home/InfoContent';
 import Roadmap from '../components/Home/Roadmap';
-import WalletsContent from '../components/Home/WalletsContent';
 import MarketStatus from '../components/Home/MarketStatus';
 import Mining from '../components/Home/Mining';
 import MiningPools from '../components/Home/MiningPools';
@@ -25,13 +23,11 @@ const About = ({ match }) => {
         lang={match.params && match.params.lang ? match.params.lang : 'en'}
         fromLanding
       />
-      <StakingPromo lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <Hero lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <InfoContent
         lang={match.params && match.params.lang ? match.params.lang : 'en'}
       />
       <Roadmap />
-      <WalletsContent />
       <MarketStatus />
       <Mining />
       <MiningPools />

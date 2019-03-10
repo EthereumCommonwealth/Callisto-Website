@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { Element } from 'react-scroll';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import SectionHeading from '../commons/SectionHeading';
-import ExchangeList from './ExchangeList';
 
 class MarketStatus extends PureComponent {
 
@@ -93,7 +92,6 @@ class MarketStatus extends PureComponent {
             </div>
           </div>
         </div>
-        <ExchangeList />
       </Element>
     );
   }
