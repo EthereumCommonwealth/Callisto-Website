@@ -44,6 +44,11 @@ class Header extends PureComponent {
       //   type: this.props.fromLanding ? 'scroll' : 'router',
       // },
       {
+        title: this.props.intl.formatMessage({ id: 'ColdStaking', defaultMessage: 'Cold Staking' }),
+        url: this.props.lang === 'en' ? '/' : `/${this.props.lang}/`,
+        type: 'router',
+      },
+      {
         title: this.props.intl.formatMessage({ id: 'Audit', defaultMessage: 'Security Audits' }),
         url: this.props.lang === 'en' ? '/smart-contract-audit/' : `/${this.props.lang}/smart-contract-audit/`,
         type: 'router',
