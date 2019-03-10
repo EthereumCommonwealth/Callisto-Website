@@ -6,7 +6,6 @@ import Newsletter from '../components/commons/Newsletter';
 import Hero from '../components/Home/Hero';
 import InfoContent from '../components/Home/InfoContent';
 import Roadmap from '../components/Home/Roadmap';
-import MarketStatus from '../components/Home/MarketStatus';
 import Mining from '../components/Home/Mining';
 import MiningPools from '../components/Home/MiningPools';
 import Team from '../components/Home/Team';
@@ -28,7 +27,6 @@ const About = ({ match }) => {
         lang={match.params && match.params.lang ? match.params.lang : 'en'}
       />
       <Roadmap />
-      <MarketStatus />
       <Mining />
       <MiningPools />
       <Team />

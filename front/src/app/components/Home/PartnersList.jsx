@@ -10,6 +10,16 @@ const PartnersList = ({ exchanges, intl }) => (
       />
       <div className='PartnersList-content'>
         <figure className='PartnersList-content-figure'>
+          <a href='https://guarda.co/' target='_blank'>
+            <img src='/image/partners/guarda.svg' alt='Coinomi' />
+          </a>
+        </figure>
+        <figure className='PartnersList-content-figure'>
+          <a href='https://trustwallet.com/dapp/' target='_blank'>
+            <img src='/image/partners/trust.png' alt='Coinomi' />
+          </a>
+        </figure>
+        <figure className='PartnersList-content-figure'>
           <a href='https://www.coinomi.com/' target='_blank'>
             <img src='/image/partners/coinomi-logo.png' alt='Coinomi' />
           </a>
