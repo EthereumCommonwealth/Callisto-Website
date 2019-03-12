@@ -72,6 +72,7 @@ front/src/server/public/stylus/
 front/src/server/public/main.*
 front/src/server/public/vendor.*
 front/src/server/public/image
+front/src/server/public/assets
 
 *.pyc
 .cache/

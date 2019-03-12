@@ -133,7 +133,7 @@ module.exports = {
     new ExtractTextPlugin('[name].css', { allChunks: true }),
     new CompressionPlugin({
       test: /\.js$|\.css$/,
-      asset: '[path].gz'
+      asset: 'assets/[path].gz'
     }),
   ],
 }
