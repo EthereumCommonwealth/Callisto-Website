@@ -36,21 +36,29 @@
       .HowWorks-exchanges-content-figure
         +from-width($xl)
           &:nth-child(1)
+            display none
+          &:nth-child(2)
             margin-left 12rem
             height 50px
-          &:nth-child(2)
-            margin-left 2rem
           &:nth-child(3)
-            margin-left 3rem
+            margin-left 2rem
           &:nth-child(4)
+            margin-left 3rem
+          &:nth-child(5)
             margin-left 10rem
         &:nth-child(1)
-          height 70px
+          width 150px
+          height unset
+          img
+            width 100%
+            height unset
         &:nth-child(2)
-          height 70px
-        &:nth-child(3)
           height 50px
+        &:nth-child(3)
+          height 70px
         &:nth-child(4)
+          height 50px
+        &:nth-child(5)
           width 130px
           height unset
           img
@@ -171,5 +179,15 @@
       padding 1rem
       display block
       position absolute
-      left 38%
+      left 37%
       font-size 24px
+    .HowWorks
+      &-exchanges
+        &-content
+          &-figure
+            width 250px
+            height unset
+            a
+              width 100%
+              img
+                width 100%

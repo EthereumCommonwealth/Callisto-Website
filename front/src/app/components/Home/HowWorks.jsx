@@ -28,6 +28,11 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
         <div className='HowWorks-step-content'>
           <div className='HowWorks-exchanges'>
             <div className='HowWorks-exchanges-left'>
+              <figure className='HowWorks-exchanges-content-figure bitfinex-logo'>
+                <a href='https://www.bitfinex.com' target='_blank'>
+                  <img src='/image/exchanges/bitfinex.svg' alt='bitfinex' />
+                </a>
+              </figure>
               <figure className='HowWorks-exchanges-content-figure'>
                 <a href='https://hitbtc.com/exchange/CLO-to-BTC' target='_blank'>
                   <img src='/image/exchanges/hitBTC.png' alt='hitBTC' />
@@ -50,7 +55,13 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
               </figure>
             </div>
             <div>
-              <span className='HowWorks-nextRelease square'>Listing / March 11th</span>
+              <span className='HowWorks-nextRelease'>
+                <figure className='HowWorks-exchanges-content-figure'>
+                  <a href='https://www.bitfinex.com' target='_blank'>
+                    <img src='/image/exchanges/bitfinex.svg' alt='bitfinex' />
+                  </a>
+                </figure>
+              </span>
               <figure className='HowWorks-step-content-figure'>
                 <img src='/image/exchanges-list-v2.svg' alt='CLO supported exchanges'/>
               </figure>
