@@ -148,14 +148,14 @@ class OrderAuditModal extends PureComponent {
                 <label htmlFor='platform'>
                   {messages.OrderAuditModalPlatformLabel}
                 </label>
-                {typeof window !== 'undefined' && selectedPlatform.length > 0 ? (
+                {typeof window !== 'undefined' && selectedPlatform && selectedPlatform.length > 0 ? (
                   <div className='OrderAuditModal-platforms' onMouseLeave={this.handleClose}>
                     <a className='OrderAuditModal-platforms-selected' onClick={this.handleOpen}>
                       {selectedPlatform[1]} ({selectedPlatform[0]})
                     </a>
                     {platformOpen ? (
                       <div className='OrderAuditModal-platforms-elements'>
-                        {audit.platform.length > 0 ? audit.platform.map(auditElem => {
+                        {audit && audit.platform && audit.platform.length > 0 ? audit.platform.map(auditElem => {
                           if (auditElem === selectedPlatform) return null
                           return (
                             <a

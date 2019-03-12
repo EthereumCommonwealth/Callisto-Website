@@ -90,7 +90,7 @@ if (ENV.isDevelopment()) {
     next();
   });
   app.use(helmet());
-  app.use(helmet.permittedCrossDomainPolicies())
+  app.use(helmet.permittedCrossDomainPolicies());
   app.disable('x-powered-by');
 }
 app.use(express.static(__dirname + '/public'));
