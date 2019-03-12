@@ -56,13 +56,6 @@ class OrderAuditModal extends PureComponent {
       csrf_token: this.props.audit.csrf_token,
     })
       .then((response) => {
-        window.tap('conversion', d.getTime(), {}, {
-          meta_data: {
-            email: this.state.email,
-            sourceCode: this.state.sourceCode,
-            platform: this.state.platform,
-          }
-        });
         this.setState({
           description: '',
           sourceCode: '',

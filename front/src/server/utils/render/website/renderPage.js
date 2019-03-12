@@ -54,13 +54,6 @@ const renderPage = (html, preloadedState, headers, hashManifest) => {
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,
             maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
           <link rel="stylesheet" href="${hashManifest[1]}" type="text/css"/>
-          <script src="https://script.tapfiliate.com/tapfiliate.js" type="text/javascript" async></script>
-          <script type="text/javascript">
-            (function(t,a,p){t.TapfiliateObject=a;t[a]=t[a]||function(){ (t[a].q=t[a].q||[]).push(arguments)}})(window,'tap');
-
-            tap('create', '7960-ef6c9b');
-            tap('detect');
-          </script>
           ${headers.fromBlog ? '<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">' : ''}
           ${headers.fromBlog ? '<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>' : ''}
           ${headers.fromBlog ? '<script>hljs.initHighlightingOnLoad();</script>' : ''}
