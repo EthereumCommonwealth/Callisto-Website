@@ -30,7 +30,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
             <div className='HowWorks-exchanges-left'>
               <figure className='HowWorks-exchanges-content-figure bitfinex-logo'>
                 <a href='https://www.bitfinex.com' target='_blank'>
-                  <img src='/image/exchanges/bitfinex.svg' alt='bitfinex' />
+                  <img src='/image/exchanges/bitfinex_black.svg' alt='bitfinex' />
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
@@ -58,7 +58,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
               <span className='HowWorks-nextRelease'>
                 <figure className='HowWorks-exchanges-content-figure'>
                   <a href='https://www.bitfinex.com' target='_blank'>
-                    <img src='/image/exchanges/bitfinex.svg' alt='bitfinex' />
+                    <img src='/image/exchanges/bitfinex_black.svg' alt='bitfinex' />
                   </a>
                 </figure>
               </span>
