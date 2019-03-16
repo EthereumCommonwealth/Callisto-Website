@@ -150,38 +150,6 @@ app.post('/create-audit-request/', createAudit);
 app.post('/audit-login/', login);
 app.post('/login-check/', loginCheck);
 app.post('/comment-submit/', commentSubmit);
-// app.post('/buy-clo/', (req, res) => {
-//   const transporter = nodeMailer.createTransport({
-//     host: 'smtp.gmail.com',
-//     port: 465,
-//     secure: true,
-//     auth: {
-//       user: email,
-//       pass: pass,
-//     },
-//   });
-//   const mailOptions = {
-//     from: 'Callisto Website <hi@callisto.network.com>',
-//     to: 'yograterol@callisto.network, s@callisto.network',
-//     replyTo: req.body.email,
-//     subject: `Buy request from ${req.body.email}`,
-//     html: `
-//       <p>A new Buy Request has been received.<p>
-//       <p>Description: </p>
-//       <p>Email ${req.body.email}</p>
-//       <p>Receipt Address ${req.body.receipt}</p>
-//       <p>Price ${req.body.price}</p>
-//       <p>CLO Amount ${req.body.cloAmmount}</p>
-//       <p>BTC Amount ${req.body.btcAmount}</p>
-//     `
-//   };
-//   transporter.sendMail(mailOptions, (error, info) => {
-//     if (error) res.status(501).send(error)
-//     res.status(200).send({
-//       succes: true,
-//     });
-//   });
-// });
 app.use((req, res, next) => {
   res.status(404);
   prefetchData(req, res, next);

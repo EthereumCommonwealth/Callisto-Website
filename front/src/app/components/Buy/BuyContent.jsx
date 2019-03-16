@@ -114,6 +114,7 @@ class BuyContent extends PureComponent {
                       name='email'
                       placeholder='Your email'
                       className='BuyContent-form-elem-input-detail'
+                      defaultValue=''
                       required
                     />
                   </div>
@@ -124,6 +125,7 @@ class BuyContent extends PureComponent {
                       name='receipt'
                       placeholder='Receipt Address'
                       className='BuyContent-form-elem-input-detail'
+                      defaultValue=''
                       required
                     />
                   </div>
