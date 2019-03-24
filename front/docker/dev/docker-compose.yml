@@ -1,0 +1,17 @@
+version: '3'
+services:
+  callisto-front:
+    image: callisto/callisto-website-front
+    volumes:
+      - ../../:/app/
+    ports:
+      - '4000:3001'
+    container_name: callisto-front
+    environment:
+      - TERM=xterm
+    networks:
+      - callisto
+
+networks:
+  callisto:
+    external: true
