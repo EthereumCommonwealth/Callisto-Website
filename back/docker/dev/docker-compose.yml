@@ -12,7 +12,9 @@ services:
     environment:
       - TERM=xterm
     networks:
-      - callisto
+      callisto:
+        aliases:
+          - callisto-website
   callisto-postgresql:
     image: postgres:10.4
     ports:
