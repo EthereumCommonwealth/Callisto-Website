@@ -72,16 +72,8 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
                   <img src='/image/exchanges/stex.svg' alt='stex' />
                 </a>
               </figure>
-              <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://www.coinbene.com/exchange.html#/exchange?pairId=CLOBTC' target='_blank'>
-                  <img src='/image/exchanges/coinbene.png' alt='coinbene' />
-                </a>
-              </figure>
-              <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://www.idax.mn/#/' target='_blank'>
-                  <img src='/image/exchanges/idax.svg' alt='idax' />
-                </a>
-              </figure>
+              <div className='HowWorks-exchanges-content-figure' />
+              <div className='HowWorks-exchanges-content-figure' />
             </div>
           </div>
           <div className='HowWorks-pricing'>
