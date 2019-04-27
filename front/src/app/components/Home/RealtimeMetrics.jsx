@@ -32,7 +32,7 @@ class RealtimeMetrics extends Component {
             <span className='RealtimeMetrics-text-detail'>Monthly interest rate</span>
             <div className='RealtimeMetrics-metric'>
               <h3 className='RealtimeMetrics-metric-amount orange'>
-                3.6
+                2.9
               </h3>
               <span className='RealtimeMetrics-metric-detail orange'>%</span>
             </div>
