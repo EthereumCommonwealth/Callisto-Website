@@ -18,16 +18,17 @@ class LanguageAdmin(admin.ModelAdmin):
     actions = ['generate_json']
 
     def generate_json(self, request, queryset):
-        response = HttpResponse(content_type='application/json')
-        response['Content-Disposition'] = 'attachment; filename="lang.json"'
         with open('lang.json', 'w') as lang:
             for obj in queryset:
+                response = HttpResponse(content_type='application/json')
+                response['Content-Disposition'] = 'attachment; filename="{}_lang.json"'.format(
+                    obj.slug)
                 data = {
                     obj.slug: obj.translation
                 }
                 json.dump(data, response, indent=2)
 
-        return response
+                return response
 
 
 class TranslationKeyAdmin(admin.ModelAdmin):
