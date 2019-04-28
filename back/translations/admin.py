@@ -9,9 +9,9 @@ class TranslationInline(admin.TabularInline):
 
 class LanguageAdmin(admin.ModelAdmin):
     list_display = ('language_name', )
-    inlines = [
-        TranslationInline,
-    ]
+    # inlines = [
+    #     TranslationInline,
+    # ]
 
 
 class TranslationKeyAdmin(admin.ModelAdmin):
