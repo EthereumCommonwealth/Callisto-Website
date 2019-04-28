@@ -83,30 +83,37 @@ class Language(models.Model):
 
     @classmethod
     def get_translations(cls, language_slug):
-        cache_key = "translations_{}".format(language_slug)
-
-        translations = cache.get(cache_key)
-        if translations:
-            return translations
-
+        # cache_key = "translations_{}".format(language_slug)
+        #
+        # translations = cache.get(cache_key)
+        # if translations:
+        #     return translations
+        #
         language = cls.objects.filter(
-            slug=language_slug)
-        if not language.exists():
+            slug=language_slug).first()
+        if not language:
             language = cls.objects.filter(
-                slug='en')
-
-        language = language.first()
-        keys = {}
-        for key in language.translations.all():
-            keys[key.key.slug] = key.translation
-
+                slug='en').first()
+        #
+        # language = language.first()
+        # keys = {}
+        # for key in language.translations.all():
+        #     keys[key.key.slug] = key.translation
+        #
+        # translations = {
+        #     'slug': language.slug,
+        #     'languageName': language.language_name,
+        #     'keys': keys
+        # }
+        # cache_key = "translations_{}".format(language.slug)
+        # cache.set(cache_key, translations, 86400)
+        # return translations
         translations = {
             'slug': language.slug,
             'languageName': language.language_name,
-            'keys': keys
+            'keys': language.translation
         }
-        cache_key = "translations_{}".format(language.slug)
-        cache.set(cache_key, translations, 86400)
+
         return translations
 
 
