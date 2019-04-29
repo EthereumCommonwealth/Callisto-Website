@@ -1,6 +1,6 @@
 version: '3'
 services:
-  callisto:
+  callisto-website:
     image: callisto/callisto-website
     volumes:
       - ~/.ssh/id_rsa.pub:/tmp/authorized_keys
