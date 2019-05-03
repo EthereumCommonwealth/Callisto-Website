@@ -12,6 +12,7 @@ import renderPage from './renderPage';
 
 const handleRender = (req, res, initialState, messages, pageContext) => {
   const context = {}
+  const lang = req.params.lang ? req.params.lang : 'en';
   const store = createStore(rootReducer, initialState, compose(applyMiddleware(thunk)));
   const html = renderToString(
     <Provider store={store}>
@@ -24,7 +25,7 @@ const handleRender = (req, res, initialState, messages, pageContext) => {
     </Provider>
   );
   const preloadedState = store.getState();
-  res.send(renderPage(html, preloadedState, headersInfo(req.path, messages, pageContext), req.hashManifest));
+  res.send(renderPage(html, preloadedState, headersInfo(req.path, messages, pageContext), req.hashManifest, lang));
 }
 
 export default handleRender;

@@ -1,7 +1,7 @@
-const renderPage = (html, preloadedState, headers, hashManifest) => {
+const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
   return (`
     <!doctype html>
-      <html>
+      <html lang=${lang}>
         <head>
           <title>${headers.title}</title>
           ${process.env.NODE_ENV !== 'production' ? '<meta name="robots" content="noindex,nofollow">' : ''}
@@ -51,7 +51,7 @@ const renderPage = (html, preloadedState, headers, hashManifest) => {
           <link rel="alternate" href="https://callisto.network/ko${headers.baseUrl}" hreflang="ko" />
           <link rel="alternate" href="https://callisto.network/ru${headers.baseUrl}" hreflang="ru" />
           <link rel="alternate" href="https://callisto.network/zh${headers.baseUrl}" hreflang="zh-hans" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,
+          <meta name="viewport" content="width=device-width, initial-scale=1,
             maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
           <link rel="stylesheet" href="${hashManifest[1]}" type="text/css"/>
           ${headers.fromBlog ? '<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">' : ''}

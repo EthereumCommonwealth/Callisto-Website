@@ -13,6 +13,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
       <div className='HowWorks-video sixteen-nine'>
         <iframe
           className='content'
+          title='Calisto Network Cold Staking'
           src='https://www.youtube.com/embed/hjRE6u-XeAU'
           frameBorder='0'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'

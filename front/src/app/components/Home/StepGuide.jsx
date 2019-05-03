@@ -13,6 +13,7 @@ const StepGuide = ({ intl }) => (
         <div className='StepGuide-video sixteen-nine'>
           <iframe
             className='content'
+            title='Guarda Wallet tutorial'
             src='https://www.youtube.com/embed/kM5ZYTlTU98'
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
@@ -22,6 +23,7 @@ const StepGuide = ({ intl }) => (
         <div className='StepGuide-video sixteen-nine'>
           <iframe
             className='content'
+            title='Coinomi tutorial'
             src='https://www.youtube.com/embed/-jldPYhHAb0'
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
@@ -31,6 +33,7 @@ const StepGuide = ({ intl }) => (
         <div className='StepGuide-video sixteen-nine'>
           <iframe
             className='content'
+            title='Trust Wallet tutorial'
             src='https://www.youtube.com/embed/HgInjG6ywtQ'
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
@@ -40,6 +43,7 @@ const StepGuide = ({ intl }) => (
         <div className='StepGuide-video sixteen-nine'>
           <iframe
             className='content'
+            title='Callisto Oficcial Wallet tutorial'
             src='https://www.youtube.com/embed/syDN3o5cJBM'
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
@@ -49,6 +53,7 @@ const StepGuide = ({ intl }) => (
         <div className='StepGuide-video sixteen-nine'>
           <iframe
             className='content'
+            title='Magnum Wallet tutorial'
             src='https://www.youtube.com/embed/O4XDpS09k-s'
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
