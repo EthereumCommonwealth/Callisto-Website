@@ -38,6 +38,7 @@ const Newsletter = ({ intl }) => (
               name='b_dcb90634d3c123520c47ae053_6dbdcbff40'
               tabIndex='-1'
               value=''
+              readOnly
             />
           </div>
           <div>

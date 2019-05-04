@@ -3,7 +3,7 @@ const path = require('path');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const nib = require('nib');
 const rupture = require('rupture');
 
@@ -126,7 +126,7 @@ module.exports = {
     new ExtractTextPlugin('[name].css', { allChunks: true }),
     new CompressionPlugin({
       test: /\.js$|\.css$/,
-      asset: '[path].gz'
+      filename: '[path].gz'
     }),
     // new BundleAnalyzerPlugin(),
   ],
