@@ -115,7 +115,6 @@ export default {
         audit = await axios.get(`${process.env.AUDIT_URL}audit-request/create/`);
         audit = audit.data;
       } catch (err) {
-        console.log(err)
         audit = {
           platform: [],
           csrf_token: null,
