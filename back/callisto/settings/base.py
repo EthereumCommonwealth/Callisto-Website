@@ -45,6 +45,15 @@ INSTALLED_APPS = [
     'partner',
 ]
 
+if os.environ.get('CELERY_CALLISTO', False):
+    remove_apps = [
+        'django.contrib.auth',
+        'django.contrib.sessions',
+        'django.contrib.staticfiles',
+    ]
+    for aplication in remove_apps:
+        INSTALLED_APPS.remove(aplication)
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -169,10 +178,14 @@ CACHES = {
     }
 }
 
+# Celery Config
+BROKER_URL = os.environ.get(
+    'CELERY_BROKER_URL_CALLISTO', 'redis://callisto-website-celery:6379/0'
+)
+CELERY_RESULT_BACKEND = os.environ.get(
+    'CELERY_RESULT_BACKEND', 'redis://callisto-website-celery:6379'
+)
+CELERY_TIMEZONE = 'America/Bogota'
 
-BROKER_URL = 'redis://redis:6379/0'
-CELERY_RESULT_BACKEND = 'redis://redis:6379'
-CELERY_ACCEPT_CONTENT = ['application/json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240
+
