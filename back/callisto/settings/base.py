@@ -171,20 +171,17 @@ LOGGING = {
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://redis:6379',
+        'LOCATION': 'redis://redis:6379/0',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
     }
 }
 
-# Celery Config
-BROKER_URL = os.environ.get(
-    'CELERY_BROKER_URL_CALLISTO', 'redis://callisto-website-celery:6379/0'
-)
-CELERY_RESULT_BACKEND = os.environ.get(
-    'CELERY_RESULT_BACKEND', 'redis://callisto-website-celery:6379'
-)
-CELERY_TIMEZONE = 'America/Bogota'
+
+BROKER_URL = 'redis://redis:6379/1'
+CELERY_RESULT_BACKEND = 'redis://redis:6379'
 
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240
+
+
