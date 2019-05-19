@@ -43,16 +43,17 @@ INSTALLED_APPS = [
     'translations',
     'financial',
     'partner',
+    'price_recording',
+    'taskapp.celery.CeleryConfig',
 ]
 
 if os.environ.get('CELERY_CALLISTO', False):
     remove_apps = [
-        'django.contrib.auth',
         'django.contrib.sessions',
         'django.contrib.staticfiles',
     ]
-    for aplication in remove_apps:
-        INSTALLED_APPS.remove(aplication)
+    for application in remove_apps:
+        INSTALLED_APPS.remove(application)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
