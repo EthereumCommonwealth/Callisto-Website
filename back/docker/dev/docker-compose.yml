@@ -31,7 +31,7 @@ services:
   celery-callisto-website:
     image: callisto/callisto-website
     container_name: callisto-website-celery
-    entrypoint: celery -A taskapp worker --workdir=/app/project/ --loglevel=INFO --beat
+    entrypoint: celery -A taskapp worker --workdir=/app/back/ --loglevel=INFO --beat
     volumes:
       - ../../../:/app/
     environment:
