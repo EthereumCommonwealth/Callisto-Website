@@ -23,6 +23,6 @@ class CeleryConfig(AppConfig):
 app.conf.beat_schedule = {
     'get_api_data': {
         'task': 'price_recording.get_api_data',
-        'schedule': crontab()
+        'schedule': crontab(minute='*/15')
     },
 }
