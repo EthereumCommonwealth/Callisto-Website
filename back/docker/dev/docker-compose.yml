@@ -36,6 +36,7 @@ services:
       - ../../../:/app/
     environment:
       - CELERY_CALLISTO=True
+      - COINMARKETCAP_API_KEY=${COINMARKETCAP_API_KEY}
     networks:
       - callisto
   redis:
