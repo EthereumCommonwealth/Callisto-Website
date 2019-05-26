@@ -27,7 +27,11 @@ class TeamAPIView(View):
                     [
                         {
                             'prefix': network.network.icon,
-                            'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
+                            'url': (
+                                'mailto:{}'.format(network.url)
+                                if network.network.name == 'Email'
+                                else network.url
+                            )
                         } for network in member.membersocialnetwork_set.filter(
                             active=True
                         )
@@ -56,7 +60,11 @@ class AdvisorTeamAPIView(View):
                     [
                         {
                             'prefix': network.network.icon,
-                            'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
+                            'url': (
+                                'mailto:{}'.format(network.url)
+                                if network.network.name == 'Email'
+                                else network.url
+                            )
                         } for network in member.membersocialnetwork_set.filter(
                             active=True
                         )
@@ -220,9 +228,13 @@ class HomeAPIView(View):
                     [
                         {
                             'prefix': network.network.icon,
-                            'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
+                            'url': (
+                                'mailto:{}'.format(network.url)
+                                if network.network.name == 'Email'
+                                else network.url
+                            )
                         } for network in member.membersocialnetwork_set.filter(
-                        active=True)
+                            active=True)
                     ]
 
             } for member in members
@@ -238,10 +250,13 @@ class HomeAPIView(View):
                     [
                         {
                             'prefix': network.network.icon,
-                            'url': 'mailto:{}'.format(
-                                network.url) if network.network.name == 'Email' else network.url
+                            'url': (
+                                'mailto:{}'.format(network.url)
+                                if network.network.name == 'Email'
+                                else network.url
+                            )
                         } for network in member.membersocialnetwork_set.filter(
-                        active=True)
+                            active=True)
                     ]
 
             } for member in advisors
@@ -270,7 +285,7 @@ class HomeAPIView(View):
                         'name': wallet.name,
                         'url': wallet.url,
                         'cs': wallet.cold_staking
-                    } for wallet in wallet_platform.wallet_set.all().order_by('id')
+                    } for wallet in wallet_platform.wallet_set.order_by('id')
                 ]
             } for wallet_platform in wallets
         ]
