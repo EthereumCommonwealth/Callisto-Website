@@ -19,6 +19,7 @@ const Newsletter = ({ intl }) => (
           target='_blank'
         >
           <div className='mc-field-group'>
+            <label htmlFor='EMAIL' />
             <input
               className='Newsletter-form-input required email'
               type='email'
@@ -33,6 +34,7 @@ const Newsletter = ({ intl }) => (
             <div className='response' id='mce-success-response' style={{ display: 'none' }} />
           </div>
           <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden='true'>
+            <label htmlFor='b_dcb90634d3c123520c47ae053_6dbdcbff40' />
             <input
               type='text'
               name='b_dcb90634d3c123520c47ae053_6dbdcbff40'

@@ -64,20 +64,21 @@ const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- End Google Tag Manager (noscript) -->
             <div id="callisto-network">${html}</div>
-          <script>
+          <script async>
             window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
           </script>
           <!-- Global site tag (gtag.js) - Google Analytics -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140785880-1"></script>
-          <script>
+          <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-140785880-1"></script>
+          <script defer>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', 'UA-140785880-1');
           </script>
-          <script src="${hashManifest[2]}" type="text/javascript"></script>
-          <script src="${hashManifest[0]}" type="text/javascript"></script>
+          <script src="${hashManifest[2]}" async type="text/javascript"></script>
+          <script src="${hashManifest[0]}" async type="text/javascript"></script>
+          <script src="/lazysizes.min.js" async></script>
         </body>
     </html>
   `);
