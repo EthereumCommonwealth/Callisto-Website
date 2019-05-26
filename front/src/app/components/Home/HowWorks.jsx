@@ -18,6 +18,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
           frameBorder='0'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
+          loading='lazy'
         />
       </div>
       <div className='HowWorks-step'>

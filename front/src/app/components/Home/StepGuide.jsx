@@ -18,6 +18,7 @@ const StepGuide = ({ intl }) => (
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
+            loading='lazy'
           />
         </div>
         <div className='StepGuide-video sixteen-nine'>
@@ -28,6 +29,7 @@ const StepGuide = ({ intl }) => (
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
+            loading='lazy'
           />
         </div>
         <div className='StepGuide-video sixteen-nine'>
@@ -38,6 +40,7 @@ const StepGuide = ({ intl }) => (
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
+            loading='lazy'
           />
         </div>
         <div className='StepGuide-video sixteen-nine'>
@@ -48,6 +51,7 @@ const StepGuide = ({ intl }) => (
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
+            loading='lazy'
           />
         </div>
         <div className='StepGuide-video sixteen-nine'>
@@ -58,6 +62,7 @@ const StepGuide = ({ intl }) => (
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
+            loading='lazy'
           />
         </div>
       </div>
