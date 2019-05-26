@@ -67,14 +67,14 @@ const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
           <script>
             window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
           </script>
-          <!-- Global site tag (gtag.js) - Google Ads: 794594304 -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-794594304"></script>
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140785880-1"></script>
           <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'AW-794594304');
+            gtag('config', 'UA-140785880-1');
           </script>
           <script src="${hashManifest[2]}" type="text/javascript"></script>
           <script src="${hashManifest[0]}" type="text/javascript"></script>
