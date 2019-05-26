@@ -35,7 +35,7 @@ const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
           <!-- End Google Tag Manager -->
           <meta
             name="google-site-verification"
-            content="4vOPk-f3ZKRulW2kk0HxXcR1ok_7XeHVw9oG4M8dcGU"
+            content="DGlaSsv4dI_-g7elZKLhw0h-TIcjMOYozos-ifxznIU"
           />
           <link
             rel="stylesheet"
