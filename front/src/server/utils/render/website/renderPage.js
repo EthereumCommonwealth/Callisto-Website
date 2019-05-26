@@ -31,7 +31,7 @@ const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-5XT2RN7');</script>
+          })(window,document,'script','dataLayer','GTM-WB5DB4V');</script>
           <!-- End Google Tag Manager -->
           <meta
             name="google-site-verification"
@@ -52,18 +52,18 @@ const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
           <link rel="alternate" href="https://callisto.network/ru${headers.baseUrl}" hreflang="ru" />
           <link rel="alternate" href="https://callisto.network/zh${headers.baseUrl}" hreflang="zh-hans" />
           <meta name="viewport" content="width=device-width, initial-scale=1,
-            maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
+            maximum-scale=2, minimum-scale=1, shrink-to-fit=no">
           <link rel="stylesheet" href="${hashManifest[1]}" type="text/css"/>
           ${headers.fromBlog ? '<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">' : ''}
           ${headers.fromBlog ? '<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>' : ''}
           ${headers.fromBlog ? '<script>hljs.initHighlightingOnLoad();</script>' : ''}
         </head>
         <body>
-          <!-- Google Tag Manager (noscript) -->
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XT2RN7"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-          <!-- End Google Tag Manager (noscript) -->
-           <div id="callisto-network">${html}</div>
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB5DB4V"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+            <div id="callisto-network">${html}</div>
           <script>
             window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
           </script>
