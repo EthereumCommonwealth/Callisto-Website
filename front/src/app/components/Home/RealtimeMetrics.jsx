@@ -39,7 +39,7 @@ class RealtimeMetrics extends Component {
             </span>
             <div className='RealtimeMetrics-metric'>
               <h3 className='RealtimeMetrics-metric-amount orange'>
-                2.9
+                2.5
               </h3>
               <span className='RealtimeMetrics-metric-detail orange'>%</span>
             </div>
