@@ -21,6 +21,7 @@ const SingleAdvisor = ({ name, position, socialNetworks, avatar }) => (
           className='TeamMember-social-item'
           href={network.url}
           target='_blank'
+          rel='noopener noreferrer'
         >
           <i className={network.prefix} />
         </a>

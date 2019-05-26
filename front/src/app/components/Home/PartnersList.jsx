@@ -10,27 +10,27 @@ const PartnersList = ({ exchanges, intl }) => (
       />
       <div className='PartnersList-content'>
         <figure className='PartnersList-content-figure'>
-          <a href='https://trustwallet.com/dapp/' target='_blank'>
+          <a href='https://trustwallet.com/dapp/' target='_blank' rel='noopener noreferrer'>
             <img src='/image/partners/trust.png' alt='Coinomi' />
           </a>
         </figure>
         <figure className='PartnersList-content-figure'>
-          <a href='https://guarda.co/' target='_blank'>
+          <a href='https://guarda.co/' target='_blank' rel='noopener noreferrer'>
             <img src='/image/partners/guarda.svg' alt='Coinomi' />
           </a>
         </figure>
         <figure className='PartnersList-content-figure'>
-          <a href='https://www.coinomi.com/' target='_blank'>
+          <a href='https://www.coinomi.com/' target='_blank' rel='noopener noreferrer'>
             <img src='/image/partners/coinomi-logo.png' alt='Coinomi' />
           </a>
         </figure>
         <figure className='PartnersList-content-figure'>
-          <a href='https://entethalliance.org/' target='_blank'>
+          <a href='https://entethalliance.org/' target='_blank' rel='noopener noreferrer'>
             <img src='/image/partners/eea.png' alt='Enterprise Ethereum Alliance' />
           </a>
         </figure>
         <figure className='PartnersList-content-figure'>
-          <a href='https://www.smartcontractaudits.com/' target='_blank'>
+          <a href='https://www.smartcontractaudits.com/' target='_blank' rel='noopener noreferrer'>
             <img src='/image/partners/smart-contract-audits-logo.svg' alt='Smartcontractaudits' />
           </a>
         </figure>

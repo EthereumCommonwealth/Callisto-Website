@@ -31,27 +31,27 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
           <div className='HowWorks-exchanges'>
             <div className='HowWorks-exchanges-left'>
               <figure className='HowWorks-exchanges-content-figure bitfinex-logo'>
-                <a href='https://www.bitfinex.com' target='_blank'>
+                <a href='https://www.bitfinex.com' target='_blank' rel='noopener noreferrer'>
                   <img src='/image/exchanges/bitfinex_black.svg' alt='bitfinex' />
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://hitbtc.com/exchange/CLO-to-BTC' target='_blank'>
+                <a href='https://hitbtc.com/exchange/CLO-to-BTC' target='_blank' rel='noopener noreferrer'>
                   <img src='/image/exchanges/hitBTC.png' alt='hitBTC' />
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://sistemkoin.com/' target='_blank'>
+                <a href='https://sistemkoin.com/' target='_blank' rel='noopener noreferrer'>
                   <img src='/image/exchanges/sistemkoin.png' alt='sistemkoin' />
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://www.dobiexchange.com/en/trade/clo_btc' target='_blank'>
+                <a href='https://www.dobiexchange.com/en/trade/clo_btc' target='_blank' rel='noopener noreferrer'>
                   <img src='/image/exchanges/dobitrade.png' alt='dobitrade' />
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='http://simpleswap.io/' target='_blank'>
+                <a href='http://simpleswap.io/' target='_blank' rel='noopener noreferrer'>
                   <img src='/image/exchanges/simpleswap.png' alt='simpleswap' />
                 </a>
               </figure>
@@ -59,7 +59,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
             <div>
               <span className='HowWorks-nextRelease'>
                 <figure className='HowWorks-exchanges-content-figure'>
-                  <a href='https://www.bitfinex.com' target='_blank'>
+                  <a href='https://www.bitfinex.com' target='_blank' rel='noopener noreferrer'>
                     <img src='/image/exchanges/bitfinex_black.svg' alt='bitfinex' />
                   </a>
                 </figure>
@@ -70,7 +70,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
             </div>
             <div className='HowWorks-exchanges-right'>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://app.stex.com/?ref=14019577' target='_blank'>
+                <a href='https://app.stex.com/?ref=14019577' target='_blank' rel='noopener noreferrer'>
                   <img src='/image/exchanges/stex.svg' alt='stex' />
                 </a>
               </figure>

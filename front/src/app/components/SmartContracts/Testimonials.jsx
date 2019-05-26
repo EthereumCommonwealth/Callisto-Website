@@ -15,6 +15,7 @@ const Testimonials = ({ inProgress, completedAudits }) => (
             className='Testimonials-element-anchor'
             href='https://github.com/EthereumCommonwealth/Auditing/issues?q=is%3Aopen+is%3Aissue'
             target='_blank'
+            rel='noopener noreferrer'
           />
         </div>
         <div className='Testimonials-element square'>
@@ -26,6 +27,7 @@ const Testimonials = ({ inProgress, completedAudits }) => (
             className='Testimonials-element-anchor'
             href='https://github.com/EthereumCommonwealth/Auditing/issues?q=is%3Aissue+is%3Aclosed'
             target='_blank'
+            rel='noopener noreferrer'
           />
         </div>
       </div>

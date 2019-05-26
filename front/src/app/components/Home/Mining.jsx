@@ -12,7 +12,7 @@ const Mining = ({ intl }) => (
         description={intl.formatMessage({ id: 'MiningDescription' })}
       />
       <div className='Mining-cta'>
-        <a className='btn btn-green' href='https://stats.callisto.network/' target='_blank'>
+        <a className='btn btn-green' href='https://stats.callisto.network/' target='_blank' rel='noopener noreferrer'>
           <FormattedMessage id='CloStats' />
         </a>
       </div>

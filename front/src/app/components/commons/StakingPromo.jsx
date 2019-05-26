@@ -22,6 +22,7 @@ class StakingPromo extends Component {
           href='https://callisto.network/blog/post/cold-staking-a-step-by-step-tutorial/'
           className='StakingPromo-anchor'
           target='_blank'
+          rel='noopener noreferrer'
         />
       </div>
     )

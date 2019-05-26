@@ -17,6 +17,7 @@ const SingleWallet = ({ icon, title, options, fromHome }) => (
             className='btn btn-green'
             href={wallet.url}
             target='_blank'
+            rel='noopener noreferrer'
           >
             {wallet.name} {wallet.cs && !fromHome ? '*' : null}
           </a>

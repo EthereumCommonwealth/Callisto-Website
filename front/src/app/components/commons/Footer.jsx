@@ -138,6 +138,7 @@ class Footer extends PureComponent {
                     className='Footer-top-list-element'
                     href={elem.url}
                     target='_blank'
+                    rel='noopener noreferrer'
                   >
                     {elem.title}
                   </a>
@@ -182,6 +183,7 @@ class Footer extends PureComponent {
                     className='Footer-top-list-element'
                     href={elem.url}
                     target='_blank'
+                    rel='noopener noreferrer'
                   >
                     {elem.title}
                   </a>
@@ -224,6 +226,7 @@ class Footer extends PureComponent {
                     className='Footer-top-list-element'
                     href={elem.url}
                     target='_blank'
+                    rel='noopener noreferrer'
                   >
                     {elem.title}
                   </a>
@@ -251,6 +254,7 @@ class Footer extends PureComponent {
               <a
                 href='https://github.com/EthereumCommonwealth/Callisto-Media-Kit'
                 target='_blank'
+                rel='noopener noreferrer'
                 className='Footer-bottom-content-element'
               >
                 <FormattedMessage id='Mediakit' />

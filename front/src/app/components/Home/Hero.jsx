@@ -18,6 +18,7 @@ const Hero = ({ intl, lang }) => (
           <a
             href='https://whitepaper.callisto.network/'
             target='_blank'
+            rel='noopener noreferrer'
             className='btn btn-green'
           >
             <FormattedMessage id='WhitePaper' />

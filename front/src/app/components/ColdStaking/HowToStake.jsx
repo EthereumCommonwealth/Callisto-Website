@@ -27,6 +27,7 @@ const HowToStake = ({ intl }) => (
           <a
             href='https://callisto.network/blog/post/cold-staking-a-step-by-step-tutorial/'
             target='_blank'
+            rel='noopener noreferrer'
             className='btn btn-green'
           >
             <FormattedMessage id='ReadMore' />

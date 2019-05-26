@@ -9,6 +9,7 @@ const BuyMineBanner = ({ lang }) => (
         <a
           href='https://github.com/EthereumCommonwealth/Proposals/issues'
           target='_blank'
+          rel='noopener noreferrer'
           className='btn btn-green'
         >
           <FormattedMessage id='EarnSome'/> CLO

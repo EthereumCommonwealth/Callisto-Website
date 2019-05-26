@@ -31,12 +31,14 @@ const SmartHero = ({ intl, openModal }) => (
             onClick={openModal}
             target='_blank'
             className='btn btn-green'
+            rel='noopener noreferrer'
           >
             <FormattedMessage id='SmartHeroAudit' />
           </a>
           <a
             href='https://github.com/EthereumCommonwealth/Proposals/issues/2/'
             target='_blank'
+            rel='noopener noreferrer'
             className='btn btn-transparent-green'
           >
             <FormattedMessage id='SmartHeroBecomeAuditor' />

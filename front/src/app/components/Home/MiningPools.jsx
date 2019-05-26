@@ -18,6 +18,7 @@ const MiningPools = ({ intl, miningPools, blockExplorers }) => (
               key={pool.name}
               className='btn btn-transparent-green'
               target='_blank'
+              rel='noopener noreferrer'
             >
               {pool.name}
             </a>
@@ -35,6 +36,7 @@ const MiningPools = ({ intl, miningPools, blockExplorers }) => (
               href={explorer.url}
               className='btn btn-transparent-green'
               target='_blank'
+              rel='noopener noreferrer'
             >
               {explorer.name}
             </a>

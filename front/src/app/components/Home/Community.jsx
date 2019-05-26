@@ -37,6 +37,7 @@ class Community extends PureComponent {
               className='Community-list-element'
               href='https://github.com/EthereumCommonwealth'
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-github' />
               <span className='Community-list-element-text'>
@@ -47,6 +48,7 @@ class Community extends PureComponent {
               className='Community-list-element'
               href='http://reddit.com/r/CallistoCrypto'
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-reddit-alien' />
               <span className='Community-list-element-text'>
@@ -57,6 +59,7 @@ class Community extends PureComponent {
               className='Community-list-element'
               href='https://twitter.com/CallistoSupport'
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-twitter' />
               <span className='Community-list-element-text'>
@@ -67,6 +70,7 @@ class Community extends PureComponent {
               className='Community-list-element'
               href='https://www.facebook.com/callistonetwork/'
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-facebook-f' />
               <span className='Community-list-element-text'>
@@ -77,6 +81,7 @@ class Community extends PureComponent {
               className='Community-list-element'
               href={this.telegramUrl}
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-telegram-plane' />
               <span className='Community-list-element-text'>
@@ -87,6 +92,7 @@ class Community extends PureComponent {
               className='Community-list-element'
               href='https://t.me/CallistoNetNews'
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-telegram-plane' />
               <span className='Community-list-element-text'>
@@ -97,6 +103,7 @@ class Community extends PureComponent {
               className='Community-list-element'
               href='https://www.linkedin.com/company/callisto-network/  '
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-linkedin-in' />
               <span className='Community-list-element-text'>
@@ -107,6 +114,7 @@ class Community extends PureComponent {
               className='Community-list-element'
               href='https://discord.gg/fGdPSA2'
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-discord' />
               <span className='Community-list-element-text'>
@@ -117,6 +125,7 @@ class Community extends PureComponent {
               className='Community-list-element'
               href='https://t.co/DAWunSR1tm'
               target='_blank'
+              rel='noopener noreferrer'
               onMouseEnter={this.handleOpen}
               onMouseLeave={this.handleOpen}
             >
@@ -136,6 +145,7 @@ class Community extends PureComponent {
               className='Community-list-element'
               href='https://www.youtube.com/channel/UC1WMae32v_eJ8qOtLQqM26Q'
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-youtube' />
               <span className='Community-list-element-text'>
@@ -146,6 +156,7 @@ class Community extends PureComponent {
               className='Community-list-element'
               href='https://www.instagram.com/callisto.network/'
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-instagram' />
               <span className='Community-list-element-text'>
