@@ -28,6 +28,17 @@ services:
           - callisto-postgresql
     volumes:
       - /data/postgres-callisto:/var/lib/postgresql/data
+  celery-callisto-website:
+    image: callisto/callisto-website
+    container_name: callisto-website-celery
+    entrypoint: celery -A taskapp worker --workdir=/app/back/ --loglevel=INFO --beat
+    volumes:
+      - ../../../:/app/
+    environment:
+      - CELERY_CALLISTO=True
+      - COINMARKETCAP_API_KEY=${COINMARKETCAP_API_KEY}
+    networks:
+      - callisto
   redis:
     image: redis:alpine
     container_name: redis
