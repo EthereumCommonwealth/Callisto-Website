@@ -19,15 +19,16 @@ const Newsletter = ({ intl }) => (
           target='_blank'
         >
           <div className='mc-field-group'>
-            <label htmlFor='EMAIL' />
-            <input
-              className='Newsletter-form-input required email'
-              type='email'
-              placeholder={intl.formatMessage({ id: 'NewsletterPlaceholder' })}
-              name='EMAIL'
-              id='mce-EMAIL'
-              required
-            />
+            <label htmlFor='EMAIL'>
+              <input
+                className='Newsletter-form-input required email'
+                type='email'
+                placeholder={intl.formatMessage({ id: 'NewsletterPlaceholder' })}
+                name='EMAIL'
+                id='mce-EMAIL'
+                required
+              />
+            </label>
           </div>
           <div id='mce-responses' className='clear'>
             <div className='response' id='mce-error-response' style={{ display: 'none' }} />

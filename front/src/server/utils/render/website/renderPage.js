@@ -5,6 +5,7 @@ const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
         <head>
           <title>${headers.title}</title>
           ${process.env.NODE_ENV !== 'production' ? '<meta name="robots" content="noindex,nofollow">' : ''}
+          <meta name="theme-color" content="#070a14">
           <meta name="title" content="${headers.title}">
           <meta name="description" content="${headers.description}">
           <meta property="og:url" content="${headers.url}" />
