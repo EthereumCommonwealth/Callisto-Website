@@ -31,7 +31,7 @@ services:
     volumes:
       - /data/postgres-callisto:/var/lib/postgresql/data
   celery-callisto-website:
-    image: callisto/callisto-website
+    image: callisto/callisto-website-prod
     container_name: callisto-website-celery
     entrypoint: celery -A taskapp worker --workdir=/app/back/ --loglevel=INFO --beat
     volumes:
