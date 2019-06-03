@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const SingleWallet = ({ icon, title, options, fromHome }) => (
   <div className='SingleWallet square'>
     <figure className='SingleWallet-figure'>
-      <img src={icon} alt='Wallet Element'/>
+      <img src={icon} className='lazyload' alt='Wallet Element'/>
     </figure>
     <span className='SingleWallet-title'>
       {title}

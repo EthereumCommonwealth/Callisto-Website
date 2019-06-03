@@ -32,17 +32,17 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
             <div className='HowWorks-exchanges-left'>
               <figure className='HowWorks-exchanges-content-figure bitfinex-logo'>
                 <a href='https://www.bitfinex.com' target='_blank' rel='noopener noreferrer'>
-                  <img src='/image/exchanges/bitfinex_black.svg' alt='bitfinex' />
+                  <img src='/image/exchanges/bitfinex_black.svg' className='lazyload' alt='bitfinex' />
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
                 <a href='https://app.stex.com/?ref=14019577' target='_blank' rel='noopener noreferrer'>
-                  <img src='/image/exchanges/stex.svg' alt='stex' />
+                  <img src='/image/exchanges/stex.svg' className='lazyload' alt='stex' />
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
                 <a href='https://sistemkoin.com/' target='_blank' rel='noopener noreferrer'>
-                  <img src='/image/exchanges/sistemkoin.png' alt='sistemkoin' />
+                  <img src='/image/exchanges/sistemkoin.png' className='lazyload' alt='sistemkoin' />
                 </a>
               </figure>
             </div>
@@ -50,18 +50,18 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
               <span className='HowWorks-nextRelease'>
                 <figure className='HowWorks-exchanges-content-figure'>
                   <a href='https://www.bitfinex.com' target='_blank' rel='noopener noreferrer'>
-                    <img src='/image/exchanges/bitfinex_black.svg' alt='bitfinex' />
+                    <img src='/image/exchanges/bitfinex_black.svg' className='lazyload' alt='bitfinex' />
                   </a>
                 </figure>
               </span>
               <figure className='HowWorks-step-content-figure'>
-                <img src='/image/exchanges-list-v2.svg' alt='CLO supported exchanges'/>
+                <img src='/image/exchanges-list-v2.svg' className='lazyload' alt='CLO supported exchanges'/>
               </figure>
             </div>
             <div className='HowWorks-exchanges-right'>
               <figure className='HowWorks-exchanges-content-figure'>
                 <a href='https://hitbtc.com/exchange/CLO-to-BTC' target='_blank' rel='noopener noreferrer'>
-                  <img src='/image/exchanges/hitBTC.png' alt='hitBTC' />
+                  <img src='/image/exchanges/hitBTC.png' className='lazyload' alt='hitBTC' />
                 </a>
               </figure>
               <div className='HowWorks-exchanges-content-figure' />
