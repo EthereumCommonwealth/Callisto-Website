@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import SectionHeading from '../commons/SectionHeading';
+import StepVideo from './StepVideo';
 
 const StepGuide = ({ intl }) => (
   <div className='StepGuide'>
@@ -10,61 +11,26 @@ const StepGuide = ({ intl }) => (
         title={intl.formatMessage({ id: 'StepGuideTitle', defaultMessage: 'Step by Step guide on how to stake in every platform:' })}
       />
       <div className='StepGuide-holder'>
-        <div className='StepGuide-video sixteen-nine'>
-          <iframe
-            className='content'
-            title='Guarda Wallet tutorial'
-            src='https://www.youtube.com/embed/kM5ZYTlTU98'
-            frameBorder='0'
-            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-            allowFullScreen
-            loading='lazy'
-          />
-        </div>
-        <div className='StepGuide-video sixteen-nine'>
-          <iframe
-            className='content'
-            title='Coinomi tutorial'
-            src='https://www.youtube.com/embed/-jldPYhHAb0'
-            frameBorder='0'
-            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-            allowFullScreen
-            loading='lazy'
-          />
-        </div>
-        <div className='StepGuide-video sixteen-nine'>
-          <iframe
-            className='content'
-            title='Trust Wallet tutorial'
-            src='https://www.youtube.com/embed/HgInjG6ywtQ'
-            frameBorder='0'
-            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-            allowFullScreen
-            loading='lazy'
-          />
-        </div>
-        <div className='StepGuide-video sixteen-nine'>
-          <iframe
-            className='content'
-            title='Callisto Oficcial Wallet tutorial'
-            src='https://www.youtube.com/embed/syDN3o5cJBM'
-            frameBorder='0'
-            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-            allowFullScreen
-            loading='lazy'
-          />
-        </div>
-        <div className='StepGuide-video sixteen-nine'>
-          <iframe
-            className='content'
-            title='Magnum Wallet tutorial'
-            src='https://www.youtube.com/embed/O4XDpS09k-s'
-            frameBorder='0'
-            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-            allowFullScreen
-            loading='lazy'
-          />
-        </div>
+        <StepVideo
+          title='Guarda Wallet tutorial'
+          src='https://www.youtube.com/embed/kM5ZYTlTU98'
+        />
+        <StepVideo
+          title='Coinomi tutorial'
+          src='https://www.youtube.com/embed/-jldPYhHAb0'
+        />
+        <StepVideo
+          title='Trust Wallet tutorial'
+          src='https://www.youtube.com/embed/HgInjG6ywtQ'
+        />
+        <StepVideo
+          title='Callisto Oficcial Wallet tutorial'
+          src='https://www.youtube.com/embed/syDN3o5cJBM'
+        />
+        <StepVideo
+          title='Magnum Wallet tutorial'
+          src='https://www.youtube.com/embed/O4XDpS09k-s'
+        />
       </div>
     </div>
   </div>
