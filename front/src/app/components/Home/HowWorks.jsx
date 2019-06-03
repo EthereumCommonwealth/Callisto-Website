@@ -36,23 +36,13 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://hitbtc.com/exchange/CLO-to-BTC' target='_blank' rel='noopener noreferrer'>
-                  <img src='/image/exchanges/hitBTC.png' alt='hitBTC' />
+                <a href='https://app.stex.com/?ref=14019577' target='_blank' rel='noopener noreferrer'>
+                  <img src='/image/exchanges/stex.svg' alt='stex' />
                 </a>
               </figure>
               <figure className='HowWorks-exchanges-content-figure'>
                 <a href='https://sistemkoin.com/' target='_blank' rel='noopener noreferrer'>
                   <img src='/image/exchanges/sistemkoin.png' alt='sistemkoin' />
-                </a>
-              </figure>
-              <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://www.dobiexchange.com/en/trade/clo_btc' target='_blank' rel='noopener noreferrer'>
-                  <img src='/image/exchanges/dobitrade.png' alt='dobitrade' />
-                </a>
-              </figure>
-              <figure className='HowWorks-exchanges-content-figure'>
-                <a href='http://simpleswap.io/' target='_blank' rel='noopener noreferrer'>
-                  <img src='/image/exchanges/simpleswap.png' alt='simpleswap' />
                 </a>
               </figure>
             </div>
@@ -70,8 +60,8 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
             </div>
             <div className='HowWorks-exchanges-right'>
               <figure className='HowWorks-exchanges-content-figure'>
-                <a href='https://app.stex.com/?ref=14019577' target='_blank' rel='noopener noreferrer'>
-                  <img src='/image/exchanges/stex.svg' alt='stex' />
+                <a href='https://hitbtc.com/exchange/CLO-to-BTC' target='_blank' rel='noopener noreferrer'>
+                  <img src='/image/exchanges/hitBTC.png' alt='hitBTC' />
                 </a>
               </figure>
               <div className='HowWorks-exchanges-content-figure' />
@@ -94,7 +84,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
                   {marketStats.cloPrice}
                 </span>
                 <span className='HowWorks-pricing-element-btcPrice'>
-                  {(marketStats.cloPrice / marketStats.btcPrice).toFixed(10)} btc
+                  {(marketStats.cloPrice / marketStats.btcPrice).toFixed(8)} BTC
                 </span>
               </div>
             </div>
@@ -110,10 +100,10 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
                   <span className='HowWorks-pricing-element-symbol'>
                     $
                   </span>
-                  {(marketStats.volume).toLocaleString()}
+                  {(parseFloat(marketStats.volume)).toLocaleString()}
                 </span>
                 <span className='HowWorks-pricing-element-btcPrice'>
-                  {(marketStats.volume / marketStats.btcPrice).toFixed(10)} btc
+                  {parseFloat(marketStats.volume / marketStats.btcPrice).toFixed(2)} BTC
                 </span>
               </div>
             </div>
@@ -129,10 +119,10 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
                   <span className='HowWorks-pricing-element-symbol'>
                     $
                   </span>
-                  {(marketStats.marketCap).toLocaleString()}
+                  {(parseFloat(marketStats.marketCap)).toLocaleString()}
                 </span>
                 <span className='HowWorks-pricing-element-btcPrice'>
-                  {((marketStats.marketCap / marketStats.btcPrice).toFixed(10))} btc
+                  {(parseFloat(marketStats.marketCap / marketStats.btcPrice).toFixed(2))} BTC
                 </span>
               </div>
             </div>

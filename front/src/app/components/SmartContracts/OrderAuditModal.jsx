@@ -173,7 +173,7 @@ class OrderAuditModal extends PureComponent {
                 </label>
                 <input
                   name='email'
-                  type='email'
+                  type='text'
                   value={this.state.email}
                   onChange={this.onChange}
                   required

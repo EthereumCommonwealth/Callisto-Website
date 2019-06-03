@@ -1,14 +1,13 @@
 .RealtimeMetrics
   background-color #FFF
   margin 0
-  padding 4rem 0 2rem 0
+  padding 2rem 0
   &-content
     display grid
     align-self flex-start
-    grid-gap 2rem
+    grid-gap 1rem
     +from-width($sm)
       grid-template-columns 1fr 1fr 1fr
-      grid-gap 1rem
     +from-width($xl)
       grid-template-columns 1fr 1fr 1fr 1fr
   &-title
@@ -20,14 +19,20 @@
       line-height 1.41
   &-text
     display flex
+    flex-direction column
     align-items flex-start
+    +from-width($sm)
+      flex-direction row
     &-detail
       margin-right .5rem
       display block
       color $dark-gray
       font-size 14px
       line-height 1.41
-      max-width 65px
+      margin-bottom .5rem
+      +from-width($sm)
+        max-width 65px
+        margin-bottom 0
   &-metric
     position relative
     padding 22px
@@ -35,25 +40,32 @@
     background-color #e9f7ff
     border-radius 8px
     max-width fit-content
+    display flex
+    flex-direction row-reverse
+    +from-width($sm)
+      display block
     &-amount
       font-size 40px
       color $dark-blue
       line-height 1.05
       margin 0
-      font-size 26px
-      +from-width($md)
-        font-size 32px
+      font-size 32px
       +from-width($xl)
         font-size 40px
       &.orange
         color $orange
     &-detail
-      position absolute
-      top -1rem
-      left -0.75rem
       color #FFF
       background-color $green
       border-radius 4px
       padding 6px
+      display flex
+      align-items center
+      margin-right 1rem
+      +from-width($sm)
+        position absolute
+        top -1rem
+        left -0.75rem
+        margin-right 0
       &.orange
         background-color $orange

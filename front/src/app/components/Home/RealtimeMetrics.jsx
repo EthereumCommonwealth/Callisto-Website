@@ -7,7 +7,8 @@ class RealtimeMetrics extends Component {
 
   calculePrice = () => {
     const { marketStats } = this.props;
-    return (marketStats.stakingBalance * marketStats.cloUSDPrice).toLocaleString();
+    const market = parseFloat(marketStats.stakingBalance * marketStats.cloUSDPrice).toFixed(0);
+    return parseFloat(market).toLocaleString();
   }
 
   render() {
@@ -25,7 +26,7 @@ class RealtimeMetrics extends Component {
               <FormattedMessage id='TotalStaked' defaultMessage='Total Staked' />
             </span>
             <div className='RealtimeMetrics-metric'>
-              <h3 className='RealtimeMetrics-metric-amount'>{marketStats.stakingBalance.toLocaleString()}</h3>
+              <h3 className='RealtimeMetrics-metric-amount'>{parseFloat(marketStats.stakingBalance).toLocaleString()}</h3>
               <span className='RealtimeMetrics-metric-detail'>CLO</span>
             </div>
           </div>

@@ -35,50 +35,6 @@ class Community extends PureComponent {
           <div className='Community-list'>
             <a
               className='Community-list-element'
-              href='https://github.com/EthereumCommonwealth'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <i className='fab fa-github' />
-              <span className='Community-list-element-text'>
-                Github
-              </span>
-            </a>
-            <a
-              className='Community-list-element'
-              href='http://reddit.com/r/CallistoCrypto'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <i className='fab fa-reddit-alien' />
-              <span className='Community-list-element-text'>
-                Reddit
-              </span>
-            </a>
-            <a
-              className='Community-list-element'
-              href='https://twitter.com/CallistoSupport'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <i className='fab fa-twitter' />
-              <span className='Community-list-element-text'>
-                Twitter
-              </span>
-            </a>
-            <a
-              className='Community-list-element'
-              href='https://www.facebook.com/callistonetwork/'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <i className='fab fa-facebook-f' />
-              <span className='Community-list-element-text'>
-                Facebook
-              </span>
-            </a>
-            <a
-              className='Community-list-element'
               href={this.telegramUrl}
               target='_blank'
               rel='noopener noreferrer'
@@ -101,24 +57,57 @@ class Community extends PureComponent {
             </a>
             <a
               className='Community-list-element'
-              href='https://www.linkedin.com/company/callisto-network/  '
+              href='https://twitter.com/CallistoSupport'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <i className='fab fa-linkedin-in' />
+              <i className='fab fa-twitter' />
               <span className='Community-list-element-text'>
-                Linkedin
+                Twitter
               </span>
             </a>
             <a
               className='Community-list-element'
-              href='https://discord.gg/fGdPSA2'
+              href='https://www.instagram.com/callisto.network/'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <i className='fab fa-discord' />
+              <i className='fab fa-instagram' />
               <span className='Community-list-element-text'>
-                Discord
+                Instagram
+              </span>
+            </a>
+            <a
+              className='Community-list-element'
+              href='https://www.youtube.com/channel/UC1WMae32v_eJ8qOtLQqM26Q'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <i className='fab fa-youtube' />
+              <span className='Community-list-element-text'>
+                Youtube
+              </span>
+            </a>
+            <a
+              className='Community-list-element'
+              href='https://www.facebook.com/callistonetwork/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <i className='fab fa-facebook-f' />
+              <span className='Community-list-element-text'>
+                Facebook
+              </span>
+            </a>
+            <a
+              className='Community-list-element'
+              href='http://reddit.com/r/CallistoCrypto'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <i className='fab fa-reddit-alien' />
+              <span className='Community-list-element-text'>
+                Reddit
               </span>
             </a>
             <a
@@ -143,24 +132,24 @@ class Community extends PureComponent {
             </a>
             <a
               className='Community-list-element'
-              href='https://www.youtube.com/channel/UC1WMae32v_eJ8qOtLQqM26Q'
+              href='https://github.com/EthereumCommonwealth'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <i className='fab fa-youtube' />
+              <i className='fab fa-github' />
               <span className='Community-list-element-text'>
-                Youtube
+                Github
               </span>
             </a>
             <a
               className='Community-list-element'
-              href='https://www.instagram.com/callisto.network/'
+              href='https://www.linkedin.com/company/callisto-network/  '
               target='_blank'
               rel='noopener noreferrer'
             >
-              <i className='fab fa-instagram' />
+              <i className='fab fa-linkedin-in' />
               <span className='Community-list-element-text'>
-                Instagram
+                Linkedin
               </span>
             </a>
           </div>

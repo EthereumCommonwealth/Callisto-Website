@@ -60,6 +60,7 @@ const Roadmap = ({ intl }) => (
             { name: intl.formatMessage({ id: 'Q12019.2', defaultMessage: 'Start researching a new monetary policy' }) },
             { name: intl.formatMessage({ id: 'Q12019.3', defaultMessage: 'Continue looking for a satisfactory IPFS to implement on Callisto Network' }) },
           ]}
+          happened
         />
         <RoadmapElement
           title='Q2 2019'

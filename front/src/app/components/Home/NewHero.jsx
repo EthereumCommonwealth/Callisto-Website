@@ -27,6 +27,14 @@ class NewNewHero extends Component {
               >
                 <FormattedMessage id='StartStaking' defaultMessage='Start staking now' />
               </Link>
+              <a
+                href='https://whitepaper.callisto.network/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='btn btn-green'
+              >
+                <FormattedMessage id='WhitePaper' />
+              </a>
             </div>
           </div>
           <div className='NewHero-content-right'>

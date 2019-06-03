@@ -24,8 +24,8 @@
       +from-width($md)
         grid-template-columns 1fr 1fr 1fr
       +from-width($xl)
-        marginn-bottom 0
-        grid-gap 4rem
+        margin-bottom 0
+        grid-gap 1rem
         grid-template-columns unset
         justify-items unset
         align-items unset
@@ -38,9 +38,10 @@
             display none
           &:nth-child(2)
             margin-left 12rem
-            height 50px
+            height 110px
           &:nth-child(3)
             margin-left 2rem
+            height 70px
           &:nth-child(4)
             margin-left 3rem
           &:nth-child(5)
@@ -52,20 +53,21 @@
             width 100%
             height unset
         &:nth-child(2)
-          height 50px
+          height 110px
         &:nth-child(3)
-          height 50px
+          height 70px
         &:nth-child(4)
           height 50px
         &:nth-child(5)
           height 30px
-
     &-right
       display grid
       grid-gap 1rem
       grid-template-columns 1fr 1fr
       align-items center
+      margin-top 2rem
       +from-width($md)
+        margin-top 0
         grid-template-columns 1fr 1fr 1fr
       +from-width($xl)
         align-items unset
@@ -115,13 +117,12 @@
   &-pricing
     display grid
     justify-items center
-    margin-top 25px
-    padding-left 2em
     grid-gap 1rem
     border-radius 8px
     user-select none
     +from-width($sm)
       padding-left 9em
+      margin-top 25px
     +from-width($md)
       margin-top 4rem
       grid-template-columns 1fr 1fr 1fr
@@ -150,21 +151,16 @@
         grid-gap .5em
       &-title
         color $dark-blue
-        font-size 18px
         font-weight bold
-        +from-width($sm)
-          font-size 20px
+        font-size 22px
       &-dollarPrice
         line-height 1.05
         color $dark-blue
-        font-size 22px
         font-weight bold
-        +from-width($sm)
-          font-size 34px
+        font-size 34px
       &-symbol
         line-height 1.05
         color $green
-        font-size 22px
         +from-width($sm)
           font-size 44px
       &-btcPrice
