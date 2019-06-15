@@ -8,12 +8,14 @@ import Newsletter from '../components/commons/Newsletter';
 import RealtimeMetrics from '../components/Home/RealtimeMetrics';
 import HowWorks from '../components/Home/HowWorks';
 import StepGuide from '../components/Home/StepGuide';
+import HardForkPromo from '../components/commons/HardForkPromo';
 import Footer from '../components/commons/Footer';
 
 const Home = ({ match }) => {
   return (
     <Layout className='Home' match={match}>
       <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
+      <HardForkPromo />
       <NewHero lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <RealtimeMetrics />
       <HowWorks />
