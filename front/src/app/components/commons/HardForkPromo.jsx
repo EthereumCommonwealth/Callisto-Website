@@ -11,15 +11,17 @@ class HardForkPromo extends Component {
   };
 
   componentWillMount() {
-    const blocksInterval = setInterval(async () => {
-      const web3 = new Web3(new Web3.providers.HttpProvider('https://clo-geth.0xinfra.com/'));
-      const blockNumber = await web3.eth.getBlockNumber();
-      const count = 2900001 - Number(blockNumber);
-      this.setState({ hfBlocks: count, blocksGetted: true });
-    }, 2000);
-    if (this.state.hfBlocks === 0 && this.state.blocksGetted) {
-      clearInterval(blocksInterval);
-      this.setState({ promoEnded: true });
+    if (typeof window !== 'undefined') {
+      const blocksInterval = setInterval(async () => {
+        const web3 = new Web3(new Web3.providers.HttpProvider('https://clo-geth.0xinfra.com/'));
+        const blockNumber = await web3.eth.getBlockNumber();
+        const count = 2900001 - Number(blockNumber);
+        this.setState({ hfBlocks: count, blocksGetted: true });
+      }, 5000);
+      if (this.state.hfBlocks === 0 && this.state.blocksGetted) {
+        clearInterval(blocksInterval);
+        this.setState({ promoEnded: true });
+      }
     }
   }
   render() {
