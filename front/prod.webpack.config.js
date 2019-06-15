@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const nib = require('nib');
 const rupture = require('rupture');
 const ManifestPlugin = require('webpack-manifest-plugin');
@@ -89,7 +88,6 @@ module.exports = {
     alias: { styles: path.resolve(__dirname, 'src/client/stylus/') },
   },
   optimization: {
-    minimizer: [new TerserPlugin()],
     splitChunks: {
       chunks: 'async',
       name: true,
