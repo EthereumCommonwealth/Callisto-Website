@@ -14,9 +14,9 @@ from partner.models import Partner
 class TeamAPIView(View):
     def get(self, request, *args, **kwargs):
 
-        members = TeamMember.objects.exclude(
-            position='Advisor'
-        ).order_by('order')
+        members = TeamMember.objects.exclude(position='Advisor').order_by(
+            'order'
+        )
 
         members_list = [
             {
@@ -24,16 +24,19 @@ class TeamAPIView(View):
                 'name': member.name,
                 'position': member.position,
                 'bio': member.bio,
-                'socialNetworks':
-                    [
-                        {
-                            'prefix': network.network.icon,
-                            'url': f'mailto:{network.url}' if network.network.name == 'Email' else network.url
-                        } for network in member.membersocialnetwork_set.filter(
-                            active=True)
-                    ]
-
-            } for member in members
+                'socialNetworks': [
+                    {
+                        'prefix': network.network.icon,
+                        'url': f'mailto:{network.url}'
+                        if network.network.name == 'Email'
+                        else network.url,
+                    }
+                    for network in member.membersocialnetwork_set.filter(
+                        active=True
+                    )
+                ],
+            }
+            for member in members
         ]
 
         return JsonResponse(status=200, data=members_list, safe=False)
@@ -42,9 +45,9 @@ class TeamAPIView(View):
 class AdvisorTeamAPIView(View):
     def get(self, request, *args, **kwargs):
 
-        members = TeamMember.objects.filter(
-            position='Advisor'
-        ).order_by('order')
+        members = TeamMember.objects.filter(position='Advisor').order_by(
+            'order'
+        )
 
         members_list = [
             {
@@ -52,17 +55,21 @@ class AdvisorTeamAPIView(View):
                 'name': member.name,
                 'position': member.position,
                 'bio': member.bio,
-                'socialNetworks':
-                    [
-                        {
-                            'prefix': network.network.icon,
-                            'url': 'mailto:{}'.format(network.url) if network.network.name == 'Email' else network.url
-                        } for network in member.membersocialnetwork_set.filter(
-                            active=True
-                        )
-                    ]
-
-            } for member in members
+                'socialNetworks': [
+                    {
+                        'prefix': network.network.icon,
+                        'url': (
+                            'mailto:{}'.format(network.url)
+                            if network.network.name == 'Email'
+                            else network.url
+                        ),
+                    }
+                    for network in member.membersocialnetwork_set.filter(
+                        active=True
+                    )
+                ],
+            }
+            for member in members
         ]
 
         return JsonResponse(status=200, data=members_list, safe=False)
@@ -76,22 +83,18 @@ class MiningAPIView(View):
         block_explorers = BlockExplorer.objects.all()
 
         mining_pools_list = [
-            {
-                'name': mining_pool.name,
-                'url': mining_pool.url
-            } for mining_pool in mining_pools
+            {'name': mining_pool.name, 'url': mining_pool.url}
+            for mining_pool in mining_pools
         ]
 
         block_explorers_list = [
-            {
-                'name': block_explorer.name,
-                'url': block_explorer.url
-            } for block_explorer in block_explorers
+            {'name': block_explorer.name, 'url': block_explorer.url}
+            for block_explorer in block_explorers
         ]
 
         data = {
             'miningPools': mining_pools_list,
-            'blockExplorers': block_explorers_list
+            'blockExplorers': block_explorers_list,
         }
 
         return JsonResponse(status=200, data=data, safe=False)
@@ -107,12 +110,11 @@ class WalletsAPIView(View):
                 'title': wallet_platform.name,
                 'icon': f'/{wallet_platform.icon.name}',
                 'options': [
-                    {
-                        'name': wallet.name,
-                        'url': wallet.url
-                    } for wallet in wallet_platform.wallet_set.all()
-                ]
-            } for wallet_platform in wallets
+                    {'name': wallet.name, 'url': wallet.url}
+                    for wallet in wallet_platform.wallet_set.all()
+                ],
+            }
+            for wallet_platform in wallets
         ]
 
         return JsonResponse(status=200, data=wallets_list, safe=False)
@@ -128,14 +130,13 @@ class WalletsColdStackingAPIView(View):
                 'title': wallet_platform.name,
                 'icon': f'/{wallet_platform.icon.name}',
                 'options': [
-                    {
-                        'name': wallet.name,
-                        'url': wallet.url
-                    } for wallet in wallet_platform.wallet_set.filter(
+                    {'name': wallet.name, 'url': wallet.url}
+                    for wallet in wallet_platform.wallet_set.filter(
                         cold_staking=True
                     )
-                ]
-            } for wallet_platform in wallets
+                ],
+            }
+            for wallet_platform in wallets
         ]
 
         return JsonResponse(status=200, data=wallets_list, safe=False)
@@ -151,8 +152,9 @@ class ExchangesAPIView(View):
                 'name': exchange.name,
                 'url': exchange.url,
                 'logo': f'/{exchange.logo.name}',
-                'comingSoon': exchange.coming_soon
-            } for exchange in exchanges
+                'comingSoon': exchange.coming_soon,
+            }
+            for exchange in exchanges
         ]
 
         return JsonResponse(status=200, data=exchanges_list, safe=False)
@@ -167,8 +169,9 @@ class FinancialReportAPIView(View):
                 'name': 'Financial Report {} - {}'.format(
                     report.financial_date.month, report.financial_date.year
                 ),
-                'file': report.financial_report.get_url()
-            } for report in reports
+                'file': report.financial_report.get_url(),
+            }
+            for report in reports
         ]
 
         return JsonResponse(status=200, data=reports_list, safe=False)
@@ -182,33 +185,28 @@ class PartnerAPIView(View):
             {
                 'name': partner.name,
                 'url': partner.url,
-                'img': partner.image.url
-            } for partner in partners
+                'img': partner.image.url,
+            }
+            for partner in partners
         ]
 
         return JsonResponse(status=200, data=partners_list, safe=False)
 
 
 class TranslationsView(View):
-
     def get(self, request, *args, **kwargs):
-        translations = Language.get_translations(
-            kwargs.get('language', 'en'))
+        translations = Language.get_translations(kwargs.get('language', 'en'))
 
         return JsonResponse(status=200, data=translations, safe=False)
 
 
 class TagsListView(View):
-
     def get(self, request, *args, **kwargs):
         tags = Tag.objects.all()
 
         tags_list = [
-            {
-                'number': tag.number,
-                'slug': tag.slug,
-                'name': tag.name,
-            } for tag in tags
+            {'number': tag.number, 'slug': tag.slug, 'name': tag.name}
+            for tag in tags
         ]
 
         return JsonResponse(status=200, data=tags_list, safe=False)
@@ -238,9 +236,10 @@ class TagsDetailView(View):
                     'date': post.date,
                     'link': post.link,
                     'slug': post.slug,
-                    'cover': post.cover
-                } for post in related_posts
-            ]
+                    'cover': post.cover,
+                }
+                for post in related_posts
+            ],
         }
 
         return JsonResponse(status=200, data=tag_response, safe=False)
@@ -258,8 +257,9 @@ class RecentPosts(View):
                 'date': post.date,
                 'link': post.link,
                 'slug': post.slug,
-                'cover': post.cover
-            } for post in recent_posts
+                'cover': post.cover,
+            }
+            for post in recent_posts
         ]
 
         return JsonResponse(status=200, data=recent_posts_list, safe=False)
@@ -292,16 +292,18 @@ class PostDetailView(View):
                     'date': related_post.date,
                     'link': related_post.link,
                     'slug': related_post.slug,
-                    'cover': related_post.cover
-                } for related_post in post.related_posts.all()
+                    'cover': related_post.cover,
+                }
+                for related_post in post.related_posts.all()
             ],
             'tags': [
                 {
                     'number': tag.tag.number,
                     'name': tag.tag.name,
-                    'slug': tag.tag.slug
-                } for tag in post.tags.all()
-            ]
+                    'slug': tag.tag.slug,
+                }
+                for tag in post.tags.all()
+            ],
         }
 
         return JsonResponse(status=200, data=post_formated, safe=False)
@@ -319,8 +321,9 @@ class PostListView(View):
                 'date': post.date,
                 'link': post.link,
                 'slug': post.slug,
-                'cover': post.cover
-            } for post in posts
+                'cover': post.cover,
+            }
+            for post in posts
         ]
 
         return JsonResponse(status=200, data=posts_list, safe=False)
@@ -328,12 +331,12 @@ class PostListView(View):
 
 class HomeAPIView(View):
     def get(self, request, *args, **kwargs):
-        members = TeamMember.objects.exclude(
-            position='Advisor'
-        ).order_by('order')
-        advisors = TeamMember.objects.filter(
-            position='Advisor'
-        ).order_by('order')
+        members = TeamMember.objects.exclude(position='Advisor').order_by(
+            'order'
+        )
+        advisors = TeamMember.objects.filter(position='Advisor').order_by(
+            'order'
+        )
         mining_pools = MiningPool.objects.all()
         block_explorers = BlockExplorer.objects.all()
         wallets = WalletPlatform.objects.all()
@@ -344,9 +347,8 @@ class HomeAPIView(View):
         ).distinct()
         recent_posts = Post.objects.order_by('-date')[:3]
         partners = Partner.objects.all()
-        
-        translations = Language.get_translations(
-            request.GET.get('lang', 'en'))
+
+        translations = Language.get_translations(request.GET.get('lang', 'en'))
 
         recent_posts_list = [
             {
@@ -356,8 +358,9 @@ class HomeAPIView(View):
                 'date': post.date,
                 'link': post.link,
                 'slug': post.slug,
-                'cover': post.cover
-            } for post in recent_posts
+                'cover': post.cover,
+            }
+            for post in recent_posts
         ]
 
         members_list = [
@@ -366,16 +369,19 @@ class HomeAPIView(View):
                 'name': member.name,
                 'position': member.position,
                 'bio': member.bio,
-                'socialNetworks':
-                    [
-                        {
-                            'prefix': network.network.icon,
-                            'url': f'mailto:{network.url}' if network.network.name == 'Email' else network.url
-                        } for network in member.membersocialnetwork_set.filter(
-                            active=True)
-                    ]
-
-            } for member in members
+                'socialNetworks': [
+                    {
+                        'prefix': network.network.icon,
+                        'url': f'mailto:{network.url}'
+                        if network.network.name == 'Email'
+                        else network.url,
+                    }
+                    for network in member.membersocialnetwork_set.filter(
+                        active=True
+                    )
+                ],
+            }
+            for member in members
         ]
 
         advisors_list = [
@@ -384,31 +390,31 @@ class HomeAPIView(View):
                 'name': member.name,
                 'position': member.position,
                 'bio': member.bio,
-                'socialNetworks':
-                    [
-                        {
-                            'prefix': network.network.icon,
-                            'url': 'mailto:{}'.format(
-                                network.url) if network.network.name == 'Email' else network.url
-                        } for network in member.membersocialnetwork_set.filter(
-                        active=True)
-                    ]
-
-            } for member in advisors
+                'socialNetworks': [
+                    {
+                        'prefix': network.network.icon,
+                        'url': (
+                            'mailto:{}'.format(network.url)
+                            if network.network.name == 'Email'
+                            else network.url
+                        ),
+                    }
+                    for network in member.membersocialnetwork_set.filter(
+                        active=True
+                    )
+                ],
+            }
+            for member in advisors
         ]
 
         mining_pools_list = [
-            {
-                'name': mining_pool.name,
-                'url': mining_pool.url
-            } for mining_pool in mining_pools
+            {'name': mining_pool.name, 'url': mining_pool.url}
+            for mining_pool in mining_pools
         ]
 
         block_explorers_list = [
-            {
-                'name': block_explorer.name,
-                'url': block_explorer.url
-            } for block_explorer in block_explorers
+            {'name': block_explorer.name, 'url': block_explorer.url}
+            for block_explorer in block_explorers
         ]
 
         wallets_list = [
@@ -419,10 +425,12 @@ class HomeAPIView(View):
                     {
                         'name': wallet.name,
                         'url': wallet.url,
-                        'cs': wallet.cold_staking
-                    } for wallet in wallet_platform.wallet_set.all().order_by('id')
-                ]
-            } for wallet_platform in wallets
+                        'cs': wallet.cold_staking,
+                    }
+                    for wallet in wallet_platform.wallet_set.order_by('id')
+                ],
+            }
+            for wallet_platform in wallets
         ]
 
         wallets_cold_stacking_list = [
@@ -433,12 +441,14 @@ class HomeAPIView(View):
                     {
                         'name': wallet.name,
                         'url': wallet.url,
-                        'cs': wallet.cold_staking
-                    } for wallet in wallet_platform.wallet_set.filter(
+                        'cs': wallet.cold_staking,
+                    }
+                    for wallet in wallet_platform.wallet_set.filter(
                         cold_staking=True
                     ).order_by('id')
-                ]
-            } for wallet_platform in wallets_cold_stacking
+                ],
+            }
+            for wallet_platform in wallets_cold_stacking
         ]
 
         exchanges_list = [
@@ -446,8 +456,9 @@ class HomeAPIView(View):
                 'name': exchange.name,
                 'url': exchange.url,
                 'logo': f'/{exchange.logo.name}',
-                'comingSoon': exchange.coming_soon
-            } for exchange in exchanges
+                'comingSoon': exchange.coming_soon,
+            }
+            for exchange in exchanges
         ]
 
         reports_list = [
@@ -455,16 +466,18 @@ class HomeAPIView(View):
                 'name': 'Financial Report {} - {}'.format(
                     report.financial_date.month, report.financial_date.year
                 ),
-                'file': report.financial_report.get_url()
-            } for report in reports
+                'file': report.financial_report.get_url(),
+            }
+            for report in reports
         ]
 
         partners_list = [
             {
                 'name': partner.name,
                 'url': partner.url,
-                'img': partner.image.url
-            } for partner in partners
+                'img': partner.image.url,
+            }
+            for partner in partners
         ]
 
         data = {

@@ -56,13 +56,6 @@ class OrderAuditModal extends PureComponent {
       csrf_token: this.props.audit.csrf_token,
     })
       .then((response) => {
-        window.tap('conversion', d.getTime(), {}, {
-          meta_data: {
-            email: this.state.email,
-            sourceCode: this.state.sourceCode,
-            platform: this.state.platform,
-          }
-        });
         this.setState({
           description: '',
           sourceCode: '',
@@ -148,14 +141,14 @@ class OrderAuditModal extends PureComponent {
                 <label htmlFor='platform'>
                   {messages.OrderAuditModalPlatformLabel}
                 </label>
-                {selectedPlatform.length > 0 ? (
+                {typeof window !== 'undefined' && selectedPlatform && selectedPlatform.length > 0 ? (
                   <div className='OrderAuditModal-platforms' onMouseLeave={this.handleClose}>
                     <a className='OrderAuditModal-platforms-selected' onClick={this.handleOpen}>
                       {selectedPlatform[1]} ({selectedPlatform[0]})
                     </a>
                     {platformOpen ? (
                       <div className='OrderAuditModal-platforms-elements'>
-                        {audit.platform.length > 0 ? audit.platform.map(auditElem => {
+                        {audit && audit.platform && audit.platform.length > 0 ? audit.platform.map(auditElem => {
                           if (auditElem === selectedPlatform) return null
                           return (
                             <a
@@ -180,7 +173,7 @@ class OrderAuditModal extends PureComponent {
                 </label>
                 <input
                   name='email'
-                  type='email'
+                  type='text'
                   value={this.state.email}
                   onChange={this.onChange}
                   required

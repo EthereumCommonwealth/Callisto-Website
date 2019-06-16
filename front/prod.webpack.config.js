@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const nib = require('nib');
 const rupture = require('rupture');
 const ManifestPlugin = require('webpack-manifest-plugin');
@@ -89,13 +88,6 @@ module.exports = {
     alias: { styles: path.resolve(__dirname, 'src/client/stylus/') },
   },
   optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        test: /\.js($|\?)/i,
-        cache: true,
-        sourceMap: true,
-      }),
-    ],
     splitChunks: {
       chunks: 'async',
       name: true,
@@ -137,7 +129,7 @@ module.exports = {
     new ExtractTextPlugin('[name].[hash].css', { allChunks: true }),
     new CompressionPlugin({
       test: /\.js$|\.css$/,
-      asset: '[path].gz'
+      filename: 'assets/[path].gz'
     }),
     new ManifestPlugin(),
   ],

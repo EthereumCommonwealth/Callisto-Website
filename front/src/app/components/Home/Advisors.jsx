@@ -12,21 +12,6 @@ const Advisors = ({ intl }) => (
       />
       <div className='Advisors-list'>
         <SingleAdvisor
-          avatar='/image/avatars/shira_avatar.png'
-          name='Shira Rubinoff'
-          position='Advisor'
-          socialNetworks={[
-            {
-              prefix: 'fab fa-twitter',
-              url: 'https://twitter.com/Shirastweet',
-            },
-            {
-              prefix: 'fab fa-linkedin-in',
-              url: 'https://t.co/foJ9NT4rlT',
-            }
-          ]}
-        />
-        <SingleAdvisor
           avatar='/image/avatars/raymond_avatar.png'
           name='Raymond Koh'
           position='Advisor'

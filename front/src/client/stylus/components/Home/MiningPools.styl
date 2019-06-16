@@ -25,13 +25,11 @@
       box-sizing border-box
       padding 0.75em 0
   &-explorers
-    display grid
-    justify-items center
-    grid-gap 15px
+    display flex
+    justify-content center
     padding 1em
-    +from-width($md)
-      grid-template-columns repeat(3, 1fr)
     .btn
-      min-width 100%
       box-sizing border-box
       padding 0.75em 0
+      +from-width($md)
+        min-width 295px

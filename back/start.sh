@@ -3,7 +3,11 @@
 case "$(uname -s)" in
 
    Darwin)
-     export DOCKER_IP=`docker-machine ip dinghy`
+    if [[ $DOCKER_WITHOUT_DINGHY ]]; then
+      export DOCKER_IP="localhost"
+    else
+      export DOCKER_IP="$(dinghy ip)"
+    fi
      ;;
 
    Linux)

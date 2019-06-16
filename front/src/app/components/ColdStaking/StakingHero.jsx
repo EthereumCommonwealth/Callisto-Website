@@ -12,10 +12,11 @@ class StakingHero extends Component {
           <div className='HowToStake-video sixteen-nine'>
             <iframe
               className='content'
-              src='https://www.youtube.com/embed/HwFamWAKoVA'
+              src='https://www.youtube.com/embed/hjRE6u-XeAU'
               frameBorder='0'
               allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
               allowFullScreen
+              loading='lazy'
             />
           </div>
         </div>
@@ -86,6 +87,7 @@ class StakingHero extends Component {
               <a
                 href='https://callisto.network/blog/post/callisto-network-cold-staking-protocol/'
                 target='_blank'
+                rel='noopener noreferrer'
                 className='btn btn-green'
               >
                 <FormattedMessage id='StakingHeroProtocolBtn' />
@@ -93,6 +95,7 @@ class StakingHero extends Component {
               <a
                 href='https://wallet.callisto.network/#send-transaction'
                 target='_blank'
+                rel='noopener noreferrer'
                 className='btn btn-transparent-green startstake'
               >
                 Start Staking

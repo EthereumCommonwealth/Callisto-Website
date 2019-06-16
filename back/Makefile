@@ -14,6 +14,20 @@ stop-dev:
 ssh-dev:
 	ssh -p 2000 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no root@$(DOCKER_IP)
 
+
+build-docker-stg:
+	cp requirements/base.txt docker/prod/base.txt
+	cp requirements/production.txt docker/prod/production.txt
+	cd docker/prod/ && docker build -t "callisto/callisto-website-stg" .
+	rm -rf docker/prod/requirements/production.txt
+
+start-stg:
+	cd docker/stg/ && docker-compose up -d
+
+stop-stg:
+	cd docker/stg/ && docker-compose stop
+
+
 build-docker-prod:
 	cp requirements/base.txt docker/prod/base.txt
 	cp requirements/production.txt docker/prod/production.txt

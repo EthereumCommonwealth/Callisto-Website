@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
 import { FormattedMessage, injectIntl } from 'react-intl';
 
@@ -19,6 +18,7 @@ const Hero = ({ intl, lang }) => (
           <a
             href='https://whitepaper.callisto.network/'
             target='_blank'
+            rel='noopener noreferrer'
             className='btn btn-green'
           >
             <FormattedMessage id='WhitePaper' />
@@ -29,16 +29,6 @@ const Hero = ({ intl, lang }) => (
           >
             <FormattedMessage id='FinancialReport' />
           </RouterLink>
-          <Link
-            to='exchanges'
-            spy={true}
-            smooth={true}
-            offset={-150}
-            duration={500}
-            className='btn btn-transparent-green'
-          >
-            <FormattedMessage id='BuyClo' defaultMessage='Buy CLO' />
-          </Link>
         </div>
       </div>
       <div className='Hero-content-right'>

@@ -5,6 +5,7 @@
   display grid
   justify-items center
   align-content flex-start
+  grid-auto-rows min-content
   +from-width($sm)
     padding 30px
   &-title
@@ -17,6 +18,7 @@
       margin 20px 0
   &-list
     display grid
+    grid-auto-rows min-content
     grid-gap 15px
     .btn
       max-width inherit

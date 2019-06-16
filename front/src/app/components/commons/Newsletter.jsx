@@ -19,25 +19,29 @@ const Newsletter = ({ intl }) => (
           target='_blank'
         >
           <div className='mc-field-group'>
-            <input
-              className='Newsletter-form-input required email'
-              type='email'
-              placeholder={intl.formatMessage({ id: 'NewsletterPlaceholder' })}
-              name='EMAIL'
-              id='mce-EMAIL'
-              required
-            />
+            <label htmlFor='EMAIL'>
+              <input
+                className='Newsletter-form-input required email'
+                type='email'
+                placeholder={intl.formatMessage({ id: 'NewsletterPlaceholder' })}
+                name='EMAIL'
+                id='mce-EMAIL'
+                required
+              />
+            </label>
           </div>
           <div id='mce-responses' className='clear'>
             <div className='response' id='mce-error-response' style={{ display: 'none' }} />
             <div className='response' id='mce-success-response' style={{ display: 'none' }} />
           </div>
           <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden='true'>
+            <label htmlFor='b_dcb90634d3c123520c47ae053_6dbdcbff40' />
             <input
               type='text'
               name='b_dcb90634d3c123520c47ae053_6dbdcbff40'
               tabIndex='-1'
               value=''
+              readOnly
             />
           </div>
           <div>

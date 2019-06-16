@@ -12,7 +12,7 @@ const Mining = ({ intl }) => (
         description={intl.formatMessage({ id: 'MiningDescription' })}
       />
       <div className='Mining-cta'>
-        <a className='btn btn-green' href='https://stats.callisto.network/' target='_blank'>
+        <a className='btn btn-green' href='https://stats.callisto.network/' target='_blank' rel='noopener noreferrer'>
           <FormattedMessage id='CloStats' />
         </a>
       </div>
@@ -24,7 +24,7 @@ const Mining = ({ intl }) => (
         <MiningElement
           title={intl.formatMessage({ id: 'BlockReward' })}
           content='600 CLO'
-          description={`(30% ${intl.formatMessage({ id: 'TreasureFee' })})`}
+          description={`(10% ${intl.formatMessage({ id: 'TreasureFee' })})`}
         />
         <MiningElement
           title='POW Algo'

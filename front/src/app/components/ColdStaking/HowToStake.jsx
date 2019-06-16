@@ -13,10 +13,11 @@ const HowToStake = ({ intl }) => (
         <div className='HowToStake-video sixteen-nine'>
           <iframe
             className='content'
-            src='https://www.youtube.com/embed/HwFamWAKoVA'
+            src='https://www.youtube.com/embed/syDN3o5cJBM'
             frameBorder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
+            loading='lazy'
           />
         </div>
         <div className='HowToStake-anchor'>
@@ -26,6 +27,7 @@ const HowToStake = ({ intl }) => (
           <a
             href='https://callisto.network/blog/post/cold-staking-a-step-by-step-tutorial/'
             target='_blank'
+            rel='noopener noreferrer'
             className='btn btn-green'
           >
             <FormattedMessage id='ReadMore' />

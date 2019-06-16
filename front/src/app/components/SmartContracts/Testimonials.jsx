@@ -1,26 +1,33 @@
 import React from 'react';
-import { injectIntl } from 'react-intl';
+import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
 
-const Testimonials = ({ intl }) => (
+const Testimonials = ({ inProgress, completedAudits }) => (
   <div className='Testimonials'>
     <div className='container'>
       <div className='Testimonials-content'>
         <div className='Testimonials-element square'>
-          <span className='Testimonials-element-title'>Audits in progress:</span>
-          <span className='Testimonials-element-description'>11</span>
+          <span className='Testimonials-element-title'>
+            <FormattedMessage id='AuditsInProgress' defaultMessage='Audits in progress:' />
+          </span>
+          <span className='Testimonials-element-description'>{inProgress}</span>
           <a
             className='Testimonials-element-anchor'
             href='https://github.com/EthereumCommonwealth/Auditing/issues?q=is%3Aopen+is%3Aissue'
             target='_blank'
+            rel='noopener noreferrer'
           />
         </div>
         <div className='Testimonials-element square'>
-          <span className='Testimonials-element-title'>Completed Audits:</span>
-          <span className='Testimonials-element-description'>102</span>
+          <span className='Testimonials-element-title'>
+            <FormattedMessage id='CompletedAudits' defaultMessage='Completed Audits:' />
+          </span>
+          <span className='Testimonials-element-description'>{completedAudits}</span>
           <a
             className='Testimonials-element-anchor'
             href='https://github.com/EthereumCommonwealth/Auditing/issues?q=is%3Aissue+is%3Aclosed'
             target='_blank'
+            rel='noopener noreferrer'
           />
         </div>
       </div>
@@ -28,4 +35,11 @@ const Testimonials = ({ intl }) => (
   </div>
 );
 
-export default injectIntl(Testimonials);
+function mapStateToProps(state) {
+  return {
+    completedAudits: state.audit.completedAudits,
+    inProgress: state.audit.inProgress,
+  };
+}
+
+export default connect(mapStateToProps)(Testimonials);

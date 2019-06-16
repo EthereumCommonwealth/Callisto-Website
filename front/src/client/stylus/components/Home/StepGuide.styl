@@ -1,0 +1,46 @@
+.StepGuide
+  padding 2rem 0
+  margin-top 3rem
+  &-holder
+    display grid
+    grid-gap 1rem
+    margin-top 3rem
+    +from-width($md)
+      grid-gap 2rem
+      grid-template-columns 1fr 1fr
+      max-width 75%
+      margin 0 auto
+  &-placeholder
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    display flex
+    align-items center
+    justify-content center
+    flex-direction column
+    padding 1rem
+    box-sizing border-box
+    color $dark-blue
+    h4
+      text-align center
+      font-size 24px
+      +from-width($sm)
+        font-size 32px
+      +from-width($xl)
+        margin .5rem 0
+        font-size 24px
+    i
+      font-size 32px
+      +from-width($sm)
+        font-size 40px
+      +from-width($xl)
+        font-size 32px
+  &-video
+    &.isActive
+      background-color #e5e5e5
+      box-shadow 0 0 14px 0 rgba(198,202,206,0.3)
+      border-radius 5px
+      &:hover
+        cursor pointer

@@ -118,6 +118,8 @@ export default {
         audit = {
           platform: [],
           csrf_token: null,
+          completedAudits: 0,
+          inProgress: 0,
         }
         Sentry.captureException(err);
       }

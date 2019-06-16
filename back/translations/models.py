@@ -1,5 +1,34 @@
+import json
+
+from django.contrib.postgres.fields import JSONField
 from django.core.cache import cache
 from django.db import models
+from django.contrib.postgres.forms.jsonb import (
+    InvalidJSONInput,
+    JSONField as JSONFormField,
+)
+
+
+class UTF8JSONFormField(JSONFormField):
+
+    def prepare_value(self, value):
+        if isinstance(value, InvalidJSONInput):
+            return value
+        return json.dumps(value, ensure_ascii=False, indent=2)
+
+
+class UTF8JSONField(JSONField):
+    """JSONField for postgres databases.
+
+    Displays UTF-8 characters directly in the admin, i.e. äöü instead of
+    unicode escape sequences.
+    """
+
+    def formfield(self, **kwargs):
+        return super().formfield(**{
+            **{'form_class': UTF8JSONFormField},
+            **kwargs,
+        })
 
 
 class TranslationKey(models.Model):
@@ -33,50 +62,58 @@ class Language(models.Model):
     slug = models.SlugField(max_length=20)
     keys = models.ManyToManyField(
         TranslationKey, through="LanguageTranslation")
+    translation = UTF8JSONField(blank=True, null=True)
 
-    def save(self, *args, **kwargs):
-        if self.pk:
-            return
-
-        super(Language, self).save(*args, **kwargs)
-        keys = TranslationKey.objects.all()
-
-        for key in keys:
-            translation = LanguageTranslation.objects.create(
-                language=self,
-                key=key,
-                translation=key.default_translation
-            )
+    # def save(self, *args, **kwargs):
+    #     if self.pk:
+    #         return
+    #
+    #     super(Language, self).save(*args, **kwargs)
+    #     keys = TranslationKey.objects.all()
+    #
+    #     for key in keys:
+    #         translation = LanguageTranslation.objects.create(
+    #             language=self,
+    #             key=key,
+    #             translation=key.default_translation
+    #         )
 
     def __str__(self):
         return self.language_name
 
     @classmethod
     def get_translations(cls, language_slug):
-        cache_key = "translations_{}".format(language_slug)
-
-        translations = cache.get(cache_key)
-        if translations:
-            return translations
-
+        # cache_key = "translations_{}".format(language_slug)
+        #
+        # translations = cache.get(cache_key)
+        # if translations:
+        #     return translations
+        #
         language = cls.objects.filter(
-            slug=language_slug)
-        if not language.exists():
+            slug=language_slug).first()
+        if not language:
             language = cls.objects.filter(
-                slug='en')
-
-        language = language.first()
-        keys = {}
-        for key in language.translations.all():
-            keys[key.key.slug] = key.translation
-
+                slug='en').first()
+        #
+        # language = language.first()
+        # keys = {}
+        # for key in language.translations.all():
+        #     keys[key.key.slug] = key.translation
+        #
+        # translations = {
+        #     'slug': language.slug,
+        #     'languageName': language.language_name,
+        #     'keys': keys
+        # }
+        # cache_key = "translations_{}".format(language.slug)
+        # cache.set(cache_key, translations, 86400)
+        # return translations
         translations = {
             'slug': language.slug,
             'languageName': language.language_name,
-            'keys': keys
+            'keys': language.translation
         }
-        cache_key = "translations_{}".format(language.slug)
-        cache.set(cache_key, translations, 86400)
+
         return translations
 
 

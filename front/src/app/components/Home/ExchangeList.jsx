@@ -11,7 +11,7 @@ const ExchangeList = ({ exchanges }) => (
       {exchanges.length > 0 ?
         exchanges.map(exchange => (
           <figure key={exchange.name} className='ExchangeList-content-figure'>
-            <a href={exchange.url} target='_blank'>
+            <a href={exchange.url} target='_blank' rel='noopener noreferrer'>
               <img src={exchange.logo} alt={exchange.name} />
             </a>
             {exchange.comingSoon ?

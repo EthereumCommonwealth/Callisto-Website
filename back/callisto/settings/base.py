@@ -45,7 +45,17 @@ INSTALLED_APPS = [
     'blog',
     'financial',
     'partner',
+    'price_recording',
+    'taskapp.celery.CeleryConfig',
 ]
+
+if os.environ.get('CELERY_CALLISTO', False):
+    remove_apps = [
+        'django.contrib.sessions',
+        'django.contrib.staticfiles',
+    ]
+    for application in remove_apps:
+        INSTALLED_APPS.remove(application)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -164,7 +174,7 @@ LOGGING = {
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://redis:6379',
+        'LOCATION': 'redis://redis:6379/0',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
@@ -172,9 +182,11 @@ CACHES = {
 }
 
 
-BROKER_URL = 'redis://redis:6379/0'
+BROKER_URL = 'redis://redis:6379/1'
 CELERY_RESULT_BACKEND = 'redis://redis:6379'
-CELERY_ACCEPT_CONTENT = ['application/json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
+
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240
+
+COINMARKETCAP_API_KEY = os.environ.get('COINMARKETCAP_API_KEY', '')
+
+

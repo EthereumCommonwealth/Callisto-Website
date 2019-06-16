@@ -20,6 +20,7 @@ const prefetchData = async (req, res, next) => {
       blockExplorers: internalData.blockExplorers,
       wallets: internalData.wallets,
       exchanges: internalData.exchanges,
+      walletsColdStacking: internalData.walletsColdStacking,
       blogPosts: posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts,
       blogTags: [],
       marketStats: prepareMarket(btcStats, cloStats, totalSupply, balance),

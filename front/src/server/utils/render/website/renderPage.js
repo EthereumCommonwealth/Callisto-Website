@@ -1,10 +1,11 @@
-const renderPage = (html, preloadedState, headers, hashManifest) => {
+const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
   return (`
     <!doctype html>
-      <html>
+      <html lang=${lang}>
         <head>
           <title>${headers.title}</title>
           ${process.env.NODE_ENV !== 'production' ? '<meta name="robots" content="noindex,nofollow">' : ''}
+          <meta name="theme-color" content="#070a14">
           <meta name="title" content="${headers.title}">
           <meta name="description" content="${headers.description}">
           <meta property="og:url" content="${headers.url}" />
@@ -31,11 +32,11 @@ const renderPage = (html, preloadedState, headers, hashManifest) => {
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-5XT2RN7');</script>
+          })(window,document,'script','dataLayer','GTM-WB5DB4V');</script>
           <!-- End Google Tag Manager -->
           <meta
             name="google-site-verification"
-            content="4vOPk-f3ZKRulW2kk0HxXcR1ok_7XeHVw9oG4M8dcGU"
+            content="DGlaSsv4dI_-g7elZKLhw0h-TIcjMOYozos-ifxznIU"
           />
           <link
             rel="stylesheet"
@@ -51,40 +52,34 @@ const renderPage = (html, preloadedState, headers, hashManifest) => {
           <link rel="alternate" href="https://callisto.network/ko${headers.baseUrl}" hreflang="ko" />
           <link rel="alternate" href="https://callisto.network/ru${headers.baseUrl}" hreflang="ru" />
           <link rel="alternate" href="https://callisto.network/zh${headers.baseUrl}" hreflang="zh-hans" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0,
-            maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
+          <meta name="viewport" content="width=device-width, initial-scale=1,
+            maximum-scale=2, minimum-scale=1, shrink-to-fit=no">
           <link rel="stylesheet" href="${hashManifest[1]}" type="text/css"/>
-          <script src="https://script.tapfiliate.com/tapfiliate.js" type="text/javascript" async></script>
-          <script type="text/javascript">
-            (function(t,a,p){t.TapfiliateObject=a;t[a]=t[a]||function(){ (t[a].q=t[a].q||[]).push(arguments)}})(window,'tap');
-
-            tap('create', '7960-ef6c9b');
-            tap('detect');
-          </script>
           ${headers.fromBlog ? '<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">' : ''}
           ${headers.fromBlog ? '<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>' : ''}
           ${headers.fromBlog ? '<script>hljs.initHighlightingOnLoad();</script>' : ''}
         </head>
         <body>
-          <!-- Google Tag Manager (noscript) -->
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XT2RN7"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-          <!-- End Google Tag Manager (noscript) -->
-           <div id="callisto-network">${html}</div>
-          <script>
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB5DB4V"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+            <div id="callisto-network">${html}</div>
+          <script async>
             window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
           </script>
-          <!-- Global site tag (gtag.js) - Google Ads: 794594304 -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-794594304"></script>
-          <script>
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-140785880-1"></script>
+          <script defer>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'AW-794594304');
+            gtag('config', 'UA-140785880-1');
           </script>
-          <script src="${hashManifest[2]}" type="text/javascript"></script>
-          <script src="${hashManifest[0]}" type="text/javascript"></script>
+          <script src="${hashManifest[2]}" async type="text/javascript"></script>
+          <script src="${hashManifest[0]}" async type="text/javascript"></script>
+          <script src="/lazysizes.min.js" async></script>
         </body>
     </html>
   `);

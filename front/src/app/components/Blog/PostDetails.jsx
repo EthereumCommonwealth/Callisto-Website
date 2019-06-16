@@ -14,6 +14,7 @@ const PostDetails = ({ singlePost }) => {
               className='PostDetails-share-btn'
               href={`https://www.facebook.com/sharer/sharer.php?u=${singlePost.url}`}
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-facebook-f' />
             </a>
@@ -21,6 +22,7 @@ const PostDetails = ({ singlePost }) => {
               className='PostDetails-share-btn'
               href={`https://telegram.me/share/url?url=${singlePost.url}&text=${singlePost.title}`}
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-telegram-plane' />
             </a>
@@ -28,6 +30,7 @@ const PostDetails = ({ singlePost }) => {
               className='PostDetails-share-btn'
               href={`https://twitter.com/intent/tweet?url=${singlePost.url}&text=${singlePost.title}`}
               target='_blank'
+              rel='noopener noreferrer'
             >
               <i className='fab fa-twitter' />
             </a>

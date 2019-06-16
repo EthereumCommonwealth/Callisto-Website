@@ -19,6 +19,7 @@ const TeamMember = ({ name, position, socialNetworks, bio, avatar }) => (
           className='TeamMember-social-item'
           href={network.url}
           target='_blank'
+          rel='noopener noreferrer'
         >
           <i className={network.prefix} />
         </a>

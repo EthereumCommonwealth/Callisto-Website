@@ -10,32 +10,27 @@ const PartnersList = ({ exchanges, intl }) => (
       />
       <div className='PartnersList-content'>
         <figure className='PartnersList-content-figure'>
-          <a href='https://www.dobitrade.com/' target='_blank'>
-            <img src='/image/partners/dobi_logo.svg' alt='Dobitrade' />
+          <a href='https://trustwallet.com/dapp/' target='_blank' rel='noopener noreferrer'>
+            <img src='/image/partners/trust.png' alt='Coinomi' />
           </a>
         </figure>
         <figure className='PartnersList-content-figure'>
-          <a href='https://www.coinomi.com/' target='_blank'>
+          <a href='https://guarda.co/' target='_blank' rel='noopener noreferrer'>
+            <img src='/image/partners/guarda.svg' alt='Coinomi' />
+          </a>
+        </figure>
+        <figure className='PartnersList-content-figure'>
+          <a href='https://www.coinomi.com/' target='_blank' rel='noopener noreferrer'>
             <img src='/image/partners/coinomi-logo.png' alt='Coinomi' />
           </a>
         </figure>
         <figure className='PartnersList-content-figure'>
-          <a href='https://entethalliance.org/' target='_blank'>
+          <a href='https://entethalliance.org/' target='_blank' rel='noopener noreferrer'>
             <img src='/image/partners/eea.png' alt='Enterprise Ethereum Alliance' />
           </a>
         </figure>
         <figure className='PartnersList-content-figure'>
-          <a href='http://getonexchange.com/' target='_blank'>
-            <img src='/image/partners/goe.png' alt='Get on Exchange' />
-          </a>
-        </figure>
-        <figure className='PartnersList-content-figure'>
-          <a href='https://crynet.io/' target='_blank'>
-            <img src='/image/partners/crynet.png' alt='Crynet' />
-          </a>
-        </figure>
-        <figure className='PartnersList-content-figure'>
-          <a href='https://www.smartcontractaudits.com/' target='_blank'>
+          <a href='https://www.smartcontractaudits.com/' target='_blank' rel='noopener noreferrer'>
             <img src='/image/partners/smart-contract-audits-logo.svg' alt='Smartcontractaudits' />
           </a>
         </figure>

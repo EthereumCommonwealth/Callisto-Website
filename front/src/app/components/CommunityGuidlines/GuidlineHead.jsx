@@ -20,6 +20,7 @@ const GuidlineHead = ({ intl }) => (
           <a
             href='mailto:yograterol@callisto.network'
             target='_blank'
+            rel='noopener noreferrer'
             className='btn btn-green'
           >
             <FormattedMessage id='GuidlineHeadCTA' />
