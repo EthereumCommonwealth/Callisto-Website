@@ -332,7 +332,12 @@ class PostListView(View):
             for post in post_paginated.object_list
         ]
 
-        return JsonResponse(status=200, data=posts_list, safe=False)
+        data = {
+            'posts_list': posts_list,
+            'paginator': post_paginator.num_pages
+        }
+
+        return JsonResponse(status=200, data=data, safe=False)
 
 
 class HomeAPIView(View):
