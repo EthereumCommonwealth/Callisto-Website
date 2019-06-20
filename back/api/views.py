@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.http import JsonResponse
 from django.views.generic.base import View
 
@@ -313,6 +314,11 @@ class PostListView(View):
     def get(self, request, *args, **kwargs):
         posts = Post.objects.all()
 
+        post_paginator = Paginator(posts, 10)
+        page = request.GET.get('page', 1)
+
+        post_paginated = post_paginator.page(page)
+
         posts_list = [
             {
                 'id': post.post_id,
@@ -323,7 +329,7 @@ class PostListView(View):
                 'slug': post.slug,
                 'cover': post.cover,
             }
-            for post in posts
+            for post in post_paginated.object_list
         ]
 
         return JsonResponse(status=200, data=posts_list, safe=False)
