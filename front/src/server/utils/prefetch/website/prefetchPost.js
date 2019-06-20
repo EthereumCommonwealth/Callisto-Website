@@ -74,7 +74,6 @@ const prefetchPost = async (req, res, next) => {
 
     if (postId) {
       const singlePost = await api.blog.getSinglePost(postId);
-      console.log(singlePost)
       const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
       const initialState = {
         teamMembers: internalData.teamMembers,
