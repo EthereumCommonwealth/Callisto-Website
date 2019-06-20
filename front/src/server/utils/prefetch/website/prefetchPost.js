@@ -69,11 +69,12 @@ const prefetchPost = async (req, res, next) => {
     const tags = await api.blog.getTags();
     const internalData = homeData.internalData;
     const messages = homeData.messages;
-    const preparedPosts = posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts;
+    const preparedPosts = posts.posts_list && posts.posts_list.length > 0 ? preparePosts(posts.posts_list) : posts;
     const postId = getPost(req.params.slug, preparedPosts);
 
     if (postId) {
       const singlePost = await api.blog.getSinglePost(postId);
+      console.log(singlePost)
       const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
       const initialState = {
         teamMembers: internalData.teamMembers,
@@ -85,7 +86,7 @@ const prefetchPost = async (req, res, next) => {
         blogPosts: preparedPosts,
         blogTags: tags.data && tags.data.length > 0 ? tags.data : tags,
         marketStats: prepareMarket(btcStats, cloStats, totalSupply, balance),
-        singlePost: preparePost(singlePost.data, baseImageUrl, posts.data, tags.data),
+        singlePost: preparePost(singlePost.data, baseImageUrl, posts.posts_list, tags.data),
         faq: [],
         tagPosts: [],
         messages,

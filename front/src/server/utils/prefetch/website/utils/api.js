@@ -1,6 +1,7 @@
 import axios from 'axios';
 import Web3 from 'web3';
 import blogPosts from '../../../../../app/services/blogPosts';
+import localBlogPosts from '../../../../../app/services/localBlogPosts';
 import coinStats from '../../../../../app/services/coinStats';
 import getTranslations from '../../../../getTranslations';
 import * as Sentry from '@sentry/node';
@@ -35,7 +36,8 @@ export default {
     getPosts: async amount => {
       let posts;
       try {
-        posts = await blogPosts.get(`posts?_embed&per_page=${amount}`);
+        posts = await localBlogPosts.get('posts/');
+        posts = posts.data
       } catch (err) {
         posts = [];
         Sentry.captureException(err);

@@ -22,7 +22,7 @@ const prefetchBlog = async (req, res, next) => {
       wallets: internalData.wallets,
       walletsColdStacking: internalData.walletsColdStacking,
       exchanges: internalData.exchanges,
-      blogPosts: posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts,
+      blogPosts: posts.posts_list && posts.posts_list.length > 0 ? preparePosts(posts.posts_list) : posts,
       blogTags: tags.data && tags.data.length > 0 ? tags.data : tags,
       marketStats: prepareMarket(btcStats, cloStats, totalSupply, balance),
       tagPosts: [],
