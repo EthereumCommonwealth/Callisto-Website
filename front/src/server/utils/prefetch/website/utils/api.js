@@ -36,7 +36,7 @@ export default {
     getPosts: async amount => {
       let posts;
       try {
-        posts = await localBlogPosts.get('posts/');
+        posts = await blogPosts.get('posts/');
         posts = posts.data
       } catch (err) {
         posts = [];
@@ -54,10 +54,10 @@ export default {
       }
       return tags;
     },
-    getSinglePost: async id => {
+    getSinglePost: async slug => {
       let singlePost;
       try {
-        singlePost = await blogPosts.get(`posts/${id}?_embed`);
+        singlePost = await blogPosts.get(`posts/${slug}/`);
       } catch (err) {
         singlePost = {};
         Sentry.captureException(err);

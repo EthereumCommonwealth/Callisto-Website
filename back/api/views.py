@@ -285,6 +285,7 @@ class PostDetailView(View):
             'link': post.link,
             'slug': post.slug,
             'cover': post.cover,
+            'author': post.author,
             'relatedPosts': [
                 {
                     'id': related_post.post_id,
@@ -299,9 +300,9 @@ class PostDetailView(View):
             ],
             'tags': [
                 {
-                    'number': tag.tag.number,
-                    'name': tag.tag.name,
-                    'slug': tag.tag.slug,
+                    'number': tag.number,
+                    'name': tag.name,
+                    'slug': tag.slug,
                 }
                 for tag in post.tags.all()
             ],
