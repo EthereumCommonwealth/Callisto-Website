@@ -34,7 +34,6 @@ const prepareRelated = (relatedPosts) => {
 }
 
 const preparePost = (post, baseImageUrl, posts, tags) => {
-  console.log(post.relatedPosts)
   return {
     id: post.id,
     title: post.title,
