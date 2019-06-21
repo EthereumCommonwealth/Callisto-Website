@@ -26,14 +26,16 @@ const prepareRelated = (relatedPosts) => {
     related.push({
       id: relatedPosts[i].id,
       title: relatedPosts[i].title,
-      description: relatedPosts[i].description,
+      description: relatedPosts[i].description
+        .replace(/<(?:.|\n)*?>/gm, '')
+        .replace(/&hellip;/gm, '...'),
       slug: relatedPosts[i].slug,
     });
   }
   return related;
 }
 
-const preparePost = (post, baseImageUrl, posts, tags) => {
+const preparePost = (post) => {
   return {
     id: post.id,
     title: post.title,
@@ -67,7 +69,6 @@ const prefetchPost = async (req, res, next) => {
 
     if (postId) {
       const singlePost = await api.blog.getSinglePost(postId);
-      const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
       const initialState = {
         teamMembers: internalData.teamMembers,
         miningPools: internalData.miningPools,
@@ -78,7 +79,7 @@ const prefetchPost = async (req, res, next) => {
         blogPosts: preparedPosts,
         blogTags: tags.data && tags.data.length > 0 ? tags.data : tags,
         marketStats: prepareMarket(btcStats, cloStats, totalSupply, balance),
-        singlePost: preparePost(singlePost.data, baseImageUrl, posts.posts_list, tags.data),
+        singlePost: preparePost(singlePost.data),
         faq: [],
         tagPosts: [],
         messages,
