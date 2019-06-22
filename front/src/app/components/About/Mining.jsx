@@ -23,7 +23,7 @@ const Mining = ({ intl }) => (
       <div className='Mining-details'>
         <MiningElement
           title={intl.formatMessage({ id: 'BlockReward' })}
-          content='600 CLO'
+          content='360 CLO'
           description={`(10% ${intl.formatMessage({ id: 'TreasureFee' })})`}
         />
         <MiningElement
@@ -41,7 +41,7 @@ const Mining = ({ intl }) => (
         />
         <MiningElement
           title={intl.formatMessage({ id: 'BlockRewardReduction' })}
-          content='32% each 5,000,000 block'
+          content='40% each 4,400,001 block'
         />
         <MiningElement
           title={intl.formatMessage({ id: 'BlockInterval' })}
