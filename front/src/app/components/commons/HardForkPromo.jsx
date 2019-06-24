@@ -17,7 +17,7 @@ class HardForkPromo extends Component {
         const blockNumber = await web3.eth.getBlockNumber();
         const count = 2900001 - Number(blockNumber);
         this.setState({ hfBlocks: count, blocksGetted: true });
-      }, 5000);
+      }, 1000);
       if (this.state.hfBlocks === 0 && this.state.blocksGetted) {
         clearInterval(blocksInterval);
         this.setState({ promoEnded: true });
