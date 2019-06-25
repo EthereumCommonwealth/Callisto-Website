@@ -15,9 +15,9 @@ class HardForkPromo extends Component {
       const blocksInterval = setInterval(async () => {
         const web3 = new Web3(new Web3.providers.HttpProvider('https://clo-geth.0xinfra.com/'));
         const blockNumber = await web3.eth.getBlockNumber();
-        const count = 2900001 - Number(blockNumber);
+        const count = 3100001 - Number(blockNumber);
         this.setState({ hfBlocks: count, blocksGetted: true });
-      }, 5000);
+      }, 1000);
       if (this.state.hfBlocks === 0 && this.state.blocksGetted) {
         clearInterval(blocksInterval);
         this.setState({ promoEnded: true });
@@ -34,12 +34,12 @@ class HardForkPromo extends Component {
             <h2 className='HardForkPromo-text-title'>
               <FormattedMessage
                 id='HardForkPromoTitle'
-                defaultMessage='Hardfork #3'
+                defaultMessage='Hadfork #4: Constantinople Activation'
               />
             </h2>
             <FormattedMessage
               id='HardForkPromoDescription'
-              defaultMessage='Every #pool #exchange or #wallet should update to the newest release'
+              defaultMessage='Next block reward reduction on block #4,400,001'
             />
           </div>
           {this.state.hfBlocks > 0 ? (
