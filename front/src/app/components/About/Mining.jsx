@@ -41,7 +41,7 @@ const Mining = ({ intl }) => (
         />
         <MiningElement
           title={intl.formatMessage({ id: 'BlockRewardReduction' })}
-          content='40% each 4,400,001 block'
+          content='40% each 1,500,000 block (~250 days)'
         />
         <MiningElement
           title={intl.formatMessage({ id: 'BlockInterval' })}
