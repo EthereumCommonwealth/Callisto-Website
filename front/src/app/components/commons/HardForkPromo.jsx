@@ -39,7 +39,7 @@ class HardForkPromo extends Component {
             </h2>
             <FormattedMessage
               id='HardForkPromoDescription'
-              defaultMessage='Next block reward reduction on block #4,400,001'
+              defaultMessage='Constantinople Activation at Block #3,100,001'
             />
           </div>
           {this.state.hfBlocks > 0 ? (
