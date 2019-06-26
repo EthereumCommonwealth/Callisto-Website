@@ -64,10 +64,10 @@ export default {
       }
       return singlePost;
     },
-    getSingleTag: async id => {
+    getSingleTag: async slug => {
       let tags;
       try {
-        tags = await blogPosts.get(`posts?tags=${id}`);
+        tags = await blogPosts.get(`tags/${slug}/`);
       } catch (error) {
         tags = [];
         Sentry.captureException(err);
