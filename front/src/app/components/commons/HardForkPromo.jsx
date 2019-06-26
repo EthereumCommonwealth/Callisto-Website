@@ -34,12 +34,12 @@ class HardForkPromo extends Component {
             <h2 className='HardForkPromo-text-title'>
               <FormattedMessage
                 id='HardForkPromoTitle'
-                defaultMessage='Hadfork #4: Constantinople Activation'
+                defaultMessage='Hardfork #4: Constantinople Activation'
               />
             </h2>
             <FormattedMessage
               id='HardForkPromoDescription'
-              defaultMessage='Constantinople Activation at Block #3,100,001'
+              defaultMessage='Constantinople Activation at Block #3,100,000'
             />
           </div>
           {this.state.hfBlocks > 0 ? (
