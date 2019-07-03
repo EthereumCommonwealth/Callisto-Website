@@ -8,6 +8,4 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
-INSTALLED_APPS += [
-    'django_extensions'
-]
+INSTALLED_APPS += []

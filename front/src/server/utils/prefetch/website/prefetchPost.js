@@ -3,57 +3,52 @@ import preparePosts from './utils/preparePosts';
 import prepareMarket from './utils/prepareMarket';
 import handleRender from '../../render/website/handleRender';
 
-const getSlug = (id, posts) => {
-  const filtered = posts.filter(elem => elem.id === id);
-  return filtered.length > 0 ? filtered[0].slug : '';
-}
-
 const getPost = (slug, posts) => {
   const filtered = posts.filter(elem => elem.slug === slug);
-  return filtered.length > 0 ? filtered[0].id : false;
+  return filtered.length > 0 ? filtered[0].slug : false;
 }
 
-const getTags = (topics, tags) => {
+const getTags = (topics) => {
   const postTags = [];
-  for (let i = 0; i < tags.length; i++) {
-    if (topics.indexOf(tags[i].id) !== -1) {
-      postTags.push({
-        id: tags[i].id,
-        name: tags[i].name,
-        slug: tags[i].slug,
-      });
-    }
-  }
+  topics.forEach(tag => {
+    postTags.push({
+      id: tag.number,
+      name: tag.name,
+      slug: tag.slug,
+    })
+  });
   return postTags;
 }
 
-const prepareRelated = (relatedPosts, posts) => {
+const prepareRelated = (relatedPosts) => {
   const related = [];
   for (let i = 0; i < relatedPosts.length; i++) {
     related.push({
       id: relatedPosts[i].id,
       title: relatedPosts[i].title,
-      description: relatedPosts[i].excerpt,
-      slug: getSlug(relatedPosts[i].id, posts),
+      description: relatedPosts[i].description
+        .replace(/<(?:.|\n)*?>/gm, '')
+        .replace(/&hellip;/gm, '...'),
+      slug: relatedPosts[i].slug,
     });
   }
   return related;
 }
 
-const preparePost = (post, baseImageUrl, posts, tags) => {
+const preparePost = (post) => {
   return {
     id: post.id,
-    title: post.title.rendered,
-    description: post.excerpt.rendered,
-    content: post.content.rendered,
+    title: post.title,
+    description: post.description,
+    content: post.content,
     date: post.date,
     link: post.link,
     slug: post.slug,
-    cover: `${baseImageUrl}/${post.better_featured_image.media_details.file}`,
+    cover: post.cover,
     url: `https://callisto.network/blog/post/${post.slug}/`,
-    relatedPosts: prepareRelated(post['jetpack-related-posts'], posts),
-    topics: getTags(post.tags, tags),
-    author: post._embedded.author[0].name,
+    relatedPosts: prepareRelated(post.relatedPosts),
+    topics: getTags(post.tags),
+    author: post.author,
   }
 }
 
@@ -69,12 +64,11 @@ const prefetchPost = async (req, res, next) => {
     const tags = await api.blog.getTags();
     const internalData = homeData.internalData;
     const messages = homeData.messages;
-    const preparedPosts = posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts;
+    const preparedPosts = posts.posts_list && posts.posts_list.length > 0 ? preparePosts(posts.posts_list) : posts;
     const postId = getPost(req.params.slug, preparedPosts);
 
     if (postId) {
       const singlePost = await api.blog.getSinglePost(postId);
-      const baseImageUrl = 'https://news.callisto.network/wp-content/uploads';
       const initialState = {
         teamMembers: internalData.teamMembers,
         miningPools: internalData.miningPools,
@@ -85,7 +79,7 @@ const prefetchPost = async (req, res, next) => {
         blogPosts: preparedPosts,
         blogTags: tags.data && tags.data.length > 0 ? tags.data : tags,
         marketStats: prepareMarket(btcStats, cloStats, totalSupply, balance),
-        singlePost: preparePost(singlePost.data, baseImageUrl, posts.data, tags.data),
+        singlePost: preparePost(singlePost.data),
         faq: [],
         tagPosts: [],
         messages,
@@ -93,9 +87,9 @@ const prefetchPost = async (req, res, next) => {
       };
 
       const blogMessages = {
-        title: singlePost.data.title.rendered,
-        description: singlePost.data.excerpt.rendered.replace(/<(?:.|\n)*?>/gm, ''),
-        image: `${baseImageUrl}/${singlePost.data.better_featured_image.media_details.file}`,
+        title: singlePost.data.title,
+        description: singlePost.data.description.replace(/<(?:.|\n)*?>/gm, ''),
+        image: singlePost.data.cover,
         url: `https://callisto.network/blog/post/${singlePost.data.slug}/`,
         slug: singlePost.data.slug,
       }
