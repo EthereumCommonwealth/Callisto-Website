@@ -315,7 +315,7 @@ class PostListView(View):
     def get(self, request, *args, **kwargs):
         posts = Post.objects.all().order_by('-date')
 
-        post_paginator = Paginator(posts, 10)
+        post_paginator = Paginator(posts, 60)
         page = request.GET.get('page', 1)
 
         post_paginated = post_paginator.page(page)
