@@ -10,7 +10,7 @@ import Mining from '../components/About/Mining';
 import MiningPools from '../components/About/MiningPools';
 import Team from '../components/About/Team';
 import PartnersList from '../components/About/PartnersList';
-import BlogOverview from '../components/About/BlogOverview';
+// import BlogOverview from '../components/About/BlogOverview';
 import Community from '../components/Home/Community';
 import Footer from '../components/commons/Footer';
 import Advisors from '../components/Home/Advisors';
@@ -34,7 +34,7 @@ const About = ({ match }) => {
       <Team />
       <Advisors />
       <PartnersList />
-      <BlogOverview />
+      {/* <BlogOverview /> */}
       <Community
         lang={match.params && match.params.lang ? match.params.lang : 'en'}
       />

@@ -1,11 +1,9 @@
 import api from './utils/api';
-import preparePosts from './utils/preparePosts';
 import prepareMarket from './utils/prepareMarket';
 import handleRender from '../../render/website/handleRender';
 
 const prefetchData = async (req, res, next) => {
   try {
-    const posts = await api.blog.getPosts(3);
     const btcStats = await api.market.getTicker(1);
     const cloStats = await api.market.getTicker(2757);
     const homeData = await api.website.getHome(req.params.lang)
@@ -21,7 +19,7 @@ const prefetchData = async (req, res, next) => {
       wallets: internalData.wallets,
       exchanges: internalData.exchanges,
       walletsColdStacking: internalData.walletsColdStacking,
-      blogPosts: posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts,
+      blogPosts: [],
       blogTags: [],
       marketStats: prepareMarket(btcStats, cloStats, totalSupply, balance),
       tagPosts: [],
