@@ -7,7 +7,7 @@ import SectionHeading from '../commons/SectionHeading';
 import SingleWallet from '../commons/SingleWallet';
 
 const HowWorks = ({ intl, marketStats, wallets }) => (
-  <Element className='HowWorks' name='howworks'>
+  <div className='HowWorks' name='howworks'>
     <div className='HowWorks-content container'>
       <SectionHeading title={intl.formatMessage({ id: 'HowWorks', defaultMessage: 'How does it works?' })} />
       <div className='HowWorks-video sixteen-nine'>
@@ -21,7 +21,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
           loading='lazy'
         />
       </div>
-      <div className='HowWorks-step'>
+      <Element className='HowWorks-step' name='exchanges'>
         <SectionHeading
           step={1}
           title={intl.formatMessage({ id: 'HowWorksStepOne', defaultMessage: 'Where to buy CLO?' })}
@@ -128,7 +128,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
             </div>
           </div>
         </div>
-      </div>
+      </Element>
       <div className='HowWorks-step last'>
         <SectionHeading
           step={2}
@@ -150,7 +150,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
         </div>
       </div>
     </div>
-  </Element>
+  </div>
 );
 
 function mapStateTopProps(state) {

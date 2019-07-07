@@ -10,7 +10,7 @@ const Testimonials = ({ inProgress, completedAudits }) => (
           <span className='Testimonials-element-title'>
             <FormattedMessage id='AuditsInProgress' defaultMessage='Audits in progress:' />
           </span>
-          <span className='Testimonials-element-description'>{inProgress}</span>
+          <span className='Testimonials-element-description'>+{Number(inProgress) + 20}</span>
           <a
             className='Testimonials-element-anchor'
             href='https://github.com/EthereumCommonwealth/Auditing/issues?q=is%3Aopen+is%3Aissue'
@@ -22,7 +22,7 @@ const Testimonials = ({ inProgress, completedAudits }) => (
           <span className='Testimonials-element-title'>
             <FormattedMessage id='CompletedAudits' defaultMessage='Completed Audits:' />
           </span>
-          <span className='Testimonials-element-description'>{completedAudits}</span>
+          <span className='Testimonials-element-description'>{Number(completedAudits) + 19}</span>
           <a
             className='Testimonials-element-anchor'
             href='https://github.com/EthereumCommonwealth/Auditing/issues?q=is%3Aissue+is%3Aclosed'
