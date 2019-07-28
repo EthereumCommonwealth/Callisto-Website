@@ -14,7 +14,7 @@ import PartnersList from '../components/About/PartnersList';
 import Community from '../components/Home/Community';
 import Footer from '../components/commons/Footer';
 import Advisors from '../components/Home/Advisors';
-import HardForkPromo from '../components/commons/HardForkPromo';
+// import HardForkPromo from '../components/commons/HardForkPromo';
 
 const About = ({ match }) => {
   return (
@@ -23,7 +23,6 @@ const About = ({ match }) => {
         lang={match.params && match.params.lang ? match.params.lang : 'en'}
         fromLanding
       />
-      <HardForkPromo />
       <Hero lang={match.params && match.params.lang ? match.params.lang : 'en'} />
       <InfoContent
         lang={match.params && match.params.lang ? match.params.lang : 'en'}

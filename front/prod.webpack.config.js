@@ -5,6 +5,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const nib = require('nib');
 const rupture = require('rupture');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
@@ -88,6 +89,7 @@ module.exports = {
     alias: { styles: path.resolve(__dirname, 'src/client/stylus/') },
   },
   optimization: {
+    minimizer: [new TerserPlugin()],
     splitChunks: {
       chunks: 'async',
       name: true,

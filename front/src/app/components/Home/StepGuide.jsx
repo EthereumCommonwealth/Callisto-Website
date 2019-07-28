@@ -16,7 +16,7 @@ const StepGuide = ({ intl }) => (
           src='https://www.youtube.com/embed/kM5ZYTlTU98'
         />
         <StepVideo
-          title='Coinomi tutorial'
+          title='Coinomi Wallet Tutorial'
           src='https://www.youtube.com/embed/-jldPYhHAb0'
         />
         <StepVideo
@@ -24,7 +24,7 @@ const StepGuide = ({ intl }) => (
           src='https://www.youtube.com/embed/HgInjG6ywtQ'
         />
         <StepVideo
-          title='Callisto Oficcial Wallet tutorial'
+          title='Callisto Official Wallet tutorial'
           src='https://www.youtube.com/embed/syDN3o5cJBM'
         />
         <StepVideo

@@ -14,7 +14,7 @@ import OrderAuditModal from '../components/SmartContracts/OrderAuditModal';
 import Testimonials from '../components/SmartContracts/Testimonials';
 import ContractsMetrics from '../components/SmartContracts/ContractsMetrics';
 import Footer from '../components/commons/Footer';
-import HardForkPromo from '../components/commons/HardForkPromo';
+// import HardForkPromo from '../components/commons/HardForkPromo';
 
 class SmartContract extends PureComponent {
   state = {
@@ -36,7 +36,6 @@ class SmartContract extends PureComponent {
     return [
       <Layout key='SmartContractContainer' className='SmartContract' match={match}>
         <Header lang={match.params && match.params.lang ? match.params.lang : 'en'} />
-        <HardForkPromo />
         <SmartHero openModal={this.handleOpenModal} />
         <ContractsMetrics />
         <Description />
