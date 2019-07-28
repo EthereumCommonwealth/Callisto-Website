@@ -104,18 +104,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get('*.js', function (req, res, next) {
-  req.url = req.url + '.gz';
-  res.set('Content-Encoding', 'gzip');
-  next();
-});
-
-app.get('*.css', function (req, res, next) {
-  req.url = req.url + '.gz';
-  res.set('Content-Encoding', 'gzip');
-  next();
-});
-
 app.get('/', prefetchData);
 app.get('/about/', prefetchData);
 app.get('/blog/', prefetchBlog);
