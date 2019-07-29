@@ -17,7 +17,7 @@ class ContractsMetrics extends Component {
               <FormattedMessage id='Protected' defaultMessage='Protected' />
             </span>
             <div className='ContractsMetrics-metric'>
-              <h3 className='ContractsMetrics-metric-amount'>+ 9 Millions</h3>
+              <h3 className='ContractsMetrics-metric-amount'>+ 15 Millions</h3>
               <span className='ContractsMetrics-metric-detail'>USD</span>
             </div>
           </div>
@@ -26,7 +26,7 @@ class ContractsMetrics extends Component {
               <FormattedMessage id='Audited' defaultMessage='Audited' />
             </span>
             <div className='ContractsMetrics-metric'>
-              <h3 className='ContractsMetrics-metric-amount'>140</h3>
+              <h3 className='ContractsMetrics-metric-amount'>238</h3>
               <span className='ContractsMetrics-metric-detail'>S-C</span>
             </div>
           </div>
