@@ -13,9 +13,9 @@ const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
           <meta property="og:description" content="${headers.description}" />
           <meta property="og:type" content="website" />
           ${headers.image ?
-            `<meta property="og:image" content=${headers.image} />` :
-            '<meta property="og:image" content="https://callisto.network/opengraphs/default-og.png" />'
-          }
+      `<meta property="og:image" content=${headers.image} />` :
+      '<meta property="og:image" content="https://callisto.network/opengraphs/default-og.png" />'
+    }
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta name="twitter:card" content="summary_large_image" />
@@ -24,9 +24,9 @@ const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
           <meta name="twitter:description" content="${headers.description}" />
           <meta name="twitter:domain" content="callisto.network" />
           ${headers.image ?
-            `<meta property="twitter:image:src" content=${headers.image} />` :
-            '<meta property="twitter:image:src" content="https://callisto.network/opengraphs/default-og.png" />'
-          }
+      `<meta property="twitter:image:src" content=${headers.image} />` :
+      '<meta property="twitter:image:src" content="https://callisto.network/opengraphs/default-og.png" />'
+    }
           <!-- Google Tag Manager -->
           <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -80,6 +80,7 @@ const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
           <script src="${hashManifest[2]}" async type="text/javascript"></script>
           <script src="${hashManifest[0]}" async type="text/javascript"></script>
           <script src="/lazysizes.min.js" async></script>
+          <iframe id="webroundbuttonwidget1" file="webroundbuttonwidget" src="https://telegrambutton.com/webroundbuttonwidget.php?chat_id=CallistoNet&showchatid=true&showmembercount=true&showmembercount=true&color=&pulse=false&textcolor=white&shadowval=&textval=join channel" border="1" style="margin-top:10px;border:20px;height: 60px;width: 60px;z-index:9999;position:fixed;bottom:0;right:0;"></iframe>
         </body>
     </html>
   `);
