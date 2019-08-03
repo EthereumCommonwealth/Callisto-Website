@@ -80,7 +80,7 @@ const renderPage = (html, preloadedState, headers, hashManifest, lang) => {
           <script src="${hashManifest[2]}" async type="text/javascript"></script>
           <script src="${hashManifest[0]}" async type="text/javascript"></script>
           <script src="/lazysizes.min.js" async></script>
-          <iframe id="webroundbuttonwidget1" file="webroundbuttonwidget" src="https://telegrambutton.com/webroundbuttonwidget.php?chat_id=CallistoNet&showchatid=true&showmembercount=true&showmembercount=true&color=&pulse=false&textcolor=white&shadowval=&textval=join channel" border="1" style="margin-top:10px;border:20px;height: 60px;width: 60px;z-index:9999;position:fixed;bottom:0;right:0;"></iframe>
+          <iframe id="webroundbuttonwidget1" file="webroundbuttonwidget" src="https://telegrambutton.com/webroundbuttonwidget.php?chat_id=CallistoNet&showchatid=true&showmembercount=true&showmembercount=true&color=&pulse=false&textcolor=white&shadowval=&textval=join channel" border="1" style="margin-top:10px;border:20px;height: 60px;width: 60px;z-index:9999;position:fixed;bottom:1.5rem;right:1.5rem;"></iframe>
         </body>
     </html>
   `);
