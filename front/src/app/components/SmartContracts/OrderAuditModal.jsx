@@ -229,7 +229,7 @@ class OrderAuditModal extends PureComponent {
                   <label htmlFor='policiesText'>
                     Disclosure Policy
                   </label>
-                  <input
+                  <textarea
                     name='policiesText'
                     type='text'
                     value={this.state.policiesText}
