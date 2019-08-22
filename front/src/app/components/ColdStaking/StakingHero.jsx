@@ -109,7 +109,9 @@ class StakingHero extends Component {
               </h2>
               <p className='StakingHero-counter-subtitleDescription'>
                 <strong>
-                  0xd813419749b3c2cDc94A2F9Cfcf154113264a9d6
+                  <a href='https://explorer2.callisto.network/addr/0xd813419749b3c2cDc94A2F9Cfcf154113264a9d6'>
+                    0xd813419749b3c2cDc94A2F9Cfcf154113264a9d6
+                  </a>
                 </strong>
               </p>
               <div className='StakingHero-counter-elements'>
