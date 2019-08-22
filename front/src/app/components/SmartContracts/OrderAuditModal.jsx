@@ -213,6 +213,7 @@ class OrderAuditModal extends PureComponent {
                   </div>
                 ) : null}
               </div>
+              <br />
               <div className='OrderAuditModal-form-inputs checkbox'>
                 <input
                   name='policiesAccepted'
