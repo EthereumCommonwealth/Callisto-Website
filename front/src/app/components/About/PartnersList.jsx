@@ -34,6 +34,16 @@ const PartnersList = ({ exchanges, intl }) => (
             <img src='/image/partners/smart-contract-audits-logo.svg' alt='Smartcontractaudits' />
           </a>
         </figure>
+        <figure className='PartnersList-content-figure'>
+          <a href='https://chain.link/' target='_blank' rel='noopener noreferrer'>
+            <img src='/image/partners/chainlink.png' alt='chainlink' />
+          </a>
+        </figure>
+        <figure className='PartnersList-content-figure'>
+          <a href='https://magnumwallet.co/' target='_blank' rel='noopener noreferrer'>
+            <img src='/image/partners/magnum-wallet.png' alt='Magnum Wallet' />
+          </a>
+        </figure>
       </div>
     </div>
   </div>
