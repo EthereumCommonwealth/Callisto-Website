@@ -61,6 +61,9 @@ class OrderAuditModal extends PureComponent {
       sourceCode: this.state.sourceCode,
       email: this.state.email,
       platform: this.state.selectedPlatform[0],
+      media: this.state.media,
+      contact: this.state.contact,
+      policiesText: this.state.policiesText,
       csrf_token: this.props.audit.csrf_token,
     })
       .then((response) => {

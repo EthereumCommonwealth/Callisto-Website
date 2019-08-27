@@ -18,7 +18,6 @@ const prefetchTopic = async (req, res, next) => {
     const tagId = req.params.slug;
     if (tagId) {
       const tagPosts = await api.blog.getSingleTag(tagId);
-      console.log(tagPosts.data)
       const initialState = {
         teamMembers: internalData.teamMembers,
         miningPools: internalData.miningPools,
