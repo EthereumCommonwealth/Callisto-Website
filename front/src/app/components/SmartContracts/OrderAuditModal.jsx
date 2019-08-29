@@ -9,9 +9,13 @@ class OrderAuditModal extends PureComponent {
     sourceCode: '',
     email: '',
     platform: '',
+    contact: '',
+    media: '',
+    policiesText: '',
     emailSent: false,
     btnLocked: false,
     platformOpen: false,
+    policiesAccepted: true,
     selectedPlatform: [],
   }
 
@@ -26,6 +30,10 @@ class OrderAuditModal extends PureComponent {
   onChange = event => {
     event.preventDefault();
     this.setState({ [event.target.name]: event.target.value });
+  }
+
+  onCheckboxCheck = event => {
+    this.setState({ policiesAccepted: event.target.checked });
   }
 
   handleOpen = event => {
@@ -53,6 +61,9 @@ class OrderAuditModal extends PureComponent {
       sourceCode: this.state.sourceCode,
       email: this.state.email,
       platform: this.state.selectedPlatform[0],
+      media: this.state.media,
+      contact: this.state.contact,
+      policiesText: this.state.policiesText,
       csrf_token: this.props.audit.csrf_token,
     })
       .then((response) => {
@@ -135,6 +146,47 @@ class OrderAuditModal extends PureComponent {
                 />
               </div>
               <h4 className='OrderAuditModal-form-title'>
+                Contact information and media resources
+              </h4>
+              <div className='OrderAuditModal-form-inputs'>
+                <label htmlFor='contact'>
+                  Contact info
+                </label>
+                <input
+                  name='contact'
+                  type='text'
+                  value={this.state.contact}
+                  onChange={this.onChange}
+                />
+              </div>
+              <br/>
+              <div className='OrderAuditModal-form-inputs'>
+                <label htmlFor='media'>
+                  Media resources
+                </label>
+                <input
+                  name='media'
+                  type='text'
+                  value={this.state.media}
+                  onChange={this.onChange}
+                />
+              </div>
+              <h4 className='OrderAuditModal-form-title'>
+                {messages.DisclosurePolicyTitle}
+              </h4>
+              <div className='OrderAuditModal-form-inputs'>
+                <label htmlFor='email'>
+                  {messages.OrderAuditModalDisclosureLabel}
+                </label>
+                <input
+                  name='email'
+                  type='text'
+                  value={this.state.email}
+                  onChange={this.onChange}
+                  required
+                />
+              </div>
+              <h4 className='OrderAuditModal-form-title'>
                 {messages.Platform}
               </h4>
               <div className='OrderAuditModal-form-inputs'>
@@ -164,21 +216,32 @@ class OrderAuditModal extends PureComponent {
                   </div>
                 ) : null}
               </div>
-              <h4 className='OrderAuditModal-form-title'>
-                {messages.DisclosurePolicyTitle}
-              </h4>
-              <div className='OrderAuditModal-form-inputs'>
-                <label htmlFor='email'>
-                  {messages.OrderAuditModalDisclosureLabel}
-                </label>
+              <br />
+              <div className='OrderAuditModal-form-inputs checkbox'>
                 <input
-                  name='email'
-                  type='text'
-                  value={this.state.email}
-                  onChange={this.onChange}
-                  required
+                  name='policiesAccepted'
+                  type='checkbox'
+                  onChange={this.onCheckboxCheck}
+                  defaultChecked={this.state.policiesAccepted}
                 />
+                <label htmlFor='sourceCode'>
+                  Use standard <a href='https://github.com/EthereumCommonwealth/Auditing/blob/master/Standard_disclosure_policy.md' target='_blank'>disclosure policy</a>
+                </label>
               </div>
+              {!this.state.policiesAccepted ? (
+                <div className='OrderAuditModal-form-inputs'>
+                  <label htmlFor='policiesText'>
+                    Disclosure Policy
+                  </label>
+                  <textarea
+                    name='policiesText'
+                    type='text'
+                    value={this.state.policiesText}
+                    onChange={this.onChange}
+                    required
+                  />
+                </div>
+              ) : null}
               <input
                 className='OrderAuditModal-submit btn btn-green'
                 type='submit'

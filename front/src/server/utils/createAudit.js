@@ -17,6 +17,9 @@ const createAudit = (req, res) => {
       sourceCodeUrl: req.body.sourceCode,
       disclosurePolicy: req.body.email,
       platform: req.body.platform,
+      media: req.body.media,
+      contact: req.body.contact,
+      policiesText: req.body.policiesText,
     },
   })
     .then(() => res.status(200).send({ succes: true }))
