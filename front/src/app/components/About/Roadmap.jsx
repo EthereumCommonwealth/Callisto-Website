@@ -1,6 +1,6 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import { injectIntl, FormattedMessage } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import SectionHeading from '../commons/SectionHeading';
 import RoadmapElement from '../commons/RoadmapElement';
 
