@@ -65,46 +65,77 @@ const Roadmap = ({ intl }) => (
         <RoadmapElement
           title='Q2 2019'
           items={[
-            { name: intl.formatMessage({ id: 'Q22019.1', defaultMessage: 'Reward program will be implemented for tech writers who will write about Callisto and its technology. The rewards will depend on the quality and effort of the freelance writers. The posts - tutorials - opinions - and whatever we  think will be good enough will be posted on the Callisto official forum. The best ones will be also posted on the Callisto official channels. A reward table will be implemented and Callisto will create a team that will check, verify and qualify the job and determine what will the reward be if the post accomplishes quality level.' }) },
-            { name: intl.formatMessage({ id: 'Q22019.2', defaultMessage: 'Start running Web assembly on Clo test-net for further implementation.' }) },
-            { name: intl.formatMessage({ id: 'Q22019.3', defaultMessage: 'We will be looking forward to increasing and improving our community with PR. For this matter, we will get Advisors on board who will let the world know about CLO.' }) },
-            { name: intl.formatMessage({ id: 'Q22019.4', defaultMessage: '19/05 - Planned HardFork 2019  #1' }) },
+            { name: intl.formatMessage({ id: 'Q22019.1', defaultMessage: 'Start running Web assembly on Clo test-net for further implementation.' }) },
+            { name: intl.formatMessage({ id: 'Q22019.2', defaultMessage: 'We will be looking forward to increasing and improving our community with PR. For this matter, we will get Advisors on board who will let the world know about CLO.' }) },
+            { name: intl.formatMessage({ id: 'Q22019.3', defaultMessage: '19/05 - Planned HardFork 2019  #1' }) },
+          ]}
+          happened
+        />
+        <RoadmapElement
+          title='Q1 2020'
+          items={[
+            { name: intl.formatMessage({ id: 'Q12020.1', defaultMessage: 'CLO <> EOS Token Swap UI.' }) },
+            { name: intl.formatMessage({ id: 'Q12020.2', defaultMessage: 'ETH-Based client update.' }) },
+            { name: intl.formatMessage({ id: 'Q12020.3', defaultMessage: 'Cold Staking V2 HardFork.' }) },
+            { name: intl.formatMessage({ id: 'Q12020.3', defaultMessage: 'Test Governance System at CLO Mainnet' }) },
           ]}
         />
-        <div className='Roadmap-content-list-future'>
-          <div className='Roadmap-content-list-future-elem'>
-            <div>
-              <h6 className='Roadmap-content-list-future-title'>
-                Q3 2019
-              </h6>
-              <figure className='Roadmap-content-list-future-figure'>
-                <img src='/image/Roadmap_arrow_up.svg' alt='Roadmap Element' />
-              </figure>
-            </div>
-            <div>
-              <p className='Roadmap-content-list-future-text'>
-                <FormattedMessage id='Q32019.1' />
-                <br/>
-                <FormattedMessage id='Q32019.2' />
-              </p>
-            </div>
-          </div>
-          <div className='Roadmap-content-list-future-elem'>
-            <div>
-              <h6 className='Roadmap-content-list-future-title'>
-                Q4 2019
-              </h6>
-              <figure className='Roadmap-content-list-future-figure'>
-                <img src='/image/Roadmap_arrow_up.svg' alt='Roadmap Element' />
-              </figure>
-            </div>
-            <div>
-              <p className='Roadmap-content-list-future-text'>
-                <FormattedMessage id='Q42019.1' />
-              </p>
-            </div>
-          </div>
-        </div>
+        <RoadmapElement
+          title='Q2 2020'
+          items={[
+            { name: intl.formatMessage({ id: 'Q22020.1', defaultMessage: 'Listing of CLO EOS Token at EOS DEX\'ES.' }) },
+            { name: intl.formatMessage({ id: 'Q22020.2', defaultMessage: 'Development of media resources and improvement of security audit SEO.' }) },
+            { name: intl.formatMessage({ id: 'Q22020.3', defaultMessage: 'Monetary Policy for the sake of compatibility of CS at EOS token and CLO Mainnet.' }) },
+            { name: intl.formatMessage({ id: 'Q22020.3', defaultMessage: 'Request for funding of auditing department at EOS proposal system.' }) },
+          ]}
+        />
+        <RoadmapElement
+          title='Q3 2020'
+          items={[
+            { name: intl.formatMessage({ id: 'Q32020.1', defaultMessage: 'Governance system for EOS token.' }) },
+            { name: intl.formatMessage({ id: 'Q32020.2', defaultMessage: 'Cold Staking for EOS-Based token.' }) },
+          ]}
+        />
+        <RoadmapElement
+          title='Q4 2020'
+          items={[
+            { name: intl.formatMessage({ id: 'Q42020.1', defaultMessage: 'Security auditing department on EOS.' }) },
+          ]}
+        />
+        {/*<div className='Roadmap-content-list-future'>*/}
+        {/*  <div className='Roadmap-content-list-future-elem'>*/}
+        {/*    <div>*/}
+        {/*      <h6 className='Roadmap-content-list-future-title'>*/}
+        {/*        Q3 2020*/}
+        {/*      </h6>*/}
+        {/*      <figure className='Roadmap-content-list-future-figure'>*/}
+        {/*        <img src='/image/Roadmap_arrow_up.svg' alt='Roadmap Element' />*/}
+        {/*      </figure>*/}
+        {/*    </div>*/}
+        {/*    <div>*/}
+        {/*      <p className='Roadmap-content-list-future-text'>*/}
+        {/*        <FormattedMessage id='Q32019.1' />*/}
+        {/*        <br/>*/}
+        {/*        <FormattedMessage id='Q32019.2' />*/}
+        {/*      </p>*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*  <div className='Roadmap-content-list-future-elem'>*/}
+        {/*    <div>*/}
+        {/*      <h6 className='Roadmap-content-list-future-title'>*/}
+        {/*        Q4 2019*/}
+        {/*      </h6>*/}
+        {/*      <figure className='Roadmap-content-list-future-figure'>*/}
+        {/*        <img src='/image/Roadmap_arrow_up.svg' alt='Roadmap Element' />*/}
+        {/*      </figure>*/}
+        {/*    </div>*/}
+        {/*    <div>*/}
+        {/*      <p className='Roadmap-content-list-future-text'>*/}
+        {/*        <FormattedMessage id='Q42019.1' />*/}
+        {/*      </p>*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </div>
   </Element>

@@ -13,7 +13,7 @@ import PartnersList from '../components/About/PartnersList';
 // import BlogOverview from '../components/About/BlogOverview';
 import Community from '../components/Home/Community';
 import Footer from '../components/commons/Footer';
-import Advisors from '../components/Home/Advisors';
+// import Advisors from '../components/Home/Advisors';
 // import HardForkPromo from '../components/commons/HardForkPromo';
 
 const About = ({ match }) => {
@@ -31,7 +31,6 @@ const About = ({ match }) => {
       <Mining />
       <MiningPools />
       <Team />
-      <Advisors />
       <PartnersList />
       {/* <BlogOverview /> */}
       <Community
