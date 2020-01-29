@@ -11,7 +11,7 @@ const SmartHero = ({ intl, openModal }) => (
           dangerouslySetInnerHTML={{
             __html: intl.formatMessage({
               id: 'NewSmartContractTitle',
-              defaultMessage: 'Free Security Audits for Smart Contracts',
+              defaultMessage: 'Security Audits for Smart Contracts',
             })
           }}
         />
@@ -19,10 +19,9 @@ const SmartHero = ({ intl, openModal }) => (
           <FormattedMessage
             id='NewSmartHeroDescription2'
             defaultMessage={`
-              Callisto Network deploys treasury funds to pay security auditors for their work, 
-              thus security audits are free-of-charge for smart-contract developers or development 
-              teams and the benefit for this is to reduce risk/flaw in smart contract and improve 
-              the adoption of programmable blockchains for the whole crypto industry.
+              Callisto Network helps smart-contract developers or development teams to 
+              reduce risks/flaws in smart-contracts, improving the adoption of 
+              programmable blockchains for the sake of the whole crypto industry.
             `}
           />
         </p>
