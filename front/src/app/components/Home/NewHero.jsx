@@ -17,21 +17,19 @@ class NewNewHero extends Component {
               <FormattedMessage id='StakingDescriptionWhatIsText' />
             </p>
             <div className='NewHero-btns'>
-              <Link
-                to='howworks'
-                spy={true}
-                smooth={true}
-                offset={-150}
-                duration={500}
+              <a
+                href='https://changenow.io/exchange?amount=1&from=btc&link_id=501c1d32f1b390&to=clo'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='btn btn-green'
               >
-                <FormattedMessage id='StartStaking' defaultMessage='Start staking now' />
-              </Link>
+                <FormattedMessage id='BuyNow' defaultMessage='Buy now!' />
+              </a>
               <a
                 href='https://whitepaper.callisto.network/'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='btn btn-green'
+                className='btn btn-transparent-green'
               >
                 <FormattedMessage id='WhitePaper' />
               </a>
