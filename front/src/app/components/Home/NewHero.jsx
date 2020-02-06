@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-scroll';
 import { FormattedMessage, injectIntl } from 'react-intl';
 
 class NewNewHero extends Component {
