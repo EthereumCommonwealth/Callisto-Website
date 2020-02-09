@@ -31,7 +31,7 @@ const HowWorks = ({ intl, marketStats, wallets }) => (
           <div className='HowWorks-exchanges'>
             <div className='HowWorks-exchanges-left'>
               <figure className='HowWorks-exchanges-content-figure bitfinex-logo'>
-                <a href='https://www.bitfinex.com' target='_blank' rel='noopener noreferrer'>
+                <a href='https://www.bitfinex.com/?refcode=wGsWwJTD' target='_blank' rel='noopener noreferrer'>
                   <img src='/image/exchanges/bitfinex_black.svg' className='lazyload' alt='bitfinex' />
                 </a>
               </figure>
