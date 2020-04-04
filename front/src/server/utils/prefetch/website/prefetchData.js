@@ -4,11 +4,10 @@ import handleRender from '../../render/website/handleRender';
 
 const prefetchData = async (req, res, next) => {
   try {
-    const btcStats = await api.market.getTicker(1);
-    const cloStats = await api.market.getTicker(2757);
+    const btcStats = await api.market.getTicker('bitcoin');
+    const cloStats = await api.market.getTicker('callisto');
     const homeData = await api.website.getHome(req.params.lang)
     const balance = await api.market.getBalance();
-    const totalSupply = await api.market.getTotalSuply();
     const audit = await api.audit.getAudits();
     const internalData = homeData.internalData;
     const messages = homeData.messages;
@@ -21,7 +20,7 @@ const prefetchData = async (req, res, next) => {
       walletsColdStacking: internalData.walletsColdStacking,
       blogPosts: [],
       blogTags: [],
-      marketStats: prepareMarket(btcStats, cloStats, totalSupply, balance),
+      marketStats: prepareMarket(btcStats, cloStats, balance),
       tagPosts: [],
       faq: [],
       singlePost: {},
