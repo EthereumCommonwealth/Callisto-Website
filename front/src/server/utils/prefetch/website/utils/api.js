@@ -1,7 +1,6 @@
 import axios from 'axios';
 import Web3 from 'web3';
 import blogPosts from '../../../../../app/services/blogPosts';
-import localBlogPosts from '../../../../../app/services/localBlogPosts';
 import coinStats from '../../../../../app/services/coinStats';
 import getTranslations from '../../../../getTranslations';
 import * as Sentry from '@sentry/node';
@@ -79,7 +78,7 @@ export default {
     getTicker: async id => {
       let btcStats;
       try {
-        btcStats = await coinStats.get(`ticker/${id}/`);
+        btcStats = await coinStats.get(`https://api.coingecko.com/api/v3/coins/${id}/`);
       } catch (err) {
         btcStats = 0;
         Sentry.captureException(err);
