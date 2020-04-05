@@ -61,11 +61,10 @@ const prefetchFaq = async (req, res, next) => {
   try {
     const posts = await api.blog.getPosts(3);
     const tags = await api.blog.getTags();
-    const btcStats = await api.market.getTicker(1);
-    const cloStats = await api.market.getTicker(2757);
+    const btcStats = await api.market.getTicker('bitcoin');
+    const cloStats = await api.market.getTicker('callisto');
     const homeData = await api.website.getHome(req.params.lang);
     const balance = await api.market.getBalance();
-    const totalSupply = await api.market.getTotalSuply();
     const audit = await api.audit.getAudits();
     const faq = await getFAQ();
     const internalData = homeData.internalData;
@@ -79,7 +78,7 @@ const prefetchFaq = async (req, res, next) => {
       exchanges: internalData.exchanges,
       blogPosts: posts.data && posts.data.length > 0 ? preparePosts(posts.data) : posts,
       blogTags: tags.data && tags.data.length > 0 ? tags.data : tags,
-      marketStats: prepareMarket(btcStats, cloStats, totalSupply, balance),
+      marketStats: prepareMarket(btcStats, cloStats, balance),
       tagPosts: [],
       faq: faq,
       singlePost: {},
