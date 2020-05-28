@@ -15,7 +15,7 @@ const PartnersList = ({ exchanges, intl }) => (
           </a>
         </figure>
         <figure className='PartnersList-content-figure'>
-          <a href='https://guarda.co/' target='_blank' rel='noopener noreferrer'>
+          <a href='https://guarda.com/' target='_blank' rel='noopener noreferrer'>
             <img src='/image/partners/guarda.svg' alt='Coinomi' />
           </a>
         </figure>
