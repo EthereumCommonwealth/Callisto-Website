@@ -1,4 +1,4 @@
-Django==2.1.7
+Django==2.2.13
 Pillow==5.4.1
 psycopg2==2.7.7
 redis==3.2.0
