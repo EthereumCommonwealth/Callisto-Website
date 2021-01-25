@@ -164,7 +164,7 @@
             <article class="card ls-feature-card">
               <div class="card-content">
                 <figure class="image is-159x159">
-                  <img src="img/test.png" title="LandSpeed UI" width="145" height="159">
+                  <img src="~/assets/home-team.svg" title="Enterprise-grade version" width="145" height="159">
                 </figure>
                 <div class="media-content has-text-centered">
                   <h3 class="title is-5 has-text-weight-bold">
@@ -182,7 +182,7 @@
             <article class="card ls-feature-card">
               <div class="card-content">
                 <figure class="image is-159x159">
-                  <img src="img/test.png" title="LandSpeed UI" width="145" height="159">
+                  <img src="~/assets/home-team.svg" title="EVM Compatible blockchain" width="145" height="159">
                 </figure>
                 <div class="media-content has-text-centered">
                   <h3 class="title is-5 has-text-weight-bold">
@@ -200,7 +200,7 @@
             <article class="card ls-feature-card">
               <div class="card-content">
                 <figure class="image is-159x159">
-                  <img src="img/test.png" title="LandSpeed UI" width="145" height="159">
+                  <img src="~/assets/home-team.svg" title="Ethash POW algo" width="145" height="159">
                 </figure>
                 <div class="media-content has-text-centered">
                   <h3 class="title is-5 has-text-weight-bold">
