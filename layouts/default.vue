@@ -73,11 +73,6 @@
             <div class="buttons">
               <a class="ls-button button has-text-weight-bold is-fullwidth">Get Started</a>
             </div>
-
-            <div class="news-banner has-text-white">
-              <span class="tag is-size-6-mobile is-size-7">News</span>
-              <span class="is-size-6-mobile is-size-7">Discover how Callisto and Callisto Enterprise is about to change the daily life of millions of users.</span>
-            </div>
           </div>
 
           <div class="column right is-5-desktop is-offset-1-desktop">
@@ -206,7 +201,7 @@ export default {
   width: 100%;
   height: 100%;
   content: '';
-  background: linear-gradient(to right, #34c88a 20%, #00CA55) #5FB784;
+  background: linear-gradient(to right, #16405a 20%, #34c88a) #34c88a;
 }
 
 .news-banner {
