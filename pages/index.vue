@@ -215,91 +215,117 @@
       <div style="margin-top: 40px;">
         <div class="container" style="padding-top: 50px; padding-bottom: 50px">
           <div class="columns">
-            <div class="column left is-5-desktop content">
+            <div class="column left is-12-desktop content">
               <h2 class="is-size-3 has-text-weight-semibold">
                 Main Team
               </h2>
 
               <div class="columns is-multiline">
                 <div class="column is-4">
-                  <div class="team-member-container">
-                    <div>
-                      <figure class="image is-96x96">
-                        <img class="is-rounded" src="https://pbs.twimg.com/profile_images/1309563288850763777/kKPB7j76_400x400.jpg">
+                  <div class="columns is-vcentered">
+                    <div class="column is-4">
+                      <figure class="team-member-margin image is-96x96">
+                        <img class="is-rounded team-member-margin" src="https://pbs.twimg.com/profile_images/1309563288850763777/kKPB7j76_400x400.jpg">
                       </figure>
+                    </div>
+                    <div class="column is-6">
                       <!-- Member meta -->
-                      <div class="member-info">
-                        <h4 class="is-light is-6 has-text-centered">Yohan Graterol</h4>
-                        <div class="position has-text-centered">Co-Founder / CEO</div>
+                      <div class="team-member-margin">
+                        <h4 class="is-light is-size-5 has-text-centered">Yohan Graterol</h4>
+                        <div class="has-text-centered">Co-Founder / CEO</div>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="column is-4">
-                  <div class="team-member-container">
-                    <div>
-                      <figure class="image is-96x96">
-                        <img class="is-rounded" src="https://pbs.twimg.com/profile_images/1075015780482338816/z60hTwBa_400x400.jpg">
+                  <div class="columns is-vcentered">
+                    <div class="column is-4">
+                      <figure class="team-member-margin image is-96x96">
+                        <img class="is-rounded team-member-margin" src="https://pbs.twimg.com/profile_images/1309563288850763777/kKPB7j76_400x400.jpg">
                       </figure>
+                    </div>
+                    <div class="column is-6">
                       <!-- Member meta -->
-                      <div class="member-info">
-                        <h4 class="is-light is-6 has-text-centered">Dexaran</h4>
-                        <div class="position has-text-centered">Co-Founder / Security Expert</div>
+                      <div class="team-member-margin">
+                        <h4 class="is-light is-size-5 has-text-centered">Yohan Graterol</h4>
+                        <div class="has-text-centered">Co-Founder / CEO</div>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="column is-4">
-                  <div class="team-member-container">
-                    <div>
-                      <figure class="image is-96x96">
-                        <img class="is-rounded" src="https://pbs.twimg.com/profile_images/1024305796539133953/uU1_eoal_400x400.jpg">
+                  <div class="columns is-vcentered">
+                    <div class="column is-4">
+                      <figure class="team-member-margin image is-96x96">
+                        <img class="is-rounded team-member-margin" src="https://pbs.twimg.com/profile_images/1075015780482338816/z60hTwBa_400x400.jpg">
                       </figure>
+                    </div>
+                    <div class="column is-6">
                       <!-- Member meta -->
-                      <div class="member-info">
-                        <h4 class="is-light is-6 has-text-centered">Tonton</h4>
-                        <div class="position has-text-centered">CMO</div>
+                      <div class="team-member-margin">
+                        <h4 class="is-light is-size-5 has-text-centered">Dexaran</h4>
+                        <div class="has-text-centered">Co-Founder / Security Expert</div>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="column is-4">
-                  <div class="team-member-container">
-                    <div>
-                      <figure class="image is-96x96">
-                        <img class="is-rounded" src="https://invictussolutions.cz/wp-content/uploads/2019/04/vencalek-1.jpg">
+                  <div class="columns is-vcentered">
+                    <div class="column is-4">
+                      <figure class="team-member-margin image is-96x96">
+                        <img class="is-rounded team-member-margin" src="https://pbs.twimg.com/profile_images/1024305796539133953/uU1_eoal_400x400.jpg">
                       </figure>
+                    </div>
+                    <div class="column is-6">
                       <!-- Member meta -->
-                      <div class="member-info">
-                        <h4 class="is-light is-6 has-text-centered">Vladimír Vencálek</h4>
-                        <div class="position has-text-centered">BizDev / Investor Manager</div>
+                      <div class="team-member-margin">
+                        <h4 class="is-light is-size-5 has-text-centered">Tonton</h4>
+                        <div class="has-text-centered">Head of Marketing</div>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="column is-4">
-                  <div class="team-member-container">
-                    <div>
-                      <figure class="image is-96x96">
-                        <img class="is-rounded" src="https://pbs.twimg.com/profile_images/1309563288850763777/kKPB7j76_400x400.jpg">
+                  <div class="columns is-vcentered">
+                    <div class="column is-4">
+                      <figure class="team-member-margin image is-96x96">
+                        <img class="is-rounded team-member-margin" src="https://invictussolutions.cz/wp-content/uploads/2019/04/vencalek-1.jpg">
                       </figure>
+                    </div>
+                    <div class="column is-6">
                       <!-- Member meta -->
-                      <div class="member-info">
-                        <h4 class="is-light is-6 has-text-centered">Yohan Graterol</h4>
-                        <div class="position has-text-centered">Founder / CEO</div>
+                      <div class="team-member-margin">
+                        <h4 class="is-light is-size-5 has-text-centered">Vladimír Vencálek</h4>
+                        <div class="has-text-centered">BizDev / Investor Manager</div>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                <div class="column is-4">
+                  <div class="columns is-vcentered">
+                    <div class="column is-4">
+                      <figure class="team-member-margin image is-96x96">
+                        <img class="is-rounded team-member-margin" src="https://invictussolutions.cz/wp-content/uploads/2019/04/vencalek-1.jpg">
+                      </figure>
+                    </div>
+                    <div class="column is-6">
+                      <!-- Member meta -->
+                      <div class="team-member-margin">
+                        <h4 class="is-light is-size-5 has-text-centered">Vladimír Vencálek</h4>
+                        <div class="has-text-centered">BizDev / Investor Manager</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
               </div>
-            </div>
-
-            <div class="column right is-offset-1-desktop is-5-desktop">
-              <img src="~/assets/home-team.svg" width="100%" alt="Layout">
             </div>
           </div>
         </div>
@@ -320,4 +346,8 @@ export default {
   margin-bottom: 1em;
 }
 
+.team-member-margin {
+  margin: auto !important;
+  vertical-align: middle;
+}
 </style>
