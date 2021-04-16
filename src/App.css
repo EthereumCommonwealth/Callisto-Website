@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Sunflower';
+    src: local('SunflowerLight'), url(./assets/fonts/SunflowerLight.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-weight: 900;
+    src: local('NunitoSans-Regular'), url(./assets/fonts/NunitoSans-Regular.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 900;
+    src: local('Poppins-Regular'), url(./assets/fonts/Poppins-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 900;
+    src: local('Roboto-Regular'), url(./assets/fonts/Roboto-Regular.ttf) format('opentype');
+}
+
+.nav_right {
+    justify-content: flex-end;
+}

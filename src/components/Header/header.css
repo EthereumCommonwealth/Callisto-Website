@@ -1,0 +1,19 @@
+.navbar {
+    background: rgba(0,0,0,.5);
+    padding: 10px 8%;
+}
+.header {
+    background: rgba(0,0,0,1);
+    padding: 10px 8%;
+}
+
+@media all and (max-width: 768px) {
+    .navbar {
+        background: #000;
+        padding: 10px 20px;
+    }
+    .header {
+        background: rgba(0,0,0,1);
+        padding: 10px 20px;
+    }
+}
