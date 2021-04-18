@@ -23,6 +23,7 @@ const NewsBar = styled.div`
     height: 42px;
     margin-top: 50px;
     margin-left: 8%;
+    z-index: 1;
     @media (max-width: 768px) {
         margin-top: 0px;
         margin-left: 20px;

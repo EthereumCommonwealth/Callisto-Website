@@ -20,8 +20,8 @@ const LeftPane = () => {
                 </LogoTextArea>
             </LogoArea>
             <ImgGroup>
-                <img src={Assets.coingecko} width='90' height='28' alt='coingecko' />
-                <img src={Assets.coinmarket} width='109' height='20' alt="coinmarket" />
+                <img src={Assets.coingecko} width='120' height='28' alt='coingecko' />
+                <img src={Assets.coinmarket} width='130' height='20' alt="coinmarket" />
             </ImgGroup>
         </SubCon>
     )
@@ -32,12 +32,13 @@ const LogoArea = styled.div`
 `;
 const SubCon = styled.div`
     width: 100%;
-    max-width: 288px;
+    max-width: 384px;
+    
 `;
 
 const LogoImg = styled.div`
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -48,8 +49,8 @@ const LogoTextArea = styled.div`
     background: linear-gradient( 
         90deg
      ,rgb(185 229 207 / 37%) 0%,rgb(143 206 196 / 16%) 35%,rgb(90 213 128 / 8%) 100%);  
-    width: 288px;
-    height: 60px;
+     width: calc(100% - 70px);
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +62,7 @@ const LogoTextArea = styled.div`
 const Subtitle = styled.p`
     font-size: 14px;
     font-weight: bold;
-    padding: 3px;
+    line-height: 28px;
 `;
 
 const Subtext = styled.p`
@@ -76,6 +77,7 @@ const Usd = styled.span`
 const Percentage = styled.span`
     color: green;
     font-size: 14px;
+    padding-left: 10px;
 `;
 
 const TextArea = styled.div`
@@ -92,8 +94,8 @@ const ImgGroup = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 10px;
-    max-width: 288px;
+    padding-top: 20px;
+    // max-width: 288px;
 `;
 
 export default LeftPane;

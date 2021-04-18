@@ -8,31 +8,39 @@ import TitleSection from './components/TitleSection';
 
 const Intro = () => {
     return (
-       <Container>
-            <NewsSection />
-            <TitleSection />
-            <Subtitle>Protecting your fund by auditing smart contracts</Subtitle>
-            <Parag>
-                {`A comprehensive ecosystem whose main objetice is to improve the security of the smar contract industy`}
-            </Parag>
-            <ButtonSection />
-            <SocialSection />
-            <LearnMoreSection />
-       </Container>
+        <>
+            <Img src={Assets.bkimg}/>
+            <Container>
+                <NewsSection />
+                <TitleSection />
+                <Subtitle>Protecting your fund by auditing smart contracts</Subtitle>
+                <Parag>
+                    {`A comprehensive ecosystem whose main objetice is to improve the security of the smar contract industy`}
+                </Parag>
+                <ButtonSection />
+                <SocialSection />
+                <LearnMoreSection />
+            </Container>
+        </>
     )
 }
 
 const Container = styled.div`
-    background-image: url("${Assets.bkimg}");
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100vh;
-    padding-top: 26px;
-    margin-top: -75px;
+    min-height: 100vh;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;    
+    @media (max-width: 2120px) {
+        background-image: url("${Assets.bkimg}");
+        position: relative;
+    }
     @media (max-width: 1024px) {
         background-image: url("${Assets.back2}");
     }
@@ -47,12 +55,22 @@ const Container = styled.div`
         justify-content: flex-start;
     }
 `;
+const Img = styled.img`
+    width: 100%;
+    min-height: 100vh;
+    margin-top: -75px;
+    resize: contain;
+    @media (max-width: 2120px) {
+        display: none;
+    }
+`;
 const Subtitle = styled.p`
     color: white;
     font-size: 24px;
     line-height: 30px;
     margin-top: 30px;
     margin-left: 8%;
+    z-index: 1;
     @media (max-width: 768px) {
         margin-left: 0px;
         padding: 0px 20px;
@@ -68,6 +86,7 @@ const Parag = styled.p`
     margin-left: 8%;
     width: 40%;
     margin-top: 50px;
+    z-index: 1;
     @media (max-width: 768px) {
         width: 100%;
         margin-top: 20px;

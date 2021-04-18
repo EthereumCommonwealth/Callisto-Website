@@ -19,6 +19,7 @@ const TitleArea = styled.div`
         ,rgb(3 9 6 / 37%) 0%,rgb(55 106 98 / 16%) 35%,rgb(24 99 47 / 8%) 100%);
     margin-top: 54px;
     padding: 10px 0px 10px 8%;
+    z-index: 1;
     @media (max-width: 974px) {
         background: linear-gradient(90.1deg, #000000 0.09%, #0C1C1B 99.91%);
         width: 100%;

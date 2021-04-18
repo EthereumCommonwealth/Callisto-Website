@@ -35,7 +35,7 @@ const LeftPane = () => {
                         <StartRow pl="0px" pr="0px">
                             <PlayIcon>
                                 <Spacer height="20px"/>
-                                <ImageView img={Assets.poly1} width="35px" height="38px"></ImageView>
+                                <ImageView img={Assets.poly1} width="35px" height="40px"></ImageView>
                             </PlayIcon>
                             <Padding padding="0px 0px 0px 10px">
                                 <CenterText color="rgba(0,0,0,.5)" fontweight="300" fontsize="18px" line={"26px"}>{_item.name}</CenterText>

@@ -19,6 +19,7 @@ const ButtonArea = styled.div`
     display: flex;
     margin-left: 8%;
     margin-top: 30px;
+    z-index: 1;
     @media (max-width: 768px) {
         margin-left:0px;
         display: block;

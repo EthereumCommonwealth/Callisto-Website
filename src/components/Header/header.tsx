@@ -4,7 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import logo from '../../assets/images/logo.png';
-import './header.css';
+import './header.scss';
 
 // const Header = (props: headerProps) => {
 const Header = (props: { home: boolean}) => {
