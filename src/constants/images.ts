@@ -34,6 +34,9 @@ import rect12 from '../assets/images/Rectangle 12.png';
 import polygroup from '../assets/images/polygroup.png';
 import rect2 from '../assets/images/rect2.png';
 
+// test personal images
+import p1 from '../assets/images/test/1.png';
+
 export const Assets = {
     logo: logoimg,
     logo2: logo2,
@@ -70,4 +73,6 @@ export const Assets = {
     rect12: rect12,
     polygroup: polygroup,
     rect2: rect2,
+
+    p1: p1,
 }

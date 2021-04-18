@@ -15,6 +15,7 @@ const Container = styled.button`
     z-index: 999;
     right: 50px;
     bottom: 50px;
+    padding-top: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(0, 0, 0, 0.5);
     @media (max-width: 596px) {
         display: none;

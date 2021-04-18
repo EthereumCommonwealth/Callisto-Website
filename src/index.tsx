@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Providers from './Providers';
 import 'inter-ui';
 import './i18n';
-import './App.css';
+import './App.scss';
 import App from 'App';
 
 ReactDOM.render(

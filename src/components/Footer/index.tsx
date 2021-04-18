@@ -10,12 +10,12 @@ import styled from 'styled-components'
 const Container = styled.div`
     width: 100%;
     padding: 10px;
-    padding: 30px 8%;
+    padding: 50px 8%;
     background-color: ${Theme.colors.footerbk};
     align-items: center;
     z-index: 999;
     @media (max-width: 1200px) {
-        padding: 30px 20px;
+        padding: 50px 20px;
     }
 `
 

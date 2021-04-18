@@ -25,7 +25,7 @@ const Li = styled.li<{color: string}>`
     padding: 0px 8% 0px 0px;
     a {
         color: ${({color}) => color};
-        font-weight: 500;
+        font-weight: 900;
         width: auto;
         font-family: ${Theme.fonts.title};
         text-decoration: none;

@@ -1,3 +1,4 @@
+import { ListGroup } from 'react-bootstrap';
 import t from '../components/Header/types';
 import { Assets } from './images';
 
@@ -200,3 +201,171 @@ export const services = [
         description2: "Compatible with the most popular cryptocurrencies, CryptoBot is also a fantastic marketing tool to interact with your community as never before.",
     }
 ]
+
+export const partners = [
+    "https://callisto.network/wp-content/uploads/2020/12/SCA-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/McAfeeDex-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Invictus-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Bitfinex-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/HitBTC-Logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Stex-pool-pro-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Atomars-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Trust-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Coinomi-pool-pro-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Guarda-pro-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/CLO-pool-pro-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Maxhash-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/f2pool-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Comining-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Top-mining-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/SCA-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/McAfeeDex-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Invictus-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Bitfinex-logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/HitBTC-Logo-transparent.jpg",
+    "https://callisto.network/wp-content/uploads/2020/12/Stex-pool-pro-logo-transparent.jpg",
+];
+
+export const coreteams = [
+    {
+        name: "Mitch Liu",
+        avatar: Assets.p1,
+        role: "Cofounder / CEO",
+        description: [
+            "Cofounder Callisto Network",
+            "Cofounder ...",
+            "Cofounder Tapjoy",
+            "BS in Computer Science & Engineering from MIT",
+            "MBA from Stanford Graduate School of Business",
+        ],
+    },{
+        name: "Mitch Liu2",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+        description: [
+            "Cofounder Callisto Network",
+            "Cofounder ...",
+            "Cofounder Tapjoy",
+            "BS in Computer Science & Engineering from MIT",
+            "MBA from Stanford Graduate School of Business",
+        ],
+    },{
+        name: "Mitch Liu3",
+        avatar: Assets.p1,
+        role: "Chief Product Officer",
+        description: [
+            "Cofounder Callisto Network",
+            "Cofounder ...",
+            "Cofounder Tapjoy",
+            "BS in Computer Science & Engineering from MIT",
+            "MBA from Stanford Graduate School of Business",
+        ],
+    }
+];
+
+
+export const devteams = [
+    {
+        name: "Jieyi Long",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Ribao Wei",
+        avatar: Assets.p1,
+        role: "Principal Engineer",
+    },{
+        name: "Qinwei Gong",
+        avatar: Assets.p1,
+        role: "Platform Architect",
+    },{
+        name: "Jieyi Long-4",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Jieyi Long-5",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Jieyi Long-6",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Jieyi Long-7",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Jieyi Long-8",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Jieyi Long-9",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Jieyi Long-10",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Jieyi Long-11",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Jieyi Long-12",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Jieyi Long-13",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Jieyi Long-14",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    },{
+        name: "Jieyi Long-15",
+        avatar: Assets.p1,
+        role: "Cofounder / CTO",
+    }
+]
+
+
+export const advisors = [
+    {
+        name: "Dovey Wan",
+        avatar: Assets.p1,
+        role: "Founding Partner of Primitive Ventures",
+        description: [
+            "Dovey Wan is Founding Partner of Primitive Ventures, a long-term focused cryptoasset investment fund she founded with Eric Meltzer. Prior to founding Primitive Ventures, Dovey served as Managing Director for DHVC (formerly Danhua Capital), where she participated in investments in marquee blockchain projects such as OmiseGo, Cosmos/Tendermint, and Kyber Network. Outside of blockchain ventures she also participated in investments in LimeBike, LoomAi, Chariot, and Flexport. She began her career at eBay, where she spent nearly 4 years progressing through Data Science Engineer, Senior Business Analyst, and Product Manager roles.",
+        ],
+    },{
+        name: "Travis Skweres",
+        avatar: Assets.p1,
+        role: "Founder CoinMkt, one of the first US bitcoin exchanges",
+        description: [
+            "Travis Skweres is an early entrepreneur and investor player in cryptocurrencies. Travis was the CEO and Cofounder of CoinMKT, one of the first Bitcoin exchanges based in the United States. Operating from 2013 - 2015, CoinMKT achieved tens of thousands of users, millions of dollars worth of Bitcoin traded, and was acquired by ANX Hong Kong in 2015. Travis remains an active investor in the cryptocurrency community and is currently working on releasing his next cryptocurrency-related project. Travis clients have included Occidental Petroleum, The Home Depot, Blinds.com, NBC Universal, and more.",
+        ],
+    },{
+        name: "Fan Zhang",
+        avatar: Assets.p1,
+        role: "Founding member, Sequoia Capital China",
+        description: [
+            "Fan Zhang is a pioneer in the venture capital industry in China. He previously served as a Founding Member of Sequoia Capital China, and a Director of DFJ ePlanet Ventures' China practice. Mr. Zhang has extensive experience investing into emerging technologies since 2001, and has been ranked multiple times by Forbes as one of leading venture capitalists in its annual China's Midas List.",
+        ],
+    },{
+        name: "Ma Haobo",
+        avatar: Assets.p1,
+        role: "CEO of aelf",
+        description: [
+            "Ma is the founder and CEO of aelf, a decentralized cloud computing blockchain network, as well as founder and CEO of Hoopox, a technology company that provides vertical industrial solutions from infrastructure to blockchain systems. A blockchain expert and early adopter of digital assets, Ma also previously served as CTO of GemPay and AllCoin. He is a member of Blockchain Experts’ Commission of Chinese Institute of Electronics.",
+        ],
+    },{
+        name: "Riz Virk",
+        avatar: Assets.p1,
+        role: "Founding member, Sequoia Capital China",
+        description: [
+            "Riz Virk is Executive Director at Play Labs @ MIT, as well as Chief Strategy Officer and Cofounder at BitMovio, a video entertainment marketplace. He previously cofounded and/or was an early investor in THETA.tv, Theta Labs, GameView Studios, and Tapjoy. Riz was the founder of Bayview Films, and independent film studio. He holds a Masters in Management from Stanford Business School and a BS in Computer Science & Engineering from MIT.",
+        ],
+    }
+];
+
+export const newsletters = "https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1_o-qcXWbjchJiH0Gpgv0SP6i89JnRHBMlOktXaye_Ww&font=OpenSans-GentiumBook&lang=en&hash_bookmark=true&initial_zoom=1&height=950#event-callisto-network-20";

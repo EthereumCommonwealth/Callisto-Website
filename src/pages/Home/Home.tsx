@@ -7,6 +7,10 @@ import Blockchain from 'pages/Home/Blockchain';
 import Services from 'pages/Home/Services';
 import StickyButton from 'components/StickyButton';
 import PageFooter from './PageFooter';
+import Coreteam from './Coreteam';
+import Ambateam from './Ambateam';
+import Advisor from './Advisor';
+import Newsletter from './Newsletter';
 
 const Home: React.FC = () => {
 
@@ -18,6 +22,10 @@ const Home: React.FC = () => {
             <NavMiddlebar />
             <Blockchain />
             <Services />
+            <Coreteam />
+            <Ambateam />
+            <Advisor />
+            <Newsletter />
             <PageFooter />
         </>
     )
