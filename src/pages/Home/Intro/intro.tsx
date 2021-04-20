@@ -36,10 +36,12 @@ const Container = styled.div`
     
     position: absolute;
     top: 0px;
-    left: 0px;    
+    left: 0px;
+    margin-top: -75px;
     @media (max-width: 2120px) {
         background-image: url("${Assets.bkimg}");
         position: relative;
+        // top:0px;
     }
     @media (max-width: 1024px) {
         background-image: url("${Assets.back2}");

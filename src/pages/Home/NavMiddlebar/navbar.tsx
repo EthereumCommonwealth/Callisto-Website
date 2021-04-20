@@ -1,8 +1,10 @@
+
 import styled from 'styled-components';
 import LeftPane from './components/LeftPane';
 import MenuPane from './components/MenuPane';
 
 const NavMiddlebar = () => {
+    
     return (
         <Container>
             <LeftPane />

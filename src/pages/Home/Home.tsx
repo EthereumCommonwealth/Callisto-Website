@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Header from 'components/Header';
 import Intro from 'pages/Home/Intro';

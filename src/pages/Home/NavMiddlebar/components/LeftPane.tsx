@@ -1,7 +1,22 @@
+import { useEffect } from 'react';
+import { getCoinPrice } from 'state/home/action';
 import styled from 'styled-components';
 import { Assets } from 'constants/images';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppState } from 'store';
 
 const LeftPane = () => {
+
+    const dispatch = useDispatch();
+    const coinPrice = useSelector((state: AppState) => state.home.coinPrice);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            dispatch(getCoinPrice());
+        }, 1000);
+        return () => clearInterval(interval);
+    }, [dispatch]);
+
     return (
         <SubCon>
             <LogoArea>
@@ -12,9 +27,9 @@ const LeftPane = () => {
                     <TextArea>
                         <Subtitle>Callisto Network (CLO)</Subtitle>
                         <Subtext>
-                            0.006236 
+                            {coinPrice?.usd.toFixed(6)}
                             <Usd>   USD   </Usd>
-                            <Percentage>(+54.4%)</Percentage>
+                            <Percentage color={coinPrice.usd_24h_change >= 0 ? "green": "red"}>({coinPrice.usd_24h_change.toFixed(1)})</Percentage>
                         </Subtext>
                     </TextArea>
                 </LogoTextArea>
@@ -74,8 +89,8 @@ const Usd = styled.span`
     font-size: 10px;
 `;
 
-const Percentage = styled.span`
-    color: green;
+const Percentage = styled.span<{ color: string }>`
+    color: ${({color}) => color};
     font-size: 14px;
     padding-left: 10px;
 `;
