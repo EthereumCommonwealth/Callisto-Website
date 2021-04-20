@@ -5,10 +5,17 @@ import { Theme } from 'constants/theme';
 import styled from 'styled-components';
 
 const LearnMoreSection = () => {
+
+    const scrollDownOne = () => {
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: "smooth",
+        })
+    }
     return (
         <FooterArea>
             <StyledText color={Theme.colors.white} fontweight={"300"} fontsize={"21px"}>Learn More</StyledText>
-            <MoreButton>
+            <MoreButton onClick={scrollDownOne}>
                 <ImageView img= {Assets.coolicon} width={"30px"} height={"30px"}/>
             </MoreButton>
         </FooterArea>

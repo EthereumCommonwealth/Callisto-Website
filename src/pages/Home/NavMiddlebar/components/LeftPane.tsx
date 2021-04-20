@@ -29,7 +29,7 @@ const LeftPane = () => {
                         <Subtext>
                             {coinPrice?.usd.toFixed(6)}
                             <Usd>   USD   </Usd>
-                            <Percentage color={coinPrice.usd_24h_change >= 0 ? "green": "red"}>({coinPrice.usd_24h_change.toFixed(1)})</Percentage>
+                            <Percentage color={coinPrice.usd_24h_change >= 0 ? "green": "red"}>({coinPrice.usd_24h_change.toFixed(1)}%)</Percentage>
                         </Subtext>
                     </TextArea>
                 </LogoTextArea>

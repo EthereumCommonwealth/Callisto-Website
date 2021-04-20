@@ -23,8 +23,14 @@ const Container = styled.button`
 `
 const StickyButton = ({}) => {
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: window.pageYOffset - window.innerHeight < 0? 0: window.pageYOffset - window.innerHeight,
+            behavior: "smooth",
+        })
+    }
     return (
-        <Container >
+        <Container onClick={scrollToTop}>
             <StyledText color={"white"} fontsize={"24px"} fontweight={"500"}>UP</StyledText>
         </Container>
     )
