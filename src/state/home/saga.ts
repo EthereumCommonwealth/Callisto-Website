@@ -12,7 +12,6 @@ function* getCoinPrice() {
             yield put(getCoinPriceSuccess(res.data.callisto));
         }
     } catch(err) {
-        console.log("get coin price error :: ", err);
     }
 }
 

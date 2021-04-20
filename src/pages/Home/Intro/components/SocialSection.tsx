@@ -25,7 +25,7 @@ const SocialArea = styled.div`
         width: 100%;
     }
     @media (max-width: 330px) {
-        margin: 20px 0px 0px 0px;
+        margin: 15px 0px 0px 0px;
     }
 `;
 
