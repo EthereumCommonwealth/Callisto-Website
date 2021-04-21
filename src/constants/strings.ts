@@ -1,4 +1,3 @@
-import { ListGroup } from 'react-bootstrap';
 import t from '../components/Header/types';
 import { Assets } from './images';
 
@@ -111,27 +110,27 @@ export const data = [{
 export const social = [
     {
         name: "twitter",
-        link: "twitter",
+        link: "https://twitter.com/CallistoSupport",
         icon: Assets.twitter,
     },{
         name: "reddit",
-        link: "reddit",
+        link: "https://www.reddit.com/r/CallistoCrypto/",
         icon: Assets.reddit,
     },{
         name: "discord",
-        link: "discord",
+        link: "https://discord.gg/pM4qWjcwjm",
         icon: Assets.discord,
     },{
         name: "linkedin",
-        link: "linkedin",
+        link: "https://www.linkedin.com/company/callisto-network/",
         icon: Assets.linkedin,
     },{
         name: "telegram",
-        link: "telegram",
+        link: "https://t.me/CallistoNet",
         icon: Assets.tele,
     },{
         name: "youtube",
-        link: "youtube",
+        link: "https://www.youtube.com/channel/UC1WMae32v_eJ8qOtLQqM26Q",
         icon: Assets.youtube,
     }
 ];
@@ -139,32 +138,32 @@ export const social = [
 export const resources = [
     {
         name: "FAQ",
-        link: "faq",
+        link: "https://callisto.network/faq/",
     },{
         name: "Timeline",
-        link: "timeline",
+        link: "https://callisto.network/timeline/",
     },{
         name: "Airdrop",
-        link: "airdrop",
+        link: "https://callisto.network/callisto-airdrop/",
     },{
         name: "Community Guidelines",
-        link: "guiedline",
+        link: "https://callisto.network/community-guidelines/",
     }
 ]
 
 export const callisto = [
     {
         name: "Partners",
-        link: "partners",
+        link: "https://callisto.network/partners/",
     },{
         name: "Our GitHub repositories",
-        link: "github",
+        link: "https://github.com/EthereumCommonwealth",
     },{
         name: "Media Kit",
-        link: "media",
+        link: "https://github.com/EthereumCommonwealth/Callisto-Media-Kit",
     },{
         name: "Contact us",
-        link: "contactus",
+        link: "https://callisto.network/contact-us/",
     }
 ]
 

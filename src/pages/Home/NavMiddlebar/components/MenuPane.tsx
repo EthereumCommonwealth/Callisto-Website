@@ -1,3 +1,4 @@
+import { Theme } from 'constants/theme';
 import styled from 'styled-components';
 
 const NavMiddlebar = () => {
@@ -22,6 +23,11 @@ const MenuArea = styled.div`
     display: flex; 
     width: 100%;
     justify-content: flex-end;
+    
+    @media (max-width: 1300px) {
+        flex-direction: column;
+        padding-left: 50px;
+    }
     @media (max-width: 768px) {
         display: none;
     }
@@ -29,14 +35,22 @@ const MenuArea = styled.div`
 
 const Li = styled.li`
     list-style: none;
-    font-family: sunflower;
-    font-size: 18px;
-    line-height: 30px;
     align-itmems:center;
     vertical-align: center;
-    padding: 0 10px;
-    text-decoration: underline;
-    color: #3D4341;
+    margin: 5px 10px;
+    a {
+        font-family: ${Theme.fonts.body};
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: none;
+        padding-bottom: 2px;
+        border-bottom: solid 2px #C9D5D1;
+        &:hover {
+            color: #46CA91;
+            border-bottom: solid 2px #46CA91;
+        }
+    }
+    
 `;
 
 export default NavMiddlebar;

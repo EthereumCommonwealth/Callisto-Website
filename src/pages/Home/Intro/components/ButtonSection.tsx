@@ -6,10 +6,10 @@ const ButtonSection = () => {
     return (
         <ButtonArea>
             <GetButton>
-                <StyledText color={Theme.colors.white} fontweight={"300"} fontsize={"12px"}>Get $CLO</StyledText>
+                <StyledText color={Theme.colors.white} fontweight={"700"} fontsize={"18px"}>Get $CLO</StyledText>
             </GetButton>
             <StakeButton>
-                <StyledText color={Theme.colors.white} fontweight={"300"} fontsize={"12px"}>Stake Now</StyledText>
+                <StyledText color={Theme.colors.white} fontweight={"700"} fontsize={"18px"}>Stake Now</StyledText>
             </StakeButton>
         </ButtonArea>
     )

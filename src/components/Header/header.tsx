@@ -23,28 +23,30 @@ const Header = (props: { home: boolean}) => {
                 <Nav className="ml-auto">
                     <Li>
                         <NavDropdown title="Services" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#services/1.1">Services1</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/smart-contract-audit/">Smart Contract Audit</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#services/1.2">Services2</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#services/1.3">Services3</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/smart-contract-migration/">Smart Contract Migration</NavDropdown.Item>
                         </NavDropdown>
                     </Li>
 
                     <Li>
                         <NavDropdown title="Ecosystem" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#ecosystem1">Ecosystem1</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/wallets/">Wallets</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#ecosystem2">Ecosystem2</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/cold-staking/">Cold Staking</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#ecosystem3">Ecosystem3</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/total-eclipse/">Total Eclipse</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="https://callisto.network/cryptobot/">CryptoBot</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="https://callisto.network/on-chain-governance/">On-Chain Governance</NavDropdown.Item>
                         </NavDropdown>
                     </Li>
                     <Li>
                         <Nav.Link href="/blog" >Blog</Nav.Link>
                     </Li>
                     <Li>
-                        <Nav.Link href="/Cyptocurrency">Cyptocurrency</Nav.Link>
+                        <Nav.Link href="https://callisto.network/cryptocurrency/">Cyptocurrency</Nav.Link>
                     </Li>
                     <Li1>
                         <Nav.Link href="/get an audit">Get an audit</Nav.Link>
@@ -53,9 +55,8 @@ const Header = (props: { home: boolean}) => {
                         <Nav.Link href="/get an audit">Audit</Nav.Link>
                     </Li2>
                     
-                    <Nav.Link href="/whitepaper">
+                    <Nav.Link href="https://drive.google.com/file/d/1XvP-mKbT_wbrPb7p7hlLRhb7G6V5cqXV/view" target="_blank">
                         <Whitepaper>Whitepaper</Whitepaper>
-                        {/* <Whitepaper2>Paper</Whitepaper2> */}
                     </Nav.Link>
                 </Nav>
             </Navbar.Collapse>

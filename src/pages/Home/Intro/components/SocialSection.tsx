@@ -1,4 +1,5 @@
 import { social } from 'constants/strings';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
@@ -8,7 +9,11 @@ const SocialSection = () => {
             {
                 social?.map((_item, _i)=>{
                     return (
-                        <ImageSocial img={_item.icon}  key={_item.name}/>
+                        <div key={_item.name}>
+                            <a href={_item?.link} target="_blank">
+                                <ImageSocial img={_item.icon}   />
+                            </a>
+                        </div>
                     )
                 })
             }
@@ -19,7 +24,7 @@ const SocialArea = styled.div`
     display: none;
     z-index: 1;
     @media (max-width: 596px) {
-        display: felx;
+        display: felx !important;
         margin: 80px 0px 0px 0px;
         justify-content: center;
         width: 100%;

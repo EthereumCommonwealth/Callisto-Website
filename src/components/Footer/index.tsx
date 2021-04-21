@@ -65,7 +65,7 @@ export const LinkStyledButton = styled.button<{ color: string }>`
   padding: 10px 15px;
   font-weight: 500;
 `
-export const LinkStyledButton2 = styled.button<{ color: string }>`
+export const LinkStyledButton2 = styled.div<{ color: string }>`
   border: none;
   text-decoration: none;
   background-color: ${({color}) => color};
@@ -99,8 +99,13 @@ const Text = styled.p<{ color: string, fontWeight: string }>`
     font-size: 18px;
     line-height: 28px;
     opacity: .6;
-    margin-left: -10px;
+    margin-left: -5px;
     letter-spacing: 1px;
+    &:hover {
+        text-decoration: underline;
+        color: #34B37C;
+        margin-left: 0px;
+    }
     @media (max-width: 1200px) {
         font-size: 14px;
     }
@@ -172,7 +177,9 @@ const Footer = ({}) => {
                                 if( _i > 2 ) return;
                                 return (
                                     <MobHidden key={_item.name+ _i.toString()}>
-                                        <ImageSocial img={_item.icon}  />
+                                        <a href={_item?.link} target="_blank">
+                                            <ImageSocial img={_item.icon}  />
+                                        </a>
                                     </MobHidden>
                                 )
                             })
@@ -184,7 +191,9 @@ const Footer = ({}) => {
                                 if( _i < 3 ) return;
                                 return (
                                     <MobHidden key={_item.name+ _i.toString()}>
-                                        <ImageSocial img={_item.icon}  />
+                                        <a href={_item?.link} target="_blank">
+                                            <ImageSocial img={_item.icon}  />
+                                        </a>
                                     </MobHidden>
                                 )
                             })
@@ -195,7 +204,9 @@ const Footer = ({}) => {
                             social?.map((_item, _i)=>{
                                 return (
                                     <MobShown key={_item.name+ _i.toString()}>
-                                        <ImageSocial img={_item.icon}  />
+                                        <a href={_item?.link} target="_blank">
+                                            <ImageSocial img={_item.icon}  />
+                                        </a>
                                     </MobShown>
                                 )
                             })
@@ -210,7 +221,9 @@ const Footer = ({}) => {
                             return (
                                 <div className="col-sm-12" key={_item.name}>
                                     <LinkStyledButton2 color={"transparent"} >
-                                        <Text color={"#FEFFF8"} fontWeight={"300"}>{_item.name}</Text>
+                                        <a href={_item?.link}>
+                                            <Text color={"#FEFFF8"} fontWeight={"300"}>{_item.name}</Text>
+                                        </a>
                                     </LinkStyledButton2>
                                 </div>
                             )
@@ -225,7 +238,9 @@ const Footer = ({}) => {
                             return (
                                 <div className="col-sm-12" key={_item.name}>
                                     <LinkStyledButton2 color={"transparent"} >
-                                        <Text color={"#FEFFF8"} fontWeight={"300"}>{_item.name}</Text>
+                                        <a href={_item?.link}>
+                                            <Text color={"#FEFFF8"} fontWeight={"300"}>{_item.name}</Text>
+                                        </a>
                                     </LinkStyledButton2>
                                 </div>
                             )

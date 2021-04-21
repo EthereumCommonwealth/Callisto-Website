@@ -2,9 +2,8 @@ import ImageView from 'components/ImageView';
 import { SpaceRow2 } from 'components/Row';
 import ShadowView from 'components/ShadowView';
 import Spacer from 'components/Spacer';
-import TextArea from 'components/TextArea';
-import Title from 'components/Title';
 import { Assets } from 'constants/images';
+import { Theme } from 'constants/theme';
 import styled from 'styled-components';
 
 const RightPane = () => {
@@ -105,4 +104,19 @@ const TitleText =  styled.p`
         line-height: 30px;
     }
 `;
+const TextArea = styled.p<{ color: string}>`
+    font-weight: 400;
+    color:${({color}) => color};
+    font-family: ${Theme.fonts.body};
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: .2px;
+    text-align: start;
+`
+const Title = styled.h1<{ fontWeight: string}>`
+    font-weight: ${({fontWeight}) => fontWeight};
+    font-family: ${Theme.fonts.body};
+    font-size: 36px;
+    padding: 10px 30px;
+`
 export default RightPane;

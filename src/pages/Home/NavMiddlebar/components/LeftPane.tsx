@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Assets } from 'constants/images';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppState } from 'store';
+import { Link } from 'react-router-dom';
 
 const LeftPane = () => {
 
@@ -21,7 +22,7 @@ const LeftPane = () => {
         <SubCon>
             <LogoArea>
                 <LogoImg>
-                    <img src={Assets.logo} width="44" height="50" alt="logo" />
+                    <img src={Assets.logo} width="44px" height="50px" alt="logo" />
                 </LogoImg>
                 <LogoTextArea>
                     <TextArea>
@@ -29,14 +30,24 @@ const LeftPane = () => {
                         <Subtext>
                             {coinPrice?.usd.toFixed(6)}
                             <Usd>   USD   </Usd>
-                            <Percentage color={coinPrice.usd_24h_change >= 0 ? "green": "red"}>({coinPrice.usd_24h_change.toFixed(1)}%)</Percentage>
+                            <Percentage color={coinPrice.usd_24h_change >= 0 ? "green": "red"}>
+                                {
+                                    coinPrice.usd_24h_change >= 0 ?
+                                    `(+${coinPrice.usd_24h_change.toFixed(2)}%)`:
+                                    `(${coinPrice.usd_24h_change.toFixed(2)}%)`
+                                }
+                            </Percentage>
                         </Subtext>
                     </TextArea>
                 </LogoTextArea>
             </LogoArea>
             <ImgGroup>
-                <img src={Assets.coingecko} width='120' height='28' alt='coingecko' />
-                <img src={Assets.coinmarket} width='130' height='20' alt="coinmarket" />
+                <a href="https://www.coingecko.com/en/coins/callisto-network">
+                    <Img src={Assets.coingecko} alt='coingecko' />
+                </a>
+                <a href="https://coinmarketcap.com/currencies/callisto-network/">
+                    <Img src={Assets.coinmarket} alt="coinmarket" />
+                </a>
             </ImgGroup>
         </SubCon>
     )
@@ -48,7 +59,7 @@ const LogoArea = styled.div`
 const SubCon = styled.div`
     width: 100%;
     max-width: 384px;
-    
+    min-width: 260px;
 `;
 
 const LogoImg = styled.div`
@@ -70,35 +81,39 @@ const LogoTextArea = styled.div`
     justify-content: center;
     align-items: center;
     @media (max-width: 768px) {
-        width: 100%
+        width: 80%
+    }
+    @media (max-width: 375px) {
+        width: 80%
     }
 `;
 
 const Subtitle = styled.p`
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
-    line-height: 28px;
+    line-height: 30px;
 `;
 
 const Subtext = styled.p`
-    font-size: 14px;
+    font-size: 18px;
     padding: 3px;
 `;
 
 const Usd = styled.span`
-    font-size: 10px;
+    font-size: 13px;
+    color: #04110D;
 `;
 
 const Percentage = styled.span<{ color: string }>`
     color: ${({color}) => color};
-    font-size: 14px;
+    font-size: 18px;
     padding-left: 10px;
 `;
 
 const TextArea = styled.div`
     height: 100%;
     width: 100%;
-    padding: 5px 30px;
+    padding: 5px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,10 +122,24 @@ const TextArea = styled.div`
 
 const ImgGroup = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding: 20px 10px 10px 10px;
     // max-width: 288px;
+    @media( max-width: 410px ) {
+        padding: 20px 5px;
+    }
+    @media(max-width: 360px) {
+        // flex-direction: column;
+    }
 `;
-
+const Img = styled.img`
+    width: 155px;
+    height: 40px;
+    @media(max-width: 375px) {
+        width: 124px;
+        height: 32px;
+        margin-top: 10px;
+    }
+`;
 export default LeftPane;

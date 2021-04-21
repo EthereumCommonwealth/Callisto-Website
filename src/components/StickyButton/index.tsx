@@ -15,7 +15,7 @@ const Container = styled.button`
     z-index: 999;
     right: 50px;
     bottom: 50px;
-    padding-top: 8px;
+    padding-top: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(0, 0, 0, 0.5);
     @media (max-width: 596px) {
         display: none;
@@ -31,7 +31,7 @@ const StickyButton = ({}) => {
     }
     return (
         <Container onClick={scrollToTop}>
-            <StyledText color={"white"} fontsize={"24px"} fontweight={"500"}>UP</StyledText>
+            <StyledText color={"white"} fontsize={"24px"} fontweight={"700"}>UP</StyledText>
         </Container>
     )
 }

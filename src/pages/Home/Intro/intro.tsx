@@ -1,4 +1,5 @@
 import { Assets } from 'constants/images';
+import { Theme } from 'constants/theme';
 import styled from 'styled-components';
 import ButtonSection from './components/ButtonSection';
 import LearnMoreSection from './components/LearnMoreSection';
@@ -8,41 +9,32 @@ import TitleSection from './components/TitleSection';
 
 const Intro = () => {
     return (
-        <>
-            <Img src={Assets.bkimg}/>
-            <Container>
-                <NewsSection />
-                <TitleSection />
-                <Subtitle>Protecting your fund by auditing smart contracts</Subtitle>
-                <Parag>
-                    {`A comprehensive ecosystem whose main objetice is to improve the security of the smar contract industy`}
-                </Parag>
-                <ButtonSection />
-                <SocialSection />
-                <LearnMoreSection />
-            </Container>
-        </>
+        <Container>
+            <NewsSection />
+            <TitleSection />
+            <Subtitle>Protecting your fund by auditing smart contracts</Subtitle>
+            <Parag>
+                {`A comprehensive ecosystem whose main objetice is to improve the security of the smar contract industy`}
+            </Parag>
+            <ButtonSection />
+            <SocialSection />
+            <LearnMoreSection />
+        </Container>
     )
 }
 
 const Container = styled.div`
+    background-image: url("${Assets.bkimg}");
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    
-    position: absolute;
     top: 0px;
     left: 0px;
     margin-top: -75px;
-    @media (max-width: 2120px) {
-        background-image: url("${Assets.bkimg}");
-        position: relative;
-        // top:0px;
-    }
     @media (max-width: 1024px) {
         background-image: url("${Assets.back2}");
     }
@@ -50,25 +42,15 @@ const Container = styled.div`
         background-image: url("${Assets.back3}");
     }
     @media (max-width: 596px) {
-        background-size: 100% 100%;
         background-image: url("${Assets.mobback}");
-        padding: 0px;
-        margin-top: 0px;
         justify-content: flex-start;
-    }
-`;
-const Img = styled.img`
-    width: 100%;
-    min-height: 100vh;
-    margin-top: -75px;
-    resize: contain;
-    @media (max-width: 2120px) {
-        display: none;
+        margin-top: 0px;
     }
 `;
 const Subtitle = styled.p`
     color: white;
     font-size: 24px;
+    font-family: ${Theme.fonts.body};
     line-height: 30px;
     margin-top: 30px;
     margin-left: 8%;
@@ -79,12 +61,12 @@ const Subtitle = styled.p`
         font-size: 14px;
     }
 `;
-
 const Parag = styled.p`
     color: white;
     font-weight: 500;
     font-size: 18px;
-    line-height: 22.5px;
+    font-family: ${Theme.fonts.body};
+    line-height: 25px;
     margin-left: 8%;
     width: 40%;
     margin-top: 50px;
@@ -95,6 +77,8 @@ const Parag = styled.p`
         margin-left: 0px;
         padding: 0px 20px;
         font-size: 12px;
+        line-height: 16px;
     }
 `;
+
 export default Intro;

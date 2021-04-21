@@ -16,7 +16,7 @@ const LearnMoreSection = () => {
         <FooterArea>
             <StyledText color={Theme.colors.white} fontweight={"300"} fontsize={"21px"}>Learn More</StyledText>
             <MoreButton onClick={scrollDownOne}>
-                <ImageView img= {Assets.coolicon} width={"30px"} height={"30px"}/>
+                <ImageView img= {Assets.coolicon} width={"30px"} height={"33px"}/>
             </MoreButton>
         </FooterArea>
     )
