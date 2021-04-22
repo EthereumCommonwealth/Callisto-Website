@@ -7,7 +7,7 @@ const Newsletter = () => {
     return (
         <Container>
             <TsubArea>
-                <TsubBtext>Newsletter</TsubBtext>
+                <TsubBtext>{`Callisto Timeline`}</TsubBtext>
                 <GradBar></GradBar>
             </TsubArea>
             <Spacer height={"20px"} />

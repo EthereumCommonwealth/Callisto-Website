@@ -30,6 +30,9 @@ const FooterArea = styled.div`
     bottom: 50px;
     width: 100%;
     z-index: 1;
+    @media (max-width: 1024px) {
+        bottom: 10px;
+    }
     @media (max-width: 596px) {
         display: none;
     }

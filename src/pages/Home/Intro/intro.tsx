@@ -12,9 +12,9 @@ const Intro = () => {
         <Container>
             <NewsSection />
             <TitleSection />
-            <Subtitle>Protecting your fund by auditing smart contracts</Subtitle>
+            <Subtitle>{`Empowering Enterprises with Blockchain`}</Subtitle>
             <Parag>
-                {`A comprehensive ecosystem whose main objetice is to improve the security of the smar contract industy`}
+                {`A comprehensive ecosystem whose main objective is to improve the security of the smart contract industry.`}
             </Parag>
             <ButtonSection />
             <SocialSection />

@@ -29,6 +29,9 @@ const SocialArea = styled.div`
         justify-content: center;
         width: 100%;
     }
+    @media (max-width: 375px) {
+        margin: 50px 0px 0px 0px;
+    }
     @media (max-width: 330px) {
         margin: 15px 0px 0px 0px;
     }

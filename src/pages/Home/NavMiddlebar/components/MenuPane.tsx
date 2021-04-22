@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 const NavMiddlebar = () => {
     const menuData = [
-        {menu: 'Smart Contract Migration', href: '#'},
-        {menu: 'Ecosystem', href: '#'},
-        {menu: 'Passive Income', href: '#'},
-        {menu: 'Governance', href: '#'},
-        {menu: 'CryptoBot', href: '#'},
+        {menu: 'Smart Contract Migration', href: '#smart-contract-migration'},
+        {menu: 'Ecosystem', href: '#ecosystem'},
+        {menu: 'Passive Income', href: '#passive-income'},
+        {menu: 'Governance', href: '#governance'},
+        {menu: 'CryptoBot', href: '#cryptobot'},
     ]
     return (
         <MenuArea>
