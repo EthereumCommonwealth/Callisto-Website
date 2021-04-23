@@ -169,21 +169,25 @@ export const callisto = [
 
 export const services = [
     {
+        id: "smart-contract-migration",
         name: "Smart Contract Audit",
         title: "Leading Security Experts in the Smart Contracts Industry",
         description1: "Callisto Network helps smart contract developers reduce risk and flaws in smart contracts code and thus drive the adoption of programmable blockchains to benefit the entire crypto industry.",
         description2: "Having performed over 300 smart contract audits, including many major crypto projects, Callisto Network has established itself as an independent third party security expert.",
     },{
+        id: "",
         name: "Clone Your ERC20 or BEP20 Token on Callisto",
         title: "Smart Contract Migration Service",
         description1: "Callisto Network puts its experience and knowledge at the service of the developers who desire to migrate their dApps from Ethereum chains like ETH, BSC to Callisto.",
         description2: ""
     },{
+        id: "passive-income",
         name: "Cold Staking",
         title: "Passive Income With Crypto For Everyone",
         description1: "One of Callisto’s unique features is the ability to earn a monthly passive income through a process called Cold Staking.",
         description2: "The Cold Staking’s smart-contract receives 30% of all CLO mining rewards and distributes them among the cold stackers in direct proportion to their stakes. In other words, cold stakers receive interest for merely holding their CLO cryptocurrency."
     },{
+        id: "cryptobot",
         name: "Unleash Your Community",
         title: "CryptoBot",
         description1: "Created and supervised by the Callisto community, CryptoBot allows the user to manage all the Callisto wallet’s functionalities from the Telegram application.",

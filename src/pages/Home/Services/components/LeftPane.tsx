@@ -30,7 +30,7 @@ const LeftPane = () => {
             </TsubArea>
             {
                 services?.map((_item, _i)=>
-                    <div style={{flex: 1}} key={_item.name}>
+                    <div style={{flex: 1}} key={_item.name} id={_item.id}>
                         <Spacer height="80px"/>
                         <StartRow pl="0px" pr="0px">
                             <PlayIcon>
