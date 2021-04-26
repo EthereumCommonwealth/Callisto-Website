@@ -15,20 +15,26 @@ const Card = ({item}) => {
                 {item.role}
             </TroleBtext>
             <Spacer height="20px" />
-            {
-                item.description?.map((_desc, _i) => (
-                    <Row key={_i.toString()}>
-                        <Point />
-                        <Text >{_desc}</Text>
-                    </Row>
-                ))
-            }
+            <DescDiv>
+                {
+                    item.description?.map((_desc, _i) => (
+                        <Row key={_i.toString()}>
+                            <Point />
+                            <Text >{_desc}</Text>
+                        </Row>
+                    ))
+                }
+            </DescDiv>
         </Container>
     )
 }
 
 const Container = styled.div`
-    
+    display: flex;
+    flex-direction: column;
+`;
+const DescDiv = styled.div`
+    align-self: center;
 `;
 const Row = styled.div`
     display: flex;
@@ -38,13 +44,14 @@ const ImgCon = styled.div`
     clip-path:polygon(10px 0, 90px 0, 100px 10px, 100px 90px, 90px 100px, 10px 100px, 0 90px, 0% 10px);
     width:100px;
     height:100px;
+    align-self: center;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 `;
 const Point = styled.div`
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
     background-color: #3D4341;
-    border-radius: 3px;
+    border-radius: 2px;
     margin: 12px 10px 10px 2px;
 `;
 
@@ -55,9 +62,9 @@ const TsubBtext = styled.p`
     font-size: 20px;
     line-height: 40px;
     display: flex;
-    align-items: center;
     color: #3D4341;
     margin-top: 10px;
+    align-self: center;
     @media (max-width: 768px) {
         line-height: 20px;
     }
@@ -69,7 +76,7 @@ const TroleBtext = styled.p`
     font-size: 18px;
     line-height: 24px;
     display: flex;
-    align-items: center;
+    align-self: center;
     color: #3D4341;
 `;
 const Text = styled.p`

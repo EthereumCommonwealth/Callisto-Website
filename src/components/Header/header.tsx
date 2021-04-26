@@ -11,11 +11,11 @@ const Header = (props: { home: boolean}) => {
     const { home } = props;
     return (
       
-        <Navbar collapseOnSelect expand="md" className={home? "navbar": "header"} variant="dark" sticky="top">
+        <Navbar collapseOnSelect expand="md" className={home? "navbar": "header"} variant="light" sticky="top" >
             <Navbar.Brand href="/">
                 <Logo>
-                    <LogoImg src={logo} className="App-logo" alt="logo" />
-                    <LogoText>Callisto</LogoText>
+                    <LogoImg src={"https://callisto.network/wp-content/uploads/2020/07/cropped-CLO_small_logo_Dark.png"} className="App-logo" alt="logo" />
+                    {/* <LogoText>Callisto</LogoText> */}
                 </Logo>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -73,8 +73,8 @@ const Logo = styled.div`
 `;
 
 const LogoImg = styled.img`
-    width: 44px;
-    height: 50px;
+    // width: 68px;
+    // height: 80px;
 `;
 
 const LogoText = styled.div`   
@@ -122,7 +122,7 @@ const Whitepaper = styled.div`
     -webkit-box-pack: center;
     -webkit-tap-highlight-color: transparent;
     align-items: center;
-    color: white;
+    color: black;
     height: 100%;
     justify-content: center;
     text-decoration: none;
@@ -137,50 +137,16 @@ const Whitepaper = styled.div`
     line-height: 16px;
     margin: 0 0 0 1.125rem ;
     text-decoration: none;
-    border: 2px solid white;
+    border: 2px solid black;
     padding: 0 30px;
     white-space: nowrap;
     @media ( max-width: 956px ) {
         padding: 0 10px;
         font-size: 16px;
     }
-    // @media ( max-width: 768px ) {
-    //     display: none;
-    // }
     @media (max-width: 410px) {
         display: flex;
         margin: 0px;
     }
 `;
-const Whitepaper2 = styled.div`
-    display: none;
-    @media ( max-width: 768px ) {
-        flex: 0 0 auto;
-        -webkit-box-align: center;
-        -webkit-box-pack: center;
-        -webkit-tap-highlight-color: transparent;
-        align-items: center;
-        color: white;
-        height: 100%;
-        justify-content: center;
-        text-decoration: none;
-        -webkit-box-align: center;
-        -webkit-box-pack: center;
-        -webkit-tap-highlight-color: transparent;
-        align-items: center;
-        display: flex;
-        font-size: 18px;
-        height: 40px;
-        justify-content: center;
-        line-height: 16px;
-        text-decoration: none;
-        border: 2px solid white;
-        padding: 0 10px;
-        white-space: nowrap;
-    }
-    @media (max-width: 410px) {
-        display: none;
-    }
-`;
-
 export default Header;

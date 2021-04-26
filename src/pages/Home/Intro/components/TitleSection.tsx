@@ -15,14 +15,14 @@ const TitleSection = () => {
 
 const TitleArea = styled.div`
     width: 1044px;
-    background: linear-gradient(
-        90deg
-        ,rgb(3 9 6 / 37%) 0%,rgb(55 106 98 / 16%) 35%,rgb(24 99 47 / 8%) 100%);
+    // background: linear-gradient(
+    //     90deg
+    //     ,rgb(3 9 6 / 37%) 0%,rgb(55 106 98 / 16%) 35%,rgb(24 99 47 / 8%) 100%);
     margin-top: 54px;
     padding: 10px 0px 10px 8%;
     z-index: 1;
     @media (max-width: 1044px) {
-        background: linear-gradient(90.1deg, #000000 0.09%, #0C1C1B 99.91%);
+        // background: linear-gradient(90.1deg, #000000 0.09%, #0C1C1B 99.91%);
         width: 100%;
         margin-top:  60px;
         padding-right: 8%;
@@ -51,7 +51,7 @@ const Titlepre = styled.h1`
     font-weight: 700;
     font-size: 96px;
     line-height: 120px;
-    color: white;
+    color: black;
     font-family: ${Theme.fonts.body};
     padding-right: 20px;
     @media (max-width: 1044px) {

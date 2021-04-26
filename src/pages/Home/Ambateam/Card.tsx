@@ -6,9 +6,9 @@ const Card = ({item}) => {
     
     return (
         <Container>
-            {/* <ImgCon>
+            <ImgCon>
                 <img src = {item.avatar} />
-            </ImgCon> */}
+            </ImgCon>
             <TsubBtext>
                 {item.name.toUpperCase()}
             </TsubBtext>
@@ -21,13 +21,15 @@ const Card = ({item}) => {
 }
 
 const Container = styled.div`
-    
+    display: flex;
+    flex-direction: column;
 `;
 const ImgCon = styled.div`
     -webkit-clip-path:polygon(10px 0, 90px 0, 100px 10px, 100px 90px, 90px 100px, 10px 100px, 0 90px, 0% 10px);
     clip-path:polygon(10px 0, 90px 0, 100px 10px, 100px 90px, 90px 100px, 10px 100px, 0 90px, 0% 10px);
     width:100px;
     height:100px;
+    align-self: center;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 `;
 const TsubBtext = styled.p`
@@ -37,9 +39,10 @@ const TsubBtext = styled.p`
     font-size: 20px;
     line-height: 40px;
     display: flex;
-    align-items: center;
     color: #3D4341;
     margin-top: 10px;
+    align-self: center;
+    text-align: center;
     @media (max-width: 768px) {
         line-height: 20px;
     }
@@ -51,7 +54,8 @@ const TroleBtext = styled.p`
     font-size: 18px;
     line-height: 24px;
     display: flex;
-    align-items: center;
+    align-self: center;
+    text-align: center;
     color: #3D4341;
 `;
 const Text = styled.p`

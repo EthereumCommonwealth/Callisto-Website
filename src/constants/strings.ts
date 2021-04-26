@@ -134,6 +134,33 @@ export const social = [
         icon: Assets.youtube,
     }
 ];
+export const social1 = [
+    {
+        name: "twitter",
+        link: "https://twitter.com/CallistoSupport",
+        icon: Assets.twitter1,
+    },{
+        name: "reddit",
+        link: "https://www.reddit.com/r/CallistoCrypto/",
+        icon: Assets.reddit1,
+    },{
+        name: "discord",
+        link: "https://discord.gg/pM4qWjcwjm",
+        icon: Assets.discord1,
+    },{
+        name: "linkedin",
+        link: "https://www.linkedin.com/company/callisto-network/",
+        icon: Assets.linkedin1,
+    },{
+        name: "telegram",
+        link: "https://t.me/CallistoNet",
+        icon: Assets.tele1,
+    },{
+        name: "youtube",
+        link: "https://www.youtube.com/channel/UC1WMae32v_eJ8qOtLQqM26Q",
+        icon: Assets.youtube1,
+    }
+];
 
 export const resources = [
     {
@@ -227,6 +254,8 @@ export const coreteams = [
         description: [
             "Co Founder Callisto Network",
             "Main Presenter CoinaryTV",
+            "CEO of Invictus Solutions (CZ)",
+            "CEO and main investor of Callisto Enterprise"
         ],
     },{
         name: "Yohan Graterol",
@@ -280,56 +309,60 @@ export const coreteams = [
 export const devteams = [
     {
         name: "Kryptosoul King",
-        avatar: Assets.p1,
+        avatar: Assets.am2,
         role: "Ambassador",
     },{
         name: "MJ",
-        avatar: Assets.p1,
+        avatar: Assets.tempavatar,
         role: "Ambassador",
     },{
         name: "Mike",
-        avatar: Assets.p1,
+        avatar: Assets.tempavatar,
         role: "Ambassador",
     },{
         name: "ZS",
-        avatar: Assets.p1,
+        avatar: Assets.tempavatar,
         role: "Ambassador",
     },{
         name: "Maximus",
-        avatar: Assets.p1,
+        avatar: Assets.tempavatar,
+        role: "Ambassador",
+    },{
+        name: "Muf Moto",
+        avatar: Assets.am1,
         role: "Ambassador",
     },{
         name: "Jae",
-        avatar: Assets.p1,
-        role: "Telegram Admins",
+        avatar: Assets.am3,
+        role: "Telegram Admin",
     },{
         name: "Mad Catter",
-        avatar: Assets.p1,
-        role: "Telegram Admins",
+        avatar: Assets.tempavatar,
+        role: "Telegram Admin",
     },{
         name: "11",
-        avatar: Assets.p1,
-        role: "Telegram Admins",
+        avatar: Assets.tempavatar,
+        role: "Telegram Admin",
     },{
         name: "Jet Ong",
-        avatar: Assets.p1,
-        role: "Telegram Admins",
+        avatar: Assets.tempavatar,
+        role: "Telegram Admin",
     },{
         name: "Rizky",
-        avatar: Assets.p1,
-        role: "Telegram Admins",
+        avatar: Assets.tempavatar,
+        role: "Telegram Admin",
     },{
         name: "AbdouSam",
-        avatar: Assets.p1,
-        role: "Telegram Admins",
+        avatar: Assets.tempavatar,
+        role: "Telegram Admin",
     },{
         name: "Hallal Ex",
-        avatar: Assets.p1,
-        role: "Telegram Admins",
+        avatar: Assets.tempavatar,
+        role: "Telegram Admin",
     },{
         name: "韭韭",
-        avatar: Assets.p1,
-        role: "Telegram Admins",
+        avatar: Assets.tempavatar,
+        role: "Telegram Admin",
     }
 ]
 

@@ -11,7 +11,7 @@ const ButtonSection = () => {
                 <StyledText color={Theme.colors.white} fontweight={"700"} fontsize={"18px"}>{`Get $CLO`}</StyledText>
             </GetButton>
             <StakeButton href={stake_url} target="_blank">
-                <StyledText color={Theme.colors.white} fontweight={"700"} fontsize={"18px"}>{`Stake Now`}</StyledText>
+                <StyledText color={"#000"} fontweight={"700"} fontsize={"18px"}>{`Stake Now`}</StyledText>
             </StakeButton>
         </ButtonArea>
     )
@@ -45,7 +45,7 @@ const GetButton = styled.a`
 
 const StakeButton = styled.a`
     background-color: rgba(0, 0, 0, .1);
-    border: 1px solid white;
+    border: 1px solid black;
     padding: 5px 50px;
     margin-right: 15px;
     font-size: 18px;

@@ -1,5 +1,4 @@
-import { social } from 'constants/strings';
-import { Link } from 'react-router-dom';
+import { social1 } from 'constants/strings';
 import styled from 'styled-components';
 
 
@@ -7,7 +6,7 @@ const SocialSection = () => {
     return (
         <SocialArea className="row">
             {
-                social?.map((_item, _i)=>{
+                social1?.map((_item, _i)=>{
                     return (
                         <div key={_item.name}>
                             <a href={_item?.link} target="_blank">

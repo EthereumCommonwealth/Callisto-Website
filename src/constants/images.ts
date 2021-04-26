@@ -1,5 +1,6 @@
 import logoimg from '../assets/images/logo.png';
 import bkimg from '../assets/images/background.png';
+import whiteback from '../assets/images/whiteback.svg';
 import back2 from '../assets/images/back2.png';
 import back3 from '../assets/images/back3.png';
 import headback from '../assets/images/scrback.png';
@@ -19,6 +20,15 @@ import reddit from '../assets/images/reddit.png';
 import linkedin from '../assets/images/linkedin.png';
 import tele from '../assets/images/telegram.png';
 import youtube from '../assets/images/youtube.png';
+
+
+import twitter1 from '../assets/images/twitter1.png';
+import discord1 from '../assets/images/discord1.png';
+import reddit1 from '../assets/images/reddit1.png';
+import linkedin1 from '../assets/images/linkedin1.png';
+import tele1 from '../assets/images/telegram1.png';
+import youtube1 from '../assets/images/youtube1.png';
+
 import coolicon from '../assets/images/coolicon.png';
 import logo2 from '../assets/images/logo2.png';
 import transrect from '../assets/images/transrect.png';
@@ -43,11 +53,17 @@ import p4 from '../assets/images/teams/Karel.jpeg';
 import p5 from '../assets/images/teams/Yuriy.jpg';
 import p6 from '../assets/images/teams/dexaran.jpg';
 import p7 from '../assets/images/teams/wang.jpg';
+import am1 from '../assets/images/teams/Muf_avatar.jpg';
+import am2 from '../assets/images/teams/krypto.jpg';
+import am3 from '../assets/images/teams/jae.jpg';
+
+import tempavatar from '../assets/images/teams/avatar.png';
 
 export const Assets = {
     logo: logoimg,
     logo2: logo2,
     bkimg: bkimg,
+    whiteback: whiteback,
     back2: back2,
     back3: back3,
     back4: back4,
@@ -68,6 +84,14 @@ export const Assets = {
     linkedin: linkedin,
     tele: tele,
     youtube: youtube,
+
+    twitter1: twitter1,
+    reddit1: reddit1,
+    discord1: discord1,
+    linkedin1: linkedin1,
+    tele1: tele1,
+    youtube1: youtube1,
+
     coolicon: coolicon,
     transrect: transrect,
     coingecko: coingecko,
@@ -89,4 +113,10 @@ export const Assets = {
     p5: p5,
     p6: p6,
     p7: p7,
+
+    am1: am1,
+    am2: am2,
+    am3: am3,
+
+    tempavatar: tempavatar,
 }

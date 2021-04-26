@@ -14,7 +14,7 @@ const LearnMoreSection = () => {
     }
     return (
         <FooterArea>
-            <StyledText color={Theme.colors.white} fontweight={"300"} fontsize={"21px"}>Learn More</StyledText>
+            <StyledText color={"#000"} fontweight={"300"} fontsize={"21px"}>Learn More</StyledText>
             <MoreButton onClick={scrollDownOne}>
                 <ImageView img= {Assets.coolicon} width={"30px"} height={"33px"}/>
             </MoreButton>
@@ -38,7 +38,7 @@ const FooterArea = styled.div`
     }
 `;
 const MoreButton = styled.button`
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .8);
     border: none;
     padding: 5px;
 `;

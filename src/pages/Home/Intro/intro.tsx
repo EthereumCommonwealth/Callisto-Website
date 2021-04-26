@@ -24,7 +24,7 @@ const Intro = () => {
 }
 
 const Container = styled.div`
-    background-image: url("${Assets.bkimg}");
+    background-image: url("${Assets.whiteback}");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,17 +38,17 @@ const Container = styled.div`
     @media (max-width: 1024px) {
         background-image: url("${Assets.back2}");
     }
-    @media (max-width: 768px) {
-        background-image: url("${Assets.back3}");
-    }
+    // @media (max-width: 768px) {
+    //     background-image: url("${Assets.back3}");
+    // }
     @media (max-width: 596px) {
-        background-image: url("${Assets.mobback}");
+        background-image: none;
         justify-content: flex-start;
         margin-top: 0px;
     }
 `;
 const Subtitle = styled.p`
-    color: white;
+    color: black;
     font-size: 24px;
     font-family: ${Theme.fonts.body};
     line-height: 30px;
@@ -62,7 +62,7 @@ const Subtitle = styled.p`
     }
 `;
 const Parag = styled.p`
-    color: white;
+    color: black;
     font-weight: 500;
     font-size: 18px;
     font-family: ${Theme.fonts.body};

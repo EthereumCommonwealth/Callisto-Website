@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
+//d0dcdb, d0dcdb
 const NewsSection = () => {
     return (
         <NewsBar>
@@ -10,8 +10,8 @@ const NewsSection = () => {
                 </Link>
             </LinkStyledButton>
             <NewsInput>
-                <Text color="#d0dcdb">&nbsp;24/02</Text>
-                <Text color="#d0dcdb">Soy.Finance Launch 24</Text>
+                <Text color="#000">&nbsp;24/02</Text>
+                <Text color="#000">Soy.Finance Launch 24</Text>
             </NewsInput>
         </NewsBar>
     )
@@ -55,15 +55,12 @@ const NewsInput = styled.div`
     vertical-align: middle;
     align-items: center;
     color: #d0dcdb;
-    background: linear-gradient(
-        90deg
-        ,rgb(3 9 6 / 37%) 0%,rgb(55 106 98 / 16%) 35%,rgb(24 99 47 / 8%) 100%);
+    // background: linear-gradient(
+    //     90deg
+    //     ,rgb(3 9 6 / 37%) 0%,rgb(55 106 98 / 16%) 35%,rgb(24 99 47 / 8%) 100%);
     width: 400px;
     height: 42px;
     padding-right: 10px;
-    @media (max-width: 596px) {
-        
-    }
 `;
 
 const Text = styled.p<{ color: string}>`
