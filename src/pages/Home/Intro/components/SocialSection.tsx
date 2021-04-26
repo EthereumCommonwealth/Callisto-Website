@@ -24,15 +24,15 @@ const SocialArea = styled.div`
     z-index: 1;
     @media (max-width: 596px) {
         display: felx !important;
-        margin: 80px 0px 0px 0px;
+        margin: 80px 0px 50px 0px;
         justify-content: center;
         width: 100%;
     }
     @media (max-width: 375px) {
-        margin: 50px 0px 0px 0px;
+        margin: 50px 0px ;
     }
     @media (max-width: 330px) {
-        margin: 15px 0px 0px 0px;
+        margin: 30px 0px ;
     }
 `;
 

@@ -29,18 +29,11 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     top: 0px;
     left: 0px;
-    margin-top: -75px;
-    @media (max-width: 1024px) {
-        background-image: url("${Assets.back2}");
-    }
-    // @media (max-width: 768px) {
-    //     background-image: url("${Assets.back3}");
-    // }
     @media (max-width: 596px) {
         background-image: none;
         justify-content: flex-start;

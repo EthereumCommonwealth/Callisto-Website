@@ -21,11 +21,11 @@ const NewsBar = styled.div`
     display: flex;
     // width: 672px;
     height: 42px;
-    margin-top: 50px;
+    margin-top: 150px;
     margin-left: 8%;
     z-index: 1;
     @media (max-width: 768px) {
-        margin-top: 0px;
+        margin-top: 100px;
         margin-left: 20px;
         width: calc(100% - 20px);
     }

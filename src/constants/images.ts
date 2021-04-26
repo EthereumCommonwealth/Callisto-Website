@@ -1,8 +1,6 @@
 import logoimg from '../assets/images/logo.png';
 import bkimg from '../assets/images/background.png';
 import whiteback from '../assets/images/whiteback.svg';
-import back2 from '../assets/images/back2.png';
-import back3 from '../assets/images/back3.png';
 import headback from '../assets/images/scrback.png';
 import polyimg from '../assets/images/polygon.png';
 import newsmark from '../assets/images/newsmark.png';
@@ -64,8 +62,6 @@ export const Assets = {
     logo2: logo2,
     bkimg: bkimg,
     whiteback: whiteback,
-    back2: back2,
-    back3: back3,
     back4: back4,
     headback: headback,
     polyimg: polyimg,

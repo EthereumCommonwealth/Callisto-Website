@@ -169,7 +169,7 @@ const Li = styled.li<{color: string}>`
         text-decoration: none;
         font-size: 40px;
     }
-    @media(max-width: 410px) {
+    @media(max-width: 768px) {
         padding: 0px 20px 0px 10px;
         justify-content: flex-start;
         a {

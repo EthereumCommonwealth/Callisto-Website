@@ -26,12 +26,18 @@ const FooterArea = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    bottom: 50px;
+    // position: absolute;
+    margin: 100px 0px;
     width: 100%;
     z-index: 1;
-    @media (max-width: 1024px) {
-        bottom: 10px;
+    // @media (max-width: 1300px) {
+    //     bottom: 20px;
+    // }
+    // @media (max-width: 1024px) {
+    //     bottom: 10px;
+    // }
+    @media (max-height: 768px) {
+        margin: 50px 0px;
     }
     @media (max-width: 596px) {
         display: none;
