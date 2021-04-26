@@ -4,7 +4,6 @@ import CenterText from 'components/CenterText';
 import ImageView from 'components/ImageView';
 import { StartRow } from 'components/Row';
 import Spacer from 'components/Spacer';
-import StyledButton from 'components/StyledButton';
 import StyledText from 'components/StyledText';
 import { Assets } from 'constants/images';
 import { services } from 'constants/strings';
@@ -48,7 +47,7 @@ const LeftPane = () => {
                                 <Spacer height="20px"/>
                                 <CenterDiv>
                                     <StyledButton bk="linear-gradient(180deg, #3CC58A 0%, #34B37C 100%)" shadow="0px 8px 8px rgba(0, 0, 0, 0.1), 0px 3px 2px rgba(3, 25, 15, 0.09)">
-                                        <StyledText color={Theme.colors.white} fontweight="300" fontsize="12px">Learn More</StyledText>
+                                        <StyledText color={Theme.colors.white} fontweight="300" fontsize="18px">Learn More</StyledText>
                                     </StyledButton>
                                 </CenterDiv>
                             </Padding>
@@ -100,5 +99,11 @@ const GradBar = styled.div`
     @media (max-width: 768px) {
     }
 `;
-
+const StyledButton = styled.button<{bk: string, shadow: string}>`
+    background: ${({bk})=>bk};
+    border: none;
+    padding: 7px 50px 5px 50px;
+    margin-right: 15px;
+    box-shadow: ${({shadow})=>shadow};
+`;
 export default LeftPane;

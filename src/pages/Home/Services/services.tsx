@@ -14,12 +14,6 @@ const Services = () => {
                 <RightPane />
             </SpaceRow2>
             <Spacer height="50px" />
-            {/* <Li
-                color={"rgba(0,0,0,.7)"}
-            >
-                <a href={'/whitepaper/#'}>{"Meet our Partners"}</a>
-            </Li>
-            <GradBar2></GradBar2> */}
         </Container>
     )
 }

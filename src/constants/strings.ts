@@ -247,7 +247,7 @@ export const coreteams = [
     },{
         name: "Karel Fillner",
         avatar: Assets.p4,
-        role: "Chief Security Officer / CSO",
+        role: "Chief Strategy Officer / CSO",
         description: [
             "CEO of Invictus Mining",
             "Main advisor of Callisto Enterprise",

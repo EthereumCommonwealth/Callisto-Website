@@ -3,10 +3,9 @@ import Spacer from 'components/Spacer';
 import { partners } from 'constants/strings';
 import Slick, { Settings } from "react-slick";
 import "./style.scss";
-import Li from '../Services/components/Li';
+import { Theme } from 'constants/theme';
 
 const slickSettings: Settings = {
-    // lazyLoad: "ondemand",
     accessibility: false,
     draggable: true,
     slidesToShow: 5,
@@ -51,13 +50,12 @@ const slickSettings: Settings = {
 
 const PageFooter = ({}) => {
     const renderItems = () => {
-            
         return partners.map((item, i) => (
             <div key={i}>
                 <img src={`${item}`} alt="" />
             </div>
         ));
-      };
+    };
     return (
         <>
             <Spacer height={"50px"} />
@@ -69,7 +67,6 @@ const PageFooter = ({}) => {
                 </Li>
                 <GradBar2></GradBar2>
             </TitleDiv>
-
             <Footer>
                 <WhiteBack>
                     <SliderCon >
@@ -77,7 +74,6 @@ const PageFooter = ({}) => {
                     </SliderCon>
                 </WhiteBack>
             </Footer>
-            
         </>
     )
 }
@@ -108,7 +104,7 @@ const TitleDiv = styled.div`
         padding: 0 10px;
         align-items: flex-start;
     }
-`
+`;
 
 const SliderCon = styled.div`
     // display: flex;
@@ -122,7 +118,7 @@ const SliderCon = styled.div`
         margin-left: 20px;
         padding: 0 10px;
     }
-`
+`;
 
 const GradBar2 = styled.div`
     display: none;
@@ -142,6 +138,43 @@ const WhiteBack = styled.div`
     height: 90%;
     display: flex;
     align-items: center;
-`
+`;
 
+const Li = styled.li<{color: string}>`
+    flex: 0 0 auto;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    color: #999;
+    height: 100%;
+    justify-content: center;
+    text-decoration: none;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0px 8% 0px 0px;
+    a {
+        color: ${({color}) => color};
+        font-weight: 900;
+        width: auto;
+        font-family: ${Theme.fonts.body};
+        text-decoration: none;
+        font-size: 40px;
+    }
+    @media(max-width: 410px) {
+        padding: 0px 20px 0px 10px;
+        justify-content: flex-start;
+        a {
+            font-size: 20px;
+        }
+    }
+`;
 export default PageFooter;
