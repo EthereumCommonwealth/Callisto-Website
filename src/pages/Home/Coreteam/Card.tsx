@@ -1,4 +1,3 @@
-import { SpaceRow2 } from 'components/Row';
 import Spacer from 'components/Spacer';
 import styled from 'styled-components';
 
@@ -6,7 +5,9 @@ const Card = ({item}) => {
     
     return (
         <Container>
-            <img src = {item.avatar} />
+            <ImgCon>
+                <img src = {item.avatar} width="100px" />
+            </ImgCon>
             <TsubBtext>
                 {item.name.toUpperCase()}
             </TsubBtext>
@@ -31,9 +32,14 @@ const Container = styled.div`
 `;
 const Row = styled.div`
     display: flex;
-
 `;
-
+const ImgCon = styled.div`
+    -webkit-clip-path:polygon(10px 0, 90px 0, 100px 10px, 100px 90px, 90px 100px, 10px 100px, 0 90px, 0% 10px);
+    clip-path:polygon(10px 0, 90px 0, 100px 10px, 100px 90px, 90px 100px, 10px 100px, 0 90px, 0% 10px);
+    width:100px;
+    height:100px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+`;
 const Point = styled.div`
     width: 6px;
     height: 6px;

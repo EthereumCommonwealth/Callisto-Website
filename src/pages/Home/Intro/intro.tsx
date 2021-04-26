@@ -14,7 +14,7 @@ const Intro = () => {
             <TitleSection />
             <Subtitle>{`Empowering Enterprises with Blockchain`}</Subtitle>
             <Parag>
-                {`A comprehensive ecosystem whose main objective is to improve the security of the smart contract industry.`}
+                {`A comprehensive ecosystem whose main objective is to improve the security of the entire smart contract industry.`}
             </Parag>
             <ButtonSection />
             <SocialSection />

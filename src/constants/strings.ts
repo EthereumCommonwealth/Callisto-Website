@@ -171,14 +171,14 @@ export const services = [
     {
         id: "smart-contract-migration",
         name: "Smart Contract Audit",
-        title: "Leading Security Experts in the Smart Contracts Industry",
-        description1: "Callisto Network helps smart contract developers reduce risk and flaws in smart contracts code and thus drive the adoption of programmable blockchains to benefit the entire crypto industry.",
+        title: "Leading Security Experts in the Smart Contract Industry",
+        description1: "Callisto Network helps smart contract developers reduce risk and flaws in their smart contract code. This helps drive the adoption of programmable blockchains to benefit the entire crypto industry.",
         description2: "Having performed over 300 smart contract audits, including many major crypto projects, Callisto Network has established itself as an independent third party security expert.",
     },{
         id: "",
         name: "Clone Your ERC20 or BEP20 Token on Callisto",
         title: "Smart Contract Migration Service",
-        description1: "Callisto Network puts its experience and knowledge at the service of the developers who desire to migrate their dApps from Ethereum chains like ETH, BSC to Callisto.",
+        description1: "Callisto Network puts its experience and knowledge at the service of developers who desire to migrate their dApps from Ethereum chains like ETH or BSC, to Callisto.",
         description2: ""
     },{
         id: "passive-income",
@@ -190,8 +190,8 @@ export const services = [
         id: "cryptobot",
         name: "Unleash Your Community",
         title: "CryptoBot",
-        description1: "Created and supervised by the Callisto community, CryptoBot allows the user to manage all the Callisto wallet’s functionalities from the Telegram application.",
-        description2: "Compatible with the most popular cryptocurrencies, CryptoBot is also a fantastic marketing tool to interact with your community as never before.",
+        description1: "Created and supervised by the Callisto community, CryptoBot allows the user to manage all of the Callisto wallet functionalities from within the Telegram application.",
+        description2: "Compatible with the most popular cryptocurrencies, CryptoBot is also a fantastic marketing tool to interact with your community like never before.",
     }
 ]
 
@@ -221,103 +221,115 @@ export const partners = [
 
 export const coreteams = [
     {
-        name: "Mitch Liu",
+        name: "Vladimír Vencálek",
         avatar: Assets.p1,
-        role: "Cofounder / CEO",
+        role: "Chief Executive Officer / CEO",
         description: [
-            "Cofounder Callisto Network",
-            "Cofounder ...",
-            "Cofounder Tapjoy",
-            "BS in Computer Science & Engineering from MIT",
-            "MBA from Stanford Graduate School of Business",
+            "Co Founder Callisto Network",
+            "Main Presenter CoinaryTV",
         ],
     },{
-        name: "Mitch Liu2",
-        avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        name: "Yohan Graterol",
+        avatar: Assets.p2,
+        role: "Chief Operating Officer / COO",
         description: [
-            "Cofounder Callisto Network",
-            "Cofounder ...",
-            "Cofounder Tapjoy",
-            "BS in Computer Science & Engineering from MIT",
-            "MBA from Stanford Graduate School of Business",
+            "CEO of Invictus Solutions (CZ)",
+            "CEO and main investor of Callisto Enterprise",
         ],
     },{
-        name: "Mitch Liu3",
-        avatar: Assets.p1,
-        role: "Chief Product Officer",
+        name: "Laurent Riche",
+        avatar: Assets.p3,
+        role: "Chief Marketing Officer / CMO",
         description: [
-            "Cofounder Callisto Network",
-            "Cofounder ...",
-            "Cofounder Tapjoy",
-            "BS in Computer Science & Engineering from MIT",
-            "MBA from Stanford Graduate School of Business",
+            "Former Callisto core team member since 2018",
+            "Lead of Soy.Finance",
         ],
+    },{
+        name: "Karel Fillner",
+        avatar: Assets.p4,
+        role: "Chief Security Officer / CSO",
+        description: [
+            "CEO of Invictus Mining",
+            "Main advisor of Callisto Enterprise",
+        ],
+    },{
+        name: "Yuriy",
+        avatar: Assets.p5,
+        role: "Auditors Team Lead",
+        description: [
+            "Former auditor in Callisto project since 2018",
+            "Main Callisto smart contract developer",
+        ],
+    },{
+        name: "Wang",
+        avatar: Assets.p7,
+        role: "Senior Frontend Developer",
+        description: [
+            "Member since 2021",
+            "Senior frontend(Mobile/Web) & backend developer"
+        ],
+    },{
+        name: "Dexaran",
+        avatar: Assets.p6,
+        role: "Researching Team Lead",
+        description: [],
     }
 ];
 
 
 export const devteams = [
     {
-        name: "Jieyi Long",
+        name: "Kryptosoul King",
         avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        role: "Ambassador",
     },{
-        name: "Ribao Wei",
+        name: "MJ",
         avatar: Assets.p1,
-        role: "Principal Engineer",
+        role: "Ambassador",
     },{
-        name: "Qinwei Gong",
+        name: "Mike",
         avatar: Assets.p1,
-        role: "Platform Architect",
+        role: "Ambassador",
     },{
-        name: "Jieyi Long-4",
+        name: "ZS",
         avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        role: "Ambassador",
     },{
-        name: "Jieyi Long-5",
+        name: "Maximus",
         avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        role: "Ambassador",
     },{
-        name: "Jieyi Long-6",
+        name: "Jae",
         avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        role: "Telegram Admins",
     },{
-        name: "Jieyi Long-7",
+        name: "Mad Catter",
         avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        role: "Telegram Admins",
     },{
-        name: "Jieyi Long-8",
+        name: "11",
         avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        role: "Telegram Admins",
     },{
-        name: "Jieyi Long-9",
+        name: "Jet Ong",
         avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        role: "Telegram Admins",
     },{
-        name: "Jieyi Long-10",
+        name: "Rizky",
         avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        role: "Telegram Admins",
     },{
-        name: "Jieyi Long-11",
+        name: "AbdouSam",
         avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        role: "Telegram Admins",
     },{
-        name: "Jieyi Long-12",
+        name: "Hallal Ex",
         avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        role: "Telegram Admins",
     },{
-        name: "Jieyi Long-13",
+        name: "韭韭",
         avatar: Assets.p1,
-        role: "Cofounder / CTO",
-    },{
-        name: "Jieyi Long-14",
-        avatar: Assets.p1,
-        role: "Cofounder / CTO",
-    },{
-        name: "Jieyi Long-15",
-        avatar: Assets.p1,
-        role: "Cofounder / CTO",
+        role: "Telegram Admins",
     }
 ]
 

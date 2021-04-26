@@ -23,12 +23,12 @@ const RectSection = () => {
             <RectTextArea>
                 <Rect3>
                     <Prag>
-                        Convinced that security is the real catalyst for the adoption of any technology. We have founded the Callisto Security Department, <Span>a team of decentralized auditors, and a trusted audit process.</Span>
+                        We’re more than convinced that security is the real catalyst for the adoption of any technology. For this reason, we founded the Callisto Security Department,  <Span>a team of decentralized auditors, and a trusted audit process.</Span>
                     </Prag>
                 </Rect3>
                 <Rect4>
                     <Prag>
-                        Callisto Network is a self-sustaining and self-funded blockchain ecosystem not financed by pre-mined coins or an ICO.
+                        Callisto Network is a self-sustaining and self-funded blockchain ecosystem that is not financed by pre-mined coins or an ICO.
                     </Prag>
                 </Rect4>
             </RectTextArea>

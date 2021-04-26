@@ -33,9 +33,16 @@ import mobback from '../assets/images/moback.png';
 import rect12 from '../assets/images/Rectangle 12.png';
 import polygroup from '../assets/images/polygroup.png';
 import rect2 from '../assets/images/rect2.png';
+import back4 from '../assets/images/callisto-logo-pattern.webp';
 
 // test personal images
-import p1 from '../assets/images/test/1.png';
+import p1 from '../assets/images/teams/Vladimir.jpg';
+import p2 from '../assets/images/teams/Yohan Graterol.jpg';
+import p3 from '../assets/images/teams/laurent.png';
+import p4 from '../assets/images/teams/Karel.jpeg';
+import p5 from '../assets/images/teams/Yuriy.jpg';
+import p6 from '../assets/images/teams/dexaran.jpg';
+import p7 from '../assets/images/teams/wang.jpg';
 
 export const Assets = {
     logo: logoimg,
@@ -43,6 +50,7 @@ export const Assets = {
     bkimg: bkimg,
     back2: back2,
     back3: back3,
+    back4: back4,
     headback: headback,
     polyimg: polyimg,
     newsmark: newsmark,
@@ -75,4 +83,10 @@ export const Assets = {
     rect2: rect2,
 
     p1: p1,
+    p2: p2,
+    p3: p3,
+    p4: p4,
+    p5: p5,
+    p6: p6,
+    p7: p7,
 }

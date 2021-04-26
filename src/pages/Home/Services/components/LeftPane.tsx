@@ -2,13 +2,10 @@
 
 import CenterText from 'components/CenterText';
 import ImageView from 'components/ImageView';
-import { SpaceRow2, StartRow } from 'components/Row';
-import ShadowView from 'components/ShadowView';
+import { StartRow } from 'components/Row';
 import Spacer from 'components/Spacer';
 import StyledButton from 'components/StyledButton';
 import StyledText from 'components/StyledText';
-import TextArea from 'components/TextArea';
-import Title from 'components/Title';
 import { Assets } from 'constants/images';
 import { services } from 'constants/strings';
 import { Theme } from 'constants/theme';

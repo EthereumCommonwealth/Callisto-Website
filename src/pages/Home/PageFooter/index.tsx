@@ -131,6 +131,7 @@ const GradBar2 = styled.div`
         height: 6px;
         width: calc(100% - 20px);
         margin: 5px 0px;
+        margin-left: 10px;
         background: linear-gradient(90deg, #4DCC95 0.64%, rgba(255, 255, 255, 0) 102.02%);
         border-radius: 3px;
     }

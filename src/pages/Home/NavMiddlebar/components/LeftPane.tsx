@@ -97,6 +97,7 @@ const Subtitle = styled.p`
 const Subtext = styled.p`
     font-size: 18px;
     padding: 3px;
+    text-align: center;
 `;
 
 const Usd = styled.span`

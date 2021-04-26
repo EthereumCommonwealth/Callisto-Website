@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import Header from 'components/Header';
 import Intro from 'pages/Home/Intro';
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
             <Services />
             <Coreteam />
             <Ambateam />
-            <Advisor />
+            {/* <Advisor /> */}
             <Newsletter />
             <PageFooter />
         </>
