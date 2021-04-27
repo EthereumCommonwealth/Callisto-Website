@@ -21,13 +21,13 @@ const Container = styled.div`
     width: 100%;
     margin: 0;
     display: flex;
-    justify-content:space-between;
+    justify-content: center;
     align-items: center;
     vertical-align: middle;
     
-    @media(max-width: 768px) {
-        justify-content: center;
-    }
+    // @media(max-width: 768px) {
+    //     justify-content: center;
+    // }
     @media(max-width: 490px) {
         padding: 40px 20px;
     }
