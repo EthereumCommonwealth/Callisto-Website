@@ -19,9 +19,9 @@ const Home: React.FC = () => {
             <Header home={true}/>
             <Intro />
             <StickyButton />
-            <NavMiddlebar />
             <Blockchain />
             <Services />
+            <NavMiddlebar />
             <Coreteam />
             <Ambateam />
             {/* <Advisor /> */}

@@ -252,8 +252,6 @@ export const coreteams = [
         avatar: Assets.p1,
         role: "Chief Executive Officer / CEO",
         description: [
-            "Co Founder Callisto Network",
-            "Main Presenter CoinaryTV",
             "CEO of Invictus Solutions (CZ)",
             "CEO and main investor of Callisto Enterprise"
         ],
@@ -262,8 +260,8 @@ export const coreteams = [
         avatar: Assets.p2,
         role: "Chief Operating Officer / COO",
         description: [
-            "CEO of Invictus Solutions (CZ)",
-            "CEO and main investor of Callisto Enterprise",
+            "Co Founder Callisto Network",
+            "Main Presenter CoinaryTV",
         ],
     },{
         name: "Laurent Riche",

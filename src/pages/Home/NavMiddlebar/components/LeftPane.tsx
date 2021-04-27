@@ -57,7 +57,9 @@ const LogoArea = styled.div`
     display: flex;
 `;
 const SubCon = styled.div`
+    // background-color: white;
     width: 100%;
+    // border-radius: 10px;
     max-width: 384px;
     min-width: 260px;
 `;
@@ -65,17 +67,19 @@ const SubCon = styled.div`
 const LogoImg = styled.div`
     width: 70px;
     height: 70px;
-    background-color: black;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    // border-radius: 10px;
 `;
 
 const LogoTextArea = styled.div`
-    background: linear-gradient( 
-        90deg
-     ,rgb(185 229 207 / 37%) 0%,rgb(143 206 196 / 16%) 35%,rgb(90 213 128 / 8%) 100%);  
-     width: calc(100% - 70px);
+    // background: linear-gradient( 
+    //     90deg
+    //  ,rgb(185 229 207 / 37%) 0%,rgb(143 206 196 / 16%) 35%,rgb(90 213 128 / 8%) 100%);  
+    width: calc(100% - 70px);
+    background-color: white;
     height: 70px;
     display: flex;
     justify-content: center;

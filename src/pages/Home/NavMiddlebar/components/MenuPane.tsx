@@ -44,6 +44,7 @@ const Li = styled.li`
         font-weight: 500;
         text-decoration: none;
         padding-bottom: 2px;
+        color: white;
         border-bottom: solid 2px #C9D5D1;
         &:hover {
             color: #46CA91;
