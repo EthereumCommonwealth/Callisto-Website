@@ -34,6 +34,10 @@ const Container = styled.div`
     flex-direction: column;
 `;
 const DescDiv = styled.div`
+    align-self: center;
+    @media(max-width: 596px) {
+        align-self: flex-start;
+    }
 `;
 const Row = styled.div`
     display: flex;
@@ -50,7 +54,7 @@ const Point = styled.div`
     width: 6px;
     height: 6px;
     min-width: 6px;
-
+    
     background-color: #3D4341;
     border-radius: 3px;
     margin: 12px 10px 10px 2px;
