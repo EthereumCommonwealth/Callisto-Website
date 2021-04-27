@@ -253,7 +253,7 @@ export const coreteams = [
         role: "Chief Executive Officer / CEO",
         description: [
             "CEO of Invictus Solutions (CZ)",
-            "CEO and main investor of Callisto Enterprise"
+            "Solution Architect with more than 15 years of experience and leadership roles"
         ],
     },{
         name: "Yohan Graterol",

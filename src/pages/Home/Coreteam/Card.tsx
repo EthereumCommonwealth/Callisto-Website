@@ -48,10 +48,12 @@ const ImgCon = styled.div`
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 `;
 const Point = styled.div`
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
+    min-width: 6px;
+    
     background-color: #3D4341;
-    border-radius: 2px;
+    border-radius: 3px;
     margin: 12px 10px 10px 2px;
 `;
 
@@ -85,8 +87,6 @@ const Text = styled.p`
     font-weight: 300;
     font-size: 16px;
     line-height: 30px;
-    display: flex;
-    align-items: center;
     color: #3D4341;
 `;
 export default Card;

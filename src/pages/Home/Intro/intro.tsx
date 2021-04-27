@@ -29,7 +29,6 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    // min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     top: 0px;

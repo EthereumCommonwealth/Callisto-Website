@@ -39,7 +39,7 @@ const Container = styled.div`
 
 const CardDiv = styled.div`
     width: 33.33%;
-    padding: 20px;
+    padding: 20px 0px 20px 27px;
     @media(max-width: 1024px) {
         width: 50%;
     }
