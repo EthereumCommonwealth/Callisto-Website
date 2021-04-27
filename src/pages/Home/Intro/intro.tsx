@@ -53,6 +53,10 @@ const Subtitle = styled.p`
         padding: 0px 20px;
         font-size: 14px;
     }
+    @media (max-width: 596px) {
+        margin-top: 20px;
+        line-height: 20px;
+    }
 `;
 const Parag = styled.p`
     color: black;
@@ -71,6 +75,9 @@ const Parag = styled.p`
         padding: 0px 20px;
         font-size: 12px;
         line-height: 16px;
+    }
+    @media (max-width: 768px) {
+        margin-top: 10px;
     }
 `;
 

@@ -31,13 +31,7 @@ const TitleArea = styled.div`
         padding: 10px 0px 10px 20px;
     }
     @media (max-width: 596px) {
-        margin-top: 120px;
-    }
-    @media (max-width: 375px) {
-        margin-top: 50px;
-    }
-    @media (max-width: 320px) {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 `;
 
@@ -65,10 +59,6 @@ const Titlepre = styled.h1`
     @media (max-width: 768px) {
         font-size: 50px;
         line-height: 50px;
-    }
-    @media (max-width: 450px) {
-        font-size: 60px;
-        line-height: 60px;
     }
 `;
 const Titleaft = styled.span`
