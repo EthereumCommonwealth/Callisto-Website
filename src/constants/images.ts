@@ -51,6 +51,7 @@ import p4 from '../assets/images/teams/Karel.jpeg';
 import p5 from '../assets/images/teams/Yuriy.jpg';
 import p6 from '../assets/images/teams/dexaran.jpg';
 import p7 from '../assets/images/teams/wang.jpg';
+import p8 from '../assets/images/teams/veno.jpg';
 import am1 from '../assets/images/teams/Muf_avatar.jpg';
 import am2 from '../assets/images/teams/krypto.jpg';
 import am3 from '../assets/images/teams/jae.jpg';
@@ -109,6 +110,7 @@ export const Assets = {
     p5: p5,
     p6: p6,
     p7: p7,
+    p8: p8,
 
     am1: am1,
     am2: am2,

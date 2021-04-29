@@ -300,6 +300,11 @@ export const coreteams = [
         avatar: Assets.p6,
         role: "Researching Team Lead",
         description: [],
+    },{
+        name: "Veno N'detti",
+        avatar: Assets.p8,
+        role: "Game Development Expert",
+        description: [],
     }
 ];
 
