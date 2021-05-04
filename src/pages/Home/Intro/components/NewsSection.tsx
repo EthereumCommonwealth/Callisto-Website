@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-//d0dcdb, d0dcdb
+
 const NewsSection = () => {
     return (
         <NewsBar>
@@ -10,7 +9,6 @@ const NewsSection = () => {
                 </a>
             </LinkStyledButton>
             <NewsInput>
-                {/* <Text color="#000">&nbsp;03/05</Text> */}
                 <Text color="#000">Callisto Dynamic Monetary Policy</Text>
             </NewsInput>
         </NewsBar>
