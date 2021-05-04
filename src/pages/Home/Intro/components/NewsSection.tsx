@@ -5,13 +5,13 @@ const NewsSection = () => {
     return (
         <NewsBar>
             <LinkStyledButton color={"#34B37C"}>
-                <Link to="/news" style={{color: "#0D281C",}}>
+                <Link to="https://callisto.network/callisto-dynamic-monetary-policy/" style={{color: "#0D281C",}}>
                     NEWS
                 </Link>
             </LinkStyledButton>
             <NewsInput>
                 <Text color="#000">&nbsp;24/02</Text>
-                <Text color="#000">Soy.Finance Launch 24</Text>
+                <Text color="#000">Callisto Dynamic Monetary Policy</Text>
             </NewsInput>
         </NewsBar>
     )
