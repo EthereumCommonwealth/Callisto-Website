@@ -47,7 +47,9 @@ const LeftPane = () => {
                                 <Spacer height="20px"/>
                                 <CenterDiv>
                                     <StyledButton bk="linear-gradient(180deg, #3CC58A 0%, #34B37C 100%)" shadow="0px 8px 8px rgba(0, 0, 0, 0.1), 0px 3px 2px rgba(3, 25, 15, 0.09)">
-                                        <StyledText color={Theme.colors.white} fontweight="300" fontsize="18px">Learn More</StyledText>
+                                        <a href={_item.link} target="_blank">
+                                            Learn More
+                                        </a>
                                     </StyledButton>
                                 </CenterDiv>
                             </Padding>
@@ -99,11 +101,26 @@ const GradBar = styled.div`
     @media (max-width: 768px) {
     }
 `;
-const StyledButton = styled.button<{bk: string, shadow: string}>`
+const StyledButton = styled.li<{bk: string, shadow: string}>`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: ${({bk})=>bk};
     border: none;
-    padding: 7px 50px 5px 50px;
+    max-width: 250px;
     margin-right: 15px;
     box-shadow: ${({shadow})=>shadow};
+    a {
+        color: white;
+        font-weight:300;
+        font-family: ${Theme.fonts.body};
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: .2px;
+        padding: 10px 50px 10px 50px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 `;
 export default LeftPane;

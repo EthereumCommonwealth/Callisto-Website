@@ -23,7 +23,7 @@ const Header = (props: { home: boolean}) => {
                 <Nav className="ml-auto">
                     <Li>
                         <NavDropdown title="Services" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="https://callisto.network/smart-contract-audit/">Smart Contract Audit</NavDropdown.Item>
+                            <NavDropdown.Item href="https://github.com/EthereumCommonwealth/Auditing/" target="_blank">Smart Contract Audit</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="https://callisto.network/smart-contract-migration/">Smart Contract Migration</NavDropdown.Item>
                         </NavDropdown>

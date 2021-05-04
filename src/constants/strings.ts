@@ -201,24 +201,28 @@ export const services = [
         title: "Leading Security Experts in the Smart Contract Industry",
         description1: "Callisto Network helps smart contract developers reduce risk and flaws in their smart contract code. This helps drive the adoption of programmable blockchains to benefit the entire crypto industry.",
         description2: "Having performed over 300 smart contract audits, including many major crypto projects, Callisto Network has established itself as an independent third party security expert.",
+        link: "https://github.com/EthereumCommonwealth/Auditing/",
     },{
         id: "",
         name: "Clone Your ERC20 or BEP20 Token on Callisto",
         title: "Smart Contract Migration Service",
         description1: "Callisto Network puts its experience and knowledge at the service of developers who desire to migrate their dApps from Ethereum chains like ETH or BSC, to Callisto.",
-        description2: ""
+        description2: "",
+        link: "https://callisto.network/smart-contract-migration/",
     },{
         id: "passive-income",
         name: "Cold Staking",
         title: "Passive Income With Crypto For Everyone",
         description1: "One of Callisto’s unique features is the ability to earn a monthly passive income through a process called Cold Staking.",
-        description2: "The Cold Staking’s smart-contract receives 30% of all CLO mining rewards and distributes them among the cold stackers in direct proportion to their stakes. In other words, cold stakers receive interest for merely holding their CLO cryptocurrency."
+        description2: "The Cold Staking’s smart-contract receives 30% of all CLO mining rewards and distributes them among the cold stackers in direct proportion to their stakes. In other words, cold stakers receive interest for merely holding their CLO cryptocurrency.",
+        link: "https://callisto.network/cold-staking/",
     },{
         id: "cryptobot",
         name: "Unleash Your Community",
         title: "CryptoBot",
         description1: "Created and supervised by the Callisto community, CryptoBot allows the user to manage all of the Callisto wallet functionalities from within the Telegram application.",
         description2: "Compatible with the most popular cryptocurrencies, CryptoBot is also a fantastic marketing tool to interact with your community like never before.",
+        link: "https://callisto.network/cryptobot/",
     }
 ]
 

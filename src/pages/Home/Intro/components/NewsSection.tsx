@@ -58,7 +58,7 @@ const NewsInput = styled.div`
     //     ,rgb(3 9 6 / 37%) 0%,rgb(55 106 98 / 16%) 35%,rgb(24 99 47 / 8%) 100%);
     width: 400px;
     height: 42px;
-    padding-right: 10px;
+    padding: 10px;
 `;
 
 const Text = styled.p<{ color: string}>`
