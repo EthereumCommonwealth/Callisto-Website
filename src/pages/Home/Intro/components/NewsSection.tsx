@@ -5,9 +5,9 @@ const NewsSection = () => {
     return (
         <NewsBar>
             <LinkStyledButton color={"#34B37C"}>
-                <Link to="/callisto-dynamic-monetary-policy/" style={{color: "#0D281C",}}>
+                <a href="/callisto-dynamic-monetary-policy/" style={{color: "#0D281C",}}>
                     NEWS
-                </Link>
+                </a>
             </LinkStyledButton>
             <NewsInput>
                 {/* <Text color="#000">&nbsp;03/05</Text> */}
