@@ -10,7 +10,7 @@ const NewsSection = () => {
                 </Link>
             </LinkStyledButton>
             <NewsInput>
-                <Text color="#000">&nbsp;24/02</Text>
+                <Text color="#000">&nbsp;03/05</Text>
                 <Text color="#000">Callisto Dynamic Monetary Policy</Text>
             </NewsInput>
         </NewsBar>
