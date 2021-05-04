@@ -23,7 +23,7 @@ const Header = (props: { home: boolean}) => {
                 <Nav className="ml-auto">
                     <Li>
                         <NavDropdown title="Services" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="https://github.com/EthereumCommonwealth/Auditing/" target="_blank">Smart Contract Audit</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/smart-contract-audit/" >Smart Contract Audit</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="https://callisto.network/smart-contract-migration/">Smart Contract Migration</NavDropdown.Item>
                         </NavDropdown>
@@ -49,10 +49,10 @@ const Header = (props: { home: boolean}) => {
                         <Nav.Link href="https://callisto.network/cryptocurrency/">Cyptocurrency</Nav.Link>
                     </Li>
                     <Li1>
-                        <Nav.Link href="/get an audit">Get an audit</Nav.Link>
+                        <Nav.Link href="https://github.com/EthereumCommonwealth/Auditing/" target="_blank">Get an audit</Nav.Link>
                     </Li1>
                     <Li2>
-                        <Nav.Link href="/get an audit">Audit</Nav.Link>
+                        <Nav.Link href="https://github.com/EthereumCommonwealth/Auditing/" target="_blank">Audit</Nav.Link>
                     </Li2>
                     
                     <Nav.Link href="https://drive.google.com/file/d/1XvP-mKbT_wbrPb7p7hlLRhb7G6V5cqXV/view" target="_blank">

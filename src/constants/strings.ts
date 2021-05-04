@@ -201,7 +201,7 @@ export const services = [
         title: "Leading Security Experts in the Smart Contract Industry",
         description1: "Callisto Network helps smart contract developers reduce risk and flaws in their smart contract code. This helps drive the adoption of programmable blockchains to benefit the entire crypto industry.",
         description2: "Having performed over 300 smart contract audits, including many major crypto projects, Callisto Network has established itself as an independent third party security expert.",
-        link: "https://github.com/EthereumCommonwealth/Auditing/",
+        link: "https://callisto.network/smart-contract-audit/",
     },{
         id: "",
         name: "Clone Your ERC20 or BEP20 Token on Callisto",
