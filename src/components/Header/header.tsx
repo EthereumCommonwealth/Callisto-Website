@@ -1,9 +1,5 @@
-
-import { Theme } from 'constants/theme';
-import React from 'react'
 import styled from 'styled-components'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import logo from '../../assets/images/logo.png';
 import './header.scss';
 
 // const Header = (props: headerProps) => {

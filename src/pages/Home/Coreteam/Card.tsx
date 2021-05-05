@@ -34,9 +34,49 @@ const Container = styled.div`
     flex-direction: column;
 `;
 const DescDiv = styled.div`
-    align-self: center;
-    @media(max-width: 596px) {
-        align-self: flex-start;
+    // align-self: center;
+    margin-left: 120px;
+    @media(max-width: 1800px) {
+        margin-left: 100px;
+    }
+    @media(max-width: 1600px) {
+        margin-left: 80px;
+    }
+    @media(max-width: 1500px) {
+        margin-left: 60px;
+    }
+    @media(max-width: 1400px) {
+        margin-left: 50px;
+    }
+    @media(max-width: 1300px) {
+        margin-left: 40px;
+    }
+    @media(max-width: 1200px) {
+        margin-left: 30px;
+    }
+    @media(max-width: 1100px) {
+        margin-left: 10px;
+    }
+    @media(max-width: 1024px) {
+        margin-left: 60px;
+    }
+    @media(max-width: 900px) {
+        margin-left: 40px;
+    }
+    @media(max-width: 700px) {
+        margin-left: 30px;
+    }
+    @media(max-width: 650px) {
+        margin-left: 10px;
+    }
+    @media(max-width: 590px) {
+        margin-left: 40px;
+    }
+    @media(max-width: 490px) {
+        margin-left: 20px;
+    }
+    @media(max-width: 414px) {
+        margin-left: 0px;
     }
 `;
 const Row = styled.div`
