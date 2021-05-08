@@ -233,7 +233,6 @@ export const partners = [
     "https://callisto.network/wp-content/uploads/2020/12/Bitfinex-logo-transparent.jpg",
     "https://callisto.network/wp-content/uploads/2020/12/HitBTC-Logo-transparent.jpg",
     "https://callisto.network/wp-content/uploads/2020/12/Stex-pool-pro-logo-transparent.jpg",
-    "https://callisto.network/wp-content/uploads/2020/12/Atomars-logo-transparent.jpg",
     "https://callisto.network/wp-content/uploads/2020/12/Trust-logo-transparent.jpg",
     "https://callisto.network/wp-content/uploads/2020/12/Coinomi-pool-pro-logo-transparent.jpg",
     "https://callisto.network/wp-content/uploads/2020/12/Guarda-pro-logo-transparent.jpg",
