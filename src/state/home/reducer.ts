@@ -24,14 +24,6 @@ export const initialState: HomeState = {
     }
 }
 
-// export default createReducer(initialState, builder =>
-//     builder
-//         .addCase(ping_test, (state, action) => {
-//             console.log(action.payload, "<--------")
-//             state.networkStatus = action.payload.networkStatus;
-//         })
-// )
-
 function reducer(state = initialState, action) {
     switch(action.type) {
         case actionTypes.GET_COIN_PRICE_SUCCESS:

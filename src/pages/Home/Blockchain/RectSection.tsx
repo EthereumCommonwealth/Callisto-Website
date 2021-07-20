@@ -11,7 +11,7 @@ const RectSection = () => {
             <RectTextArea>
                 <Rect1>
                     <Prag>
-                        A key objective of Callisto Network is the implementation of <Span>core features</Span> based on smart contacts.
+                        A key objective of Callisto Network is the implementation of <Span>core features</Span> based on smart contracts.
                     </Prag>
                 </Rect1>
                 <Rect2>
