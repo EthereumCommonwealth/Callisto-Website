@@ -7,7 +7,6 @@ const TitleSection = () => {
             <Title>
                 <Titlepre>Callisto</Titlepre>
                 <Titleaft>Network</Titleaft>
-                <Titlepre>BaaS</Titlepre>
             </Title>
         </TitleArea>
     )
@@ -15,23 +14,23 @@ const TitleSection = () => {
 
 const TitleArea = styled.div`
     width: 1044px;
-    // background: linear-gradient(
-    //     90deg
-    //     ,rgb(3 9 6 / 37%) 0%,rgb(55 106 98 / 16%) 35%,rgb(24 99 47 / 8%) 100%);
-    margin-top: 54px;
+    margin-top: 150px;
     padding: 10px 0px 10px 8%;
     z-index: 1;
     @media (max-width: 1044px) {
-        // background: linear-gradient(90.1deg, #000000 0.09%, #0C1C1B 99.91%);
         width: 100%;
-        margin-top:  60px;
+        margin-top:  130px;
         padding-right: 8%;
     }
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
+        margin-top: 100px;
         padding: 10px 0px 10px 20px;
     }
     @media (max-width: 596px) {
-        margin-top: 20px;
+        margin-top: 80px;
+    }
+    @media (max-width: 320px) {
+        margin-top: 50px;
     }
 `;
 
@@ -45,12 +44,14 @@ const Titlepre = styled.h1`
     font-weight: 700;
     font-size: 96px;
     line-height: 120px;
-    color: black;
-    font-family: ${Theme.fonts.body};
+    color: ${Theme.colors.secondary};
+    font-family: ${Theme.fonts.textBold};
     padding-right: 20px;
+    margin-left: -5px;
     @media (max-width: 1044px) {
         font-size: 80px;
         line-height: 80px;
+        margin-left: 0px;
     }
     @media (max-width: 910px) {
         font-size: 70px;
@@ -62,11 +63,11 @@ const Titlepre = styled.h1`
     }
 `;
 const Titleaft = styled.span`
-    color: green;
+    color: ${Theme.colors.primary};
     font-weight: 700;
     font-size: 96px;
     line-height: 120px;
-    font-family: sunflower;
+    font-family: ${Theme.fonts.textBold};
     margin-right: 20px;
     @media (max-width: 1044px) {
         font-size: 80px;

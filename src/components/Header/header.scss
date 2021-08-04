@@ -6,7 +6,26 @@
     background: rgba(255,255,255, 1);
     padding: 10px 8%;
 }
-
+.custom-margin {
+    margin-right: auto;
+}
+.nav-bar {
+    display: flex;
+}
+.nav-bar1 {
+    display: none;
+}
+@media all and (max-width: 980px) {
+    .custom-margin {
+        margin-right: 0px !important;
+    }
+    .nav-bar {
+        display: none;
+    }
+    .nav-bar1 {
+        display: flex;
+    }
+}
 @media all and (max-width: 768px) {
     .navbar {
         background: #fff;
@@ -15,5 +34,8 @@
     .header {
         background: #fff;
         padding: 10px 20px;
+    }
+    .custom-margin {
+
     }
 }

@@ -8,7 +8,11 @@
     font-weight: 900;
     src: local('NunitoSans-Regular'), url(./assets/fonts/NunitoSans-Regular.ttf) format('opentype');
 }
-
+@font-face {
+    font-family: 'Nunito SansB';
+    font-weight: 900;
+    src: local('NunitoSans-Regular'), url(./assets/fonts/NunitoSans-Bold.ttf) format('opentype');
+}
 @font-face {
     font-family: 'Poppins';
     font-weight: 900;
@@ -21,6 +25,21 @@
     src: local('Roboto-Regular'), url(./assets/fonts/Roboto-Regular.ttf) format('opentype');
 }
 
+
+@font-face {
+    font-family: 'GiloryBold';
+    font-weight: 900;
+    src: local('Gilroy-ExtraBold'), url(./assets/fonts/Gilroy-ExtraBold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'GiloryLight';
+    font-weight: 900;
+    src: local('Gilroy-Light'), url(./assets/fonts/Gilroy-Light.otf) format('opentype');
+}
+
+
+
 .nav_right {
     justify-content: flex-end;
 }
@@ -29,4 +48,30 @@
 }
 html {
     scroll-behavior: smooth;
+}
+.padding {
+    padding: 0 8%;
+    @media screen and (max-width: 768px) {
+        padding: 0 20px;
+    }
+}
+.between {
+    justify-content: space-between;
+}
+.row {
+    display: flex;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    align-items: center;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+}
+::-webkit-scrollbar-thumb {
+    background: #163F59 !important;
+}
+.center {
+    justify-content: center;
 }

@@ -1,21 +1,28 @@
-import { SpaceRow2 } from 'components/Row';
+import { FaTelegramPlane } from 'react-icons/fa';
+import Row, { RowCenter } from 'components/Row';
 import Spacer from 'components/Spacer';
+import { Assets } from 'constants/images';
+import { Theme } from 'constants/theme';
 import styled from 'styled-components';
-
 const Card = ({item}) => {
     
     return (
         <Container>
-            <ImgCon>
-                <img src = {item.avatar} />
+            <ImgCon src = {item.avatar}>
             </ImgCon>
             <TsubBtext>
-                {item.name.toUpperCase()}
+                {item.name}
             </TsubBtext>
             <TroleBtext>
                 {item.role}
             </TroleBtext>
-            <Spacer height={"80px"} />
+            <Line />
+            <RowCenter >
+                <LinkStyledButton>
+                    <FaTelegramPlane color={Theme.colors.secondary} />
+                </LinkStyledButton>
+                <Text>{item.tele}</Text>
+            </RowCenter>
         </Container>
     )
 }
@@ -23,49 +30,51 @@ const Card = ({item}) => {
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: #FCFCFC;
+    height: 100%;
+    padding: 20px;
+    height: 300px;
 `;
-const ImgCon = styled.div`
-    -webkit-clip-path:polygon(10px 0, 90px 0, 100px 10px, 100px 90px, 90px 100px, 10px 100px, 0 90px, 0% 10px);
-    clip-path:polygon(10px 0, 90px 0, 100px 10px, 100px 90px, 90px 100px, 10px 100px, 0 90px, 0% 10px);
-    width:100px;
-    height:100px;
-    align-self: center;
+const ImgCon = styled.img`
+    width:80px;
+    height:80px;
+    border-radius: 40px;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 `;
 const TsubBtext = styled.p`
-    font-family: Sunflower;
-    font-style: normal;
-    font-weight: bold;
+    font-family: ${Theme.fonts.textBold};
     font-size: 20px;
     line-height: 40px;
-    display: flex;
-    color: #3D4341;
-    margin-top: 10px;
-    align-self: center;
-    text-align: center;
+    color: ${Theme.colors.secondary};
+    margin-top: 20px;
     @media (max-width: 768px) {
-        line-height: 20px;
+        line-height: 30px;
     }
 `;
 const TroleBtext = styled.p`
-    font-family: Sunflower;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    align-self: center;
-    text-align: center;
-    color: #3D4341;
-`;
-const Text = styled.p`
-    font-family: Sunflower;
-    font-style: normal;
-    font-weight: 300;
+    font-family: ${Theme.fonts.title};
     font-size: 16px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    color: #3D4341;
+    line-height: 24px;
+    color: ${Theme.colors.secondary};
+`;
+const Line = styled.div`
+    height: 2px;
+    width: 50%;
+    background-color: ${Theme.colors.secondary};
+    margin: 20px 0;
+`;
+const LinkStyledButton = styled.li`
+  border: none;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+`
+const Text = styled.p`
+    font-family: ${Theme.fonts.title};
+    font-size: 16px;
+    line-height: 20px;
+    color: ${Theme.colors.secondary};
 `;
 export default Card;

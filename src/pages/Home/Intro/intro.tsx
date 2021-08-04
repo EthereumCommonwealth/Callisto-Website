@@ -2,29 +2,24 @@ import { Assets } from 'constants/images';
 import { Theme } from 'constants/theme';
 import styled from 'styled-components';
 import ButtonSection from './components/ButtonSection';
-import LearnMoreSection from './components/LearnMoreSection';
-import NewsSection from './components/NewsSection';
-import SocialSection from './components/SocialSection';
 import TitleSection from './components/TitleSection';
 
 const Intro = () => {
     return (
         <Container>
-            <NewsSection />
             <TitleSection />
-            <Subtitle>{`Empowering Enterprises with Blockchain`}</Subtitle>
+            <Subtitle>{`Blockchain as seen by Security Experts`}</Subtitle>
             <Parag>
-                {`A comprehensive ecosystem whose main objective is to improve the security of the entire smart contract industry.`}
+                {`A smart-contract ecosystem with a real emphasis on security. Build, stake and trade on a never compromised blockchain.`}
             </Parag>
             <ButtonSection />
-            <SocialSection />
-            <LearnMoreSection />
+            <SideImage src={Assets.backside}/>
+            <RightSideImage src={Assets.back}/>
         </Container>
     )
 }
 
 const Container = styled.div`
-    background-image: url("${Assets.whiteback}");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,6 +28,8 @@ const Container = styled.div`
     background-repeat: no-repeat;
     top: 0px;
     left: 0px;
+    padding-bottom: 20%;
+    min-height: calc(100vh - 50px);
     @media (max-width: 596px) {
         background-image: none;
         justify-content: flex-start;
@@ -40,11 +37,11 @@ const Container = styled.div`
     }
 `;
 const Subtitle = styled.p`
-    color: black;
+    color: ${Theme.colors.secondary};
     font-size: 24px;
-    font-family: ${Theme.fonts.body};
+    font-family: ${Theme.fonts.textBold};
     line-height: 30px;
-    margin-top: 30px;
+    margin-top: -20px;
     margin-left: 8%;
     z-index: 1;
     @media (max-width: 768px) {
@@ -58,15 +55,18 @@ const Subtitle = styled.p`
     }
 `;
 const Parag = styled.p`
-    color: black;
+    color: ${Theme.colors.secondary};
     font-weight: 500;
     font-size: 18px;
-    font-family: ${Theme.fonts.body};
+    font-family: ${Theme.fonts.title};
     line-height: 25px;
     margin-left: 8%;
-    width: 40%;
+    width: 30%;
     margin-top: 50px;
     z-index: 1;
+    @media (max-width: 1065px) {
+        width: 35%;
+    }
     @media (max-width: 768px) {
         width: 100%;
         margin-top: 20px;
@@ -79,5 +79,21 @@ const Parag = styled.p`
         margin-top: 10px;
     }
 `;
-
+const SideImage = styled.img`
+    position: absolute;
+    bottom: 10%;
+    width: 100px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+const RightSideImage = styled.img`
+    position: absolute;
+    right: 3%;
+    bottom: 10%;
+    width: 40%;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
 export default Intro;

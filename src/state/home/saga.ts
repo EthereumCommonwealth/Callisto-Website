@@ -4,10 +4,12 @@ import { coingecko_url } from 'constants/config';
 import { endpoints } from 'constants/endpoints';
 import { actionTypes, getCoinPriceSuccess } from './action';
 
+const temp = "http://135.181.196.253:8000/clo_metrics";
 
 function* getCoinPrice() {
     try {
-        const res = yield call(axios.get, coingecko_url + endpoints.GETCOINPRICE);
+        const res = yield call(axios.get, temp);
+        console.log("res ===>" , res)
         if( res.status === 200 ) {
             yield put(getCoinPriceSuccess(res.data.callisto));
         }

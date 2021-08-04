@@ -7,7 +7,7 @@ import 'inter-ui';
 import './i18n';
 import './App.scss';
 import App from 'App';
-import { ResetCSS } from '@pancakeswap-libs/uikit';
+import { ResetCSS } from '@soy-libs/uikit';
 
 ReactDOM.render(
     <StrictMode>

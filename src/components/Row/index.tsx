@@ -8,6 +8,31 @@ const Row = styled.div<{pl: string, pr: string}>`
   padding-left: ${({pl}) => pl};
   padding-right: ${({pr}) => pr};
   align-items: center;
+  @media screen and (max-width: 998px) {
+    margin-top: 20px;
+  }
+`
+export const RowEnd = styled.div<{pl: string, pr: string}>`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0px;
+  padding-left: ${({pl}) => pl};
+  padding-right: ${({pr}) => pr};
+  justify-content: flex-end;
+  align-items: center;
+  @media screen and (max-width: 998px) {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+`
+export const RowCenter = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+padding: 0px;
+justify-content: center;
+align-items: center;
 `
 export const StartRow = styled.div<{pl: string, pr: string}>`
   width: 100%;

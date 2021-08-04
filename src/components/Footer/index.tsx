@@ -1,4 +1,13 @@
-import Row from 'components/Row'
+import {
+    FaTelegramPlane,
+    FaTwitter,
+    FaRedditAlien,
+    FaYoutube,
+    FaInstagram,
+    FaFacebookF,
+    FaLinkedinIn,
+    FaBitcoin
+} from 'react-icons/fa';
 import Spacer from 'components/Spacer'
 import { Assets } from 'constants/images'
 import { callisto, resources, social } from 'constants/strings'
@@ -6,13 +15,22 @@ import { Theme } from 'constants/theme'
 import * as React from 'react'
 import styled from 'styled-components'
 
+const icons = {
+    "telegram": <FaTelegramPlane color={Theme.colors.secondary} size={30} />,
+    "twitter": <FaTwitter color={Theme.colors.secondary} size={30} />,
+    "reddit": <FaRedditAlien color={Theme.colors.secondary} size={30} />,
+    "youtube": <FaYoutube color={Theme.colors.secondary} size={30} />,
+    "instagram": <FaInstagram color={Theme.colors.secondary} size={30} />,
+    "facebook": <FaFacebookF color={Theme.colors.secondary} size={30} />,
+    "linkedin": <FaLinkedinIn color={Theme.colors.secondary} size={30} />,
+    "bitcoin": <FaBitcoin color={Theme.colors.secondary} size={30} />
+}
 
 const Container = styled.div`
     width: 100%;
-    padding: 10px;
     padding: 50px 8%;
     background-color: ${Theme.colors.footerbk};
-    align-items: center;
+    // align-items: center;
     z-index: 999;
     @media (max-width: 1200px) {
         padding: 50px 20px;
@@ -20,10 +38,10 @@ const Container = styled.div`
 `
 
 const InputContainer = styled.div`
-    margin: 0 25px;
-    border: 1px solid white;
+    margin: 0;
+    border: 1px solid ${Theme.colors.primary};
     width: 60%;
-    
+    height: 42px;
 `
 
 const Input = styled.input`
@@ -34,13 +52,13 @@ const Input = styled.input`
   width: 0;
   color: ${Theme.colors.white};
   font-family: ${Theme.fonts.body};
-  background-color: ${Theme.colors.footerbk};
+  background-color: ${Theme.colors.secondary};
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 500;
   width: 100%;
   ::placeholder {
-    // color: ${Theme.colors.grey};
+    color: ${Theme.colors.white};
   }
   padding: 8px 10px;
   -webkit-appearance: textfield;
@@ -64,6 +82,7 @@ export const LinkStyledButton = styled.button<{ color: string }>`
   background-color: ${({color}) => color};
   padding: 10px 15px;
   font-weight: 500;
+  height: 42px;
 `
 export const LinkStyledButton2 = styled.div<{ color: string }>`
   border: none;
@@ -82,60 +101,79 @@ const Image = styled.div<{ img: string }>`
     background-repeat: no-repeat;
     background-size: contain;
 `
-const ImageSocial = styled.div<{ img: string }>`
-    background-image: ${({img}) => `url(${img})`};
-    justify-content: center;
-    align-items: center;
-    height: 32px;
-    width: 32px;
-    margin: 5px 10px;
-    background-repeat: no-repeat;
-    background-size: contain;
-`
 const Text = styled.p<{ color: string, fontWeight: string }>`
     font-weight: ${({fontWeight}) => fontWeight};
     color: ${({color}) => color};
-    font-family: ${Theme.fonts.body};
+    font-family: ${Theme.fonts.title};
     font-size: 18px;
     line-height: 28px;
     opacity: .6;
-    margin-left: -5px;
+    margin-left: -15px;
     letter-spacing: 1px;
     &:hover {
         text-decoration: underline;
-        color: #34B37C;
-        margin-left: 0px;
+        color: #FFF;
+        opacity: 1;
+        margin-left: -10px;
     }
     @media (max-width: 1200px) {
         font-size: 14px;
     }
 `
+const Text2 = styled.p`
+    color: #FFF;
+    font-family: ${Theme.fonts.title};
+    font-size: 16px;
+    line-height: 25px;
+    @media (max-width: 375px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+`;
+const TextBold = styled.p`
+    color: #FFF;
+    font-family: ${Theme.fonts.textBold};
+    font-size: 20px;
+    line-height: 28px;
+    padding-left: 5px;
+    @media (max-width: 375px) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+`;
 const MobHidden = styled.div`
-    @media (max-width: 768px) {
-        display: none;
-    }
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 `;
-const MobShown = styled.div`
-    display: none;
-    @media (max-width: 768px) {
-        display: flex;
-    }
-`;
+
 const MobDiv = styled.div`
-    padding-left: 20px;
     @media (max-width: 768px) {
         display: flex;
+        justify-content: space-between;
     }
 `;
 const SubTitle = styled.div<{ color: string, fontWeight: string }>`
-    font-weight: ${({fontWeight}) => fontWeight};
     color: ${({color}) => color};
-    font-family: ${Theme.fonts.body};
+    font-family: ${Theme.fonts.textBold};
     font-size: 21px;
     padding: 10px;
+    padding-left: 0px;
     line-height: 26.25px;
     letter-spacing: 1px;
 `
+const Line = styled.div`
+    width: 100%;
+    height: 1px;
+    background-color: ${Theme.colors.white};
+    margin: 20px 0;
+`;
 const Footer = ({}) => {
     const [value, setValue] = React.useState("");
 
@@ -144,10 +182,10 @@ const Footer = ({}) => {
     }
     return (
         <Container>
-            <div className="row">
+            <div className="row" style={{alignItems: "flex-start"}}>
                 <div className="col-lg-3 col-md-6 col-sm-12">
                     <Spacer height ={"20px"} />
-                    <SubTitle fontWeight={"700"} color={Theme.colors.white}>Subscribe to our newsletter for updates</SubTitle>
+                    <SubTitle fontWeight={"700"} color={Theme.colors.white}>Subscribe to our newsletter</SubTitle>
                     <div className="row">
                         <InputContainer>
                             <Input
@@ -174,11 +212,11 @@ const Footer = ({}) => {
                     <MobDiv className="row">
                         {
                             social?.map((_item, _i)=>{
-                                if( _i > 2 ) return;
+                                if( _i > 3 ) return;
                                 return (
                                     <MobHidden key={_item.name+ _i.toString()}>
                                         <a href={_item?.link} target="_blank">
-                                            <ImageSocial img={_item.icon}  />
+                                            {icons[_item.name]}
                                         </a>
                                     </MobHidden>
                                 )
@@ -188,26 +226,13 @@ const Footer = ({}) => {
                     <MobDiv className="row">
                         {
                             social?.map((_item, _i)=>{
-                                if( _i < 3 ) return;
+                                if( _i < 4 ) return;
                                 return (
                                     <MobHidden key={_item.name+ _i.toString()}>
                                         <a href={_item?.link} target="_blank">
-                                            <ImageSocial img={_item.icon}  />
+                                            {icons[_item.name]}
                                         </a>
                                     </MobHidden>
-                                )
-                            })
-                        }
-                    </MobDiv>
-                    <MobDiv className="row">
-                        {
-                            social?.map((_item, _i)=>{
-                                return (
-                                    <MobShown key={_item.name+ _i.toString()}>
-                                        <a href={_item?.link} target="_blank">
-                                            <ImageSocial img={_item.icon}  />
-                                        </a>
-                                    </MobShown>
                                 )
                             })
                         }
@@ -247,6 +272,11 @@ const Footer = ({}) => {
                         })
                     }
                 </div>
+            </div>
+            <Line />
+            <div className="row">
+                <Text2 >© All rights reserved by</Text2>
+                <TextBold>Callisto Network</TextBold>
             </div>
         </Container>
     )

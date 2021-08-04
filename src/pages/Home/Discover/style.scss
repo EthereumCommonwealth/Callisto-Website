@@ -1,0 +1,40 @@
+.discover-container {
+
+    .slick-slider {
+        justify-content: center;
+        align-items: center;
+        .slick-slide {
+            text-align: center;
+        }
+        .slick-dots {
+            position: absolute;
+            bottom: 50px;
+            width: 95%;
+            height: 0px;
+            text-align: right;
+            @media screen and (max-width: 768px) {
+                bottom: 40px !important;
+            }
+            
+        }
+        .slick-dots li button:before{
+            font-size: 10px;
+            color: #FFF;
+            @media screen and (max-width: 1100px) {
+                
+            }
+        }
+        .line-image {
+            @media screen and (max-width: 998px) {
+                display: none;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        // ::before {
+        //     font-size: 40px;
+        //     margin-left: -3px;
+        // }
+    }
+}

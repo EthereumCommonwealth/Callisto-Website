@@ -4,7 +4,7 @@ import { partners } from 'constants/strings';
 import Slick, { Settings } from "react-slick";
 import "./style.scss";
 import { Theme } from 'constants/theme';
-
+import Title from 'components/Title';
 const slickSettings: Settings = {
     accessibility: false,
     draggable: true,
@@ -59,14 +59,10 @@ const PageFooter = ({}) => {
     return (
         <>
             <Spacer height={"50px"} />
-            <TitleDiv >
-                <Li
-                    color={"rgba(0,0,0,.7)"}
-                >
-                    <a href={'/whitepaper/#'}>{"Meet our Partners"}</a>
-                </Li>
-                <GradBar2></GradBar2>
-            </TitleDiv>
+            <TitleCon>
+                <Title text="Meet Our Partners"></Title>
+            </TitleCon>
+            
             <Footer>
                 <WhiteBack>
                     <SliderCon >
@@ -80,10 +76,10 @@ const PageFooter = ({}) => {
 
 
 const Footer = styled.div`
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1AB06F 100%);;
+    // background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1AB06F 100%);;
     width: 100%;
     height: 200px;
-    margin-top: 30px;
+    // margin-top: 30px;
     display: flex;
     align-items: flex-end;
     min-width: 260px;
@@ -94,15 +90,11 @@ const Footer = styled.div`
         height: 100px;
     }
 `;
-const TitleDiv = styled.div`
-    display: flex;
-    flex-direction: column;
+const TitleCon = styled.div`
     width: 100%;
-    align-items: center;
-    padding-left: 8%;
-    @media(max-width: 768px) {
-        padding: 0 10px;
-        align-items: flex-start;
+    padding: 0 8%;
+    @media (max-width: 768px) {
+        padding: 0 20px;
     }
 `;
 

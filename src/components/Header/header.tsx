@@ -11,51 +11,53 @@ const Header = (props: { home: boolean}) => {
             <Navbar.Brand href="/">
                 <Logo>
                     <LogoImg src={"https://callisto.network/wp-content/uploads/2020/07/cropped-CLO_small_logo_Dark.png"} className="App-logo" alt="logo" />
-                    {/* <LogoText>Callisto</LogoText> */}
                 </Logo>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="ml-auto">
+                <Nav className="ml-auto custom-margin">
                     <Li>
                         <NavDropdown title="Services" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="https://callisto.network/smart-contract-audit/" >Smart Contract Audit</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/smart-contract-audit/" target="_blank">Smart Contract Audit</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://callisto.network/smart-contract-migration/">Smart Contract Migration</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/smart-contract-migration/" target="_blank">Smart Contract Migration</NavDropdown.Item>
                         </NavDropdown>
                     </Li>
 
                     <Li>
                         <NavDropdown title="Ecosystem" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="https://callisto.network/wallets/">Wallets</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/wallets/" target="_blank">Wallets</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://callisto.network/cold-staking/">Cold Staking</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/cold-staking/" target="_blank">Cold Staking</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://callisto.network/total-eclipse/">Total Eclipse</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/total-eclipse/" target="_blank">Total Eclipse</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://callisto.network/cryptobot/">CryptoBot</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/cryptobot/" target="_blank">CryptoBot</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://callisto.network/on-chain-governance/">On-Chain Governance</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/on-chain-governance/" target="_blank">On-Chain Governance</NavDropdown.Item>
                         </NavDropdown>
                     </Li>
                     <Li>
-                        <Nav.Link href="/blog" >Blog</Nav.Link>
+                        <Nav.Link href="https://callisto.network/blog/" target="_blank" >Blog</Nav.Link>
                     </Li>
                     <Li>
-                        <Nav.Link href="https://callisto.network/cryptocurrency/">Cyptocurrency</Nav.Link>
+                        <Nav.Link href="https://callisto.network/cryptocurrency/" target="_blank">Cyptocurrency</Nav.Link>
                     </Li>
-                    <Li1>
-                        <Nav.Link href="https://github.com/EthereumCommonwealth/Auditing/" target="_blank">Get an audit</Nav.Link>
-                    </Li1>
-                    <Li2>
+                    <Li>
                         <Nav.Link href="https://github.com/EthereumCommonwealth/Auditing/" target="_blank">Audit</Nav.Link>
-                    </Li2>
-                    
-                    <Nav.Link href="https://drive.google.com/file/d/1XvP-mKbT_wbrPb7p7hlLRhb7G6V5cqXV/view" target="_blank">
-                        <Whitepaper>Whitepaper</Whitepaper>
-                    </Nav.Link>
+                    </Li>
+                    <div className="nav-bar1">
+                        <Nav.Link href="https://drive.google.com/file/d/1XvP-mKbT_wbrPb7p7hlLRhb7G6V5cqXV/view" target="_blank">
+                            <Whitepaper1>WHITEPAPER</Whitepaper1>
+                        </Nav.Link>
+                    </div>
                 </Nav>
             </Navbar.Collapse>
+            <div  className="nav-bar">
+                <Nav.Link href="https://drive.google.com/file/d/1XvP-mKbT_wbrPb7p7hlLRhb7G6V5cqXV/view" target="_blank">
+                    <Whitepaper>WHITEPAPER</Whitepaper>
+                </Nav.Link>
+            </div>
         </Navbar>
     )
 }
@@ -73,29 +75,20 @@ const LogoImg = styled.img`
     // height: 80px;
 `;
 
-const LogoText = styled.div`   
-    font-family: Sunflower;
-    font-weight: normal;
-    padding-left: 15px;
-    font-size: 24px;
-`;
-
 const Li = styled.div`
     display: flex;
     align-items: center;
     color: #ffffff;
     font-size: 18px;
-`;
-const Li1 = styled.div`
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-    font-size: 18px;
-    @media (max-width: 1020px) {
-        display: none;
+    padding: 0 20px;
+    @media (max-width: 1300px) {
+        padding: 0 10px;
     }
-    @media (max-width: 766px) {
-        display: flex;
+    @media (max-width: 1160px) {
+        padding: 0 5px;
+    }
+    @media (max-width: 1100px) {
+        padding: 0;
     }
 `;
 
@@ -133,9 +126,49 @@ const Whitepaper = styled.div`
     line-height: 16px;
     margin: 0 0 0 1.125rem ;
     text-decoration: none;
-    border: 2px solid black;
+    border: 2px solid #34C88A;
+    border-radius:20px;
     padding: 0 30px;
     white-space: nowrap;
+    @media ( max-width: 1100px ) {
+        padding: 0 10px;
+        font-size: 16px;
+    }
+    @media ( max-width: 1000px ) {
+        display: none;
+    }
+`;
+
+const Whitepaper1 = styled.div`
+    flex: 0 0 auto;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    color: black;
+    height: 100%;
+    justify-content: center;
+    text-decoration: none;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    display: none;
+    font-size: 18px;
+    height: 40px;
+    justify-content: center;
+    line-height: 16px;
+    margin: 0 0 0 1.125rem ;
+    text-decoration: none;
+    border: 2px solid #34C88A;
+    border-radius:20px;
+    padding: 0 30px;
+    white-space: nowrap;
+    @media ( max-width: 1000px ) {
+        display: flex;
+        padding: 0 10px;
+        font-size: 16px;
+    }
     @media ( max-width: 956px ) {
         padding: 0 10px;
         font-size: 16px;

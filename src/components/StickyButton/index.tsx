@@ -1,37 +1,45 @@
 import StyledText from 'components/StyledText';
 import { Theme } from 'constants/theme';
 import styled from 'styled-components'
+import Redit from '../Icons/Redit';
+import Twitter from '../Icons/Twitter';
+import Telegram from '../Icons/Telegram';
+import Youtube from '../Icons/Youtube';
 
-const Container = styled.button`
+import { AiOutlineReddit } from 'react-icons/ai';
+
+const Container = styled.div`
     display: flex;
-    background-color: ${Theme.colors.primary};
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     position: fixed;
     border: none;
     z-index: 999;
-    right: 50px;
-    bottom: 50px;
-    padding-top: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(0, 0, 0, 0.5);
-    @media (max-width: 596px) {
+    left: 50px;
+    top: calc(50% - 100px);
+    @media (max-width: 768px) {
         display: none;
     }
 `
+const StyledLi = styled.a`
+    margin-bottom: 20px;
+`;
 const StickyButton = ({}) => {
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: window.pageYOffset - window.innerHeight < 0? 0: window.pageYOffset - window.innerHeight,
-            behavior: "smooth",
-        })
-    }
     return (
-        <Container onClick={scrollToTop}>
-            <StyledText color={"white"} fontsize={"24px"} fontweight={"700"}>UP</StyledText>
+        <Container>
+            <StyledLi href="https://twitter.com/CallistoSupport" target="_blank">
+                <Twitter />
+            </StyledLi>
+            <StyledLi href="https://t.me/CallistoNet" target="_blank">
+                <Telegram />
+            </StyledLi>
+            <StyledLi href="https://www.reddit.com/r/CallistoCrypto/" target="_blank">
+                <AiOutlineReddit color={Theme.colors.primary} size={30} />
+            </StyledLi>
+            <StyledLi href="https://www.youtube.com/channel/UC1WMae32v_eJ8qOtLQqM26Q" target="_blank">
+                <Youtube />
+            </StyledLi>
         </Container>
     )
 }

@@ -1,31 +1,39 @@
-import { Assets } from 'constants/images';
+import { Theme } from 'constants/theme';
 import styled from 'styled-components';
 
 const TitleBar = styled.div`
     display: flex;
+    margin-left: 8%;
+    align-items: flex-end;
+    @media (max-width: 768px) {
+        margin-left: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 `;
 
 const Title = styled.div`
-    background-image: url("${Assets.rect12}");
-    background-size: 100% 100%;
-    width: 500px;
-    height: 160px;
     display: flex;
-    justify-content: flex-end;
-    vertical-align: middle;
-    align-items: center;
-    padding-right: 20px;
-    @media (max-width: 768px) {
-        width: 300px;
-        height: 60px;
-    }
 `;
 
-const Titletext = styled.div`
-    font-size: 70px;
-    color: #ffffff;
-    font-family: sunflower:
-    font-weight: normal;
+const Titletext = styled.p`
+    font-size: 45px;
+    color: ${Theme.colors.secondary};
+    font-family: ${Theme.fonts.textBold};
+    font-weight: 300;
+    padding-top: 10px;
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
+`;
+const Titletext2 = styled.p`
+    font-family: ${Theme.fonts.textBold};
+    font-weight: bold;
+    font-size: 45px;
+    color: ${Theme.colors.primary};
+    padding-top: 10px;
+    padding-left: 10px;
     @media (max-width: 768px) {
         font-size: 30px;
     }
@@ -33,7 +41,6 @@ const Titletext = styled.div`
 
 const TsubArea = styled.div`
     padding-left: 15px;
-    width: 80%;
     padding-right: 8%;
     @media(max-width: 768px) {
         padding-right: 20px;
@@ -41,56 +48,42 @@ const TsubArea = styled.div`
 `;
 
 const Tsubtext = styled.p`
-    font-family: Sunflower;
+    font-family: ${Theme.fonts.body};
     font-style: normal;
     font-weight: 300;
-    font-size: 40px;
-    line-height: 60px;
-    display: flex;
-    align-items: center;
-    color: #3D4341;
+    font-size: 20px;
+    line-height: 20px;
+    color: ${Theme.colors.secondary};
+    padding: 2px 10px;
     @media (max-width: 768px) {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 20px;
-    }
-`;
-
-const TsubBtext = styled.p`
-    font-family: Sunflower;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 60px;
-    display: flex;
-    align-items: center;
-    color: #3D4341;
-    padding: 10px 0px;
-    @media (max-width: 768px) {
-        font-size: 20px;
-        line-height: 20px;
+        margin-top: 10px;
     }
 `;
 
 const GradBar = styled.div`
-    height: 6px;
+    height: 4px;
     width: 100%;
-    border-radius: 3px;
-    background: linear-gradient(90deg, #4DCC95 0.64%, rgba(255, 255, 255, 0) 102.02%);
-    @media (max-width: 768px) {
-       display: none;
-    }
+    border-radius: 2px;
+    background: ${Theme.colors.primary};
 `;
 
 const TitleSection = () => {
 
     return (
         <TitleBar>
-            <Title>
-                <Titletext>Blockchain</Titletext>
-            </Title>
+            <div>
+                <Title>
+                    <Titletext>Key Features</Titletext>
+                </Title>
+                <Title>
+                    <Titletext>of</Titletext>
+                    <Titletext2>Callisto Network</Titletext2>
+                </Title>
+            </div>
             <TsubArea>
-                <Tsubtext>as seen by</Tsubtext>
-                <TsubBtext>Security Experts</TsubBtext>
+                <Tsubtext>Decentralized Blockchain Ecosystem</Tsubtext>
                 <GradBar></GradBar>
             </TsubArea>
         </TitleBar>
