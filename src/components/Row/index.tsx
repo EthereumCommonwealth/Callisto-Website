@@ -33,6 +33,9 @@ display: flex;
 padding: 0px;
 justify-content: center;
 align-items: center;
+@media screen and (max-width: 768px) {
+  margin-top: 20px;
+}
 `
 export const StartRow = styled.div<{pl: string, pr: string}>`
   width: 100%;

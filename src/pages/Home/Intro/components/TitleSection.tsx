@@ -42,12 +42,13 @@ const Title = styled.div`
 `;
 const Titlepre = styled.h1`
     font-weight: 700;
-    font-size: 96px;
+    font-size: 70px;
     line-height: 120px;
     color: ${Theme.colors.secondary};
     font-family: ${Theme.fonts.textBold};
     padding-right: 20px;
     margin-left: -5px;
+    letter-spacing: 1.4px;
     @media (max-width: 1044px) {
         font-size: 80px;
         line-height: 80px;
@@ -65,10 +66,11 @@ const Titlepre = styled.h1`
 const Titleaft = styled.span`
     color: ${Theme.colors.primary};
     font-weight: 700;
-    font-size: 96px;
+    font-size: 70px;
     line-height: 120px;
     font-family: ${Theme.fonts.textBold};
     margin-right: 20px;
+    letter-spacing: 1.4px;
     @media (max-width: 1044px) {
         font-size: 80px;
         line-height: 80px;

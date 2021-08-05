@@ -43,7 +43,7 @@ const Ecosystem = () => {
                         })}
                     </div>
                     <GetButton href={item.link} target="_blank">
-                        <StyledText color={Theme.colors.white} fontweight={"700"} fontsize={"22px"}>{`Learn more`}</StyledText>
+                        <StyledText color={Theme.colors.white} fontweight={"700"} fontsize={"18px"}>{`Learn more`}</StyledText>
                     </GetButton>
                 </LeftPane>
                 <Img src={item.img} alt="img"/>
@@ -100,6 +100,7 @@ const TitleCon = styled.div`
 const SubCon = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 50px 8%;
     @media screen and (max-width: 768px) {
         padding: 20px;
@@ -136,7 +137,7 @@ const Img2 = styled.img`
 `;
 
 const Img = styled.img`
-    height: 400px;
+    height: 314px;
     @media screen and (max-width: 1200px) {
         height: 300px;
     }
@@ -150,8 +151,8 @@ const Img = styled.img`
 const SubTitle = styled.p`
     font-family: ${Theme.fonts.textBold};
     font-size: 35px;
-    line-height: 45px;
     color: ${Theme.colors.secondary};
+    padding-bottom: 20px;
     @media screen and (max-width: 768px) {
         font-size: 30px;
         text-align: center;
@@ -159,24 +160,26 @@ const SubTitle = styled.p`
 `;
 const Text = styled.p`
     font-family: ${Theme.fonts.title};
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 22px;
+    line-height: 26px;
     margin: 20px 0;
+    letter-spacing: 0.44px;
     color: ${Theme.colors.secondary};
     @media screen and (max-width: 768px) {
         text-align: center;
+        font-size: 18px;
     }
 `;
 const GetButton = styled.a`
     background-color: ${Theme.colors.primary};
     text-decoration: none !important;
-    padding: 10px 50px;
-    width: 250px;
+    padding: 17.7px 30px 17px;
+    width: 200px;
     margin-right: 15px;
     font-size: 18px;
     text-align: center;
     border: 2px solid ${Theme.colors.primary};
-    border-radius: 40px;
+    border-radius: 30px;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     @media screen and (max-width: 596px) {
         width: 100%;

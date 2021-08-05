@@ -6,8 +6,8 @@ const StyledText = styled.p<{ color: string, fontweight: string, fontsize: strin
     color:${({color}) => color};
     font-family: ${Theme.fonts.title};
     font-size: ${({fontsize}) => fontsize};
-    line-height: 26px;
-    letter-spacing: .2px;
+    line-height: 22px;
+    letter-spacing: 0.36px;
 `
 
 export default StyledText;

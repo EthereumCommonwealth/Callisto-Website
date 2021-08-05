@@ -1,4 +1,4 @@
-import Row, { RowEnd } from 'components/Row';
+import Row, { RowCenter, RowEnd } from 'components/Row';
 import Spacer from 'components/Spacer';
 import Title from 'components/Title';
 import { Assets } from 'constants/images';
@@ -40,7 +40,9 @@ const Services = () => {
         return securitydata.map((item) =>{
             return (
                 <BottomCon key={item.id}>
-                    <FixedImg src={item.img} alt="image"/>
+                    <a href={item.link} target="_blank">
+                        <FixedImg src={item.img} alt="image"/>
+                    </a>
                     <SubCon>
                         <LineImg className="line-image" src={Assets.line} alt="line_image"/>
                         <LineMarkImg src={Assets.linemark} alt="mark_image"/>
@@ -55,7 +57,7 @@ const Services = () => {
                                         <div></div>
                                         <div>
                                             <SubTitle>{item.title1}</SubTitle>
-                                            <SubTitle2>{item.title2}</SubTitle2>
+                                            <SubTitle>{item.title2}</SubTitle>
                                         </div>
                                         <LineDiv></LineDiv>
                                     </QuadDiv>
@@ -63,7 +65,7 @@ const Services = () => {
                             </div>
                         </SpaceRow2>
                         <Spacer height="50px"/>
-                        <SpaceRow2>
+                        <SpaceRow>
                             <div className="row">
                                 {
                                     item.desc.map((descItem, index) => (
@@ -86,7 +88,7 @@ const Services = () => {
                                     ))
                                 }
                             </div>
-                        </SpaceRow2>
+                        </SpaceRow>
                     </SubCon>
                 </BottomCon>
             )
@@ -119,13 +121,13 @@ const Services = () => {
                         </Row>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-6">
-                        <RowEnd pl="0px" pr="0px">
+                        <RowCenter>
                             <Img src={Assets.frozen} />
                             <RightCon>
                                 <Label>Frozen Coins</Label>
                                 <NumberLabel>{`${cvfrozen1 + '.' + cvfrozen2} CLO`}</NumberLabel>
                             </RightCon>
-                        </RowEnd>
+                        </RowCenter>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-6">
                         <RowEnd pl="0px" pr="0px">
@@ -143,7 +145,7 @@ const Services = () => {
                 <Slick {...slickSettings}>{renderItems()}</Slick>
             </CardDiv>
             
-            <Spacer height="150px" />
+            <Spacer height="100px" />
         </Container>
     )
 }
@@ -188,32 +190,48 @@ const SpaceRow2 = styled.div`
     height: 100%;
     padding: 0px;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+        margin-top: 100px;
+    }
+    @media screen and (max-width: 590px) {
+        margin-top: 30px;
+    }
+    @media screen and (max-width: 420px) {
+        margin-top: 0px;
+    }
+`
+const SpaceRow = styled.div`
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    justify-content: space-between;
 `
 const FixedImg = styled.img`
     position: absolute;
     left: 8%;
-    height: 300px;
+    width: calc(42% - 40px);
+    // height: 350px;
     z-index: 1;
     background-color: transparent !important;
     padding: 0 !important;
     border-radius: 30px;
     @media screen and (max-width: 1300px) {
-        height: 250px;
+        // height: 250px;
     }
     @media screen and (max-width: 1100px) {
-        height: 200px;
+        // height: 200px;
     }
     @media screen and (max-width: 768px) {
         // left: 20px;
         margin-left: auto;
         margin-right: auto;
-        height: 250px;
+        width: calc(100% - 120px);
     }
-    @media screen and (max-width: 700px) {
-        height: 200px;
+    @media screen and (max-width: 590px) {
+        width: calc(100% - 90px);
     }
     @media screen and (max-width: 420px) {
-        height: 150px;
+        width: calc(100% - 50px);
     }
 `;
 const Label = styled.p`
@@ -245,14 +263,14 @@ const BottomCon = styled.div`
 `;
 const SubCon = styled.div`
     position: relative;
-    margin-top: 100px;
+    margin-top: 65px;
     // height: 500px;
     background-color: ${Theme.colors.secondary};
     border-top: 8px;
     border-bottom: 8px;
     border-style: solid;
     border-color: #1E587D;
-    padding: 0 8%;
+    padding: 65px 8%;
     @media screen and (max-width: 768px) {
         padding: 0 20px 30px 20px;
     }
@@ -275,7 +293,7 @@ const LineMarkImg = styled.img`
     position: absolute;
     right: 10px;
     bottom: 0px;
-    height: 300px;
+    height: 430px;
     z-index: 1;
     background-color: transparent !important;
     padding: 0 !important
@@ -300,15 +318,23 @@ const QuadDiv = styled.div`
 
 const SubTitle = styled.p`
     font-family: ${Theme.fonts.textBold};
-    font-size: 40px;
+    font-size: 60px;
     color: ${Theme.colors.white};
     text-align: left;
+    line-height: 1.08;
+    letter-spacing: 1.2px;
+    @media screen and (max-width: 768px) {
+        font-size: 40px;
+    }
 `;
 const SubTitle2 = styled.div`
     font-family: ${Theme.fonts.textBold};
-    font-size: 40px;
+    font-size: 60px;
     color: ${Theme.colors.white};
     text-align: left;
+    @media screen and (max-width: 768px) {
+        font-size: 40px;
+    }
 `;
 
 const LineDiv = styled.div`

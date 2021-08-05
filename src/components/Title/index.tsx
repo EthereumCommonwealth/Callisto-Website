@@ -9,8 +9,9 @@ const Container = styled.div`
 const Text = styled.p`
     font-family: ${Theme.fonts.textBold};
     font-weight: bold;
-    font-size: 45px;
+    font-size: 60px;
     padding: 10px;
+    letter-spacing: 1.2px;
     color: ${Theme.colors.secondary};
     @media screen and (max-width: 768px) {
         font-size: 30px;

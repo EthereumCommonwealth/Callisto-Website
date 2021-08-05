@@ -48,7 +48,7 @@ const TsubArea = styled.div`
 `;
 
 const Tsubtext = styled.p`
-    font-family: ${Theme.fonts.body};
+    font-family: ${Theme.fonts.title};
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
@@ -63,9 +63,10 @@ const Tsubtext = styled.p`
 `;
 
 const GradBar = styled.div`
-    height: 4px;
+    height: 2px;
     width: 100%;
     border-radius: 2px;
+    margin-top: 5px;
     background: ${Theme.colors.primary};
 `;
 

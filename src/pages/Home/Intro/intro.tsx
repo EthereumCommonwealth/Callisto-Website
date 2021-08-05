@@ -38,11 +38,12 @@ const Container = styled.div`
 `;
 const Subtitle = styled.p`
     color: ${Theme.colors.secondary};
-    font-size: 24px;
+    font-size: 30px;
     font-family: ${Theme.fonts.textBold};
-    line-height: 30px;
+    line-height: 40px;
     margin-top: -20px;
     margin-left: 8%;
+    letter-spacing: 0.6px;
     z-index: 1;
     @media (max-width: 768px) {
         margin-left: 0px;
@@ -57,13 +58,14 @@ const Subtitle = styled.p`
 const Parag = styled.p`
     color: ${Theme.colors.secondary};
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     font-family: ${Theme.fonts.title};
     line-height: 25px;
     margin-left: 8%;
     width: 30%;
     margin-top: 50px;
     z-index: 1;
+    letter-spacing: 0.4px;
     @media (max-width: 1065px) {
         width: 35%;
     }

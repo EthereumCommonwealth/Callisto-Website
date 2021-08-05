@@ -127,8 +127,11 @@ const SubTitle = styled.p`
     font-size: 40px;
     color: ${Theme.colors.white};
     text-align: left;
+    letter-spacing: 1.2px;
+    line-height: 60px;
     @media screen and (max-width: 768px) {
         font-size: 30px;
+        line-height: 40px;
     }
 `;
 const Line = styled.div`
@@ -138,11 +141,12 @@ const Line = styled.div`
 `;
 const Text = styled.p`
     font-family: ${Theme.fonts.title};
-    font-size: 20px;
+    font-size: 22px;
     line-height: 24px;
     color: ${Theme.colors.white};
     padding-top: 20px;
     text-align: left;
+    letter-spacing: 0.44px;
     @media screen and (max-width: 768px) {
         font-size: 16px;
     }

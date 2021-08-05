@@ -30,7 +30,9 @@ const Newsletter = () => {
         return newsdata.map((item, i) => (
             <div key={item.id}>
                 <ImgDiv>
-                    <FixImg src={item.img} alt="image" />
+                    <a href={item.link} target="_blank">
+                        <FixImg src={item.img} alt="image" />
+                    </a>
                 </ImgDiv>
                 <ContentDiv>
                     <LeftDiv>

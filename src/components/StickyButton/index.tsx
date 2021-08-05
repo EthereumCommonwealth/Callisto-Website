@@ -35,7 +35,8 @@ const StickyButton = ({}) => {
                 <Telegram />
             </StyledLi>
             <StyledLi href="https://www.reddit.com/r/CallistoCrypto/" target="_blank">
-                <AiOutlineReddit color={Theme.colors.primary} size={30} />
+                {/* <AiOutlineReddit color={Theme.colors.primary} size={30} /> */}
+                <Redit />
             </StyledLi>
             <StyledLi href="https://www.youtube.com/channel/UC1WMae32v_eJ8qOtLQqM26Q" target="_blank">
                 <Youtube />

@@ -298,6 +298,7 @@ export const newsdata = [
          id: "9",
          img: Assets.news8,
          twitter: "",
+         link: "https://coinmarketcal.com/en/news/from-bitcoin-to-callisto-network-cryptomining-evolution",
          date: "07.31.2021",
          title: "From Bitcoin to Callisto Network: CryptoMining Evolution",
          desc: "Terms like Blockchain, Cryptocurrency, and Cryptomining entered our world with Bitcoin. However, technology is designed to evolve."
@@ -306,6 +307,7 @@ export const newsdata = [
         id: "8",
         img: Assets.news9,
         twitter: "",
+        link: "https://drive.google.com/file/d/1WwWVAzn4cmxEg8i4SSh8_TP_TEMSPJVX/view",
         date: "07.26.2021",
         title: "Our 2nd Quarter Report is Now Available!",
         desc: "It is time to review our activity for the 2nd quarter."
@@ -314,6 +316,7 @@ export const newsdata = [
        id: "10",
        img: Assets.secmark1,
        twitter: "",
+       link: "https://callisto.network/banketh-token-security-audit/",
        date: "07.26.2021",
        title: "BankETH Smart Contract Audit.",
        desc: "Callisto Network Security Department conducted the BankETH smart contract security audit."
@@ -322,6 +325,7 @@ export const newsdata = [
         id: "11",
         img: Assets.news10,
         twitter: "",
+        link: "https://twitter.com/CLOEnterprise/status/1418979197528195075",
         date: "07.24.2021",
         title: "MJ joined Callisto Enterprise.",
         desc: "We are delighted to welcome MJ as Lead Analyst. MJ previously was one of our ambassadors, and we were looking to get him more closely involved by making him part of the core team. Welcome onboard, MJ."
@@ -330,6 +334,7 @@ export const newsdata = [
         id: "12",
         img: Assets.secmark2,
         twitter: "",
+        link: "https://callisto.network/axiemon-token-security-audit/",
         date: "07.21.2021",
         title: "Axiemon Smart Contract Audit.",
         desc: "Callisto Network Security Department conducted Axiemon smart contract security audit."
@@ -339,6 +344,7 @@ export const newsdata = [
         id: "3",
         img: Assets.news3,
         twitter: "",
+        link: "https://twitter.com/CallistoSupport/status/1416013934591717378",
         date: "07.16.2021",
         title: "Emergence of Callisto Network.",
         desc: "Discover the background of a major episode in the #crypto history."
@@ -346,6 +352,7 @@ export const newsdata = [
         id: "4",
         img: Assets.news4,
         twitter: "",
+        link: "https://twitter.com/CallistoSupport/status/1415615921423532036",
         date: "07.15.2021",
         title: "5 hours left until our #Airdrop",
         desc: "15 000 $CLO to be distributed in Telegram at 15:15 UTC. Join our community and get your coins!!"
@@ -353,6 +360,7 @@ export const newsdata = [
         id: "5",
         img: Assets.news5,
         twitter: "",
+        link: "https://twitter.com/bigdogecrypto/status/1415275883733020674",
         date: "07.14.2021",
         title: "Audit is coming soon!",
         desc: "We will keep on improving our security level and actively seek more auditors to provide a safe platform."
@@ -360,6 +368,7 @@ export const newsdata = [
         id: "1",
         img: Assets.news6,
         twitter: "",
+        link: "https://twitter.com/Callisto_Audits/status/1415386259980226570",
         date: "07.14.2021",
         title: "Are Your Funds Safe?",
         desc: "Callisto Network Security Department conducted the CVNX Token ( $CVNX ) and Governance V2 smart contracts security audit."
@@ -367,6 +376,7 @@ export const newsdata = [
         id: "2",
         img: Assets.news2,
         twitter: "",
+        link: "https://twitter.com/CallistoSupport/status/1414007259944914947",
         date: "07.11.2021",
         title: "Crypto-Bot Wallet",
         desc: "On this occasion, we are hosting a very special #Airdrop. 15 000 CLO to be distributed on 15.07.21 @ 15:15 UTC."
@@ -374,6 +384,7 @@ export const newsdata = [
         id: "7",
         img: Assets.news7,
         twitter: "",
+        link: "https://twitter.com/yograterol/status/1413221573885038592",
         date: "07.08.2021",
         title: "Dragonary",
         desc: "Dragonary is coming. Many NFT dragons will come to the battleground to fight."
@@ -453,6 +464,7 @@ export const securitydata = [
         img: Assets.secmark1,
         title1: "Security",
         title2: "First",
+        link: "https://callisto.network/banketh-token-security-audit/",
         desc: [
             {
                 id: "desc01",
@@ -470,6 +482,7 @@ export const securitydata = [
         img: Assets.secmark2,
         title1: "Security",
         title2: "First",
+        link: "https://callisto.network/axiemon-token-security-audit/",
         desc: [
             {
                 id: "desc01",
@@ -487,6 +500,7 @@ export const securitydata = [
         img: Assets.secmark3,
         title1: "Security",
         title2: "First",
+        link: "https://callisto.network/big-doge-coin-security-audit/",
         desc: [
             {
                 id: "desc01",
@@ -504,6 +518,7 @@ export const securitydata = [
         img: Assets.secmark4,
         title1: "Security",
         title2: "First",
+        link: "https://callisto.network/cvnx-token-and-governance-v2-security-audit/",
         desc: [
             {
                 id: "desc01",
@@ -521,6 +536,7 @@ export const securitydata = [
         img: Assets.secmark5,
         title1: "Security",
         title2: "First",
+        link: "https://callisto.network/quarashi-network-security-audit/",
         desc: [
             {
                 id: "desc01",
@@ -538,6 +554,7 @@ export const securitydata = [
         img: Assets.secmark6,
         title1: "Security",
         title2: "First",
+        link: "https://callisto.network/simple-private-notary-security-audit/",
         desc: [
             {
                 id: "desc01",
@@ -555,6 +572,7 @@ export const securitydata = [
         img: Assets.secmark7,
         title1: "Security",
         title2: "First",
+        link: "https://callisto.network/wildfire-token-security-audit/",
         desc: [
             {
                 id: "desc01",
@@ -572,6 +590,7 @@ export const securitydata = [
         img: Assets.secmark8,
         title1: "Security",
         title2: "First",
+        link: "https://callisto.network/open-bi-sea-eth-bsc-bridge-security-audit/",
         desc: [
             {
                 id: "desc01",
@@ -589,6 +608,7 @@ export const securitydata = [
         img: Assets.card,
         title1: "Security",
         title2: "First",
+        link: "https://callisto.network/pyxis-network-pyx-security-audit/",
         desc: [
             {
                 id: "desc01",
