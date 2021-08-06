@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const CenterText = styled.p<{ color: string, fontweight: string, fontsize: string, line: string}>`
     font-weight: ${({fontweight}) => fontweight};
     color:${({color}) => color};
-    font-family: ${Theme.fonts.body};
+    font-family: ${Theme.fonts.text};
     font-size: ${({fontsize}) => fontsize};
     line-height: ${({line}) => line};
     letter-spacing: .2px;

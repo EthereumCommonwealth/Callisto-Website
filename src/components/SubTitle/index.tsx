@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const SubTitle = styled.div<{ color: string, fontWeight: string }>`
     font-weight: ${({fontWeight}) => fontWeight};
     color: ${({color}) => color};
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-size: 21px;
     padding: 10px;
     line-height: 26.25px;

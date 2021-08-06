@@ -39,7 +39,7 @@ const Container = styled.div`
 const Subtitle = styled.p`
     color: ${Theme.colors.secondary};
     font-size: 30px;
-    font-family: ${Theme.fonts.textBold};
+    font-family: ${Theme.fonts.text};
     line-height: 40px;
     margin-top: -20px;
     margin-left: 8%;
@@ -59,7 +59,7 @@ const Parag = styled.p`
     color: ${Theme.colors.secondary};
     font-weight: 500;
     font-size: 20px;
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     line-height: 25px;
     margin-left: 8%;
     width: 30%;

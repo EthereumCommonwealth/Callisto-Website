@@ -4,19 +4,19 @@
 }
 
 @font-face {
-    font-family: 'Nunito Sans';
+    font-family: 'Gilroy Regular';
     font-weight: 900;
-    src: local('NunitoSans-Regular'), url(./assets/fonts/NunitoSans-Regular.ttf) format('opentype');
+    src: local('Gilroy-Regular'), url(./assets/fonts/Gilroy-Regular.ttf) format('opentype');
 }
 @font-face {
-    font-family: 'Nunito SansB';
+    font-family: 'Gilroy Bold';
     font-weight: 900;
-    src: local('NunitoSans-Regular'), url(./assets/fonts/NunitoSans-Bold.ttf) format('opentype');
+    src: local('Gilroy-Bold'), url(./assets/fonts/Gilroy-Bold.ttf) format('opentype');
 }
 @font-face {
-    font-family: 'Poppins';
+    font-family: 'Gilroy Medium';
     font-weight: 900;
-    src: local('Poppins-Regular'), url(./assets/fonts/Poppins-Regular.otf) format('opentype');
+    src: local('Gilroy-Medium'), url(./assets/fonts/Gilroy-Medium.ttf) format('opentype');
 }
 
 @font-face {
@@ -29,7 +29,7 @@
 @font-face {
     font-family: 'GiloryBold';
     font-weight: 900;
-    src: local('Gilroy-ExtraBold'), url(./assets/fonts/Gilroy-ExtraBold.otf) format('opentype');
+    src: local('Gilroy-ExtraBold'), url(./assets/fonts/Gilroy-Bold.ttf) format('opentype');
 }
 
 @font-face {

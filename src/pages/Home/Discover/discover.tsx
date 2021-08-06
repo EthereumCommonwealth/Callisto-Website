@@ -140,7 +140,7 @@ const Line = styled.div`
     width: 60%;
 `;
 const Text = styled.p`
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-size: 22px;
     line-height: 24px;
     color: ${Theme.colors.white};

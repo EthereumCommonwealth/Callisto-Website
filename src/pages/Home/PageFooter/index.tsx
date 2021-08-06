@@ -157,7 +157,7 @@ const Li = styled.li<{color: string}>`
         color: ${({color}) => color};
         font-weight: 900;
         width: auto;
-        font-family: ${Theme.fonts.body};
+        font-family: ${Theme.fonts.text};
         text-decoration: none;
         font-size: 40px;
     }

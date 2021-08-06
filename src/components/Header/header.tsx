@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import './header.scss';
+import { Theme } from 'constants/theme';
 
 // const Header = (props: headerProps) => {
 const Header = (props: { home: boolean}) => {
@@ -17,24 +18,24 @@ const Header = (props: { home: boolean}) => {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-auto custom-margin">
                     <Li>
-                        <NavDropdown title="Services" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="https://callisto.network/smart-contract-audit/" target="_blank">Smart Contract Audit</NavDropdown.Item>
+                        <NavDropdown className="font" title="Services" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="https://callisto.network/smart-contract-audit/" className="font" target="_blank">Smart Contract Audit</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://callisto.network/smart-contract-migration/" target="_blank">Smart Contract Migration</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/smart-contract-migration/" className="font" target="_blank">Smart Contract Migration</NavDropdown.Item>
                         </NavDropdown>
                     </Li>
 
                     <Li>
-                        <NavDropdown title="Ecosystem" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="https://callisto.network/wallets/" target="_blank">Wallets</NavDropdown.Item>
+                        <NavDropdown className="font" title="Ecosystem" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="https://callisto.network/wallets/" className="font" target="_blank">Wallets</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://callisto.network/cold-staking/" target="_blank">Cold Staking</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/cold-staking/" className="font" target="_blank">Cold Staking</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://callisto.network/total-eclipse/" target="_blank">Total Eclipse</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/total-eclipse/" className="font" target="_blank">Total Eclipse</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://callisto.network/cryptobot/" target="_blank">CryptoBot</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/cryptobot/" className="font" target="_blank">CryptoBot</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://callisto.network/on-chain-governance/" target="_blank">On-Chain Governance</NavDropdown.Item>
+                            <NavDropdown.Item href="https://callisto.network/on-chain-governance/" className="font" target="_blank">On-Chain Governance</NavDropdown.Item>
                         </NavDropdown>
                     </Li>
                     <Li>
@@ -129,6 +130,7 @@ const Whitepaper = styled.div`
     border: 2px solid #34C88A;
     border-radius:20px;
     padding: 0 30px;
+    font-family: ${Theme.fonts.medium};
     white-space: nowrap;
     @media ( max-width: 1100px ) {
         padding: 0 10px;
@@ -164,6 +166,7 @@ const Whitepaper1 = styled.div`
     border-radius:20px;
     padding: 0 30px;
     white-space: nowrap;
+    font-family: ${Theme.fonts.medium};
     @media ( max-width: 1000px ) {
         display: flex;
         padding: 0 10px;

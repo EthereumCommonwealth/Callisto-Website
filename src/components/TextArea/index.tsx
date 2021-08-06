@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const TextArea = styled.p<{ color: string}>`
     font-weight: 400;
     color:${({color}) => color};
-    font-family: ${Theme.fonts.roboto};
+    font-family: ${Theme.fonts.text};
     font-size: 16px;
     line-height: 26px;
     letter-spacing: .2px;

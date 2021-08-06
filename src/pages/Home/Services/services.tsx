@@ -237,7 +237,7 @@ const FixedImg = styled.img`
 const Label = styled.p`
     color: ${Theme.colors.secondary};
     font-size: 18px;
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     line-height: 24px;
     @media screen and (max-width: 1200px) {
         font-size: 16px;
@@ -373,7 +373,7 @@ const SubTitle3 = styled.p`
     text-align: left;
 `;
 const Text = styled.p`
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-size: 16px;
     line-height: 20px;
     color: ${Theme.colors.white};

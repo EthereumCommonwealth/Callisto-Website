@@ -20,20 +20,22 @@ const Title = styled.div`
 const Titletext = styled.p`
     font-size: 45px;
     color: ${Theme.colors.secondary};
-    font-family: ${Theme.fonts.textBold};
+    font-family: ${Theme.fonts.medium};
     font-weight: 300;
     padding-top: 10px;
+    font-weight: 500;
     @media (max-width: 768px) {
         font-size: 30px;
     }
 `;
 const Titletext2 = styled.p`
-    font-family: ${Theme.fonts.textBold};
+    font-family: ${Theme.fonts.medium};
     font-weight: bold;
     font-size: 45px;
     color: ${Theme.colors.primary};
     padding-top: 10px;
     padding-left: 10px;
+    font-weight: 500;
     @media (max-width: 768px) {
         font-size: 30px;
     }
@@ -48,7 +50,7 @@ const TsubArea = styled.div`
 `;
 
 const Tsubtext = styled.p`
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-style: normal;
     font-weight: 300;
     font-size: 20px;

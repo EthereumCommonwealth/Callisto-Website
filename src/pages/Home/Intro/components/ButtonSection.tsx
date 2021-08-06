@@ -35,7 +35,8 @@ const GetButton = styled.a`
     text-decoration: none !important;
     padding: 18px 36px 20px;
     display: flex;
-    align-items: center;
+    height: 60px;
+    // align-items: center;
     margin-right: 15px;
     font-size: 18px;
     text-align: center;
@@ -50,10 +51,11 @@ const GetButton = styled.a`
 const StakeButton = styled.a`
     background-color: ${Theme.colors.white};
     text-decoration: none !important;
-    padding: 18px 68px 21px;
+    padding: 18px 60px 21px;
     display: flex;
     align-items: center;
     font-size: 18px;
+    height: 60px;
     text-align: center;
     border: 1px solid ${Theme.colors.primary};
     border-radius: 30px;

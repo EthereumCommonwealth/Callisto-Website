@@ -1,12 +1,8 @@
-import StyledText from 'components/StyledText';
-import { Theme } from 'constants/theme';
 import styled from 'styled-components'
 import Redit from '../Icons/Redit';
 import Twitter from '../Icons/Twitter';
 import Telegram from '../Icons/Telegram';
 import Youtube from '../Icons/Youtube';
-
-import { AiOutlineReddit } from 'react-icons/ai';
 
 const Container = styled.div`
     display: flex;
@@ -38,7 +34,7 @@ const StickyButton = ({}) => {
                 {/* <AiOutlineReddit color={Theme.colors.primary} size={30} /> */}
                 <Redit />
             </StyledLi>
-            <StyledLi href="https://www.youtube.com/channel/UC1WMae32v_eJ8qOtLQqM26Q" target="_blank">
+            <StyledLi href="https://www.youtube.com/c/CallistoNetwork" target="_blank">
                 <Youtube />
             </StyledLi>
         </Container>

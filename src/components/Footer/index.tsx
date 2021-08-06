@@ -51,7 +51,7 @@ const Input = styled.input`
   flex: 1 1 auto;
   width: 0;
   color: ${Theme.colors.white};
-  font-family: ${Theme.fonts.body};
+  font-family: ${Theme.fonts.text};
   background-color: ${Theme.colors.secondary};
   overflow: hidden;
   text-overflow: ellipsis;
@@ -104,7 +104,7 @@ const Image = styled.div<{ img: string }>`
 const Text = styled.p<{ color: string, fontWeight: string }>`
     font-weight: ${({fontWeight}) => fontWeight};
     color: ${({color}) => color};
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-size: 18px;
     line-height: 28px;
     opacity: .6;
@@ -122,7 +122,7 @@ const Text = styled.p<{ color: string, fontWeight: string }>`
 `
 const Text2 = styled.p`
     color: #FFF;
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-size: 16px;
     line-height: 25px;
     @media (max-width: 375px) {

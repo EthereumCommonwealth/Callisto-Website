@@ -108,7 +108,7 @@ const TroleBtext = styled.p`
     color: ${Theme.colors.secondary};
 `;
 const Text = styled.p`
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-size: 14px;
     line-height: 20px;
     color:${Theme.colors.secondary};
@@ -116,7 +116,7 @@ const Text = styled.p`
 `;
 const TextDots = styled.p`
     margin-top: -10px;
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-size: 30px;
     line-height: 20px;
     color:${Theme.colors.secondary};

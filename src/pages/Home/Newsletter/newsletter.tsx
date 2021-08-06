@@ -189,7 +189,7 @@ const SubTitle = styled.p`
     }
 `;
 const Text = styled.p`
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-size: 20px;
     line-height: 24px;
     color: ${Theme.colors.white};

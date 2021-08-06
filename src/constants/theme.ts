@@ -18,14 +18,8 @@ export const Theme = {
         transprimary: 'rgba(52,179,124, .2)',
     },
     fonts: {
-        giloryB: "GiloryBold",
-        gilory: "GiloryLight",
-
-        body: 'Sunflower',
-        heading: 'Sunflower',
-        title: 'Nunito Sans',
-        textBold:  'Nunito SansB',
-        poppin: "Poppins",
-        roboto: "Roboto",
+        textBold:  'Gilroy Bold',
+        medium: "Gilroy Medium",
+        text: 'Gilroy Regular',
     }
 }

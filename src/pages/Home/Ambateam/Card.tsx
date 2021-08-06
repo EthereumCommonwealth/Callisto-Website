@@ -53,7 +53,7 @@ const TsubBtext = styled.p`
     }
 `;
 const TroleBtext = styled.p`
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-size: 16px;
     line-height: 24px;
     color: ${Theme.colors.secondary};
@@ -72,7 +72,7 @@ const LinkStyledButton = styled.li`
   border-radius: 15px;
 `
 const Text = styled.p`
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-size: 16px;
     line-height: 20px;
     color: ${Theme.colors.secondary};

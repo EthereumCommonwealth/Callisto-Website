@@ -60,7 +60,7 @@ const Rect1 = styled.div`
     }
 `;
 const Prag = styled.p`
-    font-family: ${Theme.fonts.body};
+    font-family: ${Theme.fonts.text};
     font-weight: bold;
     font-size: 25px;
     line-height: 35px;
@@ -68,7 +68,7 @@ const Prag = styled.p`
 `;
 
 const Prag2 = styled.p`
-    font-family: ${Theme.fonts.body};
+    font-family: ${Theme.fonts.text};
     font-weight: bold;
     font-size: 25px;
     padding-top: 5px;

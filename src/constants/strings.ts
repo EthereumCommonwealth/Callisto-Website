@@ -41,7 +41,7 @@ export const social = [
         link: "https://www.reddit.com/r/CallistoCrypto/",
     },{
         name: "youtube",
-        link: "https://www.youtube.com/channel/UC1WMae32v_eJ8qOtLQqM26Q",
+        link: "https://www.youtube.com/c/CallistoNetwork",
     },{
         name: "instagram",
         link: "https://www.instagram.com/callisto.network",
@@ -53,7 +53,7 @@ export const social = [
         link: "https://www.linkedin.com/company/callisto-network/",
     },{
         name: "bitcoin",
-        link: "https://discord.gg/pM4qWjcwjm",
+        link: "https://bitcointalk.org/index.php?topic=3380156.0",
     }
 ];
 
@@ -78,8 +78,8 @@ export const callisto = [
         name: "Partners",
         link: "https://callisto.network/partners/",
     },{
-        name: "Our GitHub repositories",
-        link: "https://github.com/EthereumCommonwealth",
+        name: "GitHub",
+        link: "https://github.com/EthereumCommonwealth/Callisto-Website",
     },{
         name: "Media Kit",
         link: "https://github.com/EthereumCommonwealth/Callisto-Media-Kit",
@@ -281,7 +281,7 @@ export const devteams = [
 export const features = [
     {
         img: Assets.f1logo,
-        desc: "Callisto Netowork is a proof-of-work blockchain platform with a strong emphasis on security. Building on its native cryptocurrency (CLO). Callisto Network is a smart contract layer 1 solution that offers a unique set of features."
+        desc: "Callisto Network is a proof-of-work blockchain with a strong emphasis on security. Building on its native cryptocurrency (CLO), Callisto Network is a layer 1 smart contract solution offering a unique set of features."
     },
     {
         img: Assets.f2logo,
@@ -289,7 +289,7 @@ export const features = [
     },
     {
         img: Assets.f3logo,
-        desc: "The ability to earn a monthly passive income through a process called Cold Staking is one of Callisto Network's unique features. Cold stakers receive interest simply for holding their CLO coins."
+        desc: "One of Callisto Network's unique features is the ability to earn a monthly passive income simply by holding CLO coins."
     }
 ]
 
@@ -424,7 +424,7 @@ export const ecosdata = [
         img: Assets.ecomark4,
         link: "https://callisto.network/cold-staking/",
     },{
-        title: "BUST Stablecoin",
+        title: "BUSTD Stablecoin",
         desc: [
             "The Bulls USD ($BUSDT) token is backed by US Dollar at a 1:1 ratio. To ensure trust, this peg is maintained through a smart contract. Therefore 1 Bull USDT is always 1 USD, regardless of the cryptocurrency market’s volatility.",
             "The perfect complement to Soy.Finance, the BUSDT token can also be invested to receive a passive income."
@@ -629,7 +629,7 @@ export const discoverdata = [
         img: Assets.back5,
         title: "Discover Callisto Network",
         desc1: "Callisto Network started as a self-sustained and self-funded blockchain ecosystem not financed by pre-mined coins or an ICO.",
-        desc2: "Since its launch by the developers of Ethereum Commonwealth (Ethereum Classic). Callisto Network focused its attention on the weakness of the cryptocurrency space, namely the security.",
+        desc2: "Since its launch by the developers of Ethereum Commonwealth (Ethereum Classic), Callisto Network focused its attention on the weakness of the cryptocurrency space, namely the security.",
         link: "https://callisto.network/faq/"
     }
 ]

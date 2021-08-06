@@ -86,7 +86,7 @@ const FeartureItem = styled.div`
 const TextArea = styled.p`
     width: 70%;
     color: ${Theme.colors.white};
-    font-family: ${Theme.fonts.body};
+    font-family: ${Theme.fonts.text};
     font-size: 16px;
     line-height: 20px;
 `;

@@ -159,7 +159,7 @@ const SubTitle = styled.p`
     }
 `;
 const Text = styled.p`
-    font-family: ${Theme.fonts.title};
+    font-family: ${Theme.fonts.text};
     font-size: 22px;
     line-height: 26px;
     margin: 20px 0;
