@@ -40,7 +40,7 @@ const ImgCon = styled.img`
     width:80px;
     height:80px;
     border-radius: 40px;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 `;
 const TsubBtext = styled.p`
     font-family: ${Theme.fonts.textBold};

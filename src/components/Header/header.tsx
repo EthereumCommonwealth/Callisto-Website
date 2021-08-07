@@ -8,7 +8,7 @@ const Header = (props: { home: boolean}) => {
     const { home } = props;
     return (
       
-        <Navbar collapseOnSelect expand="md" className={home? "navbar": "header"} variant="light" sticky="top" >
+        <Navbar collapseOnSelect expand="md" className="navbar" variant="light" sticky="top" >
             <Navbar.Brand href="/">
                 <Logo>
                     <LogoImg src={"https://callisto.network/wp-content/uploads/2020/07/cropped-CLO_small_logo_Dark.png"} className="App-logo" alt="logo" />

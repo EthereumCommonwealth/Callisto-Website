@@ -55,10 +55,10 @@ const Services = () => {
                                 <div className="col-lg-6 col-md-6">
                                     <QuadDiv>
                                         <div></div>
-                                        <div>
+                                        <TitleSubCon>
                                             <SubTitle>{item.title1}</SubTitle>
                                             <SubTitle>{item.title2}</SubTitle>
-                                        </div>
+                                        </TitleSubCon>
                                         <LineDiv></LineDiv>
                                     </QuadDiv>
                                 </div>
@@ -112,13 +112,13 @@ const Services = () => {
                         </Row>
                     </div> */}
                     <div className="col-lg-4 col-md-6 col-sm-6">
-                        <Row pl="0px" pr="0px">
+                        <RowEnd pl="0px" pr="50px">
                             <Img src={Assets.monthT} />
                             <RightCon>
                                 <Label>Monthly Transactions</Label>
                                 <NumberLabel>{`${comma3digits(mestricsData.monthly_transactions)} txs`}</NumberLabel>
                             </RightCon>
-                        </Row>
+                        </RowEnd>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-6">
                         <RowCenter>
@@ -130,17 +130,17 @@ const Services = () => {
                         </RowCenter>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-6">
-                        <RowEnd pl="0px" pr="0px">
+                        <Row pl="30px" pr="0px">
                             <Img src={Assets.hashrate} />
                             <RightCon>
                                 <Label>Network Hashrate</Label>
                                 <NumberLabel>{`${mestricsData.netwok_hashrate}`}</NumberLabel>
                             </RightCon>
-                        </RowEnd>
+                        </Row>
                     </div>
                 </div>
             </MetricsCon>
-            
+            <Spacer height="50px" />
             <CardDiv className="security-container">
                 <Slick {...slickSettings}>{renderItems()}</Slick>
             </CardDiv>
@@ -157,7 +157,9 @@ const Container = styled.div`
         padding: 0px 5px;
     }
 `;
-
+const TitleSubCon = styled.div`
+    // margin-top: -100px;
+`
 const CardDiv = styled.div`
     // padding: 20px 0px;
     // @media (max-width: 768px) {
@@ -166,13 +168,13 @@ const CardDiv = styled.div`
 `;
 const TitleCon = styled.div`
     width: 100%;
-    padding: 0 8%;
+    padding: 0 10%;
     @media screen and (max-width: 768px) {
         padding: 0 20px;
     }
 `;
 const MetricsCon = styled.div`
-    padding: 50px 8%;
+    padding: 50px 10%;
     @media screen and (max-width: 768px) {
         padding: 30px 20px;
     }
@@ -208,8 +210,9 @@ const SpaceRow = styled.div`
 `
 const FixedImg = styled.img`
     position: absolute;
-    left: 8%;
-    width: calc(42% - 40px);
+    left: 10%;
+    width: calc(40% - 40px);
+    max-width: 592px;
     // height: 350px;
     z-index: 1;
     background-color: transparent !important;
@@ -270,7 +273,7 @@ const SubCon = styled.div`
     border-bottom: 8px;
     border-style: solid;
     border-color: #1E587D;
-    padding: 65px 8%;
+    padding: 65px 10%;
     @media screen and (max-width: 768px) {
         padding: 0 20px 30px 20px;
     }
@@ -312,8 +315,8 @@ const QuadDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
     // background-color: red;
+    margin-top: -20px;
 `;
 
 const SubTitle = styled.p`
@@ -347,6 +350,10 @@ const LineDiv = styled.div`
 const RowItem = styled.div`
     display: flex;
     align-items: center;
+    width: 90%;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 `;
 const NumberCon = styled.div`
     display: flex;
@@ -360,7 +367,7 @@ const NumberCon = styled.div`
     font-size: 18px;
     color: ${Theme.colors.secondary};
     z-index: 99;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 `;
 const TextCon = styled.div`
     width: 80%;

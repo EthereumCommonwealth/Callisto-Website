@@ -42,7 +42,7 @@ const Subtitle = styled.p`
     font-family: ${Theme.fonts.text};
     line-height: 40px;
     margin-top: -20px;
-    margin-left: 8%;
+    margin-left: 10%;
     letter-spacing: 0.6px;
     z-index: 1;
     @media (max-width: 768px) {
@@ -61,7 +61,7 @@ const Parag = styled.p`
     font-size: 20px;
     font-family: ${Theme.fonts.text};
     line-height: 25px;
-    margin-left: 8%;
+    margin-left: 10%;
     width: 30%;
     margin-top: 50px;
     z-index: 1;

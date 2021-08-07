@@ -15,7 +15,7 @@ const TitleSection = () => {
 const TitleArea = styled.div`
     width: 1044px;
     margin-top: 150px;
-    padding: 10px 0px 10px 8%;
+    padding: 10px 0px 10px 10%;
     z-index: 1;
     @media (max-width: 1044px) {
         width: 100%;

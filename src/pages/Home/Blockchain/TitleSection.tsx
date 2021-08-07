@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const TitleBar = styled.div`
     display: flex;
-    margin-left: 8%;
+    margin-left: 10%;
     align-items: flex-end;
     @media (max-width: 768px) {
         margin-left: 20px;

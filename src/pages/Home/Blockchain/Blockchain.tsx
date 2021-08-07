@@ -30,7 +30,7 @@ const Blockchain = () => {
                     }
                 </FeatureCont>
             </Row>
-            <Spacer height="30px"/>
+            <Spacer height="100px"/>
         </Container>
     )
 }
@@ -48,13 +48,13 @@ const Row = styled.div`
 `;
 const FeatureCont = styled.div`
     display: flex;
-    width: 60%;
+    width: 50%;
     flex-direction: column;
-    margin-right: 8%;
+    margin-right: 10%;
     padding: 100px 0 0 0;
     align-items: flex-end;
     @media screen and (max-width: 1100px) {
-        width: 50%;
+        width: 40%;
     }
     @media screen and (max-width: 768px) {
         width: 100%;

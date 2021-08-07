@@ -92,7 +92,7 @@ const Container = styled.div`
 `;
 const TitleCon = styled.div`
     width: 100%;
-    padding: 0 8%;
+    padding: 0 10%;
     @media screen and (max-width: 768px) {
         padding: 0 20px;
     }
@@ -101,7 +101,7 @@ const SubCon = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 8%;
+    padding: 50px 10% 0px;
     @media screen and (max-width: 768px) {
         padding: 20px;
         justify-content: flex-start;
@@ -109,7 +109,7 @@ const SubCon = styled.div`
 `;
 const LeftPane = styled.div`
     display: flex;
-    width: 50%;
+    width: 60%;
     flex-direction: column;
     justify-content: space-between;
     padding: 80px 0;
@@ -138,6 +138,7 @@ const Img2 = styled.img`
 
 const Img = styled.img`
     height: 314px;
+    // margin-right: 5%;
     @media screen and (max-width: 1200px) {
         height: 300px;
     }
@@ -180,7 +181,7 @@ const GetButton = styled.a`
     text-align: center;
     border: 2px solid ${Theme.colors.primary};
     border-radius: 30px;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     @media screen and (max-width: 596px) {
         width: 100%;
     }

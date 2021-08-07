@@ -19,7 +19,7 @@ const ButtonSection = () => {
 
 const ButtonArea = styled.div`
     display: flex;
-    margin-left: 8%;
+    margin-left: 10%;
     margin-top: 30px;
     z-index: 1;
     @media (max-width: 596px) {
@@ -42,7 +42,7 @@ const GetButton = styled.a`
     text-align: center;
     border: 2px solid ${Theme.colors.primary};
     border-radius: 30px;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     @media (max-width: 596px) {
         width: 100%;
     }
@@ -59,7 +59,7 @@ const StakeButton = styled.a`
     text-align: center;
     border: 1px solid ${Theme.colors.primary};
     border-radius: 30px;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     @media (max-width: 596px) {
         margin-top: 15px;
         width: 100%;

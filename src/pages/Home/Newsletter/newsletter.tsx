@@ -150,7 +150,7 @@ const LinkStyledButton = styled.li`
     margin-right: auto;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 `
 const TransDiv = styled.div`
     display: block;

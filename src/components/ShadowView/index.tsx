@@ -8,6 +8,6 @@ const ShadowView = styled.div<{bk: string, padding: string, shadow: string, marg
     margin-top: ${({margin})=>margin};
     width: 100%;
     border: none;
-    box-shadow: ${({shadow})=>shadow};
+    // box-shadow: ${({shadow})=>shadow};
 `
 export default ShadowView;

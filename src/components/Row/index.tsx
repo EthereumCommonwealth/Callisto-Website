@@ -10,6 +10,7 @@ const Row = styled.div<{pl: string, pr: string}>`
   align-items: center;
   @media screen and (max-width: 998px) {
     margin-top: 20px;
+    padding-left: 0;
   }
 `
 export const RowEnd = styled.div<{pl: string, pr: string}>`
@@ -24,6 +25,7 @@ export const RowEnd = styled.div<{pl: string, pr: string}>`
   @media screen and (max-width: 998px) {
     justify-content: flex-start;
     margin-top: 20px;
+    padding-right: 0;
   }
 `
 export const RowCenter = styled.div`

@@ -5,6 +5,6 @@ const StyledButton = styled.button<{bk: string, shadow: string}>`
     border: none;
     padding: 5px 50px;
     margin-right: 15px;
-    box-shadow: ${({shadow})=>shadow};
+    // box-shadow: ${({shadow})=>shadow};
 `;
 export default StyledButton;

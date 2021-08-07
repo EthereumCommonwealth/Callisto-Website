@@ -23,7 +23,7 @@ const RectSection = () => {
 }
 
 const RectArea = styled.div`
-    padding: 100px 0 0 8%;
+    padding: 100px 0 0 10%;
     width: 40%;
     @media (max-width: 1100px) {
         // width: 30%;
@@ -43,8 +43,8 @@ const RectTextArea = styled.div`
 const Rect1 = styled.div`
     position: relative;
     background-color: ${Theme.colors.primary};
-    width: 302px;
-    height: 295px;
+    width: 250px;
+    height: 235px;
     max-height: 295px;
     border-radius: 15px 15px 15px 0px;
     box-sizing: border-box;

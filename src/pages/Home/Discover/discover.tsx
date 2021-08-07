@@ -57,7 +57,7 @@ const Discover = () => {
             <CardDiv className="discover-container">
                 <Slick {...slickSettings}>{renderItems()}</Slick>
             </CardDiv>
-            <Spacer height="150px" />
+            <Spacer height="100px" />
         </Container>
     )
 }
@@ -80,9 +80,9 @@ const SubCon = styled.div`
     border-bottom: 8px;
     border-style: solid;
     border-color: #1E587D;
-    padding: 60px 8% 60px 4%;
+    padding: 60px 10% 60px 8%;
     @media screen and (max-width: 1050px) {
-        padding: 50px 8% 50px 4%;
+        padding: 50px 10% 50px 4%;
     }
     @media screen and (max-width: 768px) {
         padding: 0 20px;
@@ -161,7 +161,7 @@ const GetButton = styled.a`
     text-align: center;
     border-radius: 40px;
     margin-top: 20px;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     @media (max-width: 596px) {
         width: 100%;
     }
