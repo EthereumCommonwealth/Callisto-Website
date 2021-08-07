@@ -92,7 +92,7 @@ const Footer = styled.div`
 `;
 const TitleCon = styled.div`
     width: 100%;
-    padding: 0 8%;
+    padding: 0 10%;
     @media (max-width: 768px) {
         padding: 0 20px;
     }
@@ -100,8 +100,8 @@ const TitleCon = styled.div`
 
 const SliderCon = styled.div`
     // display: flex;
-    width: 84%;
-    margin-left: 8%;
+    width: 80%;
+    margin-left: 10%;
     align-items: center;
     justify-content: center;
     margin-top: 5px;

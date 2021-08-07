@@ -28,7 +28,7 @@ const icons = {
 
 const Container = styled.div`
     width: 100%;
-    padding: 50px 8%;
+    padding: 50px 10%;
     background-color: ${Theme.colors.footerbk};
     // align-items: center;
     z-index: 999;

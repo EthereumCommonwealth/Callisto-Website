@@ -107,14 +107,14 @@ const FixImg = styled.img`
 `;
 const TitleCon = styled.div`
     width: 100%;
-    padding: 0 8%;
+    padding: 0 10%;
     @media (max-width: 768px) {
         padding: 0 20px;
     }
 `;
 const ContentDiv = styled.div`
     margin-top: -50px;
-    margin-left: 6%;
+    margin-left: 10%;
     display: flex;
     border-radius: 40px 0 0 40px;
     height: 300px;
