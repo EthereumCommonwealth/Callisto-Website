@@ -25,7 +25,7 @@ const slickSettings: Settings = {
     speed: 500,
     dots: true,
     dotsClass: "slick-dots",
-    autoplay: false,
+    autoplay: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />
 };
