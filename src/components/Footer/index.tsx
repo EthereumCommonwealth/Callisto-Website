@@ -242,7 +242,7 @@ const Footer = () => {
                     <Spacer height ="20px" />
                     <SubTitle fontWeight="700" color={Theme.colors.white}>Resources</SubTitle>
                     {
-                        resources?.map((_item, _i)=>{
+                        resources?.map((_item)=>{
                             return (
                                 <div className="col-sm-12" key={_item.name}>
                                     <LinkStyledButton2 color="transparent" >
@@ -259,7 +259,7 @@ const Footer = () => {
                     <Spacer height ="20px" />
                     <SubTitle fontWeight="700" color={Theme.colors.white}>Callisto</SubTitle>
                     {
-                        callisto?.map((_item, _i)=>{
+                        callisto?.map((_item)=>{
                             return (
                                 <div className="col-sm-12" key={_item.name}>
                                     <LinkStyledButton2 color="transparent" >

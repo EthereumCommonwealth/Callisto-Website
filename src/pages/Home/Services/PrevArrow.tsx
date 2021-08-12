@@ -18,7 +18,7 @@ const Container = styled.div`
 `;
 
 const NextArrow = (props) => {
-    const { onClick, className, style } = props;
+    const { onClick } = props;
     return (
         <Container onClick={onClick} >
             <FaArrowLeft color="#FFF" size={15} />

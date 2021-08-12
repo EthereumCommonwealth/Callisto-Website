@@ -15,7 +15,7 @@ const Coreteam = () => {
             <Spacer height="20px"/>
             <div className="row padding">
                 {
-                    coreteams?.map((_item, _i) => (
+                    coreteams?.map((_item) => (
                         <CardDiv key={_item.name}>
                             <Card item={_item}/>
                         </CardDiv>

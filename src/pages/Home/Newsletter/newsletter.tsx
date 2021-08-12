@@ -27,7 +27,7 @@ const slickSettings: Settings = {
 
 const Newsletter = () => {
     const renderItems = () => {
-        return newsdata.map((item, i) => (
+        return newsdata.map((item) => (
             <div key={item.id}>
                 <ImgDiv>
                     <a href={item.link} target="_blank" rel="noreferrer">

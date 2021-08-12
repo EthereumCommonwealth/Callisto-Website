@@ -331,15 +331,6 @@ const SubTitle = styled.p`
         font-size: 40px;
     }
 `;
-const SubTitle2 = styled.div`
-    font-family: ${Theme.fonts.textBold};
-    font-size: 60px;
-    color: ${Theme.colors.white};
-    text-align: left;
-    @media screen and (max-width: 768px) {
-        font-size: 40px;
-    }
-`;
 
 const LineDiv = styled.div`
     height: 2px;
@@ -386,23 +377,6 @@ const Text = styled.p`
     line-height: 20px;
     color: ${Theme.colors.white};
     text-align: left;
-`;
-const Dots = styled.div`
-    position: absolute;
-    display: flex;
-    right: 100px;
-    top: 80px;
-    @media screen and (max-width: 700px) {
-        top: 100px;
-        right 20px;
-    }
-`;
-const Circle = styled.div`
-    width: 8px;
-    height: 8px;
-    margin: 5px;
-    border: 2px solid #FFF;
-    border-radius: 4px;
 `;
 const DisableDiv = styled.div`
     @media screen and (max-width: 768px) {

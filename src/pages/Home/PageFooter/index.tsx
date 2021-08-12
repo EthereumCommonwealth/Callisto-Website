@@ -4,7 +4,6 @@ import Spacer from 'components/Spacer';
 import { partners } from 'constants/strings';
 import Slick, { Settings } from "react-slick";
 import "./style.scss";
-import { Theme } from 'constants/theme';
 import Title from 'components/Title';
 
 const slickSettings: Settings = {
@@ -52,7 +51,7 @@ const slickSettings: Settings = {
 
 const PageFooter = () => {
     const renderItems = () => {
-        return partners.map((item, i) => (
+        return partners.map((item) => (
             <div key={item}>
                 <img src={item} alt="img"/>
             </div>
@@ -114,18 +113,6 @@ const SliderCon = styled.div`
     }
 `;
 
-const GradBar2 = styled.div`
-    display: none;
-    @media (max-width: 420px) {
-        display: flex;
-        height: 6px;
-        width: calc(100% - 20px);
-        margin: 5px 0px;
-        margin-left: 10px;
-        background: linear-gradient(90deg, #4DCC95 0.64%, rgba(255, 255, 255, 0) 102.02%);
-        border-radius: 3px;
-    }
-`;
 const WhiteBack = styled.div`
     background-color: white;
     width: 100%;
@@ -134,41 +121,4 @@ const WhiteBack = styled.div`
     align-items: center;
 `;
 
-const Li = styled.li<{color: string}>`
-    flex: 0 0 auto;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    -webkit-tap-highlight-color: transparent;
-    align-items: center;
-    color: #999;
-    height: 100%;
-    justify-content: center;
-    text-decoration: none;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    -webkit-tap-highlight-color: transparent;
-    align-items: center;
-    text-align: center;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    white-space: nowrap;
-    padding: 0px 8% 0px 0px;
-    a {
-        color: ${({color}) => color};
-        font-weight: 900;
-        width: auto;
-        font-family: ${Theme.fonts.text};
-        text-decoration: none;
-        font-size: 40px;
-    }
-    @media(max-width: 768px) {
-        padding: 0px 20px 0px 10px;
-        justify-content: flex-start;
-        a {
-            font-size: 20px;
-        }
-    }
-`;
 export default PageFooter;

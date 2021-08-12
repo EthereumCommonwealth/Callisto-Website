@@ -15,7 +15,7 @@ const Ambateam = () => {
             <Spacer height="20px"/>
             <div className="row padding">
                 {
-                    devteams?.map((_item, _i) => (
+                    devteams?.map((_item) => (
                         <CardDiv key={_item.name}>
                             <Card item={_item}/>
                         </CardDiv>

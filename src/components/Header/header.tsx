@@ -94,19 +94,6 @@ const Li = styled.div`
     }
 `;
 
-const Li2 = styled.div`
-    display: none;
-    @media (max-width: 1020px) {
-        display: flex;
-        align-items: center;
-        color: #ffffff;
-        font-size: 18px;
-    }
-    @media (max-width: 766px) {
-        display: none;
-    }
-`;
-
 const Whitepaper = styled.div`
     flex: 0 0 auto;
     -webkit-box-align: center;
