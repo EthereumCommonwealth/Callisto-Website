@@ -1,7 +1,9 @@
+import React from 'react'
 import { Theme } from 'constants/theme';
 import styled from 'styled-components';
 import { FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
+
 const Card = ({item}) => {
     
     return (

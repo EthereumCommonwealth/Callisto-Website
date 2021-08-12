@@ -1,14 +1,13 @@
 import Spacer from 'components/Spacer';
-import { Assets } from 'constants/images';
 import { Theme } from 'constants/theme';
 import React, { useState } from 'react'
 import styled from 'styled-components';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 import AssetsSelector from './components/AssetsSelector';
 import FromCard from "./components/FromCard";
 import ToCard from "./components/ToCard";
 import AddNetworkSection from './components/AddNetworkSection';
 import ErrorSection from './components/ErrorSection';
-import { FaLongArrowAltRight } from 'react-icons/fa';
 import AmtInput from './components/AmtInput';
 import Reminder from './components/Reminder';
 
@@ -56,12 +55,13 @@ const CurrentStatus = {
     toNetwork: "Binance Smart Chain"
 }
 const RightPane: React.FC = () => {
+    // const { login, logout } = useAuth()
 
     const [chainError, setChainError] = useState(true);
     const [disabled, setDisabled] = useState(true);
 
     function handleNext(e) {
-
+        console.log(e.target.value)
     }
 
     return (

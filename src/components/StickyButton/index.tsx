@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import Redit from '../Icons/Redit';
 import Twitter from '../Icons/Twitter';
@@ -20,7 +21,7 @@ const Container = styled.div`
 const StyledLi = styled.a`
     margin-bottom: 20px;
 `;
-const StickyButton = ({}) => {
+const StickyButton: React.FC = () => {
 
     return (
         <Container>

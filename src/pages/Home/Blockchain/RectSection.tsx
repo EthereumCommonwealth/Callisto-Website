@@ -1,3 +1,4 @@
+import React from 'react'
 import { Assets } from 'constants/images';
 import { Theme } from 'constants/theme';
 import styled from 'styled-components';
@@ -15,7 +16,7 @@ const RectSection = () => {
                     <EcoCon>
                         <Prag2>ECOSYSTEM</Prag2>
                     </EcoCon>
-                    <Img src={Assets.back3}></Img>
+                    <Img src={Assets.back3}/>
                 </Rect1>
             </RectTextArea>
         </RectArea>

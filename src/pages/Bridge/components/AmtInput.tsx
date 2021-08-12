@@ -1,11 +1,6 @@
-import Spacer from 'components/Spacer';
-import { Assets } from 'constants/images';
-import { tokenList } from 'constants/strings';
+import React from 'react'
 import { Theme } from 'constants/theme';
-import React, { useState } from 'react'
 import styled from 'styled-components';
-import Modal from 'styled-react-modal'
-import { FaSearchDollar, FaWindowClose } from 'react-icons/fa';
 
 const Container = styled.div`
     width: calc(100%);
@@ -29,10 +24,10 @@ const StyledInput = styled.input`
     border-radius: 10px;
 `;
 
-const AmtInput = () => {
+const AmtInput: React.FC = () => {
 
     function handleChange(e) {
-        
+        console.log("=========")
     }
 
     return (

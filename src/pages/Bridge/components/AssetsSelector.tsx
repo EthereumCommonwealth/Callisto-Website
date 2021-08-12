@@ -1,11 +1,10 @@
-import Spacer from 'components/Spacer';
-import { Assets } from 'constants/images';
 import { tokenList } from 'constants/strings';
 import { Theme } from 'constants/theme';
 import React, { useState } from 'react'
 import styled from 'styled-components';
 import Modal from 'styled-react-modal'
 import { FaSearchDollar, FaWindowClose } from 'react-icons/fa';
+
 const Container = styled.div`
     width: calc(100%);
 `;

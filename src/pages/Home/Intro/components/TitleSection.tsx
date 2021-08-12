@@ -1,5 +1,6 @@
 import { Theme } from 'constants/theme';
 import styled from 'styled-components';
+import React from 'react'
 
 const TitleSection = () => {
     return (

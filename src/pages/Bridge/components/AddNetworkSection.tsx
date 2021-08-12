@@ -1,17 +1,12 @@
+import React from 'react'
 import Spacer from 'components/Spacer';
-import { Assets } from 'constants/images';
-import { tokenList } from 'constants/strings';
 import { Theme } from 'constants/theme';
-import React, { useState } from 'react'
 import styled from 'styled-components';
-import Modal from 'styled-react-modal'
-import { FaSearchDollar, FaWindowClose } from 'react-icons/fa';
 
 const Container = styled.div`
     width: 100%;
     white-space: pre-line;
 `;
-
 
 const StyledText = styled.p<{color: string}>`
     font-size: 14px;
@@ -46,12 +41,12 @@ const Con = styled.div`
 const AddNetworkSection: React.FC = () => {
 
     function handleAddNetoworkToMetamask(e) {
-        
+        console.log("===== add network to metamask ::")
     }
 
     return (
         <Container>
-            <StyledText color="#f70556">{`If you have not add Callisto network in your MetaMask yet, please add network`}</StyledText>
+            <StyledText color="#f70556">If you have not add Callisto network in your MetaMask yet, please add network</StyledText>
             <Spacer height="10px" />
             <Con onClick={handleAddNetoworkToMetamask}>
                 <StyledTextBold color={Theme.colors.secondary}>Add network</StyledTextBold>

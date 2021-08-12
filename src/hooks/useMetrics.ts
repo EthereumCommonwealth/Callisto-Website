@@ -18,6 +18,7 @@ const useMetrics = () => {
                 setMetrics(res.data.result);
             })
             .catch((err) => {
+                console.error(err);
             })
 
            setInterval(() => {
@@ -25,6 +26,7 @@ const useMetrics = () => {
                     setMetrics(res.data.result);
                 })
                 .catch((err) => {
+                    console.error(err);
                 })
             }, 100000)
             

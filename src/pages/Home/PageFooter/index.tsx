@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import Spacer from 'components/Spacer';
 import { partners } from 'constants/strings';
@@ -5,6 +6,7 @@ import Slick, { Settings } from "react-slick";
 import "./style.scss";
 import { Theme } from 'constants/theme';
 import Title from 'components/Title';
+
 const slickSettings: Settings = {
     accessibility: false,
     draggable: true,
@@ -48,19 +50,19 @@ const slickSettings: Settings = {
 };
 
 
-const PageFooter = ({}) => {
+const PageFooter = () => {
     const renderItems = () => {
         return partners.map((item, i) => (
-            <div key={i}>
-                <img src={`${item}`} alt="" />
+            <div key={item}>
+                <img src={item} alt="img"/>
             </div>
         ));
     };
     return (
         <>
-            <Spacer height={"50px"} />
+            <Spacer height="50px"/>
             <TitleCon>
-                <Title text="Meet Our Partners"></Title>
+                <Title text="Meet Our Partners"/>
             </TitleCon>
             
             <Footer>

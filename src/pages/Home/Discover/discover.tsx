@@ -1,11 +1,12 @@
+import React from 'react'
+import styled from 'styled-components';
+import Slick, { Settings } from "react-slick";
 import Spacer from 'components/Spacer';
 import { Theme } from 'constants/theme';
-import styled from 'styled-components';
 import StyledText from 'components/StyledText';
-import Slick, { Settings } from "react-slick";
+import { discoverdata } from 'constants/strings';
 import NextArrow from './NextArrow';
 import PrevArrow from './PrevArrow';
-import { discoverdata } from 'constants/strings';
 
 import "./style.scss";
 
@@ -44,7 +45,7 @@ const Discover = () => {
                             </Text>
                         </div>
                         <GetButton href={item.link} target="_blank">
-                            <StyledText color={Theme.colors.secondary} fontweight={"700"} fontsize={"22px"}>{`Get Started`}</StyledText>
+                            <StyledText color={Theme.colors.secondary} fontweight="700" fontsize="22px">Get Started</StyledText>
                         </GetButton>
                     </RightPane>
                 </SubCon>

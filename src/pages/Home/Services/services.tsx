@@ -2,6 +2,7 @@ import Row, { RowCenter, RowEnd } from 'components/Row';
 import Spacer from 'components/Spacer';
 import Title from 'components/Title';
 import { Assets } from 'constants/images';
+import React from 'react'
 import { Theme } from 'constants/theme';
 import useMetrics from 'hooks/useMetrics';
 import styled from 'styled-components';
@@ -40,7 +41,7 @@ const Services = () => {
         return securitydata.map((item) =>{
             return (
                 <BottomCon key={item.id}>
-                    <a href={item.link} target="_blank">
+                    <a href={item.link} target="_blank" rel="noreferrer">
                         <FixedImg src={item.img} alt="image"/>
                     </a>
                     <SubCon>
@@ -49,17 +50,17 @@ const Services = () => {
                         <SpaceRow2>
                             <div className="row">
                                 <div className="col-lg-6 col-md-6">
-                                    <DisableDiv></DisableDiv>
+                                    <DisableDiv/>
                                 </div>
                                 
                                 <div className="col-lg-6 col-md-6">
                                     <QuadDiv>
-                                        <div></div>
+                                        <div/>
                                         <TitleSubCon>
                                             <SubTitle>{item.title1}</SubTitle>
                                             <SubTitle>{item.title2}</SubTitle>
                                         </TitleSubCon>
-                                        <LineDiv></LineDiv>
+                                        <LineDiv/>
                                     </QuadDiv>
                                 </div>
                             </div>
@@ -71,7 +72,7 @@ const Services = () => {
                                     item.desc.map((descItem, index) => (
                                         <div className="col-lg-6 col-sm-12" key={descItem.id}>
                                             <QuadDiv>
-                                                <div></div>
+                                                <div/>
                                                 <RowItem>
                                                     <NumberCon>{`0${index+1}`}</NumberCon>
                                                     <TextCon>
@@ -82,7 +83,7 @@ const Services = () => {
                                                         </Text>
                                                     </TextCon>
                                                 </RowItem>
-                                                <div></div>
+                                                <div/>
                                             </QuadDiv>
                                         </div>
                                     ))
@@ -98,7 +99,7 @@ const Services = () => {
     return (
         <Container>
             <TitleCon>
-                <Title text="Callisto Network Metrics"></Title>
+                <Title text="Callisto Network Metrics"/>
             </TitleCon>
             <MetricsCon>
                 <div className="row">
@@ -125,7 +126,7 @@ const Services = () => {
                             <Img src={Assets.frozen} />
                             <RightCon>
                                 <Label>Frozen Coins</Label>
-                                <NumberLabel>{`${cvfrozen1 + '.' + cvfrozen2} CLO`}</NumberLabel>
+                                <NumberLabel>{cvfrozen1}.{cvfrozen2} CLO</NumberLabel>
                             </RightCon>
                         </RowCenter>
                     </div>

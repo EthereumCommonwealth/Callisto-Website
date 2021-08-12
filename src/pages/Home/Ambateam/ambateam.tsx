@@ -1,16 +1,18 @@
+import React from 'react'
+import styled from 'styled-components';
 import Spacer from 'components/Spacer';
 import { devteams } from 'constants/strings';
-import styled from 'styled-components';
-import Card from './Card';
 import Title from 'components/Title';
+import Card from './Card';
+
 const Ambateam = () => {
     
     return (
         <Container>
             <TitleCon>
-                <Title text="Ambassador Team & Admins"></Title>
+                <Title text="Ambassador Team & Admins"/>
             </TitleCon>
-            <Spacer height={"20px"} />
+            <Spacer height="20px"/>
             <div className="row padding">
                 {
                     devteams?.map((_item, _i) => (

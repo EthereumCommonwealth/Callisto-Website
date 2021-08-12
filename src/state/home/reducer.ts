@@ -1,12 +1,10 @@
-import { createReducer } from '@reduxjs/toolkit';
 import { actionTypes } from './action';
 
-
 export interface IPriceData {
-    usd: number | 0,
-    usd_market_cap: number | 0,
-    usd_24h_vol: number | 0,
-    usd_24h_change: number | 0
+    USD: number | 0,
+    USD_MARKET_CAP: number | 0,
+    USD_24H_VOL: number | 0,
+    USD_24H_CHANGE: number | 0
 }
 
 export interface HomeState {
@@ -17,10 +15,10 @@ export interface HomeState {
 export const initialState: HomeState = {
     networkStatus: false,
     coinPrice: {
-        usd: 0,
-        usd_market_cap: 0,
-        usd_24h_vol: 0,
-        usd_24h_change: 0
+        USD: 0,
+        USD_MARKET_CAP: 0,
+        USD_24H_VOL: 0,
+        USD_24H_CHANGE: 0
     }
 }
 

@@ -1,3 +1,4 @@
+import React from 'react'
 import { Theme } from 'constants/theme';
 import styled from 'styled-components';
 
@@ -87,7 +88,7 @@ const TitleSection = () => {
             </div>
             <TsubArea>
                 <Tsubtext>Decentralized Blockchain Ecosystem</Tsubtext>
-                <GradBar></GradBar>
+                <GradBar/>
             </TsubArea>
         </TitleBar>
     )

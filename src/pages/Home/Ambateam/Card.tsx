@@ -1,15 +1,14 @@
+import React from 'react'
 import { FaTelegramPlane } from 'react-icons/fa';
-import Row, { RowCenter } from 'components/Row';
-import Spacer from 'components/Spacer';
-import { Assets } from 'constants/images';
+import { RowCenter } from 'components/Row';
 import { Theme } from 'constants/theme';
 import styled from 'styled-components';
+
 const Card = ({item}) => {
     
     return (
         <Container>
-            <ImgCon src = {item.avatar}>
-            </ImgCon>
+            <ImgCon src = {item.avatar} alt="image"/>
             <TsubBtext>
                 {item.name}
             </TsubBtext>

@@ -1,5 +1,6 @@
+import React from 'react'
 import StyledText from 'components/StyledText';
-import { getclo_url, stake_url } from 'constants/config';
+import { GETCLO_URL, STAKE_URL } from 'constants/config';
 import { Theme } from 'constants/theme';
 import styled from 'styled-components';
 
@@ -7,14 +8,14 @@ const ButtonSection = () => {
 
     return (
         <ButtonArea>
-            <GetButton href={getclo_url} target="_blank">
-                <StyledText color={Theme.colors.white} fontweight={"700"} fontsize={"18px"}>{`GET CLO`}</StyledText>
+            <GetButton href={GETCLO_URL} target="_blank">
+                <StyledText color={Theme.colors.white} fontweight="700" fontsize="18px">GET CLO</StyledText>
             </GetButton>
-            <StakeButton href={stake_url} target="_blank">
-                <StyledText color={Theme.colors.secondary} fontweight={"700"} fontsize={"18px"}>{`STAKE`}</StyledText>
+            <StakeButton href={STAKE_URL} target="_blank">
+                <StyledText color={Theme.colors.secondary} fontweight="700" fontsize="18px">STAKE</StyledText>
             </StakeButton>
-            <GetButton href={"/bridge"}>
-                <StyledText color={Theme.colors.white} fontweight={"700"} fontsize={"18px"}>{`BRIDGE`}</StyledText>
+            <GetButton href="/clo-bnb-bridge">
+                <StyledText color={Theme.colors.white} fontweight="700" fontsize="18px">BRIDGE</StyledText>
             </GetButton>
         </ButtonArea>
     )

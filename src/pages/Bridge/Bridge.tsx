@@ -16,7 +16,7 @@ const Bridge: React.FC = () => {
 
     return (
         <>
-            <Header home={false}/>
+            <Header/>
             <Container>
                 <Content >
                     <LeftPane />

@@ -1,10 +1,8 @@
 import Spacer from 'components/Spacer';
-import { Assets } from 'constants/images';
-import { Networks, tokenList } from 'constants/strings';
+import { Networks } from 'constants/strings';
 import { Theme } from 'constants/theme';
 import React, { useState } from 'react'
 import styled from 'styled-components';
-import Modal from 'styled-react-modal'
 import { FaAngleDown, FaCheck } from 'react-icons/fa';
 
 export const Container = styled.div`
@@ -130,7 +128,7 @@ const FromCard: React.FC = () => {
                 <Row>
                     <Img src={Networks[curIndex].img} alt="image" />
                     <ConnectionDiv>
-                        <NetImg src={"https://dex-bin.bnbstatic.com/static/images/metamask.svg"} alt="net_image" />
+                        <NetImg src="https://dex-bin.bnbstatic.com/static/images/metamask.svg" alt="net_image" />
                         <Spacer height="5px" />
                         <TextCon>
                             <SmallText >Connected</SmallText>

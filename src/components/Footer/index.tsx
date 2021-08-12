@@ -174,7 +174,7 @@ const Line = styled.div`
     background-color: ${Theme.colors.white};
     margin: 20px 0;
 `;
-const Footer = ({}) => {
+const Footer = () => {
     const [value, setValue] = React.useState("");
 
     const handleInput = (e) => {
@@ -184,8 +184,8 @@ const Footer = ({}) => {
         <Container>
             <div className="row" style={{alignItems: "flex-start"}}>
                 <div className="col-lg-3 col-md-6 col-sm-12">
-                    <Spacer height ={"20px"} />
-                    <SubTitle fontWeight={"700"} color={Theme.colors.white}>Subscribe to our newsletter</SubTitle>
+                    <Spacer height ="20px" />
+                    <SubTitle fontWeight="700" color={Theme.colors.white}>Subscribe to our newsletter</SubTitle>
                     <div className="row">
                         <InputContainer>
                             <Input
@@ -195,27 +195,27 @@ const Footer = ({}) => {
                                 autoCorrect="off"
                                 autoCapitalize="off"
                                 spellCheck="false"
-                                placeholder={'Your email'}
+                                placeholder="Your email"
                                 pattern="^(0x[a-fA-F0-9]{40})$"
                                 onChange={handleInput}
                                 value={value}
                             />
                         </InputContainer>
                         <LinkStyledButton color={Theme.colors.primary}>
-                            <Image img={Assets.arrow}></Image>
+                            <Image img={Assets.arrow} />
                         </LinkStyledButton>
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12">
-                    <Spacer height ={"20px"} />
-                    <SubTitle fontWeight={"700"} color={Theme.colors.white}>Join our community</SubTitle>
+                    <Spacer height ="20px" />
+                    <SubTitle fontWeight="700" color={Theme.colors.white}>Join our community</SubTitle>
                     <MobDiv className="row">
                         {
                             social?.map((_item, _i)=>{
-                                if( _i > 3 ) return;
+                                if( _i > 3 ) return null;
                                 return (
                                     <MobHidden key={_item.name+ _i.toString()}>
-                                        <a href={_item?.link} target="_blank">
+                                        <a href={_item.link} target="_blank" rel="noreferrer">
                                             {icons[_item.name]}
                                         </a>
                                     </MobHidden>
@@ -226,10 +226,10 @@ const Footer = ({}) => {
                     <MobDiv className="row">
                         {
                             social?.map((_item, _i)=>{
-                                if( _i < 4 ) return;
+                                if( _i < 4 ) return null;
                                 return (
                                     <MobHidden key={_item.name+ _i.toString()}>
-                                        <a href={_item?.link} target="_blank">
+                                        <a href={_item?.link} target="_blank"  rel="noreferrer">
                                             {icons[_item.name]}
                                         </a>
                                     </MobHidden>
@@ -239,15 +239,15 @@ const Footer = ({}) => {
                     </MobDiv>
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12">
-                    <Spacer height ={"20px"} />
-                    <SubTitle fontWeight={"700"} color={Theme.colors.white}>Resources</SubTitle>
+                    <Spacer height ="20px" />
+                    <SubTitle fontWeight="700" color={Theme.colors.white}>Resources</SubTitle>
                     {
                         resources?.map((_item, _i)=>{
                             return (
                                 <div className="col-sm-12" key={_item.name}>
-                                    <LinkStyledButton2 color={"transparent"} >
+                                    <LinkStyledButton2 color="transparent" >
                                         <a href={_item?.link}>
-                                            <Text color={"#FEFFF8"} fontWeight={"300"}>{_item.name}</Text>
+                                            <Text color="#FEFFF8" fontWeight="300">{_item.name}</Text>
                                         </a>
                                     </LinkStyledButton2>
                                 </div>
@@ -256,15 +256,15 @@ const Footer = ({}) => {
                     }
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12">
-                    <Spacer height ={"20px"} />
-                    <SubTitle fontWeight={"700"} color={Theme.colors.white}>Callisto</SubTitle>
+                    <Spacer height ="20px" />
+                    <SubTitle fontWeight="700" color={Theme.colors.white}>Callisto</SubTitle>
                     {
                         callisto?.map((_item, _i)=>{
                             return (
                                 <div className="col-sm-12" key={_item.name}>
-                                    <LinkStyledButton2 color={"transparent"} >
+                                    <LinkStyledButton2 color="transparent" >
                                         <a href={_item?.link}>
-                                            <Text color={"#FEFFF8"} fontWeight={"300"}>{_item.name}</Text>
+                                            <Text color="#FEFFF8" fontWeight="300">{_item.name}</Text>
                                         </a>
                                     </LinkStyledButton2>
                                 </div>

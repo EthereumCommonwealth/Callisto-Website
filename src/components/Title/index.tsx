@@ -1,3 +1,4 @@
+import React from 'react'
 import { Theme } from 'constants/theme';
 import styled from 'styled-components'
 
@@ -25,6 +26,7 @@ const GradBar = styled.div`
     @media (max-width: 768px) {
     }
 `;
+
 const Title = ({text}) => {
     return (
         <Container>

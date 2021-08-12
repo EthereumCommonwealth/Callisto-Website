@@ -1,11 +1,11 @@
 import React, { lazy } from 'react'
 import { Router, Route, Switch } from 'react-router-dom'
 import { ResetCSS } from '@soy-libs/uikit'
+import Footer from 'components/Footer';
 import SuspenseWithChunkError from './components/SuspenseWithChunkError';
 import PageLoader from './components/PageLoader'
 import GlobalStyle from './style/Global'
 import history from './routerHistory'
-import Footer from 'components/Footer';
 
 const Home = lazy(() => import('./pages/Home'));
 const Bridge = lazy(() => import('./pages/Bridge'));
@@ -21,7 +21,7 @@ const App: React.FC = () => {
                     <Route path="/" exact>
                         <Home />
                     </Route>
-                    <Route path="/bridge">
+                    <Route path="/clo-bnb-bridge">
                         <Bridge />
                     </Route>
                 </Switch>

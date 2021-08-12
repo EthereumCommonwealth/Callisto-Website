@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components';
 import { FaArrowLeft } from 'react-icons/fa';
 
@@ -15,6 +16,7 @@ const Container = styled.div`
     z-index: 2;
     
 `;
+
 const NextArrow = (props) => {
     const { onClick, className, style } = props;
     return (

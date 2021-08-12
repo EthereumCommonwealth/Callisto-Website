@@ -1,3 +1,4 @@
+import React from 'react'
 import { Theme } from 'constants/theme';
 import styled from 'styled-components';
 import { FaBell } from 'react-icons/fa';

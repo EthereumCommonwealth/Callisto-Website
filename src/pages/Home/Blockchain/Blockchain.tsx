@@ -1,10 +1,10 @@
-import { Assets } from 'constants/images';
+import React from 'react'
 import styled from 'styled-components';
-import TitleSection from './TitleSection';
-import RectSection from './RectSection';
 import { features } from 'constants/strings';
 import { Theme } from 'constants/theme';
 import Spacer from 'components/Spacer';
+import TitleSection from './TitleSection';
+import RectSection from './RectSection';
 
 const Blockchain = () => {
 

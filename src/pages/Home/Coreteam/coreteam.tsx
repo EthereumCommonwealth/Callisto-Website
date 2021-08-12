@@ -1,17 +1,18 @@
+import React from 'react'
+import styled from 'styled-components';
 import Spacer from 'components/Spacer';
 import { coreteams } from 'constants/strings';
-import styled from 'styled-components';
-import Card from './Card';
 import Title from 'components/Title';
+import Card from './Card';
 
 const Coreteam = () => {
     
     return (
         <Container>
             <TitleCon>
-                <Title text="Core Team"></Title>
+                <Title text="Core Team"/>
             </TitleCon>
-            <Spacer height={"20px"} />
+            <Spacer height="20px"/>
             <div className="row padding">
                 {
                     coreteams?.map((_item, _i) => (

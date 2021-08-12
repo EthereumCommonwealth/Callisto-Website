@@ -1,3 +1,4 @@
+import React from 'react'
 import { Assets } from 'constants/images';
 import { Theme } from 'constants/theme';
 import styled from 'styled-components';
@@ -8,9 +9,9 @@ const Intro = () => {
     return (
         <Container>
             <TitleSection />
-            <Subtitle>{`Blockchain as seen by Security Experts`}</Subtitle>
+            <Subtitle>Blockchain as seen by Security Experts</Subtitle>
             <Parag>
-                {`A smart-contract ecosystem with a real emphasis on security. Build, stake and trade on a never compromised blockchain.`}
+                A smart-contract ecosystem with a real emphasis on security. Build, stake and trade on a never compromised blockchain.
             </Parag>
             <ButtonSection />
             <SideImage src={Assets.backside}/>

@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components';
 import { FaArrowRight } from 'react-icons/fa';
 
@@ -27,6 +28,7 @@ const Container = styled.div`
         left: 10%;
     }
 `;
+
 const NextArrow = (props) => {
     const { onClick } = props;
     return (

@@ -1,14 +1,14 @@
+import React from 'react'
+import Slick, { Settings } from "react-slick";
 import { FaTwitter } from 'react-icons/fa';
 import Spacer from 'components/Spacer';
 import StyledText from 'components/StyledText';
 import styled from 'styled-components';
+import Title from 'components/Title';
+import { newsdata } from 'constants/strings';
+import { Theme } from 'constants/theme';
 import NextArrow from './NextArrow';
 import PrevArrow from './PrevArrow';
-
-import { newsdata } from '../../../constants/strings';
-import Title from 'components/Title';
-import Slick, { Settings } from "react-slick";
-import { Theme } from 'constants/theme';
 import "./style.scss";
 
 const slickSettings: Settings = {
@@ -30,7 +30,7 @@ const Newsletter = () => {
         return newsdata.map((item, i) => (
             <div key={item.id}>
                 <ImgDiv>
-                    <a href={item.link} target="_blank">
+                    <a href={item.link} target="_blank" rel="noreferrer">
                         <FixImg src={item.img} alt="image" />
                     </a>
                 </ImgDiv>
@@ -59,9 +59,9 @@ const Newsletter = () => {
     return (
         <Container>
             <TitleCon>
-                <Title text="Latest News"></Title>
+                <Title text="Latest News"/>
             </TitleCon>
-            <Spacer height={"20px"} />
+            <Spacer height="20px" />
             <CardDiv>
                 <Slick {...slickSettings}>{renderItems()}</Slick>
             </CardDiv>

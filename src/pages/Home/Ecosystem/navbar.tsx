@@ -1,3 +1,4 @@
+import React, {useState} from 'react'
 import EcoIcon1 from 'components/Icons/EcoIcon1';
 import EcoIcon2 from 'components/Icons/EcoIcon2';
 import EcoIcon3 from 'components/Icons/EcoIcon3';
@@ -9,10 +10,8 @@ import EcoIcon8 from 'components/Icons/EcoIcon8';
 import StyledText from 'components/StyledText';
 import Spacer from 'components/Spacer';
 import Title from 'components/Title';
-import { Assets } from 'constants/images';
 import { Theme } from 'constants/theme';
 import styled from 'styled-components';
-import { useState } from 'react';
 import { ecosdata } from 'constants/strings';
 
 const Ecosystem = () => {
@@ -27,7 +26,7 @@ const Ecosystem = () => {
     return (
         <Container>
             <TitleCon>
-                <Title text="Callisto Ecosystem"></Title>
+                <Title text="Callisto Ecosystem"/>
             </TitleCon>
             <SubCon>
                 <LeftPane>
@@ -43,7 +42,7 @@ const Ecosystem = () => {
                         })}
                     </div>
                     <GetButton href={item.link} target="_blank">
-                        <StyledText color={Theme.colors.white} fontweight={"700"} fontsize={"18px"}>{`Learn more`}</StyledText>
+                        <StyledText color={Theme.colors.white} fontweight="700" fontsize="18px">Learn more</StyledText>
                     </GetButton>
                 </LeftPane>
                 <Img src={item.img} alt="img"/>

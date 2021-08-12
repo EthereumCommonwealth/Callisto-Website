@@ -1,17 +1,18 @@
+
+import React from 'react'
 import styled from 'styled-components'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import './header.scss';
 import { Theme } from 'constants/theme';
 
 // const Header = (props: headerProps) => {
-const Header = (props: { home: boolean}) => {
-    const { home } = props;
+const Header: React.FC = () => {
     return (
       
         <Navbar collapseOnSelect expand="md" className="navbar" variant="light" sticky="top" >
             <Navbar.Brand href="/">
                 <Logo>
-                    <LogoImg src={"https://callisto.network/wp-content/uploads/2020/07/cropped-CLO_small_logo_Dark.png"} className="App-logo" alt="logo" />
+                    <LogoImg src="https://callisto.network/wp-content/uploads/2020/07/cropped-CLO_small_logo_Dark.png" className="App-logo" alt="logo" />
                 </Logo>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
