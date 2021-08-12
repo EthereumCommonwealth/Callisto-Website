@@ -60,9 +60,9 @@ const RightPane: React.FC = () => {
     const [chainError, setChainError] = useState(true);
     const [disabled, setDisabled] = useState(true);
 
-    function handleNext(e) {
-        console.log(e.target.value)
-    }
+    // function handleNext(e) {
+    //     console.log(e.target.value)
+    // }
 
     return (
         <Container>
@@ -84,7 +84,7 @@ const RightPane: React.FC = () => {
             <Spacer height="30px" />
             <AmtInput />
             <Spacer height="30px" />
-            <StyledButton disabled={disabled} onClick={handleNext}>Next</StyledButton>
+            <StyledButton disabled={disabled} >Next</StyledButton>
             <Spacer height="30px" />
             <Reminder symbol={CurrentStatus.curAsset}/>
         </Container>

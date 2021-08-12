@@ -40,15 +40,15 @@ const Con = styled.div`
 `;
 const AddNetworkSection: React.FC = () => {
 
-    function handleAddNetoworkToMetamask(e) {
-        console.log("===== add network to metamask ::")
-    }
+    // function handleAddNetoworkToMetamask(e) {
+    //     console.log("===== add network to metamask ::")
+    // }
 
     return (
         <Container>
             <StyledText color="#f70556">If you have not add Callisto network in your MetaMask yet, please add network</StyledText>
             <Spacer height="10px" />
-            <Con onClick={handleAddNetoworkToMetamask}>
+            <Con >
                 <StyledTextBold color={Theme.colors.secondary}>Add network</StyledTextBold>
             </Con>
         </Container>

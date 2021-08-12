@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Theme } from 'constants/theme';
 import styled from 'styled-components';
 
@@ -25,9 +25,9 @@ const StyledInput = styled.input`
 `;
 
 const AmtInput: React.FC = () => {
-
+    const [value, setValue] = useState("");
     function handleChange(e) {
-        console.log("=========")
+        setValue(e.target.value)
     }
 
     return (
