@@ -21,7 +21,7 @@ const App: React.FC = () => {
                     <Route path="/" exact>
                         <Home />
                     </Route>
-                    <Route path="/clo-bnb-bridge">
+                    <Route path="/bridge">
                         <Bridge />
                     </Route>
                 </Switch>

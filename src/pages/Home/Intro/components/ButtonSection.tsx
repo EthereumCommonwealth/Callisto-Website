@@ -14,7 +14,7 @@ const ButtonSection = () => {
             <StakeButton href={STAKE_URL} target="_blank">
                 <StyledText color={Theme.colors.secondary} fontweight="700" fontsize="18px">STAKE</StyledText>
             </StakeButton>
-            <GetButton href="/clo-bnb-bridge">
+            <GetButton href="/bridge">
                 <StyledText color={Theme.colors.white} fontweight="700" fontsize="18px">BRIDGE</StyledText>
             </GetButton>
         </ButtonArea>
