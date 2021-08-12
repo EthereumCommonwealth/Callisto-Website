@@ -13,6 +13,9 @@ const ButtonSection = () => {
             <StakeButton href={stake_url} target="_blank">
                 <StyledText color={Theme.colors.secondary} fontweight={"700"} fontsize={"18px"}>{`STAKE`}</StyledText>
             </StakeButton>
+            <GetButton href={"/bridge"}>
+                <StyledText color={Theme.colors.white} fontweight={"700"} fontsize={"18px"}>{`BRIDGE`}</StyledText>
+            </GetButton>
         </ButtonArea>
     )
 }
@@ -36,7 +39,8 @@ const GetButton = styled.a`
     padding: 18px 36px 20px;
     display: flex;
     height: 60px;
-    // align-items: center;
+    align-items: center;
+    justify-content: center;
     margin-right: 15px;
     font-size: 18px;
     text-align: center;
@@ -54,15 +58,18 @@ const StakeButton = styled.a`
     padding: 18px 60px 21px;
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 18px;
+    margin-right: 15px;
     height: 60px;
     text-align: center;
     border: 1px solid ${Theme.colors.primary};
     border-radius: 30px;
     // box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     @media (max-width: 596px) {
-        margin-top: 15px;
+        margin: 15px 0;
         width: 100%;
+        margin-right: 0px;
     }
 `;
 

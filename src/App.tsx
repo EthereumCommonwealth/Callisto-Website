@@ -8,6 +8,7 @@ import history from './routerHistory'
 import Footer from 'components/Footer';
 
 const Home = lazy(() => import('./pages/Home'));
+const Bridge = lazy(() => import('./pages/Bridge'));
 
 const App: React.FC = () => {
 
@@ -19,6 +20,9 @@ const App: React.FC = () => {
                 <Switch>
                     <Route path="/" exact>
                         <Home />
+                    </Route>
+                    <Route path="/bridge">
+                        <Bridge />
                     </Route>
                 </Switch>
             </SuspenseWithChunkError>

@@ -76,6 +76,13 @@ import secmark6 from 'assets/images/security/Are-Your-Funds-Safe-ImmirisS.jpg'
 import secmark7 from 'assets/images/security/Are-Your-Funds-Safe-WildfireS.jpg'
 import secmark8 from 'assets/images/security/Are-Your-Funds-Safe-Open-Bi-SeaS.jpg'
 
+import clo from "assets/images/coins/clo.png";
+import bnb from "assets/images/coins/bnb.png";
+import eth from "assets/images/coins/eth.png";
+
+import chainbnb from "assets/images/coins/chain-icon.svg";
+import chaineth from "assets/images/coins/ETH-icon.webp";
+
 export const Assets = {
     back: back,
     backside: backside,
@@ -148,4 +155,10 @@ export const Assets = {
     secmark6,
     secmark7,
     secmark8,
+
+    clo,
+    bnb,
+    eth,
+    chainbnb,
+    chaineth
 }

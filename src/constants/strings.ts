@@ -633,3 +633,35 @@ export const discoverdata = [
         link: "https://callisto.network/faq/"
     }
 ]
+
+export const tokenList = [
+    {
+        name: "CLO",
+        symbol: "CLO",
+        img: Assets.clo
+    },{
+        name: "BNB",
+        symbol: "BNB",
+        img: Assets.bnb
+    },{
+        name: "ETH",
+        symbol: "ETH",
+        img: Assets.eth
+    }
+]
+
+export const Networks = [
+    {
+        name: "Callisto Network",
+        devNet: "testnet",
+        img: Assets.clo
+    },{
+        name: "Binance Smart Chain",
+        devNet: "testnet",
+        img: Assets.chainbnb
+    },{
+        name: "Ethereum Network",
+        devNet: "testnet",
+        img: Assets.chaineth
+    },
+]
