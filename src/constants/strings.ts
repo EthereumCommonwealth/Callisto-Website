@@ -460,6 +460,24 @@ export const ecosdata = [
 
 export const securitydata = [
     {
+        id: "009",
+        img: Assets.secmark9,
+        title1: "Security",
+        title2: "First",
+        link: "https://callisto.network/mermaid-finance-token-security-audit/",
+        desc: [
+            {
+                id: "desc01",
+                title: "An Unstopable Platform",
+                contents: "Callisto Network has never been 51% attacked or hacked, making the Dapps running on it the safest in the blockchain ecosystem."
+            },{
+                id: "desc02",
+                title: "The Leading Security Experts",
+                contents: "Our experts have made many contributions to improve Ethereum, Ethereum Classic, EOS, and have audited more than 350 smart contracts."
+            }
+        ]
+    },
+    {
         id: "001",
         img: Assets.secmark1,
         title1: "Security",
