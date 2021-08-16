@@ -35,16 +35,17 @@ import card from 'assets/images/card.png';
 import line from 'assets/images/line.png';
 import linemark from 'assets/images/linemark.png';
 
-import news1 from 'assets/images/news/news1.png';
-import news2 from 'assets/images/news/news2.png';
-import news3 from 'assets/images/news/news3.png';
-import news4 from 'assets/images/news/news4.png';
-import news5 from 'assets/images/news/news5.png';
-import news6 from 'assets/images/news/news6.png';
-import news7 from 'assets/images/news/news7.png';
-import news8 from 'assets/images/news/b1xz.png';
-import news9 from 'assets/images/news/237j.png';
-import news10 from 'assets/images/news/l9wc.png';
+import news01 from 'assets/images/news/1.jpg';
+import news02 from 'assets/images/news/2.png';
+import news03 from 'assets/images/news/3.jpg';
+import news04 from 'assets/images/news/4.png';
+import news05 from 'assets/images/news/5.jpg';
+import news06 from 'assets/images/news/6.jpg';
+import news07 from 'assets/images/news/7.jpg';
+import news08 from 'assets/images/news/8.jpg';
+import news09 from 'assets/images/news/9.jpg';
+import news10 from 'assets/images/news/10.jpg';
+
 import back5 from 'assets/images/discoverback.png';
 import back from '../assets/images/back.png';
 import backside from '../assets/images/backside.png';
@@ -107,16 +108,18 @@ export const Assets = {
     ecomark6,
     ecomark7,
     ecomark8,
-    news1,
-    news2,
-    news3,
-    news4,
-    news5,
-    news6,
-    news7,
-    news8,
-    news9,
+
+    news01,
+    news02,
+    news03,
+    news04,
+    news05,
+    news06,
+    news07,
+    news08,
+    news09,
     news10,
+
     arrow,
     p1,
     p2,

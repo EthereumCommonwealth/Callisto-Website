@@ -295,99 +295,94 @@ export const features = [
 
 export const newsdata = [
     {
-         id: "9",
-         img: Assets.news8,
+        id: "1",
+        img: Assets.news01,
+        twitter: "",
+        link: "https://callisto.network/introducing-callisto-bridge/",
+        date: "08.11.2021",
+        title: "Callisto Bridge on Testnet.",
+        desc: "Extending Callisto Network ecosystem to Binance Smart Chain and Ethereum."
+    },
+    {
+         id: "2",
+         img: Assets.news02,
          twitter: "",
          link: "https://coinmarketcal.com/en/news/from-bitcoin-to-callisto-network-cryptomining-evolution",
          date: "07.31.2021",
-         title: "From Bitcoin to Callisto Network: CryptoMining Evolution",
+         title: "CryptoMining Evolution",
          desc: "Terms like Blockchain, Cryptocurrency, and Cryptomining entered our world with Bitcoin. However, technology is designed to evolve."
     },
-    {
-        id: "8",
-        img: Assets.news9,
-        twitter: "",
-        link: "https://drive.google.com/file/d/1WwWVAzn4cmxEg8i4SSh8_TP_TEMSPJVX/view",
-        date: "07.26.2021",
-        title: "Our 2nd Quarter Report is Now Available!",
-        desc: "It is time to review our activity for the 2nd quarter."
-   },
    {
-       id: "10",
-       img: Assets.secmark1,
-       twitter: "",
-       link: "https://callisto.network/banketh-token-security-audit/",
-       date: "07.26.2021",
-       title: "BankETH Smart Contract Audit.",
-       desc: "Callisto Network Security Department conducted the BankETH smart contract security audit."
+        id: "3",
+        img: Assets.news03,
+        twitter: "",
+        link: "https://gov.callisto.network/",
+        date: "08.06.2021",
+        title: "Callisto Forum is Live",
+        desc: "Discover guides, and articles related to our ecosystem."
     },
     {
-        id: "11",
-        img: Assets.news10,
+        id: "4",
+        img: Assets.news04,
         twitter: "",
         link: "https://twitter.com/CLOEnterprise/status/1418979197528195075",
         date: "07.24.2021",
         title: "MJ joined Callisto Enterprise.",
-        desc: "We are delighted to welcome MJ as Lead Analyst. MJ previously was one of our ambassadors, and we were looking to get him more closely involved by making him part of the core team. Welcome onboard, MJ."
+        desc: "We are delighted to welcome MJ as Lead Analyst."
     },
     {
-        id: "12",
-        img: Assets.secmark2,
+        id: "5",
+        img: Assets.news05,
         twitter: "",
-        link: "https://callisto.network/axiemon-token-security-audit/",
-        date: "07.21.2021",
-        title: "Axiemon Smart Contract Audit.",
-        desc: "Callisto Network Security Department conducted Axiemon smart contract security audit."
+        link: "https://www.youtube.com/watch?v=BjuhK0wdt90",
+        date: "07.24.2021",
+        title: "Crypto Moon Day",
+        desc: "Such a special day for the Crypto community."
     },
- 
     {
-        id: "3",
-        img: Assets.news3,
+        id: "6",
+        img: Assets.news06,
         twitter: "",
         link: "https://twitter.com/CallistoSupport/status/1416013934591717378",
         date: "07.16.2021",
         title: "Emergence of Callisto Network.",
         desc: "Discover the background of a major episode in the #crypto history."
-    },{
-        id: "4",
-        img: Assets.news4,
-        twitter: "",
-        link: "https://twitter.com/CallistoSupport/status/1415615921423532036",
-        date: "07.15.2021",
-        title: "5 hours left until our #Airdrop",
-        desc: "15 000 $CLO to be distributed in Telegram at 15:15 UTC. Join our community and get your coins!!"
-    },{
-        id: "5",
-        img: Assets.news5,
-        twitter: "",
-        link: "https://twitter.com/bigdogecrypto/status/1415275883733020674",
-        date: "07.14.2021",
-        title: "Audit is coming soon!",
-        desc: "We will keep on improving our security level and actively seek more auditors to provide a safe platform."
-    },{
-        id: "1",
-        img: Assets.news6,
-        twitter: "",
-        link: "https://twitter.com/Callisto_Audits/status/1415386259980226570",
-        date: "07.14.2021",
-        title: "Are Your Funds Safe?",
-        desc: "Callisto Network Security Department conducted the CVNX Token ( $CVNX ) and Governance V2 smart contracts security audit."
-    },{
-        id: "2",
-        img: Assets.news2,
-        twitter: "",
-        link: "https://twitter.com/CallistoSupport/status/1414007259944914947",
-        date: "07.11.2021",
-        title: "Crypto-Bot Wallet",
-        desc: "On this occasion, we are hosting a very special #Airdrop. 15 000 CLO to be distributed on 15.07.21 @ 15:15 UTC."
-    },{
+    },
+    {
         id: "7",
-        img: Assets.news7,
+        img: Assets.news07,
         twitter: "",
-        link: "https://twitter.com/yograterol/status/1413221573885038592",
+        link: "https://callisto.network/blockchain-101-what-is-blockchain/",
+        date: "07.17.2021",
+        title: "Callisto Academy",
+        desc: "15 000 $CLO to be distributed in Telegram at 15:15 UTC. Join our community and get your coins!!"
+    },
+    {
+        id: "8",
+        img: Assets.news08,
+        twitter: "",
+        link: "https://www.youtube.com/watch?v=R06nGQQ2ALg",
+        date: "07.11.2021",
+        title: "15 000 Twitter Followers Milestone",
+        desc: "For this occasion we are organizing an Airdrop on Telegram."
+    },
+    {
+        id: "9",
+        img: Assets.news09,
+        twitter: "",
+        link: "https://twitter.com/BitcoinComExch/status/1413147666536566793",
         date: "07.08.2021",
-        title: "Dragonary",
-        desc: "Dragonary is coming. Many NFT dragons will come to the battleground to fight."
+        title: "CLO is listed on Bitcoin Exchange",
+        desc: "You can now trade $CLO with BTC, ETH, and USDT on Bitcoin Exchange."
+   },
+   {
+       id: "10",
+       img: Assets.news10,
+       twitter: "",
+       link: "https://twitter.com/CLOEnterprise/status/1412821590971138057",
+       date: "07.07.2021",
+       title: "Dmitry Kuzmin Joins the Team",
+       desc: "Dmitry Kuzmin has joined our team as the main 3D designer."
     },
 ]
 
