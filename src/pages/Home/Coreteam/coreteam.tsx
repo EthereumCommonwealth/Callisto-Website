@@ -8,7 +8,7 @@ import Card from './Card';
 const Coreteam = () => {
     
     return (
-        <Container>
+        <Container id="coreteam">
             <TitleCon>
                 <Title text="Core Team"/>
             </TitleCon>

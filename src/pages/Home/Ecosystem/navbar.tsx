@@ -24,7 +24,7 @@ const Ecosystem = () => {
     }
     
     return (
-        <Container>
+        <Container id="ecosystem">
             <TitleCon>
                 <Title text="Callisto Ecosystem"/>
             </TitleCon>
