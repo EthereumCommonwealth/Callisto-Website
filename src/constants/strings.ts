@@ -618,10 +618,10 @@ export const securitydata = [
     },
     {
         id: "009",
-        img: Assets.card,
+        img: Assets.secmark10,
         title1: "Security",
         title2: "First",
-        link: "https://callisto.network/pyxis-network-pyx-security-audit/",
+        link: "https://callisto.network/mypetsocial-token-security-audit/",
         desc: [
             {
                 id: "desc01",

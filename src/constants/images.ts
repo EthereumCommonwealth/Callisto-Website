@@ -20,6 +20,7 @@ import secmark6 from 'assets/images/security/Are-Your-Funds-Safe-ImmirisS.jpg'
 import secmark7 from 'assets/images/security/Are-Your-Funds-Safe-WildfireS.jpg'
 import secmark8 from 'assets/images/security/Are-Your-Funds-Safe-Open-Bi-SeaS.jpg'
 import secmark9 from 'assets/images/security/mermaid.jpg'
+import secmark10 from 'assets/images/security/Are-Your-Funds-Safe-MypetSocial.jpg'
 
 import clo from "assets/images/coins/clo.png";
 import bnb from "assets/images/coins/bnb.png";
@@ -158,6 +159,7 @@ export const Assets = {
     secmark7,
     secmark8,
     secmark9,
+    secmark10,
 
     clo,
     bnb,
