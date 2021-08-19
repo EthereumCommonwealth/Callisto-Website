@@ -433,7 +433,7 @@ export const ecosdata = [
             "Beyond the decentralization, the reduced fees and the user experience, Soy.Finance stands for security."
         ],
         img: Assets.ecomark6,
-        link: "https://nervous-edison-17cb1e.netlify.app/"
+        link: "https://soy.finance/"
     },{
         title: "Callisto Treasury",
         desc: [
@@ -441,7 +441,7 @@ export const ecosdata = [
             "The Callisto Treasury receives 10% of all mined blocks. With these funds, it is anticipated to finance the development of the projects proposed and voted by the community."
         ],
         img: Assets.ecomark7,
-        link: "https://callisto.network/IDAVOLL/"
+        link: "https://gov.callisto.network/c/callisto-treasury-funding/6"
     },{
         title: "Callisto Enterprise",
         desc: [
@@ -449,7 +449,7 @@ export const ecosdata = [
             "Callisto Enterprise's experts have the skills to help you along the way from in-house solutions to consulting."
         ],
         img: Assets.ecomark8,
-        link: "https://callisto.network.enterprise/"
+        link: "https://callistoenterprise.com/"
     }
 ]
 
@@ -645,36 +645,4 @@ export const discoverdata = [
         desc2: "Since its launch by the developers of Ethereum Commonwealth (Ethereum Classic), Callisto Network focused its attention on the weakness of the cryptocurrency space, namely the security.",
         link: "https://callisto.network/faq/"
     }
-]
-
-export const tokenList = [
-    {
-        name: "CLO",
-        symbol: "CLO",
-        img: Assets.clo
-    },{
-        name: "BNB",
-        symbol: "BNB",
-        img: Assets.bnb
-    },{
-        name: "ETH",
-        symbol: "ETH",
-        img: Assets.eth
-    }
-]
-
-export const Networks = [
-    {
-        name: "Callisto Network",
-        devNet: "testnet",
-        img: Assets.clo
-    },{
-        name: "Binance Smart Chain",
-        devNet: "testnet",
-        img: Assets.chainbnb
-    },{
-        name: "Ethereum Network",
-        devNet: "testnet",
-        img: Assets.chaineth
-    },
 ]
