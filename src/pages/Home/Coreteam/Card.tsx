@@ -11,13 +11,13 @@ const Card = ({item}) => {
             <Row >
                 <ImgCon src = {item.avatar}/>
                 <div style={{display: "flex"}}>
-                    <LinkStyledButton>
+                    <LinkStyledButton href={`mailto:${item.email}?subject=${encodeURIComponent('Contact Me!') || ''}`}>
                         <FiMail color={Theme.colors.white} size = {18}/>
                     </LinkStyledButton>
-                    <LinkStyledButton>
+                    <LinkStyledButton href={item.twitter} target="_blank">
                         <FaTwitter color={Theme.colors.white} size = {18}/>
                     </LinkStyledButton>
-                    <LinkStyledButton2>
+                    <LinkStyledButton2 href={item.linkedIn} target="_blank">
                         <FaLinkedinIn color={Theme.colors.white} size = {20}/>
                     </LinkStyledButton2>
                 </div>
@@ -62,7 +62,7 @@ const Row = styled.div`
     align-items: center;
 `;
 
-const LinkStyledButton = styled.li`
+const LinkStyledButton = styled.a`
   border: none;
   background-color: ${Theme.colors.secondary};
   width: 30px;
@@ -74,7 +74,7 @@ const LinkStyledButton = styled.li`
   margin: 5px;
 `
 
-const LinkStyledButton2 = styled.li`
+const LinkStyledButton2 = styled.a`
   border: none;
   background-color: ${Theme.colors.secondary};
   width: 30px;

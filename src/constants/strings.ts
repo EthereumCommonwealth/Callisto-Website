@@ -123,6 +123,9 @@ export const coreteams = [
             "CEO of Invictus Solutions (CZ)",
             "Solution Architect with more than 15 years of experience and leadership roles",
         ],
+        email: "",
+        twitter: "",
+        linkedIn: ""
     },{
         name: "Yohan Graterol",
         avatar: Assets.p2,
@@ -131,6 +134,9 @@ export const coreteams = [
             "Co Founder Callisto Network",
             "Main Presenter CoinaryTV",
         ],
+        email: "",
+        twitter: "",
+        linkedIn: ""
     },{
         name: "Laurent Riche",
         avatar: Assets.p3,
@@ -139,6 +145,9 @@ export const coreteams = [
             "Former Callisto core team member since 2018",
             "Lead of Soy.Finance",
         ],
+        email: "",
+        twitter: "",
+        linkedIn: ""
     },{
         name: "Karel Fillner",
         avatar: Assets.p4,
@@ -147,6 +156,9 @@ export const coreteams = [
             "CEO of Invictus Mining",
             "Main advisor of Callisto Enterprise",
         ],
+        email: "",
+        twitter: "",
+        linkedIn: ""
     },{
         name: "Dexaran",
         avatar: Assets.p6,
@@ -155,6 +167,9 @@ export const coreteams = [
             "EthereumCommonwealth Founder",
             "Creator of #ERC223 Standard"
         ],
+        email: "",
+        twitter: "",
+        linkedIn: ""
     },{
         name: "Yuriy",
         avatar: Assets.p5,
@@ -163,6 +178,9 @@ export const coreteams = [
             "Former auditor in Callisto project since 2018",
             "Main Callisto smart contract developer",
         ],
+        email: "",
+        twitter: "",
+        linkedIn: ""
     },{
         name: "Muf Moto",
         avatar: Assets.am6,
@@ -170,6 +188,9 @@ export const coreteams = [
         description: [
             "More than 25 years of experience in the IT industry in different positions and involved in the Czech crypto-community for over 5 years.",
         ],
+        email: "",
+        twitter: "",
+        linkedIn: ""
     },{
         name: "MJ",
         avatar: Assets.am9,
@@ -177,6 +198,9 @@ export const coreteams = [
         description: [
             "Processing solid experience in data gathering, processing and analysis, worked on several development projects with data focus from the inside out.",
         ],
+        email: "",
+        twitter: "",
+        linkedIn: ""
     },{
         name: "Wang",
         avatar: Assets.p7,
@@ -185,6 +209,9 @@ export const coreteams = [
             "Member since 2021",
             "Senior frontend(Mobile/Web) & backend developer"
         ],
+        email: "mobiledev111118@gmail.com",
+        twitter: "https://twitter.com/",
+        linkedIn: "https://www.linkedin.com/in/wang-weisan-2a6152197/"
     },{
         name: "Gerhard Fourie",
         avatar: Assets.p9,
@@ -193,11 +220,17 @@ export const coreteams = [
             "CEO of Invictus Mining",
             "Main advisor of Callisto Enterprise"
         ],
+        email: "",
+        twitter: "",
+        linkedIn: ""
     },{
         name: "Veno N'detti",
         avatar: Assets.p8,
         role: "Game Development Expert",
         description: [],
+        email: "",
+        twitter: "",
+        linkedIn: ""
     }
 ];
 
