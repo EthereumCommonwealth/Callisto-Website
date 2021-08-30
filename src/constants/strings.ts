@@ -618,7 +618,7 @@ export const securitydata = [
         img: Assets.secmark7,
         title1: "Security",
         title2: "First",
-        link: "https://callisto.network/wildfire-token-security-audit/",
+        link: "https://callisto.network/monsta-infinite-inception-security-audit/",
         desc: [
             {
                 id: "desc01",
@@ -636,7 +636,7 @@ export const securitydata = [
         img: Assets.secmark8,
         title1: "Security",
         title2: "First",
-        link: "https://callisto.network/open-bi-sea-eth-bsc-bridge-security-audit/",
+        link: "https://callisto.network/defifarms-protocol-security-audit/",
         desc: [
             {
                 id: "desc01",
