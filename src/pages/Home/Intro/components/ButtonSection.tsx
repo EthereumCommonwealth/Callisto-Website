@@ -14,7 +14,7 @@ const ButtonSection = () => {
             <StakeButton href={STAKE_URL} target="_blank">
                 <StyledText color={Theme.colors.secondary} fontweight="700" fontsize="18px">STAKE</StyledText>
             </StakeButton>
-            <GetButton href="https://bridge.callisto.network/" target="_blank">
+            <GetButton href="https://callistobridge.netlify.app/" target="_blank">
                 <StyledText color={Theme.colors.white} fontweight="700" fontsize="18px">BRIDGE(SOON)</StyledText>
             </GetButton>
         </ButtonArea>
