@@ -48,6 +48,9 @@ const Header: React.FC = () => {
                     <Li>
                         <Nav.Link href="https://github.com/EthereumCommonwealth/Auditing/" target="_blank">Audit</Nav.Link>
                     </Li>
+                    <Li>
+                        <Nav.Link href="https://bridge.callisto.network/" target="_blank">Bridge(SOON)</Nav.Link>
+                    </Li>
                     <div className="nav-bar1">
                         <Nav.Link href="https://drive.google.com/file/d/1XvP-mKbT_wbrPb7p7hlLRhb7G6V5cqXV/view" target="_blank">
                             <Whitepaper1>WHITEPAPER</Whitepaper1>
