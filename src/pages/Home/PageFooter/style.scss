@@ -31,14 +31,14 @@ body {
         align-items: center;
         
     }
-    &:hover {
-        cursor: pointer;
-        .slick-next,
-        .slick-prev {
-            display: block !important;
+    // &:hover {
+    //     cursor: pointer;
+    //     .slick-next,
+    //     .slick-prev {
+    //         display: block !important;
             
-        }
-    }
+    //     }
+    // }
     ::before {
         font-size: 40px;
         margin-left: -3px;

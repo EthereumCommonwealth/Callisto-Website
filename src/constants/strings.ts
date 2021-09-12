@@ -1,3 +1,5 @@
+import Hashcity from "assets/images/HashCity-logo-transparent.png"
+
 import t from '../components/Header/types';
 import { Assets } from './images';
 
@@ -92,6 +94,7 @@ export const callisto = [
     }
 ]
 
+
 export const partners = [
     "https://callisto.network/wp-content/uploads/2020/12/SCA-logo-transparent.jpg",
     // "https://callisto.network/wp-content/uploads/2020/12/McAfeeDex-logo-transparent.jpg",
@@ -106,7 +109,7 @@ export const partners = [
     "https://callisto.network/wp-content/uploads/2020/12/Maxhash-logo-transparent.jpg",
     // "https://callisto.network/wp-content/uploads/2020/12/f2pool-logo-transparent.jpg",
     "https://callisto.network/wp-content/uploads/2020/12/Comining-logo-transparent.jpg",
-    "https://callisto.network/wp-content/uploads/2020/12/Top-mining-logo-transparent.jpg",
+    Hashcity,
     "https://callisto.network/wp-content/uploads/2020/12/SCA-logo-transparent.jpg",
     "https://callisto.network/wp-content/uploads/2020/12/Invictus-logo-transparent.jpg",
     "https://callisto.network/wp-content/uploads/2020/12/Bitfinex-logo-transparent.jpg",
