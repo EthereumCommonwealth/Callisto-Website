@@ -15,7 +15,10 @@ body {
             background-color: white;
             padding: 0px 20px;
             // height: 80px;
-        }    
+        }   
+        div {
+            outline: 0 !important;
+        } 
     }
 
     .slick-next,
