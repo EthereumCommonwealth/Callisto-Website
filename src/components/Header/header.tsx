@@ -46,7 +46,7 @@ const Header: React.FC = () => {
                         <Nav.Link href="https://callisto.network/cryptocurrency/" target="_blank">Cryptocurrency</Nav.Link>
                     </Li>
                     <Li>
-                        <Nav.Link href="https://github.com/EthereumCommonwealth/Auditing/" target="_blank">Audit</Nav.Link>
+                        <Nav.Link href="https://github.com/EthereumCommonwealth/Auditing/" target="_blank">Auditing</Nav.Link>
                     </Li>
                     <Li>
                         <Nav.Link href="https://callistobridge.netlify.app/" target="_blank">Bridge</Nav.Link>
