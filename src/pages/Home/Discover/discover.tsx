@@ -11,56 +11,56 @@ import PrevArrow from './PrevArrow';
 import "./style.scss";
 
 const slickSettings: Settings = {
-    accessibility: false,
-    draggable: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    speed: 500,
-    dots: true,
-    dotsClass: "slick-dots",
-    autoplay: false,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />
+  accessibility: false,
+  draggable: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  infinite: true,
+  speed: 500,
+  dots: true,
+  dotsClass: "slick-dots",
+  autoplay: false,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />
 };
 
 const Discover = () => {
-    
-    const renderItems = () => {
-        return discoverdata.map((item) =>{
-            return (
-                <SubCon key={item.id}>
-                    <LineImg src={item.img} alt="image"/>
-                    <RightPane>
-                        <SubTitle>
-                            {item.title}
-                        </SubTitle>
-                        <Line />
-                        <div>
-                            <Text>
-                                {item.desc1}
-                            </Text>
-                            <Text>
-                                {item.desc2}
-                            </Text>
-                        </div>
-                        <GetButton href={item.link} target="_blank">
-                            <StyledText color={Theme.colors.secondary} fontweight="700" fontsize="22px">Get Started</StyledText>
-                        </GetButton>
-                    </RightPane>
-                </SubCon>
-            )
-        })
-        
-    }
-    return (
-        <Container>
-            <CardDiv className="discover-container">
-                <Slick {...slickSettings}>{renderItems()}</Slick>
-            </CardDiv>
-            <Spacer height="100px" />
-        </Container>
-    )
+
+  const renderItems = () => {
+    return discoverdata.map((item) => {
+      return (
+        <SubCon key={item.id}>
+          <LineImg src={item.img} alt="image" />
+          <RightPane>
+            <SubTitle>
+              {item.title}
+            </SubTitle>
+            <Line />
+            <div>
+              <Text>
+                {item.desc1}
+              </Text>
+              <Text>
+                {item.desc2}
+              </Text>
+            </div>
+            <GetButton href={item.link} target="_blank">
+              <StyledText color={Theme.colors.secondary} fontweight="700" fontsize="22px">Get Started</StyledText>
+            </GetButton>
+          </RightPane>
+        </SubCon>
+      )
+    })
+
+  }
+  return (
+    <Container>
+      <CardDiv className="discover-container">
+        <Slick {...slickSettings}>{renderItems()}</Slick>
+      </CardDiv>
+      <Spacer height="100px" />
+    </Container>
+  )
 }
 
 const Container = styled.div`
