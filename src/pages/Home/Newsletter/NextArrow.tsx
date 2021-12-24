@@ -30,12 +30,12 @@ const Container = styled.div`
 `;
 
 const NextArrow = (props) => {
-    const { onClick } = props;
-    return (
-        <Container onClick={onClick}>
-            <FaArrowRight color="#FFF" size={30} />
-        </Container>
-    )
+  const { onClick } = props;
+  return (
+    <Container onClick={onClick}>
+      <FaArrowRight color="#FFF" size={30} />
+    </Container>
+  )
 }
 
 export default NextArrow;
