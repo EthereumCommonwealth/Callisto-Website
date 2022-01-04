@@ -193,7 +193,7 @@ export const coreteams = [
     avatar: Assets.am6,
     role: "Project Manager",
     description: [
-      "More than 25 years of experience in the IT industry in different positions and involved in the Czech crypto-community for over 5 years.",
+      "2016-2021: More than 25 years of experience in the IT industry in different positions and involved in the Czech crypto-community for over 5 years.",
     ],
     email: "",
     twitter: "",
@@ -204,7 +204,7 @@ export const coreteams = [
     avatar: Assets.am9,
     role: "Lead Analyst",
     description: [
-      "Processing solid experience in data gathering, processing and analysis, worked on several development projects with data focus from the inside out.",
+      "2015-2021: Strong experience in data gathering, processing and analysis, worked on several development projects with data focus from the inside out. Currently in charge of technology in a PropTech Startup in LATAM.",
     ],
     email: "",
     twitter: "",
@@ -292,16 +292,20 @@ export const coreteams = [
     email: "",
     twitter: "",
     linkedIn: ""
+  },{
+    name: "Dmitry Kuzmin",
+    avatar: Assets.p13,
+    role: "Main Designer 3D Generalist",
+    description: [
+      "2020-2021: 3d Generalist California Technical Media.",
+      "2016-2020: 2d/3d Artist Melon Branding agency.",
+      "2014-2016: 3d Artist ICL Protection Center.",
+      "2011-2014: Lead 3D Artist Business Cooperation League (RA Manhattan).",
+    ],
+    email: "",
+    twitter: "",
+    linkedIn: ""
   },
-  //  {
-  //   name: "Veno N'detti",
-  //   avatar: Assets.p8,
-  //   role: "Game Development Expert",
-  //   description: [],
-  //   email: "",
-  //   twitter: "",
-  //   linkedIn: ""
-  // }
 ];
 
 
