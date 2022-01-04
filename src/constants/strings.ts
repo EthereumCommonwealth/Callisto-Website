@@ -195,8 +195,8 @@ export const coreteams = [
     description: [
       "2016-2021: More than 25 years of experience in the IT industry in different positions and involved in the Czech crypto-community for over 5 years.",
     ],
-    email: "",
-    twitter: "",
+    email: "muf@callistoenterprise.com",
+    twitter: "https://twitter.com/@muf_moto",
     linkedIn: ""
   }, 
   {
@@ -249,7 +249,7 @@ export const coreteams = [
   }, {
     name: "Yohan Graterol",
     avatar: Assets.p2,
-    role: "Chief Operating Officer/COO",
+    role: "Advisor",
     description: [
       "2021: COO at Callisto Network and main developer.",
       "2018-2020: CEO at Callisto Network and main developer.",
@@ -278,9 +278,9 @@ export const coreteams = [
       "2013-2018: Application Specialist.",
       "2010-2013: Sharepoint Administrator. More than 10 years in IT."
     ],
-    email: "",
+    email: "frantisek.brych@gmail.com",
     twitter: "",
-    linkedIn: ""
+    linkedIn: "https://cz.linkedin.com/in/franti%C5%A1ek-brych-2a914a61"
   },{
     name: "Jeff Opdyke",
     avatar: Assets.p12,
@@ -305,17 +305,22 @@ export const coreteams = [
     email: "",
     twitter: "",
     linkedIn: ""
-  },
+  },{
+    name: "Dr ZS",
+    avatar: Assets.am1,
+    role: "Advisor",
+    description: [
+      "2015-2021: Specialist in mathematics and technology with extensive experience in new technologies and cryptocurrencies - mainly focused on applied economic theories (monetary policy, etc.).",
+    ],
+    email: "zvse387@gmail.com",
+    twitter: "https://twitter.com/@DrZS16",
+    linkedIn: "https://www.linkedin.com/in/dr-zs-callisto"
+  }, 
 ];
 
 
 export const devteams = [
   {
-    name: "Dr ZS",
-    avatar: Assets.am1,
-    role: "Advisor",
-    tele: "@zvse3"
-  }, {
     name: "Maximus",
     avatar: Assets.am2,
     role: "Ambassador",
