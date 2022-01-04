@@ -38,6 +38,7 @@ const Container = styled.div`
 const CardDiv = styled.div`
     width: 25%;
     padding: 20px;
+    height: auto;
     @media screen and (max-width: 1360px) {
         width: 33.33%;
     }

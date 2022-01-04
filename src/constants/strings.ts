@@ -119,23 +119,32 @@ export const partners = [
 
 export const coreteams = [
   {
-    name: "Vladimír Vencálek",
+    name: "VLADIMÍR VENCÁLEK",
     avatar: Assets.p1,
     role: "Chief Executive Officer/CEO",
     description: [
-      "CEO of Invictus Solutions (CZ)",
-      "Solution Architect with more than 15 years of experience and leadership roles",
+      "2021: CEO at Callisto Network.",
+      "2021: CEO at Callisto Enterprise.",
+      "2020: Founder of Invictus Services.",
+      "2020: Founder of Invictus Mobility.",
+      "2018-Now: CEO at Invictus Solutions.",
+      "2017: Founder of Invictus Mining.",
+      "2011-2017: CEO at CReativeMages."
     ],
     email: "",
     twitter: "",
     linkedIn: ""
   }, {
-    name: "Yohan Graterol",
-    avatar: Assets.p2,
-    role: "Chief Operating Officer/COO",
+    name: "Dexaran",
+    avatar: Assets.p6,
+    role: "COO",
     description: [
-      "Co Founder Callisto Network",
-      "Main Presenter CoinaryTV",
+      "2018-2021: EOS developer/partner.",
+      "2021: CallistoNFT standard creator and maintainer.",
+      "2018-2021: EOS developer/partner of EOS GO &.",
+      "2016-2021: ERC223 creator and maintainer.",
+      "2016-2020: Ethereum Classic core contributor.",
+      "2014-2016: Ethereum smart-contract security auditor.",
     ],
     email: "",
     twitter: "",
@@ -145,8 +154,9 @@ export const coreteams = [
     avatar: Assets.p3,
     role: "Chief Marketing Officer/CMO",
     description: [
-      "Former Callisto core team member since 2018",
-      "Lead of Soy.Finance",
+      "2021: Chief Marketing Officer at Callisto Network.",
+      "2021: Lead of Soy.Finance",
+      "2019-2021: Head of Community at Callisto. Founded and managed a transportation start-up employing 50 peoples and having completed over 500 000 deliveries in France.",
     ],
     email: "",
     twitter: "",
@@ -156,19 +166,9 @@ export const coreteams = [
     avatar: Assets.p4,
     role: "Chief Strategy Officer/CSO",
     description: [
-      "CEO of Invictus Mining",
-      "Main advisor of Callisto Enterprise",
-    ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
-  }, {
-    name: "Dexaran",
-    avatar: Assets.p6,
-    role: "Researching Team Lead",
-    description: [
-      "EthereumCommonwealth Founder",
-      "Creator of #ERC223 Standard"
+      "2021: One of most experienced crypto-currency projects advisors in Czech.",
+      "2020: CEO of Invictus Mining.",
+      "2019: Founder and owner of BTCtip.cz.",
     ],
     email: "",
     twitter: "",
@@ -178,28 +178,11 @@ export const coreteams = [
     avatar: Assets.p5,
     role: "Auditors Team Lead",
     description: [
-      "Former auditor in Callisto project since 2018",
-      "Main Callisto smart contract developer",
-    ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
-  }, {
-    name: "Muf Moto",
-    avatar: Assets.am6,
-    role: "Project Manager",
-    description: [
-      "More than 25 years of experience in the IT industry in different positions and involved in the Czech crypto-community for over 5 years.",
-    ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
-  }, {
-    name: "MJ",
-    avatar: Assets.am9,
-    role: "Lead Analyst",
-    description: [
-      "Processing solid experience in data gathering, processing and analysis, worked on several development projects with data focus from the inside out.",
+      "2018-2021: Ethereum smart-contract developer.",
+      "2020-2021: Project manager of Jointer.io.",
+      "Working in the crypto-currency and smart contract industry since 2016.",
+      "Specializing in IT security aspects since 2003.",
+      "Over 23 years of experience in IT."
     ],
     email: "",
     twitter: "",
@@ -209,32 +192,116 @@ export const coreteams = [
     avatar: Assets.p7,
     role: "Senior Frontend Developer",
     description: [
-      "Member since 2021",
-      "Senior frontend(Mobile/Web) & backend developer"
+      "2016-2021: Full stack developer.",
+      "2018-2021: Defi, Dex developer.",
+      "2018-2021: Smart contract developer."
     ],
     email: "mobiledev111118@gmail.com",
     twitter: "https://twitter.com/",
     linkedIn: "https://www.linkedin.com/in/wang-weisan-2a6152197/"
-  }, {
+  },
+  //  {
+  //   name: "Muf Moto",
+  //   avatar: Assets.am6,
+  //   role: "Project Manager",
+  //   description: [
+  //     "More than 25 years of experience in the IT industry in different positions and involved in the Czech crypto-community for over 5 years.",
+  //   ],
+  //   email: "",
+  //   twitter: "",
+  //   linkedIn: ""
+  // }, 
+  // {
+  //   name: "MJ",
+  //   avatar: Assets.am9,
+  //   role: "Lead Analyst",
+  //   description: [
+  //     "Processing solid experience in data gathering, processing and analysis, worked on several development projects with data focus from the inside out.",
+  //   ],
+  //   email: "",
+  //   twitter: "",
+  //   linkedIn: ""
+  // },
+  {
+    name: "Veno N'detti",
+    avatar: Assets.p8,
+    role: "Game Development Expert",
+    description: [
+      "2017-Now: Video Game Developer.",
+      "2017-Now: Corporate Software.",
+      "2008-2017: Software Developer.",
+    ],
+    email: "",
+    twitter: "",
+    linkedIn: ""
+  },
+  {
     name: "Gerhard Fourie",
     avatar: Assets.p9,
     role: "Video & Digital Marketing Specialist",
     description: [
-      "CEO of Invictus Mining",
-      "Main advisor of Callisto Enterprise"
+      "2003-2011: Video editor, camera operator, director of photography, director and producer over various events and industries ranging from corporate events, to concerts and music videos.",
+      "2001-2021: Specializing in the creation of promotional material for industries such as sports, tourism equine, corporate, and broadcasting."
     ],
     email: "",
     twitter: "",
     linkedIn: ""
   }, {
-    name: "Veno N'detti",
-    avatar: Assets.p8,
-    role: "Game Development Expert",
-    description: [],
+    name: "Yohan Graterol",
+    avatar: Assets.p2,
+    role: "Chief Operating Officer/COO",
+    description: [
+      "2021: COO at Callisto Network and main developer.",
+      "2018-2020: CEO at Callisto Network and main developer.",
+      "2014-2018: Head of Product / Technical Lead at Platzi (+1.5 million users)."
+    ],
     email: "",
     twitter: "",
     linkedIn: ""
-  }
+  },{
+    name: "Lumir Lindovsky",
+    avatar: Assets.p10,
+    role: "Server Infrastructure specialist",
+    description: [
+      "2018-Now: IT director - Invictus Services..",
+      "2001-2018: IT manager - European restaurant chains - development of new sites and IT support.",
+    ],
+    email: "",
+    twitter: "",
+    linkedIn: ""
+  },{
+    name: "František Brych",
+    avatar: Assets.p11,
+    role: "Director of NFT division",
+    description: [
+      "2018-2021: Team leader/Consultant - Business Process management.",
+      "2013-2018: Application Specialist.",
+      "2010-2013: Sharepoint Administrator. More than 10 years in IT."
+    ],
+    email: "",
+    twitter: "",
+    linkedIn: ""
+  },{
+    name: "Jeff Opdyke",
+    avatar: Assets.p12,
+    role: "Communication Expert",
+    description: [
+      "Award-winning author with 10 books on global investing and personal finance.",
+      "Author for 17 years for the New York Wall Street Journal.",
+    ],
+    email: "",
+    twitter: "",
+    linkedIn: ""
+  },
+  //  {
+  //   name: "Veno N'detti",
+  //   avatar: Assets.p8,
+  //   role: "Game Development Expert",
+  //   description: [],
+  //   email: "",
+  //   twitter: "",
+  //   linkedIn: ""
+  // }
 ];
 
 

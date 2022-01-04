@@ -47,7 +47,7 @@ const Container = styled.div`
     display: block;
     flex-direction: column;
     background-color: #FCFCFC;
-    height: 457px;
+    height: 100%;
     padding: 35px 30px 15px 30px;
     @media screen and (max-width: 768px) {
         height: 400px;
