@@ -187,19 +187,7 @@ export const coreteams = [
     email: "",
     twitter: "",
     linkedIn: ""
-  }, {
-    name: "Wang",
-    avatar: Assets.p7,
-    role: "Senior Frontend Developer",
-    description: [
-      "2016-2021: Full stack developer.",
-      "2018-2021: Defi, Dex developer.",
-      "2018-2021: Smart contract developer."
-    ],
-    email: "mobiledev111118@gmail.com",
-    twitter: "https://twitter.com/",
-    linkedIn: "https://www.linkedin.com/in/wang-weisan-2a6152197/"
-  },
+  }, 
    {
     name: "Muf Moto",
     avatar: Assets.am6,
@@ -221,6 +209,18 @@ export const coreteams = [
     email: "",
     twitter: "",
     linkedIn: ""
+  },{
+    name: "Wang",
+    avatar: Assets.p7,
+    role: "Senior Frontend Developer",
+    description: [
+      "2016-2021: Full stack developer.",
+      "2018-2021: Defi, Dex developer.",
+      "2018-2021: Smart contract developer."
+    ],
+    email: "mobiledev111118@gmail.com",
+    twitter: "https://twitter.com/",
+    linkedIn: "https://www.linkedin.com/in/wang-weisan-2a6152197/"
   },
   {
     name: "Veno N'detti",
