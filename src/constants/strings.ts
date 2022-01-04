@@ -200,28 +200,28 @@ export const coreteams = [
     twitter: "https://twitter.com/",
     linkedIn: "https://www.linkedin.com/in/wang-weisan-2a6152197/"
   },
-  //  {
-  //   name: "Muf Moto",
-  //   avatar: Assets.am6,
-  //   role: "Project Manager",
-  //   description: [
-  //     "More than 25 years of experience in the IT industry in different positions and involved in the Czech crypto-community for over 5 years.",
-  //   ],
-  //   email: "",
-  //   twitter: "",
-  //   linkedIn: ""
-  // }, 
-  // {
-  //   name: "MJ",
-  //   avatar: Assets.am9,
-  //   role: "Lead Analyst",
-  //   description: [
-  //     "Processing solid experience in data gathering, processing and analysis, worked on several development projects with data focus from the inside out.",
-  //   ],
-  //   email: "",
-  //   twitter: "",
-  //   linkedIn: ""
-  // },
+   {
+    name: "Muf Moto",
+    avatar: Assets.am6,
+    role: "Project Manager",
+    description: [
+      "More than 25 years of experience in the IT industry in different positions and involved in the Czech crypto-community for over 5 years.",
+    ],
+    email: "",
+    twitter: "",
+    linkedIn: ""
+  }, 
+  {
+    name: "MJ",
+    avatar: Assets.am9,
+    role: "Lead Analyst",
+    description: [
+      "Processing solid experience in data gathering, processing and analysis, worked on several development projects with data focus from the inside out.",
+    ],
+    email: "",
+    twitter: "",
+    linkedIn: ""
+  },
   {
     name: "Veno N'detti",
     avatar: Assets.p8,
