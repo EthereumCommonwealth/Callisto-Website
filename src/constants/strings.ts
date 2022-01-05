@@ -131,9 +131,9 @@ export const coreteams = [
       "2017: Founder of Invictus Mining.",
       "2011-2017: CEO at CReativeMages."
     ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
+    email: "vladimir@callisto.network",
+    twitter: "https://twitter.com/",
+    linkedIn: "https://www.linkedin.com/in/vladim%C3%ADr-venc%C3%A1lek-27384b30/"
   }, {
     name: "Dexaran",
     avatar: Assets.p6,
@@ -146,9 +146,9 @@ export const coreteams = [
       "2016-2020: Ethereum Classic core contributor.",
       "2014-2016: Ethereum smart-contract security auditor.",
     ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
+    email: "dexaran@callisto.network",
+    twitter: "https://twitter.com/Dexaran",
+    linkedIn: "https://linkedin.com/"
   }, {
     name: "Laurent Riche",
     avatar: Assets.p3,
@@ -158,9 +158,9 @@ export const coreteams = [
       "2021: Lead of Soy.Finance",
       "2019-2021: Head of Community at Callisto. Founded and managed a transportation start-up employing 50 peoples and having completed over 500 000 deliveries in France.",
     ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
+    email: "tonton@callisto.network",
+    twitter: "https://twitter.com/tonton_benz",
+    linkedIn: "https://www.linkedin.com/in/laurentriche/"
   }, {
     name: "Karel Fillner",
     avatar: Assets.p4,
@@ -170,9 +170,9 @@ export const coreteams = [
       "2020: CEO of Invictus Mining.",
       "2019: Founder and owner of BTCtip.cz.",
     ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
+    email: "karel.fillner@callistoenterprise.com",
+    twitter: "https://twitter.com/btctip_cz",
+    linkedIn: "https://www.linkedin.com/in/karel-fillner/"
   }, {
     name: "Yuriy",
     avatar: Assets.p5,
@@ -184,9 +184,9 @@ export const coreteams = [
       "Specializing in IT security aspects since 2003.",
       "Over 23 years of experience in IT."
     ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
+    email: "yuri@callisto.network",
+    twitter: "https://twitter.com/",
+    linkedIn: "https://www.linkedin.com/in/yuriy-kharytoshyn-b6b89517b/"
   }, 
    {
     name: "Muf Moto",
@@ -206,9 +206,9 @@ export const coreteams = [
     description: [
       "2015-2021: Strong experience in data gathering, processing and analysis, worked on several development projects with data focus from the inside out. Currently in charge of technology in a PropTech Startup in LATAM.",
     ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
+    email: "mj@callistoenterprise.com",
+    twitter: "https://twitter.com/MJ_UKR",
+    linkedIn: "https://linkedin.com/"
   },{
     name: "Wang",
     avatar: Assets.p7,
@@ -218,7 +218,7 @@ export const coreteams = [
       "2018-2021: Defi, Dex developer.",
       "2018-2021: Smart contract developer."
     ],
-    email: "mobiledev111118@gmail.com",
+    email: "wang@callistoenterprise.com",
     twitter: "https://twitter.com/",
     linkedIn: "https://www.linkedin.com/in/wang-weisan-2a6152197/"
   },
@@ -232,8 +232,8 @@ export const coreteams = [
       "2008-2017: Software Developer.",
     ],
     email: "",
-    twitter: "",
-    linkedIn: ""
+    twitter: "https://twitter.com/",
+    linkedIn: "https://linkedIn/"
   },
   {
     name: "Gerhard Fourie",
@@ -243,9 +243,9 @@ export const coreteams = [
       "2003-2011: Video editor, camera operator, director of photography, director and producer over various events and industries ranging from corporate events, to concerts and music videos.",
       "2001-2021: Specializing in the creation of promotional material for industries such as sports, tourism equine, corporate, and broadcasting."
     ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
+    email: "invisionfilmedia@gmail.com",
+    twitter: "https://twitter.com/",
+    linkedIn: "https://linkedin.com/"
   }, {
     name: "Yohan Graterol",
     avatar: Assets.p2,
@@ -255,9 +255,9 @@ export const coreteams = [
       "2018-2020: CEO at Callisto Network and main developer.",
       "2014-2018: Head of Product / Technical Lead at Platzi (+1.5 million users)."
     ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
+    email: "yograterol@callisto.network",
+    twitter: "https://twitter.com/yograterol",
+    linkedIn: "https://www.linkedin.com/in/yograterol/"
   },{
     name: "Lumir Lindovsky",
     avatar: Assets.p10,
@@ -266,9 +266,9 @@ export const coreteams = [
       "2018-Now: IT director - Invictus Services..",
       "2001-2018: IT manager - European restaurant chains - development of new sites and IT support.",
     ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
+    email: "lumir.lindovsky@invictusservices.cz",
+    twitter: "https://twitter.com/",
+    linkedIn: "http://linkedin.com/in/lumir-lindovsky-44b40b156"
   },{
     name: "František Brych",
     avatar: Assets.p11,
@@ -279,7 +279,7 @@ export const coreteams = [
       "2010-2013: Sharepoint Administrator. More than 10 years in IT."
     ],
     email: "frantisek.brych@gmail.com",
-    twitter: "",
+    twitter: "https://twitter.com/",
     linkedIn: "https://cz.linkedin.com/in/franti%C5%A1ek-brych-2a914a61"
   },{
     name: "Jeff Opdyke",
@@ -289,9 +289,9 @@ export const coreteams = [
       "Award-winning author with 10 books on global investing and personal finance.",
       "Author for 17 years for the New York Wall Street Journal.",
     ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
+    email: "jopdyke@internationalliving.com",
+    twitter: "https://twitter.com/DigitalRoamad",
+    linkedIn: "https://www.linkedin.com/in/jeffopdyke/"
   },{
     name: "Dmitry Kuzmin",
     avatar: Assets.p13,
@@ -302,9 +302,9 @@ export const coreteams = [
       "2014-2016: 3d Artist ICL Protection Center.",
       "2011-2014: Lead 3D Artist Business Cooperation League (RA Manhattan).",
     ],
-    email: "",
-    twitter: "",
-    linkedIn: ""
+    email: "CallistoDesigner@gmail.com",
+    twitter: "https://twitter.com/Diiiku_1",
+    linkedIn: "https://www.linkedin.com/in/dmitry-kuzmin-b47ba0193/"
   },{
     name: "Dr ZS",
     avatar: Assets.am1,
