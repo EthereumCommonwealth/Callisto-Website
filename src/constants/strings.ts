@@ -327,7 +327,7 @@ export const coreteams = [
     ],
     email: "",
     twitter: "https://twitter.com/@erik",
-    linkedIn: "https://www.linkedin.com/"
+    linkedIn: "https://www.linkedin.com/in/esnetto/"
   }, 
 ];
 
