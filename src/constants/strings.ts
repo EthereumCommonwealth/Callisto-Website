@@ -315,6 +315,19 @@ export const coreteams = [
     email: "zvse387@gmail.com",
     twitter: "https://twitter.com/@DrZS16",
     linkedIn: "https://www.linkedin.com/in/dr-zs-callisto"
+  },{
+    name: "Erik Netto",
+    avatar: Assets.p14,
+    role: "Smart Contract Developer",
+    description: [
+      "2021-Now: Present: Red Link laboratory engineer.",
+      "2027-2021: Red Link implementation analyst.",
+      "2015-2017: Red Link testing engineer.",
+      "2011-2014: Banelco testing analyst."
+    ],
+    email: "",
+    twitter: "https://twitter.com/@erik",
+    linkedIn: "https://www.linkedin.com/"
   }, 
 ];
 

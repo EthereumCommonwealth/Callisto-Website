@@ -73,6 +73,7 @@ import p10 from '../assets/images/teams/lumir.png';
 import p11 from '../assets/images/teams/fana.png';
 import p12 from '../assets/images/teams/jeff.png';
 import p13 from '../assets/images/teams/Dmitry.png';
+import p14 from '../assets/images/teams/erik.png';
 
 import am1 from '../assets/images/teams/drzs.png';
 import am2 from '../assets/images/teams/maximus.png'
@@ -139,6 +140,7 @@ export const Assets = {
     p11,
     p12,
     p13,
+    p14,
     am1,
     am2,
     am3,
