@@ -321,7 +321,7 @@ export const coreteams = [
     role: "Smart Contract Developer",
     description: [
       "2021-Now: Present: Red Link laboratory engineer.",
-      "2027-2021: Red Link implementation analyst.",
+      "2017-2021: Red Link implementation analyst.",
       "2015-2017: Red Link testing engineer.",
       "2011-2014: Banelco testing analyst."
     ],
