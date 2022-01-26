@@ -10,9 +10,9 @@ const Developer = () => {
     <Container>
       <Header />
       <Content>
-        {/* <Title>🌐Callisto Network Testnet Faucet is Live!</Title>
-        <Spacer height="30px" /> */}
-        <Text>If you are a developer and want to test your project implementation on Callisto Network, you can now get testnet $TCLO coins with our faucet!</Text>
+        <Title>🌐Callisto Network Testnet Faucet is Live!</Title>
+        <Spacer height="30px" />
+        <Text>If you are a developer and want to test your project implementation on Callisto Network, you can now get testnet CLO ($TCLO) coins with our faucet!</Text>
         <Spacer height="10px" />
         <Row>
           <Text>➡️ Testnet Faucet:</Text>
