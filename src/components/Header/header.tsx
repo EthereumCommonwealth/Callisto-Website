@@ -52,7 +52,7 @@ const Header: React.FC = () => {
                         <Nav.Link href="https://callistobridge.netlify.app/" target="_blank">Bridge</Nav.Link>
                     </Li>
                     <Li>
-                        <Nav.Link href="/developers" >Developers</Nav.Link>
+                        <Nav.Link href="/for-developers" >Developers</Nav.Link>
                     </Li>
                     <div className="nav-bar1">
                         <Nav.Link href="https://drive.google.com/file/d/1XvP-mKbT_wbrPb7p7hlLRhb7G6V5cqXV/view" target="_blank">

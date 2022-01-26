@@ -21,7 +21,7 @@ const App: React.FC = () => {
                     <Route path="/" exact>
                         <Home />
                     </Route>
-                    <Route path="/developers">
+                    <Route path="/for-developers">
                         <Developer />
                     </Route>
                 </Switch>
