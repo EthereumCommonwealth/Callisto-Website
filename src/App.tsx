@@ -8,6 +8,7 @@ import GlobalStyle from './style/Global'
 import history from './routerHistory'
 
 const Home = lazy(() => import('./pages/Home'));
+const Developer = lazy(() => import('./pages/Developers'));
 
 const App: React.FC = () => {
 
@@ -19,6 +20,9 @@ const App: React.FC = () => {
                 <Switch>
                     <Route path="/" exact>
                         <Home />
+                    </Route>
+                    <Route path="/developers">
+                        <Developer />
                     </Route>
                 </Switch>
             </SuspenseWithChunkError>
