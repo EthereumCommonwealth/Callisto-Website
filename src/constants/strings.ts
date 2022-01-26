@@ -331,7 +331,6 @@ export const coreteams = [
   }, 
 ];
 
-
 export const devteams = [
   {
     name: "Maximus",
