@@ -278,7 +278,7 @@ export const coreteams = [
       "2013-2018: Application Specialist.",
       "2010-2013: Sharepoint Administrator. More than 10 years in IT."
     ],
-    email: "frantisek.brych@gmail.com",
+    email: "frantisek.brych@callistoenterprise.com",
     twitter: "https://twitter.com/",
     linkedIn: "https://cz.linkedin.com/in/franti%C5%A1ek-brych-2a914a61"
   },{
