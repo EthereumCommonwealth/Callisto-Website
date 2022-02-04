@@ -30,13 +30,13 @@ const Header: React.FC = () => {
                         <NavDropdown className="font" title="Ecosystem" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="https://callisto.network/wallets/" className="font" target="_blank">Wallets</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://app.soy.finance/" className="font" target="_blank">Soy Finance</NavDropdown.Item>
-                            <NavDropdown.Divider />
                             <NavDropdown.Item href="https://callisto.network/cold-staking/" className="font" target="_blank">Cold Staking</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="https://callisto.network/total-eclipse/" className="font" target="_blank">Total Eclipse</NavDropdown.Item>
+                            <NavDropdown.Item href="https://app.soy.finance/" className="font" target="_blank">Soy Finance</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="https://cryptobot.page/" className="font" target="_blank">CryptoBot</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="https://callisto.network/total-eclipse/" className="font" target="_blank">Total Eclipse</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="https://callisto.network/on-chain-governance/" className="font" target="_blank">On-Chain Governance</NavDropdown.Item>
                         </NavDropdown>
