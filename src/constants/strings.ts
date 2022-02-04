@@ -533,7 +533,7 @@ export const ecosdata = [
       "Requiring no configuration, Cryptobot can be added quickly and easily to any Telegram group and thus become a fantastic marketing tool to interact with the community like never before."
     ],
     img: Assets.ecomark3,
-    link: "https://callisto.network/cryptobot/",
+    link: "https://cryptobot.page/",
   }, {
     title: "Cold Staking",
     desc: [
@@ -557,7 +557,7 @@ export const ecosdata = [
       "Beyond the decentralization, the reduced fees and the user experience, Soy.Finance stands for security."
     ],
     img: Assets.ecomark6,
-    link: "https://soy.finance/"
+    link: "https://app.soy.finance/"
   }, {
     title: "Callisto Treasury",
     desc: [

@@ -202,6 +202,9 @@ const Button = styled.a`
     @media sceen and (max-width: 768px) {
         width: 50px;
     }
+    :hover {
+        cursor: pointer;
+    }
 `;
 
 export default Ecosystem;
