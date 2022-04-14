@@ -336,7 +336,7 @@ export const devteams = [
     name: "Maximus",
     avatar: Assets.am2,
     role: "Ambassador",
-    tele: "@Maximus_el",
+    tele: "@Trader_EI",
   }, {
     name: "Mad Catter",
     avatar: Assets.am3,
