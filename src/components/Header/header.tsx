@@ -57,15 +57,15 @@ const Header: React.FC = () => {
                         <Nav.Link href="/devs" >Developers</Nav.Link>
                     </Li>
                     <div className="nav-bar1">
-                        <Nav.Link href="https://drive.google.com/file/d/1XvP-mKbT_wbrPb7p7hlLRhb7G6V5cqXV/view" target="_blank">
-                            <Whitepaper1>WHITEPAPER</Whitepaper1>
+                        <Nav.Link href="https://callisto-network.gitbook.io/callisto-network/" target="_blank">
+                            <Whitepaper1>Callisto Network Vision</Whitepaper1>
                         </Nav.Link>
                     </div>
                 </Nav>
             </Navbar.Collapse>
             <div  className="nav-bar">
-                <Nav.Link href="https://drive.google.com/file/d/1XvP-mKbT_wbrPb7p7hlLRhb7G6V5cqXV/view" target="_blank">
-                    <Whitepaper>WHITEPAPER</Whitepaper>
+                <Nav.Link href="https://callisto-network.gitbook.io/callisto-network/" target="_blank">
+                    <Whitepaper>Callisto Network Vision</Whitepaper>
                 </Nav.Link>
             </div>
         </Navbar>
